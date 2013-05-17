@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://libreprogramming.org/</loc>
+  <lastmod>2013-04-28T06:11:13+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/</loc>
+  <lastmod>2013-04-28T06:09:38+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/</loc>
+  <lastmod>2013-04-28T06:30:05+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/dsa/</loc>
+  <lastmod>2013-04-28T06:40:14+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/algebra/</loc>
+  <lastmod>2013-04-28T06:38:16+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/introduction/</loc>
+  <lastmod>2013-04-28T06:30:07+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/fs/</loc>
+  <lastmod>2013-04-28T06:29:55+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/env/</loc>
+  <lastmod>2013-04-28T06:29:49+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/lang/</loc>
+  <lastmod>2013-04-28T06:30:18+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/basics/</loc>
+  <lastmod>2013-04-28T06:29:42+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/io/</loc>
+  <lastmod>2013-04-28T06:30:10+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/oae/</loc>
+  <lastmod>2013-04-28T06:30:30+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/cf/</loc>
+  <lastmod>2013-04-28T06:29:43+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/ap/</loc>
+  <lastmod>2013-04-28T06:29:38+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/func/</loc>
+  <lastmod>2013-04-28T06:29:57+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/su/</loc>
+  <lastmod>2013-04-28T06:32:00+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/macros/</loc>
+  <lastmod>2013-04-28T06:30:25+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/std/</loc>
+  <lastmod>2013-04-28T06:31:48+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/assert/</loc>
+  <lastmod>2013-04-28T06:29:40+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/complex/</loc>
+  <lastmod>2013-04-28T06:29:45+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/ctypes/</loc>
+  <lastmod>2013-04-28T06:29:47+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/errno/</loc>
+  <lastmod>2013-04-28T06:29:51+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/fenv/</loc>
+  <lastmod>2013-04-28T06:29:52+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/float/</loc>
+  <lastmod>2013-04-28T06:29:54+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/inttypes/</loc>
+  <lastmod>2013-04-28T06:30:08+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/iso646/</loc>
+  <lastmod>2013-04-28T06:30:12+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/limits/</loc>
+  <lastmod>2013-04-28T06:30:21+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/locale/</loc>
+  <lastmod>2013-04-28T06:30:23+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/math/</loc>
+  <lastmod>2013-04-28T06:30:28+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/setjmp/</loc>
+  <lastmod>2013-04-28T06:30:36+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/signal/</loc>
+  <lastmod>2013-04-28T06:30:37+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/stdarg/</loc>
+  <lastmod>2013-04-28T06:31:50+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/stdbool/</loc>
+  <lastmod>2013-04-28T06:31:52+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/stddef/</loc>
+  <lastmod>2013-04-28T06:31:53+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/stdint/</loc>
+  <lastmod>2013-04-28T06:31:54+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/stdio/</loc>
+  <lastmod>2013-04-28T06:31:56+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/stdlib/</loc>
+  <lastmod>2013-04-28T06:31:57+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/string/</loc>
+  <lastmod>2013-04-28T06:31:58+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/tgmath/</loc>
+  <lastmod>2013-04-28T06:32:01+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/time/</loc>
+  <lastmod>2013-04-28T06:32:03+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/wchar/</loc>
+  <lastmod>2013-04-28T06:32:04+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/wtype/</loc>
+  <lastmod>2013-04-28T06:32:05+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/problems/</loc>
+  <lastmod>2013-04-28T06:30:32+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/license/</loc>
+  <lastmod>2013-04-28T06:30:20+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/c/genindex/</loc>
+  <lastmod>2013-04-28T06:29:58+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/dsa/intro/</loc>
+  <lastmod>2013-04-28T06:40:16+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/dsa/ls/</loc>
+  <lastmod>2013-04-28T06:40:17+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/dsa/genindex/</loc>
+  <lastmod>2013-04-28T06:39:16+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/algebra/intro/</loc>
+  <lastmod>2013-04-28T06:38:17+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/algebra/ns/</loc>
+  <lastmod>2013-04-28T06:38:18+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/algebra/genindex/</loc>
+  <lastmod>2013-04-28T06:38:06+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+<url>
+  <loc>http://libreprogramming.org/books/algebra/search/</loc>
+  <lastmod>2013-04-28T06:38:20+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+</url>
+</urlset>

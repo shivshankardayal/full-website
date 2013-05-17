@@ -102,3 +102,14 @@ any base to decimal denominator will be powers of that base. **Important**
 Therefore, when you convert from decimal to some base n then denominator of
 that decimal number can have only those prime factors which are available in
 the set of prime factors of n.
+
+A Generic Positional Number System
+----------------------------------
+Let us try to describe a number in a generic number system which is given
+below:
+
+.. math::
+  (.. c_mb^{m-1} + c_{m-1}b^{m-2}+ ... + c_2b^1 + c1_b^0 + c_{-1}b^{-1} + ... + c_{-m}b^{-m} ) 
+  
+  = (... c_mc_{m-1}...c_2c_1.c_{-1}...c_{-m})_b
+
