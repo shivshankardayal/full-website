@@ -74,3 +74,18 @@ simple fashion. Antecedents with antecedents and consequents with consequents.
 
 For example, consider some ratios: :math:`a:b`, :math:`c:d` and :math:`e:f`.
 The compounded ratio is :math:`abc:def`.
+
+Duplicating Ratios
+==================
+When a ratio is compounded with itself once it is called **duplicate ratio**.
+If it is compunded twice then it is called **triplicate ratio**. If a square
+root is taken then it is called **subduplicate ratio**.
+
+Antecedent vs Consequent
+========================
+A ratio is of *greater inequality*, or *less inequality* or of *equality*
+depending on whether antecedent is greater or smaller or equal to the
+consequent.
+
+Common Properties of Ratios
+===========================
