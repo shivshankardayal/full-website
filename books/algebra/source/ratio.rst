@@ -33,7 +33,7 @@ Comparing Two Ratios
 ====================
 To compare two ratios we need to make their denominator same the we can deduce
 if they are equal or unequal. For example consider two ratios :math:`r1:r2` and
-:math:`r3r4`. Then we can have
+:math:`r3:r4`. Then we can have
 
 .. math::
 
@@ -185,12 +185,12 @@ such as
 .. math::
   :label: Equation 1
 
-  a_1x + b_1y + c = 0
+  a_1x + b_1y + c_1z = 0
 
 .. math::
   :label: Equation 2
 
-  a_2x + b_2y + c = 0
+  a_2x + b_2y + c_2z = 0
 
 Rewriting these we can have following;
 
@@ -202,15 +202,68 @@ Rewriting these we can have following;
 Solving these we obtain,
 
 .. math::
-  \frac{x}{z}=\frac{b_1c_1-b_2c_1}{a_1b_2-a_2b_1},~~~\frac{y}{z}=\frac{c_1a_2-c_2a_1}{a_1b_2-a_2b_1}
+  \frac{x}{z}=\frac{b_1c_2-b_2c_1}{a_1b_2-a_2b_1},~~~\frac{y}{z}=\frac{c_1a_2-c_2a_1}{a_1b_2-a_2b_1}
 
 or,
 
 .. math::
   :label: Equation 3
 
-  \frac{x}{b_1c_2-b_2c_1} = \frac{y}{c1_a_2-c_2a_1}=\frac{z}{a_1b_2-a_2b_1}
+  \frac{x}{b_1c_2-b_2c_1} = \frac{y}{c_1a_2-c_2a_1}=\frac{z}{a_1b_2-a_2b_1}
 
 So we can see that for :math:`x` coefficients of :math:`y` and :math:`z` are
 used and for :math:`y`, that of :math:`x` and :math:`z` are used and so on in
-a cyclic manner.
+a cyclic manner as given in image below:
+
+.. image:: _static/cyclic.svg
+  :align: center
+
+:download:`Souce of image <_static/cyclic.xp>`.
+
+Multiply the coefficients as indicated by the arrows. The ascending arrows are
+positive and descending ones are negative. This is called the **Rules of Cross
+Multiplication**.
+
+Now expanding on previous discussion consider following set of three equations:
+
+.. math::
+  :label: Equation 4
+
+  a_1x + b_1y + c_1z=0
+
+.. math::
+  :label: Equation 5
+
+  a_2x + b_2y + c_2z=0
+
+.. math::
+  :label: Equation 6
+
+  a_3x + b_3y + c_3z=0
+
+So by our previous rule of cross-multiplication between eq. (4) and (5) we have
+
+.. math::
+
+  \frac{x}{z}=\frac{b_1c_2-b_2c_1}{a_1b_2-a_2b_1},~~~\frac{y}{z}=\frac{c_1a_2-c_2a_1}{a_1b_2-a_2b_1}
+
+Now if we take these ratios to be equal to :math:`k` then multiplying and
+substituting in equation (6) we have
+
+.. math::
+  a_3(b_1c_2-b_1c_2)+b_3(c_1a_2-c_2a_1)+c_3(a_1b_2-a_2b_1) = 0
+
+This particular relation is known as the **eliminant** of the given equations.
+
+Problems
+========
+1.  Find the ratio of ratios :math:`4:7` and :math:`11:5`.
+2.  Find the ratio of ratios :math:`13:24` and :math:`34:23`.
+3.  Find out that among the following pair of ratios which one is greater in
+    the pair:
+
+    (a) :math:`4:5` and :math:`5:6`,
+    (b) :math:`34:33` and :math:`68:67` and
+    (c) :math:`123:63` and :math:`233:120`.
+
+4.  Find the 
