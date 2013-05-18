@@ -36,6 +36,9 @@ not to mention decimal ofcourse.
 
 Binary Number System
 ==================== 
+.. index::
+  pair: binary; number system
+
 As the name suggests binary number system has base of 2. Therefore it has
 only two symbols. 0 and 1. This is the most popular system for computers
 becasue TTL NAND and NOR gates which are the most basic logic gates using
@@ -103,13 +106,33 @@ Therefore, when you convert from decimal to some base n then denominator of
 that decimal number can have only those prime factors which are available in
 the set of prime factors of n.
 
+Operations such as addition, subtraction, multiplication and division
+are similar in all number systems.
+
 A Generic Positional Number System
-----------------------------------
+==================================
+.. index::
+  pair: positional; number system
+
 Let us try to describe a number in a generic number system which is given
 below:
 
 .. math::
-  (.. c_mb^{m-1} + c_{m-1}b^{m-2}+ ... + c_2b^1 + c1_b^0 + c_{-1}b^{-1} + ... + c_{-m}b^{-m} ) 
-  
+  :label: A generic positional number
+
+  (.. c_mb^{m-1} + c_{m-1}b^{m-2}+ ... + c_2b^1 + c1_b^0 + c_{-1}b^{-1} + ... + c_{-m}b^{-m} ) \\  
   = (... c_mc_{m-1}...c_2c_1.c_{-1}...c_{-m})_b
 
+As you can see all the terms with :math:`c` are called digits. The leftmost or
+leading digit is called *most significant digit* and the rightmost or trailing
+digit is called *least significant digit*. The . is called a point which
+separates the integral part which is toards its left from the fractional part
+which is towards its right. :math:`b` is known as radix or base of the number
+system. Note that all digits will be between 0 to :math:`b-1`. So in our
+decimal system :math:`b` is 10 therefore we have digits from 0 to 9. In binary
+number system it is 2 therefore digits permitted are 0 and 1.
+
+These are the basics of number systems i.e. the numbers themselves. When we
+return back from our journey of Mathematics to Data structures and Algorithms
+I will discuss more on number theory and about Alan Turing and how the world's
+shpae changed because of him and foundation of computer science was laid.
