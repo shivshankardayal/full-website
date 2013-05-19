@@ -266,4 +266,106 @@ Problems
     (b) :math:`34:33` and :math:`68:67` and
     (c) :math:`123:63` and :math:`233:120`.
 
-4.  Find the 
+4.  Find the duplicate, triplicate and subduplicate of following ratios:
+
+    (a) :math:`2(x+3):y-5`
+    (b) :math:`a^2+ab+b^2:a^3-b^3`
+
+5.  If :math:`x-2:3(x+7)` has a ratio of :math:`7:9` then find :math:`x`.
+6.  Find two numbers in the ratio of :math:`11:17` where one exceeds other by
+    126.
+7.  What number must be added to each of the tems of :math:`5:13` to make it
+    equal to :math:`5:7`?
+8.  What number must be subtracted from each of the terms of :math:`33:37` to
+    make it equal to :math:`7:9`?
+9.  If :math:`x-2:y-3=3:5`, find the ratio of :math:`9x-2y:4x+2y`.
+10. If 
+
+.. math::
+  \frac{a}{b}=\frac{c}{d}=\frac{e}{f},
+
+prove that
+
+.. math::
+  \frac{7a^4b^2+8a^2c^2-5e^4f}{7b^6+8b^2f^2-5e^5} = \frac{a^4}{b^4}.
+
+11. If
+
+.. math::
+  \frac{a}{b}=\frac{b}{c}=\frac{c}{d},
+
+prove that :math:`\frac{a}{d}` is equal to
+
+.. math::
+  \sqrt{\frac{a^5+b^2c^2+a^3c^2}{b^4c+d^4+b^2cd^2}}..
+
+12. If
+
+.. math::
+  \frac{x}{q+r-p}=\frac{y}{r+p-q}=\frac{z}{p=q-r}
+
+prove that
+
+.. math::
+  (q-r)x + (r-p)y + (p-q)z = 0.
+
+13. If
+
+.. math::
+  \frac{y+z}{pb+qc}=\frac{z+x}{pc+qa}=\frac{x+y}{pa+qb},
+
+prove that
+
+.. math::
+  \frac{2(x+y+z)}{a+b+c} = \frac{2(b+c)x+(c+a)y+(a+b)z}{ab+bc+ca}.
+
+14. If
+
+.. math::
+  \frac{x}{x}=\frac{y}{b}=\frac{z}{c},
+
+prove that
+
+.. math::
+
+  \frac{x^3+a^3}{x^2+a^2}+\frac{y^3+b^3}{y^2+b^2}+\frac{z^3+c^3}{z^2+c^2}=\frac{(x+y+z)^3+(a+b+c)3}{(x+y+z)^2+(a+b+c)^2}.
+
+15. If
+
+.. math::
+  \frac{2y+2z-x}{a}=\frac{2z+2x-y}{b}=\frac{2x+2y-z},
+
+prove that
+
+.. math::
+  \frac{x}{2b+2c-a}=\frac{y}{2c+2a-b}=\frac{z}{qa+2b-c}.
+
+16. If :math:`(a^2+b62+c^2)(x^2+y^2+z^2)=(ax+by+cz^2)` show that
+:math:`x:a=y:b=z:c`.
+
+17. If
+
+.. math::
+  x=\frac{a-b}{a+b},~y={b-c}{b+c},~z={c-a}{c+a}
+
+prove that
+
+.. math::
+  (1+x)(1+y)(1+z) = (1-x)(1-y)(1-z).
+
+18. If :math:`l(my+nz-lx)=m(nz+lx-my)=n(lx+my-nz),` prove that
+
+.. math::
+  \frac{y+z-x}{l}=\frac{z+x-y}{m}=\frac{x+y-z}{n}
+
+19. Show that the eliminant of :math:`ax+by+cz=0, cx+by+az=0, bx+ay+cz=0`, is
+:math:`a^3+b^3+c^3-3abc`.
+
+20. Eliminate :math:`x, y, z` from the equations :math:`ax+hy+gz=0,
+hx+by+fz=0, gx+fy+cz=0`.
+21. If :math:`x=cy+bz, y=az+cx, z=bx+ay`, prove that
+
+.. math::
+  \frac{x^2}{1-a^2}=\frac{y^2}{1-b^2}=\frac{z^2}{1-c^2}
+22. If :math:`a(y+z)=x, b(z+x)=y, c(x+y)=z` prove that
+:math:`bc+ca+ab+2abc=1`.
