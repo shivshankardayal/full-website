@@ -15,7 +15,7 @@ Contents:
    intro.rst
    ns.rst
    ratio.rst
-
+   proportions
 
 Indices and tables
 ==================

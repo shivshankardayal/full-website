@@ -1,9 +1,12 @@
 Ratio
 *****
-We will study ratios in this chapter. Many of you might already be knowing
-about ratios from earlier classes. A ratio is nothing but a comparison between
-two quantities of same kine. For example, 4 balls vs 7 balls or 12 shoes vs
-8 shoes.
+In his book *Elements of Algebra*, Euler says that anything we can increase
+or decrase is *magnitude* or *quantity*.
+
+We will study ratios of quantities in this chapter. Many of you might
+already be knowing about ratios from earlier classes. A ratio is nothing
+but a comparison between two quantities of same kine. For example, 4
+balls vs 7 balls or 12 shoes vs 8 shoes.
 
 A ratio beween two qualtities :math:`Q1` and :math:`Q2` is written as
 :math:`Q1:Q2` most of the time. :math:`Q1` or the first term is called the
@@ -367,5 +370,43 @@ hx+by+fz=0, gx+fy+cz=0`.
 
 .. math::
   \frac{x^2}{1-a^2}=\frac{y^2}{1-b^2}=\frac{z^2}{1-c^2}
-22. If :math:`a(y+z)=x, b(z+x)=y, c(x+y)=z` prove that
-:math:`bc+ca+ab+2abc=1`.
+
+22. If :math:`a(y+z)=x, b(z+x)=y, c(x+y)=z` prove that :math:`bc+ca+ab+2abc=1`.
+
+23. Solve the following equations:
+
+    (a) :math:`3x-4y+7z=0, 2x-y-2z=0, 3x^3-y^3+z^3=18`.
+    (b) :math:`x+y-z=0, 3x-2y+17z=0, x^3+3y^3+2z^3=167`.
+    (c) :math:`4xy-7yz-3zx=0, 4xy-21yz+3zx=0, x+2y+3z=19`.
+    (d) :math:`3x^2-2y^2+5z^2=0, 7x^2-3y^2-15z^2=0, 5x-4y+7z=0`.
+
+24. If
+
+.. math::
+  \frac{l}{\sqrt{a}-\sqrt{b}}+\frac{m}{\sqrt{b}-\sqrt{c}}+\frac{n}{\sqrt{c}-\sqrt{a}}=0,
+
+  \frac{l}{\sqrt{a}+\sqrt{b}}+\frac{m}{\sqrt{b}+\sqrt{c}}+\frac{n}{\sqrt{c}+\sqrt{a}}=0,
+
+show that
+
+.. math::
+  \frac{l}{(a-b)(c-\sqrt{ab})}=\frac{m}{(b-c)(a-\sqrt{bc})}=\frac{n}{(c-a)(b-\sqrt{ac})}
+
+25. Solve the following equations:
+
+    (a) :math:`ax+by+cz=0, bcx+cay+abz=0,xyz+abc(a^3x+b^3y+c^3z)=0`.
+    (b) :math:`ax+by+cz=a^2x+b^2y+c^2z=0,x+y+z+(a-b)(b-c)(c-a)=0`.
+
+26. If :math:`a(y+z)=x, b(z+x)=y, c(x+y)=z` prove that
+
+.. math::
+  \frac{x^2}{a(1-bc)}=\frac{y^2}{b(1-ca)}=\frac{z^2}{c(1-ab)}.
+
+27. If :math:`ax+hy+gz=0, hx+by+fz=0, gx+fy+cz=0`, prove that
+
+.. math::
+  \frac{x^2}{bc-f^2}=\frac{y^2}{ca-g^2}=\frac{z^2}{ab-h^2}~~\text{and}
+
+..math::
+  (bc-f^2)(ca-g^2)(ab-h^2)=(gh-af)(fg-ch)(hf-bg)
+  
