@@ -110,9 +110,9 @@ and :math:`a-b` is positive or negative depending upon the fact whether
 
 .. math::
 
-  \text{if}~a\gt b,~~ \frac{a}{b}\gt\frac{a+x}{b+x}
+  \text{if}~a> b,~~ \frac{a}{b}>\frac{a+x}{b+x}
 
-  \text{and if}~ a\lt b,~~ \frac{a}{b}\lt\frac{a+x}{b+x}
+  \text{and if}~ a< b,~~ \frac{a}{b}<\frac{a+x}{b+x}
 
 Similarly, it can be proved that a ratio of greater inequality is icreased and
 a ratio of less inequality is decreased if we subtract same quanitty to both
@@ -161,6 +161,7 @@ Let all the denominators are positive. Let :math:`\frac{a_r}{b_r}` be the least 
 and denote it by :math:`k`; then
 
 .. math::
+
   \frac{a_r}{b_r} = k; \therefore a_r = kb_r;
 
   \frac{a_1}{b_1} = k; \therefore a_1 = kb_1;
@@ -171,14 +172,14 @@ and denote it by :math:`k`; then
 
   \therefore \text{by addition,}
 
-  a_1 + a_2 + ... + a_n \gt (b_1 + b_2 + ... + b_n)k;
+  a_1 + a_2 + ... + a_n > (b_1 + b_2 + ... + b_n)k;
   
-  \therefore\frac{a_1 + a_2 + ... + a_n}{b_1 + b_2 + ... + b_n}\gt k; \text{that is,}\gt\frac{a_r}{b_r}
+  \therefore\frac{a_1 + a_2 + ... + a_n}{b_1 + b_2 + ... + b_n}> k; \text{that is,}>\frac{a_r}{b_r}
 
 Similarly, we may prove that
 
 .. math::
-  \frac{a_1 + a_2 + ... + a_n}{b_1 + b_2 + ... + b_n}\gt k; \text{that is,}\lt\frac{a_s}{b_s}
+  \frac{a_1 + a_2 + ... + a_n}{b_1 + b_2 + ... + b_n}> k; \text{that is,}<\frac{a_s}{b_s}
 
 where :math:`\frac{a_s}{b_s}` is greatest of the given functions.
 
@@ -366,6 +367,7 @@ prove that
 
 20. Eliminate :math:`x, y, z` from the equations :math:`ax+hy+gz=0,
 hx+by+fz=0, gx+fy+cz=0`.
+
 21. If :math:`x=cy+bz, y=az+cx, z=bx+ay`, prove that
 
 .. math::
@@ -407,6 +409,6 @@ show that
 .. math::
   \frac{x^2}{bc-f^2}=\frac{y^2}{ca-g^2}=\frac{z^2}{ab-h^2}~~\text{and}
 
-..math::
+.. math::
   (bc-f^2)(ca-g^2)(ab-h^2)=(gh-af)(fg-ch)(hf-bg)
   
