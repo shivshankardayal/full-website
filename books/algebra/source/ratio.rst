@@ -350,7 +350,7 @@ prove that
 17. If
 
 .. math::
-  x=\frac{a-b}{a+b},~y={b-c}{b+c},~z={c-a}{c+a}
+  x=\frac{a-b}{a+b},~y=\frac{b-c}{b+c},~z=\frac{c-a}{c+a}
 
 prove that
 

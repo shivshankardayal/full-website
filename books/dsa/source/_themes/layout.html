@@ -7,7 +7,7 @@
   <div id="navbar" class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container-fluid">
-	<a class="brand" href="../../{{ pathto(master_doc) }}">Home</a>
+        <a class="brand" href="../../{{ pathto(master_doc) }}">Home</a>
         <a class="brand" href="{{ pathto(master_doc) }}">{{ project|e }}</a>
         <span class="navbar-text pull-left"><b>{{ version|e }}</b></span>
           <ul class="nav">
@@ -35,9 +35,6 @@
 
 {%- block extrahead %}
 <script type="text/javascript">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
 (function () {
   /**
    * Patch TOC list.
