@@ -10,7 +10,7 @@ body {
 }
 
 .navbar .brand {
-  color: #FFF;
+  color: #999;
   text-shadow: #777 2px 2px 3px;
 }
 
