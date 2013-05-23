@@ -16,6 +16,8 @@ Contents:
    ns.rst
    ratio.rst
    proportions
+   variations
+   cf
 
 Indices and tables
 ==================
