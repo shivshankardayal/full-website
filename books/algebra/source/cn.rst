@@ -164,3 +164,19 @@ the real number :math:`\sqrt{x^2+y^2}`. Note that
 
 Properties of Modulus
 ---------------------
+1.  :math:`|z|=0 \Leftrightarrow z=0`.
+
+    Clearly, this means
+    :math:`x^2+y^2=0 \implies x=0 \text{ and } y=0 \implies z=0`.
+2.  :math:`|z|=|\bar{z}|=|-z|=|-\bar{z}|`.
+
+    Clearly, all result in to :math:`x^2+y^2`.
+3.  :math:`-|z|\leq Re(z)\leq |z|`.
+
+    Clearly, :math:`-(x^2+y^2)\leq x^2\leq (x^2+y^2)`.
+4.  :math:`-|z|\leq Im(z)\leq |z|`.
+
+    Clearly, :math:`-(x^2+y^2)\leq y^2\leq (x^2+y^2)`.
+5.  :math:`z\bar{z}=|z|^2`.
+
+    Clearly, :math:`(x+iy)(x-iy)=x^2+y^2=|z|^2`.
