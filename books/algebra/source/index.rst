@@ -17,7 +17,7 @@ Contents:
    ratio.rst
    proportions
    variations
-   cf
+   cn
 
 Indices and tables
 ==================

@@ -109,9 +109,58 @@ conjugate of a complex number :math:`z`.
 
 Properties of Conjugates
 ------------------------
-1. :math:`z_1=z_2\Leftrightarrow \bar{z_1}=\bar{z_2}`
+1.  :math:`z_1=z_2\Leftrightarrow \bar{z_1}=\bar{z_2}`.
 
-   Clearly as we know for two complex numbers toi be equal both parts must be
-   equal so this is very easy to understand that if :math:`x_1=x_2` and
-   :math:`y_1=y_2` then this bidirection consition is always satisfied.
-2. :math:`\overline{(\bar{z})}=z`.
+    Clearly as we know for two complex numbers toi be equal both parts must be
+    equal so this is very easy to understand that if :math:`x_1=x_2` and
+    :math:`y_1=y_2` then this bidirection consition is always satisfied.
+2.  :math:`\overline{(\bar{z})}=z`.
+
+    :math:`z=x+iy`, hence, :math:`\bar{z}=x-iy`, hence,
+    :math:`\overline{(\bar{z})}=x-(-iy)=x+iy=z`. 
+3.  :math:`z+\bar{z}=2Re(z)`.
+
+    Clearly, :math:`z+\bar{z}=x+iy+x-iy=2x=2Re(z)`.
+4.  :math:`z-\bar{z}=2iIm(z)`.
+
+    Clearly, :math:`z-\bar{z}=x+iy-(x-iy)=2iy=2iIm(z)`.
+5.  :math:`z=\bar{z}\Leftrightarrow z` is purely real.
+
+    Clearly, :math:`x+iy=x-iy \implies 2iy=0 \implies y=0`. Therefore,
+    :math:`z` is purely real. Conversely if :math:`z` is purely real then
+    :math:`z=x` therefore :math:`z=\bar{z}`.
+6.  :math:`z+\bar{z}=0\Leftrightarrow z` is purely imaginary.
+
+    It can be proven like previous point.
+7.  :math:`z\bar{z}=[Re(z)]^2+[Im(z)]^2`.
+
+    Clearly, :math:`z\bar{z}=(x+iy)(x-iy)=(x^2+y^2)=[Re(z)]^2+[Im(z)]^2`.
+8.  :math:`\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}`.
+
+    Clearly, :math:`\overline{z_1+z_2}=\overline{(x_1+iy_1)+(x_2+iy_2)}` i.e.
+    :math:`\overline{(x_1+x_2)+i(y_1+y_2)}=(x_1+x_2)-i(y-1+y_2)` i.e.
+    :math:`(x_1-iy_1)+(x_2-iy_2)=\overline{z_1}+\overline{z_2}`.
+9.  :math:`\overline{z_1-z_2}=\overline{z_1}-\overline{z_2}`.
+
+    It can be proven in the same fashion as 8 and left to the student.
+10. :math:`\overline{z_1 z_2}=\overline{z_1}~\overline{z_2}`.
+
+    It can be proven in the same fashion as 8 and left to the student.
+11. 
+
+.. math::
+  \overline{\left(\frac{z_1}{z_2}\right)}=\frac{\overline{z_1}}{\overline{z_2}}
+  \text{ if } z_2 \neq 0.
+
+If you rationalize the base by multiplying it from its conjugate and apply
+division formula give above it can be easily proven hence left as an
+exercise.
+
+Modulus of a Complex Number
+===========================
+Modulus of a complex number :math:`z` is denoted by :math:`|z|` and is equal to
+the real number :math:`\sqrt{x^2+y^2}`. Note that
+:math:`|z|\geq~0~\forall~z\in C`.
+
+Properties of Modulus
+---------------------
