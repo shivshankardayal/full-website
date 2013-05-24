@@ -1,5 +1,8 @@
 Complex Numbers
 ***************
+Certain portions of these chapter require facts from other parts like
+determinants, equations tec. Student is encouraged to look ahead into these
+chapters for referenced results/equations used.
 
 Imaginary Numbers
 =================
@@ -180,3 +183,26 @@ Properties of Modulus
 5.  :math:`z\bar{z}=|z|^2`.
 
     Clearly, :math:`(x+iy)(x-iy)=x^2+y^2=|z|^2`.
+
+Following relations are very easy and can be proved by the student. If
+:math:`z_1` and :math:`z_2` are two complex numbers then,
+
+6.  :math:`|z_1 z_2|=|z_1||z_2|`.
+
+    Clearly, :math:`|z_1 z_2|=|x_1x_2-y_1y_2+i(x_1y_2+x_2y_1)|` i.e.
+    :math:`\sqrt{(x_1x_2-y_1y_2)^2+(x_1y_2+x_2y_2)^2}` i.e.
+    :math:`\sqrt{(x_1+y_1)^2(x_2+y_2)^2}=|z_1||z_2|`.
+7.  
+
+.. math::
+  \left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{z_2}`, \text{ if } z_2\neq 0.
+
+8.  :math:`|z_1+z_2|^2=|z_1|^2+|z_2|^2+\overline{z_1}z_2+z_1\overline{z_2}` i.e.
+    :math:`|z_1|^2+|z_2|^2+2Re(z_1\overline{z_2})`.
+9.  :math:`|z_1-z_2|^2=|z_1|^2+|z_2|^2-\overline{z_1}z_2-z_1\overline{z_2}`
+    i.e. :math:`|z_1|^2+|z_2|^2-2Re(z_1\overline{z_2})`.
+10. :math:`|z_1+z_2|^2+|z_1-z_2|^2=2(|z_1|^2+|z_2|^2)`.
+11. If :math:`a` and :math:`b` are real numbers and :math:`z_1` and :math:`z_2`
+    are complex numbers, then
+
+    :math:`|az_1+bz_2|^2+|bz_1-az_2|^2=(a^2+b^2)(|z_1|^2+|z_2|^2)`
