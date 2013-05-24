@@ -159,6 +159,18 @@ If you rationalize the base by multiplying it from its conjugate and apply
 division formula give above it can be easily proven hence left as an
 exercise.
 
+12. If :math:`P(z)=a_0+a_1z+a_1z^2+...+a_nz^n` where :math:`a_0, a_1,...,a_n`
+    and :math:`z` are complex number, then
+
+.. math::
+
+  \overline{P(z)}=\overline{a_0}+\overline{a_1}~(\overline{z})+\overline{a_2}~(\overline{z})^2+ ... + \overline{a_n}~(\overline{z})^n=\overline{P}(\overline{z})
+
+where
+
+.. math::
+  \bar{P}z=\overline{a_0}+\overline{a_1}~z+\overline{a_2}z^2+ ... + \overline{a_n}z^n
+
 Modulus of a Complex Number
 ===========================
 Modulus of a complex number :math:`z` is denoted by :math:`|z|` and is equal to
@@ -206,3 +218,6 @@ Following relations are very easy and can be proved by the student. If
     are complex numbers, then
 
     :math:`|az_1+bz_2|^2+|bz_1-az_2|^2=(a^2+b^2)(|z_1|^2+|z_2|^2)`
+12. If :math:`z_1, z_2 \neq 0`, then
+    :math:`|z1+z2|^2=|z_1|^2+|z_2|^2\Leftrightarrow \frac{z_1}{z_1}` is purely
+    imaginary.
