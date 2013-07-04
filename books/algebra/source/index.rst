@@ -12,9 +12,10 @@ Contents:
    :maxdepth: 2
    :numbered:
 
-   intro.rst
-   ns.rst
-   ratio.rst
+   intro
+   ns
+   ratio
+   ratio_sol
    proportions
    variations
    cn
