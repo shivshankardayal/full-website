@@ -35,3 +35,8 @@ and
   \frac{68}{67}*\frac{33}{33} = \frac{2244}{2211}
 
 Clearly, :math:`34:33` is greater.
+
+  c. Following the principal from last two problems we have:
+  :math:`\frac{123}{63} = \frac{123*120}{63*120} = \frac{14760}{7860}` and
+  :math:`\frac{233}{120} = \frac{233*63}{120*63} = \frac{14679}{7860}`.
+  Clearly, 123:63 is greater than 233:63. 
