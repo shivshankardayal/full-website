@@ -170,22 +170,51 @@ htmlhelp_basename = 'algebradoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
-
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+'papersize': 'a4paper',
 
 # The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+'pointsize': '10pt',
+'babel': '\\usepackage[english]{babel}',
+'classoptions': 'openright,twosided',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+'preamble': r"""\setcounter{secnumdepth}{4}
+\usepackage{fancyhdr}
+%\usepackage{lmodern}
+\setcounter{tocdepth}{4}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\setmainfont[Mapping=tex-text]{Birka}
+\setsansfont{Myriad}
+\setmonofont{Inconsolata}
+\makeatletter
+  \fancypagestyle{normal}{
+    \fancyhf{}
+    \fancyfoot[LE,RO]{{\py@HeaderFamily\thepage}}
+    \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
+    \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
+    \fancyhead[LE,RO]{{\py@HeaderFamily \@title}} % here's the change
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+  }
+\makeatother
+\textwidth 15truecm
+\textheight 22.5truecm
+\baselineskip 14truept
+\oddsidemargin 1cm
+\evensidemargin 1cm
+\topmargin 0cm
+%\definecolor{VerbatimBorderColor}{rgb}{0.36,0.54,0.66}
+"""
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('temp', 'algebra.tex', u'algebra Documentation',
+  ('temp', 'algebra.tex', u'A Book of Informal ALgebra',
    u'Shiv S. Dayal', 'manual'),
 ]
 

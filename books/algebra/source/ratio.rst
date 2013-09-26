@@ -344,7 +344,7 @@ prove that
 .. math::
   \frac{x}{2b+2c-a}=\frac{y}{2c+2a-b}=\frac{z}{qa+2b-c}.
 
-16. If :math:`(a^2+b62+c^2)(x^2+y^2+z^2)=(ax+by+cz^2)` show that
+16. If :math:`(a^2+b^2+c^2)(x^2+y^2+z^2)=(ax+by+cz)^2` show that
 :math:`x:a=y:b=z:c`.
 
 17. If
