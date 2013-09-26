@@ -321,7 +321,7 @@ prove that
 prove that
 
 .. math::
-  \frac{2(x+y+z)}{a+b+c} = \frac{2(b+c)x+(c+a)y+(a+b)z}{ab+bc+ca}.
+  \frac{2(x+y+z)}{a+b+c} = \frac{(b+c)x+(c+a)y+(a+b)z}{ab+bc+ca}.
 
 14. If
 
