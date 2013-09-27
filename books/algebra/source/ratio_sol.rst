@@ -79,6 +79,7 @@ is x:x+126 which should be equal to 11:17. Therefore, we have
    \frac{x}{x+126}=\frac{11}{17}
    \Rightarrow~17x=11x+1386
    \Rightarrow~x=231.
+
 7. Let us say the no. to be added is x then we have from problem
 
 .. math::
@@ -178,7 +179,7 @@ Adding all left hand sides and respective right hand sides we have
    \Rightarrow~\frac{(pa+pb+pc+qa+qb+qc)(ab+bc+ca)k}{(a+b+c)(ab+bc+ca)}
 
 .. math::
-   \Rightarrow~\frac{(pab^2+pb^2c+pabc+qabc+qbc^2+qc^2a+pabc+pbc^2+pc^2a+qa^2b+qabc+qca^2+pa^2b+pabc+pca^2+qab^2+qb^2c+qabc)k}{(a+b+c)(ab+bc+ca)}
+   \Rightarrow~\frac{\begin{array}{l}(pa b^2+p b^2 c+pabc+qabc+qb c^2+q c^2 a+\\ pabc+pb c^2+p c^2 a+q a^2 b+qabc+qc a^2+\\ p a^2 b+pabc+pc a^2+qa b^2+q b^2 c+qabc)k\end{array}}{(a + b + c)(ab + bc + ca)}
 
 .. math::
    \Rightarrow~\frac{(a+b+c)(pab+pbc+pca+qab+qbc+qca)k}{(a+b+c)(ab+bc+ca)}
@@ -236,7 +237,7 @@ Now considering first ratio among to be proven for equality we have
 
 Similarly, 2nd and 3rd ratios can be proven equal to same.
 
-15. Multiplying we have following on L.H.S.
+16. Multiplying we have following on L.H.S.
 
 .. math::
    a^2x^2+a^2y^2+a^2z^2+b^2x^2+b^2y^2+b^2z^2+c^2x^2+c^2y^2+c^2z^2
@@ -265,7 +266,7 @@ must be zero.
 
 Hence, the required result is proven.
 
-16. Clearly,
+17. Clearly,
 
 .. math::
    \left(\frac{2a}{a+b}\right)\left(\frac{2b}{b+c}\right)\left(\frac{2c}{c+a}\right)=
@@ -274,4 +275,40 @@ Hence, the required result is proven.
 .. math::
    \frac{8abc}{(a+b)(b+c)(c+a)}=\frac{8abc}{(a+b)(b+c)(c+a)}
 
-17.
+18. We can rewrite given ratios as:
+
+.. math::
+   my+nz-lx=\frac{k}{l}\\
+   nz+lx-my=\frac{k}{m}\\
+   lx+my-nz=\frac{k}{n}
+
+Pairing two at a time gives us:
+
+.. math::
+   x=\frac{k}{2l}\left(\frac{1}{m}+\frac{1}{n}\right)\\
+   y=\frac{k}{2m}\left(\frac{1}{l}+\frac{1}{n}\right)\\
+   z=\frac{k}{2n}\left(\frac{1}{m}+\frac{1}{l}\right)
+
+Now let us compute the first of the ratios which are to be proven equal.
+
+.. math::
+   \frac{y+z-x}{l} = \frac{k}{2l}\left\{\frac{1}{lm}+\frac{1}{mn}+\frac{1}{ln}+\frac{1}{mn}-\frac{1}{lm}-\frac{1}{ln}\right\}
+
+.. math::
+   \Rightarrow~\frac{y+z-x}{l} =\frac{k}{lmn}
+
+Similarly, others can be also proven equal.
+    
+19. Applying the formula for eliminant we can write it as:
+
+.. math::
+   a(bc-a^2)+c(ab-c^2)+b(ca-b^2)=0
+
+.. math::
+   \Rightarrow~a^3+b^3+c^3-3abc=0.
+
+20. As shown in previous problem the eliminant is:
+
+.. math::
+   ah^2+bg^2+ch^2-3abc=0
+
