@@ -151,7 +151,7 @@ Problems
     (a) :math:`a` and :math:`b`
     (b) :math:`12a^{3.4}` and :math:`14a^{5.7}`.
 
-3.  Find the thrid proportional of the following:
+3.  Find the third proportional of the following:
 
     (a) :math:`7` and :math:`9`.
     (b) :math:`ab` and :math:`a+b`.
@@ -161,7 +161,7 @@ If :math:`a:b=c:d`, prove that
 4.  :math:`a^2c+ac^2:b^2d+bd^2=(a+c)^3:(b+d)^3`.
 5.  :math:`pa^2+qb^2:pa^2-qb^2=pc^2+qd^2:pc^2-qd^2`.
 6.  :math:`a-c:b-d=\sqrt{a^2+c^2}:\sqrt{b^2+d^2}`.
-7.  :math:`\sqrt{a^2+c^2}:\sqrt{b^2+d^2}=\sqrt{ac+\frac{c^3}{a}}:\sqrt{bd+\frac{d^3}{a}}`.
+7.  :math:`\sqrt{a^2+c^2}:\sqrt{b^2+d^2}=\sqrt{ac+\frac{c^3}{a}}:\sqrt{bd+\frac{d^3}{b}}`.
 
 If :math:`a, b, c` and :math:`d` are in continued proportion prove that
 

@@ -1,5 +1,5 @@
-Introduciton
-************
+Preface
+*******
 While I was writing data structure book and helping few junior programmers I
 found that the prerequisite knowledge of Mathematics is required and lacking
 respectively. Therefore I decided to write a decided to write a series of

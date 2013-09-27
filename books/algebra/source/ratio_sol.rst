@@ -312,3 +312,4 @@ Similarly, others can be also proven equal.
 .. math::
    ah^2+bg^2+ch^2-3abc=0
 
+All remaining questions are left as exercises to the reader.

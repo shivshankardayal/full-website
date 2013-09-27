@@ -25,7 +25,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -181,6 +181,8 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 'preamble': r"""\setcounter{secnumdepth}{4}
+\usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{fancyhdr}
 %\usepackage{lmodern}
 \setcounter{tocdepth}{4}
@@ -214,7 +216,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('temp', 'algebra.tex', u'A Book of Informal ALgebra',
+  ('index', 'algebra.tex', u'A Book of Informal ALgebra',
    u'Shiv S. Dayal', 'manual'),
 ]
 
@@ -244,7 +246,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('temp', 'algebra', u'algebra Documentation',
+    ('index', 'algebra.tex', u'A Book of Informal Albegra',
      [u'Shiv S. Dayal'], 1)
 ]
 

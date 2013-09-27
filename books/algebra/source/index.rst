@@ -12,11 +12,12 @@ Contents:
    :maxdepth: 2
    :numbered:
 
-   intro
+   preface
    ns
    ratio
    ratio_sol
    proportions
+   prop_sol
    variations
    cn
 
