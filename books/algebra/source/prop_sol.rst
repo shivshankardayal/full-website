@@ -97,3 +97,12 @@ Problem no. 9 and 10 are left as exercises to the reader as they are similar.
 
 .. math::
    L.H.S.=\frac{a^2-ac+c^2}{\frac{1}{a^2}-\frac{1}{ac}+\frac{1}{c^2}}
+
+.. math::
+   \Rightarrow~\frac{a^2-ac+c^2}{\frac{ac^3-a^2c^2+a^3c}{a^3b^3}}
+
+.. math::
+   \Rightarrow~\frac{a^2-ac+c^2}{\frac{a^2-ac+c^2}{a^2c^2}}
+
+.. math::
+   \Rightarrow~a^2c^2=b^4
