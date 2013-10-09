@@ -19,7 +19,8 @@ Contents:
    proportions
    prop_sol
    variations
-   cn
+   variations_solutions
+   complex_numbers
 
 Indices and tables
 ==================

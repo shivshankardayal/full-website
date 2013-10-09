@@ -221,8 +221,7 @@ a cyclic manner as given in image below:
 
 .. image:: _static/cyclic.png
   :align: center
-
-:download:`Souce of image <_static/cyclic.xp>`.
+  :scale: 79
 
 Multiply the coefficients as indicated by the arrows. The ascending arrows are
 positive and descending ones are negative. This is called the **Rules of Cross

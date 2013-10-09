@@ -39,7 +39,7 @@ Problems
     when :math:`y=4` find the value of :math:`y` when
     :math:`x=\frac{1}{\sqrt{3}}`.
 4.  :math:`x` varies as :math:`y` and :math:`z` jointly; if :math:`x=2` when
-    :math:`b=\frac{3}{5}` and :math:`z=\frac{10}{27}` find :math:`z` when
+    :math:`y=\frac{3}{5}` and :math:`z=\frac{10}{27}` find :math:`z` when
     :math:`x=54` and :math:`y=3`.
 5.  If :math:`a` varies as :math:`c`, and :math:`b` varies as :math:`c`, then
     :math:`a\pm b` and :math:`\sqrt{ab}` will each vary as :math:`c`.
