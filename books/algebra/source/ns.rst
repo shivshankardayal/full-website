@@ -10,7 +10,7 @@ representing fractional numbers. Minus sign is used to represent negative
 numbers. A number system ranges from :math:`-\infty` to :math:`+\infty`. It
 is best represented by a straight line given below.
 
-.. image:: _static/number_axis.png
+.. image:: _static/number_axis.pdf
   :align: center
   :alt: Number axis.
   

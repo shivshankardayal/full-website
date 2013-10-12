@@ -184,34 +184,37 @@ latex_elements = {
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{fancyhdr}
-%\usepackage{lmodern}
+\usepackage{lmodern}
 \setcounter{tocdepth}{4}
-\usepackage{fontspec}
-\usepackage{xunicode}
-\usepackage{xltxtra}
-\setmainfont[Mapping=tex-text]{Birka}
-\setsansfont{Myriad}
-\setmonofont{Inconsolata}
-\makeatletter
-  \fancypagestyle{normal}{
-    \fancyhf{}
-    \fancyfoot[LE,RO]{{\py@HeaderFamily\thepage}}
-    \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
-    \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
-    \fancyhead[LE,RO]{{\py@HeaderFamily \@title}} % here's the change
-    \renewcommand{\headrulewidth}{0.4pt}
-    \renewcommand{\footrulewidth}{0.4pt}
-  }
-\makeatother
-\textwidth 15truecm
-\textheight 22.5truecm
-\baselineskip 14truept
-\oddsidemargin 1cm
-\evensidemargin 1cm
-\topmargin 0cm
-%\definecolor{VerbatimBorderColor}{rgb}{0.36,0.54,0.66}
+
 """
 }
+#\usepackage{fontspec}
+#\usepackage{xunicode}
+#\usepackage{xltxtra}
+#\setmainfont[Mapping=tex-text]{Birka}
+#\setsansfont{Myriad}
+#\setmonofont{Inconsolata}
+#\makeatletter
+#  \fancypagestyle{normal}{
+#    \fancyhf{}
+#    \fancyfoot[LE,RO]{{\py@HeaderFamily\thepage}}
+#    \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
+#    \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
+#    \fancyhead[LE,RO]{{\py@HeaderFamily \@title}} % here's the change
+#    \renewcommand{\headrulewidth}{0.4pt}
+#    \renewcommand{\footrulewidth}{0.4pt}
+#  }
+#\makeatother
+#\textwidth 15truecm
+#\textheight 22.5truecm
+#\baselineskip 14truept
+#\oddsidemargin 1cm
+#\evensidemargin 1cm
+#\topmargin 0cm
+#%\definecolor{VerbatimBorderColor}{rgb}{0.36,0.54,0.66}
+#"""
+#}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).

@@ -1,3 +1,4 @@
 books/c/build/
 books/dsa/build/
 books/algebra/build/
+*.log

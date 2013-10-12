@@ -219,7 +219,7 @@ So we can see that for :math:`x` coefficients of :math:`y` and :math:`z` are
 used and for :math:`y`, that of :math:`x` and :math:`z` are used and so on in
 a cyclic manner as given in image below:
 
-.. image:: _static/cyclic.png
+.. image:: _static/cyclic.pdf
   :align: center
   :scale: 79
 

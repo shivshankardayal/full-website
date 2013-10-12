@@ -171,6 +171,30 @@ where
 .. math::
   \bar{P}z=\overline{a_0}+\overline{a_1}~z+\overline{a_2}z^2+ ... + \overline{a_n}z^n
 
+13. If :math:`R(z)=\frac{P(z)}{Q(z)}` where P(a) and Q(z) are polynomials in z,
+and :math:`Q(z)\neq 0,` then
+
+.. math::
+   \overline{R(z)}=\frac{\overline{P}(\overline{z})}{\overline{Q}(\overline{z})} 
+
+14. If
+
+.. math::
+   z = \begin{vmatrix}
+   a_1 & a_2 & a_3 \\
+   b_1 & b_2 & b_3 \\
+   c_1 & c_2 & c_3 \\
+   \end{vmatrix},
+   \text{ then } \overline{z} = \begin{vmatrix}
+   \overline{a_1} & \overline{a_2} & \overline{a_3} \\
+   \overline{b_1} & \overline{b_2} & \overline{b_3} \\
+   \overline{c_1} & \overline{c_2} & \overline{c_3} \\
+   \end{vmatrix}
+
+where :math:`a_i, b_i, c_i (i=1, 2, 3)` are complex numbers. To prove this you
+need to understand determinants.
+
+
 Modulus of a Complex Number
 ===========================
 Modulus of a complex number :math:`z` is denoted by :math:`|z|` and is equal to
@@ -221,3 +245,117 @@ Following relations are very easy and can be proved by the student. If
 12. If :math:`z_1, z_2 \neq 0`, then
     :math:`|z1+z2|^2=|z_1|^2+|z_2|^2\Leftrightarrow \frac{z_1}{z_1}` is purely
     imaginary.
+13. If :math:`z_1` and  :math:`z_2` are complex numbers then
+    :math:`|z_1+z_2|\leq|z_1|+|z_2|.` This inequality can be generalized also.
+
+14. Similarly, these can also be proven that :math:`|z_1-z_2|\leq|z_1|+|z_2|,`
+    :math:`||z_1|-|z_2||\leq|z_1|+|z_2|` and
+    :math:`|z_1-z_2|\geq||z_1|-|z_2||.`
+
+Geometrical Representation
+--------------------------
+A complex number z which we have considered to be equal to x+iy in our previous
+representations can be represented by a point P whose Cartesian co-ordinates
+are (x,y) referred to rectangular axes Ox and Oy where O is origin i.e. (0, 0)
+and are called *real* and *imaginary* axes respectively. The xy two-dimensional
+plane is also called *Argand plane, complex plane* or *Gaussian plane*. The
+point P is also called the *image* of the complex number and z is also called
+the *affix* or *complex co-ordinate* of point P.
+
+Now as you can easily figure out that all real numbers will lie on real axis
+and all imaginary numbers will lie onimaginary axis as their counterparts will
+be zero.
+
+The modulus is given by the length of segment OP which is equal to
+:math:`OP=\sqrt{x^2+y^2} = |z|.` This, :math:`|z|` is the length of the
+OP. Given below is the graphical representation of the complex number.
+
+.. image:: _static/complex_number.png
+  :align: center
+  :scale: 88
+
+In the above diagram :math:`\theta` is known as the argument of z. This is
+nothing but angle made with positive direction (i.e. counter-clockwise) of real
+axis. Now thie argument is not unique. If :math:`\theta` is an argument of a
+complex number z then :math:`2n\pi+\theta` where :math:`n\in I` where I is the
+set of integerts. The value of argument for which :math:`-\pi<\theta\leq\pi` is
+called the *principal value* of argument or *principal argument*.
+
+Different Arguments of a Complex Number
+---------------------------------------
+In the diagram given above the argument is given as
+
+.. math::
+   arg(z) = tan^{-1}\left(\frac{y}{x}\right)
+
+this value is for when z is in first quadrant.
+
+When z will lie in second, third and fourth quadrants then arguments will be
+
+.. math::
+   arg(z) = \pi -tan^{-1}\left(\frac{y}{|x|}\right)
+
+   arg(z) = \pi -tan^{-1}\left(\frac{|y|}{|x|}\right)
+
+   arg(z) = \pi -tan^{-1}\left(\frac{|y|}{x}\right)
+
+repectively.
+
+Polar Form of a Complex Number
+------------------------------
+If z is a non-zero complex number, then we can write :math:`z=r(cos\theta +
+isin\theta)` where :math:`r=|z|\text{ and }\theta=arg(z).`
+
+In this case z is also given by
+:math:`z=r(cos(2n\pi+\theta)+i~sin(2n\pi+\theta))` where :math:`n\in I.`
+
+Euler's Formula
+^^^^^^^^^^^^^^^
+The complex number :math:`cos\theta+i~sin\theta` is denoted by
+:math:`e^{i\theta}` or :math:`cis~\theta.`
+
+Important Results Involving Arguments
+-------------------------------------
+If :math:`z, z_1 \text{ and } z_2` are complex numbers then
+
+1. :math:`arg(\overline{(z)}) = arg(z)`. This can be easily proven as if
+:math:`z=x+iy` then :math:`\overline{z}=x-iy` i.e. sign of argument will get a
+-ve sign as y gets one.
+
+2. :math:`arg(z_1z_2)=arg(z-1)+arg(z_1)+2n\pi` where
+
+.. math::
+   k = 
+   \begin{cases}
+   0 \text{ if } & -\pi<arg(z_1)+arg(z_2)\leq-\pi\\
+   1 \text{ if } & -2\pi<arg(z_1)+arg(z_2)\leq-\pi\\
+   -1 \text{if } & -\pi<arg(z_1)+arg(z_2)\leq2\pi\end{cases}
+
+3. Similarly, :math:`arg(z_1, \overline{z_2})=arg(z_1)-arg(z_2)`
+
+4. :math:`arg\left(\frac{z_1}{z_2}\right)=arg(z_1)+arg(z_2)+2n\pi`
+
+5. :math:`|z_1+z_2|=|z_1-z_2|\Leftrightarrow arg(z_1)-arg(z_2)=\pi/2`
+
+6. :math:`|z_1+z_2|=|z_1|+|z_2|\Leftrightarrow arg(z_1)=arg(z_2)`
+
+7. :math:`|z_1+z_2|^2 = r_1^2+r_2^2+2r_1r_2cos(\theta_1-\theta_2)`
+
+8. :math:`|z_1-z_2|^2 = r_1^2+r_2^2+2r_1r_2cos(\theta_1+\theta_2)`
+
+Vector Representation
+---------------------
+Complex numbers can also be represented as vectors. Length of the vector is
+nothing bu modulus of complex number and argument is the angle which the vector
+makes with read axis. It is denoted as :math:`\overrightarrow{OP}` where
+:math:`OP` represents the vector of the complex number z.
+
+Algebraic Operation's Representation
+------------------------------------
+Let :math:`z_1=x_1+iy_1` and :math:`x_2+iy_2` be two complex numbers which are
+represented by two points :math:`P1` and :math:`P2` in the following diagrams.
+
+Addition
+^^^^^^^^
+Now as we know that :math:`z_1+z_2 = (x_1+x_2)+i(y_1+y-2).` Let us try to
+achive this through geometrical means.

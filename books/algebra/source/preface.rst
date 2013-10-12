@@ -37,7 +37,9 @@ pen(or pencil; your preference) and paper ofcourse. If you cannot solve a
 problem lookup the solution and try to understand it. Even if you understand
 the solution you should take another attempt at solving the problem again
 without looking at solution. Make sure that you do not **skip** even
-a single problem. Remember *practice* is king in Mathematics.
+a single problem. Remember *practice* is everything in Mathematics. When the
+problem set will be too large then it will be split into several chapters as
+MathJax may casue trouble when rendering lots of Mathematical equations.
 
 Who this book is for?
 =====================
