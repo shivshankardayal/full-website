@@ -52,10 +52,18 @@ Problems
 1.  Evaluate:
 
     (a) :math:`i^5`
+
+        :math:`i^5=i^2*i^2*i=-1*-1*i=i`
     (b) :math:`i^{67}`
+
+        :math:`i^{64}*i^2*i=-i`
     (c) :math:`i^{-49}`
 
+        :math:`\frac{1}{i^{48}i}=\frac{1}{i}=i^3`
+
 2.  Prove that :math:`i^n+i^{n+1}+i^{n+2}+i^{n+3}=0`.
+
+    :math:`i^n(1+i+i^2+i^3)=i^n(1+i-1-i)=0`
 
 Definitions Related to Complex Numbers
 ======================================
@@ -272,7 +280,7 @@ OP. Given below is the graphical representation of the complex number.
 
 .. image:: _static/complex_number.png
   :align: center
-  :scale: 88
+  :scale: 97
 
 In the above diagram :math:`\theta` is known as the argument of z. This is
 nothing but angle made with positive direction (i.e. counter-clockwise) of real
@@ -359,3 +367,78 @@ Addition
 ^^^^^^^^
 Now as we know that :math:`z_1+z_2 = (x_1+x_2)+i(y_1+y-2).` Let us try to
 achive this through geometrical means.
+
+.. image:: _static/complex_addition.png
+  :align: center
+  :scale: 97
+
+Let us have :math:`P_2L, P_1M \text{ and } P_N` perpendiculars from :math:`P_2,
+P_1 \text{ and } P` respectively on x axis. Draw :math:`P_1K` perpendicular to
+:math:`PN`. Note that triangles :math:`OP_2L` and :math:`P_1P_2K` are
+congruent. Very simple analysis will result in the fact that
+
+.. math::
+   OP=OP_1+OP_2
+
+Subtraction
+^^^^^^^^^^^
+TO subtract we will have to make :math:`P_2` rotate by :math:`180^\circ .` Now
+this means that in prebious diagram it will fall in third quadrant and then
+again it can be proven that
+
+.. math::
+   z_1-z_2 = P_2P_1
+
+Similarly diagrams for multiplication and division can also be obtained and is
+left as an exercise.
+
+For multiplication length or modulus of product is product of two modulii and
+argument is sum of arguments. For division modulus is division and argument is
+subtraction of two arguments. This implies
+
+.. math::
+   z_1z_2=r_1r_2(cos(\theta_1+\theta_2)+isin(\theta_1+\theta_2))
+
+and
+
+.. math::
+   \frac{z_1}{z_2}=\frac{r_1}{r_2}(cos(\theta_1+\theta_2)-isin(\theta_1-\theta_2))
+
+Three Important Results
+-----------------------
+.. image:: _static/argument_diff.png
+  :align: center
+  :scale: 97
+
+:math:`z_1-z_2=\overrightarrow{OP}-\overrightarrow{OQ}=\overrightarrow{QP}`
+
+:math:`\therefore |z_1-z_2|=|\overrightarrow{QP}|=QP,` which is nothing but distance
+between points P and Q which are nothing but representation of complex numbers
+:math:`z_1` and :math:`z_2.`
+
+:math:`arg(z_1-z_2)` is the angle which :math:`\overrightarrow{QP}` makes with
+positive direction of x-axis being denoted by :math:`\theta.`
+
+.. image:: _static/argument_angle.png
+  :align: center
+  :scale: 97
+
+:math:`\theta=\alpha-\beta=arg(z_3-z_1)-arg(z_2-z_1)`
+
+.. math::
+   \Rightarrow~\theta=arg\frac{z_3-z_1}{z_2-z_1}
+
+Similarly if three complex numbers are vertices of a triangle then angles of
+those vertices can also be computed using previous results.
+
+Similarly, for four points to be concyclic where those points are represented
+by :math:`z_1, z_2, z_3 \text{ and } z_4` if 
+
+.. math::
+   arg\left(\frac{z_2-z_4}{z_1-z_4}\frac{z_1-z_3}{z_2-z_3}\right)=0
+
+Note that these complex numbers are in either clockwise or counter-clockwise
+order as vertices of the quadrilateral.
+
+More Roots
+==========

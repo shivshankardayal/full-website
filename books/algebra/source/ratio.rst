@@ -219,9 +219,9 @@ So we can see that for :math:`x` coefficients of :math:`y` and :math:`z` are
 used and for :math:`y`, that of :math:`x` and :math:`z` are used and so on in
 a cyclic manner as given in image below:
 
-.. image:: _static/cyclic.pdf
+.. image:: _static/cyclic.png
   :align: center
-  :scale: 79
+  :scale: 97
 
 Multiply the coefficients as indicated by the arrows. The ascending arrows are
 positive and descending ones are negative. This is called the **Rules of Cross
