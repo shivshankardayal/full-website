@@ -410,3 +410,8 @@ margin-bottom: -20px;
     /* Landscape phones and down */
     @media (max-width: 480px) { body{width:480px;padding-top: 60px;
     padding-bottom: 42px;} }
+
+.MathJax_Display {
+    text-align: left !important;
+    margin-left: 20px;
+}

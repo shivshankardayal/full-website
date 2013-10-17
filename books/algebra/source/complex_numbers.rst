@@ -442,3 +442,118 @@ order as vertices of the quadrilateral.
 
 More Roots
 ==========
+
+Any Root of an Imaginary Number is an Imaginary Number
+------------------------------------------------------
+Let :math:`x+iy` be an imaginary number, where :math:`y\neq 0`
+
+Let :math:`(x+iy)^n=a, \therefore x+iy = a^n`
+
+Now if :math:`a` is real :math:`a^n` will also be real but from above an
+imaginary number :math:`x+iy` is equal to a real number :math:`a^n` which is
+not posiible. Hence, a must be imaginary.
+
+Square Root of a Complex Number
+-------------------------------
+Consider a complex number :math:`z=x+iy` then let us say
+
+.. math::
+   \sqrt{x+iy}=a+ib
+
+   x+iy = (a^2-b^2)+2abi
+
+Equating real and imaginary parts
+
+.. math::
+   x=a^2-b^2 \text{ and } y=2ab
+
+then we can write
+
+.. math::
+   a^2+b^2 = (a^2-b^2)^2 + (2ab)^2
+
+From two equations written above we have
+
+.. math::
+   a=\pm\sqrt{\left(\frac{\sqrt{x^2+y^2}+x}{2}\right)} \text{ and }
+
+   b=\pm\sqrt{\left(\frac{\sqrt{x^2+y^2}-x}{2}\right)} \text{ and }
+
+Thus, we can deduce our complex number.
+
+Cube Roots of Unity
+-------------------
+Let :math:`x=x^{\frac{1}{3}}`, then :math:`x^3-1=0.`
+
+:math:`\Rightarrow~(x-1)+(x^2+x+1)=0`
+
+So the three roots are :math:`x=1, x=\frac{-1\pm \sqrt{-3}}{2}` i.e. :math:`1,
+\frac{-1+i\sqrt{3}}{2} \text{ and } \frac{-1-i\sqrt{3}}{2}.`
+
+It can be easily verified that of if :math:`\omega=\frac{-1-i\sqrt{3}}{2}` then
+:math:`\omega^2=\frac{-1+i\sqrt{3}}{2}` thus three cube roots are represented
+as :math:`1, \omega \text{ and } \omega^2.`
+
+Similarly one of the properties is that :math:`1+\omega+\omega^2=0` which can
+be verified also and product of all three is 1 i.e. :math:`\omega^3=1.`
+
+nth Root of Unity
+-----------------
+.. math::
+   1=cos0+isin0
+
+.. math::
+   =1^\frac{1}{n}=(cos0+isin0)^\frac{1}{n}
+
+.. math::
+
+   =cos\frac{2k\pi+0}{n}+isin\frac{2k\pi+0}{n}, \text{ where } k=0,1,2,3,4,....(n-1)
+
+.. math::
+   =e^{\frac{i2k\pi}{n}}
+
+.. math::
+   = 1, e^\frac{i2\pi}{n}, e^\frac{i4\pi}{n}, ..., e^\frac{i2(n-1)\pi}{n}
+
+.. math::
+   = 1,\alpha , \alpha^2, ..., \alpha^n, \text{ where }
+   \alpha=e^\frac{i2\pi}{n}
+
+Similarly as cube roots of unity it can be proven that
+
+.. math::
+   1+\alpha+\alpha^2 + \alpha^{n-1}= 0
+
+and
+
+.. math::
+   1.\alpha.\alpha^2. ... .\alpha^{n-1}=(-1)^{n-1}
+
+De Movire's Therorem
+====================
+**Statement:** If :math:`n` is any integer then :math:`(cos\theta +
+isin\theta)^n=cosn\theta + isinn\theta`.
+
+If :math:`n` is any rational number then one of the values of :math:`(cos\theta
++ isin\theta)^n=cosn\theta + isinn\theta`
+
+**Proof:**
+Case I: When n is 0.
+
+Clearly, :math:`(cos\theta+isin\theta)^0=1`
+
+Case II:  When n is a positive integer.
+
+Clearly,
+:math:`(cos\theta+isin\theta)^2=(cos^2\theta-sin^2\theta+i2cos\theta sin\theta)`
+
+= :math:`cos2\theta+isin2\theta`
+
+Similarly, :math:`(cos\theta+isin\theta)^3=cos3\theta+isin3\theta`
+
+Similalrly, if for :math:`n-1` we have
+
+:math:`(cos\theta+isin\theta)^{(n-1)} = cos(n-1\theta)+isin(n-1)\theta` then it
+can be easily proven that
+
+:math:`(cos\theta+isin\theta)^n = cosn\theta+isinn\theta`
