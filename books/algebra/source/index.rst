@@ -21,6 +21,7 @@ Contents:
    variations
    variations_solutions
    complex_numbers
+   complex_numbers1
 
 Indices and tables
 ==================

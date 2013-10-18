@@ -538,11 +538,12 @@ If :math:`n` is any rational number then one of the values of :math:`(cos\theta
 + isin\theta)^n=cosn\theta + isinn\theta`
 
 **Proof:**
-Case I: When n is 0.
+
+**Case I:** When n is 0.
 
 Clearly, :math:`(cos\theta+isin\theta)^0=1`
 
-Case II:  When n is a positive integer.
+**Case II:**  When n is a positive integer.
 
 Clearly,
 :math:`(cos\theta+isin\theta)^2=(cos^2\theta-sin^2\theta+i2cos\theta sin\theta)`
@@ -553,7 +554,60 @@ Similarly, :math:`(cos\theta+isin\theta)^3=cos3\theta+isin3\theta`
 
 Similalrly, if for :math:`n-1` we have
 
-:math:`(cos\theta+isin\theta)^{(n-1)} = cos(n-1\theta)+isin(n-1)\theta` then it
+:math:`(cos\theta+isin\theta)^{(n-1)} = cos(n-1)\theta+isin(n-1)\theta` then it
 can be easily proven that
 
 :math:`(cos\theta+isin\theta)^n = cosn\theta+isinn\theta`
+
+It is left as an exercise to the reader to prove it for negative and fractional
+powers.
+
+Section Formula
+===============
+Let :math:`z_1=x_1+iy_1, z_2=x_2+iy_2` then if :math:`z=z+iy` which divides the
+previous two points in the ration :math:`m;n` can be given by using the results
+from co-ordinate geometry as below:
+
+.. math::
+   x=\frac{mx_2+nx_1}{m+n}, \text{ and } y=\frac{my_2+ny-1}{m+n}
+
+   \therefore~z=\frac{mz_2+nz_1}{m+n}
+
+Equation of a Line Passing Through Two Points
+=============================================
+The equation between two point :math:`z_1` and :math:`z_2` is given by the
+determinant
+
+.. math::
+   \begin{vmatrix}
+   z & \overline{z}&1\\
+   z_1 & \overline{z_1}&1\\
+   z_2 & \overline{z_2}&1
+   \end{vmatrix}=0
+
+or,
+
+.. math::
+   \frac{z-z_1}{\overline{z}-\overline{z_1}}=\frac{z_1-z_2}{\overline{z_1}-\overline{z_2}}
+
+Please refer to determinants section and co-ordinate geomtry books on how to
+establish this result.
+
+The proof is left as an exercise to the reader.
+
+Collinear Points
+================
+Three points :math:`z_1, z_2 \text{ and } z_3` are collinear if and only if
+
+.. math::
+   \begin{vmatrix}
+   z_1 & \overline{z_1}&1\\
+   z_2 & \overline{z_2}&1\\
+   z_3 & \overline{z_3}&1
+   \end{vmatrix}=0
+
+This follows from the formula for a line passing through two points. Just
+substitute :math:`z_3` as a point in the equation to satisfy the equality.
+
+Problems are given in further chapters as MathJax can cause slow rendering if
+there are two many formulas on one page.
