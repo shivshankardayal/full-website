@@ -6,8 +6,6 @@
 Informal Algebra's Contents
 ============================================
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
    :numbered:

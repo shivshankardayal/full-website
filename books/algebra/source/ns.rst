@@ -34,6 +34,97 @@ of 10 distinct symbols 0 through 9. Similarly we can have any other number
 system. Popular number systems in computers are binary, octal and hexadecimal
 not to mention decimal ofcourse.
 
+Definitions
+===========
+1. **Natural numbers** Numbers 1, 2, 3 4, ... used in ordinary counting are
+called natural numbers or positive integers. The set of natural numbers is
+denoted by **N**.
+
+Thus N = {1, 2, 3, 4, 5, ...}
+
+2. **Integers:** The numbers ..., -3, -2, -1, 0, 1, 2, 3, ... are 
+called integers. These are whole numbers i.e. not fractions. The set for 
+integers is denoted by **I** or **Z**.
+
+This I or Z = {..., -3, -2, -1, 0, 1, 2, 3, ...}
+
+Clearly, :math:`N \subset Z`.
+
+3. **Zero:** 0 is an integer but a special integer. It is neither 
+negative not positive but 1's complement in binary number system has two zero 
+one positive and one negative while 2's complement has only one zero. Zero is 
+treated as a non-negative as well as non-positive integer.
+
+**Examples:**
+
+i)   Set of positive integers = {1, 2,3, ...}
+ii)  Set of negative integers = {-1, -2, -3, ...}
+iii) Set of non-negative integers = {0, 1, 2, ...}
+iv)  Set of non-postive integers = {0, -1, -2, ...}
+
+.. tikz:: Integer Classification
+
+   \draw (0,0) -- (7,0);
+   \draw (3.5, -0.2) -- (3.5, 0.2);
+   \draw (3.5, 0.4) node {Integers};
+   \draw (3.5, -0.4) node {Zero};
+   \draw (0, -0.2) -- (0, 0);
+   \draw (7, -0.2) -- (7, 0);
+   \draw (0, -0.4) node {Negative Integers (-1, -2, ...)};
+   \draw (7, -0.4) node {Positive Integers (1, 2, ...)};
+   \draw (7, -0.7) node {or};
+   \draw (7, -1) node {Natural Numbers};
+   
+4. **Rational Numbers:** is a number of form :math:`\frac{a}{b}` where :math:`a` 
+and :math:`b` are integers and :math:`b\ne 0`. The set of rational numbers is
+denoted by **Q**.
+
+Thus Q= :math:`\{\frac{a}{b}: a,b\in Q \text{ and } b\ne 0\}`. Since :math:`b`
+is an integer it can very well be 1 therefore each number of the form
+:math:`\frac{a}{1}` which is nothing but :math:`a` is also a rational number.
+
+Clearly, :math:`N\subset Z\subset Q`. Examples of rational numbers are
+:math:`\frac{2}{3}, -\frac{3}{4}, 7` etc. 0 is an inetger and hence a rational
+number.
+
+5. **Decimal form of a rational number is either recurring or terminating** As
+we know that base of decimal number system is 10 which has 
+two prime factors. Now if denominator of a rational number is not one and
+contains any other factor than 2 and 5 then the rational number will be
+recurring and if it is only product of powers of 2 and 5 or is 1 then the
+rational number will be terminating. This can be generalized for any base or
+radix :math:`r` which has say prime factors :math:`r_1, r_2, ..., r_n` then in
+that case if denominator contains any other factor than these then that
+rational number will be recurring else terminating.
+  
+For exmaple :math:`\frac{3}{4}=0.75` while
+:math:`\frac{3}{7}=.4285714285714...`
+  
+It is safe to assume that :math:`a` and :math:`b` do not have a common factor
+because that factor can be eliminated without changing the value of the
+rational number.
+
+6. **Standard form of a rational number:** A rational number of the 
+form :math:`\frac{a}{b}` is said to be in standard form if :math:`a` and
+:math:`b` have no factor in common other than 1 and :math:`b>0`.
+
+7. **Irrational numbers:** Consider a rational number
+:math:`\frac{a}{b}=\sqrt{2}`. By definition of rational numbers :math:`a` and
+:math:`b` cannot have a common factor. But then :math:`a,b\in Z` which is not
+the case here as :math:`a \text{ or } b` is not an integer. Therefore, it is
+not a rational number. The reason is if both of them are integers then the
+rational number cannot be square root of a number. Hence, we can conclude that
+this fraction :math:`\frac{a}{b}` is an irrational numbers and there are
+infinite such irrational numbers.
+
+8. **Decimal form of an irational number is neither terminating nor
+recurring** For example \:math:`sqrt{5}=1.732...`
+
+9. **Real numbers:** All rational and irrational numbers are also
+known as real numbers which is denoted by set **R**.
+
+Clearly, :math:`N\subset Z\subset Q\subset R`
+
 Binary Number System
 ==================== 
 .. index::
