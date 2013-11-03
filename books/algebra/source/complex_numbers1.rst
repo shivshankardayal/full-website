@@ -132,4 +132,27 @@ z_1^2+z_2^2+2Re(\overline{z_1}z_2)`
 :math:`\left(1+\frac{x^2}{a^2}\right) \left(1+\frac{x^2}{b^2}\right)
 \left(1+\frac{x^2}{c^2}\right) ... = A^2+B^2`
 
-43. 
+43. Let :math:`z_1` and :math:`z_2` be complex numbers such that :math:`z_1\ne
+z_2` and :math:`|z_1|=|z_2|.` If :math:`z_1` haas positive real part and
+:math:`z_2` has negative imaginary part then prove that
+:math:`\frac{z_1+z_2}{z_1-z_2}` is either zero or purely imaginary.
+
+44. For comples numbers :math:`z_1=x_1+iy_1` and :math:`z_2=x_2+iy_2` the
+notation of :math:`z_1\cap z_2` if :math:`x_1\le x_2` and :math:`y_1\le y_2.`
+Show that for all complex numbers :math:`z` with :math:`1\cap z` we have
+:math:`\frac{1-z}{1+z}\cap 0.`
+
+45. If :math:`a>0, z|z|+az+1=0,` show that :math:`z` is a negative real number.
+
+46. Find the range of real number :math:`\alpha` for which the equation
+:math:`z+\alpha|z-1|+2i=0; z=x+iy` has a solution. Also, find the solution.
+
+47. For every real number :math:`a\ge 0,` find all the complex numbers
+satisfying the equation :math:`a|z|-4az+1+ia=0`
+
+48. Show that :math:`(x^2+y^2)^5=(x^5-10x^3y^2+5xy^4)^2+(5x^4y-10x^2y^3+y^5)^2`
+
+49. Express :math:`(x^2+a^2)(x^2+b^2)(x^2+c^2)` as sum of two squares.
+
+50. If :math:`(1+x)^n=a_0+a_1x+a_2x^2+ ... +a_nx^n,` prove that
+:math:`2^n=(a_0-a_2+a_4- ...)^2 + (a_1-a_3+a_5- ...)^2`
