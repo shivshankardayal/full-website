@@ -120,3 +120,16 @@ z_1^2+z_2^2+2Re(\overline{z_1}z_2)`
 :math:`a^2+b^2=4a-3`
 
 39. If :math:`|2z-1|=|z-2|` then prove that :math:`|z|=1`
+
+40. If :math:`x` is real and :math:`\frac{1-ix}{1+ix}=m+in` then prove that
+:math:`m^2+n^2=1`
+
+41. If :math:`m+in=\frac{x+iy}{x-iy}, \text{ where }  x,y,m,n` are real and
+:math:`x+iy\ne 0` and :math:`m+in\neq 0` then prove that :math:`m^2 + n^2 = 1`
+
+42. If :math:`\left(1+i\frac{x}{a}\right) \left(1+i\frac{x}{c}\right)
+\left(1+i\frac{x}{c}\right) ... = A+iB` then prove that
+:math:`\left(1+\frac{x^2}{a^2}\right) \left(1+\frac{x^2}{b^2}\right)
+\left(1+\frac{x^2}{c^2}\right) ... = A^2+B^2`
+
+43. 
