@@ -71,3 +71,52 @@ imaginary.
 24. If :math:`|z-i|<1` then prove that :math:`|z+12-6i|<14`
 
 25. If :math:`|z+6|=|2z+3|` then prove that :math:`|z|=3`
+
+26. If :math:`\sqrt{a-ib}=x-iy` prove that :math:`\sqrt{a+ib}=x+iy`
+
+27. Show that the equation
+
+.. math::
+   \frac{A^2}{x-a}+\frac{B^2}{x-b}+ ... + \frac{H^2}{x-h} = x+l
+
+where :math:`A, B, ..., H; a, b, ..., h \text{ and } l` are real; cannot have
+imaginary roots.
+
+28. Show that a unimodular complex number, not purely real can always be
+expressed as :math:`\frac{c+i}{c-i}` for some real :math:`c`.
+
+29. If the expression
+
+.. math::
+   \frac{sin\frac{x}{2}+cos\frac{x}{2}-itanx}{1+2isin\frac{x}{2}}
+
+is real, then find all the possible set of values for :math:`x`
+
+30. Find the conjugate, modulus and argument of :math:`\sqrt{3}+2i`
+
+31. Put :math:`\frac{a+ib}{x-iy}` in polar form.
+
+For any two complex numbers :math:`z_1` and :math:`z_2` prove that
+
+32. :math:`|z_1+z_2|^2+|z_2-z_2|^2 = 2(|z_1|^2 + |z_2|^2)`
+
+33. :math:`|z_1+z_2|^2=z_1^2+z_2^2+2Re(z_1\overline{z_2}) =
+z_1^2+z_2^2+2Re(\overline{z_1}z_2)`
+
+34. If :math:`z_1=1 \text{ and } |z_2|=1` then prove that
+
+.. math::
+   |z_1+z_2|= \left|\frac{1}{z_1}+\frac{1}{z_2}\right|
+
+35. If :math:`|z-2|=2|z-1|` then show that :math:`|z|^2=\frac{4}{3}Re(z)`
+
+36. If :math:`\sqrt[3]{a+ib}=x+iy` then prove that :math:`\frac{a}{x} +
+\frac{b}{y} = 4(x^2 - y^2)`
+
+37. If :math:`x+iy=\sqrt{\frac{a+ib}{c+id}}` then prove that
+:math:`(x^2+y^2)^2= \frac{a^2+b^2}{c^2+d^2}`
+
+38. If :math:`\frac{3}{2+cos\theta+3isin\theta=a+ib}` then prove that
+:math:`a^2+b^2=4a-3`
+
+39. If :math:`|2z-1|=|z-2|` then prove that :math:`|z|=1`
