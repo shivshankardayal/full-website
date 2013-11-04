@@ -157,7 +157,8 @@ can assume that ``/usr/include`` is in include path of compiler. For the curious
 I refer you to http://clang.llvm.org/doxygen/InitHeaderSearch_8cpp_source.html.
 Basically what it does is that it looks for a file names ``stdio.h`` in the
 ``INCLUDEPATH``. If that is found the content of that file is pasted here in our
-program.If you really want to see what happens then you can type ``$clang -E nothing.c``. You will see lots of text scrolling on your screen. The ``-E`` switch
+program.If you really want to see what happens then you can type
+``$clang -E nothing.c``. You will see lots of text scrolling on your screen. The ``-E`` switch
 tells clang that just preprocess the file, do not compile it, and send the
 resulting output to standard output (we will know about this more later), which
 happens to be your monitor in this case..
@@ -276,6 +277,14 @@ definition. int is a data-type in C. ``x, y,`` and ``z`` are variables of type
 ``int``. This means that the size of these variables will be same as ``int``.
 Note that C is a statically typed language and all types have predefined memory
 requirements. In cour case, int requires 4 bytes on 32-bit systems. 
+
+Here I have created a video about variables of C.
+
+.. youtube:: 6whuGZwv2-k
+
+A video about ``printf`` and ``scanf``.
+
+.. youtube:: U3jCSTR7Ulo
 
 Now I will talk about ``printf()`` function. This function is declared in
 ``stdio.h``. The prototype of ``printf()`` is

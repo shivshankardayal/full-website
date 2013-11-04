@@ -225,7 +225,7 @@ The ``strcmp`` function
 The ``strcmp`` function compares the string pointed to by ``s1`` to the string pointed to by
 ``s2``.
 
-&&Returns**
+**Returns**
 
 The ``strcmp`` function returns an integer greater than, equal to, or less than zero,
 accordingly as the string pointed to by ``s1`` is greater than, equal to, or less than the string

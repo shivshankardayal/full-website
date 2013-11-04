@@ -156,3 +156,7 @@ satisfying the equation :math:`a|z|-4az+1+ia=0`
 
 50. If :math:`(1+x)^n=a_0+a_1x+a_2x^2+ ... +a_nx^n,` prove that
 :math:`2^n=(a_0-a_2+a_4- ...)^2 + (a_1-a_3+a_5- ...)^2`
+
+51. If equation :math:`z^2+\alpha z+\beta = 0` has a real root then prove that
+:math:`(\alpha\overline{\beta}-\beta\overline{\alpha})(\overline{\alpha}-
+\alpha)=(\beta-\overline{\beta})^2`

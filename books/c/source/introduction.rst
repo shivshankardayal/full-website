@@ -39,6 +39,10 @@ is about introcution to programming. I talk a bit about C++ in it.
 
 .. youtube:: UIIrDcYSrI0
 
+In this video I specifically talk about C99.
+
+.. youtube:: y8PSO45Krfk
+
 ============
 Organization
 ============
@@ -335,6 +339,10 @@ Move your mouse over pink lines to see the error.
 .. index::
    single: byte
    single: bit
+
+A video about compilation using Eclipse CDT C/C++ IDE.
+
+.. youtube:: ARsoVgknRU0
 
 ===============
 Bits and Bytes

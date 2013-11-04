@@ -1,3 +1,4 @@
+***************
 Complex Numbers
 ***************
 Certain portions of these chapter require facts from other parts like
@@ -609,5 +610,5 @@ Three points :math:`z_1, z_2 \text{ and } z_3` are collinear if and only if
 This follows from the formula for a line passing through two points. Just
 substitute :math:`z_3` as a point in the equation to satisfy the equality.
 
-Problems are given in further chapters as MathJax can cause slow rendering if
-there are two many formulas on one page.
+Problems are given as a separate chapter as MathJax may end up taking long time
+if too much math is present on same page.
