@@ -15,9 +15,6 @@ C Programming with C99 Contents
   :numbered:
 
   introduction
-  fs
-  env
-  lang
   basics
   io
   oae
@@ -25,6 +22,9 @@ C Programming with C99 Contents
   ap
   func
   su
+  fs
+  env
+  lang
   macros
   std
   assert

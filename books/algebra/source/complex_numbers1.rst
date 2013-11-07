@@ -160,3 +160,22 @@ satisfying the equation :math:`a|z|-4az+1+ia=0`
 51. If equation :math:`z^2+\alpha z+\beta = 0` has a real root then prove that
 :math:`(\alpha\overline{\beta}-\beta\overline{\alpha})(\overline{\alpha}-
 \alpha)=(\beta-\overline{\beta})^2`
+
+52. Dividing :math:`f(z)` by :math:`z-i,` we get :math:`i` as remainder and if
+we divide by :math:`z+i,` we get :math:`1+i` as remainder. Find the remiander
+upon division of :math:`f(z)` by :math:`z^2+1`
+
+53. If :math:`iz^2+z^2-z+i=0,` then show that :math:`|z|=1`
+
+54. If :math:`\alpha` and :math:`\beta` are any two complex numbers then show
+that :math:`|\alpha+\sqrt{\alpha^2-\beta^2}| +|\alpha-\sqrt{\alpha^2-\beta^2}|
+= |\alpha+\beta|+|\alpha-\beta|`
+
+55. If :math:`z_1=a+ib` and :math:`z_2=c+id` are complex numbers such that
+:math:`|z_1|=|z_2|=1` and :math:`Re(z_1\overline{z_2})=0` then show that the
+pair of complex numbers :math:`\omega_1=a+ic` and :math:`\omega_2=b+id` satisfy
+(i) :math:`|\omega_1|=|\omega_2|=1` (ii)
+:math:`Re(\omega_1\overline{\omega_2})=0`
+
+56. Prove that :math:`\left|\frac{z_1-z_2}{1-\overline{z_1z_2}}\right|<1` if
+:math:`|z_1|<1, |z_2|<1`

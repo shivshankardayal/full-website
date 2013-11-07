@@ -47,11 +47,14 @@ In this video I specifically talk about C99.
 Organization
 ============
 I have will classify chapters in two categories. One is compiler/language
-specific and second specification specific. Chapter no. 2, 3 and 4 are very
+specific and second specification specific. Chapter no. 9, 10 and 11 are very
 tightly related to specification while rest of the book is related to
 compiler and programming. Chapters which treat standard library of C include
 information from both specification and compiler. It is suggested that the
-reader reads chapter 2, 3 and 4 after finishing rest of the book.
+reader reads chapter 9, 10 and 11 after finishing rest of the book.
+
+This book is in process of getting some extra content so keep looking at
+contents page changes.
 
 ==============
 Why C?
