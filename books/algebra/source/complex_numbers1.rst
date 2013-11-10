@@ -190,3 +190,22 @@ number such that :math:`\frac{z-z_1}{z-z_2}=\frac{\pi}{4},` then prove that
 
 59. If :math:`z\le 1, |w|\le 1,` show that :math:`|z - w|^2\le (|z| - |w|)^2 +
 (Args(z) - Arg(w))^2`
+
+60. If :math:`z` is any non-zero complex number, show that
+
+(i) :math:`\left|\frac{z}{|z|} - 1\right|` (ii) :math:`|z-1| \le ||z| - 1|+ |z|
+    |arg z|`
+
+61. If :math:`\left|z+\frac{1}{z}\right|=a,` where :math:`z` is a complex
+    number and :math:`a>0,` find the greatest and least value of :math:`|z|.`
+
+62. If :math:`z_1, z_2` are complex numbers and :math:`c` is a positive number
+    prove that :math:`|z_1+z_2|^2 < (1+c)|z_1|^2 + \left(1+\frac{1}{c}\right)
+    |z_2|^2`
+
+63. Let :math:`z_1, z_2` be any two complex numbers and :math:`a,b` be two real
+    numbers such that :math:`a^2+b^2 \ne 0.` Prove that
+
+.. math::
+   |z_1|2 + |z_2|^2 - |z_1^2 + z_2^2| \le 2\frac{|az_1+bz_2|^2}{a^2+b^2} \le
+   |z_1|^2 + |z_2|^2 + |z_1^2 + z_2^2|
