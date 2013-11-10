@@ -116,7 +116,7 @@ z_1^2+z_2^2+2Re(\overline{z_1}z_2)`
 37. If :math:`x+iy=\sqrt{\frac{a+ib}{c+id}}` then prove that
 :math:`(x^2+y^2)^2= \frac{a^2+b^2}{c^2+d^2}`
 
-38. If :math:`\frac{3}{2+cos\theta+3isin\theta=a+ib}` then prove that
+38. If :math:`\frac{3}{2+cos\theta+3isin\theta}=a+ib` then prove that
 :math:`a^2+b^2=4a-3`
 
 39. If :math:`|2z-1|=|z-2|` then prove that :math:`|z|=1`
@@ -165,7 +165,7 @@ satisfying the equation :math:`a|z|-4az+1+ia=0`
 we divide by :math:`z+i,` we get :math:`1+i` as remainder. Find the remiander
 upon division of :math:`f(z)` by :math:`z^2+1`
 
-53. If :math:`iz^2+z^2-z+i=0,` then show that :math:`|z|=1`
+53. If :math:`iz^3+z^2-z+i=0,` then show that :math:`|z|=1`
 
 54. If :math:`\alpha` and :math:`\beta` are any two complex numbers then show
 that :math:`|\alpha+\sqrt{\alpha^2-\beta^2}| +|\alpha-\sqrt{\alpha^2-\beta^2}|
@@ -179,3 +179,14 @@ pair of complex numbers :math:`\omega_1=a+ic` and :math:`\omega_2=b+id` satisfy
 
 56. Prove that :math:`\left|\frac{z_1-z_2}{1-\overline{z_1z_2}}\right|<1` if
 :math:`|z_1|<1, |z_2|<1`
+
+57. Let :math:`z_1=10+6i` and :math:`z_2=4+6i.` If :math:`z` is any complex
+number such that :math:`\frac{z-z_1}{z-z_2}=\frac{\pi}{4},` then prove that
+:math:`|z-7-9i|=3\sqrt{2}.`
+
+58. Find all complex numbers :math:`z` for which
+:math:`arg\left(\frac{3z-6-3i}{2z-8-6i}\right)=\frac{\pi}{4}` and :math:`|z -
+3+i=3|`
+
+59. If :math:`z\le 1, |w|\le 1,` show that :math:`|z - w|^2\le (|z| - |w|)^2 +
+(Args(z) - Arg(w))^2`
