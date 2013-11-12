@@ -215,3 +215,119 @@ number such that :math:`\frac{z-z_1}{z-z_2}=\frac{\pi}{4},` then prove that
     numbers and :math:`z` is a real number.
 
 65. If :math:`a,b,c, ..., k` are all :math:`n` real roots of the equation
+
+:math:`x^n + p_1x^{n-1}+p_2x^{n-2} + ... + p_{n-1}x + p_n=0,`
+
+where :math:`p_1,p_2, ..., p_n` are real, show that
+
+:math:`(1+a^2)(1+b^2) ... (1+k^2) = (1-p_2+p_4)^2 + (p_1-p_3+ ...)^2`
+
+66. If :math:`f(x) = x^4-8x^3+4x^2+4x+39` and :math:`f(3+2i) = a+ib,` find
+:math:`a:b`
+
+67. If :math:`z_1, z_2, z_3` be the vertices of an equilateral triangle, show
+that
+
+.. math::
+   \frac{1}{z_1-z_2} + \frac{1}{z_2-z_3} + \frac{1}{z_3-z_1}=0 \text{ or }
+   z_1^2+z_2^2+z_3^2 = z_1z_2+z_2z_3+z_3z_1
+
+68. If :math:`z_1^2+z_2^2-2z_1z_2cos\theta,` show that the points
+:math:`z_1,z_2` and the origin are the vertices of an isosceles triangle.
+
+69. Let :math:`A` and :math:`B` be two complex numbers such that
+:math:`\frac{A}{B} + \frac{B}{A}=1,` prove that the triangle formed by origin
+and these two points is equilateral.
+
+70. Prove that the area of triangle formed by three complex numbers :math:`z_1,
+z_2, z_3` is
+
+.. math::
+   \left|\sum\frac{(z_2-z_3)|z_1|^2}{4iz_1}\right|
+
+71. If :math:`n>1` then show that the roots of the equation :math:`z^n=(z+1)^n`
+are collinear.
+
+72. If :math:`A, B, C, \text{ and } D` are four complex number then
+show that :math:`AD.BC\le BD.CA + CD.AB`
+
+73. If :math:`a,b\in R \text{ and } a,b\ne 0` then show that the equation of
+line joining these :math:`a` and :math:`ib` is
+
+.. math::
+   \left(\frac{1}{2a}-\frac{i}{2b}\right)z+
+   \left(\frac{1}{2a}+\frac{i}{2b}\right)\overline{z} = 1.
+
+74. If :math:`z_1` and :math:`z_2` are two complex number such that
+:math:`|z_1| = |z_2| + |z_1-z_2|` then show that :math:`argz_1 argz_2 = 2n\pi`
+where :math:`n\in I`
+
+75. If :math:`z=z_1.z_2. ... .z_n,` prove that :math:`argz - (argz_1+argz_2+
+... + argz_n)=2n\pi` where :math:`n\in I`
+
+76. Let :math:`A, B, C, D, E` be points in the complex plane representing the
+complex numbers :math:`z_1,z_2,z_3,z_4,z_5` respectively. If :math:`(z_3 -
+z_2)z_4 = (z_1-z_2)z_5,` prove that :math:`\triangle ABC` and :math:`\triangle
+DOE` are similar.
+
+77. Let :math:`z` and :math:`z_0` are two complex numbers and the numbers
+:math:`z, z_0, z\overline{z_0}, 1` are represented by points :math:`P, P_0, Q,
+A` respectively. If :math:`|z|=1,` show that the triangle :math:`POP_0` and :math:`AOQ`
+are congruent or :math:`|z-z_0|=|z\overline{z_0}-1|` where :math:`O` represents
+origin.
+
+78. If the line segment joining :math:`z_1` and :math:`z_2` is divided by
+math:`P` and :math:`Q` in the ratio of :math:`a:b` then find :math:`OP^2+OQ^2`
+where :math:`O` is origin.
+
+79. Let :math:`z_1, z_2, z_3` be three complex numbers and :math:`a,b,c` be
+real numbers not all zero such that :math:`a+b+c=0` and :math:`az_1 + bz_2 +
+cz_3 = 0,` then show that :math:`z_1, z_2, z_3` are collinear.
+
+80. If :math:`z_1 + z_2 + ... +z_n = 0,` prove that if a line passes through
+origin then all these do not lie on the same side of line provided the points
+do not lie on the line.
+
+81. Suppose the points :math:`z_1, z_2, ..., z_2 (z_i \ne 0)` all lie on one
+side of a line drawn through origin of the complex plane. Prove that the same
+if true of the points :math:`\frac{1}{z_1}, \frac{1}{z_2}, ..., \frac{1}{z_n}.`
+Moreover, show that
+
+.. math::
+   z_1 + z_2 + ... + z_n \ne 0 \text{ and } \frac{1}{z_1} + \frac{1}{z_2} +
+   ... + \frac{1}{z_2} \ne 0
+
+82. The points :math:`z_1 = 9+ 12i` and :math:`z_2 = 6 - 8i` are given on a
+comlex plane. Find the equation of the bisector of the angle formed by the
+vector representing :math:`z_1` and :math:`z_2.`
+
+83. If the vertices of a triangle :math:`ABC` are :math:`z_1, z_2, z_3,` then
+show that the orthocenter of the :math:`\triangle ABC` is
+
+.. math::
+   \frac{(a secA)z_1 + (b secB)z_2 + (c secC)z_3}{a secA + b secB + c secC}
+   \text{ or } \frac{z_1 tanA + z_2 tanB + z_3 tanC}{tanA + tanB + tanC} \text{
+   or } z = \frac{\sum z_1^2(\overline{z_2} - \overline{z_3}) + \sum |z_1|^2(z2
+   - z_3)}{\sum (z_1\overline{z_2} - z_2\overline{z_1})}
+
+where :math:`z` is orthocenter and :math:`a, b, c` are sides.
+
+84. If the vertices of a triangle :math:`ABC` are :math:`z_1, z_2, z_3,` then
+show that the circumcenter of the :math:`\triangle ABC` is
+
+.. math::
+   \frac{z_1 sin2A + z_2 sin2B + z_2 sin2C}{sin2A + sin2B + sin2C} \text{ or }
+   z = \frac{\sum z_1\overline{z_1}z_2 - z_3}{\sum \overline{z_1}(z_2 - z_3)}
+
+where :math:`z` is circumcenter.
+
+85. :math:`ABCD` is a rhombus described in clockwise direction, vertices are
+given by :math:`z_1, z_2, z_3, z_4` respectively and :math:`\angle CBA = 2\pi /
+3.` Show that :math:`2\sqrt{3}z_2 = (\sqrt{3} - i)z_1 + (\sqrt{3} + i)z_3` and 
+:math:`2\sqrt{3}z_4 = (\sqrt{3} - i)z_3 + (\sqrt{3} + i)z_1`
+
+86. The point :math:`A, B, C` represent the complex numbers :math:`z_1, z_2,
+z_3` respectively and the angles of the triangle :math:`ABC` at :math:`B` and
+:math:`C` are both :math:`\frac{1}{2}(\pi - \alpha)` then prove that
+:math:`(z_3 - z_2)^2 = 4` and :math:`(z_3 - z_1)(z_1 - z_2) sin^2\left(
+\frac{\alpha}{2}\right)`
