@@ -209,3 +209,9 @@ number such that :math:`\frac{z-z_1}{z-z_2}=\frac{\pi}{4},` then prove that
 .. math::
    |z_1|2 + |z_2|^2 - |z_1^2 + z_2^2| \le 2\frac{|az_1+bz_2|^2}{a^2+b^2} \le
    |z_1|^2 + |z_2|^2 + |z_1^2 + z_2^2|
+
+64. If :math:`b+ic=(1+a)z` and :math:`a^2+b^2+c^2=1,` prove that
+    :math:`\frac{a+ib}{1+c}=\frac{1+iz}{1-iz},` where :math:`a,b,c` are real
+    numbers and :math:`z` is a real number.
+
+65. If :math:`a,b,c, ..., k` are all :math:`n` real roots of the equation
