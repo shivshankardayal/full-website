@@ -31,11 +31,9 @@ Find the square root of following complex numbers:
 
 Simplify following in the form of :math:`A+iB`
 
-11. .. math:: 
-       i^{n+80}+i^{n+50}
+11. :math:`i^{n+80}+i^{n+50}`
 
-12. .. math::
-       \left(i^{17}+\frac{1}{i^{15}}\right)^3
+12. :math:`\left(i^{17}+\frac{1}{i^{15}}\right)^3`
 
 13. .. math::
        \frac{(1+i)^2}{2+3i}
@@ -331,3 +329,100 @@ z_3` respectively and the angles of the triangle :math:`ABC` at :math:`B` and
 :math:`C` are both :math:`\frac{1}{2}(\pi - \alpha)` then prove that
 :math:`(z_3 - z_2)^2 = 4` and :math:`(z_3 - z_1)(z_1 - z_2) sin^2\left(
 \frac{\alpha}{2}\right)`
+
+87. Points :math:`z_1` and :math:`z_2` are adjacent points of a regular polygon
+    with :math:`n` sides. If :math:`z_3` is adjacent vertex to :math:`z_2`
+    where :math:`z_2 \ne z_1` then find :math:`z_3.`
+
+88. If :math:`z_1, z_2` and :math:`z_3` are sides of an equilateral triangle and
+    :math:`z_0` is the centroid then prove that :math:`z_1^2 + z_2^2 + z_3^2 =
+    3z_0^2.` 
+
+89. Let :math:`A_1, A_2, ..., A_n` are vertices of an :math:`n` sided polygon
+    such that :math:`\frac{1}{A_1A_2} = \frac{1}{A_1A_3} + \frac{1}{A_2A_4},`
+    find the value of :math:`n.`
+
+90. If :math:`A_1, A_2, ..., A_n` be the vertices of a regular polygon of
+    :math:`n` sides in a circle of radius unity. Find the values of
+    :math:`|A_1A_2|^2 + |A_1A_3|^2 + ... + |A_1A_n|^2` and
+    :math:`|A_1A_2||A_1A_3| ... |A_1A_n|`
+
+91. If :math:`|z|=2` the show that points representing the complex numbers
+    :math:`-1 + 5z` lie on a circle.
+
+91. If :math:`z-6-8i \le 4` then find the greatest and least value of :math:`z.`
+
+92. If :math:`z-25i \le 15` then find the least positive value of :math:`argz.`
+
+93. Show that the equation :math:`|z - z_1|^2 + |z-z_2|^2 = k` where :math:`k
+    \in R` will represent a circle if :math:`k \ge \frac{1}{2}|z_1 - z_2|^2.`
+94. If :math:`|z-1| = 1,` prove that :math:`\frac{z-2}{z} = i tan(rag z).`
+
+95. Find the locus of :math:`z` if :math:`arg\left( \frac{z - 1}{z + 1}\right)
+    = \frac{\pi}{4}.`
+
+96. If :math:`\alpha` is real and :math:`z` is a complex number and :math:`u`
+    and :math:`v` be the real and imaginary parts of :math:`(z-1)(cos\alpha - i
+    sin\alpha) + (z - 1)^{-1}(cos\alpha + i sin \alpha).` Prove that the locus
+    of the points representing the complex numbers such that :math:`v=0` is a
+    circle of unit radius with center at point :math:`(1, 0)` and a straight
+    line through the center of the circle.
+
+97. If :math:`|a_n| < 2` for :math:`n = 1, 2, 3, ...` and :math:`1 + a_1z +
+    a_2z^2 + ... + a_nz^n = 0` show that :math:`z` does not lies in the
+    interior of the circle :math:`|z| = \frac{1}{3}.`
+
+98. Show that the roots of teh equation :math:`z^n cos\theta_0 + z^{n-1}
+    cos\theta_1 + ... + cos\theta_n = 2` where :math:`\theta_0 + \theta_1 +
+    ... + \theta_n \in R` lies outside the circle :math:`|z| = \frac{1}{2}.`
+
+99. :math:`z_1, z_2, z_3` are non-zero, non-collinear complex numbers such that
+    :math:`\frac{2}{z_1} = \frac{1}{z_2} + \frac{1}{z_3} show that :math:`z_1,
+    z_2, z_3` lie on a circle passing through the origin.
+
+100. :math:`A, B, C` are the points representing the complex numbers
+     :math:`z_1, z_2, z_3` respectively on the complex plane and the
+     circumcenter of the triangle :math:`ABC` lies on the origin. If the
+     altitude of the triangle through the vertex :math:`A` meets the
+     circle again at :math:`P,` prove that :math:`P` represents the complex
+     number :math:`\frac{z_2z_3}{}z_1.`
+
+101. Two different non-parallel lines cut the circle :math:`|z|= r` at points
+     :math:`a, b, c, d` respectively. Prove that these two lines meet at point
+     given by :math:`\frac{a^{-1} + b^{-1} + c^{-1} +
+     d^{-1}}{a^{-1}b^{-1}c^{-1}d^{-1}}`.
+
+102. If :math:`z = 2 + t + i\sqrt{3 - t^2},` where :math:`t` is real and
+     :math:`t^2 < 3,` show that the modulus of :math:`(z+1)(z-1)` is
+     independent of :math:`t.` Also, show that the locus of the point :math:`z`
+     for different value of :math:`t` is a circle and find its center and
+     radius.
+
+103. Let :math:`z_1, z_2, z_3` be the three non-zero complex numbers such that
+     :math:`z_2 \ne 1, a = |z_1|, b = |z_2|` and :math:`c = |z_3|.`
+
+.. math::
+   Let
+   \begin{vmatrix}
+   a & b & c\\
+   b & c & a\\
+   c & a & b
+   \end{vmatrix} = 0,
+
+then show that :math:`arg\left( \frac{z_3}{z_2}\right) = arg\left( \frac{z_3 -
+z_1}{z_2 - z_1}\right)^2.`
+
+104. :math:`P` is such a point that on a cicle with :math:`OP` as diameter two
+     points :math:`Q` and :math:`R` are taken such that :math:`\angle POQ =
+     \angle QOR = \theta.` If :math:`O` is the origin and :math:`P, Q \text{
+     and }R` are represented by the complex numbers :math:`z_1, z_2 \text{ and
+     } z_3` respectively, show that :math:`z_2^2 cos2\theta = z_1z_3
+     cos^2\theta.`
+
+105. Find the equation in complex variables of all circles which are orthogonal
+     to :math:`|z| = 1` and :math:`|z - 1| = 4.`
+
+106. Find the real values real value of the parameter :math:`t` for which there
+     is at least one complex number :math:`z = x + iy` satisfying the condition
+     :math:`|z+3| = t^2 - 2i + 6` and the inequality :math:`z - 3\sqrt{3}i < t^2.`
+

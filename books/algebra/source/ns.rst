@@ -10,10 +10,16 @@ representing fractional numbers. Minus sign is used to represent negative
 numbers. A number system ranges from :math:`-\infty` to :math:`+\infty`. It
 is best represented by a straight line given below.
 
-.. image:: _static/number_axis.png
-  :align: center
-  :alt: Number axis.
-  
+.. tikz:: Number axis
+
+   \draw (0,0) -- (7,0);
+   \draw (3.5, -0.2) -- (3.5, 0.2);
+   \draw (3.5, 0.4) node {0};
+   \draw (0, 0.4) node {$-\infty$};
+   \draw (7, 0.4) node {$\infty$};
+   \draw (0, -0.2) -- (0, 0.2);
+   \draw (7, -0.2) -- (7, 0.2);
+
 As you see the stretch of number axis, it makes me wonder what is infinity.
 Infinity in itself is not a number to be honest in the sense that it is more
 of a concept. Infinity is such a large number that cannot be written or

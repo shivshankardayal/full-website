@@ -185,6 +185,7 @@ latex_elements = {
 \usepackage{amssymb}
 \usepackage{fancyhdr}
 \usepackage{lmodern}
+\usepackage{tikz}
 \setcounter{tocdepth}{4}
 
 """
