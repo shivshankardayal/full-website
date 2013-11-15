@@ -19,10 +19,6 @@ Informal Algebra's Contents
    variations
    variations_solutions
    complex_numbers
-   complex_numbers1
-
-Indices and tables
-==================
-
-* :ref:`genindex`
+   complex_numbers_problems
+   complex_numbers_solutions
 

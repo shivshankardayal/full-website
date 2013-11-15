@@ -34,15 +34,6 @@ take one years of programming to really thoroughly understand it.
 Note that this book will make heavy use of C99 specification. It will contain
 almost a copy of n1124.pdf which I have.
 
-Following is a video which I have created and
-is about introcution to programming. I talk a bit about C++ in it.
-
-.. youtube:: UIIrDcYSrI0
-
-In this video I specifically talk about C99.
-
-.. youtube:: y8PSO45Krfk
-
 ============
 Organization
 ============
@@ -299,11 +290,6 @@ line. Let us begin with Emacs configuration file ``.emacs``:
       (load "auctex.el" nil t t)
       (load "preview-latex.el" nil t t)
 
-You can also watch following video which I have prepared and which can serve
-as an introduction to Emacs and CMake:
-
-.. youtube:: 4K9C83ZNNAg
-
 Just copy paste the following program in Emacs and the Make file given after
 that:
 
@@ -342,10 +328,6 @@ Move your mouse over pink lines to see the error.
 .. index::
    single: byte
    single: bit
-
-A video about compilation using Eclipse CDT C/C++ IDE.
-
-.. youtube:: ARsoVgknRU0
 
 ===============
 Bits and Bytes

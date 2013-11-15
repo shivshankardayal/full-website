@@ -278,14 +278,6 @@ definition. int is a data-type in C. ``x, y,`` and ``z`` are variables of type
 Note that C is a statically typed language and all types have predefined memory
 requirements. In cour case, int requires 4 bytes on 32-bit systems. 
 
-Here I have created a video about variables of C.
-
-.. youtube:: 6whuGZwv2-k
-
-A video about ``printf`` and ``scanf``.
-
-.. youtube:: U3jCSTR7Ulo
-
 Now I will talk about ``printf()`` function. This function is declared in
 ``stdio.h``. The prototype of ``printf()`` is
 

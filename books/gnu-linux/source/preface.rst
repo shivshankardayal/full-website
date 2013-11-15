@@ -7,7 +7,7 @@ I had a great college senior Srinivasa Kotu Reddy who helped me buy my first
 computer as I was going after newly lauched Apple laptops at that time. I do
 not even remember its name. He said that it would be better if I buy a normal
 Intel machine. So we purchased and then he installed three operating systems on
-that. As you would expect Windows was there; 98 version of it. Then we had Red
+that. As you would expect Windows was there; Windows 98 version of it. Then we had Red
 Hat 5.1 and some Solaris. Solaris had some problems with graphics so he quickly
 removed it. Now I was lucky at that time that I had not worked on computers
 earlier. Because of this I had no bias towards GNU/Linux or Windows but I soon
@@ -38,8 +38,7 @@ Content
 =======
 Now the question is what do you expect to find in this book. Well, I will show
 you how to use GNU/Lunux in particularly I am biased towards deb based
-Linuses. I will show how to use Mint because I like its Mate environment but do
-not worry I will also show how to use KDE, GNOME etc using the same distro. But
+Linuses. I will show how to use Debian. But
 distribution is not even 1% of software which comes with it. I will show best
 of all that and how to use them effectively. For example, using command line,
 VI, Emacs, GCC, GDB, Perl, Python, Valgrind etc for programming. Note that I
@@ -58,6 +57,7 @@ useful in day-to-day work on GNU/Linux. Most of this material is available on
 internet scattered everywhere. It is time to make a garland of these beautiful
 flowers.
 
+I will use GNU manual's contents extensively to explain the topics.
 The emphasis has been given on examples which one cna try on his/her own
 system. The practice when done by the reader make him feel confident. This is
 very imporatnt because command prompt of GNU/Linux even though is very well
