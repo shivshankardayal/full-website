@@ -1,4 +1,4 @@
 full-website
 ============
 
-my collection of all books
+My collection of all books written by me.
