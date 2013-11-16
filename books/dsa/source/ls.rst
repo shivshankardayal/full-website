@@ -210,6 +210,7 @@ Let us implement a linked list and its operations:
      menu();
      printf("Enter 1 to 7 to choose an action. 0 to quit.\n");
      scanf("%d", &option);
+     getchar(); // to remove \n
 
      while(option  >= 1 && option <= 7) {
        switch(option) {
@@ -240,6 +241,7 @@ Let us implement a linked list and its operations:
        menu();
        printf("Enter 1 to 7 to choose an action. 0 to quit.\n");
        scanf("%d", &option);
+       getchar(); // to remove \n
      }
 
      return 0;
