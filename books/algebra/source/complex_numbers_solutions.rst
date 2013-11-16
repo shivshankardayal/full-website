@@ -31,13 +31,30 @@ Complex Numbers Solutions
     i^n(i^{20*4} + i^{12*4 + 2}) = i^n(1 - 1) = 0.` Problem no. 12, 13, 14 and
     15 can be solved similarly.
 
-16. Given, :math:`\frac{(cosx + isinx)(cosy + isiny)}{(cotu +i)(i + tanv)}` = 
-    :math:`\frac{(cosxcosy - sinxsiny)+i(sinxcosy + cosxsiny)}{\frac{(cosu +
-    isinu)(sinv + icosv)}{sinu cosv}} = \frac{sinu cosv(cos(x+y) +
-    isin(x+y))}{cos(u+v) + isin(u+v)}`
+16. Given,
+
+    .. math::
+       \frac{1}{1-cos\theta + 2i sin\theta} = \frac{1-cos\theta - 2i sin\theta}
+	   {(1-cos\theta)^2 + 4 sin^2\theta}
+
+    Now all that remains is isolating real and imaginary parts.
+
+17. Given,
+
+    .. math:: 
+	   \frac{(cosx + isinx)(cosy + isiny)}{(cotu +i)(i + tanv)} \\
+	   
+	   = \frac{(cosxcosy - sinxsiny)+i(sinxcosy + cosxsiny)}{\frac{(cosu +
+	   isinu)(sinv + icosv)}{sinu cosv}}\\
+
+	   = \frac{sinu cosv(cos(x+y) + isin(x+y))}{cos(u+v) + isin(u+v)}
 
     Now it is as simple as multiplying this with conjugate of denominator and
     expanding. However, there is a very neat way of solving this using Euler's
     formula so let us see that also.
 
-    
+    Using Euler's formula we can rewrite the fraction as :math:`sinu cosv
+    \frac{e^{ix}e^{iy}} {e^{iu}e^{i\left(\frac{\pi}{2} - v\right)}}.`
+    Now, all which remains is simplyfying this which you can do.
+	
+
