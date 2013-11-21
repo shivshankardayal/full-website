@@ -279,9 +279,22 @@ The modulus is given by the length of segment OP which is equal to
 :math:`OP=\sqrt{x^2+y^2} = |z|.` This, :math:`|z|` is the length of the
 OP. Given below is the graphical representation of the complex number.
 
-.. image:: _static/complex_number.png
-  :align: center
-  :scale: 97
+
+.. tikz:: Complex number in argand plane or complex plane
+
+   \draw[->] (-.5,0) -- (3,0);
+   \draw[->] (0,-.5) -- (0,3);
+   \draw (0, 3.5) node {$Y$};
+   \draw (3.5, 0) node {$X$};
+   \draw (2.5,0) -- (2.5,2.5);
+   \draw (0,0) -- (2.5, 2.5);
+   \draw (.5,0) arc(0:45:.5);
+   \draw (.7,.3) node{$\theta$};
+   \draw (1.5, 0.2) node {$x$};
+   \draw (2.7, 1.5) node {$y$};
+   \draw (3.4, 1.1) node {$OP=|z|$};
+   \draw (3.5, 0.8) node {$arg(z)=\theta$};
+   \draw (2.5, 2.7) node{$P=x+iy$};
 
 In the above diagram :math:`\theta` is known as the argument of z. This is
 nothing but angle made with positive direction (i.e. counter-clockwise) of real
@@ -368,6 +381,22 @@ Addition
 ^^^^^^^^
 Now as we know that :math:`z_1+z_2 = (x_1+x_2)+i(y_1+y-2).` Let us try to
 achive this through geometrical means.
+
+.. tikz:: Complex number addition
+
+   \draw[->, >=stealth] (-.5,0) -- (5.5,0);
+   \draw[->, >=stealth] (0,-.5) -- (0,5.5);
+   \draw (5.7, 0) node {$X$};
+   \draw (0,5.7) node {$Y$};
+   \draw (0,0) -- (4,1);
+   \draw (0,0) -- (1,4);
+   \draw (1,4) -- (5,5);
+   \draw (4,1) -- (5,5);
+   \draw[dashed] (4,1) -- (4,0);
+   \draw[dashed] (1,4) -- (1,0);
+   \draw[dashed] (5,5) -- (5,0);
+   \draw[dashed] (4,1) -- (5,1);
+   \draw 
 
 .. image:: _static/complex_addition.png
   :align: center

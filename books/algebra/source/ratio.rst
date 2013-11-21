@@ -219,9 +219,23 @@ So we can see that for :math:`x` coefficients of :math:`y` and :math:`z` are
 used and for :math:`y`, that of :math:`x` and :math:`z` are used and so on in
 a cyclic manner as given in image below:
 
-.. image:: _static/cyclic.png
-  :align: center
-  :scale: 97
+.. tikz:: Cross multiplication of co-efficients
+
+   \draw (0,0) node {$b2$};
+   \draw (1.5,0) node {$c2$};
+   \draw (3,0) node {$a2$};
+   \draw (4.5,0) node {$b2$};
+   \draw (0,1.5) node {$b1$};
+   \draw (1.5,1.5) node {$c1$};
+   \draw (3,1.5) node {$a1$};
+   \draw (4.5,1.5) node {$b1$};
+   \draw[->, >=stealth, thick] (0, 0.2) -- (1.5, 1.3);
+   \draw[->, >=stealth, thick] (1.5, 0.2) -- (3, 1.3);
+   \draw[->, >=stealth, thick] (3, 0.2) -- (4.5, 1.3);
+   \draw[->, >=stealth, thick] (0.1, 1.3) -- (1.4, 0.2);
+   \draw[->, >=stealth, thick] (1.6, 1.3) -- (2.9, 0.2);
+   \draw[->, >=stealth, thick] (3.1, 1.3) -- (4.4, 0.2);
+   
 
 Multiply the coefficients as indicated by the arrows. The ascending arrows are
 positive and descending ones are negative. This is called the **Rules of Cross
