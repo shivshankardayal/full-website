@@ -293,7 +293,7 @@ OP. Given below is the graphical representation of the complex number.
    \draw (1.5, 0.2) node {$x$};
    \draw (2.7, 1.5) node {$y$};
    \draw (3.4, 1.1) node {$OP=|z|$};
-   \draw (3.5, 0.8) node {$arg(z)=\theta$};
+   \draw (3.5, 0.7) node {$arg(z)=\theta$};
    \draw (2.5, 2.7) node{$P=x+iy$};
 
 In the above diagram :math:`\theta` is known as the argument of z. This is
@@ -396,11 +396,14 @@ achive this through geometrical means.
    \draw[dashed] (1,4) -- (1,0);
    \draw[dashed] (5,5) -- (5,0);
    \draw[dashed] (4,1) -- (5,1);
-   \draw 
-
-.. image:: _static/complex_addition.png
-  :align: center
-  :scale: 97
+   \draw (-.5,-.5) node {$O$};
+   \draw (1,-.5) node {$L$};
+   \draw (4,-.5) node {$M$};
+   \draw (5,-.5) node {$N$};
+   \draw (5.2,1) node {$K$};
+   \draw (3, 1.2) node {$P1(x_1+iy_1)$};
+   \draw (1.3, 4.3) node {$P2(x_2+iy_2)$};
+   \draw (5, 5.2) node {$P(x+iy)$};
 
 Let us have :math:`P_2L, P_1M \text{ and } P_N` perpendiculars from :math:`P_2,
 P_1 \text{ and } P` respectively on x axis. Draw :math:`P_1K` perpendicular to
@@ -436,9 +439,20 @@ and
 
 Three Important Results
 -----------------------
-.. image:: _static/argument_diff.png
-  :align: center
-  :scale: 97
+.. tikz::
+
+   \draw[->, >=stealth] (-.5,0) -- (5.5,0);
+   \draw[->, >=stealth] (0,-.5) -- (0,5.5);
+   \draw (5.7, 0) node {$X$};
+   \draw (0,5.7) node {$Y$};
+   \draw (0,0) -- (2,4);
+   \draw (0,0) -- (3.5,1);
+   \draw (2,4) -- (4,0);
+   \draw (-.5,-.5) node {$O$};
+   \draw (4.4,0) arc(0:120:4mm);
+   \draw (2, 4.2) node {$Q(z_2)$};
+   \draw (4.1, 1) node {$P(z_1)$};
+   \draw (4.3, 0.6) node {$\theta$};
 
 :math:`z_1-z_2=\overrightarrow{OP}-\overrightarrow{OQ}=\overrightarrow{QP}`
 
@@ -449,9 +463,26 @@ between points P and Q which are nothing but representation of complex numbers
 :math:`arg(z_1-z_2)` is the angle which :math:`\overrightarrow{QP}` makes with
 positive direction of x-axis being denoted by :math:`\theta.`
 
-.. image:: _static/argument_angle.png
-  :align: center
-  :scale: 97
+.. tikz::
+
+   \draw[->, >=stealth] (-1.5,0) -- (5.5,0);
+   \draw[->, >=stealth] (0,-.5) -- (0,5.5);
+   \draw (5.7, 0) node {$X$};
+   \draw (0,5.7) node {$Y$};
+   \draw (-.5,-.5) node {$O$};
+   \draw[dashed] (1,0) -- (2,2);
+   \draw[dashed] (-1,0) -- (2,2);
+   \draw[->, >=stealth] (2,2) -- (3,4);
+   \draw[->, >=stealth] (2,2) -- (3.5,3);
+   \draw (-0.6,0) arc(0:33.69:4mm);
+   \draw (1.4,0) arc(0:63.43:4mm);
+   \draw (2.4,2.7) arc(63.43:13.69:4mm);
+   \draw (-.2, 0.2) node{$\beta$};
+   \draw (1.8, 0.2) node{$\alpha$};
+   \draw (2.8,2.8) node{$\theta$};
+   \draw (2.6,1.8) node{$P(z_1)$};
+   \draw (3.2, 4.2) node{$Q(z_2)$};
+   \draw (3.7,3.2) node{$R(z_3)$};
 
 :math:`\theta=\alpha-\beta=arg(z_3-z_1)-arg(z_2-z_1)`
 
