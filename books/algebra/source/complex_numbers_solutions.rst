@@ -57,4 +57,30 @@ Complex Numbers Solutions
     \frac{e^{ix}e^{iy}} {e^{iu}e^{i\left(\frac{\pi}{2} - v\right)}}.`
     Now, all which remains is simplyfying this which you can do.
 	
+18. Let :math:`z=x+iy` then
 
+    .. math::
+       \Rightarrow~z^2 + |z| = x^2 - y^2 + 2ixy + \sqrt{x^2 + y^2} = 0
+
+    Since both real and imaginary parts are zero we have following
+
+    .. math::
+       2xy = 0 \Rightarrow~ x=0 \text{ or } y=0 \\
+
+       \text{If } x=0 \text{ then} \\
+
+       -y^2 + \sqrt{y^2} = 0 \\
+
+       \Rightarrow~y=\pm 1 \\
+
+       \text{If } x=0 \text{ then} \\
+
+	   x^2 + \sqrt{x^2} = 0
+
+	   \Rightarrow~x=\pm 1
+
+	   \text{But when } x=\pm 1, x^2 + \sqrt{x^2} = 2 \ne 0
+
+	   \text{So our complex numebr is } 0 \text{ or } \pm i. 
+
+    **Second Method**
