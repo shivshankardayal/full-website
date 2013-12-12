@@ -42,13 +42,13 @@ Complex Numbers Solutions
 17. Given,
 
     .. math:: 
-	   \frac{(cosx + isinx)(cosy + isiny)}{(cotu +i)(i + tanv)} \\
+       \frac{(cosx + isinx)(cosy + isiny)}{(cotu +i)(i + tanv)} \\
 	   
-	   = \frac{(cosxcosy - sinxsiny)+i(sinxcosy + cosxsiny)}{\frac{(cosu +
-	   isinu)(sinv + icosv)}{sinu cosv}}\\
-
-	   = \frac{sinu cosv(cos(x+y) + isin(x+y))}{cos(u+v) + isin(u+v)}
-
+       = \frac{(cosxcosy - sinxsiny)+i(sinxcosy + cosxsiny)}{\frac{(cosu +
+       isinu)(sinv + icosv)}{sinu cosv}}\\
+       
+       = \frac{sinu cosv(cos(x+y) + isin(x+y))}{cos(u+v) + isin(u+v)}
+	   
     Now it is as simple as multiplying this with conjugate of denominator and
     expanding. However, there is a very neat way of solving this using Euler's
     formula so let us see that also.
@@ -94,4 +94,23 @@ Complex Numbers Solutions
 
     Thus, :math:`z = 0, \pm i`
 
-19. Let :math:``
+19. Let :math:`z = x + iy`. For part :math:`|z| = 0 \Rightarrow \sqrt{x^2 +
+    y^2} = 0`
+
+    :math:`\Rightarrow x^2 + y^2 = 0 \Rightarrow x = 0` and :math:`y = 0`
+
+    If :math:`z = 0 \Rightarrow x = 0` and :math:`y = 0 \Rightarrow |z| = 0`.
+
+20. .. math::
+      \frac{z_1z_2}{\overline{z_1}} = \frac{(1 - i)(2 + 7i}{1 + i} =
+      \frac{9 + 5i}{1 + i} = \frac{(9 + 5i)(1 - i)}{2} = \frac{14 - 4i}{2}
+
+      Im\left(\frac{z_1z_2}{\overline{z_1}}\right) = -2
+
+21. Given :math:`(x + 5i) - (3 - iy)=7 + 8i \Rightarrow (x - 3) + (5 - y)i =
+    7 + 8i.` Equating real and imaginary parts we have :math:`x - 3 = 7
+    \Rightarrow x = 10` and :math:`5 - y = 8 \Rightarrow y = 13`
+
+    Problem 22 is similar and is left as an exercise to the reader.
+
+23. 
