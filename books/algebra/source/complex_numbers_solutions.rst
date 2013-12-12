@@ -75,12 +75,23 @@ Complex Numbers Solutions
 
        \text{If } x=0 \text{ then} \\
 
-	   x^2 + \sqrt{x^2} = 0
+       x^2 + \sqrt{x^2} = 0
 
-	   \Rightarrow~x=\pm 1
+       \Rightarrow~x=\pm 1
 
-	   \text{But when } x=\pm 1, x^2 + \sqrt{x^2} = 2 \ne 0
+    But when :math:`x=\pm 1, x^2 + \sqrt{x^2} = 2 \ne 0`
+    So our complex numebr is  0 or :math:`\pm i`. 
 
-	   \text{So our complex numebr is } 0 \text{ or } \pm i. 
+    **Second Method:** :math:`z^2 = -|z|` = a real number
 
-    **Second Method**
+    :math:`\therefore z` is a real number or is a purely imaginary number.
+
+    **Case I:** When :math:`z` is real. Let :math:`z = x` then as shown above
+    :math:`x=0.`
+
+    **Case II:** When :math:`z` is purely imaginary. Let :math:`z = y` then as
+    shown above :math:`y=\pm 1`
+
+    Thus, :math:`z = 0, \pm i`
+
+19. Let :math:``
