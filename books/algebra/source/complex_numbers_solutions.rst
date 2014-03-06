@@ -113,4 +113,189 @@ Complex Numbers Solutions
 
     Problem 22 is similar and is left as an exercise to the reader.
 
-23. 
+23. Given that :math:`|z| = 1 \Rightarrow x^2 + y^2 = 1`. Now we need to
+    evaluate :math:`\frac{z - 1}{z + 1} \Rightarrow \frac{(x - 1) + iy}{(x + 1)
+    + iy}`. Multiplying and dividing by conjugate of denominator we have
+    :math:`\frac{((x - 1) + iy)(x + 1) - iy)}{(x + 1) + iy)(x + 1) - iy)}
+    \Rightarrow \frac{(x^2 + y^2 - 1) + i(xy + y - xy + y)}{(x + 1)^2 + y^2}`.
+    Now we know that from given equality real part of previous expression is
+    zero therefore it is purely imaginary.
+
+24. Given, :math:`|z - i| < 1` we have following
+
+    .. math::
+       |z + 12 -6i| = |(z - i) + (12 - 5i)| \le |z - i| + |12 - 5i|
+
+       \Rightarrow |z + 12 - 6i| < 1 + 13 = 14
+
+25. .. math::
+      |z + 6| = |2z + 3| \Rightarrow x^2 + 12x + 36 + y^2 = 4x^2 + 12x + 9 +
+      4y^2 \Rightarrow 3x^2 + 3y^2 = 27
+
+      \Rightarrow x^2 + y^2 = 9 \Rightarrow |z| = 3
+
+26. Given, :math:`\sqrt{a - ib} = x - iy \Rightarrow a - ib = x^2 - y^2 -
+    i2xy`. Equating real and imaginary parts we have, :math:`a = x^2 - y^2
+    \text{and} b = 2xy`. :math:`\therefore \sqrt{a + ib} = \sqrt{x^2 - y^2 +
+    i2xy} = x + iy`.
+
+27. We will solve this problem by method of negation. Let us say there is a
+    complex number :math:`y + iz` which is root of this equation. Therefore,
+    this root will satisfy this equation. Hence,
+
+    .. math::
+       \frac{A^2}{y + iz -a} + \frac{B^2}{y + iz -b} + ... + \frac{H^2}{y + iz
+       -h} = y + iz + l
+
+    Multiplying and dividng each term with conjugate of denominator we get
+
+    .. math::
+       \frac{A^2(y - a -iz)}{(y - a)^2 + z^2} + \frac{B^2(y - b -iz)}{(y -
+       b)^2 + z^2} + \frac{C^2(y - c -iz)}{(y - c)^2 + z^2} + ... +
+       \frac{H^2(y - h -iz)}{(y - h)^2 + z^2} = y + iz + l
+
+    Considering imaginary parts only, we have
+
+    .. math::
+       -iz\left[\frac{A^2}{(y - a)^2 + z^2} + \frac{B^2}{(y - b)^2 + z^2} +
+       \frac{C^2}{(y - c)^2 + z^2} + ... + \frac{H^2}{(y - h)^2 + z^2}\right] = iz
+
+       \Rightarrow iz\left[ 1 + \frac{A^2}{(y - a)^2 + z^2} + \frac{B^2}{(y -
+       b)^2 + z^2} + \frac{C^2}{(y - c)^2 + z^2} + ... + \frac{H^2}{(y - h)^2 +
+       z^2}\right] = 0
+
+    Since the expression has one within bracket it is greater
+    than 1. :math:`\therefore iz = 0 \Rightarrow z = 0`. Hence, proven.
+
+28. Since our complex number is unimodular :math:`|z| = 1`. Let, :math:`z =
+    cos\theta + isin\theta`. Eqauting it to given equivalent ratio we have
+
+    .. math::
+       cos\theta + isin\theta = \frac{c + i}{c - i} = \frac{(c + i)(c +
+       i)}{(c - i)(c + i)}
+
+       \Rightarrow cos\theta + isin\theta = \frac{c^2 - 1 + 2ci}{c^2 + 1}
+
+    Equating real and imaginary parts,
+
+    .. math::
+       cos\theta = \frac{c^2 - 1}{c^2 + 1} \Rightarrow c^2 =
+       cot^2\frac{\theta}{2} \Rightarrow c = \pm cot\frac{\theta}{2}
+
+       \text{And} sin\theta = \frac{2c}{c^2 + 1} \Rightarrow c =
+       cot\frac{\theta}{2}, tan\frac{theta}{2}
+
+    From these two common value of :math:`c` is :math:`cot\frac{\theta}{2}`
+    where :math:`\theta \ne 2n\pi`.[:math:`\because z` is not purely real.]
+
+    :math:`\therefore z = \frac{c + i}{c - i}`.
+
+29. Let us name the given number as :math:`z`.
+
+    .. math::
+       z = \frac{sin\frac{x}{2} + cos\frac{x}{2} - itanx}{1 + 2isin\frac{x}{2}}
+       
+       \Rightarrow z = \frac{(sin\frac{x}{2} + cos\frac{x}{2} - itanx)(1 -
+       2isin\frac{x}{2})}{(1 + 2isin\frac{x}{2})(1 - 2isin\frac{x}{2})}
+
+    Since :math:`z` is real :math:`Im(z) = 0` hence equating imaginary part of
+    above to zero we get following since denominator is real:
+
+    .. math::
+       -tanx - 2sin\frac{x}{2}sin\frac{x}{2} -2sin\frac{x}{2}cos\frac{x}{2} = 0
+
+       \Rightarrow 2sin\frac{x}{2}\left(sin\frac{x}{2} +
+       cos\frac{x}{2}\right) + \frac{2sin\frac{x}{2}cos\frac{x}{2}}{cosx} = 0
+
+       \Rightarrow \text{sin\frac{x}{2}} = 0 \Rightarrow x = 2n\pi \text{where}
+       n = 0, 1, 2, 3, ...
+       
+       \text(or) \left(sin\frac{x}{2} + cos\frac{x}{2}\right)cosx +
+       cos\frac{x}{2} = 0
+
+       \Rightarrow 2sin^3\frac{x}{2} - 2cos^3\frac{x}{2} - sin\frac{x}{2} = 0
+
+       \Rightarrow tan^3\frac{x}{2} - tan\frac{x}{2} - 2 = 0
+
+    Let :math:`\alpha` be a root which satisfies this equation. Hence,
+    :math:`x = 2n\pi + \alpha, n \in I`.
+
+30. Let :math:`z = \sqrt{3} + 2i` then :math:`\overline{z} = \sqrt{3} - 2i,
+    |z| = \sqrt{3 + 4} = \sqrt{7}` and :math:`arg(z) =
+    tan^{-1}\frac{\sqrt{3}}{2}.`
+
+31. Given complex number is:
+
+    .. math::
+       z = \frac{a + ib}{x - iy} = \frac{(a + ib)(x + iy)}{x^2 + y^2} =
+       \frac{(ax -by) + i(ay + bx)}{x^2 + y^2}
+
+       \Rightarrow r = |z| = \frac{(ax -by)^2 + (ay + bx)^2}{(x^2 + y^2)^2}
+
+       \Rightarrow arg(z) = \theta = tan^{-1}\frac{ax - by}{ay + bx}
+
+32. Let :math:`z1 = x1 + iy1` and :math:`z2 = x2 + iy2`. Given,
+
+    .. math::
+       |z1 + z2|^2 + |z1 - z2|^2 = (x1 + x2)^2 + (y1 + y2)^2 + (x1 - x2)^2 +
+       (y1 - y2)^2
+       
+       \Rightarrow 2{(x1^2 + y1^2) + (x2^2 + y2^2)} = 2(|z1|^2 + |z2|^2).
+
+33. Given,
+
+    .. math::
+       |z1 + z2|^2 = (x1 + x2)^2 + (y1 + y2)^2 = x1^2 + x2^2 + 2x1x2 + y1^2 +
+       y2^2 + 2y1y2 = |z1|^2 + |z2|^2 + 2x1x2 + 2y1y2
+
+       \Rightarrow |z1|^2 + |z2|^2 + 2Re{(x1 + iy1)(x2 -iy2)} = |z1|^2 +
+       |z2|^2 + 2Re(z1\overline(z2))
+
+       \text{Also, } \Rightarrow |z1|^2 + |z2|^2 + 2Re{(x1 - iy1)(x2 +iy2)} = |z1|^2 +
+       |z2|^2 + 2Re(z2\overline(z1)).
+
+34. .. math::
+      \text{R.H.S. = } \left|\frac{1}{z1} + \frac{1}{z2}\right| 
+
+      \Rightarrow \left|\frac{z2 + z1}{z1z2}\right|
+
+      \because |z1| = 1 \text{and } |z2| = 1 \therefore |z1z2| = 1
+
+      \Rightarrow \left|\frac{z2 + z1}{z1z2}\right| = |z1 + z2|
+
+35. Given,
+
+    .. math::
+       |z -2| = 2|z - 1| \Rightarrow x^2 - 4x + 4 = 4x^2 -8x +4 + 4y^2
+
+       \Rightarrow 3x^2 + 3y^2 = 4x \Rightarrow |z|^2 = \frac{4}{3}Re(z).
+
+36. Given,
+
+    .. math::
+       \sqrt[3]{a+ib} = x+iy \Rightarrow a + ib = x^3 -3xy^2 + i(3x^2y -y^3)
+
+    Equating real and imaginary parts
+
+    .. math::
+       a = x^3 - 3xy^2 \text{and } b = 3x^2y -y^3
+
+       \Rightarrow \frac{a}{x} = x^2 - 3y^2 \text{and } \frac{b}{y} = 3x^2 -
+       y^2
+
+    Adding both
+
+    .. math::
+       \frac{a}{x} + \frac{b}{y} = 4(x^2 - y^2).
+
+37. Given,
+
+    .. math::
+       x + iy = \sqrt{\frac{a + ib}{c + ib}} \Rightarrow (x + iy)^2 = \frac{a +
+       ib}{c + id}
+
+       \Rightarrow |(x + iy)^2| = \left\frac{a + ib}{c + id}\right| =
+       \frac{|a + ib|}{|c + id|}
+
+       \Rightarrow (x^2 + y^2)^2 = \frac{a^2 + b^2}{c^2 + d^2}.
+
