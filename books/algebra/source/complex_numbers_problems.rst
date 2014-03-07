@@ -109,7 +109,7 @@ For any two complex numbers :math:`z_1` and :math:`z_2` prove that
 37. If :math:`x+iy=\sqrt{\frac{a+ib}{c+id}}` then prove that
     :math:`(x^2+y^2)^2= \frac{a^2+b^2}{c^2+d^2}`
 
-38. If :math:`\frac{3}{2+cos\theta+3isin\theta}=a+ib` then prove that
+38. If :math:`\frac{3}{2+cos\theta+isin\theta}=a+ib` then prove that
     :math:`a^2+b^2=4a-3`
 
 39. If :math:`|2z-1|=|z-2|` then prove that :math:`|z|=1`
@@ -126,7 +126,7 @@ For any two complex numbers :math:`z_1` and :math:`z_2` prove that
     \left(1+\frac{x^2}{c^2}\right) ... = A^2+B^2`
 
 43. Let :math:`z_1` and :math:`z_2` be complex numbers such that :math:`z_1\ne
-    z_2` and :math:`|z_1|=|z_2|.` If :math:`z_1` haas positive real part and
+    z_2` and :math:`|z_1|=|z_2|.` If :math:`z_1` has positive real part and
     :math:`z_2` has negative imaginary part then prove that
     :math:`\frac{z_1+z_2}{z_1-z_2}` is either zero or purely imaginary.
 

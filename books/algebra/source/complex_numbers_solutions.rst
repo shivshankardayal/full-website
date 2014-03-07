@@ -249,10 +249,10 @@ Complex Numbers Solutions
        y2^2 + 2y1y2 = |z1|^2 + |z2|^2 + 2x1x2 + 2y1y2
 
        \Rightarrow |z1|^2 + |z2|^2 + 2Re{(x1 + iy1)(x2 -iy2)} = |z1|^2 +
-       |z2|^2 + 2Re(z1\overline(z2))
+       |z2|^2 + 2Re(z1\overline{z2})
 
        \text{Also, } \Rightarrow |z1|^2 + |z2|^2 + 2Re{(x1 - iy1)(x2 +iy2)} = |z1|^2 +
-       |z2|^2 + 2Re(z2\overline(z1)).
+       |z2|^2 + 2Re(z2\overline{z1}).
 
 34. .. math::
       \text{R.H.S. = } \left|\frac{1}{z1} + \frac{1}{z2}\right| 
@@ -294,8 +294,81 @@ Complex Numbers Solutions
        x + iy = \sqrt{\frac{a + ib}{c + ib}} \Rightarrow (x + iy)^2 = \frac{a +
        ib}{c + id}
 
-       \Rightarrow |(x + iy)^2| = \left\frac{a + ib}{c + id}\right| =
+       \Rightarrow |(x + iy)^2| = \left|\frac{a + ib}{c + id}\right| =
        \frac{|a + ib|}{|c + id|}
 
        \Rightarrow (x^2 + y^2)^2 = \frac{a^2 + b^2}{c^2 + d^2}.
 
+38. Given,
+
+    .. math::
+       \frac{3}{2 + cos\theta + isin\theta} = a + ib \Rightarrow \frac{3(2 +
+       cos\theta -isin\theta)}{(2 + cos\theta + isin\theta)(2 + cos\theta -
+       isin\theta)} = a + ib
+
+    Taking 3 to denominator and equating real and imaginary parts we have
+
+    .. math::
+       a = 2 + cos\theta \text{and } b = sin\theta
+
+       \Rightarrow a^2 + b^2 =  4 + 4cos\theta + cos^2\theta + sin^2\theta
+
+       \Rightarrow 5 + 4cos\theta = 8 + 4cos\theta - 3 = 4a - 3.
+
+39. Given,
+
+    .. math::
+       |2z - 1| = |z - 2|, \text{let } z = x + iy
+
+       \Rightarrow 4x^2 - 4x + 1 + 4y^2 = x^2 - 4x +4 + y^2
+
+       \Rightarrow 3x^2 + 3y^2 = 3 \Rightarrow x^2 + y^2 = 1 \Rightarrow |z|
+       = 1.
+
+40. Given,
+
+    .. math::
+       m + in = \frac{1 - ix}{1 + ix} = \frac{1 - x^2 - 2ix}{1 + x^2}
+
+    Equating real and imaginary parts, we get
+
+    .. math::
+       m = \frac{1 - x^2}{1 + x^2} \text{and } n = -\frac{2x}{1 + x^2}
+
+       \therefore m^2 + n^2 = \frac{(1 - x^2)^2}{(1 + x^2)^2} +
+       \frac{4x^2}{(1 + x^2)^2} = 1.
+
+41. This is similar to problem 40 and hence left as an exercise to reader.
+
+42. Given,
+
+    .. math::
+
+       \left(1+i\frac{x}{a}\right) \left(1+i\frac{x}{c}\right)
+       \left(1+i\frac{x}{c}\right) ... = A+iB
+
+       \text{Let, } L.H.S. = z1 \text{and } R.H.S. = z2
+
+       \because z1 = z2 \therefore z1\overline{z1} = z2\overline{z2}
+
+       \therefore \left(1+\frac{x^2}{a^2}\right) \left(1+\frac{x^2}{b^2}\right)
+       \left(1+\frac{x^2}{c^2}\right) ... = A^2+B^2 [\because \overline{z1z2} =
+       \overline{z1}~\overline{z2}]
+
+43. Let :math:`z1 = x1 + iy1` and :math:`z2 = x2 + iy2`. Then we have,
+
+    .. math::
+       \frac{z1 + z2}{z1 - z2} = \frac{((x1 + x2) + i(y1 + y2))((x1 - x2) + i(y1
+       - y2))}{((x1 - x2) - i(y1 - y2))((x1 - x2) + i(y1 - y2))}
+
+    Neglecting the denominator
+
+    .. math::
+       \Rightarrow \text{Numerator } = x1^2 -x2^2 + y1^2 - y2^2 + i(x1y2 -
+       x2y1)
+
+    Now it is given that :math:`|z1| = |z2|`. Hence result is either 0 or
+    purely imaginary based on the fact if :math:`z1` is purely real and
+    :math:`z2` is purely imaginary or not.
+
+44. Let,
