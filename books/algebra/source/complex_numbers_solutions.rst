@@ -371,4 +371,115 @@ Complex Numbers Solutions
     purely imaginary based on the fact if :math:`z1` is purely real and
     :math:`z2` is purely imaginary or not.
 
-44. Let,
+44. Let, :math:`z = x + iy`. Now given is that,
+    
+    .. math::
+       1\cap z \Rightarrow 1 + 0i \cap x + iy \Rightarrow 1 \le x \text{and } 0 \le y.
+
+    Now,
+
+    .. math::
+       \text{Let, } p = \frac{1 - z}{1 + z} = \frac{(1 - x + iy)(1 + x -
+       iy)}{(1 + x + iy)(1 + x - iy)} = \frac{1 - x^2 - y^2 - i2y}{(1 + x)^2 +
+       y^2}
+
+       \because x \gt 1 \text{and } y \ge 0 \therefore Re(p) \le 0 \text{and }
+       Im(p) \le 0.
+
+45. From the given equation we can deduce that
+
+    .. math::
+       z = - \frac{1}{|z| + a}
+
+    Since :math:`a > 0` and :math:`|z| > 0, z` is a negative real number from
+    previous equation.
+
+46. Given,
+
+    .. math::
+       x + iy + \alpha \sqrt{(x - 1)^2 + y^2} + 2i = 0
+
+    Equating real and imaginary parts
+
+    .. math::
+       y + 2 = 0 \Rightarrow y = -2 \text{and } x + \alpha \sqrt{(x - 1)^2 +
+       y^2} = 0
+
+    Substituing value of :math:`y` in second equation
+
+    .. math::
+       \alpha \sqrt{x^2 -2x + 5} = -x \Rightarrow (\alpha^2 - 1)x^2 -
+       2\alpha^2x + 5\alpha^2 = 0
+
+    Solving this quadratic equation is left as an exercise.
+
+47. This is similar to problem no. 46 and is left as an exercise. Reader is
+    implored to study chapter on quadratic equations for this.
+
+48. .. math::
+      (x + iy)^5 = x^5 + i5x^4y - 10x^3y^2 - i10x^2y^3 + 5xy^4 + iy^5
+
+      = (x^5 -10x^3y^2 + 5xy^4) + i(5x^4y -10x^2y^3 + y^5)
+
+    Taking modulus and squaring
+
+    .. math::
+       (x^2 + y^2)^5 = (x^5 - 10x^3y^2 + 5xy^4)^2 + (5x^4y - 10x^2y^3 + y^5)^2
+
+49. .. math::
+      (x + ia)(x + ib)(x + ic) = [x^2 -ab + i(a + b)x](x + ic)
+
+      = (x^3 - abx - acx -bcx) + i(cx^2 -abc + ax^2 + bx^2)
+
+    Taking modulus and squaring
+
+    .. math::
+      (x^2 + a^2)(x^2 + b^2)(x^2 + c^2) = (x^3 - abx - acx -bcx)^2 + (cx^2 -abc + ax^2 + bx^2)^2
+
+50. .. math::
+      (1 + x)^n = a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + ...
+
+    Substituing :math:`x = i` we get
+
+    .. math::
+       (1 + i)^n = a_0 + ia_1 - a_2 - ia_3 + a_4 + ...
+
+    Taking modulus and squaring
+
+    .. math::
+       2^n = (a_0 - a_2 + a_4 - ...)^2 + ( a_1 - a_3 + a_5 - ...)^2
+
+51. Let :math:`x` be a real root then we have
+
+    .. math::
+       x^2 + \alpha x + \beta = 0 \Rightarrow x^2 + \alpha x = -\beta
+
+    Taking conjugate we have
+
+    .. math::
+       \overline{\beta} = \overline{x^2} + \overline{\alpha x}
+
+       \overline{\beta} = x^2 + \overline{\alpha}x [\because x \text{ is
+       real.}]
+
+    Subtracting, we get
+
+    .. math::
+       \beta - \overline{\beta} = (\overline{\alpha} - \alpha)x
+
+    Multiplying first equation with :math:`\overline{\alpha}` and second with
+    :math:`\alpha` and subtracting we get
+
+    .. math::
+       \alpha\overline{\beta} - \overline{\alpha}\beta = (\overline{\alpha} -
+       \alpha)x^2
+
+    Thus we have our desired result.
+
+53. Let :math:`f(z) = m(z - i) + i` and :math:`f(z) = n(z + i) + 1 + i` where
+    :math:`m` and :math:`n` are quotients upon division. Substituing :math:`z =
+    i` in the first equation and :math:`z = -i` in the second we
+    get. :math:`f(i) = i` and :math:`f(-i) = 1+i`.
+
+    Let :math:`g(z)` be the quotient and :math:`az + b` be the remainder upon
+    division of :math:`f(z)` by :math:`z^2 + 1`. Hence, we have
