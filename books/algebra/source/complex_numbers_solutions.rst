@@ -53,9 +53,12 @@ Complex Numbers Solutions
     expanding. However, there is a very neat way of solving this using Euler's
     formula so let us see that also.
 
-    Using Euler's formula we can rewrite the fraction as :math:`sinu cosv
-    \frac{e^{ix}e^{iy}} {e^{iu}e^{i\left(\frac{\pi}{2} - v\right)}}.`
-    Now, all which remains is simplyfying this which you can do.
+    Using Euler's formula we can rewrite the fraction as
+
+    .. math::
+       sinu cosv\frac{e^{ix}e^{iy}} {e^{iu}e^{i\left(\frac{\pi}{2} - v\right)}}.`
+
+    Now, all which remains is simplyfying this which the reader can do.
 	
 18. Let :math:`z=x+iy` then
 
@@ -457,9 +460,9 @@ Complex Numbers Solutions
     Taking conjugate we have
 
     .. math::
-       \overline{\beta} = \overline{x^2} + \overline{\alpha x}
+       -\overline{\beta} = \overline{x^2} + \overline{\alpha x}
 
-       \overline{\beta} = x^2 + \overline{\alpha}x [\because x \text{ is
+       -\overline{\beta} = x^2 + \overline{\alpha}x [\because x \text{ is
        real.}]
 
     Subtracting, we get
@@ -476,10 +479,24 @@ Complex Numbers Solutions
 
     Thus we have our desired result.
 
-53. Let :math:`f(z) = m(z - i) + i` and :math:`f(z) = n(z + i) + 1 + i` where
+52. Let :math:`f(z) = m(z - i) + i` and :math:`f(z) = n(z + i) + 1 + i` where
     :math:`m` and :math:`n` are quotients upon division. Substituing :math:`z =
     i` in the first equation and :math:`z = -i` in the second we
     get. :math:`f(i) = i` and :math:`f(-i) = 1+i`.
 
     Let :math:`g(z)` be the quotient and :math:`az + b` be the remainder upon
     division of :math:`f(z)` by :math:`z^2 + 1`. Hence, we have
+
+    :math:`f(z) = g(z)(z^2 + 1) + az + b`. Substituting :math:`z = i` and
+    :math:`z = -i` we have
+
+    .. math::
+       f(i) = i = ai + b [\because i^2 + 1 = 0]
+       f(-i) = 1 + i = -ai + b [\because (-i)^2 + 1 = 0]
+       
+    Adding
+
+    .. math::
+       2b = 1 + 2i \Rightarrow b = \frac{1 + 2i}{2}
+
+    Now :math:`a` can be calculated and :math:`az + b` evaluated.
