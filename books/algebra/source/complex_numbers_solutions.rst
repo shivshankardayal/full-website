@@ -500,3 +500,162 @@ Complex Numbers Solutions
        2b = 1 + 2i \Rightarrow b = \frac{1 + 2i}{2}
 
     Now :math:`a` can be calculated and :math:`az + b` evaluated.
+
+53. Given,
+
+    .. math::
+       iz^3 + z^2 - z + i = 0 \Rightarrow iz^2(z - i) - 1(z - i) = 0
+       \Rightarrow (iz^2 - 1)(z - i) = 0
+
+       \therefore \text{Either } iz^2 - 1 = 0 \Rightarrow z^2 = -i \Rightarrow |z|^2 =
+       1 \Rightarrow |z| = 1
+
+       \text{or } z - i = 0 \Rightarrow z = i \Rightarrow |z| = 1
+
+54. We know that for two complex numbers :math:`z1` and :math:`z2`
+
+    .. math::
+       |z1 + z2|^2 + |z1 - z2|^2 = 2|z1|^2 + 2|z2|^2
+
+       \text{Let, } z1 = \alpha + \sqrt{\alpha^2 - \beta^2} \text{and } z1 =
+       \alpha - \sqrt{\alpha^2 - \beta^2}
+
+       (|z1| + |z2|)^2 = [|z1|^2 + |z2|^2] + 2|z1||z2|
+
+       = \frac{1}{2}[|z1 + z2|^2 + |z1 - z2|^2] + 2|z1z2|
+
+       = \frac{1}{2}[|2\alpha|^2 + |2\sqrt{\alpha^2 - \beta^2}|^2] + 2|(\alpha +
+       \sqrt{\alpha^2 - \beta^2})(\alpha - \sqrt{\alpha^2 - \beta^2})|
+
+       = \frac{1}{2}[4|\alpha|^2 + 2|\alpha^2 - \beta^2|] + 2|\alpha^2 -
+       (\alpha^2 - \beta^2)|
+
+       = (|\alpha + \beta| + |\alpha - \beta|)^2
+
+    Hence, proven.
+
+55. Given, :math:`|z1| = |z2| = 1 \therefore~a^2 + b^2 = 1` and :math:`c^2 +
+    d^2 = 1`.
+
+    .. math::
+       \text{Also given that } Re(z1\overline{z2}) = 0 \Rightarrow ac + bd = 0
+       \therefore \frac{a}{d} = - \frac{b}{c} = p
+
+       \therefore a = pd \text{ and } b = -pc
+
+       \because a^2 + b^2 = 1 \Rightarrow p^2(c^2 + d^2) = 1 \Rightarrow p^2 =
+       1 (\because c^2 + d^2 = 1) \Rightarrow p = \pm 1
+
+    Now when :math:`p = 1, a = p \text{ and } b = -c` and when :math:`p = -1, a
+    = -p \text{ and } b = c`.
+
+    Now from these equalities asked equalities can be proven.
+
+56. To be proven is that
+
+    .. math::
+       \left|\frac{z1 - z2}{1 - \overline{z1}z2}\right| < 1
+
+       \Rightarrow \left|\frac{z1 - z2}{1 - \overline{z1}z2}\right|^2 < 1
+
+       \Rightarrow |z1 - z2|^2 < |1 - \overline{z1}z2|^2
+
+       \Rightarrow |z1 - z2|\overline{|z1 - z2|} < (1 -
+       \overline{z1}z2)\overline{(1 - \overline{z1}z2)}
+
+       \Rightarrow (z1 - z2)(\overline{z1} - \overline{z2}) < (1 -
+       \overline{z1}z2)(1 - z1\overline{z2})
+
+       \Rightarrow |z1|^2 + |z2|^2 < 1 + |z1|^2|z2|^2
+
+       \Rightarrow (1 + |z1|)(1 + |z2|)(1 - |z1|)(1 - |z2|) > 0
+
+    Now if :math:`|z1| < 1` and :math:`|z2| < 1` hence our desired result is proven.
+
+    57 and 58 are left as an  exercise to the reader.
+
+59. Let :math:`z = r1e^{i\theta1}` and :math:`w =
+    r2e^{i\theta2}`. :math:`\because |z| \le 1` and :math:`|w| \le 1` we have
+    :math:`r1 \le 1` and :math:`r2 \le 1`.
+
+    .. math::
+       |z - w|^2 = (r1cos\theta1 - r2cos\theta2)^2 + (r1sin\theta1 -
+       r2sin\theta2)^2
+
+       = r1^2 + r2^2 -2r1r2cos(\theta1 - \theta2)
+
+       = (r1 - r2)^2 + 2r1r2 - 2r1r2cos(\theta1 - \theta2)
+
+       = (r1 - r2)^2 + 4r1r2sin\left(\frac{\theta1 - \theta2}{2}\right)^2
+
+       \le (r1 - r2)^2 + (\theta1 - \theta2)^2 [\because r1, r2 \le 1 \text{
+       and } sin\theta \le \theta.]
+
+       = (|z| - |w|)^2 + (Arg(z) - Arg(w))^2
+
+60. (i) Let :math:`z = r(cos\theta + isin\theta).`
+
+    .. math::
+       \frac{z}{|z|} = cos\theta - isin\theta \Rightarrow \left|\frac{z}{|z|} -
+       1\right| = |(cos\theta - 1) + isin\theta| = \sqrt{(cos\theta - 1)^2 +
+       sin^2\theta}
+
+       = \sqrt{2 - 2cos\theta} = \sqrt{4sin^2\frac{\theta}{2}} =
+       2sin\frac{\theta}{2} \le \theta = arg(z)
+
+    (ii) :math:`|z - |z|| = |z - 1 - (|z| - 1)| \ge |z - 1| - ||z| - 1|`
+
+    Now it can be easily proven that :math:`|z - |z|| = r|\theta| =
+    |z||arg(z)|`
+
+    Hence, our desired result is proven.
+
+61. Let :math:`z = r(cos\theta + isin\theta) \therefore \frac{1}{z} =
+    \frac{1}{r}(cos\theta -isin\theta)`. Now
+
+    .. math::
+       \left|z + \frac{1}{z}\right| = a
+
+       \text{L. H. S. = }\left|(r + \frac{1}{r})cos\theta + i(r -
+       \frac{1}{r})sin\theta\right| = \left(r +
+       \frac{1}{r}\right)cos^2\theta + \left(r -
+       \frac{1}{r}\right)^2sin^2\theta = a^2
+
+       \Rightarrow \left(r - \frac{1}{r}\right)^2 = a^2 - 4cos^2\theta
+
+    Now, when :math:`r` will be greatest :math:`r - \frac{1}{r}` will be
+    greatest, which will be greatest when :math:`cos\theta = 0`. Therefore,
+
+    .. math::
+       r - \frac{1}{r} = a [\because r - \frac{1}{r} > 0 \text{ and } a > 0.]
+
+       \therefore r^2 - ar - 1 = 0
+
+       \therefore \text{Greatest value of } r = \frac{a + \sqrt{a^2 + 4}}{2}
+
+    Similarly, least value can be found.
+
+    62, 63 and 64 are left as exercise for the reader.
+
+65. Since roots of the equation are given we can write the following:
+
+    .. math::
+       (x - a)(x - b) ... (x - k) = x^n + p_1x^{n-1} + p_2x^{n-2} + ... +
+       p_{n-1}x + p_n
+
+    substituing :math:`x = i` we get
+
+    .. math::
+       (i - a)(i - b) ... (i - k) = i^n + p_1i^{n-1} + p_2i^{n - 2} + ... +
+       p_{n-1}i + p_n
+
+    Dividing both sides by :math:`i^n`
+
+    .. math::
+       (1 + ia)(1 + ib) .. (1 + ik) = 1 + \frac{p_1}{i} + \frac{p-2}{i^2} +
+       ... + \frac{p_{n-1}}{i^{n-1}} + \frac{1}{i^n}
+
+    Taking modulus and squaring we get our desired result. Problem no. 66 is
+    left as an exercise for the reader.
+
+67. 

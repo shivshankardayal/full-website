@@ -186,8 +186,8 @@ For any two complex numbers :math:`z_1` and :math:`z_2` prove that
 
 60. If :math:`z` is any non-zero complex number, show that
 
-    (i) :math:`\left|\frac{z}{|z|} - 1\right|` (ii) :math:`|z-1| \le ||z| - 1|+ |z|
-    |arg z|`
+    (i) :math:`\left|\frac{z}{|z|} - 1\right| \le |argz|` (ii) :math:`|z-1| \le
+    ||z| - 1|+ |z| |arg z|`
 
 61. If :math:`\left|z+\frac{1}{z}\right|=a,` where :math:`z` is a complex
     number and :math:`a>0,` find the greatest and least value of :math:`|z|.`
