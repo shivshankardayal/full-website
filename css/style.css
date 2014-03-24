@@ -396,20 +396,20 @@ margin-bottom: -20px;
 .il { color: #40a070 } /* Literal.Number.Integer.Long */
 
     /* Large desktop */
-    @media (min-width: 1200px) { body{width:800px;padding-top: 60px;
-    padding-bottom: 42px;} }
+/*    @media (min-width: 1200px) { body{width:800px;padding-top: 60px;
+    padding-bottom: 42px;} }*/
      
     /* Portrait tablet to landscape and desktop */
-    @media (min-width: 768px) and (max-width: 979px) { body{width:760px;padding-top: 60px;
-    padding-bottom: 42px;} }
+    /*@media (min-width: 768px) and (max-width: 979px) { body{width:760px;padding-top: 60px;
+    padding-bottom: 42px;} }*/
      
     /* Landscape phone to portrait tablet */
-    @media (max-width: 767px) { body{width:760px;padding-top: 60px;
-    padding-bottom: 42px;} }
+    /*@media (max-width: 767px) { body{width:760px;padding-top: 60px;
+    padding-bottom: 42px;} }*/
      
     /* Landscape phones and down */
-    @media (max-width: 480px) { body{width:480px;padding-top: 60px;
-    padding-bottom: 42px;} }
+    /*@media (max-width: 480px) { body{width:480px;padding-top: 60px;
+    padding-bottom: 42px;} }*/
 
 .MathJax_Display {
     text-align: left !important;

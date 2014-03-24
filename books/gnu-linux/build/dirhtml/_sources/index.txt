@@ -3,10 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to A Book of GNU/Linux's documentation!
-===============================================
+*******************
+A Book of GNU/Linux
+*******************
 
-Contents:
+########
+Contents
+########
 
 .. toctree::
    :maxdepth: 2
@@ -14,10 +17,8 @@ Contents:
 
    preface
    intro
+
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-

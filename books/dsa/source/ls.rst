@@ -1,4 +1,4 @@
-sLinear Structures
+Linear Structures
 *****************
 A computer processes some data. Always. Now what we are interested in this
 chapter is the structure of the data. Typically we will study linear structures
