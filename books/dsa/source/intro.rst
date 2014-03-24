@@ -36,7 +36,14 @@ about what type data will have because we really cannot govern that. However,
 we can choose structure and algorithm for that data. Note that structure and
 algorithms should be appropriate for particular data in consideration.
 
-Before we proceed let me tell you that you should rebrush your Mathematics
+There are specific structures which facilitate specific operations if they
+are used to hold the data. For example, a stack allows to access data only
+from top. A queue is helpful to realize a life-like queue. Binary trees are
+helpful for faster searches. Graphs can be used for path-finding and and to
+solve network problems. These are just few cases which I have cited. The area
+of data structures and algorithms is immense and ever expanding.
+
+Before we proceed let me tell you that you should refresh your Mathematics
 because certain sections of this book will be involving Mathematically.
 Particularly sections which will contain analysis of algorithms. One more
 important point is that you should have pen and paper with you while trying
@@ -219,7 +226,27 @@ Note that plot of ``log(x)`` is barely visible in output. As you can clearly
 see :math:`log(x)<x<x*log(x)<x^2<x^3<2^n`.
 
 I would have liked to present the analysis of Euclid' algorithm here but I
-will rather do it later for some reasons. Now I will stop this discussion on
+will rather do it later for some reasons.
+
+There is also space efficiency or memory efficiency. There are times when the
+devices we use do not have a lot of memory then we need to find algorithms
+which are efficient memory-wise. For example, there are two very good
+algorithms for sorting an array of values (or string) quick sort and merge
+sort. However, consider the case when we have less memory than the array
+then neither of these algorithms can be used. One of the sorting algorithms
+among many is external sort. This technique is old because in earlier devices
+memory was less and usually data to be sorted was more.
+
+Simplicity
+==========
+It is not enough for an algorithm to be efrficient from the perspective of
+memory and time but it should also be simple enough to implement. For example,
+splay-trees are very good for maintaining fast search time. But the
+implementation is complex to a Red-Black tree or AVL-tree therefore they
+are usually not preferred. However, this is not the only reason. I will let
+you know more detail when we discuss trees in their own chapter.
+
+Now I will stop this discussion on
 algorithms here and will proceed with our
 discussion on basic data structutes. When we will discuss any data structure
 and algorithm at that point of time we will perform the complexity analysis.
@@ -229,8 +256,8 @@ Mathematical Induction
 Mathematical induction is a powerful technique to prove certain mathematical
 equalities and inequqlities. To analyze an algorithm we can use mathematical
 induction. There will be many times when analyzing an algorithm mathematical
-induction comes handy. Many of the readers may be familiar with mathematical
-induciton and many may not. Therefore, I will start with basics of this
+induction will come handy. Many of the readers may be familiar with it
+and many may not. Therefore, I will start with basics of this
 particular technique. We will then develop some basic formulas to be used in
 this book. We use mathematical induction technique in following way.
 
