@@ -11,8 +11,8 @@ Complex Numbers Solutions
    :math:`\Rightarrow a^2 + b^2 = \pm\sqrt{113}`
 
    Now we can rewrite this as :math:`2a^2 = 7 \pm \sqrt{113} \Rightarrow a =
-   \pm \sqrt{7 \pm \sqrt{113}}` and similarly :math:`b = \pm \sqrt{\pm
-   \sqrt{113} - 7}` thus we have our complex number :math:`a + ib.` Problem
+   \pm \sqrt{\frac{7 \pm \sqrt{113}}{2}}` and similarly :math:`b = \pm \sqrt{\pm
+   \frac{\sqrt{113} - 7}{2}}` thus we have our complex number :math:`a + ib.` Problem
    no. 2, 3, 4, and 5 can be solved similarly.
 
 6. Given complex number can be rewritten as :math:`\frac{x^2}{y^2} +

@@ -7,7 +7,7 @@ I had a great college senior Srinivasa Kotu Reddy who helped me buy my first
 computer as I was going after newly lauched Apple laptops at that time. I do
 not even remember its name. He said that it would be better if I buy a normal
 Intel machine. So we purchased and then he installed three operating systems on
-that. As you would expect Windows was there; 98 version of it. Then we had Red
+that. As you would expect Windows was there; Windows 98 version of it. Then we had Red
 Hat 5.1 and some Solaris. Solaris had some problems with graphics so he quickly
 removed it. Now I was lucky at that time that I had not worked on computers
 earlier. Because of this I had no bias towards GNU/Linux or Windows but I soon
@@ -32,14 +32,14 @@ but work is still going on. I get bored of things quickly so I thought why not
 write this one in parallel. This idea of this book was originally given by one
 of my students as I call my readers, Pavan Mistry. Then my cousin pitched in
 and he too supported the idea. So here I start writing this book. This book
-will never be finished. It will go on and on and on ...
+will never be finished. It will go on and on and on.
 
-Content
-=======
+===============
+Content Covered
+===============
 Now the question is what do you expect to find in this book. Well, I will show
 you how to use GNU/Lunux in particularly I am biased towards deb based
-Linuses. I will show how to use Mint because I like its Mate environment but do
-not worry I will also show how to use KDE, GNOME etc using the same distro. But
+Linuses. I will show how to use Debian. But
 distribution is not even 1% of software which comes with it. I will show best
 of all that and how to use them effectively. For example, using command line,
 VI, Emacs, GCC, GDB, Perl, Python, Valgrind etc for programming. Note that I
@@ -58,7 +58,8 @@ useful in day-to-day work on GNU/Linux. Most of this material is available on
 internet scattered everywhere. It is time to make a garland of these beautiful
 flowers.
 
-The emphasis has been given on examples which one cna try on his/her own
+I will use GNU manual's contents extensively to explain the topics.
+The emphasis has been given on examples which one can try on his/her own
 system. The practice when done by the reader make him feel confident. This is
 very imporatnt because command prompt of GNU/Linux even though is very well
 documented can prove to be intimidating for a new user. This is especially true
@@ -66,6 +67,12 @@ when you do not have internet connection and you cannot search for your
 problems using search engine. Therefore the books has been written in such a
 matter that it should be sufficient for self-study.
 
+To make matters simple I complement and supplement coreutils.pdf which is
+avalable from GNU's weside at the url
+http://www.gnu.org/software/coreutils/manual/coreutils.pdf however, it is not
+a copy in the exact sense but a more verbose description of this document.
+
+================
 Acknowledgements
 ================
 First, I would like to thank my parents, wife and son for taking out their fair
@@ -83,3 +90,21 @@ cannot write all the names because then possibly an entire chapter will be full
 of those names. :-) I am using Sphinx to write this book therefore obviously
 people at http://sphinx.pocoo.org deserve praise for his work on it. I used
 Emacs with ReST mode for editing.
+
+To generate the pdf copy LaTeX is used from same source of Sphinx therefore
+definitely some credit is due to Donald Knuth and Leslie Lamport. Special
+thanks to my cousin's Shashi Kant and Ravi Shankar for their help at vaious
+stages of this books writing.
+
+I am not a native English speaker and this book has just gone through one pair
+of eyes therefore chances are high that it will have lots of errors. At the
+same time it may contain lots of technical errors. Please feel free to drop me
+an email at < shivshankar [dot] dayal at gmail [dot] com > . I will try to fix
+all errors and incorporate your valuable suggestions. Also, I have created a
+simple small web question/answer web application just to help readers which is
+deployed at http://kunjika.libreprogramming.org which you can use to post your
+comments, suggestions, corrections etc. Kunjika will also be used to hold my
+blog posts just as a question. Rather than personal email Kunjika is a
+preferred mode of communication because it will help me reduce redundancy for
+providing the answers and users can actually do a search before
+asking/reporting which is not possible over email interactions.
