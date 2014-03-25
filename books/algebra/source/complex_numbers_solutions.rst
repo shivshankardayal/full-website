@@ -11,8 +11,8 @@ Complex Numbers Solutions
    :math:`\Rightarrow a^2 + b^2 = \pm\sqrt{113}`
 
    Now we can rewrite this as :math:`2a^2 = 7 \pm \sqrt{113} \Rightarrow a =
-   \pm \sqrt{\frac{7 \pm \sqrt{113}}{2}}` and similarly :math:`b = \pm \sqrt{\pm
-   \frac{\sqrt{113} - 7}{2}}` thus we have our complex number :math:`a + ib.` Problem
+   \pm \sqrt{\frac{7 \pm \sqrt{113}}{2}}` and similarly :math:`b = \pm \sqrt{
+   \frac{\pm\sqrt{113} - 7}{2}}` thus we have our complex number :math:`a + ib.` Problem
    no. 2, 3, 4, and 5 can be solved similarly.
 
 6. Given complex number can be rewritten as :math:`\frac{x^2}{y^2} +
@@ -237,34 +237,35 @@ Complex Numbers Solutions
 
        \Rightarrow arg(z) = \theta = tan^{-1}\frac{ax - by}{ay + bx}
 
-32. Let :math:`z1 = x1 + iy1` and :math:`z2 = x2 + iy2`. Given,
+32. Let :math:`z_1 = x_1 + iy_1` and :math:`z_2 = x_2 + iy_2`. Given,
 
     .. math::
-       |z1 + z2|^2 + |z1 - z2|^2 = (x1 + x2)^2 + (y1 + y2)^2 + (x1 - x2)^2 +
-       (y1 - y2)^2
+       |z_1 + z_2|^2 + |z_1 - z_2|^2 = (x_1 + x_2)^2 + (y_1 + y_2)^2 + (x_1 - x_2)^2 +
+       (y_1 - y_2)^2
        
-       \Rightarrow 2{(x1^2 + y1^2) + (x2^2 + y2^2)} = 2(|z1|^2 + |z2|^2).
+       \Rightarrow 2{(x_1^2 + y_1^2) + (x_2^2 + y_2^2)} = 2(|z_1|^2 + |z_2|^2).
 
 33. Given,
 
     .. math::
-       |z1 + z2|^2 = (x1 + x2)^2 + (y1 + y2)^2 = x1^2 + x2^2 + 2x1x2 + y1^2 +
-       y2^2 + 2y1y2 = |z1|^2 + |z2|^2 + 2x1x2 + 2y1y2
+       |z_1 + z_2|^2 = (x1 + x_2)^2 + (y_1 + y_2)^2 = x_1^2 + x_2^2 + 2x_1x_2 + y_1^2 +
+       y_2^2 + 2y_1y_2 = |z_1|^2 + |z_2|^2 + 2x_1x_2 + 2y_1y_2
 
-       \Rightarrow |z1|^2 + |z2|^2 + 2Re{(x1 + iy1)(x2 -iy2)} = |z1|^2 +
-       |z2|^2 + 2Re(z1\overline{z2})
+       \Rightarrow |z_1|^2 + |z_2|^2 + 2Re{(x_1 + iy_1)(x_2 -iy_2)} = |z_1|^2 +
+       |z_2|^2 + 2Re(z_1\overline{z_2})
 
-       \text{Also, } \Rightarrow |z1|^2 + |z2|^2 + 2Re{(x1 - iy1)(x2 +iy2)} = |z1|^2 +
-       |z2|^2 + 2Re(z2\overline{z1}).
+       \text{Also, } \Rightarrow |z_1|^2 + |z_2|^2 + 2Re{(x_1 - iy_1)(x_2
+       +iy_2)} = |z_1|^2 + 
+       |z_2|^2 + 2Re(z_2\overline{z_1}).
 
 34. .. math::
-      \text{R.H.S. = } \left|\frac{1}{z1} + \frac{1}{z2}\right| 
+      \text{R.H.S. = } \left|\frac{1}{z_1} + \frac{1}{z_2}\right| 
 
-      \Rightarrow \left|\frac{z2 + z1}{z1z2}\right|
+      \Rightarrow \left|\frac{z_2 + z_1}{z_1z_2}\right|
 
-      \because |z1| = 1 \text{and } |z2| = 1 \therefore |z1z2| = 1
+      \because |z_1| = 1 \text{and } |z_2| = 1 \therefore |z_1z_2| = 1
 
-      \Rightarrow \left|\frac{z2 + z1}{z1z2}\right| = |z1 + z2|
+      \Rightarrow \left|\frac{z_2 + z_1}{z_1z_2}\right| = |z_1 + z_2|
 
 35. Given,
 
@@ -358,21 +359,22 @@ Complex Numbers Solutions
        \left(1+\frac{x^2}{c^2}\right) ... = A^2+B^2 [\because \overline{z1z2} =
        \overline{z1}~\overline{z2}]
 
-43. Let :math:`z1 = x1 + iy1` and :math:`z2 = x2 + iy2`. Then we have,
+43. Let :math:`z_1 = x_1 + iy_1` and :math:`z_2 = x_2 + iy_2`. Then we have,
 
     .. math::
-       \frac{z1 + z2}{z1 - z2} = \frac{((x1 + x2) + i(y1 + y2))((x1 - x2) + i(y1
-       - y2))}{((x1 - x2) - i(y1 - y2))((x1 - x2) + i(y1 - y2))}
+       \frac{z_1 + z_2}{z_1 - z_2} = \frac{((x_1 + x_2) + i(y_1 + y_2))((x_1 -
+       x_2)  + i(y_1
+       - y_2))}{((x_1 - x_2) - i(y_1 - y_2))((x_1 - x_2) + i(y_1 - y_2))}
 
     Neglecting the denominator
 
     .. math::
-       \Rightarrow \text{Numerator } = x1^2 -x2^2 + y1^2 - y2^2 + i(x1y2 -
-       x2y1)
+       \Rightarrow \text{Numerator } = x_1^2 -x_2^2 + y_1^2 - y_2^2 + i(x_1y_2 -
+       x_2y_1)
 
-    Now it is given that :math:`|z1| = |z2|`. Hence result is either 0 or
-    purely imaginary based on the fact if :math:`z1` is purely real and
-    :math:`z2` is purely imaginary or not.
+    Now it is given that :math:`|z_1| = |z_2|`. Hence result is either 0 or
+    purely imaginary based on the fact if :math:`z_1` is purely real and
+    :math:`z_2` is purely imaginary or not.
 
 44. Let, :math:`z = x + iy`. Now given is that,
     
@@ -386,7 +388,7 @@ Complex Numbers Solutions
        iy)}{(1 + x + iy)(1 + x - iy)} = \frac{1 - x^2 - y^2 - i2y}{(1 + x)^2 +
        y^2}
 
-       \because x \gt 1 \text{and } y \ge 0 \therefore Re(p) \le 0 \text{and }
+       \because x \gt 1 \text{ and } y \ge 0 \therefore Re(p) \le 0 \text{and }
        Im(p) \le 0.
 
 45. From the given equation we can deduce that
@@ -554,41 +556,41 @@ Complex Numbers Solutions
 56. To be proven is that
 
     .. math::
-       \left|\frac{z1 - z2}{1 - \overline{z1}z2}\right| < 1
+       \left|\frac{z_1 - z_2}{1 - \overline{z_1}z_2}\right| < 1
 
-       \Rightarrow \left|\frac{z1 - z2}{1 - \overline{z1}z2}\right|^2 < 1
+       \Rightarrow \left|\frac{z_1 - z_2}{1 - \overline{z_1}z_2}\right|^2 < 1
 
-       \Rightarrow |z1 - z2|^2 < |1 - \overline{z1}z2|^2
+       \Rightarrow |z_1 - z_2|^2 < |1 - \overline{z_1}z_2|^2
 
-       \Rightarrow |z1 - z2|\overline{|z1 - z2|} < (1 -
-       \overline{z1}z2)\overline{(1 - \overline{z1}z2)}
+       \Rightarrow |z_1 - z_2|\overline{|z_1 - z_2|} < (1 -
+       \overline{z_1}z_2)\overline{(1 - \overline{z_1}z_2)}
 
-       \Rightarrow (z1 - z2)(\overline{z1} - \overline{z2}) < (1 -
-       \overline{z1}z2)(1 - z1\overline{z2})
+       \Rightarrow (z_1 - z_2)(\overline{z_1} - \overline{z_2}) < (1 -
+       \overline{z_1}z_2)(1 - z_1\overline{z_2})
 
-       \Rightarrow |z1|^2 + |z2|^2 < 1 + |z1|^2|z2|^2
+       \Rightarrow |z_1|^2 + |z_2|^2 < 1 + |z_1|^2|z_2|^2
 
-       \Rightarrow (1 + |z1|)(1 + |z2|)(1 - |z1|)(1 - |z2|) > 0
+       \Rightarrow (1 + |z_1|)(1 + |z_2|)(1 - |z_1|)(1 - |z_2|) > 0
 
-    Now if :math:`|z1| < 1` and :math:`|z2| < 1` hence our desired result is proven.
+    Now if :math:`|z_1| < 1` and :math:`|z_2| < 1` hence our desired result is proven.
 
     57 and 58 are left as an  exercise to the reader.
 
-59. Let :math:`z = r1e^{i\theta1}` and :math:`w =
-    r2e^{i\theta2}`. :math:`\because |z| \le 1` and :math:`|w| \le 1` we have
-    :math:`r1 \le 1` and :math:`r2 \le 1`.
+59. Let :math:`z = r_1e^{i\theta_1}` and :math:`w =
+    r_2e^{i\theta_2}`. :math:`\because |z| \le 1` and :math:`|w| \le 1` we have
+    :math:`r+1 \le 1` and :math:`r_2 \le 1`.
 
     .. math::
-       |z - w|^2 = (r1cos\theta1 - r2cos\theta2)^2 + (r1sin\theta1 -
-       r2sin\theta2)^2
+       |z - w|^2 = (r_1cos\theta_1 - r_2cos\theta_2)^2 + (r_1sin\theta_1 -
+       r_2sin\theta_2)^2
 
-       = r1^2 + r2^2 -2r1r2cos(\theta1 - \theta2)
+       = r_1^2 + r_2^2 -2r_1r_2cos(\theta_1 - \theta_2)
 
-       = (r1 - r2)^2 + 2r1r2 - 2r1r2cos(\theta1 - \theta2)
+       = (r_1 - r_2)^2 + 2r_1r_2 - 2r_1r_2cos(\theta_1 - \theta_2)
 
-       = (r1 - r2)^2 + 4r1r2sin\left(\frac{\theta1 - \theta2}{2}\right)^2
+       = (r_1 - r_2)^2 + 4r_1r_2sin\left(\frac{\theta_1 - \theta_2}{2}\right)^2
 
-       \le (r1 - r2)^2 + (\theta1 - \theta2)^2 [\because r1, r2 \le 1 \text{
+       \le (r_1 - r_2)^2 + (\theta_1 - \theta_2)^2 [\because r_1, r_2 \le 1 \text{
        and } sin\theta \le \theta.]
 
        = (|z| - |w|)^2 + (Arg(z) - Arg(w))^2
@@ -658,4 +660,163 @@ Complex Numbers Solutions
     Taking modulus and squaring we get our desired result. Problem no. 66 is
     left as an exercise for the reader.
 
-67. 
+67. Since the triangle is an equilateral triangle all three sides are equal.
+
+    .. math::
+
+       \Rightarrow |z1 - z2| = |z2 - z2| = |z3 - z1| \Rightarrow |z1 - z2|^2 =
+       |z2 - z2|^2 = |z3 - z1|^2
+
+       \Rightarrow (z1 - z2)(\overline{z1} - \overline{z2}) = (z2 -
+       z3)(\overline{z2} - \overline{z3}) = (z3 - z1)(\overline{z3} -
+       \overline{z1}) = r(say)
+
+       \Rightarrow r\left(\frac{1}{z1 - z2} + \frac{1}{z2 - z3} +
+       \frac{1}{z3 - z1}\right) = \overline{z1} - \overline{z2} +
+       \overline{z2} - \overline{z3} + \overline{z3} - \overline{z1} = 0
+
+       \Rightarrow \frac{1}{z1 - z2} + \frac{1}{z2 - z3} + \frac{1}{z3 - z1} =
+       0
+
+       \Rightarrow (z1 - z2)(z2 - z3) + (z1 - z2)(z3 - z1) + (z3 - z1)(z2 - z3)
+       = 0
+
+    Now this leads upon multipliation and rearranging to:
+
+    .. math::
+       z1^2 + z2^2 + z3^2 = z1z2 + z2z3 + z3z1
+
+68. Given,
+
+    .. math::
+       z_1^2 + z_2^2 -2z_1z_2cos\theta = 0
+
+    Dividing by :math:`z_2^2` we get
+
+    .. math::
+       \left(\frac{z_1}{z_2}\right)^2 + 1 - 2\frac{z_1}{z_2}cos\theta = 0
+
+    Solving this as a quaddratic equation we have roots as
+
+    .. math::
+       \frac{z_1}{z_2} = \frac{2cos\theta \pm~\sqrt{4cos^2\theta - 4} }{2}
+
+       \Rightarrow \frac{z_1}{z_2} = cos\theta \pm isin\theta
+
+       \Rightarrow |z_1| = |z_2|.
+
+    Hence, :math:`z_1, z_2` and origin form an isosceles triangle.
+
+69. Let points :math:`O, P` and :math:`Q` represents origin, :math:`A` and
+    :math:`B` respectivel.
+
+    Given,
+
+    .. math::
+       \frac{A}{B} + \frac{B}{A} = 1 \Rightarrow A^2 + B^2 = AB \Rightarrow A^2
+       = B(A - B) \text{ and } B^2 = A(B - A)
+
+    Dividing
+
+    .. math::
+       \frac{A^2}{B^2} = -\frac{B}{A} \Rightarrow A^3 = -B^3 \Rightarrow |A| =
+       |B|
+
+       \Rightarrow |B| = |B - A| \text{ and } |A| = |B - A|
+
+    This :math:`\triangle OPQ` is an isosceles triangle.
+
+70. Let :math:`z_1 = x_1 + iy_1, z_2 = x_2 + iy_2` and :math:`z_3 = x_3 +iy_3.`
+    Then area of a triangle is given by
+
+    .. math::
+       = \left|\frac{1}{2}\begin{vmatrix}x_1 & y_1 & 1\\x_2 & y_2 & 1\\x_3 & y_3
+       & 1\end{vmatrix}\right|
+
+       C_1 \rightarrow C_1 + iC_2
+
+       = \left|\frac{1}{2}\begin{vmatrix}x_1 + iy_1 & y_1 & 1\\x_2 + iy_2 & y_2 &
+       1\\x_3 + iy_3 & y_3 & 1\end{vmatrix}\right|
+
+    Now :math:`C_2` can be written as :math:`\frac{1}{2i}(z - \overline{z})`.
+
+    .. math::
+       = \left|\frac{1}{2}\begin{vmatrix}z_1 & \frac{1}{2i}(z_1 -
+       \overline{z_1}) & 1\\z_2 & \frac{1}{2i}(z_2 - \overline{z_2}) & 1\\z_3 &
+       \frac{1}{2i}(z_3 - \overline{z_3}) & 1\end{vmatrix}\right|
+
+    Taking :math:`\frac{1}{2i}` common and :math:`C_2 \rightarrow C_2 - C_1`
+
+    .. math::
+       = \left|\frac{1}{4i}\begin{vmatrix}z_1 &  -\overline{z_1} & 1\\z_2 & -\overline{z_2} & 1\\z_3 &
+        -\overline{z_3} & 1\end{vmatrix}\right|
+
+    Now expanding this will yield desired result.
+
+71. Given,
+
+    .. math::
+       (z + 1)^n = z^n \Rightarrow \left(1 + \frac{1}{z}\right)^n = 1
+       \Rightarrow 1 + \frac{1}{z} = 1^{\frac{1}{n}}
+
+       \Rightarrow 1 + \frac{1}{z} = (cos\theta + isin\theta)^{\frac{1}{n}} =
+       cos\frac{2r\pi}{n} + isin\frac{2r\pi}{n} \text{ where } r = 0, 1, 2, 3,
+       ...
+
+    But when :math:`r = 0 \Rightarrow \frac{1}{z} = 0` which is not possible.
+
+    Solving for :math:`z` will lead us to
+
+    .. math::
+       z = -\frac{1}{2} - \frac{i}{2}cos\frac{r\pi}{n}
+
+    Thus :math:`Re(z) = -\frac{1}{2}` which implies the roots lie on the line
+    :math:`x = -\frac{1}{2}` and therefore we can conclude they are collinear.
+
+72. Let :math:`z_1, z_2, z_3` and :math:`z_4` are represented by points
+    :math:`A, B, C` and :math:`D`. Then, we have
+
+    .. math::
+       AD = |z_1 - z_4|, BC = |z_2 - z_3|, CD = |z_3 - z_4| \text{ and so on.}
+
+       (z_1 - z_4)(z_2 - z_3) = (z_2 - z_4)(z_3 - z_1) + (z_3 - z_4)(z_1 - z_2)
+
+       \Rightarrow |z_1 - z_4||z_2 - z_3|~\le~|z_2 - z_4||z_3 - z_1| + |z_3 -
+       z_4| + |z_1 - z_2|
+
+    Hence proven.
+
+73. Equation of line passing trhough :math:`a` and :math:`ib` is given by
+
+    .. math::
+       \begin{vmatrix}z & \overline{z} & 1\\ a & \overline{a} & 1\\ ib &
+       -i\overline{b} & 1\end{vmatrix} = 0
+
+       \Rightarrow (\overline{a} + i\overline{b})z - (a - ib)\overline{z} -
+       i(a\overline{b} + \overline{a}b) = 0
+
+       \because a, b \in R, \overline{a} = a, \overline{b} = b
+
+       \Rightarrow (a + ib)z - (a - ib)\overline{z} = 2abi
+
+    Dividing both sides by :math:`2abi` we get desired result.
+
+74. Given,
+
+    .. math::
+       |z_1| - |z_2| = |z_1 - z_2| \Rightarrow OA - OB = AB,
+
+    where :math:`O, A` and :math:`B` represents the complex numbers of origin,
+    :math:`z_1` and :math:`z_2`. This implies :math:`A` and :math:`B` lie on
+    the line passing through origin and they lie on the same side of origin.
+
+    :math:`\therefore arg~z_1 - arg~z_2 = 2n\pi.`
+
+75. Given,
+
+    .. math::
+       z - z_1.z_2. ... .z_n = 0
+
+       \Rightarrow arg z  - arg(z_1.z_2. ... .z_n) = 0
+
+       \Rightarrow arg

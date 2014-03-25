@@ -249,7 +249,7 @@ For any two complex numbers :math:`z_1` and :math:`z_2` prove that
        \left(\frac{1}{2a}+\frac{i}{2b}\right)\overline{z} = 1.
     
 74. If :math:`z_1` and :math:`z_2` are two complex number such that
-    :math:`|z_1| = |z_2| + |z_1-z_2|` then show that :math:`argz_1 argz_2 = 2n\pi`
+    :math:`|z_1| = |z_2| + |z_1-z_2|` then show that :math:`arg~z_1 - arg~z_2 = 2n\pi`
     where :math:`n\in I`
 
 75. If :math:`z=z_1.z_2. ... .z_n,` prove that :math:`argz - (argz_1+argz_2+
