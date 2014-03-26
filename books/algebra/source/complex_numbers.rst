@@ -237,10 +237,8 @@ Following relations are very easy and can be proved by the student. If
     Clearly, :math:`|z_1 z_2|=|x_1x_2-y_1y_2+i(x_1y_2+x_2y_1)|` i.e.
     :math:`\sqrt{(x_1x_2-y_1y_2)^2+(x_1y_2+x_2y_2)^2}` i.e.
     :math:`\sqrt{(x_1+y_1)^2(x_2+y_2)^2}=|z_1||z_2|`.
-7.  
-
-.. math::
-  \left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{z_2}`, \text{ if } z_2\neq 0.
+7.  .. math::
+      \left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{z_2}, \text{ if } z_2\neq 0.
 
 8.  :math:`|z_1+z_2|^2=|z_1|^2+|z_2|^2+\overline{z_1}z_2+z_1\overline{z_2}` i.e.
     :math:`|z_1|^2+|z_2|^2+2Re(z_1\overline{z_2})`.

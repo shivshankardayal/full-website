@@ -282,6 +282,7 @@ Let us implement a linked list and its operations:
        return 0;
    }
 
+
 Now I will explain these function one by one using images. First we discuss
 `add_at_begin`. Note that we can wrap all insertion functions by calling single
 insert function of the type `insert(ll* head, int item, size_t position)`.

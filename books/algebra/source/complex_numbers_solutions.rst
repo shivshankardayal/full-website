@@ -894,3 +894,31 @@ Complex Numbers Solutions
 
     But it is given that :math:`\sum_{i=1}^nz_i = 0`. Therefore all these
     points lie on different sides of the line passing through the origin.
+
+81. This is similar to 80. and is left as an exercise to the reader.
+
+82. Let :math:`OA` and :math:`OB` be the unit vectors representing :math:`z_1`
+    and :math:`z_2`. Then, we have
+
+    .. math::
+       \overrightarrow{OA} = \frac{z_1}{|z_1|}, \overrightarrow{OB} =
+       \frac{z_2}{|z_2|}
+
+    Using vector math we can now say that the complex number representing the
+    bisector of angle between these two will be given by
+
+    .. math::
+       z = t(\frac{z_1}{|z_1|} + \frac{z_2}{|z_2|}), \text{ where } t \text{ is
+       an arbitrary number.}
+
+    Problem no. 83. to 90 are based on basic geometry and is left as exercises
+    for the reader.
+
+91. Given,
+
+    .. math::
+       |z| = 2, \text{ Let } z_1 = -1 + 5z \Rightarrow |z_1 + 1| = 5|z| = 10
+
+    Thus, :math:`z1` lies on a circle with center (-1, 0) and radius 10.
+
+    Problems from 92 to 106 are left as exercises to the reader.
