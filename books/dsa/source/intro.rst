@@ -44,7 +44,7 @@ solve network problems. These are just few cases which I have cited. The area
 of data structures and algorithms is immense and ever expanding.
 
 Before we proceed let me tell you that you should refresh your Mathematics
-because certain sections of this book will be involving Mathematically.
+because certain sections of this book will be involving, mathematically.
 Particularly sections which will contain analysis of algorithms. One more
 important point is that you should have pen and paper with you while trying
 to study this book. Believe me it will help you a lot as I have experienced
@@ -59,6 +59,25 @@ algorithms on those diagrams because you know a picture is worth thousand
 words. :-) The language used to describe the data structures and algorithms
 will be C99. Perhaps later more examples in different languages will be given.
 Algorithms will be first described using pseudo code then real code.
+
+Problem to Solution
+===================
+Usually while programming you will face the situation when you have to write a
+program to solve a problem. You will end up using few data structures and a
+few algorithms to solve that program. This book describes the most common
+data strutures and algorithms which have evolved over several centuries of
+mathematical work by mathematicians. Given a problem we build a model of
+solution (read program) in our mind. The details of that mental model varies
+from individual to individual. Once that mental model is built our brains
+orientation is fixed to a certain way of thinking. Now because of this we
+choose certain data structures and algorithms and try to find out solution
+using data starutures and algorithms chosen. Sometimes we are successful other
+times we fail may be partially maybe fully. Now the most important thing when
+we fail is to think over the problem again and get a fresh thinking. So better
+take a break. This is most serious advice I can give. Whenever you have
+difficulty solving a problem for more than 30 minutes take a break. This will
+reset your thinking and allow you to think in new way and you can try to find
+the solution afresh.
 
 Preliminaries
 =============
@@ -134,7 +153,8 @@ the sample code.
 
 Note that terminating condition for our program is that remainder becomes
 zero. Typically we initialize variables with value 0 in C99 but in this case
-it must be non-zero.
+it must be non-zero. Now let us look at some desirable properties of an
+algorithm.
 
 Efficiency
 ==========
@@ -428,3 +448,22 @@ an geometric progression.
 I think I should stop here now and ask the reader to brush up his math skills.
 These derivations are just a glimpse of what you will need to analyze the
 algorithms.
+
+Algorithms and ADT Implementation
+=================================
+An ADT is a generalized form of data type not necesssarily integers or real
+numbers. For example, a set of boolean values used to represent arbitrary
+binary or ternary numbers are abstract data types. An abstract data types
+can be implemented by compound types of programming languages such as
+structures in C or classes in C++ or such object-oriented languages.
+A more succinct (and *mathematically close*) definition would be that we can
+think of ADTs as mathematical model with a collection of operations defined
+on that ADT.
+
+Usually algorithms take form of functions and abstract data types take form
+of classes and structs when written as a program. The reason for this is
+ADTs can usually be represented as nouns while algorithms can be represented
+by verbs. Remember algorithm operate on ADTs. Both this type of conversion
+helps us in generalization and encapsulation. I will not go into details as to
+how this conversion achieves this generalization and encapsulation because
+that is out of scope of this book.

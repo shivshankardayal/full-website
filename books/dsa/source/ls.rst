@@ -15,14 +15,14 @@ n dimensional as well. It is not a strict linear sequence in the sense that I
 want to distinguesh these structures from some other data structures like
 graphs and trees.
 
-Linked List
-===========
-Let us begin with linked lists. When we say linked typically we mean singly
-linked list. There is other types as well. Doubly linked lists and circular
-linked list for example. For now we will start with singly linked list because
-it is simplest to understand and can be used for as a base data structure to
-implement stacks and queues which are going to be coming chapters. A singly
-linked list looks something like given below:
+Singly Linked List
+==================
+Let us begin with singlly linked lists. When we say linked typically we mean
+singly linked list. There is other types as well. Doubly linked lists and
+circular linked list for example. For now we will start with singly linked
+list because it is simplest to understand and can be used for as a base data
+structure to implement stacks and queues which are going to be coming
+chapters. A singly linked list looks something like given below:
 
 .. image:: data/linkedlist.xfig.svg
 	:align: center
@@ -45,6 +45,8 @@ below is a typical self referencing structure:
 
   struct S* head;
 
+The presence of `next` which is a pointer of C causes some meory to be wasted
+in linear order equal to number of nodes in linked list.
 Note that real implementations will have some data members as well. Some common
 operation on a linked list are insertion at beginning, in between somewhere
 and at the end. We also can have an operation for counting number of nodes.
@@ -347,6 +349,42 @@ we will need to call it whenever a value is inserted or deleted. The
 implementation of count is easily doby by starting with `head` and incrementing
 a variable as long as end (marked by NULL) is not encountered.
 
+Singly Linked List vs Array
+===========================
+For size based comparison an array is fixed while a singly linked list can grow
+as needed so there is no competition there. Just that allocating one node at a
+time may make things less efficient. However, this is also good in one sense
+that on a system low with RAM the problems caused by memory fragmentation will
+be less problematic.
+
+For time complexity let us analyze that:
++------------------------+-------------------------+-------------------+
+| Operation              | Linked Lists            | Arrays            |
++========================+=========================+===================+
+| Search                 | :math:`\Theta(n)`       | :math:`\Theta(1)` |
++------------------------+-------------------------+-------------------+
+| Insert/Delete at       | :math:`\Theta(1)`       | N/A               |
+| beginning              |                         |                   |
++------------------------+-------------------------+-------------------+
+| Insert/Delete at       | :math:`\Theta(n)`       | N/A               |
+| end                    | Last element is unknown |                   |
+|                        | :math:`\Theta(1)`       |                   |
+|                        | Last element is unknown |                   |
++------------------------+-------------------------+-------------------+
+| Insert/Delete in       | search time +           | N/A               |
+| middle                 | :math:`\Theta(1)`       |                   |
++------------------------+-------------------------+-------------------+
+| Wasted space           | :math:`\Theta(n)`       | 0                 |
++------------------------+-------------------------+-------------------+
+
+As we can see lists are on the slower side but deleting is problematic in
+arrays. In fixed arrays you can mark as deleted while in dynamic arrays
+you need to shift entire content which is not efficient. Lists also waste
+small amount of memory for pointer members which are needed to enforce the
+structure. However, the flexibility of linked lists is a big win. This is not
+to say that for all situations any of these are a sure-fire solution. It
+depends on the problem whether arrays should be used or lists should be used.
+
 Questions on Singly Linked Lists
 ================================
 1. Implement a stack using singly linked list. (This is done in chapter of
@@ -367,3 +405,10 @@ Questions on Singly Linked Lists
    devision. Fist do it for integers then do it for floats.
 9. Given two lists find their union and intersection.
 
+Doubly Linked Lists
+===================
+Singly linked lists are pretty good but quite inflexible ass far as traversal
+is concerned. You can traverse only in ofrward direction. We can improve this
+by having another pointer to each node `prev` which will point to previous
+node. Having this new `prev` pointer will allow us to traverse in both the
+directions which is very nice to have functionality in certain situations.
