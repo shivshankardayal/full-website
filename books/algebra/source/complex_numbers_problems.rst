@@ -252,12 +252,12 @@ For any two complex numbers :math:`z_1` and :math:`z_2` prove that
     :math:`|z_1| = |z_2| + |z_1-z_2|` then show that :math:`arg~z_1 - arg~z_2 = 2n\pi`
     where :math:`n\in I`
 
-75. If :math:`z=z_1.z_2. ... .z_n,` prove that :math:`argz - (argz_1+argz_2+
-    ... + argz_n)=2n\pi` where :math:`n\in I`
+75. If :math:`z=z_1.z_2. ... .z_n,` prove that :math:`arg~z - (arg~z_1+arg~z_2+
+    ... + arg~z_n)=2n\pi` where :math:`n\in I`
 
 76. Let :math:`A, B, C, D, E` be points in the complex plane representing the
-    complex numbers :math:`z_1,z_2,z_3,z_4,z_5` respectively. If :math:`(z_3 -
-    z_2)z_4 = (z_1-z_2)z_5,` prove that :math:`\triangle ABC` and :math:`\triangle
+    complex numbers :math:`z_1, z_2 ,z_3 ,z_4, z_5` respectively. If :math:`(z_3 -
+    z_2)z_4 = (z_1 - z_2)z_5,` prove that :math:`\triangle ABC` and :math:`\triangle
     DOE` are similar.
 
 77. Let :math:`z` and :math:`z_0` are two complex numbers and the numbers
@@ -267,12 +267,14 @@ For any two complex numbers :math:`z_1` and :math:`z_2` prove that
     origin.
 
 78. If the line segment joining :math:`z_1` and :math:`z_2` is divided by
-    math:`P` and :math:`Q` in the ratio of :math:`a:b` then find :math:`OP^2+OQ^2`
+    :math:`P` and :math:`Q` in the ratio of :math:`a:b` internally and
+    externally then find :math:`OP^2 + OQ^2`
     where :math:`O` is origin.
 
-79. Let :math:`z_1, z_2, z_3` be three complex numbers and :math:`a,b,c` be
-    real numbers not all zero such that :math:`a+b+c=0` and :math:`az_1 + bz_2 +
-    cz_3 = 0,` then show that :math:`z_1, z_2, z_3` are collinear.
+79. Let :math:`z_1, z_2, z_3` be three complex numbers and :math:`a, b
+    ,c` be real numbers not all zero such that :math:`a + b + c=0` and
+    :math:`az_1 + bz_2 + cz_3 = 0,` then show that :math:`z_1, z_2,
+    z_3` are collinear. 
 
 80. If :math:`z_1 + z_2 + ... +z_n = 0,` prove that if a line passes through
     origin then all these do not lie on the same side of line provided the points

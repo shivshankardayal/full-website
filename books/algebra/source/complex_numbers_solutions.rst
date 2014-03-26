@@ -817,6 +817,80 @@ Complex Numbers Solutions
     .. math::
        z - z_1.z_2. ... .z_n = 0
 
-       \Rightarrow arg z  - arg(z_1.z_2. ... .z_n) = 0
+       \Rightarrow arg~z  - arg(z_1.z_2. ... .z_n) = 0
 
-       \Rightarrow arg
+       \Rightarrow arg~z - arg(z_1 + z_2 + ... + z_n) = 0
+
+76. We know that :math:`\triangle ABC` and :math:`\triangle DOE` will be similar if
+
+    .. math::
+
+	   \frac{AC}{AB} = \frac{DE}{DO} \text{ and } \angle BAC = \angle ODE
+
+       i.e. \left|\frac{z_3 - z_1}{z_2 - z_1}\right| = \left|\frac{z_5 -
+       z_4}{0 - z_4}\right| 
+
+       \text{and } arg\left(\frac{z_3 - z_1}{z_2 - z_1}\right) =
+       \left(\frac{z_5 - z_4}{0 - z_4}\right) 
+
+    By solving two previous equations we get our desired result.
+
+77. Given, :math:`OA = 1` and :math:`|z| = 1 \therefore OP = 1` and
+    :math:`\therefore OP = OA`
+
+    :math:`OP_0 = |z_0|` and :math:`OQ = |z\overline{z_0}| =
+    |z||\overline{z_0}| = |\overline{z_0}| = |z_0|`
+
+    :math:`\therefore OP_0 = OQ`
+
+    .. math::
+       \angle P_0OP = arg\left(\frac{z_0}{z}\right)
+
+       \angle AOQ = arg\left(\frac{1}{z\overline{z_0}}\right) =
+       arg\left(\frac{\overline{z}}{\overline{z_0}}\right) [\because
+       z\overline{z} = 1]
+
+       = -arg\left(\frac{\overline{z_0}}{z}\right) =
+       arg\left(\frac{z_0}{z}\right) [\because -arg~\overline{z} = arg~z]
+
+    Thus the triangles are congruent. Now since :math:`PP_0 = AQ \Rightarrow |z
+    - z_0| = |zz_0 - 1|`
+
+78. Using section formula we have,
+
+    .. math::
+       P = \frac{az_2 + bz_1}{a + b} \text{ and } Q = \frac{az_2 - bz_1}{a - b}
+
+    Now finding :math:`OP^2 + OQ^2` is as easy as solving an expression which
+    is left as an exercise.
+
+79. Given,
+
+    .. math::
+       a + b + c = 0 \text{ and } az_1 + bz_2 + cz_3 = 0
+
+    So we have
+
+    .. math::
+       az_1 + bz_2 - (a + b)z_3 = 0 \Rightarrow z_3 = \frac{az_1 + bz_2}{a + b}
+
+    This implies that :math:`z_3` lies on the line joining :math:`z_1` and
+    :math:`z_3` in the ratio of :math:`a:b` inernally or externally depending
+    on their sign.
+
+80. Let equation of a line passing through origin is :math:`a\overline{z} +
+    \overline{a}z = 0.` Now let us assume that all the points lie on the same
+    side of this line so we have
+
+    .. math::
+       a\overline{z_i} + \overline{a}z_i > 0 \text{ or } a\overline{z_i} +
+       \overline{a}z_i < 0 \text{ for } i = 1, 2, 3, ..., n
+
+    Thus,
+
+    .. math::
+       a\sum_{i=1}^n\overline{z_i} + \overline{a}\sum_{i=1}^nz_i > 0 \text{ or }
+       a\sum_{i=1}^n\overline{z_i} + \overline{a}\sum_{i=1}^nz_i < 0
+
+    But it is given that :math:`\sum_{i=1}^nz_i = 0`. Therefore all these
+    points lie on different sides of the line passing through the origin.

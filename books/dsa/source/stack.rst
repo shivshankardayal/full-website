@@ -54,7 +54,7 @@ be used in production environment is just an example. More commentary will follo
 
 Stack.c
 -------
-.. code-block::
+.. code-block:: c
 
    #ifndef STACK_H
    #define STACK_H
