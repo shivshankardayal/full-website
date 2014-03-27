@@ -361,6 +361,7 @@ that on a system low with RAM the problems caused by memory fragmentation will
 be less problematic.
 
 For time complexity let us analyze that:
+
 +------------------------+-------------------------+-------------------+
 | Operation              | Linked Lists            | Arrays            |
 +========================+=========================+===================+
@@ -483,8 +484,8 @@ Solutions
                 *head=current;
         }
 
-    The call to rreverse must ensure that `current` is sent with the same value
-    as head. Also, remember to update the menu and switch cases.
+   The call to rreverse must ensure that `current` is sent with the same value
+   as head. Also, remember to update the menu and switch cases.
 
 Doubly Linked Lists
 ===================

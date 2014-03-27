@@ -15,7 +15,7 @@ Programming Data structures and Algorithms Contents
 
    intro
    ls
-   stack
+   stackq
 
 Indices and tables
 ==================

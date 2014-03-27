@@ -10,9 +10,9 @@ Find the square root of following complex numbers:
 5. :math:`\sqrt[4]{-81}`
 6. Find the square root of
 
-.. math::
-   \frac{x^2}{y^2}+\frac{y^2}{x^2}+\frac{1}{2i}\left(\frac{x}{y}+\frac{y}{x}
-   \right) + \frac{31}{16}
+   .. math::
+      \frac{x^2}{y^2}+\frac{y^2}{x^2}+\frac{1}{2i}\left(\frac{x}{y}+\frac{y}{x}
+      \right) + \frac{31}{16}
 
 7. Find the square root of
 
@@ -29,7 +29,7 @@ Find the square root of following complex numbers:
 
 10. Find :math:`\sqrt{i}\sqrt{-i}`
 
-Simplify following in the form of :math:`A+iB`
+    Simplify following in the form of :math:`A+iB`
 
 11. :math:`i^{n+80}+i^{n+50}`
 
@@ -52,7 +52,7 @@ Simplify following in the form of :math:`A+iB`
 20. If :math:`z_1` and :math:`z_2` are :math:`1-i` and :math:`2+7i` find
     :math:`Im\left(\frac{z_1z_2}{\overline{z_1}}\right)`
 
-Find :math:`x` and :math:`y` if
+    Find :math:`x` and :math:`y` if
 
 21. :math:`(x+5i)-(3-iy)=7+8i`
 
@@ -69,27 +69,27 @@ Find :math:`x` and :math:`y` if
 
 27. Show that the equation
 
-.. math::
-   \frac{A^2}{x-a}+\frac{B^2}{x-b}+ ... + \frac{H^2}{x-h} = x+l
+    .. math::
+       \frac{A^2}{x-a}+\frac{B^2}{x-b}+ ... + \frac{H^2}{x-h} = x+l
 
-where :math:`A, B, ..., H; a, b, ..., h \text{ and } l` are real; cannot have
-imaginary roots.
+    where :math:`A, B, ..., H; a, b, ..., h \text{ and } l` are real; cannot have
+    imaginary roots.
 
 28. Show that a unimodular complex number, not purely real can always be
     expressed as :math:`\frac{c+i}{c-i}` for some real :math:`c`.
 
 29. If the expression
 
-.. math::
-   \frac{sin\frac{x}{2}+cos\frac{x}{2}-itanx}{1+2isin\frac{x}{2}}
+    .. math::
+       \frac{sin\frac{x}{2}+cos\frac{x}{2}-itanx}{1+2isin\frac{x}{2}}
 
-is real, then find all the possible set of values for :math:`x`
+    is real, then find all the possible set of values for :math:`x`
 
 30. Find the conjugate, modulus and argument of :math:`\sqrt{3}+2i`
 
 31. Put :math:`\frac{a+ib}{x-iy}` in polar form.
 
-For any two complex numbers :math:`z_1` and :math:`z_2` prove that
+    For any two complex numbers :math:`z_1` and :math:`z_2` prove that
 
 32. :math:`|z_1+z_2|^2+|z_2-z_2|^2 = 2(|z_1|^2 + |z_2|^2)`
 
@@ -98,8 +98,8 @@ For any two complex numbers :math:`z_1` and :math:`z_2` prove that
 
 34. If :math:`z_1=1 \text{ and } |z_2|=1` then prove that
 
-.. math::
-   |z_1+z_2|= \left|\frac{1}{z_1}+\frac{1}{z_2}\right|
+    .. math::
+       |z_1+z_2|= \left|\frac{1}{z_1}+\frac{1}{z_2}\right|
 
 35. If :math:`|z-2|=2|z-1|` then show that :math:`|z|^2=\frac{4}{3}Re(z)`
 
@@ -199,9 +199,9 @@ For any two complex numbers :math:`z_1` and :math:`z_2` prove that
 63. Let :math:`z_1, z_2` be any two complex numbers and :math:`a,b` be two real
     numbers such that :math:`a^2+b^2 \ne 0.` Prove that
 
-.. math::
-   |z_1|2 + |z_2|^2 - |z_1^2 + z_2^2| \le 2\frac{|az_1+bz_2|^2}{a^2+b^2} \le
-   |z_1|^2 + |z_2|^2 + |z_1^2 + z_2^2|
+    .. math::
+       |z_1|2 + |z_2|^2 - |z_1^2 + z_2^2| \le 2\frac{|az_1+bz_2|^2}{a^2+b^2} \le
+       |z_1|^2 + |z_2|^2 + |z_1^2 + z_2^2|
 
 64. If :math:`b+ic=(1+a)z` and :math:`a^2+b^2+c^2=1,` prove that
     :math:`\frac{a+ib}{1+c}=\frac{1+iz}{1-iz},` where :math:`a,b,c` are real
@@ -420,3 +420,31 @@ For any two complex numbers :math:`z_1` and :math:`z_2` prove that
      is at least one complex number :math:`z = x + iy` satisfying the condition
      :math:`|z+3| = t^2 - 2i + 6` and the inequality :math:`z - 3\sqrt{3}i < t^2.`
 
+107. Find the real value of the parameter :math:`t` for which there is at least
+     one complex number satisfying the equation :math:`|z + 3| = t^2 -2t + 6`
+     and the inequality :math:`|z - 3\sqrt{3}i| < t^2`.
+
+108. If :math:`a, b, c` and :math:`d` are real and :math:`ad > bc,` show that
+     the imaginary parts of the complex number :math:`z` and :math:`\frac{az +
+     b}{cz + d}` have the same sign.
+
+109. If :math:`z_1 = x_1 + iy_1, z_2 = x_2 + iy_2` and :math:`z_1 = \frac{i(z_2
+     + 1)}{z_2 - 1}` prove that
+
+     .. math::
+        x_1^2 + y_1^2 - x_1 = \frac{x_2^2 + y_2^2 + 2x_2 - 2y_2 +1}{(x_2 - 1)^2
+        + y_2^2}
+
+110. Simplify the following:
+
+     .. math::
+        \frac{(cos3\theta - isin\theta)^6(sin\theta -
+        icos\theta)^3}{(cos2\theta + isin2\theta)^5}
+
+111. Find all complex numbers such that :math:`z^2 + |z| = 0.`
+
+112. Solve the equation :math:`z^2 + z|z| + |z|^2 = 0.`
+
+113. Solve the equation :math:`2z = |z| + 2i` in complex numbers.
+
+114. 

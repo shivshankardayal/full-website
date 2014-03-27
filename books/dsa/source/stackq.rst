@@ -54,7 +54,7 @@ be used in production environment is just an example. More commentary will follo
 
 Stack.c
 -------
-.. code-block::
+.. code-block:: c
 
    #ifndef STACK_H
    #define STACK_H
@@ -77,65 +77,65 @@ Stack.c
 -------
 .. code-block:: c
                 
-	#include "stack.h"
+    #include "stack.h"
 
- 	bool isEmpty()
- 	{
-  	printf("top is %d\n", top);
-     	if(top == 0)
-     	{
-      	return true;
-     	}
-     	else
-     	{
-      	return false;
-     	}
- 	}
+    bool isEmpty()
+    {
+    printf("top is %d\n", top);
+        if(top == 0)
+        {
+        return true;
+        }
+        else
+        {
+        return false;
+        }
+    }
 
-	void push(int stack[], int element)
-	{
-	  if(top == MAX - 1)
-	    {
-	      printf("Stack overflow.\n");
-	      return;
-	    }
-	  else
-	    {
-	      stack[top++] = element;
-	      printf("Pushed element is %d.\n", element);
-	    }
-	}
+    void push(int stack[], int element)
+    {
+      if(top == MAX - 1)
+        {
+          printf("Stack overflow.\n");
+          return;
+        }
+      else
+        {
+          stack[top++] = element;
+          printf("Pushed element is %d.\n", element);
+        }
+    }
 
-	int pop(int stack[])
-	{
-	  if(isEmpty(stack))
-	    {
-	      printf("Stack underflow.\n");
-	      exit(-1);
-	    }
-	  else
-	    {
-	      return stack[--top];
-	    }
-	}
+    int pop(int stack[])
+    {
+      if(isEmpty(stack))
+        {
+          printf("Stack underflow.\n");
+          exit(-1);
+        }
+      else
+        {
+          return stack[--top];
+        }
+    }
 
-	void menu()
-	{
-	  puts("1. Push an element on top of stack.");
-	  puts("2. Pop an element off the top of stack.");	
-	}
+    void menu()
+    {
+      puts("1. Push an element on top of stack.");
+      puts("2. Pop an element off the top of stack.");  
+    }
 
-	int main()
-	{
-	  int stack[MAX];
-	  int popped_element=0, element=0, option=-1;
-		
-	  menu();
-	  printf("Enter 1 or 2 to choose an action. 0 to quit.\n");
-	  scanf("%d", &option);
-	  fflush(stdin);
-	  while(option == 1 || option == 2)
-	  {
+    int main()
+    {
+      int stack[MAX];
+      int popped_element=0, element=0, option=-1;
+        
+      menu();
+      printf("Enter 1 or 2 to choose an action. 0 to quit.\n");
+      scanf("%d", &option);
+      fflush(stdin);
+      while(option == 1 || option == 2)
+      {
       switch(option) 
         { 
         case 1:
@@ -156,10 +156,10 @@ Stack.c
       fflush(stdin);
       scanf("%d", &option);
       fflush(stdin);
-	  }
-		
-	  return 0;
-	}
+      }
+        
+      return 0;
+    }
 
 Linked List Based Implementation
 ================================
@@ -190,6 +190,8 @@ stack_ll.h
 
 stack_ll.c
 ----------
+.. code-block:: c
+
     #include "stack_ll.h"
 
     bool isEmpty(Stack *top)
