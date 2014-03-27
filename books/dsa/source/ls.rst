@@ -10,10 +10,12 @@ C++, Pytho, Java etc they provide many utilities data structures and most
 common operations as a part of it. However, since C99 is having a much smaller
 standard library such facilities are not there.
 
-When I say linear that does not mean necessarily one dimensional. It could be
-n dimensional as well. It is not a strict linear sequence in the sense that I
-want to distinguesh these structures from some other data structures like
-graphs and trees.
+Some of the linear structures are linked lists, stacks and queues. We will
+start with linked lists. Linked lists are also simply known as lists. A list
+can be mathematically modeled as :math:`t_1, t_2, ..., t_n` i.e. a list having
+n items of element type. :math:`t_i` is known as node at position :math:`i`
+where :math:`i` is used to indicate the position. All the elements are of the
+same type.
 
 Singly Linked List
 ==================
@@ -62,225 +64,225 @@ Let us implement a linked list and its operations:
 
 .. code-block:: c
 
-   #include <stdio.h>
-   #include <stdlib.h>
+    #include <stdio.h>
+    #include <stdlib.h>
 
-   typedef struct linked_list {
-       int data;
-       struct linked_list *next;
-   }ll;
+    typedef struct linked_list {
+        int data;
+        struct linked_list *next;
+    }ll;
 
-   void menu();
-   void add_at_beg(ll**);
-   void print(ll*);
-   void search(ll*);
+    void menu();
+    void add_at_beg(ll**);
+    void print(ll*);
+    void search(ll*);
 
-   void delete(ll** head)
-   {
-       ll *temp, *q;
-       int i;
+    void delete(ll** head)
+    {
+        ll *temp, *q;
+        int i;
 
-       temp = *head;
+        temp = *head;
 
-       if(*head == NULL) {
-           printf("There is no element to be deleted.\n");
-           return;
-       }
+        if(*head == NULL) {
+            printf("There is no element to be deleted.\n");
+            return;
+        }
 
-       printf("Enter the value of data to be deleted.\n");
-       scanf("%d", &i);
+        printf("Enter the value of data to be deleted.\n");
+        scanf("%d", &i);
 
-       if(temp->data == i) {
-           *head = temp->next;
-           free(temp);
-           return;
-       } else {
-           while(temp->next != NULL) {
-               if(temp->data == i) {
-                   q->next = temp->next;
-                   free(temp);
-                   return;
-               }
-               q = temp;
-               temp = temp->next;
-           }
-       }
+        if(temp->data == i) {
+            *head = temp->next;
+            free(temp);
+            return;
+        } else {
+            while(temp->next != NULL) {
+                if(temp->data == i) {
+                    q->next = temp->next;
+                    free(temp);
+                    return;
+                }
+                q = temp;
+                temp = temp->next;
+            }
+        }
 
-       printf("The element to be deleted was not found.\n");
-   }
+        printf("The element to be deleted was not found.\n");
+    }
 
-   int count(ll* head)
-   {
-       int count = 1;
+    int count(ll* head)
+    {
+        int count = 1;
 
-       if(head == NULL) {
-           printf("The no. of elements in linked list is %d.\n", 0);
-           return 0;
-       }
+        if(head == NULL) {
+            printf("The no. of elements in linked list is %d.\n", 0);
+            return 0;
+        }
 
-       while(head->next != NULL) {
-           count++;
-           head = head->next;
-       }
+        while(head->next != NULL) {
+            count++;
+            head = head->next;
+        }
 
-       printf("The no. of elements in linked list is %d.\n", count);
-       return count;
-   }
+        printf("The no. of elements in linked list is %d.\n", count);
+        return count;
+    }
 
-   void menu()
-   {
-       puts("1. Add an element at beginning.");
-       puts("2. Add an element at position n.");
-       puts("3. Add an element at end.");
-       puts("4. Count the number of elements.");
-       puts("5. Delete an element.");
-       puts("6. Search an element.");
-       puts("7. Print the list.");
-   }
+    void menu()
+    {
+        puts("1. Add an element at beginning.");
+        puts("2. Add an element at position n.");
+        puts("3. Add an element at end.");
+        puts("4. Count the number of elements.");
+        puts("5. Delete an element.");
+        puts("6. Search an element.");
+        puts("7. Print the list.");
+    }
 
-   void append(ll** head)
-   {
-       ll* temp, *q = *head;
-       int i;
+    void append(ll** head)
+    {
+        ll* temp, *q = *head;
+        int i;
 
-       printf("Enter the number which is to be appended to the list.\n");
-       scanf("%d", &i);
+        printf("Enter the number which is to be appended to the list.\n");
+        scanf("%d", &i);
 
-       temp = (ll*)malloc(sizeof(ll));
-       temp->data = i;
-       temp->next = NULL;
+        temp = (ll*)malloc(sizeof(ll));
+        temp->data = i;
+        temp->next = NULL;
 
-       if(count(*head) == 0) {
-           *head=temp;
-           return;
-       }
-      
-       while(q->next != NULL) {
-           q = q->next;
-       }
+        if(count(*head) == 0) {
+            *head=temp;
+            return;
+        }
+	  
+        while(q->next != NULL) {
+            q = q->next;
+        }
 
-       q->next = temp;
-   }
+        q->next = temp;
+    }
 
-   void add_in_bet(ll** head)
-   {
-       ll *temp, *q = *head;
-       int i = 0, j = 0;
-       int position = 0;
+    void add_in_bet(ll** head)
+    {
+        ll *temp, *q = *head;
+        int i = 0, j = 0;
+        int position = 0;
 
-       printf("Enter position at which the number is to be added.\n");
-       scanf("%d", &position);
+        printf("Enter position at which the number is to be added.\n");
+        scanf("%d", &position);
 
-       if(position == 0)
-           return add_at_beg(head);
+        if(position == 0)
+            return add_at_beg(head);
 
-       temp = (ll*)malloc(sizeof(ll));
+        temp = (ll*)malloc(sizeof(ll));
 
-       printf("Enter an integer to be added in between.\n");
-       scanf("%d", &i);
+        printf("Enter an integer to be added in between.\n");
+        scanf("%d", &i);
 
-       while(q->next != NULL) {
-           ++j;
-           if(j == position) {
-               temp->next = q->next;
-               q->next = temp;
-               temp->data = i;
-               break;
-           }
-           q = q->next;
-       }
-   }
+        while(q->next != NULL) {
+            ++j;
+            if(j == position) {
+                temp->next = q->next;
+                q->next = temp;
+                temp->data = i;
+                break;
+            }
+            q = q->next;
+        }
+    }
 
-   void add_at_beg(ll** head)
-   {
-       ll *temp;
-       int i;
+    void add_at_beg(ll** head)
+    {
+        ll *temp;
+        int i;
 
-       temp = (ll*)malloc(sizeof(ll));
+        temp = (ll*)malloc(sizeof(ll));
 
-       printf("Enter an integer to be added at beginning\n");
-       scanf("%d", &i);
+        printf("Enter an integer to be added at beginning\n");
+        scanf("%d", &i);
 
-       temp->next = *head;
-       *head = temp;
-       (*head)->data = i;
-   }
+        temp->next = *head;
+        *head = temp;
+        (*head)->data = i;
+    }
 
-   void print(ll* head)
-   {
-       printf("Head-->");
-       while(head != NULL) {
-           printf("%d--->", head->data);
-           head = head->next;
-       }
+    void print(ll* head)
+    {
+        printf("Head-->");
+        while(head != NULL) {
+            printf("%d--->", head->data);
+            head = head->next;
+        }
 
-       printf("NULL\n");
-   }
+        printf("NULL\n");
+    }
 
-   void search(ll* head)
-   {
-       int i=0, position=1;
+    void search(ll* head)
+    {
+        int i=0, position=1;
 
-       printf("Enter the number to be searched.");
-       scanf("%d", &i);
+        printf("Enter the number to be searched.");
+        scanf("%d", &i);
 
-       while(head != NULL) {
-           if(head->data == i) {
-               printf("%d is found at position %dth\n", i, position);
-               return;
-           }
+        while(head != NULL) {
+            if(head->data == i) {
+            printf("%d is found at position %dth\n", i, position);
+                return;
+            }
 
-           head = head->next;
-           position++;
-       }
-       printf("%d was not found in linked list.\n", i);
-   }
+            head = head->next;
+            position++;
+        }
+        printf("%d was not found in linked list.\n", i);
+    }
 
-   int main()
-   {
-       ll* head = NULL;
-       int option = 0;
+    int main()
+    {
+        ll* head = NULL;
+        int option = 0;
 
-       menu();
-       printf("Enter 1 to 7 to choose an action. 0 to quit.\n");
-       scanf("%d", &option);
-       getchar(); // to remove \n
+        menu();
+        printf("Enter 1 to 7 to choose an action. 0 to quit.\n");
+        scanf("%d", &option);
+        getchar(); // to remove \n
 
-       while(option  >= 1 && option <= 7) {
-           switch(option) {
-               case 1:
-                   add_at_beg(&head);
-                   break;
-               case 2:
-                   add_in_bet(&head);
-                   break;
-               case 3:
-                   append(&head);
-                   break;
-               case 4:
-                   count(head);
-                   break;
-               case 5:
-                   delete(&head);
-                   break;
-               case 6:
-                   search(head);
-                   break;
-               case 7:
-                   print(head);
-                   break;
-               default:
-                   break;
-           }
-           menu();
-           printf("Enter 1 to 7 to choose an action. 0 to quit.\n");
-           fflush(stdin);
-           scanf("%d", &option);
-           getchar(); // to remove \n
-       }
+        while(option  >= 1 && option <= 7) {
+            switch(option) {
+                case 1:
+                    add_at_beg(&head);
+                    break;
+                case 2:
+                    add_in_bet(&head);
+                    break;
+                case 3:
+                    append(&head);
+                    break;
+                case 4:
+                    count(head);
+                    break;
+                case 5:
+                    delete(&head);
+                    break;
+                case 6:
+                    search(head);
+                    break;
+                case 7:
+                    print(head);
+                    break;
+                default:
+                    break;
+            }
+            menu();
+            printf("Enter 1 to 7 to choose an action. 0 to quit.\n");
+            fflush(stdin);
+            scanf("%d", &option);
+            getchar(); // to remove \n
+        }
 
-       return 0;
-   }
+        return 0;
+    }
 
 
 Now I will explain these function one by one using images. First we discuss
@@ -399,17 +401,105 @@ Questions on Singly Linked Lists
    internet for details on quick sort).
 6. Sort a linked list using merge sort.(Look for sorting chapter or on
    internet for details on merge sort).
-7. Detect a loop in a singly linked list. (HINT: This can happen only at last node
-   whose next pointer will end up pointing to one of previous nodes.)
+7. Detect a loop in a singly linked list. (HINT: This can happen only at last
+   node whose next pointer will end up pointing to one of previous nodes.)
 8. Use singly linked lists to implement arbitrary-precision arithmetic library
    having basic functionality of addition, subtraction, multiplication and
    devision. Fist do it for integers then do it for floats.
 9. Given two lists find their union and intersection.
 
+Solutions
+=========
+1. and 2. will be implemented in next chapter.
+3. You can add these two lines to linked list implementation as prototype for
+   implementation for iterative and recursive version.
+
+   .. code-block:: c
+
+      void reverse(ll**);
+      void rreverse(ll**);
+
+   The most important thing is to be able to think how we are going to do
+   the implementation. Let us first take the case of non-recursive part. We
+   can visualize the linked list as nodes attached with pointers. So all we
+   have to do is make `head` point to the last node. We reverse the pointer.
+   Now since the pointer is broken we need to maintain two pointers the current
+   node and the next node, hence, we will need two extra pointers. Now as
+   `next` pointer is broken we can keep assigning current pointer to it as
+   shown in the diagram below:
+
+   TODO: Make images for reversal.
+
+   The equivalent code for the above can be written as:
+
+   .. code-block:: c
+
+        void reverse(ll** head)
+        {
+            ll *next = NULL;
+            ll *current = NULL;
+
+            while((*head)->next != NULL)
+            {
+                next = (*head)->next;
+                (*head)->next = current;
+                current = *head;
+                (*head) = next;
+            }
+            (*head)->next = current;
+        }
+
+   Notice that when we reach the end of node the pointer `next` will be in
+   broken state and therefore from last pointer whose next would be pointing
+   `NULL` must be made to point to current node as shown.
+
+   For recursive version first we need a condition to iterate to last node.
+   Then if `next` of `next` is not `NULL` then we make that point to currrent
+   node. The current node's next is useless for us and we make it `NULL`
+   because the first node which will be last after reversal will have next
+   pointing to `NULL` which is good for us. Now if `next` is NULL then we are
+   at last node and let us make this `head`. The entire operation can be
+   visualized below:
+
+   TODO: Make images for reversal.
+
+   The code which does recursive iteration is given below:
+
+   .. code-block:: c
+
+        void rreverse(ll** head, ll* current)
+        {
+            if(current->next != NULL)
+            {
+                rreverse(head, current->next);
+            }
+  
+            if(current->next != NULL)
+            {
+                current->next->next = current;
+                current->next = NULL;
+            }
+            else
+                *head=current;
+        }
+
+    The call to rreverse must ensure that `current` is sent with the same value
+    as head. Also, remember to update the menu and switch cases.
+
 Doubly Linked Lists
 ===================
-Singly linked lists are pretty good but quite inflexible ass far as traversal
+Singly linked lists are pretty good but quite inflexible as far as traversal
 is concerned. You can traverse only in ofrward direction. We can improve this
 by having another pointer to each node `prev` which will point to previous
 node. Having this new `prev` pointer will allow us to traverse in both the
 directions which is very nice to have functionality in certain situations.
+The nature of doubly linked list provides another feature that is we can make
+useful circular lists.
+
+You might have noticed that I have kept only a head `pointer` in the singly
+linked list representation and no `tail` pointer. The reason for having a
+`tail` pointer will help in appending at the end for sure. However, since we
+can move only in forward direction the `tail` pointer is useless in deletion.
+For deletion we will have to traverser from `head` in any case. But when we
+are designing a doubly linked list a `tail` pointer helps both in appending
+as well as deleting a node.
