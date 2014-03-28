@@ -222,7 +222,7 @@ if and only if
 
 .. math::
 
-	\limsup\limits_{x\rightarrow a}\left\lvert\frac{f(x)}{g(x)}\right\rvert < \infty
+	\lim\limits_{x\rightarrow a}\left\lvert\frac{f(x)}{g(x)}\right\rvert < \infty
 
 To explain how we compute :math:`O(n)` let us see an example. Consider a polynomial
 function with all positive coefficients. Say our polynomials is somthing like
@@ -245,8 +245,14 @@ Given below is a plot of some most common functions encountered in algorithms.
 Note that plot of ``log(x)`` is barely visible in output. As you can clearly
 see :math:`log(x)<x<x*log(x)<x^2<x^3<2^n`.
 
-I would have liked to present the analysis of Euclid' algorithm here but I
-will rather do it later for some reasons.
+More on Complexity Analysis
+---------------------------
+Continuing from our previous section let us discuss a bit more about
+big-:math:`O` notation. The problem with big-:math:`O` notation is that even
+though it talks about two contants :math:`x_0` and :math:`K` it does not give
+any hints about there values or how to compute them. It also does not put any
+restriction on the values of these constants not gives any guidelines when
+there are many such values.
 
 There is also space efficiency or memory efficiency. There are times when the
 devices we use do not have a lot of memory then we need to find algorithms
