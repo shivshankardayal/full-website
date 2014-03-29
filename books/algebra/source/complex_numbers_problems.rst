@@ -447,4 +447,90 @@ Find the square root of following complex numbers:
 
 113. Solve the equation :math:`2z = |z| + 2i` in complex numbers.
 
-114. 
+114. If :math:`a > 0` and :math:`z|z| + az + 1 = 0`, show that :math:`z` is a 
+     negative real number.
+
+115. For every real number :math:`a > 0` find all complex numbers :math:`z` 
+     satisfying the equation :math:`z|z| + az + i = 0`
+
+116. For every real number :math:`a > 0` determine the complex numbers
+     :math:`z` which will satisfy the equation :math:`|z|^2 -2iz + 2a(1 + i) = 0`
+
+117. For any two complex numbers :math:`z_1` and :math:`z_2` and any real 
+     numbers :math:`a` and :math:`b`, show that :math:`|az_1 -bz_2|^2 + |bz_1 
+     - az_2|^2 = (a^2 + b^2)(|z_1|^2 + |z_2|^2)`
+
+118. If :math:`\alpha` and :math:`\beta` are any two complex numbers, show that
+     :math:`|\alpha + \beta|^2 = |\alpha|^2 + |\beta|^2 +
+     Re(\alpha\overline{\beta}) + Re(\overline{\alpha}\beta)`
+
+119. Find the integral solution of the following equations
+     (i) :math:`(3 + 4i)^x = 5^\frac{x}{2}` (ii) :math:`(1 - i)^x = 2^x` (iii)
+     :math:`(1 - i)^x = (1 + i)^x`
+
+120. Prove that :math:`|1 - \overline{z_1}z_2|^2 - |z_1 - z_2|^2 = (1 -
+     |z_1|^2)(1 - |z_2|^2)`
+
+121. If :math:`a_i, b_i \in R, i = 1, 2, 3, ..., n` show that
+
+     .. math::
+        \left(\sum_{n=1}^na_i\right)^2 + \left(\sum_{n=1}^nb_i\right)^2 \le
+        \left(\sum_{n=1}^n\sqrt{a_i^2 + b_i^2}\right)^2
+
+122. Let :math:`\left|\frac{\overline{z_1} - 2\overline{z_2}}{2 -
+     z_1\overline{z_2}}\right| = 1` and :math:`|z_2| \ne 1,` where :math:`z_1`
+     and :math:`z_2` are complex numbers, show that :math:`|z_1| = 2.`
+
+123. If :math:`|z_1| < 1` and :math:`\left|\frac{z_1 - z_2}{1 -
+     \overline{z_1}z_2}\right| < 1,` then show that :math:`|z_2| < 1`
+
+124. If :math:`z_1` and :math:`z_2` are complex numbers and :math:`u =
+     \sqrt{z_1z_2},` prove that
+
+     .. math::
+        |z_1| + |z_2| = \left|\frac{z_1 + z_2}{2} + u\right| +
+        \left|\frac{z_1 + z_2}{2} - u\right|
+
+125. If :math:`z_1` and :math:`z_2` are the roots of the equation :math:`\alpha
+     z^2 + 2\beta z + \gamma = 0,` then prove that :math:`|\alpha||(|z_1| +
+     |z_2|) = |\beta + \sqrt{\alpha \gamma}| + |\beta -  \sqrt{\alpha \gamma}|`
+
+126. If :math:`a, b, c` are complex numbers such that :math:`a + b + c = 0` and
+     :math:`|a| = |b| = |c| = 1,` find the value of :math:`\frac{1}{a} +
+     \frac{1}{b} + \frac{1}{c}.`
+
+127. If :math:`|z + 4| \le 3,` find the least and greatest value of :math:`|z +
+     1|.`
+
+128. Show that for any two non-zero complex numbers :math:`z_1, z_2`
+
+     .. math::
+        (|z_1| + |z_2|)\left(\frac{z_1}{|z_1|} + \frac{z_2}{|z_2|}\right) \le
+        2|z_1 + z_2|
+
+129. Show that the necessary and sufficient condition for both the roots of the
+     equation :math:`z^2 + az + b = 0` to be of unit modulus are :math:`|a| \le
+     2, |b| = 1, argb = arga`
+
+130. If :math:`z` is a complex number, show that :math:`|z| \le |R(z)| + |I(z)|
+     \le \sqrt{2}|z|`.
+
+131. If :math:`\left|z - \frac{4}{z}\right| = 2` show that the greatest value
+     of :math:`|z|` is :math:`\sqrt{5} + 1.`
+
+132. If :math:`\alpha, \beta, \gamma, \delta` be the real roots of the equation
+     :math:`ax^4 + bx^3 + cx^2 + dx + e = 0,` show that :math:`a^2(1 +
+     \alpha^2)(1 + \beta)^2(1 + \gamma)^2(1 + \delta)^2 = (a - c + e)^2 +
+     (b - d)^2.`
+
+133. If :math:`a_i \in R, i = 1, 2, ..., n` and :math:`\alpha_1, \alpha_2, ...,
+     \alpha_n` are the roots of the equation
+
+     .. math::
+        x^n + a_1x^{n - 1} + a_2x^{n - 2} + ... + a_{n - 1}x + a)n = 0,
+
+     show that
+
+     .. math::
+        \prod_{i = 1}^n(1 + \alpha_i^2) = (1 - a_2 + a_4 - ...)^2 + (a_1 -
+        a_3 + ...)^2

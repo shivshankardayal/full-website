@@ -412,6 +412,7 @@ Questions on Singly Linked Lists
 Solutions
 =========
 1. and 2. will be implemented in next chapter.
+
 3. You can add these two lines to linked list implementation as prototype for
    implementation for iterative and recursive version.
 
