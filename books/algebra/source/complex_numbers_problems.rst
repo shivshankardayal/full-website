@@ -534,3 +534,80 @@ Find the square root of following complex numbers:
      .. math::
         \prod_{i = 1}^n(1 + \alpha_i^2) = (1 - a_2 + a_4 - ...)^2 + (a_1 -
         a_3 + ...)^2
+
+134. If the complex numbers :math:`z_1, z_2, z_2` are the vertices of an
+     equilateral trianle such that :math:`|z_1| = |z_2| = |z_3|,` prove that
+     :math:`z_1 + z_2 + z_3 = 0.`
+
+135. If :math:`z_1 + z_2 + z_3 = 0` and :math:`|z_1| = |z_2| = |z_3| = 1,` then
+     prove that the points :math:`z_1, z_2, z_3` are the vertices of an
+     equialteral triangle inscribed in an unit circle.
+
+136. If :math:`z_1, z_2, z_3` be the vertices of of an equilateral triangle in
+     the Argand plane whose circumcenter is :math:`z_0` then prove that
+     :math:`z_1^2 + z_2^2 + z_3^2 = 3z_0^2.`
+
+137. Prove that the complex numbers :math:`z_1` and :math:`z_2` and the origin
+     form an equilateral triangle if :math:`z_1^2 + z_2^2 - z_1z_2 = 0.`
+
+138. If :math:`z_1` and :math:`z_2` be the roots of the equation :math:`z^2 +
+     az + b = 0,` then prove that the origin, :math:`z_1` and :math:`z_2` form
+     an equilateral triangle if :math:`a^2 = 3b.`
+
+139. Let :math:`z_1, z_2` and :math:`z_3` be the roots of the equation
+     :math:`z^3 + 3\alpha z^2 + 3\beta z + \gamma = 0,` where :math:`\alpha,
+     \beta` and :math:`\gamma` are complex numbers and that these represent the
+     vertices of :math:`A, B` and :math:`C` of a triangle. Find the centroid of
+     :math:`\triangle ABC.` Show that the triangle will be equilateral, if
+     :math:`\alpha^2 = \beta.`
+
+140. If :math:`z_1, z_2` and :math:`z_3` are in A.P., then prove that they are
+     collinear.
+
+141. If :math:`z_1, z_2` and :math:`z_3` are collinear points in Argand plane
+     then show that one of the following holds
+
+     .. math::
+        -z_1|z_2 - z_3| + z_2|z_3 - z_1| + z_3|z_1 - z_2| = 0
+
+        z_1|z_2 - z_3| - z_2|z_3 - z_1| + z_3|z_1 - z_2| = 0
+
+        z_1|z_2 - z_3| + z_2|z_3 - z_1| - z_3|z_1 - z_2| = 0
+
+142. Find the locus of point :math:`z` if :math:`\frac{z - i}{z + i}` is purley
+     imaginary.
+
+143. What region in the Argand plane is represneted by the inequality :math:`1
+     < |z - 3 -4i| < 2.`
+
+144. Find the locus of point :math:`z` if :math:`|z - 1| + |z + 1| \le 4.`
+
+145. If :math:`z = t + 5 + i\sqrt{4 -t^2}` and :math:`t` is real, find the
+     locus of :math:`z.`
+
+146. If :math:`\frac{z^2}{z - 1}` is real show that locus of :math:`z` is a
+     circle with center :math:`(1, 0)` and radius unity and the :math:`x`-axis.
+
+147. If :math:`|z^2 - 1| = |z|^2 + 1,` show that locus of :math:`z` is a
+     straight line.
+
+148. Find the locus of point :math:`z` if :math:`\frac{\pi}{3} \le arg~z \le
+     \frac{3\pi}{2}.`
+
+149. Find the locus of the point :math:`z` if :math:`arg\left(\frac{z - 2}{z +
+     2}\right) = \frac{\pi}{3}.`
+
+150. Show that the locus of the point :math:`z` satisfying the condition
+     :math:`arg\left(\frac{z - 1}{z + 1}\right) = \frac{\pi}{2}` is the
+     semicircle above :math:`x`-axis whose diemeter is the joins of the points
+     :math:`(-1, 0)` and :math:`(1, 0)` excluding those points.
+
+151. Find the locus of the point :math:`z` if :math:`log_\sqrt{3}\frac{|z|^2 -
+     |z| + 1}{2 + |z|} < 2.`
+
+152. If :math:`O` be the center of the circle circumscribing the equilateral
+     :math:`\triangle ABC` and its radius be unity and :math:`A` lies of the
+     :math:`x`-axis. Find the complex numbers represented by :math:`B` and
+     :math:`C.`
+
+153. 
