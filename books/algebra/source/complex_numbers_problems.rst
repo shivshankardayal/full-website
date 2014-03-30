@@ -610,4 +610,8 @@ Find the square root of following complex numbers:
      :math:`x`-axis. Find the complex numbers represented by :math:`B` and
      :math:`C.`
 
-153. 
+153. :math:`ABCD` is a rhombus. Its diagonals :math:`AC` and :math:`BD`
+     intersect at a point :math:`M` and satisfy :math:`BD = 2AC.` If the points
+     :math:`D` and :math:`M` represent the complex numbers :math:`1 + i` and
+     :math:`2 - i` respectively, then find the complex number represented by
+     :math:`A`.`
