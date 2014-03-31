@@ -193,6 +193,7 @@ latex_elements = {
 \usepackage{tikz}
 \setcounter{tocdepth}{4}
 \usetikzlibrary{arrows}
+\usetikzlibrary{intersections}
 """
 }
 #\usepackage{fontspec}

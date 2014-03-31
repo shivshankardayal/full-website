@@ -632,6 +632,14 @@ from co-ordinate geometry as below:
 
    \therefore~z=\frac{mz_2+nz_1}{m+n}
 
+Extending this section formula we can say that if there is a point which divides this
+line in two equal parts i.e. the point is mid-point then :math:`m = 1` and :math:`n
+= 1` then :math:`z` is given by :math:`\frac{1}{2}(z_1 + z_2)`
+
+Distance Formula
+================
+Distance betwenn :math:`A(z_1)` and :math:`B(z_2)` is given by :math:`AB = |z_1 + z_2|`
+
 Equation of a Line Passing Through Two Points
 =============================================
 The equation between two point :math:`z_1` and :math:`z_2` is given by the
@@ -654,6 +662,8 @@ establish this result.
 
 The proof is left as an exercise to the reader.
 
+The parametric form is given by :math:`z = iz_1 + (1 - t)z_2`
+
 Collinear Points
 ================
 Three points :math:`z_1, z_2 \text{ and } z_3` are collinear if and only if
@@ -668,5 +678,157 @@ Three points :math:`z_1, z_2 \text{ and } z_3` are collinear if and only if
 This follows from the formula for a line passing through two points. Just
 substitute :math:`z_3` as a point in the equation to satisfy the equality.
 
+Parrallelogram
+==============
+Four complex numbers :math:`A(z_1), B(z_2), C(z_3)` and :math:`D(z_4)`
+represent the vertices of a parallelogram if :math:`z_1 + z_3 = z_2 + z_4.`
+
+.. tikz::
+    \draw (0, 0) -- (3, 0) -- (4, 2) -- (1, 2) -- cycle;
+    \draw (0, 0) -- (4, 2);
+    \draw (3, 0) -- (1, 2);
+    \draw (0, 0) node[anchor=north east] {$A(z_1)$};
+    \draw (3, 0) node[anchor=north west] {$B(z_2)$};
+    \draw (4, 2) node[anchor=south west] {$C(z_3)$};
+    \draw (1, 2) node[anchor=south east] {$D(z_4)$};
+    
+The diagonals :math:`AC` and :math:`BD` must bisect each other. Therefore,
+
+.. math::
+    \frac{1}{2}(z_1 + z_3) = \frac{1}{2}(z_2 + z_4)
+
+    \Leftrightarrow z_1 + z_3 = z_2 + z_4
+
+Rhombus
+=======
+Four complex numbers :math:`A(z_1), B(z_2), C(z_3)` and :math:`D(z_4)`
+represent the vertices of a rhombus if :math:`z_1 + z_3 = z_2 + z_4` and
+:math:`|z_4 - z_1| = |z_2 - z_1|.`
+
+.. tikz::
+    \draw (0, 0) -- (3, 0) -- (4, 3) -- (1, 3) -- cycle;
+    \draw (0, 0) -- (4, 3);
+    \draw (3, 0) -- (1, 3);
+    \draw (0, 0) node[anchor=north east] {$A(z_1)$};
+    \draw (3, 0) node[anchor=north west] {$B(z_2)$};
+    \draw (4, 3) node[anchor=south west] {$C(z_3)$};
+    \draw (1, 3) node[anchor=south east] {$D(z_4)$};
+
+The diagonals :math:`AC` and :math:`BD` must bisect each other. Therefore,
+
+.. math::
+    \frac{1}{2}(z_1 + z_3) = \frac{1}{2}(z_2 + z_4)
+
+    \Leftrightarrow z_1 + z_3 = z_2 + z_4
+
+Also, a pair of two adjacent sides are equal for example :math:`AD = AB` thus
+second condition is also met i.e. :math:`|z_4 - z_1| = |z_2 - z_1`.
+
+Square
+======
+Four complex numbers :math:`A(z_1), B(z_2), C(z_3)` and :math:`D(z_4)`
+represent the vertices of a square if :math:`z_1 + z_3 = z_2 + z_4, |z_4 - z_1|
+= |z_2 - z_1|` and :math:`|z_3 - z_1| = |z_4 - z_2|.`
+
+.. tikz::
+    \draw (0, 0) -- (3, 0) -- (3, 3) -- (0, 3) -- cycle;
+    \draw (0, 0) -- (3, 3);
+    \draw (3, 0) -- (0, 3);
+    \draw (0, 0) node[anchor=north east] {$A(z_1)$};
+    \draw (3, 0) node[anchor=north west] {$B(z_2)$};
+    \draw (3, 3) node[anchor=south west] {$C(z_3)$};
+    \draw (0, 3) node[anchor=south east] {$D(z_4)$};
+
+The diagonals :math:`AC` and :math:`BD` must bisect each other. Therefore,
+
+.. math::
+    \frac{1}{2}(z_1 + z_3) = \frac{1}{2}(z_2 + z_4)
+    \Leftrightarrow z_1 + z_3 = z_2 + z_4
+
+Also, a pair of two adjacent sides are equal for example :math:`AD = AB` thus
+second condition is also met i.e. :math:`|z_4 - z_1| = |z_2 - z_1`.
+
+And the two diagonals are equal i.e. :math:`AC = BD` i.e. :math:`|z_3 - z_1| =
+|z_4 - z_2|.`
+
+Rectangle
+=========
+Four complex numbers :math:`A(z_1), B(z_2), C(z_3)` and :math:`D(z_4)`
+represent the vertices of a rectangle if :math:`z_1 + z_3 = z_2 + z_4, |z_4 -
+z_1|` and :math:`|z_3 - z_1| = |z_4 - z_2|.`
+
+.. tikz::
+    \draw (0, 0) -- (3, 0) -- (3, 2) -- (0, 2) -- cycle;
+    \draw (0, 0) -- (3, 2);
+    \draw (3, 0) -- (0, 2);
+    \draw (0, 0) node[anchor=north east] {$A(z_1)$};
+    \draw (3, 0) node[anchor=north west] {$B(z_2)$};
+    \draw (3, 2) node[anchor=south west] {$C(z_3)$};
+    \draw (0, 2) node[anchor=south east] {$D(z_4)$};
+
+Similar to above examples the diagonals bisect each other. Also, the diagonals
+:math:`AC` and :math:`BD` should be equal.
+
+Centroid of a Triangle
+======================
+Let :math:`A(z_1), B(z_2)` and :math:`C(z_3)` be the vertices of a
+:math:`\triangle ABC.`
+
+Centroid :math:`G(z)` of the :math:`\triangle ABC` is the point of concurrence
+of the medians of all three sides and is given by
+
+.. math::
+    z = \frac{1}{3}(z_1 + z_2 + z_3)
+
+.. tikz::
+    :libs: intersections
+
+    \draw (-2, 0) -- (2, 0) (-2, 0) node[anchor = north east] {$A$};
+    \draw (2, 0) -- (0, 4) (2, 0) node[anchor = north west] {$B$};
+    \draw (-2, 0) -- (0, 4) (0, 4) node[anchor = south] {$C$};
+    \draw (2, 0) -- (-1, 2) (-1, 2) node[anchor = east] {$E$};
+    \draw (0, 4) -- (0, 0) (0, 0) node[anchor = north] {$F$};
+    \draw (-2, 0) -- (1, 2) (1, 2) node[anchor = west] {$D$};
+    \draw (0, 1.33) node[anchor= south west] {$z$};
+
+Incenter of a Triangle
+======================
+Let :math:`A(z_1), B(z_2)` and :math:`C(z_3)` be the vertices of a
+:math:`\triangle ABC.`
+
+Incenter :math:`I(z)` of the :math:`triangle ABC` is the point of concurrence
+of internal bisectors of all the angles and is given by
+
+.. math::
+   z = \frac{az_1 + bz_2 + cz_3}{a + b + c}
+
+where :math:`a, b` and :math:`c` are the lengths of the sides.
+
+.. tikz::
+    :libs: intersections
+
+    \draw (-2, 0) -- (2, 0) (-2, 0) node[anchor = north east] {$A$};
+    \draw (2, 0) -- (0, 4) (2, 0) node[anchor = north west] {$B$};
+    \draw (-2, 0) -- (0, 4) (0, 4) node[anchor = south] {$C$};
+    \draw (2, 0) -- (-1, 2) (-1, 2) node[anchor = east] {$E$};
+    \draw (0, 4) -- (0, 0) (0, 0) node[anchor = north] {$F$};
+    \draw (-2, 0) -- (1, 2) (1, 2) node[anchor = west] {$D$};
+    \draw (0, 1.33) node[anchor= south west] {$z$};
+    \draw (-1.7, 0) arc(0:30:3mm);
+    \draw (-1.5, 0) arc(0:30:5mm);
+    \draw (-1.6, .3) arc(30:60:4mm);
+    \draw (-1.45, .4) arc(30:60:6mm);
+    \draw (1.85, .26) arc(120:150:3mm);
+    \draw (1.8, .433) arc(120:150:5mm);
+    \draw (1.65, .2) arc(150:180:4mm);
+    \draw (1.48, .3) arc(150:180:6mm);
+    \draw (-.15, 3.7) arc(240:270:3mm);
+    \draw (-.25, 3.5) arc(240:270:5mm);
+    \draw (0, 3.6) arc(270:300:4mm);
+    \draw (0, 3.35) arc(270:300:6mm);
+
+Circumcenter of a Triangle
+==========================
+    
 Problems are given as a separate chapter as MathJax may end up taking long time
 if too much math is present on same page.
