@@ -615,3 +615,124 @@ Find the square root of following complex numbers:
      :math:`D` and :math:`M` represent the complex numbers :math:`1 + i` and
      :math:`2 - i` respectively, then find the complex number represented by
      :math:`A`.`
+
+154. If :math:`z_1, z_2, z_3` and :math:`z_4` are the vertices of a square
+     taken in anticlockwise order, prove that :math:`z_3 = -iz_1 + (1 + i)z_2`
+     and :math:`z_4 = (1 - i)z_1 + iz_2.`
+
+155. Let :math:`z_1, z_2` and :math:`z_3` are the vertices of an equilateral
+     triangle in the circle :math:`|z| = 2.` If :math:`z_1 = 1 + i\sqrt{3},`
+     then find :math:`z_2` and :math:`z_3.`
+
+156. If :math:`a` and :math:`b` are real numbers between 0 and 1 such that the
+     points :math:`z_1 = a + i, z_2 = 1 + bi,` and :math:`z_3 = 0` form an
+     equilateral triangle then find :math:`a` and :math:`b.`
+
+157. Let :math:`ABCD` be a square described in the anticlockwise sense in the
+     Argand plane. If :math:`A` represents :math:`(3 + 5i)` and the center of
+     the square represents :math:`\left(\frac{7}{2} + \frac{5}{2}i\right).` Find
+     the numbers represented by :math:`B, C` and :math:`D`.
+
+158. Find the vertices of a regular polygon of :math:`n` sides, if its center
+     is located at origin and one of its vertices is :math:`z_1.`
+
+159. Prove that the points :math:`a(cos\alpha + i sin\alpha), b(cos\beta + i
+     sin\beta)` and :math:`c(cos\gamma + i sin\gamma)` in the Argand plane are
+     collinear if :math:`bcsin(\beta - \gamma) + casin(\gamma - \alpha) +
+     absin(\alpha -\beta).`
+
+160. :math:`A` represents the number :math:`6i, B` the number :math:`3` and
+     :math:`P` the complex number :math:`z`. If :math:`P` moves such that
+     :math:`PA : PB = 2 : 1,` show that :math:`z\overline{z} = (4 + 2i)z + (4 -
+     2i)\overline{z}.` Also, show that the locus of P is a circle, find its
+     radius and center.
+
+161. Show that if the points :math:`z_1, z_2, z_3` and :math:`z_4` taken in
+     order are concyclic then the expression :math:`\frac{(z_3 - z_1)(z_4 -
+     z_2)}{(z_3 - z_2)(z_4 -z_1)}` is purely real.
+
+162. Let :math:`z_1, z_2, z_3` and :math:`z_4` be the vertices of a
+     quadrilateral. Prove that quadrilateral is cyclic if :math:`z_1z_2 +
+     z_3z_4 = 0` and :math:`z_1 + z_2 = 0.`
+
+163. Show that the triangles whose vertices are :math:`z_1, z_2, z_3` and
+     :math:`z_1', z_2', z_3'` are similar if
+
+     .. math::
+        \begin{vmatrix}z_1 & z_1' & 1\\z_2 & z_2' & 1\\z_3 & z_3' &
+        1\end{vmatrix} = 0
+
+164. If :math:`a, b, c` and :math:`u, v, \omega` are the complex numbers
+     representing two triangles such that :math:`c = (1 - r)a + rb` and
+     :math:`\omega = (i - r)u + rv,` where :math:`r` is a complex number, prove
+     that the two trriangles are similar.
+
+165. Find the equation of perpendicular bisector of the line segment joining
+     points :math:`z_1` and :math:`z_2.`
+
+166. Find the equation of the circle having the line segment joining
+     :math:`z_1` and :math:`z_2` as diameter.
+
+167. If :math:`\left|\frac{z - z_1}{z - z_2}\right| = c, c \ne~0,` then show
+     that the locus of :math:`z` is a circle.
+
+168. If :math:`|z| = 1,` find the locus of the point :math:`\frac{2}{z}.`
+
+169. If for any two complex numbers :math:`z_1` and :math:`z_2, |z_1 + z_2| =
+     |z_1| + |z_2|` prove that :math:`arg z_1 - arg z_2 = 2n\pi.`
+
+170. Find the complex number :math:`z` the least in absolute value which
+     satisfies the condition :math:`|z - 2 + 2i| = 1.`
+
+171. Find the point in the first quadrant, on the curve :math:`|z - 5i| = 3`
+     whose argument is minimum.
+
+172. Find the set of points of the co-ordinate plane which satisfy the
+     inequality
+
+     .. math::
+        log_\frac{1}{3}\left(\frac{|z - 1| + 4}{3|z - 1| - 2}\right) > 1
+
+173. Find the set of all points on the :math:`xy`-plane whose co-ordinates
+     satisfy the following conditions: the number :math:`z^2 + z + 1` is real
+     and positive.
+
+174. Find the real values of the parameter :math:`a` for which at least one
+     complex number :math:`z` satisfies the equality :math:`|z - az| = a + 4`
+     and the inequality :math:`|z - 2| < 1.`
+
+175. Find the real values of parameter :math:`t` for which at least one complex
+     number :math:`z` satisfies the equality :math:`|z + \sqrt{2}| = t^2 - 3t
+     +2` and the inequality :math:`|z + t\sqrt{2}| < t^2.`
+
+176. Among the complex numbers which satisfy the condition :math:`|z - 15i| \le
+     15,` find the number having least positive argument.
+
+177. Find :math:`z` for which :math:`|z - 5i| \le 1` and :math:`arg z` is
+     minimum.
+
+178. Find the real value of :math:`a` for which there is at least one complex
+     number satisfying :math:`|z + 4i| = \sqrt{a^2 - 12a + 28}` and :math:`|z -
+     4\sqrt{3}| < a.`
+
+179. Find the set of points belonging to the co-ordinate plane :math:`xy,` for
+     which the real part of complex number :math:`(1 + i)z^2` is positive.
+
+180. Solve the equation :math:`2z = |z| + 2i` in complex numbers.
+
+181. Show that all the roots of the equation :math:`a_1z^3 + a_2z^2 + a_3z +
+     a_4 = 3,` where :math:`|a_i| \le 1, i= 1, 2, 3, 4` lie outside the circle
+     with center as origin and radius :math:`\frac{2}{3}.`
+
+182. Given that :math:`\sum_{i = 1}^nb_i = 0` and :math:`\sum_{i = 1}^nb_iz_i =
+     0` where :math:`b_i`'s are non-zero real numbers, no three of
+     :math:`z_i`'s form a straight line. Prove that :math:`z_i`'s are concyclic
+     if :math:`b_1b_2|z_2 - z_2|^2 = b_3b_4|z_3 - z_4|^2.`
+
+183. A cubic equation :math:`f(x) = 0` has one real root :math:`\alpha` and two
+     complex roots :math:`\beta + i\gammma.` Points :math:`A, B` and :math:`C`
+     represent these roots respectively. Show that the roots of the derived
+     equation :math:`f'(x) = 0` are complex if :math:`A` falls inside one of
+     the two equilateral triangles described on base :math:`BC`.
+
+184. 
