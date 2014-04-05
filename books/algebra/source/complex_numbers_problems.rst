@@ -742,3 +742,7 @@ Find the square root of following complex numbers:
      that :math:`\frac{\gamma}{\delta}` is real and :math:`\alpha\delta -
      \beta\gamma \ne 0` then prove that :math:`z = \frac{\alpha + \beta
      t}{\gamma + \delta t}, t \in \mathbf{R}` represents a straight line.
+
+186. If :math:`\omega, \omega^2` are cube roots of unity, then prove that
+
+     (i) :math:`(3 + 3\omega + 5\omega^2)^6 - (2 + 6\omega + 2\omega^2) = 0`
