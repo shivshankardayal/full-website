@@ -260,7 +260,7 @@ Following relations are very easy and can be proved by the student. If
     :math:`|z_1-z_2|\geq||z_1|-|z_2||.`
 
 Geometrical Representation
---------------------------
+==========================
 A complex number z which we have considered to be equal to x+iy in our previous
 representations can be represented by a point P whose Cartesian co-ordinates
 are (x,y) referred to rectangular axes Ox and Oy where O is origin i.e. (0, 0)
@@ -364,19 +364,19 @@ If :math:`z, z_1 \text{ and } z_2` are complex numbers then
 8. :math:`|z_1-z_2|^2 = r_1^2+r_2^2+2r_1r_2cos(\theta_1+\theta_2)`
 
 Vector Representation
----------------------
+=====================
 Complex numbers can also be represented as vectors. Length of the vector is
 nothing bu modulus of complex number and argument is the angle which the vector
 makes with read axis. It is denoted as :math:`\overrightarrow{OP}` where
 :math:`OP` represents the vector of the complex number z.
 
 Algebraic Operation's Representation
-------------------------------------
+====================================
 Let :math:`z_1=x_1+iy_1` and :math:`x_2+iy_2` be two complex numbers which are
 represented by two points :math:`P1` and :math:`P2` in the following diagrams.
 
 Addition
-^^^^^^^^
+--------
 Now as we know that :math:`z_1+z_2 = (x_1+x_2)+i(y_1+y-2).` Let us try to
 achive this through geometrical means.
 
@@ -412,7 +412,7 @@ congruent. Very simple analysis will result in the fact that
    OP=OP_1+OP_2
 
 Subtraction
-^^^^^^^^^^^
+-----------
 TO subtract we will have to make :math:`P_2` rotate by :math:`180^\circ .` Now
 this means that in prebious diagram it will fall in third quadrant and then
 again it can be proven that
@@ -549,7 +549,7 @@ Let :math:`x=x^{\frac{1}{3}}`, then :math:`x^3-1=0.`
 So the three roots are :math:`x=1, x=\frac{-1\pm \sqrt{-3}}{2}` i.e. :math:`1,
 \frac{-1+i\sqrt{3}}{2} \text{ and } \frac{-1-i\sqrt{3}}{2}.`
 
-It can be easily verified that of if :math:`\omega=\frac{-1-i\sqrt{3}}{2}` then
+It can be easily verified that if :math:`\omega=\frac{-1-i\sqrt{3}}{2}` then
 :math:`\omega^2=\frac{-1+i\sqrt{3}}{2}` thus three cube roots are represented
 as :math:`1, \omega \text{ and } \omega^2.`
 
@@ -621,8 +621,11 @@ can be easily proven that
 It is left as an exercise to the reader to prove it for negative and fractional
 powers.
 
+Some Important Geometrical Results and Equations
+================================================
+
 Section Formula
-===============
+---------------
 Let :math:`z_1=x_1+iy_1, z_2=x_2+iy_2` then if :math:`z=z+iy` which divides the
 previous two points in the ration :math:`m;n` can be given by using the results
 from co-ordinate geometry as below:
@@ -637,11 +640,11 @@ line in two equal parts i.e. the point is mid-point then :math:`m = 1` and :math
 = 1` then :math:`z` is given by :math:`\frac{1}{2}(z_1 + z_2)`
 
 Distance Formula
-================
+----------------
 Distance betwenn :math:`A(z_1)` and :math:`B(z_2)` is given by :math:`AB = |z_1 + z_2|`
 
 Equation of a Line Passing Through Two Points
-=============================================
+---------------------------------------------
 The equation between two point :math:`z_1` and :math:`z_2` is given by the
 determinant
 
@@ -665,7 +668,7 @@ The proof is left as an exercise to the reader.
 The parametric form is given by :math:`z = iz_1 + (1 - t)z_2`
 
 Collinear Points
-================
+----------------
 Three points :math:`z_1, z_2 \text{ and } z_3` are collinear if and only if
 
 .. math::
@@ -679,7 +682,7 @@ This follows from the formula for a line passing through two points. Just
 substitute :math:`z_3` as a point in the equation to satisfy the equality.
 
 Parrallelogram
-==============
+--------------
 Four complex numbers :math:`A(z_1), B(z_2), C(z_3)` and :math:`D(z_4)`
 represent the vertices of a parallelogram if :math:`z_1 + z_3 = z_2 + z_4.`
 
@@ -700,7 +703,7 @@ The diagonals :math:`AC` and :math:`BD` must bisect each other. Therefore,
     \Leftrightarrow z_1 + z_3 = z_2 + z_4
 
 Rhombus
-=======
+-------
 Four complex numbers :math:`A(z_1), B(z_2), C(z_3)` and :math:`D(z_4)`
 represent the vertices of a rhombus if :math:`z_1 + z_3 = z_2 + z_4` and
 :math:`|z_4 - z_1| = |z_2 - z_1|.`
@@ -725,7 +728,7 @@ Also, a pair of two adjacent sides are equal for example :math:`AD = AB` thus
 second condition is also met i.e. :math:`|z_4 - z_1| = |z_2 - z_1`.
 
 Square
-======
+------
 Four complex numbers :math:`A(z_1), B(z_2), C(z_3)` and :math:`D(z_4)`
 represent the vertices of a square if :math:`z_1 + z_3 = z_2 + z_4, |z_4 - z_1|
 = |z_2 - z_1|` and :math:`|z_3 - z_1| = |z_4 - z_2|.`
@@ -752,7 +755,7 @@ And the two diagonals are equal i.e. :math:`AC = BD` i.e. :math:`|z_3 - z_1| =
 |z_4 - z_2|.`
 
 Rectangle
-=========
+---------
 Four complex numbers :math:`A(z_1), B(z_2), C(z_3)` and :math:`D(z_4)`
 represent the vertices of a rectangle if :math:`z_1 + z_3 = z_2 + z_4, |z_4 -
 z_1|` and :math:`|z_3 - z_1| = |z_4 - z_2|.`
@@ -770,7 +773,7 @@ Similar to above examples the diagonals bisect each other. Also, the diagonals
 :math:`AC` and :math:`BD` should be equal.
 
 Centroid of a Triangle
-======================
+----------------------
 Let :math:`A(z_1), B(z_2)` and :math:`C(z_3)` be the vertices of a
 :math:`\triangle ABC.`
 
@@ -792,7 +795,7 @@ of the medians of all three sides and is given by
     \draw (0, 1.33) node[anchor= south west] {$z$};
 
 Incenter of a Triangle
-======================
+----------------------
 Let :math:`A(z_1), B(z_2)` and :math:`C(z_3)` be the vertices of a
 :math:`\triangle ABC.`
 
@@ -828,7 +831,321 @@ where :math:`a, b` and :math:`c` are the lengths of the sides.
     \draw (0, 3.35) arc(270:300:6mm);
 
 Circumcenter of a Triangle
-==========================
-    
+--------------------------
+The circumcenter :math:`S(z)` of the :math:`\triangle ABC` is the concurrence
+of perpendicular bisectors of sides of :math:`\triangle ABC` and is given by
+
+.. math::
+    z = \frac{(z_2 - z_3)|z_1|^2 + (z_3 - z_1)|z_2|^2 + (z_1 -
+    z_2)|z_3|^2}{\overline{z_1}(z_2 - z_3) + \overline{z_2}(z_3 - z_1) +
+    \overline{z_3}(z_1 - z_2)}
+
+    z = \frac{\begin{vmatrix}|z_1|^2 & z_1 & 1\\|z_2|^2 & z_2 & 1\\|z_3|^2 &
+    z_3 & 1\end{vmatrix}}{\begin{vmatrix}\overline{z_1} & z_1 &
+    1\\\overline{z_2} & z_2 & 1\\\overline{z_3} & z_3 & 1\end{vmatrix}}
+
+Also,
+
+.. math::
+   z = \frac{z_1 sin 2A + z_2 sin 2B + z_3 sin 2C}{sin 2A + sin 2B + sin 2C}
+
+Orthocenter of a Triangle
+-------------------------
+The orthocenter :math:`H(z)`  of the :math:`\triangle ABC` is the concurrence
+of altitudes of :math:`\triangle ABC` and is given by
+
+.. math::
+   z = \frac{\begin{vmatrix}z_1^2 & \overline{z_1} & 1\\z_2^2 & \overline{z_2}
+   & 1\\z_3^2 & \overline{z_3} & 1\end{vmatrix} + \begin{vmatrix}|z_1|^2 & z_1
+   & 1\\|z_2|^2 & z_2 & 1\\|z_3|^2 & z_3 &
+   1\end{vmatrix}}{\begin{vmatrix}\overline{z_1} & z_1 & 1\\\overline{z_2} &
+   z_2 & 1\\\overline{z_3} & z_3 & 1\end{vmatrix}}
+
+   \text{or}
+
+   z = \frac{tanA z_1 + tanB z_2 + tanC z_3}{tanA + tanB + tanC}
+
+   \text{or}
+
+   z = \frac{a secA z_1 + b secB z_2 + c secC z_3}{a secA + b secB + c secC}
+
+Euler's Line
+------------
+The centroid :math:`G` of a triangle lies on the segment joining the
+orthocenter :math:`H` and the circumcenter :math:`S` of the triangle. :math:`G`
+divides the line :math:`H` and :math:`S` in the ratio :math:`2:1.`
+
+Length of Perpendicular from a Point to a Line
+----------------------------------------------
+Length of a perpendicular of point :math:`A(\omega)` from the line
+:math:`\overline{a}z + a\overline{z} + b = 0 (a \in \mathbf{C}, b \in
+\mathbf{R})` is given by
+
+.. math::
+   p = \frac{|\overline{a}\omega + a\overline{\omega} + b|}{2|a|}
+
+Equation of a Circle
+--------------------
+.. tikz::
+
+   \draw (0, 0) circle(2);
+   \draw (0, 0) -- (1.414, 1.414);
+   \draw (0, 0) node[anchor=north] {$z_0$};
+   \draw (0.5, 0.5) node[anchor=north west] {$r$};
+   \draw (1.414, 1.414) node[anchor=west] {$z$};
+   \filldraw (0, 0) circle(1pt);
+
+The equation of a circle with center at :math:`z_0` and radius :math:`r` is
+:math:`|z - z_0| = r` or :math:`z = z_0 + re^{i\theta}, 0 \le \theta \le 2\pi`
+(parametric form) or :math:`z\overline{z} - z_0\overline{z} - \overline{z_0}z +
+z_0\overline{z_0} - r^2 = 0`
+
+General equation of a circle is :math:`z\overline{z} - a\overline{z} +
+\overline{a}z + b = 0` where :math:`a` is a complex number and :math:`b` is a
+real number such that :math:`\sqrt{a\overline{a} - b} \ge 0.` Center of this
+circle is :math:`-a` and its radius is :math:`a\overline{a} - b.`
+
+An equation of the circle one of whose diameter is the line segment joining
+:math:`z_1` and :math:`z_2` is :math:`(z - z_1)(\overline{z} -
+\overline{z_2}) + (\overline{z} - \overline{z_1})(z - z_2) = 0`
+
+An equation of the circle passing through two points :math:`z_1` and
+:math:`z_2` is given by
+
+.. math::
+   (z - z_1)(\overline{z} - \overline{z_2}) + (\overline{z} -
+   \overline{z_1})(z - z_2) + k \begin{vmatrix}z & \overline{z} & 1\\z_1 &
+   \overline{z_1} & 1\\z_2 & \overline{z_2} & 1\end{vmatrix} = 0
+
+where :math:`k` is a parameter.
+
+Let us find out equation of a circle passing through three non-collinear
+points. Let :math:`A(z_1), B(z_1)` and :math:`C(z_3)` be such three points.
+
+.. tikz::
+   \draw (0,0) circle(2);
+   \draw (1.414, -1.414) -- (1.414, 1.414);
+   \draw (1.414, -1.414) -- (-1.414, 1.414);
+   \draw[dashed] (1.414, -1.414) -- (0, -2);
+   \draw (-1.414, -1.414) -- (1.414, 1.414);
+   \draw (-1.414, -1.414) -- (-1.414, 1.414);
+   \draw[dashed] (-1.414, -1.414) -- (0, -2);
+   \draw (1.414, 1.414) node[anchor=south west] {$C(z_3)$};
+   \draw (-1.414, 1.414) node[anchor=south east] {$P(z)$};
+   \draw (-1.414, -1.414) node[anchor=north east] {$A(z_1)$};
+   \draw (0, -2) node[anchor=north] {$P(z)$};
+   \draw (1.414, -1.414) node[anchor=north west] {$B(z_2)$};
+
+We choose :math:`P(z)` any point on the circle. Two such points are shown in
+the figure one when it is in the same segment and other when it is in different
+segment.
+
+So we have,
+
+.. math::
+   \angle ACB = \angle APB \text{ or } \angle ACB + \angle APB = \pi
+
+as when :math:`P` is in same segment of different.
+
+.. math::
+   arg\left(\frac{z_3 - z_2}{z_3 - z_1}\right) - arg\left(\frac{z - z_2}{z -
+   z_1}\right) = 0
+
+   arg\left(\frac{z_3 - z_2}{z_3 - z_1}\right) + arg\left(\frac{z - z_2}{z -
+   z_1}\right) = \pi
+
+   \Rightarrow arg\left[\frac{(z_3 - z_2)(z - z_1)}{(z_3 - z_1)(z -
+   z_2)}\right] = 0
+
+   arg\left[\frac{(z - z_1)(z_3 - z_2)}{(z - z_2)(z_3 - z_1)}\right] = \pi
+
+So in both the cases the fraction must be purely real. This menas
+
+.. math::
+   \frac{(z - z_1)(z_3 - z_2)}{(z - z_2)(z_3 - z_1)} = \frac{\overline{(z -
+   z_1)(z_3 - z_2)}}{\overline{(z - z_2)(z_3 - z_1)}}
+
+which can be further simplified.
+
+From this we can also deduce the condition for four points to be
+concyclic. Treating :math:`P(z)` as just a another point :math:`D(z_4)` we can
+rewrite the above result as
+
+.. math::
+   \frac{(z_4 - z_1)(z_3 - z_2)}{(z_4 - z_2)(z_3 - z_1)}
+
+must be purely real.
+
+Finding Loci by Examination
+---------------------------
+i. :math:`arg(z - z_0) = \alpha`
+
+   If :math:`\alpha` is a real number and :math:`z_0` is a fixed point, then
+   :math:`arg(z - z_0) = \alpha` represents a verctor starting at :math:`z_0`
+   (exclusing the point :math:`z_0`) and making an angle :math:`\alpha` with
+   the real :math:`x`-axis.
+
+   .. tikz::
+
+      \draw[<->, >=stealth] (-3, 0) -- (3, 0);
+      \draw[<->, >=stealth] (0, -3) -- (0, 3);
+      \draw[->, >=stealth] (-2, -1) --(1.8, 2.8);
+      \filldraw (-2, -1) circle(1pt) (1, 2) circle(1pt);
+      \draw (-2, -1) node[anchor=north] {$z_0$};
+      \draw (0, 0) node[anchor=north east] {$O$};
+      \draw (3, 0) node[anchor=north] {$X$};
+      \draw (0, 3) node[anchor=east] {$Y$};
+      \draw (1, 2) node[anchor=north west] {$z$};
+      \draw (-0.7, 0) arc(0:45:3mm);
+      \draw (-0.5, .2) node {$\alpha$};
+
+   Now suppose :math:`z_0` is origin :math:`O` then the above equation becomes
+   :math:`arg(z) = \alpha` which is a vector starting at origin and making an
+   angle :math:`\alpha` with the :math:`x`-axis.
+
+ii. If :math:`z_1` and :math:`z_2` are two fixed points such that :math:`|z -
+    z_1| = |z - z_2|` then :math:`z` represents perpendicular bisector of the
+    segment joining :math:`A(z_1)` and :math:`B(z_2).` And, :math:`z, z_1` and
+    :math:`z_2` will form an isosceles triangle.
+
+    .. tikz::
+
+       \draw (-1, 0) -- (1, 0) -- (0, 2.5) -- cycle;
+       \draw (0, -0.2) -- (0, 2.7);
+       \draw (-1, 0) node[anchor=north] {$A(z_1)$} (1, 0) node[anchor=north]
+       {$B(z_2)$} (0, 2.5) node[anchor=south west] {$z$};
+       \draw (-1, 0) .. controls (-1,0) and (0, 2.5) .. node[sloped, above]
+       {$|z - z_1|$} (0, 2.5);
+       \draw (1, 0) .. controls (1,0) and (0, 2.5) .. node[sloped, above]
+       {$|z - z_2|$} (0, 2.5);
+
+iii. If :math:`z_1` and :math:`z_2` are two fixed points and :math:`k > 0, k
+     \ne 1` is a real number, then
+
+     .. math::
+        \frac{|z - z_1|}{|z - z_2|} = k
+
+     represents a circle.
+
+iv. :math:`|z - z_1| + |z - z_2| = k.` Let :math:`z_1` and :math:`z_2` be two
+    fixed points and :math:`k` be a positive real number.
+
+    (a) If :math:`k > |z - z_2|,` then :math:`|z - z_1| + |z - z_2| = k`
+        represents an ellipse with foci at :math:`A(z_1)` and :math:`B(z_2)`
+        and length of major axis = :math:`k.`
+
+        .. tikz::
+
+           \draw (0, 0) ellipse (2 and 1.5);
+           \draw (-2, 0) node[anchor=east] {$C$} (2, 0) node[anchor=west]
+           {$D$};
+           \draw (-2, 0) -- (2, 0);
+           \draw (-1, 0) node[anchor=north] {$A(z_1)$} (1, 0)
+           node[anchor=north] {$B(z_2)$};
+           \draw (-1, 0) circle(1pt) (1, 0) circle(1pt) (2, -.4)
+           node[anchor=west] {$CD = k$};
+
+    (b) If :math:`k = |z - z_2|` then it represents the line segment joining
+        :math:`z_1` and :math:`z_2.`
+
+    (c) If :math:`k < |z - z_2|` then it does not represent any curve in Argand
+        plane.
+
+v. If :math:`|z - z_1| - |z - z_2| = k.` Let :math:`z_1` and :math:`z_2` be two
+   fixed points and :math:`k` be a positive real number.
+
+   (a) If :math:`k \ne |z - z_2|` then it represents a parabola with foci at
+       :math:`A(z_1)` and :math:`B(z_2).`
+
+       .. tikz::
+
+          \draw plot[variable=\t,samples=100,domain=-50:50]
+          ({2*sec(\t)},{.7*tan(\t)});
+          \draw plot[variable=\t,samples=100,domain=-50:50]
+          ({-2*sec(\t)},{.7*tan(\t)});
+          \draw (-2.7,0) -- (2.7, 0);
+          \draw (-2.7, 0) circle(1pt) (2.7, 0) circle(1pt);
+          \draw (-2.7, 0) node[anchor=east] {$A(z_1)$} (2.7, 0)
+          node[anchor=west] {$B(z_2)$};
+
+   (b) If :math:`k = |z_1 - z_2|,` then it represents the straight line joining
+       :math:`A(z_1)` and :math:`B(z_2)` but excluding the the segment
+       :math:`AB.`
+
+       .. tikz::
+
+          \draw[dashed] (-1, 0) -- (1, 0);
+          \draw[->, >= stealth] (-1, 0) -- (-2, 0);
+          \draw[->, >= stealth] (1, 0) -- (2, 0);
+          \draw (-1, 0) node[anchor=north] {$A(z_1)$} (1, 0) node[anchor=north]
+          {$B(z_2)$};
+
+vi. :math:`|z - z_1|^2 + |z - z_2|^2 = |z_1 - z_2|^2`. If :math:`z_1` and
+    :math:`z_2` are two fixed points then it represents a circle with
+    :math:`z_1` and :math:`z_2` as the end-points of one of the diameters.
+
+    .. tikz::
+
+       \draw (0, 0) circle(2);
+       \draw (-2, 0) -- (2, 0) (-2, 0) node[anchor=east] {$A(z_1)$}
+       (2, 0) node[anchor=west] {$B(z_2)$};
+       \draw (0, 0) circle(1pt) (0,0) node[anchor=north] {$O$};
+
+vii. :math:`arg\left(\frac{z - z_1}{z - z_2} = \alpha\right)`. Let :math:`z_1`
+     and :math:`z_1` be any two fixed points and :math:`\alpha` be a real
+     number such that :math:`0 \ge \alpha \le \pi.`
+
+     (a) If :math:`0 < \alpha < \pi` and :math:`\alpha \ne \pi/2,` then it
+         represents a segment of a circle passing through :math:`A(z_1)` and
+         :math:`B(z_2).`
+
+         .. tikz::
+
+            \draw (0, 0) circle(2);
+            \draw (-1.414, -1.414) -- (1.414, -1.414);
+            \draw (-1.414, -1.414) -- (1.414, 1.414) (1.414, -1.414) -- (1.414,
+            1.414);
+            \draw (1.414, 1.114) arc(270:225:.3);
+            \draw (-1.414, -1.414) node[anchor=north east] {$A(z_1)$} (1.414,
+            -1.414) node[anchor=north west] {$B(z_2)$};
+            \draw (1.214, 1.114) node[anchor=north] {$\alpha$};
+     
+     (b) If :math:`\alpha = \pi/2` then it represents a circle with diameter as
+         the line segment joining :math:`A(z_1)` and :math:`B(z_2).`
+
+         .. tikz::
+
+            \draw (0, 0) circle(2);
+            \draw (-2, 0) -- (2, 0);
+            \draw (-2, 0) -- (1.414, 1.414) (2, 0) -- (1.414, 1.414) (-2, 0) --
+            (0, -2) (2, 0) -- (0, -2);
+            \draw (-2, 0) node[anchor=east] {$A(z_1)$} (2,
+            0) node[anchor=west] {$B(z_2)$};
+            \draw (1.53, 1.15) arc(300:210:.3);
+            \draw(.2121, -1.7979) arc(45:135:.3);
+            \draw (1.2, 1.15) node[anchor=north] {$\pi/2$} (0, -1.7)
+            node[anchor=south] {$\pi/2$};
+
+     (c) If :math:`\alpha = \pi` then it represents the straight line joining
+         :math:`A(z_1)` and :math:`B(z_2)` but excluding the segment :math:`AB.`
+
+         .. tikz::
+
+            \draw[dashed] (-1, 0) -- (1, 0);
+            \draw[->, >= stealth] (-1, 0) -- (-2, 0);
+            \draw[->, >= stealth] (1, 0) -- (2, 0);
+            \draw (-1, 0) node[anchor=north] {$A(z_1)$} (1, 0) node[anchor=north]
+            {$B(z_2)$};
+
+     (d) If :math:`\alpha = 0` then it represents the line segment joining
+         :math:`A(z_1)` and :math:`B(z_2).`
+
+         .. tikz::
+
+            \draw (-1, 0) -- (1, 0);
+            \draw (-1, 0) node[anchor=north] {$A(z_1)$} (1, 0) node[anchor=north]
+            {$B(z_2)$};
+            \draw (-1, 0) circle(1pt) (1, 0) circle(1pt);
+
 Problems are given as a separate chapter as MathJax may end up taking long time
 if too much math is present on same page.

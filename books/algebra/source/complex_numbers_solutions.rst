@@ -210,10 +210,10 @@ Complex Numbers Solutions
        \Rightarrow 2sin\frac{x}{2}\left(sin\frac{x}{2} +
        cos\frac{x}{2}\right) + \frac{2sin\frac{x}{2}cos\frac{x}{2}}{cosx} = 0
 
-       \Rightarrow \text{sin\frac{x}{2}} = 0 \Rightarrow x = 2n\pi \text{where}
+       \Rightarrow sin\frac{x}{2} = 0 \Rightarrow x = 2n\pi \text{where}
        n = 0, 1, 2, 3, ...
        
-       \text(or) \left(sin\frac{x}{2} + cos\frac{x}{2}\right)cosx +
+       \text{or} \left(sin\frac{x}{2} + cos\frac{x}{2}\right)cosx +
        cos\frac{x}{2} = 0
 
        \Rightarrow 2sin^3\frac{x}{2} - 2cos^3\frac{x}{2} - sin\frac{x}{2} = 0
@@ -388,7 +388,7 @@ Complex Numbers Solutions
        iy)}{(1 + x + iy)(1 + x - iy)} = \frac{1 - x^2 - y^2 - i2y}{(1 + x)^2 +
        y^2}
 
-       \because x \gt 1 \text{ and } y \ge 0 \therefore Re(p) \le 0 \text{and }
+       \because x \ge 1 \text{ and } y \ge 0 \therefore Re(p) \le 0 \text{and }
        Im(p) \le 0.
 
 45. From the given equation we can deduce that

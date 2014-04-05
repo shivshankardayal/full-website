@@ -602,7 +602,7 @@ Find the square root of following complex numbers:
      semicircle above :math:`x`-axis whose diemeter is the joins of the points
      :math:`(-1, 0)` and :math:`(1, 0)` excluding those points.
 
-151. Find the locus of the point :math:`z` if :math:`log_\sqrt{3}\frac{|z|^2 -
+151. Find the locus of the point :math:`z` if :math:`\log_{\sqrt{3}}\frac{|z|^2 -
      |z| + 1}{2 + |z|} < 2.`
 
 152. If :math:`O` be the center of the circle circumscribing the equilateral
@@ -730,9 +730,15 @@ Find the square root of following complex numbers:
      if :math:`b_1b_2|z_2 - z_2|^2 = b_3b_4|z_3 - z_4|^2.`
 
 183. A cubic equation :math:`f(x) = 0` has one real root :math:`\alpha` and two
-     complex roots :math:`\beta + i\gammma.` Points :math:`A, B` and :math:`C`
+     complex roots :math:`\beta + i\gamma.` Points :math:`A, B` and :math:`C`
      represent these roots respectively. Show that the roots of the derived
      equation :math:`f'(x) = 0` are complex if :math:`A` falls inside one of
      the two equilateral triangles described on base :math:`BC`.
 
-184. 
+184. Prove that reflection of :math:`\overline{a}z + a\overline{z} = 0` in the
+     real axis is :math:`\overline{a}\overline{z} + az = 0.`
+
+185. If :math:`\alpha, \beta, \gamma, \delta` are four complex numbers such
+     that :math:`\frac{\gamma}{\delta}` is real and :math:`\alpha\delta -
+     \beta\gamma \ne 0` then prove that :math:`z = \frac{\alpha + \beta
+     t}{\gamma + \delta t}, t \in \mathbf{R}` represents a straight line.
