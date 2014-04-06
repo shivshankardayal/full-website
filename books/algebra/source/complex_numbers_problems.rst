@@ -959,8 +959,8 @@ formulas:
 
    0! = 1
 
-   {n \choose r} = {^nCr} = \frac{n!}{r!(n-r)!} = \frac{n(n - 1) ... (n - r +
-   1)}{1 * 2 * 3 * ... * r }
+   {n \choose r} = {^nCr} = C_r^n = \frac{n!}{r!(n-r)!} = \frac{n(n - 1)
+   ... (n - r + 1)}{1 * 2 * 3 * ... * r }
 
 226. Show that
 
@@ -1071,4 +1071,54 @@ formulas:
         1)\theta + \alpha] + r^{n + 2} sin(n\theta + \alpha)}{1 - 2rcos\theta +
         r^2}
 
-239.
+239. Simplify the following sum:
+
+     .. math::
+        S = 1 + n cos \theta + \frac{n(n - 1)}{1*2} cos2\theta + ... = \sum_{k
+        = 0}^{k = n}C^k_N cosk\theta
+
+240. Simplify the following sum:
+
+     .. math::
+        S = 1 + n sin \theta + \frac{n(n - 1)}{1*2} sin2\theta + ... = \sum_{k
+        = 0}^{k = n}C^k_N sink\theta
+
+241. If :math:`\alpha = \frac{\pi}{2n}` and :math:`o < 2n` then prove that
+
+     .. math::
+        sin^{2p} \alpha + sin^{2p} 2\alpha + ... + sin^{2p} n\alpha =
+        \frac{1}{2} + n\frac{1 *3 * 5 * ... (2p - 1)}{2 * 4 * ... 2p}
+
+242. Prove that the polynomial :math:`x(x^{n - 1} -na^{n - 1}) + a^n(n - 1)` is
+     divisible by :math:`(x - a)^2.`
+
+243. Prove that the polynomial :math:`(1 - x^n)(1 + x) - 2nx^n(1 - x) -
+     n^2x^n(1 -x)^2` is divisible by :math:`(1 - x)^3.`
+
+244. Prove that :math:`(x + y)^n - x^n - y^n` is divisible by :math:`xy(x +
+     y)(x^2 + xy + y^2)` if :math:`n` is an odd number and not divisible by 3.
+
+245. Prove that :math:`(x + y)^n - x^n - y^n` is divisible by :math:`xy(x +
+     y)(x^2 + xy + y^2)^2` if :math:`n,` when divided by 6, yields unity as a
+     remainder, i.e. :math:`n \equiv 1(mod 6).`
+
+246. Show that the expression :math:`(x + y + z)^m - x^m - y^m -z^m` is
+     divisible by :math:`(x + y + z)^3 - x^3 - y^3 - z^3` when :math:`m` is
+     odd.
+
+247. Find the condition necessary and sufficient for :math:`x^3 + y^3 + z^3 +
+     kxyz` to be divisible by :math:`x + y + z.`
+
+248. Deduce the condition at which :math:`x^n - y^n` is divisible by :math:`x^p
+     - y^p` where :math:`n` and :math:`p` are positive integers.
+
+249. Find out whether the polynomial :math:`x^{4a} + x^{4b + 1} + x^{4c + 2} +
+     x^{4d + 3}` is divisible by :math:`x^3 + x^2 + x + 1` where :math:`a, b,
+     c, d` are positive integers.
+
+250. Find out at what :math:`n` the polynomial :math:`1 + x^2 + x^4 + ... +
+     x^{2n - 2}` si divisible by the polynomial :math:`1 + x + x^2 + ... + x^{n
+     - 1}.`
+
+251. Prove that the polynomial :math:`(cos\theta + x sin\theta)^n -
+     cosn\theta - x sin\theta` is divisible by :math:`x^2 + 1.`
