@@ -746,3 +746,69 @@ Find the square root of following complex numbers:
 186. If :math:`\omega, \omega^2` are cube roots of unity, then prove that
 
      (i) :math:`(3 + 3\omega + 5\omega^2)^6 - (2 + 6\omega + 2\omega^2) = 0`
+     (ii) :math:`(2 - \omega)(2 - \omega^2)(2 -\omega^{10})(2 - \omega^{11}) =
+          49`
+     (iii) :math:`(1 - \omega)(1 - \omega^2)(1 - \omega^4)(1 -omega^5) = 9`
+     (iv) :math:`(1 - \omega + \omega^2)^5 + (1 + \omega - \omega^2)^5 = 32`
+     (v) :math:`1 + \omega^n + \omega^{2n} = 3` where :math:`n > 0, n \in
+         \mathbf{I}` and is a multiple of 3.
+     (vi) :math:`1 + \omega^n + \omega^{2n} = 0` where :math:`n > 0, n \in
+          \mathbf{I}` and is not a multiple of 3.
+
+187. Resolve into linear factors :math:`a^2 + b^2 + c^2 -ab -bc -ca`
+
+188. Prove that
+
+     .. math::
+        \sqrt{-1 - \sqrt{-1 - \sqrt{-1 - ... to \infty}}} = \omega \text{ or }
+        \omega^2
+
+189. If :math:`x = a + b, y = a\omega + b\omega^2, z = a\omega^2 + b\omega,`
+     prove that :math:`x^3 + y^3 + z^3 = 3(a^3 + b^3)` and :math:`xyz = a^3 +
+     b^3.`
+
+190. Resolve into linear factors:
+
+     (i) :math:`a^2 -ab + b^2`
+     (ii) :math:`a^2 + ab + b^2`
+     (iii) :math:`a^3 + b^3`
+     (iv) :math:`a^3 - b^3`
+     (v) :math:`a^3 + b^3 +c^3 -3abc`
+
+191. Show that :math:`x^{3p} + x^{3q+1} + x^{3r+2},` where :math:`p, q, r` are
+     positive integers is divisible by :math:`x^2 + x + 1.`
+
+192. Show that :math:`x^{3p} + x^{3q+1} + x^{3r+2} + x^{4s+3},` where :math:`p,
+     q, r, s` are positive integers is divisible by :math:`x^3 + x^2 + x + 1.`
+
+193. If :math:`p = a + b + c, q = a + b\omega + c\omega^2, r = a + b\omega^2 +
+     c\omega,` where :math:`\omega` is a cube root of unity, prove that
+     :math:`p^3 + q^3 + r^3 - 3pqr = 27abc.`
+
+194. If :math:`\omega` be an imaginary root of unity, prove that :math:`(a +
+     b\omega + c\omega^2)^3 + (a + b\omega^2 + c\omega)^3 = (2a - b -c)(2b -a
+     -c)(2c -a -b).`
+
+195. If :math:`ax + cy + bz = X, cx + by + az = Y, bx + ay + cz = Z` show that
+
+     (i) :math:`(a^2 + b^2 + c^2 - ab - bc - ca)(x^2 + y^2 + z^2 - xy - yz -zx)
+         = X^2 + Y^2 + Z^2 - XY -YZ -ZY`
+     (ii) :math:`(a^3 + b^3 - c^3 - 3abc)(x^3 + y^3 + z^3 -3xyz) = X^3 + Y^3 +
+          Z^3 - 3XYZ`
+
+196. Prove that
+
+     .. math::
+        \left(\frac{cos\theta + isin\theta}{sin\theta + icos\theta}\right)^4 =
+        cos8\theta + isin8\theta
+
+197. If :math:`z^2 -2zcos\theta +1 =0,` show that :math:`z^2 + z^{-2} =
+     2cos2\theta`
+
+198. If :math:`x_r = cos\frac{\pi}{2^r} + isin\frac{\pi}{2^r},` prove that
+     :math:`x_1x_2x_3 ... to \infty = -1.`
+
+199. Prove that :math:`(1 + i)^n + (1 - i)^n = 2^{\frac{n}{2} +
+     1}cos\frac{n\pi}{4}.`
+
+200.

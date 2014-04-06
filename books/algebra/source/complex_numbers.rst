@@ -588,7 +588,7 @@ and
 .. math::
    1.\alpha.\alpha^2. ... .\alpha^{n-1}=(-1)^{n-1}
 
-De Movire's Therorem
+De Moivre's Therorem
 ====================
 **Statement:** If :math:`n` is any integer then :math:`(cos\theta +
 isin\theta)^n=cosn\theta + isinn\theta`.
