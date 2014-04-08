@@ -1075,13 +1075,13 @@ formulas:
 
      .. math::
         S = 1 + n cos \theta + \frac{n(n - 1)}{1*2} cos2\theta + ... = \sum_{k
-        = 0}^{k = n}C^k_N cosk\theta
+        = 0}^{k = n}C^n_k cosk\theta
 
 240. Simplify the following sum:
 
      .. math::
         S = 1 + n sin \theta + \frac{n(n - 1)}{1*2} sin2\theta + ... = \sum_{k
-        = 0}^{k = n}C^k_N sink\theta
+        = 0}^{k = n}C^n_k sink\theta
 
 241. If :math:`\alpha = \frac{\pi}{2n}` and :math:`o < 2n` then prove that
 
@@ -1122,3 +1122,267 @@ formulas:
 
 251. Prove that the polynomial :math:`(cos\theta + x sin\theta)^n -
      cosn\theta - x sin\theta` is divisible by :math:`x^2 + 1.`
+
+252. Prove that the polynomial :math:`x^n sin\theta - k^{n - 1}x sin
+     n\theta + k^n sin(n - 1)\theta` is divisible by :math:`x^2 - 2kx
+     cos\theta + k^2.`
+
+253. Find the sum of the :math:`p`the powers of the roots of the equation
+     :math:`x^n - 1 = 0` where :math:`p` is a positive integer.
+
+254. Let :math:`\alpha = cos\frac{2\pi}{n} + isin\frac{2\pi}{n}` where
+     :math:`n` is a positive integer and let
+
+     .. math::
+        A_k = x + y\alpha^k + z\alpha^{2k} + ... + w\alpha^{(n - 1)k}
+
+        \text{ where, } k = 0, 1, 2, 3 ..., n - 1
+
+     where, :math:`x, y, z, ..., u, w` and :math:`n` are arbitrary complex
+     numbers.
+
+     Prove that
+
+     .. math::
+        \sum_{k = 0}^{k = n - 1}|A_k|^2 = n\{|x|^2 + |y|^2 + ... + |w|^2\}
+
+Prove tha following identities:
+
+255. .. math::
+       x^{2n - 1} - 1= (x^2 - 1)\sum_{k = 1}^{k = n - 1}\left(x^2
+       - 2xcos\frac{k\pi}{n} + 1\right)
+
+256. .. math::
+       x^{2n + 1} - 1 = (x - 1)\sum_{k = 1}^{k = n}\left(x^2
+       - 2xcos\frac{2k\pi}{2n + 1} + 1\right)
+
+257. .. math::
+       x^{2n + 1} - 1= (x + 1)\sum_{k = 1}^{k = n}\left(x^2
+       + 2xcos\frac{2k\pi}{2n + 1} + 1\right)
+
+258. .. math::
+       x^{2n} + 1= (x + 1)\sum_{k = 0}^{k = n - 1}\left(x^2
+       - 2xcos\frac{(2k + 1)\pi}{2n} + 1\right)
+
+259. .. math::
+       sin \frac{\pi}{2n} sin \frac{2\pi}{2n} ... sin \frac{(n - 1)\pi}{2n} =
+       \frac{\sqrt{n}}{2^{n - 1}}
+
+     if :math:`n` is even.
+
+260. .. math::
+       cos \frac{2\pi}{2n + 1} cos \frac{4\pi}{2n + 1} .. cos \frac{2n\pi}{2n +
+       1} = \frac{(-1)^\frac{n}{2}}{2^n}
+
+     if :math:`n` is even.
+
+261. Let the equation :math:`x^n = 1` have the roots :math:`1, \alpha \beta,
+     \gamma, ..., \lambda.` Show that
+
+     .. math::
+        (1 - \alpha)(1 - \beta)(1 - \gamma) ... (1 - \lambda) = n
+
+262. Let :math:`x_1, x_2, ..., x_n` be the roots of the equation :math:`x^n +
+     x^{n - 1} + ... + x + 1 = 0` the compute the expression
+
+     .. math::
+        \frac{1}{x_1 - 1} + \frac{1}{x_2 - 1} + ... + \frac{1}{x_n - 1}.
+
+263. Without solving the equations
+
+     .. math::
+        \frac{x^2}{\mu^2} + \frac{y^2}{\mu^2 - b^2} + \frac{z^2}{\mu^2 - c^2} =
+        1
+
+        \frac{x^2}{\nu^2} + \frac{y^2}{\nu^2 - b^2} + \frac{z^2}{\nu^2 - c^2} =
+        1
+
+        \frac{x^2}{\rho^2} + \frac{y^2}{\rho^2 - b^2} + \frac{z^2}{\rho^2 -
+        c^2} = 1
+        
+     find :math:`x^2 + y^2 + z^2.`
+
+264. Prove that if :math:`cos\alpha + i sin\alpha` is the solution of the
+     equation :math:`x^n + p_1x^{n - 1} + ... + p_n = 0` then :math:`p_1
+     sin\alpha + p_2 sin2\alpha + ... + p_n sinn\alpha = 0` where :math:`p_1,
+     p_2, ..., p_n` are real.
+
+265. Show that if the equations :math:`x^3 + px + q = 0` and :math:`x^3 + p'x +
+     q' = 0` have a common root, then :math:`(pq' - qp')(p - p') = (q - q')^3.`
+
+266. Prove that
+
+     .. math::
+        \sqrt[3]{cos \frac{2\pi}{7}} + \sqrt[3]{cos \frac{4\pi}{7}} +
+        \sqrt[3]{cos \frac{8\pi}{7}} = \sqrt[3]{\frac{1}{2}(5 - 3\sqrt[3]{7})}
+
+267. Prove that
+
+     .. math::
+        \sqrt[3]{cos \frac{2\pi}{9}} + \sqrt[3]{cos \frac{4\pi}{9}} +
+        \sqrt[3]{cos \frac{8\pi}{9}} = \sqrt[3]{\frac{1}{2}(3\sqrt[3]{9} - 6)}
+
+268. If :math:`a + b + c = 0` and let :math:`a^k + b^k + c^k = s_k` then prove
+     the following relations:
+
+     (i) :math:`2s_4 = s_2^2`
+     (ii) :math:`6s_5 = 5s_2s_3`
+     (iii) :math:`6s_7 = 7s_3s_4`
+     (iv) :math:`10s_7 = 7s_2s_5`
+     (v) :math:`25s_7s_3 = 21s_5^2`
+     (vi) :math:`50s_7^2 = 49s_4s_5^2`
+     (vii) :math:`s_{n+3} = abcs_n + \frac{1}{2}s_2s_{n+1}`
+
+269. Given :math:`x + y = u + v, x^2 + y^2 = u^2 + v^2` prove that :math:`x^n +
+     y^n = u^n + v^n` for any :math:`n.`
+
+270. Given :math:`x + y + z = u + v + t, x^2 + y^2 + z^2 = u^2 + v^2 + t^2, x^3
+     + y^3 + z^3 = u^3 + v^3 + t^3` prove that :math:`x^n + y^n + z^n = u^n +
+     v^n + t^n` for any :math:`n.`
+
+271. Let :math:`A = x_1 + x_2\omega + x_3\omega^2, B = x_1 + x_2\omega^2 +
+     x_3\omega,` where :math:`\omega` is cube root of unity and :math:`x_1,
+     x_2, x_3` are the roots of the equation :math:`x^3 + px + q = 0.` Prove
+     that :math:`A^3` and :math:`B^3` are the roots of the quadratic equation
+     :math:`z^3 + 27qz - 27p^3 = 0.`
+
+272. Solve the equation :math:`(x + a)(x + b)(x + c)(x + d) = m` if :math:`a =
+     b = c + d.`
+
+273. Solve the equation :math:`(x + a)^4 + (x + b)^4 = c.`
+
+274. Solve the equation :math:`(x + b + c)(x + a + c)(x + a + b)(a + b + c) -
+     abcx = 0.`
+
+275. Solve the equation :math:`x^3 + 3ax^2 + 3(a^2 - bc)x + a^3 + b^3 +
+     c^3 -3abc = 0.`
+
+276. Solve the equation :math:`ax^4 + bx^3 + cx^2 + dx + e = 0` if :math:`a + b
+     = b + c + d = d + e.`
+
+277. Solve the equation :math:`(a + b + x)^3 - 4(a^3 + b^3 + x^3) - 12abx = 0.`
+
+278. Solve the equation
+
+     .. math::
+
+        x^2 + \frac{a^2x^2}{(a + x)^2} = m
+
+     where :math:`a` and :math:`m > 0.`
+
+     Deduce the condition under which all the roots are real, and determine the
+     number of positive and negative roots.
+
+279. Solve the equation
+
+     .. math::
+        \frac{(5x^4 + 10x^2 + 1)(5a^4 + 10a^2 + 1)}{(x^4 + 10x^2 + 1)(a^4 +
+        10a^2 + 5)} = ax.
+
+280. Solve the equation
+
+     .. math::
+        1 + \frac{a_1}{x - a_1} + \frac{a_2x}{(x - a_1)(x - a_2)} +
+        \frac{a_3x^2}{(x - a_1)(x - a_2)(x - a_3)} + ...
+
+        + \frac{a_{2m}x^{2m -
+        1}}{(x - a_1)(x - a_2) ... (x - a_{2m})} = \frac{2px^m - p^2}{(x -
+        a_1)(x - a_2) ... (x - a_{2m})}.
+
+281. Solve the equation :math:`x^3 + px^2 + qa + r = 0` if :math:`x_1^2 =
+     x_2x_3.` Solve it again if :math:`x_1 = x_2 + x_3.`
+
+282. Solve the system
+
+     .. math::
+        y^3 + z^3 + a^3 = 3ayz
+
+        z^3 + x^3 + b^3 = 3bzx
+
+        x^3 + y^3 + c^3 = 3cxy
+
+      if :math:`a + b + c + d = 0.`
+
+283. Solve the equations :math:`x^4 - a = y^4 - b = z^4 -c = u^4 - d = xyzu` if
+     :math:`a + b + c + d = 0.`
+
+284. Prove that for :math:`x > 1, px^q - qx^p - p + q > 0` where :math:`p, q`
+     are positive integers and :math:`q > p.`
+
+285. Prove that :math:`x^m - x(x - 1)^m + {x \choose 2}(x - 2)^m + ... +
+     (-1)^{x - 1}x * 1^m = 0` if :math:`x > m` and :math:`x, m` are positive
+     integers.
+
+286. Prove that :math:`m^m - m(m - 1)^m + {m \choose 2}(m - 2)^m + ... +
+     (-1)^{m - 1}m = m!` where :math:`m` is a positive integer.
+
+287. Prove the equality
+
+     .. math::
+       (x^2 + a^2)^n = {x^n - C^n_2x^{n - 2}a^2 + C^n_4x^{n - 4}a^4 - ...}^2 +
+       {C^n_1x^{n - 1}a - C^n_3x^{n - 3}a + ...}^2
+
+288. Deternmine the coefficients of :math:`x^l (l = 0, 1, ..., 2n)` in the
+     following products
+
+     (i) :math:`(1 + x + x^2 + ... + x^n) (1 + x + x^2 + ... + x^n)`
+     (ii) :math:`(1 + x + x^2 + ... + x^n) (1 - x + x^2 -x^3 + ... +
+          (-1)^nx^n)`
+     (iii) :math:`(1 + 2x + 3x^2 + ... + (n + 1)x^n) (1 + 2x + 3x^2 + ... + (n +
+           1)x^n)`
+     (iv) :math:`(1 + 2x + 3x^2 + ... + (n + 1)x^n) (1 - 2x + 3x^2 +
+          ... (-1)^n(n + 1)x^n)`
+
+289. If :math:`a_1, a_2, a_3` and :math:`a_4` are four successive coefficients
+     in the expansion of :math:`(1 + x)^n` in powers of :math:`x,` then
+
+     .. math::
+        \frac{a_1}{a_1 + a_2} + \frac{a_3}{a_3 + a_4} = \frac{2a_2}{a_2 + a_3}
+
+290. Prove the equality
+
+     .. math::
+        1^2 + 2^2 + ... + n^2 = C^{n + 1}_2 + 2(C^n_2 + C^{n - 1}_2 + C_2^2).
+
+291. Prove the equality
+
+     .. math::
+        \frac{1}{1(n - 1)!} + \frac{1}{3!(n - 3)!} + \frac{1}{5!(n - 5)!} +
+        ... + \frac{1}{(n - 1)!1!} = \frac{2^{n - 1}}{n!}
+
+     where :math:`n` is even.
+
+292. Find the magnitude of the sum
+
+     .. math::
+        S = C^n_1 - 3C^n_3 + 3^2C^n_5 - 3^3C^n_7 + ...
+
+293. Find the magnitude of the following sums
+
+     .. math::
+        S = 1 - C^n_2 + C^n_4 - C^n_6 + ...
+
+        S = C^n_1 - C^n_3 + C^n_5 -C^n_7 + ...
+
+294. Prove the identities:
+
+     (i) :math:`C^n_0 + 2C^n_1 + 3C^n_2 + ... + (n + 1)C^n_n = (n + 2)2^{n - 1}`
+     (ii) :math:`C^n_1 - 2C^n_1 + 3C^n_2 + ... + (-1)^{n - 1}(n)C^n_n = 0.`
+
+295. Prove that
+
+     .. math::
+        \frac{1}{2}C^n_1 - \frac{1}{3}C^n_2 + \frac{1}{4}C^n_3 + ... +
+        \frac{(-1)^{n - 1}}{n + 1}C^n_n = \frac{n}{n + 1}
+
+296. Prove that
+
+     .. math::
+        1 + \frac{1}{2}C^n_1 + \frac{1}{3}C^n_2 + ... + \frac{1}{n + 1}C^n_n =
+        \frac{2^{n + 1} - 1}{n + 1}
+
+297. Simplify the following expression
+
+     .. math::
+        \frac{1}{x + 1} + \frac{2}{x^2 + 1} + \frac{4}{x^4 + 1} + ... +
+        \frac{2^n}{x^{2n} + 1}.
