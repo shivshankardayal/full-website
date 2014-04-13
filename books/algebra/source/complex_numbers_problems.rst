@@ -1381,8 +1381,350 @@ Prove tha following identities:
         1 + \frac{1}{2}C^n_1 + \frac{1}{3}C^n_2 + ... + \frac{1}{n + 1}C^n_n =
         \frac{2^{n + 1} - 1}{n + 1}
 
-297. Simplify the following expression
+297. Prove that
 
      .. math::
-        \frac{1}{x + 1} + \frac{2}{x^2 + 1} + \frac{4}{x^4 + 1} + ... +
-        \frac{2^n}{x^{2n} + 1}.
+        2C^n_0 + \frac{2^2C^n_1}{2} + \frac{2^3C^n_2}{3} + \frac{2^4C^n_3}{4} +
+        ... + \frac{2^{n + 1}C^n_n}{n + 1} = \frac{3^{n + 1} - 1}{n + 1}
+
+298. Prove the identity
+
+     .. math::
+        C^n_1 - \frac{1}{2}C^n_2 + \frac{1}{3}C^n_3 + ... + \frac{(-1)^{n -
+        1}}{n}C^n_n = 1 + \frac{1}{2} + \frac{1}{3} + ... + \frac{1}{n}
+
+299. Prove that
+
+     .. math::
+        C^n_n + C^{n + 1}_n + C^{n + 2}_n + ... + C^{n + k}_n = C^{n + k +
+        1}_{n + 1}
+
+300. Prove that
+
+     .. math::
+        C^n_0 - C^n_1 + C^n_2 + ... + (-1)^hC^n_h = (-1)^hC^{n - 1}_h.
+
+301. Prove the following identity:
+
+     .. math::
+        C^n_0C^m_p + C^n_1C^m_{p - 1} + ... + C^n_pC^m_0 = C^{m + n}_p
+
+302. Prove that
+
+     .. math::
+        C^n_0C^n_r + C^n_1C^n_{r + 1} + ... + C^n_{n - r}C^n_n =
+        \frac{2n!}{(n - r)!(n + r)!}.
+
+303. Prove that
+
+     .. math::
+        (C^n_0)^2 + (C^n_1)^2 + (C^n_2)^2 + ... + (C^n_n)^2 = C^{2n}_n.
+
+304. Prove that
+
+     .. math::
+        (C^{2n}_0)^2 - (C^{2n}_1)^2 + (C^{2n}_2)^2 - ... +
+        (C^{2n}_{2n})^2 = (-1)^nC^{2n}_n.
+
+305. Prove that
+
+     .. math::
+        (C^{2n + 1}_0)^2 - (C^{2n + 1}_1)^2 + (C^{2n + 1}_2)^2 - ... -
+        (C^{2n + 1}_{2n + 1})^2 = 0.
+
+306. Prove that
+
+     .. math::
+        (C^n_1)^2 + 2(C^n_2)^2 + ... + n(C^n_n)^2 = \frac{(2n -
+        1)!}{(n - 1)!(n - 1)!}.
+
+307. Let :math:`f(x) = g(x)(x - a) + A` and :math:`f(x) = h(x)(x - b) + B`
+     where :math:`a \ne b.` If :math:`f(x) = k(x)(x - a)(x -b) + C` then find
+     :math:`C.`
+
+308. Let :math:`f(x) = g(x)(x - a) + A ,f(x) = h(x)(x - b) + B` and :math:`f(x)
+     = k(x) + C` and :math:`a \ne b \ne c.` If :math:`f(x) = l(x)(x - a)(x -
+     b)(x - c) + D` then find :math:`D.`
+
+309. Find the polynomials of :math:`x` of degress :math:`m - 1` which at
+     :math:`m` different values of :math:`x, x_1, x_2, ..., x_m,` attains
+     respectively the values of :math:`y_1, y_2, ..., y_m.`
+
+310. Let :math:`f(x)` be a polynomial leaving a remainder :math:`A_1` when
+     devided by :math:`x - a_1,` the remainder :math:`A_2` when divided by
+     :math:`x - a_2`, ..., and, finally, the remainder :math:`A_m` when divided
+     by :math:`x -a_m.` Find the remainder when the polynomial is divided by
+     :math:`(x - a_1)(x - a_2) ... (x - a_m).`
+
+311. Prove that if :math:`x_1, x_2, ..., x_m` are :math:`m` different arbitrary
+     quantities, :math:`f(x)` is a polynomial of degree less than :math:`m,`
+     then there exists the identity
+
+     .. math::
+        f(x) = f(x_1)\frac{(x - x_2)(x - x_3) ... (x - x_m)}{(x_1 - x_2)(x_1 -
+        x_3) ... (x_1 - x_m)} +
+
+        f(x_2)\frac{(x - x_1)(x - x_3) ... (x - x_m)}{(x_2 - x_1)(x_2 - x_3)
+        ... (x_2 - x_m)} + ... 
+
+        + f(x_1)\frac{(x - x_1)(x - x_2) ... (x - x_{m - 1})}{(x_m - x_1)(x_m - x_2)
+          ... (x_m - x_{m - 1})}.
+
+312. Prove that if :math:`f(x)` is a polynomial whose degree is less than, or
+     equal to, :math:`m - 2` and :math:`x_1, x_2, ..., x_m` are :math:`m`
+     arbitrary equal quantities, then there exists the identity
+
+     .. math::
+        \frac{f(x_1)}{(x_1 - x_2)(x_1 - x_3) ... (x_1 - x_m)} +
+
+        \frac{f(x_2)}{(x_2 - x_1)(x_2 - x_3) ... (x_2 - x_m)} + ... +
+
+        \frac{f(x_m)}{(x_m - x_1)(x_m - x_3) ... (x_m - x_{m - 1})} = 0.
+
+313. If
+
+     .. math::
+        s_n = \frac{x_1^n}{(x_1 - x_2)(x_1 - x_3) ... (x_1 - x_m)} +
+
+        + \frac{x_2^n}{(x_2 - x_1)(x_2 - x_3) ... (x_2 - x_m)} + ...
+
+        + \frac{x_m^n}{(x_m - x_1)(x_m - x_2) ... (x_m - x_{m-1})}.
+
+     where :math:`x_1, x_2, ..., x_m` are :math:`m` are arbitrary unequal
+     quantities. Show that :math:`s_n = 0` if :math:`0 \le n < m - 1,` and
+     :math:`s_{m - 1} = 1,` and compute :math:`s_n` if :math:`n \ge m.`
+
+314. Compute the following
+
+     .. math::
+        s_{-n} = \frac{x_1^{-n}}{(x_1 - x_2)(x_1 - x_3) ... (x_1 - x_m)} +
+
+        + \frac{x_2^{-n}}{(x_2 - x_1)(x_2 - x_3) ... (x_2 - x_m)} + ...
+
+        + \frac{x_m^{-n}}{(x_m - x_1)(x_m - x_2) ... (x_m - x_{m-1})}.
+     
+        n = (1, 2, 3, ...).
+
+315. Show that if :math:`f(x)` is a polynomial whose degree is less than
+     :math:`m,` then the fraction
+
+     .. math::
+        \frac{f(x)}{(x - x_1)(x - x_2) ... (x -x_m)},
+
+     where :math:`x_1, x_2, ..., x_m` are arbirary and not equal to each other,
+     can be represented as a sum of :math:`m` partial fractions
+
+     .. math::
+        \frac{A_1}{x - x_1} + \frac{A_2}{x - x_2} + ... + \frac{A_m}{x - x_m},
+
+     where :math:`A_1, A_2, ..., A_m` are independent of :math:`x.`
+
+316. Solve the system of equations
+
+     .. math::
+        \frac{x_1}{a_1 - b_1} + \frac{x_2}{a_1 - b_2} + ... + \frac{x_n}{a_1 -
+        b_n} = 1
+
+        \frac{x_1}{a_2 - b_1} + \frac{x_2}{a_2 - b_2} + ... + \frac{x_n}{a_2 -
+        b_n} = 1
+
+        ...
+
+        \frac{x_1}{a_n - b_1} + \frac{x_2}{a_n - b_2} + ... + \frac{x_n}{a_n -
+        b_n} = 1.
+
+317. Prove that
+
+     .. math::
+        \frac{n!}{(x + 1)(x + 2) ... (x + n)} = \frac{C^n_1}{x + 1} -
+        \frac{2C^n_2}{x + 2} + \frac{3C^n_3}{x + 3} - ... + (-1)^{n +
+        1}\frac{nC^n_n}{x + n}.
+
+     In particular,
+
+     .. math::
+        \frac{1}{n + 1} = \frac{C^n_1}{2} - \frac{2}{3}C^n_2 +
+        \frac{3}{4}C^n_3 - \frac{4}{5}C^n_4 + ...
+
+318. Prove that
+
+     .. math::
+        (-1)^n\frac{a_1a_2...a_n}{b_1b_2...b_n} + \frac{(a_1 - b_1)(a_2 - b_1)
+        ... (a_n - b_1)}{b_1(b_1 - b_2) ... (b_1 - b_n)} +
+
+        \frac{(a_1 - b_2)(a_2 - b_2) ... (a_n - b_2)}{b_2(b_2 - b_1) ... (b_2 -
+        b_n)} + ... +
+
+        \frac{(a_1 - b_n)(a_2 - b_n) ... (a_n - b_n)}{b_n(b_n - b_1) ... (b_n -
+        b_{n - 1})} = (-1)^n.
+
+319. Prove that
+
+     .. math::
+        \frac{(x + \beta) ... (x + n\beta)}{(x - \beta) ... (x - n\beta)} =
+
+        \sum_{r = 1}^{r = n}(-1)^{n - r}\frac{n(n + r)(n^2 - 1^2)(n^2 - 2^2)
+        ... [n^2 - (r - 1)^2]}{(r!)^2}*\frac{r\beta}{x - r\beta}.
+
+Given a series of numbers :math:`c_0, c_1, c_2, ..., c_k, c_{k + 1}, ...`. Let
+:math:`\triangle c_k = c_{k + 1} - c_k,` so that using the given series we can
+form a new one :math:`\triangle c_0, \triangle c_1, \triangle c_2, ...`.
+
+We then let :math:`\triangle^2 c_k = \triangle c_{k + 1} - \triangle c_k` so as
+to get one more series: :math:`\triangle^2 c_0, \triangle^2 c_1, \triangle^2
+c_2, ...` and so forth.
+
+320. Prove that
+
+     .. math::
+        c_{k + n} = c_k + \frac{n}{1}\triangle c_k + \frac{n(n -
+        1)}{1*2}\triangle^2 c_k + ... + \triangle^n c_k
+
+321. Prove that
+
+     .. math::
+        \triangle^n c_{k} = c_{k + n} - \frac{n}{1}c_{k + n - 1} + \frac{n(n -
+        1)}{1*2} c_{k + n -2} + ... + (-1)^nc_k.
+
+322. Show that if :math:`f(x)` is any polynomial of nth degree in
+     :math:`x,` then there exists the following identity
+
+     .. math::
+        f(x) = f(0) + \frac{x}{1}\triangle f(0) + \frac{x(x -
+        1)}{1*2}\triangle^2f(0) + ... + \frac{x(x - 1) ... (x - n +
+        1)}{n!}\triangle^nf(0)
+
+     where :math:`\triangle f(0), \triangle^2 f(0), ..., \triangle^n f(0)` are
+     obtained, proceeding from the basic series: :math:`f(0), f(1), f(2), ...`.
+
+323. Prove that
+
+     .. math::
+        x^n = A_0 + \frac{A_1}{1}(x - 1) + \frac{A_2}{2!}(x - 1)(x - 2) + ... +
+        \frac{A_n}{n}(x - 1)(x - 2) ... (x - n),
+
+     then :math:`A_s = (s + 1)^n - C^s_1s^n + C^s_2(s - 1)^n + ... +
+     (-1)^sC_s^s 1^n.`
+
+324. Prove that
+
+     .. math::
+        \frac{n!}{x(x + 1) ... (x + n)}\left\{\frac{1}{x} + \frac{1}{x + 1} +
+        ... + \frac{1}{x + n}\right\} =
+
+        \frac{1}{x^2} - \frac{C^n_1}{(x + 1)^2} + \frac{C^n_2}{(x + 2)^2} +
+        ... + (-1)^n\frac{1}{(x + n)^2}.
+
+325. Let :math:`\phi_k(x) = x(x - 1)(x - 2) ... (x -k +1).` Prove that
+
+     .. math::
+        \phi_n(x + y) = \phi_n(x) + c^n_1\phi_{n - 1}(x)\phi_1(y) +
+        c^n_2\phi_{n - 2}(x)\phi_2(y) + ... + C^n_{n - 1}\phi_1(x)\phi_{n -
+        1}(y) + \phi_n(y).
+
+326. Prove the following where :math:`p = x + y` and :math:`q = xy`
+
+     (i) .. math::
+           x^n + y^n = p^n - np^{n - 2}q + \frac{n(n - 3)}{1*2}p^{n - 4}q^2 -
+           ... + 
+
+           (-1)^r\frac{(n - r - 1)(n - r - 2) ... (n - 2r +1)}{r!}p^{n -
+           2r}q^r + ....
+
+     (ii) .. math::
+            \frac{x^{n + 1} - y^{n + 1}}{x - y} = p^n - C^{n - 1}_1p^{n - 2}q +
+            ...+
+
+            (-1)^rC^{n - r}_rp^{n - 2r}q^r + ...
+
+327. Let :math:`x + y = 1` then prove that
+
+     .. math::
+        x^m(1 + C^m_1y + C^{m + 1}_2y^2 + ... + C^{2m -2}_{m - 2}y^{m - 1}) +
+        ...
+
+        + y^m(1 + C^m_1x + C^{m + 1}_2x^2 + ... + C^{2m -2}_{m - 2}x^{m - 1}) =
+          1
+
+328. Prove that
+
+     .. math::
+        \frac{1}{(x - a)^m(x - b)^m} = \frac{1}{(a - b)^m}\left\{\frac{1}{(x -
+        a)^m} + \frac{C^m_1}{(x - a)^{m - 1}(b - a)} + ... + \frac{C^{2m -
+        2}_{m - 1}}{(x - a)(b - a)^{m - 1}}\right\}
+
+        + \frac{1}{(b - a)^m}\left\{\frac{1}{(x - b)^m} + \frac{C^m_1}{(x
+        -b)^{m - 1}(a - b)} + ... + \frac{C^{2m - 2}_{m - 1}}{(x - b)(a -
+        b)^{m - 1}}\right\}.
+
+329. Show that constants :math:`A_1, A_2, A-3` can always be chosen so that
+
+     .. math::
+        (x + y)^n = x^n + y^n + A_1xy(x^{n - 2} + y^{n - 2}) + A_2x^2y^2(x^{n
+        -4}y^{n - 4}) + ...
+
+330. Let :math:`m` and :math:`n` be positive integers (:math:`n \le m`). Let
+
+     .. math::
+        \frac{(1 - x^m)(1 - x^{m -1}) ... (1 - x^{m - n +1})}{(1 - x)(1 - x^2)
+        ... (1 - x^n)} = (m, n).
+
+     Prove that
+
+     (i) :math:`(m, n) = (m, m - n),`
+     (ii) :math:`(m , n + 1) = (m - 1, n + 1) + x^{m - n - 1}(m - 1, n),`
+     (iii) :math:`(m, n + 1) = (n, n) + x(n + 1, n) + x^2(n + 2, n) + ... +
+           x^{m - n - 1}(m - 1, n),`
+     (iv) :math:`(m, n)` is a polynomial in :math:`x`,
+     (v) :math:`1 - (m, 1) + (m, 2) - (m, 3) + ...` is equal to :math:`(1 -
+         x)(1 -x^2) ... (1 - x^{m - 1})` if :math:`m` is even and 0 if
+         :math:`m` is odd.
+
+331. Prove that
+
+     .. math::
+        (1 + xz)(1 + x^2z) ... (1 + x^nz) = 1 +
+
+        \sum_{k = 1}^{k = n}\frac{(1 - x^n)(1 - x^{n - 1}) ... (1 - x^{n - k
+        +1})}{(1 -x)(1 - x^2) ... (1 -x^k)}x^\frac{k(k + 1)}{2}z^k.
+
+332. Prove that
+
+     .. math::
+        (1 + xz)(1 + x^2z) ... (1 + x^{2n -1}z) = 1 +
+
+        \sum_{k = 1}^{k = n}\frac{(1 - x^{2n})(1 - x{2n - 2}) ... (1 - x^{2n -
+        2k + 2})}{(1 - x^2)(1 - x^4) ... (1 - x^2k)}x^{k^2}z^k.
+
+333. Let :math:`p_k = (1 - x)(1 - x^2) ... (1 - x^k).` Prove that
+
+     .. math::
+        \frac{1}{p_n} - \frac{x}{p_1p_{n - 1}} + \frac{x^3}{p_2p_{n - 2}} - ...
+        \pm \frac{x^{\frac{n(n + 1)}{2}}}{p_n} = 1.
+
+334. Determine the coefficients :math:`C_0, C_1, C-2, ..., C-n` in the
+     following identity
+
+     .. math::
+        (1 + xz)(1 + xz^{-1})(1 + x^3z)(1 + x^3z^{-1}) ... + (1 + x^{2n +
+        1}z)(1 + x^{2n + 1}z^{-1}) =
+
+        C_0 + C_1(z + z^{-1}) + C_2(z^2 + z^{-2}) + ... + C_n(z^n + z^{-n}).
+
+335. Let
+
+     .. math::
+        u_k = \frac{sin 2nx sin (2n - 1)x ... sin (2n - k + 1)x}{sin x sin 2x
+        ... sin kx}.
+
+     Prove that
+
+     .. math::
+        1 - u_1 + u_2 - u_3 + ... + u_{2n} = 2^n(1 - cos x)(1 - cos 3x)
+        ... [1 -  cos (2n - 1)x]
+
+     and also that
+
+     .. math::
+        1 - u_1^2 + u^2_2 - u^2_3 + ... + u_{2n}^2 = (-1)^n\frac{sin(2n + 2)x
+        sin(2n + 4)x ... sin4nx}{sin2x sin4x ... sin2nx}.

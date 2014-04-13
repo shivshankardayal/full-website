@@ -922,4 +922,55 @@ Complex Numbers Solutions
 
     Thus, :math:`z1` lies on a circle with center (-1, 0) and radius 10.
 
-    Problems from 92 to 106 are left as exercises to the reader.
+92. Given :math:`z - 25i \le 15.` It represents a circle having center at (0, 25)
+    and having a radius of 15. The pictorial representation is given below:
+
+    .. tikz:: 
+
+       \draw[->, => stealth] (-1, 0) -- (3, 0);
+       \draw[->, => stealth] (0, -1) -- (0, 4.5);
+       \draw (0, 2.5) circle(1.5);
+       \draw (0, 0) -- (3, 4);
+       \draw (0, 2.5) -- (1.2, 1.6);
+       \draw (3, 0) node[anchor=north] {$X$};
+       \draw (0, 4.5) node[anchor=east] {$Y$};
+       \draw (0, 2.5) node[anchor=east] {$C(0, 2.5)$};
+       \draw (3mm, 0) arc(0:atan(1.333):3mm);
+       \draw (3mm, 2mm) node[anchor=west] {$\theta$};
+       \draw (0, 0) node[anchor=north east] {$O$};
+       \draw (1.2, 1.6) node[anchor=north west] {$P$};
+       \draw (0, 2.2) arc(270:270+atan(1.333):3mm);
+       \draw (.1, 2.2) node[anchor=north west] {$\theta$};
+
+    Let :math:`OP` be tangent to the circle at point :math:`P.`
+
+    Let :math:`\angle POX=\theta` then :math:`\angle OCP=\theta.` Now
+    :math:`OC=25, CP=15 \therefore OP=20.` Now :math:`tan\theta = \frac{OP}{CP}
+    = \frac{20}{15} = \frac{4}{3}.`
+
+    :math:`\therefore` Least positive value of argz = :math:`\theta =
+    tan^{-1}\frac{4}{3}` 
+
+93. Given :math:`|z - z_1|^2 + |z - z_2|^2 = k`
+
+    .. math::
+       \Rightarrow |z|^2 + |z_1|^2 - 2R(z\overline{z_1}) + |z|^2 + |z_2|^2
+       -2R(z\overline{z_2}) = k
+
+       \Rightarrow 2|z|^2 - 2R[z(\overline{z_1} + \overline{z_2})] = k -
+       (|z_1|^2 + |z_2|^2)
+
+       \Rightarrow |z|^2 - 2R\left[z\left(\frac{\overline{z_1 +
+       z_2}}{2}\right)\right] + \frac{1}{4}|z_1 + z_2|^2 = \frac{k}{2} +
+       \frac{1}{4}[|z_1 + z_2|^2 - 2|z_1|^2 - 2|z_2|^2]
+
+       \Rightarrow \left[z - \frac{z_1 + z_2}{2}\right]^2 =
+       \frac{1}{2}\left[k - \frac{1}{2}\{|z_1|^2 + |z_2|^2
+       -2R(z_1\overline{z_2})\}\right]
+
+       \Rightarrow \left[z - \frac{z_1 + z_2}{2}\right]^2 =
+       \frac{1}{2}\left[k - \frac{1}{2}|z_1 - z_2|^2\right]
+
+    This equation represents a circle with center at :math:`\frac{z_1 +
+    z_2}{2}` and radius :math:`\frac{1}{2}\sqrt{2k - |z_1 - z_2|^2},` provided
+    :math:`k \ge \frac{|z_1 - z_2|^2}{2}.`
