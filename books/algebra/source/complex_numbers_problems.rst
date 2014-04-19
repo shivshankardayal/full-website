@@ -379,7 +379,7 @@ Find the square root of following complex numbers:
      circumcenter of the triangle :math:`ABC` lies on the origin. If the
      altitude of the triangle through the vertex :math:`A` meets the
      circle again at :math:`P,` prove that :math:`P` represents the complex
-     number :math:`\frac{z_2z_3}{}z_1.`
+     number :math:`\frac{z_2z_3}{z_1}.`
 
 101. Two different non-parallel lines cut the circle :math:`|z|= r` at points
      :math:`a, b, c, d` respectively. Prove that these two lines meet at point
@@ -420,110 +420,106 @@ Find the square root of following complex numbers:
      is at least one complex number :math:`z = x + iy` satisfying the condition
      :math:`|z+3| = t^2 - 2i + 6` and the inequality :math:`z - 3\sqrt{3}i < t^2.`
 
-107. Find the real value of the parameter :math:`t` for which there is at least
-     one complex number satisfying the equation :math:`|z + 3| = t^2 -2t + 6`
-     and the inequality :math:`|z - 3\sqrt{3}i| < t^2`.
-
-108. If :math:`a, b, c` and :math:`d` are real and :math:`ad > bc,` show that
+107. If :math:`a, b, c` and :math:`d` are real and :math:`ad > bc,` show that
      the imaginary parts of the complex number :math:`z` and :math:`\frac{az +
      b}{cz + d}` have the same sign.
 
-109. If :math:`z_1 = x_1 + iy_1, z_2 = x_2 + iy_2` and :math:`z_1 = \frac{i(z_2
+108. If :math:`z_1 = x_1 + iy_1, z_2 = x_2 + iy_2` and :math:`z_1 = \frac{i(z_2
      + 1)}{z_2 - 1}` prove that
 
      .. math::
         x_1^2 + y_1^2 - x_1 = \frac{x_2^2 + y_2^2 + 2x_2 - 2y_2 +1}{(x_2 - 1)^2
         + y_2^2}
 
-110. Simplify the following:
+109. Simplify the following:
 
      .. math::
-        \frac{(cos3\theta - isin\theta)^6(sin\theta -
+        \frac{(cos3\theta - isin3\theta)^6(sin\theta -
         icos\theta)^3}{(cos2\theta + isin2\theta)^5}
 
-111. Find all complex numbers such that :math:`z^2 + |z| = 0.`
+110. Find all complex numbers such that :math:`z^2 + |z| = 0.`
 
-112. Solve the equation :math:`z^2 + z|z| + |z|^2 = 0.`
+111. Solve the equation :math:`z^2 + z|z| + |z^2| = 0.`
 
-113. Solve the equation :math:`2z = |z| + 2i` in complex numbers.
+112. Solve the equation :math:`2z = |z| + 2i` in complex numbers.
 
-114. If :math:`a > 0` and :math:`z|z| + az + 1 = 0`, show that :math:`z` is a 
+113. If :math:`a > 0` and :math:`z|z| + az + 1 = 0`, show that :math:`z` is a 
      negative real number.
 
-115. For every real number :math:`a > 0` find all complex numbers :math:`z` 
+114. For every real number :math:`a > 0` find all complex numbers :math:`z` 
      satisfying the equation :math:`z|z| + az + i = 0`
 
-116. For every real number :math:`a > 0` determine the complex numbers
+115. For every real number :math:`a > 0` determine the complex numbers
      :math:`z` which will satisfy the equation :math:`|z|^2 -2iz + 2a(1 + i) = 0`
 
-117. For any two complex numbers :math:`z_1` and :math:`z_2` and any real 
+116. For any two complex numbers :math:`z_1` and :math:`z_2` and any real 
      numbers :math:`a` and :math:`b`, show that :math:`|az_1 -bz_2|^2 + |bz_1 
      - az_2|^2 = (a^2 + b^2)(|z_1|^2 + |z_2|^2)`
 
-118. If :math:`\alpha` and :math:`\beta` are any two complex numbers, show that
+117. If :math:`\alpha` and :math:`\beta` are any two complex numbers, show that
      :math:`|\alpha + \beta|^2 = |\alpha|^2 + |\beta|^2 +
      Re(\alpha\overline{\beta}) + Re(\overline{\alpha}\beta)`
 
-119. Find the integral solution of the following equations
+118. Find the integral solution of the following equations
      (i) :math:`(3 + 4i)^x = 5^\frac{x}{2}` (ii) :math:`(1 - i)^x = 2^x` (iii)
      :math:`(1 - i)^x = (1 + i)^x`
 
-120. Prove that :math:`|1 - \overline{z_1}z_2|^2 - |z_1 - z_2|^2 = (1 -
+119. Prove that :math:`|1 - \overline{z_1}z_2|^2 - |z_1 - z_2|^2 = (1 -
      |z_1|^2)(1 - |z_2|^2)`
 
-121. If :math:`a_i, b_i \in R, i = 1, 2, 3, ..., n` show that
+120. If :math:`a_i, b_i \in R, i = 1, 2, 3, ..., n` show that
 
      .. math::
         \left(\sum_{n=1}^na_i\right)^2 + \left(\sum_{n=1}^nb_i\right)^2 \le
         \left(\sum_{n=1}^n\sqrt{a_i^2 + b_i^2}\right)^2
 
-122. Let :math:`\left|\frac{\overline{z_1} - 2\overline{z_2}}{2 -
+121. Let :math:`\left|\frac{\overline{z_1} - 2\overline{z_2}}{2 -
      z_1\overline{z_2}}\right| = 1` and :math:`|z_2| \ne 1,` where :math:`z_1`
      and :math:`z_2` are complex numbers, show that :math:`|z_1| = 2.`
 
-123. If :math:`|z_1| < 1` and :math:`\left|\frac{z_1 - z_2}{1 -
+122. If :math:`|z_1| < 1` and :math:`\left|\frac{z_1 - z_2}{1 -
      \overline{z_1}z_2}\right| < 1,` then show that :math:`|z_2| < 1`
 
-124. If :math:`z_1` and :math:`z_2` are complex numbers and :math:`u =
+123. If :math:`z_1` and :math:`z_2` are complex numbers and :math:`u =
      \sqrt{z_1z_2},` prove that
 
      .. math::
         |z_1| + |z_2| = \left|\frac{z_1 + z_2}{2} + u\right| +
         \left|\frac{z_1 + z_2}{2} - u\right|
 
-125. If :math:`z_1` and :math:`z_2` are the roots of the equation :math:`\alpha
+124. If :math:`z_1` and :math:`z_2` are the roots of the equation :math:`\alpha
      z^2 + 2\beta z + \gamma = 0,` then prove that :math:`|\alpha||(|z_1| +
      |z_2|) = |\beta + \sqrt{\alpha \gamma}| + |\beta -  \sqrt{\alpha \gamma}|`
 
-126. If :math:`a, b, c` are complex numbers such that :math:`a + b + c = 0` and
+125. If :math:`a, b, c` are complex numbers such that :math:`a + b + c = 0` and
      :math:`|a| = |b| = |c| = 1,` find the value of :math:`\frac{1}{a} +
      \frac{1}{b} + \frac{1}{c}.`
 
-127. If :math:`|z + 4| \le 3,` find the least and greatest value of :math:`|z +
+126. If :math:`|z + 4| \le 3,` find the least and greatest value of :math:`|z +
      1|.`
 
-128. Show that for any two non-zero complex numbers :math:`z_1, z_2`
+127. Show that for any two non-zero complex numbers :math:`z_1, z_2`
 
      .. math::
         (|z_1| + |z_2|)\left(\frac{z_1}{|z_1|} + \frac{z_2}{|z_2|}\right) \le
         2|z_1 + z_2|
 
-129. Show that the necessary and sufficient condition for both the roots of the
+128. Show that the necessary and sufficient condition for both the roots of the
      equation :math:`z^2 + az + b = 0` to be of unit modulus are :math:`|a| \le
-     2, |b| = 1, argb = arga`
+     2, |b| = 1, argb = 2arga`
 
-130. If :math:`z` is a complex number, show that :math:`|z| \le |R(z)| + |I(z)|
+129. If :math:`z` is a complex number, show that :math:`|z| \le |R(z)| + |I(z)|
      \le \sqrt{2}|z|`.
 
-131. If :math:`\left|z - \frac{4}{z}\right| = 2` show that the greatest value
+130. If :math:`\left|z - \frac{4}{z}\right| = 2` show that the greatest value
      of :math:`|z|` is :math:`\sqrt{5} + 1.`
 
-132. If :math:`\alpha, \beta, \gamma, \delta` be the real roots of the equation
+131. If :math:`\alpha, \beta, \gamma, \delta` be the real roots of the equation
      :math:`ax^4 + bx^3 + cx^2 + dx + e = 0,` show that :math:`a^2(1 +
      \alpha^2)(1 + \beta)^2(1 + \gamma)^2(1 + \delta)^2 = (a - c + e)^2 +
      (b - d)^2.`
 
-133. If :math:`a_i \in R, i = 1, 2, ..., n` and :math:`\alpha_1, \alpha_2, ...,
+132. If :math:`a_i \in R, i = 1, 2, ..., n` and :math:`\alpha_1, \alpha_2, ...,
      \alpha_n` are the roots of the equation
 
      .. math::
@@ -535,36 +531,36 @@ Find the square root of following complex numbers:
         \prod_{i = 1}^n(1 + \alpha_i^2) = (1 - a_2 + a_4 - ...)^2 + (a_1 -
         a_3 + ...)^2
 
-134. If the complex numbers :math:`z_1, z_2, z_2` are the vertices of an
+133. If the complex numbers :math:`z_1, z_2, z_2` are the vertices of an
      equilateral trianle such that :math:`|z_1| = |z_2| = |z_3|,` prove that
      :math:`z_1 + z_2 + z_3 = 0.`
 
-135. If :math:`z_1 + z_2 + z_3 = 0` and :math:`|z_1| = |z_2| = |z_3| = 1,` then
+134. If :math:`z_1 + z_2 + z_3 = 0` and :math:`|z_1| = |z_2| = |z_3| = 1,` then
      prove that the points :math:`z_1, z_2, z_3` are the vertices of an
      equialteral triangle inscribed in an unit circle.
 
-136. If :math:`z_1, z_2, z_3` be the vertices of of an equilateral triangle in
+135. If :math:`z_1, z_2, z_3` be the vertices of of an equilateral triangle in
      the Argand plane whose circumcenter is :math:`z_0` then prove that
      :math:`z_1^2 + z_2^2 + z_3^2 = 3z_0^2.`
 
-137. Prove that the complex numbers :math:`z_1` and :math:`z_2` and the origin
+136. Prove that the complex numbers :math:`z_1` and :math:`z_2` and the origin
      form an equilateral triangle if :math:`z_1^2 + z_2^2 - z_1z_2 = 0.`
 
-138. If :math:`z_1` and :math:`z_2` be the roots of the equation :math:`z^2 +
+137. If :math:`z_1` and :math:`z_2` be the roots of the equation :math:`z^2 +
      az + b = 0,` then prove that the origin, :math:`z_1` and :math:`z_2` form
      an equilateral triangle if :math:`a^2 = 3b.`
 
-139. Let :math:`z_1, z_2` and :math:`z_3` be the roots of the equation
+138. Let :math:`z_1, z_2` and :math:`z_3` be the roots of the equation
      :math:`z^3 + 3\alpha z^2 + 3\beta z + \gamma = 0,` where :math:`\alpha,
      \beta` and :math:`\gamma` are complex numbers and that these represent the
      vertices of :math:`A, B` and :math:`C` of a triangle. Find the centroid of
      :math:`\triangle ABC.` Show that the triangle will be equilateral, if
      :math:`\alpha^2 = \beta.`
 
-140. If :math:`z_1, z_2` and :math:`z_3` are in A.P., then prove that they are
+139. If :math:`z_1, z_2` and :math:`z_3` are in A.P., then prove that they are
      collinear.
 
-141. If :math:`z_1, z_2` and :math:`z_3` are collinear points in Argand plane
+140. If :math:`z_1, z_2` and :math:`z_3` are collinear points in Argand plane
      then show that one of the following holds
 
      .. math::
@@ -574,176 +570,176 @@ Find the square root of following complex numbers:
 
         z_1|z_2 - z_3| + z_2|z_3 - z_1| - z_3|z_1 - z_2| = 0
 
-142. Find the locus of point :math:`z` if :math:`\frac{z - i}{z + i}` is purley
+141. Find the locus of point :math:`z` if :math:`\frac{z - i}{z + i}` is purley
      imaginary.
 
-143. What region in the Argand plane is represneted by the inequality :math:`1
+142. What region in the Argand plane is represneted by the inequality :math:`1
      < |z - 3 -4i| < 2.`
 
-144. Find the locus of point :math:`z` if :math:`|z - 1| + |z + 1| \le 4.`
+143. Find the locus of point :math:`z` if :math:`|z - 1| + |z + 1| \le 4.`
 
-145. If :math:`z = t + 5 + i\sqrt{4 -t^2}` and :math:`t` is real, find the
+144. If :math:`z = t + 5 + i\sqrt{4 -t^2}` and :math:`t` is real, find the
      locus of :math:`z.`
 
-146. If :math:`\frac{z^2}{z - 1}` is real show that locus of :math:`z` is a
+145. If :math:`\frac{z^2}{z - 1}` is real show that locus of :math:`z` is a
      circle with center :math:`(1, 0)` and radius unity and the :math:`x`-axis.
 
-147. If :math:`|z^2 - 1| = |z|^2 + 1,` show that locus of :math:`z` is a
+146. If :math:`|z^2 - 1| = |z|^2 + 1,` show that locus of :math:`z` is a
      straight line.
 
-148. Find the locus of point :math:`z` if :math:`\frac{\pi}{3} \le arg~z \le
+147. Find the locus of point :math:`z` if :math:`\frac{\pi}{3} \le arg~z \le
      \frac{3\pi}{2}.`
 
-149. Find the locus of the point :math:`z` if :math:`arg\left(\frac{z - 2}{z +
+148. Find the locus of the point :math:`z` if :math:`arg\left(\frac{z - 2}{z +
      2}\right) = \frac{\pi}{3}.`
 
-150. Show that the locus of the point :math:`z` satisfying the condition
+149. Show that the locus of the point :math:`z` satisfying the condition
      :math:`arg\left(\frac{z - 1}{z + 1}\right) = \frac{\pi}{2}` is the
      semicircle above :math:`x`-axis whose diemeter is the joins of the points
      :math:`(-1, 0)` and :math:`(1, 0)` excluding those points.
 
-151. Find the locus of the point :math:`z` if :math:`\log_{\sqrt{3}}\frac{|z|^2 -
+150. Find the locus of the point :math:`z` if :math:`\log_{\sqrt{3}}\frac{|z|^2 -
      |z| + 1}{2 + |z|} < 2.`
 
-152. If :math:`O` be the center of the circle circumscribing the equilateral
+151. If :math:`O` be the center of the circle circumscribing the equilateral
      :math:`\triangle ABC` and its radius be unity and :math:`A` lies of the
      :math:`x`-axis. Find the complex numbers represented by :math:`B` and
      :math:`C.`
 
-153. :math:`ABCD` is a rhombus. Its diagonals :math:`AC` and :math:`BD`
+152. :math:`ABCD` is a rhombus. Its diagonals :math:`AC` and :math:`BD`
      intersect at a point :math:`M` and satisfy :math:`BD = 2AC.` If the points
      :math:`D` and :math:`M` represent the complex numbers :math:`1 + i` and
      :math:`2 - i` respectively, then find the complex number represented by
      :math:`A`.`
 
-154. If :math:`z_1, z_2, z_3` and :math:`z_4` are the vertices of a square
+153. If :math:`z_1, z_2, z_3` and :math:`z_4` are the vertices of a square
      taken in anticlockwise order, prove that :math:`z_3 = -iz_1 + (1 + i)z_2`
      and :math:`z_4 = (1 - i)z_1 + iz_2.`
 
-155. Let :math:`z_1, z_2` and :math:`z_3` are the vertices of an equilateral
+154. Let :math:`z_1, z_2` and :math:`z_3` are the vertices of an equilateral
      triangle in the circle :math:`|z| = 2.` If :math:`z_1 = 1 + i\sqrt{3},`
      then find :math:`z_2` and :math:`z_3.`
 
-156. If :math:`a` and :math:`b` are real numbers between 0 and 1 such that the
+155. If :math:`a` and :math:`b` are real numbers between 0 and 1 such that the
      points :math:`z_1 = a + i, z_2 = 1 + bi,` and :math:`z_3 = 0` form an
      equilateral triangle then find :math:`a` and :math:`b.`
 
-157. Let :math:`ABCD` be a square described in the anticlockwise sense in the
+156. Let :math:`ABCD` be a square described in the anticlockwise sense in the
      Argand plane. If :math:`A` represents :math:`(3 + 5i)` and the center of
      the square represents :math:`\left(\frac{7}{2} + \frac{5}{2}i\right).` Find
      the numbers represented by :math:`B, C` and :math:`D`.
 
-158. Find the vertices of a regular polygon of :math:`n` sides, if its center
+157. Find the vertices of a regular polygon of :math:`n` sides, if its center
      is located at origin and one of its vertices is :math:`z_1.`
 
-159. Prove that the points :math:`a(cos\alpha + i sin\alpha), b(cos\beta + i
+158. Prove that the points :math:`a(cos\alpha + i sin\alpha), b(cos\beta + i
      sin\beta)` and :math:`c(cos\gamma + i sin\gamma)` in the Argand plane are
      collinear if :math:`bcsin(\beta - \gamma) + casin(\gamma - \alpha) +
      absin(\alpha -\beta).`
 
-160. :math:`A` represents the number :math:`6i, B` the number :math:`3` and
+159. :math:`A` represents the number :math:`6i, B` the number :math:`3` and
      :math:`P` the complex number :math:`z`. If :math:`P` moves such that
      :math:`PA : PB = 2 : 1,` show that :math:`z\overline{z} = (4 + 2i)z + (4 -
      2i)\overline{z}.` Also, show that the locus of P is a circle, find its
      radius and center.
 
-161. Show that if the points :math:`z_1, z_2, z_3` and :math:`z_4` taken in
+160. Show that if the points :math:`z_1, z_2, z_3` and :math:`z_4` taken in
      order are concyclic then the expression :math:`\frac{(z_3 - z_1)(z_4 -
      z_2)}{(z_3 - z_2)(z_4 -z_1)}` is purely real.
 
-162. Let :math:`z_1, z_2, z_3` and :math:`z_4` be the vertices of a
+161. Let :math:`z_1, z_2, z_3` and :math:`z_4` be the vertices of a
      quadrilateral. Prove that quadrilateral is cyclic if :math:`z_1z_2 +
      z_3z_4 = 0` and :math:`z_1 + z_2 = 0.`
 
-163. Show that the triangles whose vertices are :math:`z_1, z_2, z_3` and
+162. Show that the triangles whose vertices are :math:`z_1, z_2, z_3` and
      :math:`z_1', z_2', z_3'` are similar if
 
      .. math::
         \begin{vmatrix}z_1 & z_1' & 1\\z_2 & z_2' & 1\\z_3 & z_3' &
         1\end{vmatrix} = 0
 
-164. If :math:`a, b, c` and :math:`u, v, \omega` are the complex numbers
+163. If :math:`a, b, c` and :math:`u, v, \omega` are the complex numbers
      representing two triangles such that :math:`c = (1 - r)a + rb` and
      :math:`\omega = (i - r)u + rv,` where :math:`r` is a complex number, prove
      that the two trriangles are similar.
 
-165. Find the equation of perpendicular bisector of the line segment joining
+164. Find the equation of perpendicular bisector of the line segment joining
      points :math:`z_1` and :math:`z_2.`
 
-166. Find the equation of the circle having the line segment joining
+165. Find the equation of the circle having the line segment joining
      :math:`z_1` and :math:`z_2` as diameter.
 
-167. If :math:`\left|\frac{z - z_1}{z - z_2}\right| = c, c \ne~0,` then show
+166. If :math:`\left|\frac{z - z_1}{z - z_2}\right| = c, c \ne~0,` then show
      that the locus of :math:`z` is a circle.
 
-168. If :math:`|z| = 1,` find the locus of the point :math:`\frac{2}{z}.`
+167. If :math:`|z| = 1,` find the locus of the point :math:`\frac{2}{z}.`
 
-169. If for any two complex numbers :math:`z_1` and :math:`z_2, |z_1 + z_2| =
+168. If for any two complex numbers :math:`z_1` and :math:`z_2, |z_1 + z_2| =
      |z_1| + |z_2|` prove that :math:`arg z_1 - arg z_2 = 2n\pi.`
 
-170. Find the complex number :math:`z` the least in absolute value which
+169. Find the complex number :math:`z` the least in absolute value which
      satisfies the condition :math:`|z - 2 + 2i| = 1.`
 
-171. Find the point in the first quadrant, on the curve :math:`|z - 5i| = 3`
+170. Find the point in the first quadrant, on the curve :math:`|z - 5i| = 3`
      whose argument is minimum.
 
-172. Find the set of points of the co-ordinate plane which satisfy the
+171. Find the set of points of the co-ordinate plane which satisfy the
      inequality
 
      .. math::
         log_\frac{1}{3}\left(\frac{|z - 1| + 4}{3|z - 1| - 2}\right) > 1
 
-173. Find the set of all points on the :math:`xy`-plane whose co-ordinates
+172. Find the set of all points on the :math:`xy`-plane whose co-ordinates
      satisfy the following conditions: the number :math:`z^2 + z + 1` is real
      and positive.
 
-174. Find the real values of the parameter :math:`a` for which at least one
+173. Find the real values of the parameter :math:`a` for which at least one
      complex number :math:`z` satisfies the equality :math:`|z - az| = a + 4`
      and the inequality :math:`|z - 2| < 1.`
 
-175. Find the real values of parameter :math:`t` for which at least one complex
+174. Find the real values of parameter :math:`t` for which at least one complex
      number :math:`z` satisfies the equality :math:`|z + \sqrt{2}| = t^2 - 3t
      +2` and the inequality :math:`|z + t\sqrt{2}| < t^2.`
 
-176. Among the complex numbers which satisfy the condition :math:`|z - 15i| \le
+175. Among the complex numbers which satisfy the condition :math:`|z - 15i| \le
      15,` find the number having least positive argument.
 
-177. Find :math:`z` for which :math:`|z - 5i| \le 1` and :math:`arg z` is
+176. Find :math:`z` for which :math:`|z - 5i| \le 1` and :math:`arg z` is
      minimum.
 
-178. Find the real value of :math:`a` for which there is at least one complex
+177. Find the real value of :math:`a` for which there is at least one complex
      number satisfying :math:`|z + 4i| = \sqrt{a^2 - 12a + 28}` and :math:`|z -
      4\sqrt{3}| < a.`
 
-179. Find the set of points belonging to the co-ordinate plane :math:`xy,` for
+178. Find the set of points belonging to the co-ordinate plane :math:`xy,` for
      which the real part of complex number :math:`(1 + i)z^2` is positive.
 
-180. Solve the equation :math:`2z = |z| + 2i` in complex numbers.
+179. Solve the equation :math:`2z = |z| + 2i` in complex numbers.
 
-181. Show that all the roots of the equation :math:`a_1z^3 + a_2z^2 + a_3z +
+180. Show that all the roots of the equation :math:`a_1z^3 + a_2z^2 + a_3z +
      a_4 = 3,` where :math:`|a_i| \le 1, i= 1, 2, 3, 4` lie outside the circle
      with center as origin and radius :math:`\frac{2}{3}.`
 
-182. Given that :math:`\sum_{i = 1}^nb_i = 0` and :math:`\sum_{i = 1}^nb_iz_i =
+181. Given that :math:`\sum_{i = 1}^nb_i = 0` and :math:`\sum_{i = 1}^nb_iz_i =
      0` where :math:`b_i`'s are non-zero real numbers, no three of
      :math:`z_i`'s form a straight line. Prove that :math:`z_i`'s are concyclic
      if :math:`b_1b_2|z_2 - z_2|^2 = b_3b_4|z_3 - z_4|^2.`
 
-183. A cubic equation :math:`f(x) = 0` has one real root :math:`\alpha` and two
+182. A cubic equation :math:`f(x) = 0` has one real root :math:`\alpha` and two
      complex roots :math:`\beta + i\gamma.` Points :math:`A, B` and :math:`C`
      represent these roots respectively. Show that the roots of the derived
      equation :math:`f'(x) = 0` are complex if :math:`A` falls inside one of
      the two equilateral triangles described on base :math:`BC`.
 
-184. Prove that reflection of :math:`\overline{a}z + a\overline{z} = 0` in the
+183. Prove that reflection of :math:`\overline{a}z + a\overline{z} = 0` in the
      real axis is :math:`\overline{a}\overline{z} + az = 0.`
 
-185. If :math:`\alpha, \beta, \gamma, \delta` are four complex numbers such
+184. If :math:`\alpha, \beta, \gamma, \delta` are four complex numbers such
      that :math:`\frac{\gamma}{\delta}` is real and :math:`\alpha\delta -
      \beta\gamma \ne 0` then prove that :math:`z = \frac{\alpha + \beta
      t}{\gamma + \delta t}, t \in \mathbf{R}` represents a straight line.
 
-186. If :math:`\omega, \omega^2` are cube roots of unity, then prove that
+185. If :math:`\omega, \omega^2` are cube roots of unity, then prove that
 
      (i) :math:`(3 + 3\omega + 5\omega^2)^6 - (2 + 6\omega + 2\omega^2) = 0`
      (ii) :math:`(2 - \omega)(2 - \omega^2)(2 -\omega^{10})(2 - \omega^{11}) =
@@ -755,19 +751,19 @@ Find the square root of following complex numbers:
      (vi) :math:`1 + \omega^n + \omega^{2n} = 0` where :math:`n > 0, n \in
           \mathbf{I}` and is not a multiple of 3.
 
-187. Resolve into linear factors :math:`a^2 + b^2 + c^2 -ab -bc -ca`
+186. Resolve into linear factors :math:`a^2 + b^2 + c^2 -ab -bc -ca`
 
-188. Prove that
+187. Prove that
 
      .. math::
         \sqrt{-1 - \sqrt{-1 - \sqrt{-1 - ... to \infty}}} = \omega \text{ or }
         \omega^2
 
-189. If :math:`x = a + b, y = a\omega + b\omega^2, z = a\omega^2 + b\omega,`
+188. If :math:`x = a + b, y = a\omega + b\omega^2, z = a\omega^2 + b\omega,`
      prove that :math:`x^3 + y^3 + z^3 = 3(a^3 + b^3)` and :math:`xyz = a^3 +
      b^3.`
 
-190. Resolve into linear factors:
+189. Resolve into linear factors:
 
      (i) :math:`a^2 -ab + b^2`
      (ii) :math:`a^2 + ab + b^2`
@@ -775,43 +771,43 @@ Find the square root of following complex numbers:
      (iv) :math:`a^3 - b^3`
      (v) :math:`a^3 + b^3 +c^3 -3abc`
 
-191. Show that :math:`x^{3p} + x^{3q+1} + x^{3r+2},` where :math:`p, q, r` are
+190. Show that :math:`x^{3p} + x^{3q+1} + x^{3r+2},` where :math:`p, q, r` are
      positive integers is divisible by :math:`x^2 + x + 1.`
 
-192. Show that :math:`x^{3p} + x^{3q+1} + x^{3r+2} + x^{4s+3},` where :math:`p,
+191. Show that :math:`x^{3p} + x^{3q+1} + x^{3r+2} + x^{4s+3},` where :math:`p,
      q, r, s` are positive integers is divisible by :math:`x^3 + x^2 + x + 1.`
 
-193. If :math:`p = a + b + c, q = a + b\omega + c\omega^2, r = a + b\omega^2 +
+192. If :math:`p = a + b + c, q = a + b\omega + c\omega^2, r = a + b\omega^2 +
      c\omega,` where :math:`\omega` is a cube root of unity, prove that
      :math:`p^3 + q^3 + r^3 - 3pqr = 27abc.`
 
-194. If :math:`\omega` be an imaginary root of unity, prove that :math:`(a +
+193. If :math:`\omega` be an imaginary root of unity, prove that :math:`(a +
      b\omega + c\omega^2)^3 + (a + b\omega^2 + c\omega)^3 = (2a - b -c)(2b -a
      -c)(2c -a -b).`
 
-195. If :math:`ax + cy + bz = X, cx + by + az = Y, bx + ay + cz = Z` show that
+194. If :math:`ax + cy + bz = X, cx + by + az = Y, bx + ay + cz = Z` show that
 
      (i) :math:`(a^2 + b^2 + c^2 - ab - bc - ca)(x^2 + y^2 + z^2 - xy - yz -zx)
          = X^2 + Y^2 + Z^2 - XY -YZ -ZY`
      (ii) :math:`(a^3 + b^3 - c^3 - 3abc)(x^3 + y^3 + z^3 -3xyz) = X^3 + Y^3 +
           Z^3 - 3XYZ`
 
-196. Prove that
+195. Prove that
 
      .. math::
         \left(\frac{cos\theta + isin\theta}{sin\theta + icos\theta}\right)^4 =
         cos8\theta + isin8\theta
 
-197. If :math:`z^2 -2zcos\theta +1 =0,` show that :math:`z^2 + z^{-2} =
+196. If :math:`z^2 -2zcos\theta +1 =0,` show that :math:`z^2 + z^{-2} =
      2cos2\theta`
 
-198. If :math:`x_r = cos\frac{\pi}{2^r} + isin\frac{\pi}{2^r},` prove that
+197. If :math:`x_r = cos\frac{\pi}{2^r} + isin\frac{\pi}{2^r},` prove that
      :math:`x_1x_2x_3 ... to \infty = -1.`
 
-199. Prove that :math:`(1 + i)^n + (1 - i)^n = 2^{\frac{n}{2} +
+198. Prove that :math:`(1 + i)^n + (1 - i)^n = 2^{\frac{n}{2} +
      1}cos\frac{n\pi}{4}.`
 
-200. Show that the value of
+199. Show that the value of
 
      .. math::
         \sum_{k = 1}^6\left(sin\frac{2\pi k}{7} -icos\frac{2\pi
@@ -819,36 +815,36 @@ Find the square root of following complex numbers:
 
      is :math:`i.`
 
-201. Show that
+200. Show that
 
      .. math::
         e^{2mi cot^{-1}p}\left(\frac{pi + 1}{pi - 1}\right)^m = 1
 
-202. Prove that
+201. Prove that
 
      .. math::
         \left(\frac{1 + sin\phi + icos\phi}{1 + sin\phi -
         icos\phi}\right)^n = cos\left(\frac{n\pi}{2} + n\phi\right) +
         isin\left(\frac{n\pi}{2} - n\phi\right)
 
-203. If :math:`sin\alpha + sin\beta + sin\gamma = cos\alpha + cos\beta
+202. If :math:`sin\alpha + sin\beta + sin\gamma = cos\alpha + cos\beta
      + cos\gamma = 0,` show that :math:`cos3\alpha + cos3\beta +
      cos3\gamma = 3cos(\alpha + \beta + \gamma)` and
      :math:`sin3\alpha + sin3\beta + sin3\gamma = 3sin(\alpha +
      \beta + \gamma)`
 
-204. If :math:`sin\alpha + sin\beta + sin\gamma = cos\alpha + cos\beta
+203. If :math:`sin\alpha + sin\beta + sin\gamma = cos\alpha + cos\beta
      + cos\gamma = 0,` show that :math:`cos2\alpha + cos2\beta +
      cos2\gamma = sin2\alpha + sin2\beta + sin2\gamma = 0`
 
-205. If :math:`\alpha, \beta` are the roots of the equation :math:`t^2
+204. If :math:`\alpha, \beta` are the roots of the equation :math:`t^2
      - 2t + 2 = 0,` show that a value of :math:`x,` satisfying
 
      .. math::
         \frac{(x + \alpha)^n - (x + \beta)^b}{(\alpha - \beta)} =
         \frac{sin\theta}{sin^n\theta} \text{ is } x = cot\theta - 1
 
-206. If :math:`(1 + x)^n = p_0 + p_1x + p_2x^2 + ... + p_nx^n,` show
+205. If :math:`(1 + x)^n = p_0 + p_1x + p_2x^2 + ... + p_nx^n,` show
      that
 
      .. math::
@@ -857,21 +853,21 @@ Find the square root of following complex numbers:
 
         p_1 - p_3 + p_5 + ... = 2^{\frac{n}{2}}sin\frac{n\pi}{4}
 
-207. If :math:`(1 - x + x^2)^n = a_0 + a_1 + a_2x^2 + ... a_2nx^2n`
+206. If :math:`(1 - x + x^2)^n = a_0 + a_1 + a_2x^2 + ... a_2nx^2n`
      show that
 
      .. math::
         a_0 + a_3 + a_6 + ... = \frac{1}{3}\left(1 + 2^{n +
         1}cos\frac{n\pi}{3}\right)
 
-208. If :math:`n` is a positive integer and :math:`(1 + x)^n = c_0 +
+207. If :math:`n` is a positive integer and :math:`(1 + x)^n = c_0 +
      c_1x + c_2x^2 + ... + c_nx^n,` show that
 
      .. math::
         c_0 + c_4 + c_8 + ... = 2^{n - 2} + 2^{\frac{n}{2} -
         1}cos\frac{n\pi}{4}.
 
-209. Solve the equation :math:`z^8 + 1 = 0` and deduce that
+208. Solve the equation :math:`z^8 + 1 = 0` and deduce that
 
      .. math::
         cos4\theta = 8\left(cos\theta -
@@ -880,38 +876,38 @@ Find the square root of following complex numbers:
         cos\frac{5\pi}{8}\right)\left(cos\theta -
         cos\frac{7\pi}{8}\right)
 
-210. Prove that the roots of the equation :math:`8x^3 - 4x^2 - 4x + 1
+209. Prove that the roots of the equation :math:`8x^3 - 4x^2 - 4x + 1
      = 0` are :math:`cos\frac{\pi}{7}, cos\frac{3\pi}{7}, cos\frac{5\pi}{7}.`
 
-211. Solve the equation :math:`z^10 - 1 = 0` and deduce that
+210. Solve the equation :math:`z^10 - 1 = 0` and deduce that
 
      .. math::
         sin5\theta = 5sin\theta\left(1 -
         \frac{sin\theta}{sin^2\frac{\pi}{5}}\right)\left(1 -
         \frac{sin\theta}{sin^2\frac{2\pi}{5}}\right)
 
-212. Solve the equation :math:`x^7 + 1 = 0` and deduce that
+211. Solve the equation :math:`x^7 + 1 = 0` and deduce that
 
      .. math::
         cos\frac{\pi}{7}cos\frac{3\pi}{7}cos\frac{5\pi}{7} = -\frac{1}{8}
 
-213. Form the equation whose roots are :math:`cot^2\frac{\pi}{2n + 1},
+212. Form the equation whose roots are :math:`cot^2\frac{\pi}{2n + 1},
      cot^2\frac{2\pi}{2n + 1}, ..., cot^2\frac{n\pi}{2n + 1}` and hence find
      the value of :math:`cot^2\frac{\pi}{2n + 1} +
      cot^2\frac{2\pi}{2n + 1} + ... + cot^2\frac{n\pi}{2n + 1}`
 
-214. If :math:`\theta \ne k\pi,` show that :math:`cos\theta sin\theta +
+213. If :math:`\theta \ne k\pi,` show that :math:`cos\theta sin\theta +
      cos^2\theta sin2\theta + ... +cos^n\theta sinn\theta = cot\theta(1 -
      cos^n\theta cosn\theta)`
 
-215. Show that :math:`-3 -4i = 5e^{i\left(\pi + tan^{-1}\frac{4}{3}\right)}`
+214. Show that :math:`-3 -4i = 5e^{i\left(\pi + tan^{-1}\frac{4}{3}\right)}`
 
-216. Solve the equation :math:`2\sqrt{2}x^4 = (\sqrt{3} - 1) + i(\sqrt{3} + 1)`
+215. Solve the equation :math:`2\sqrt{2}x^4 = (\sqrt{3} - 1) + i(\sqrt{3} + 1)`
 
-217. Show that :math:`\left(\frac{1 + cos\phi + isin\phi}{1 + cos\phi
+216. Show that :math:`\left(\frac{1 + cos\phi + isin\phi}{1 + cos\phi
      -isin\phi}\right)^n = cosn\phi + isinn\phi`
 
-218. If :math:`2cos\theta = x + \frac{1}{x}` and :math:`2cos\phi = y +
+217. If :math:`2cos\theta = x + \frac{1}{x}` and :math:`2cos\phi = y +
      \frac{1}{y},` then prove that
 
      (i) :math:`\frac{x}{y} + \frac{y}{x} = 2cos(\theta - \phi)`
@@ -919,33 +915,33 @@ Find the square root of following complex numbers:
      (iii) :math:`x^my^n + \frac{1}{x^my^n} = 2cos(m\theta + n\phi)`
      (iv) :math:`\frac{x^m}{y^n} + \frac{y^n}{x^m} = 2cos(m\theta - n\phi)`
 
-219. If :math:`\alpha, \beta` are the roots of the equation :math:`x^2 -2x +4 =
+218. If :math:`\alpha, \beta` are the roots of the equation :math:`x^2 -2x +4 =
      0,` prove that :math:`\alpha^n + \beta^n = 2^{n + 1}cos\frac{n\pi}{3}`
 
-220. Find the equation whose roots are :math:`n`th powers of the roots of the
+219. Find the equation whose roots are :math:`n`th powers of the roots of the
      equation :math:`x^2 -2xcos\theta + 1 = 0`
 
-221. If :math:`\alpha, \beta` are imaginary cube roots of 1 then show that
+220. If :math:`\alpha, \beta` are imaginary cube roots of 1 then show that
 
      .. math::
         \alpha e^{\alpha x} + \beta e^{\beta x} =
         -e^\frac{x}{2}\left[cos\left(\frac{\sqrt{3}}{2}x\right) +
         \sqrt{3}\left(\frac{\sqrt{3}}{2}x\right)\right]
 
-222. Find the values of :math:`A` and :math:`B` where :math:`Ae^{2i\theta} +
+221. Find the values of :math:`A` and :math:`B` where :math:`Ae^{2i\theta} +
      Be^{-2i\theta} = 5cos2\theta - 7sin2\theta`
 
-223. If :math:`x = cos\theta + isin\theta` and :math:`\sqrt{1 - c^2} = nc - 1,`
+222. If :math:`x = cos\theta + isin\theta` and :math:`\sqrt{1 - c^2} = nc - 1,`
      prove that
 
      .. math::
         (1 + c cos\theta) = \frac{c}{2n}(1 + nx)\left(1 + \frac{n}{x}\right)
 
-224. Show that the roots of equation :math:`(1 + z)^n = (1 -z)^n` are
+223. Show that the roots of equation :math:`(1 + z)^n = (1 -z)^n` are
      :math:`itan\frac{r\pi}{n}, r = 0, 1, 2, ..., (n - 1)` excluding the value
      when :math:`n` is even and :math:`r = \frac{n}{2}.`
 
-225. If :math:`x = cos\alpha + isin\alpha, y = cos\beta + isin\beta,` show that
+224. If :math:`x = cos\alpha + isin\alpha, y = cos\beta + isin\beta,` show that
 
      .. math::
         \frac{(x + y)(xy - 1)}{(x - y)(xy + 1)} = \frac{sin\alpha +
@@ -962,35 +958,35 @@ formulas:
    {n \choose r} = {^nCr} = C_r^n = \frac{n!}{r!(n-r)!} = \frac{n(n - 1)
    ... (n - r + 1)}{1 * 2 * 3 * ... * r }
 
-226. Show that
+225. Show that
 
      .. math::
         ^nC_0 + {^nC_3} + {^nC_6} + ... = \frac{1}{3}\left[2^n +
         2cos\frac{n\pi}{3}\right]
 
-227. Show that
+226. Show that
 
      .. math::
         ^nC_1 + {^nC_4} + {^nC_7} + ... = \frac{1}{3}\left[2^{n - 2} + 2cos\frac{(n
         - 2)\pi}{3}\right]
 
-228. Show that
+227. Show that
 
      .. math::
         ^nC_2 + {^nC_5} + {^nC_8} + ... = \frac{1}{3}\left[2^{n + 2} + 2cos\frac{(n
         + 2)\pi}{3}\right]
 
-229. If :math:`(1 - x + x^2)^{6n} = a_0 + a_1x + a_2x^2 + ...,` show that
+228. If :math:`(1 - x + x^2)^{6n} = a_0 + a_1x + a_2x^2 + ...,` show that
 
      .. math::
         a_0 + a_3 + a_6 + ... = \frac{1}{3}(2^{6n + 1} + 1)
 
-230. If :math:`(1 - x + x^2)^{n} = a_0 + a_1x + a_2x^2 + ...,` show that
+229. If :math:`(1 - x + x^2)^{n} = a_0 + a_1x + a_2x^2 + ...,` show that
 
      .. math::
         a_0 + a_3 + a_6 + ... = \frac{1}{3}(1 + 2^{n + 1} cos\frac{n\pi}{3})
 
-231. Let
+230. Let
 
      .. math::
         A = x + y +z, A' = x' + y' + z', AA' = x'' + y'' + z'',
@@ -1004,11 +1000,11 @@ formulas:
      then find :math:`x'', y''` abd :math:`z''` in terms of :math:`x, y, z` and
      :math:`x', y', z'.`
 
-232. Prove the equality :math:`(ax - by -cz -dt)^2 + (bx + ay -dz + ct)^2 + (cx
+231. Prove the equality :math:`(ax - by -cz -dt)^2 + (bx + ay -dz + ct)^2 + (cx
      + dy + az -bt)^2 + (dx - cy + bz + at)^2 = (a^2 + b^2 + c^2 + d^2)(x^2 +
      y^2 + z^2 + t^2).`
 
-233. Prove the following equalities:
+232. Prove the following equalities:
 
      .. math::
         \frac{cosn\theta}{cos^n\theta} = 1 - {^nC_2}tan^2\theta +
@@ -1027,31 +1023,31 @@ formulas:
 
         A = (-1)^\frac{n}{2}~tan^n\theta \text{ if } n \text{ is odd.}
 
-234. Prove the following equality:
+233. Prove the following equality:
 
      .. math::
         2^{2m}cos^{2m}x = \sum_{k = 0}^{k = m - 1} 2 {2m \choose k} cos2(m -
         k)x + {2m \choose m}
 
-235. Prove the following equality:
+234. Prove the following equality:
 
      .. math::
         2^{2m}sin^{2m}x = \sum_{k = 0}^{k = m - 1} (-1)^{m + k} 2 {2m \choose
         k} cos2(m - k)x + {2m \choose m}
 
-236. Prove the following equality:
+235. Prove the following equality:
 
      .. math::
         2^{2m}cos^{2m + 1}x = \sum_{k = 0}^{k = m} 2 {{2m + 1} \choose k}
         cos(2m - 2k + 1)x
 
-237. Prove the following equality:
+236. Prove the following equality:
 
      .. math::
         2^{2m}sin^{2m + 1}x = \sum_{k = 0}^{k = m} (-1)^{m + k} 2 {{2m + 1}
         \choose k} cos(2m - 2k + 1)x
 
-238. Let
+237. Let
 
      .. math::
         u_n = cos\alpha + r cos(\alpha + \theta) + r^2 cos(\alpha +2\theta) +
@@ -1071,66 +1067,66 @@ formulas:
         1)\theta + \alpha] + r^{n + 2} sin(n\theta + \alpha)}{1 - 2rcos\theta +
         r^2}
 
-239. Simplify the following sum:
+238. Simplify the following sum:
 
      .. math::
         S = 1 + n cos \theta + \frac{n(n - 1)}{1*2} cos2\theta + ... = \sum_{k
         = 0}^{k = n}C^n_k cosk\theta
 
-240. Simplify the following sum:
+239. Simplify the following sum:
 
      .. math::
         S = 1 + n sin \theta + \frac{n(n - 1)}{1*2} sin2\theta + ... = \sum_{k
         = 0}^{k = n}C^n_k sink\theta
 
-241. If :math:`\alpha = \frac{\pi}{2n}` and :math:`o < 2n` then prove that
+240. If :math:`\alpha = \frac{\pi}{2n}` and :math:`o < 2n` then prove that
 
      .. math::
         sin^{2p} \alpha + sin^{2p} 2\alpha + ... + sin^{2p} n\alpha =
         \frac{1}{2} + n\frac{1 *3 * 5 * ... (2p - 1)}{2 * 4 * ... 2p}
 
-242. Prove that the polynomial :math:`x(x^{n - 1} -na^{n - 1}) + a^n(n - 1)` is
+241. Prove that the polynomial :math:`x(x^{n - 1} -na^{n - 1}) + a^n(n - 1)` is
      divisible by :math:`(x - a)^2.`
 
-243. Prove that the polynomial :math:`(1 - x^n)(1 + x) - 2nx^n(1 - x) -
+242. Prove that the polynomial :math:`(1 - x^n)(1 + x) - 2nx^n(1 - x) -
      n^2x^n(1 -x)^2` is divisible by :math:`(1 - x)^3.`
 
-244. Prove that :math:`(x + y)^n - x^n - y^n` is divisible by :math:`xy(x +
+243. Prove that :math:`(x + y)^n - x^n - y^n` is divisible by :math:`xy(x +
      y)(x^2 + xy + y^2)` if :math:`n` is an odd number and not divisible by 3.
 
-245. Prove that :math:`(x + y)^n - x^n - y^n` is divisible by :math:`xy(x +
+244. Prove that :math:`(x + y)^n - x^n - y^n` is divisible by :math:`xy(x +
      y)(x^2 + xy + y^2)^2` if :math:`n,` when divided by 6, yields unity as a
      remainder, i.e. :math:`n \equiv 1(mod 6).`
 
-246. Show that the expression :math:`(x + y + z)^m - x^m - y^m -z^m` is
+245. Show that the expression :math:`(x + y + z)^m - x^m - y^m -z^m` is
      divisible by :math:`(x + y + z)^3 - x^3 - y^3 - z^3` when :math:`m` is
      odd.
 
-247. Find the condition necessary and sufficient for :math:`x^3 + y^3 + z^3 +
+246. Find the condition necessary and sufficient for :math:`x^3 + y^3 + z^3 +
      kxyz` to be divisible by :math:`x + y + z.`
 
-248. Deduce the condition at which :math:`x^n - y^n` is divisible by :math:`x^p
+247. Deduce the condition at which :math:`x^n - y^n` is divisible by :math:`x^p
      - y^p` where :math:`n` and :math:`p` are positive integers.
 
-249. Find out whether the polynomial :math:`x^{4a} + x^{4b + 1} + x^{4c + 2} +
+248. Find out whether the polynomial :math:`x^{4a} + x^{4b + 1} + x^{4c + 2} +
      x^{4d + 3}` is divisible by :math:`x^3 + x^2 + x + 1` where :math:`a, b,
      c, d` are positive integers.
 
-250. Find out at what :math:`n` the polynomial :math:`1 + x^2 + x^4 + ... +
+249. Find out at what :math:`n` the polynomial :math:`1 + x^2 + x^4 + ... +
      x^{2n - 2}` si divisible by the polynomial :math:`1 + x + x^2 + ... + x^{n
      - 1}.`
 
-251. Prove that the polynomial :math:`(cos\theta + x sin\theta)^n -
+250. Prove that the polynomial :math:`(cos\theta + x sin\theta)^n -
      cosn\theta - x sin\theta` is divisible by :math:`x^2 + 1.`
 
-252. Prove that the polynomial :math:`x^n sin\theta - k^{n - 1}x sin
+251. Prove that the polynomial :math:`x^n sin\theta - k^{n - 1}x sin
      n\theta + k^n sin(n - 1)\theta` is divisible by :math:`x^2 - 2kx
      cos\theta + k^2.`
 
-253. Find the sum of the :math:`p`the powers of the roots of the equation
+252. Find the sum of the :math:`p`the powers of the roots of the equation
      :math:`x^n - 1 = 0` where :math:`p` is a positive integer.
 
-254. Let :math:`\alpha = cos\frac{2\pi}{n} + isin\frac{2\pi}{n}` where
+253. Let :math:`\alpha = cos\frac{2\pi}{n} + isin\frac{2\pi}{n}` where
      :math:`n` is a positive integer and let
 
      .. math::
@@ -1148,47 +1144,47 @@ formulas:
 
 Prove tha following identities:
 
-255. .. math::
+254. .. math::
        x^{2n - 1} - 1= (x^2 - 1)\sum_{k = 1}^{k = n - 1}\left(x^2
        - 2xcos\frac{k\pi}{n} + 1\right)
 
-256. .. math::
+255. .. math::
        x^{2n + 1} - 1 = (x - 1)\sum_{k = 1}^{k = n}\left(x^2
        - 2xcos\frac{2k\pi}{2n + 1} + 1\right)
 
-257. .. math::
+256. .. math::
        x^{2n + 1} - 1= (x + 1)\sum_{k = 1}^{k = n}\left(x^2
        + 2xcos\frac{2k\pi}{2n + 1} + 1\right)
 
-258. .. math::
+257. .. math::
        x^{2n} + 1= (x + 1)\sum_{k = 0}^{k = n - 1}\left(x^2
        - 2xcos\frac{(2k + 1)\pi}{2n} + 1\right)
 
-259. .. math::
+258. .. math::
        sin \frac{\pi}{2n} sin \frac{2\pi}{2n} ... sin \frac{(n - 1)\pi}{2n} =
        \frac{\sqrt{n}}{2^{n - 1}}
 
      if :math:`n` is even.
 
-260. .. math::
+259. .. math::
        cos \frac{2\pi}{2n + 1} cos \frac{4\pi}{2n + 1} .. cos \frac{2n\pi}{2n +
        1} = \frac{(-1)^\frac{n}{2}}{2^n}
 
      if :math:`n` is even.
 
-261. Let the equation :math:`x^n = 1` have the roots :math:`1, \alpha \beta,
+260. Let the equation :math:`x^n = 1` have the roots :math:`1, \alpha \beta,
      \gamma, ..., \lambda.` Show that
 
      .. math::
         (1 - \alpha)(1 - \beta)(1 - \gamma) ... (1 - \lambda) = n
 
-262. Let :math:`x_1, x_2, ..., x_n` be the roots of the equation :math:`x^n +
+261. Let :math:`x_1, x_2, ..., x_n` be the roots of the equation :math:`x^n +
      x^{n - 1} + ... + x + 1 = 0` the compute the expression
 
      .. math::
         \frac{1}{x_1 - 1} + \frac{1}{x_2 - 1} + ... + \frac{1}{x_n - 1}.
 
-263. Without solving the equations
+262. Without solving the equations
 
      .. math::
         \frac{x^2}{\mu^2} + \frac{y^2}{\mu^2 - b^2} + \frac{z^2}{\mu^2 - c^2} =
@@ -1202,27 +1198,27 @@ Prove tha following identities:
         
      find :math:`x^2 + y^2 + z^2.`
 
-264. Prove that if :math:`cos\alpha + i sin\alpha` is the solution of the
+263. Prove that if :math:`cos\alpha + i sin\alpha` is the solution of the
      equation :math:`x^n + p_1x^{n - 1} + ... + p_n = 0` then :math:`p_1
      sin\alpha + p_2 sin2\alpha + ... + p_n sinn\alpha = 0` where :math:`p_1,
      p_2, ..., p_n` are real.
 
-265. Show that if the equations :math:`x^3 + px + q = 0` and :math:`x^3 + p'x +
+264. Show that if the equations :math:`x^3 + px + q = 0` and :math:`x^3 + p'x +
      q' = 0` have a common root, then :math:`(pq' - qp')(p - p') = (q - q')^3.`
 
-266. Prove that
+265. Prove that
 
      .. math::
         \sqrt[3]{cos \frac{2\pi}{7}} + \sqrt[3]{cos \frac{4\pi}{7}} +
         \sqrt[3]{cos \frac{8\pi}{7}} = \sqrt[3]{\frac{1}{2}(5 - 3\sqrt[3]{7})}
 
-267. Prove that
+266. Prove that
 
      .. math::
         \sqrt[3]{cos \frac{2\pi}{9}} + \sqrt[3]{cos \frac{4\pi}{9}} +
         \sqrt[3]{cos \frac{8\pi}{9}} = \sqrt[3]{\frac{1}{2}(3\sqrt[3]{9} - 6)}
 
-268. If :math:`a + b + c = 0` and let :math:`a^k + b^k + c^k = s_k` then prove
+267. If :math:`a + b + c = 0` and let :math:`a^k + b^k + c^k = s_k` then prove
      the following relations:
 
      (i) :math:`2s_4 = s_2^2`
@@ -1233,36 +1229,36 @@ Prove tha following identities:
      (vi) :math:`50s_7^2 = 49s_4s_5^2`
      (vii) :math:`s_{n+3} = abcs_n + \frac{1}{2}s_2s_{n+1}`
 
-269. Given :math:`x + y = u + v, x^2 + y^2 = u^2 + v^2` prove that :math:`x^n +
+268. Given :math:`x + y = u + v, x^2 + y^2 = u^2 + v^2` prove that :math:`x^n +
      y^n = u^n + v^n` for any :math:`n.`
 
-270. Given :math:`x + y + z = u + v + t, x^2 + y^2 + z^2 = u^2 + v^2 + t^2, x^3
+269. Given :math:`x + y + z = u + v + t, x^2 + y^2 + z^2 = u^2 + v^2 + t^2, x^3
      + y^3 + z^3 = u^3 + v^3 + t^3` prove that :math:`x^n + y^n + z^n = u^n +
      v^n + t^n` for any :math:`n.`
 
-271. Let :math:`A = x_1 + x_2\omega + x_3\omega^2, B = x_1 + x_2\omega^2 +
+270. Let :math:`A = x_1 + x_2\omega + x_3\omega^2, B = x_1 + x_2\omega^2 +
      x_3\omega,` where :math:`\omega` is cube root of unity and :math:`x_1,
      x_2, x_3` are the roots of the equation :math:`x^3 + px + q = 0.` Prove
      that :math:`A^3` and :math:`B^3` are the roots of the quadratic equation
      :math:`z^3 + 27qz - 27p^3 = 0.`
 
-272. Solve the equation :math:`(x + a)(x + b)(x + c)(x + d) = m` if :math:`a =
+271. Solve the equation :math:`(x + a)(x + b)(x + c)(x + d) = m` if :math:`a =
      b = c + d.`
 
-273. Solve the equation :math:`(x + a)^4 + (x + b)^4 = c.`
+272. Solve the equation :math:`(x + a)^4 + (x + b)^4 = c.`
 
-274. Solve the equation :math:`(x + b + c)(x + a + c)(x + a + b)(a + b + c) -
+273. Solve the equation :math:`(x + b + c)(x + a + c)(x + a + b)(a + b + c) -
      abcx = 0.`
 
-275. Solve the equation :math:`x^3 + 3ax^2 + 3(a^2 - bc)x + a^3 + b^3 +
+274. Solve the equation :math:`x^3 + 3ax^2 + 3(a^2 - bc)x + a^3 + b^3 +
      c^3 -3abc = 0.`
 
-276. Solve the equation :math:`ax^4 + bx^3 + cx^2 + dx + e = 0` if :math:`a + b
+275. Solve the equation :math:`ax^4 + bx^3 + cx^2 + dx + e = 0` if :math:`a + b
      = b + c + d = d + e.`
 
-277. Solve the equation :math:`(a + b + x)^3 - 4(a^3 + b^3 + x^3) - 12abx = 0.`
+276. Solve the equation :math:`(a + b + x)^3 - 4(a^3 + b^3 + x^3) - 12abx = 0.`
 
-278. Solve the equation
+277. Solve the equation
 
      .. math::
 
@@ -1273,13 +1269,13 @@ Prove tha following identities:
      Deduce the condition under which all the roots are real, and determine the
      number of positive and negative roots.
 
-279. Solve the equation
+278. Solve the equation
 
      .. math::
         \frac{(5x^4 + 10x^2 + 1)(5a^4 + 10a^2 + 1)}{(x^4 + 10x^2 + 1)(a^4 +
         10a^2 + 5)} = ax.
 
-280. Solve the equation
+279. Solve the equation
 
      .. math::
         1 + \frac{a_1}{x - a_1} + \frac{a_2x}{(x - a_1)(x - a_2)} +
@@ -1289,10 +1285,10 @@ Prove tha following identities:
         1}}{(x - a_1)(x - a_2) ... (x - a_{2m})} = \frac{2px^m - p^2}{(x -
         a_1)(x - a_2) ... (x - a_{2m})}.
 
-281. Solve the equation :math:`x^3 + px^2 + qa + r = 0` if :math:`x_1^2 =
+280. Solve the equation :math:`x^3 + px^2 + qa + r = 0` if :math:`x_1^2 =
      x_2x_3.` Solve it again if :math:`x_1 = x_2 + x_3.`
 
-282. Solve the system
+281. Solve the system
 
      .. math::
         y^3 + z^3 + a^3 = 3ayz
@@ -1301,28 +1297,28 @@ Prove tha following identities:
 
         x^3 + y^3 + c^3 = 3cxy
 
-      if :math:`a + b + c + d = 0.`
+        if a + b + c + d = 0.
 
-283. Solve the equations :math:`x^4 - a = y^4 - b = z^4 -c = u^4 - d = xyzu` if
+282. Solve the equations :math:`x^4 - a = y^4 - b = z^4 -c = u^4 - d = xyzu` if
      :math:`a + b + c + d = 0.`
 
-284. Prove that for :math:`x > 1, px^q - qx^p - p + q > 0` where :math:`p, q`
+283. Prove that for :math:`x > 1, px^q - qx^p - p + q > 0` where :math:`p, q`
      are positive integers and :math:`q > p.`
 
-285. Prove that :math:`x^m - x(x - 1)^m + {x \choose 2}(x - 2)^m + ... +
+284. Prove that :math:`x^m - x(x - 1)^m + {x \choose 2}(x - 2)^m + ... +
      (-1)^{x - 1}x * 1^m = 0` if :math:`x > m` and :math:`x, m` are positive
      integers.
 
-286. Prove that :math:`m^m - m(m - 1)^m + {m \choose 2}(m - 2)^m + ... +
+285. Prove that :math:`m^m - m(m - 1)^m + {m \choose 2}(m - 2)^m + ... +
      (-1)^{m - 1}m = m!` where :math:`m` is a positive integer.
 
-287. Prove the equality
+286. Prove the equality
 
      .. math::
        (x^2 + a^2)^n = {x^n - C^n_2x^{n - 2}a^2 + C^n_4x^{n - 4}a^4 - ...}^2 +
        {C^n_1x^{n - 1}a - C^n_3x^{n - 3}a + ...}^2
 
-288. Deternmine the coefficients of :math:`x^l (l = 0, 1, ..., 2n)` in the
+287. Deternmine the coefficients of :math:`x^l (l = 0, 1, ..., 2n)` in the
      following products
 
      (i) :math:`(1 + x + x^2 + ... + x^n) (1 + x + x^2 + ... + x^n)`
@@ -1333,18 +1329,18 @@ Prove tha following identities:
      (iv) :math:`(1 + 2x + 3x^2 + ... + (n + 1)x^n) (1 - 2x + 3x^2 +
           ... (-1)^n(n + 1)x^n)`
 
-289. If :math:`a_1, a_2, a_3` and :math:`a_4` are four successive coefficients
+288. If :math:`a_1, a_2, a_3` and :math:`a_4` are four successive coefficients
      in the expansion of :math:`(1 + x)^n` in powers of :math:`x,` then
 
      .. math::
         \frac{a_1}{a_1 + a_2} + \frac{a_3}{a_3 + a_4} = \frac{2a_2}{a_2 + a_3}
 
-290. Prove the equality
+289. Prove the equality
 
      .. math::
         1^2 + 2^2 + ... + n^2 = C^{n + 1}_2 + 2(C^n_2 + C^{n - 1}_2 + C_2^2).
 
-291. Prove the equality
+290. Prove the equality
 
      .. math::
         \frac{1}{1(n - 1)!} + \frac{1}{3!(n - 3)!} + \frac{1}{5!(n - 5)!} +
@@ -1352,111 +1348,111 @@ Prove tha following identities:
 
      where :math:`n` is even.
 
-292. Find the magnitude of the sum
+291. Find the magnitude of the sum
 
      .. math::
         S = C^n_1 - 3C^n_3 + 3^2C^n_5 - 3^3C^n_7 + ...
 
-293. Find the magnitude of the following sums
+292. Find the magnitude of the following sums
 
      .. math::
         S = 1 - C^n_2 + C^n_4 - C^n_6 + ...
 
         S = C^n_1 - C^n_3 + C^n_5 -C^n_7 + ...
 
-294. Prove the identities:
+293. Prove the identities:
 
      (i) :math:`C^n_0 + 2C^n_1 + 3C^n_2 + ... + (n + 1)C^n_n = (n + 2)2^{n - 1}`
      (ii) :math:`C^n_1 - 2C^n_1 + 3C^n_2 + ... + (-1)^{n - 1}(n)C^n_n = 0.`
 
-295. Prove that
+294. Prove that
 
      .. math::
         \frac{1}{2}C^n_1 - \frac{1}{3}C^n_2 + \frac{1}{4}C^n_3 + ... +
         \frac{(-1)^{n - 1}}{n + 1}C^n_n = \frac{n}{n + 1}
 
-296. Prove that
+295. Prove that
 
      .. math::
         1 + \frac{1}{2}C^n_1 + \frac{1}{3}C^n_2 + ... + \frac{1}{n + 1}C^n_n =
         \frac{2^{n + 1} - 1}{n + 1}
 
-297. Prove that
+296. Prove that
 
      .. math::
         2C^n_0 + \frac{2^2C^n_1}{2} + \frac{2^3C^n_2}{3} + \frac{2^4C^n_3}{4} +
         ... + \frac{2^{n + 1}C^n_n}{n + 1} = \frac{3^{n + 1} - 1}{n + 1}
 
-298. Prove the identity
+297. Prove the identity
 
      .. math::
         C^n_1 - \frac{1}{2}C^n_2 + \frac{1}{3}C^n_3 + ... + \frac{(-1)^{n -
         1}}{n}C^n_n = 1 + \frac{1}{2} + \frac{1}{3} + ... + \frac{1}{n}
 
-299. Prove that
+298. Prove that
 
      .. math::
         C^n_n + C^{n + 1}_n + C^{n + 2}_n + ... + C^{n + k}_n = C^{n + k +
         1}_{n + 1}
 
-300. Prove that
+299. Prove that
 
      .. math::
         C^n_0 - C^n_1 + C^n_2 + ... + (-1)^hC^n_h = (-1)^hC^{n - 1}_h.
 
-301. Prove the following identity:
+300. Prove the following identity:
 
      .. math::
         C^n_0C^m_p + C^n_1C^m_{p - 1} + ... + C^n_pC^m_0 = C^{m + n}_p
 
-302. Prove that
+301. Prove that
 
      .. math::
         C^n_0C^n_r + C^n_1C^n_{r + 1} + ... + C^n_{n - r}C^n_n =
         \frac{2n!}{(n - r)!(n + r)!}.
 
-303. Prove that
+302. Prove that
 
      .. math::
         (C^n_0)^2 + (C^n_1)^2 + (C^n_2)^2 + ... + (C^n_n)^2 = C^{2n}_n.
 
-304. Prove that
+303. Prove that
 
      .. math::
         (C^{2n}_0)^2 - (C^{2n}_1)^2 + (C^{2n}_2)^2 - ... +
         (C^{2n}_{2n})^2 = (-1)^nC^{2n}_n.
 
-305. Prove that
+304. Prove that
 
      .. math::
         (C^{2n + 1}_0)^2 - (C^{2n + 1}_1)^2 + (C^{2n + 1}_2)^2 - ... -
         (C^{2n + 1}_{2n + 1})^2 = 0.
 
-306. Prove that
+305. Prove that
 
      .. math::
         (C^n_1)^2 + 2(C^n_2)^2 + ... + n(C^n_n)^2 = \frac{(2n -
         1)!}{(n - 1)!(n - 1)!}.
 
-307. Let :math:`f(x) = g(x)(x - a) + A` and :math:`f(x) = h(x)(x - b) + B`
+306. Let :math:`f(x) = g(x)(x - a) + A` and :math:`f(x) = h(x)(x - b) + B`
      where :math:`a \ne b.` If :math:`f(x) = k(x)(x - a)(x -b) + C` then find
      :math:`C.`
 
-308. Let :math:`f(x) = g(x)(x - a) + A ,f(x) = h(x)(x - b) + B` and :math:`f(x)
+307. Let :math:`f(x) = g(x)(x - a) + A ,f(x) = h(x)(x - b) + B` and :math:`f(x)
      = k(x) + C` and :math:`a \ne b \ne c.` If :math:`f(x) = l(x)(x - a)(x -
      b)(x - c) + D` then find :math:`D.`
 
-309. Find the polynomials of :math:`x` of degress :math:`m - 1` which at
+308. Find the polynomials of :math:`x` of degress :math:`m - 1` which at
      :math:`m` different values of :math:`x, x_1, x_2, ..., x_m,` attains
      respectively the values of :math:`y_1, y_2, ..., y_m.`
 
-310. Let :math:`f(x)` be a polynomial leaving a remainder :math:`A_1` when
+309. Let :math:`f(x)` be a polynomial leaving a remainder :math:`A_1` when
      devided by :math:`x - a_1,` the remainder :math:`A_2` when divided by
      :math:`x - a_2`, ..., and, finally, the remainder :math:`A_m` when divided
      by :math:`x -a_m.` Find the remainder when the polynomial is divided by
      :math:`(x - a_1)(x - a_2) ... (x - a_m).`
 
-311. Prove that if :math:`x_1, x_2, ..., x_m` are :math:`m` different arbitrary
+310. Prove that if :math:`x_1, x_2, ..., x_m` are :math:`m` different arbitrary
      quantities, :math:`f(x)` is a polynomial of degree less than :math:`m,`
      then there exists the identity
 
@@ -1470,7 +1466,7 @@ Prove tha following identities:
         + f(x_1)\frac{(x - x_1)(x - x_2) ... (x - x_{m - 1})}{(x_m - x_1)(x_m - x_2)
           ... (x_m - x_{m - 1})}.
 
-312. Prove that if :math:`f(x)` is a polynomial whose degree is less than, or
+311. Prove that if :math:`f(x)` is a polynomial whose degree is less than, or
      equal to, :math:`m - 2` and :math:`x_1, x_2, ..., x_m` are :math:`m`
      arbitrary equal quantities, then there exists the identity
 
@@ -1481,7 +1477,7 @@ Prove tha following identities:
 
         \frac{f(x_m)}{(x_m - x_1)(x_m - x_3) ... (x_m - x_{m - 1})} = 0.
 
-313. If
+312. If
 
      .. math::
         s_n = \frac{x_1^n}{(x_1 - x_2)(x_1 - x_3) ... (x_1 - x_m)} +
@@ -1494,7 +1490,7 @@ Prove tha following identities:
      quantities. Show that :math:`s_n = 0` if :math:`0 \le n < m - 1,` and
      :math:`s_{m - 1} = 1,` and compute :math:`s_n` if :math:`n \ge m.`
 
-314. Compute the following
+313. Compute the following
 
      .. math::
         s_{-n} = \frac{x_1^{-n}}{(x_1 - x_2)(x_1 - x_3) ... (x_1 - x_m)} +
@@ -1505,7 +1501,7 @@ Prove tha following identities:
      
         n = (1, 2, 3, ...).
 
-315. Show that if :math:`f(x)` is a polynomial whose degree is less than
+314. Show that if :math:`f(x)` is a polynomial whose degree is less than
      :math:`m,` then the fraction
 
      .. math::
@@ -1519,7 +1515,7 @@ Prove tha following identities:
 
      where :math:`A_1, A_2, ..., A_m` are independent of :math:`x.`
 
-316. Solve the system of equations
+315. Solve the system of equations
 
      .. math::
         \frac{x_1}{a_1 - b_1} + \frac{x_2}{a_1 - b_2} + ... + \frac{x_n}{a_1 -
@@ -1533,7 +1529,7 @@ Prove tha following identities:
         \frac{x_1}{a_n - b_1} + \frac{x_2}{a_n - b_2} + ... + \frac{x_n}{a_n -
         b_n} = 1.
 
-317. Prove that
+316. Prove that
 
      .. math::
         \frac{n!}{(x + 1)(x + 2) ... (x + n)} = \frac{C^n_1}{x + 1} -
@@ -1546,7 +1542,7 @@ Prove tha following identities:
         \frac{1}{n + 1} = \frac{C^n_1}{2} - \frac{2}{3}C^n_2 +
         \frac{3}{4}C^n_3 - \frac{4}{5}C^n_4 + ...
 
-318. Prove that
+317. Prove that
 
      .. math::
         (-1)^n\frac{a_1a_2...a_n}{b_1b_2...b_n} + \frac{(a_1 - b_1)(a_2 - b_1)
@@ -1558,7 +1554,7 @@ Prove tha following identities:
         \frac{(a_1 - b_n)(a_2 - b_n) ... (a_n - b_n)}{b_n(b_n - b_1) ... (b_n -
         b_{n - 1})} = (-1)^n.
 
-319. Prove that
+318. Prove that
 
      .. math::
         \frac{(x + \beta) ... (x + n\beta)}{(x - \beta) ... (x - n\beta)} =
@@ -1574,19 +1570,19 @@ We then let :math:`\triangle^2 c_k = \triangle c_{k + 1} - \triangle c_k` so as
 to get one more series: :math:`\triangle^2 c_0, \triangle^2 c_1, \triangle^2
 c_2, ...` and so forth.
 
-320. Prove that
+319. Prove that
 
      .. math::
         c_{k + n} = c_k + \frac{n}{1}\triangle c_k + \frac{n(n -
         1)}{1*2}\triangle^2 c_k + ... + \triangle^n c_k
 
-321. Prove that
+320. Prove that
 
      .. math::
         \triangle^n c_{k} = c_{k + n} - \frac{n}{1}c_{k + n - 1} + \frac{n(n -
         1)}{1*2} c_{k + n -2} + ... + (-1)^nc_k.
 
-322. Show that if :math:`f(x)` is any polynomial of nth degree in
+321. Show that if :math:`f(x)` is any polynomial of nth degree in
      :math:`x,` then there exists the following identity
 
      .. math::
@@ -1597,7 +1593,7 @@ c_2, ...` and so forth.
      where :math:`\triangle f(0), \triangle^2 f(0), ..., \triangle^n f(0)` are
      obtained, proceeding from the basic series: :math:`f(0), f(1), f(2), ...`.
 
-323. Prove that
+322. Prove that
 
      .. math::
         x^n = A_0 + \frac{A_1}{1}(x - 1) + \frac{A_2}{2!}(x - 1)(x - 2) + ... +
@@ -1606,7 +1602,7 @@ c_2, ...` and so forth.
      then :math:`A_s = (s + 1)^n - C^s_1s^n + C^s_2(s - 1)^n + ... +
      (-1)^sC_s^s 1^n.`
 
-324. Prove that
+323. Prove that
 
      .. math::
         \frac{n!}{x(x + 1) ... (x + n)}\left\{\frac{1}{x} + \frac{1}{x + 1} +
@@ -1615,14 +1611,14 @@ c_2, ...` and so forth.
         \frac{1}{x^2} - \frac{C^n_1}{(x + 1)^2} + \frac{C^n_2}{(x + 2)^2} +
         ... + (-1)^n\frac{1}{(x + n)^2}.
 
-325. Let :math:`\phi_k(x) = x(x - 1)(x - 2) ... (x -k +1).` Prove that
+324. Let :math:`\phi_k(x) = x(x - 1)(x - 2) ... (x -k +1).` Prove that
 
      .. math::
         \phi_n(x + y) = \phi_n(x) + c^n_1\phi_{n - 1}(x)\phi_1(y) +
         c^n_2\phi_{n - 2}(x)\phi_2(y) + ... + C^n_{n - 1}\phi_1(x)\phi_{n -
         1}(y) + \phi_n(y).
 
-326. Prove the following where :math:`p = x + y` and :math:`q = xy`
+325. Prove the following where :math:`p = x + y` and :math:`q = xy`
 
      (i) .. math::
            x^n + y^n = p^n - np^{n - 2}q + \frac{n(n - 3)}{1*2}p^{n - 4}q^2 -
@@ -1637,7 +1633,7 @@ c_2, ...` and so forth.
 
             (-1)^rC^{n - r}_rp^{n - 2r}q^r + ...
 
-327. Let :math:`x + y = 1` then prove that
+326. Let :math:`x + y = 1` then prove that
 
      .. math::
         x^m(1 + C^m_1y + C^{m + 1}_2y^2 + ... + C^{2m -2}_{m - 2}y^{m - 1}) +
@@ -1646,7 +1642,7 @@ c_2, ...` and so forth.
         + y^m(1 + C^m_1x + C^{m + 1}_2x^2 + ... + C^{2m -2}_{m - 2}x^{m - 1}) =
           1
 
-328. Prove that
+327. Prove that
 
      .. math::
         \frac{1}{(x - a)^m(x - b)^m} = \frac{1}{(a - b)^m}\left\{\frac{1}{(x -
@@ -1657,13 +1653,13 @@ c_2, ...` and so forth.
         -b)^{m - 1}(a - b)} + ... + \frac{C^{2m - 2}_{m - 1}}{(x - b)(a -
         b)^{m - 1}}\right\}.
 
-329. Show that constants :math:`A_1, A_2, A-3` can always be chosen so that
+328. Show that constants :math:`A_1, A_2, A-3` can always be chosen so that
 
      .. math::
         (x + y)^n = x^n + y^n + A_1xy(x^{n - 2} + y^{n - 2}) + A_2x^2y^2(x^{n
         -4}y^{n - 4}) + ...
 
-330. Let :math:`m` and :math:`n` be positive integers (:math:`n \le m`). Let
+329. Let :math:`m` and :math:`n` be positive integers (:math:`n \le m`). Let
 
      .. math::
         \frac{(1 - x^m)(1 - x^{m -1}) ... (1 - x^{m - n +1})}{(1 - x)(1 - x^2)
@@ -1680,7 +1676,7 @@ c_2, ...` and so forth.
          x)(1 -x^2) ... (1 - x^{m - 1})` if :math:`m` is even and 0 if
          :math:`m` is odd.
 
-331. Prove that
+330. Prove that
 
      .. math::
         (1 + xz)(1 + x^2z) ... (1 + x^nz) = 1 +
@@ -1688,7 +1684,7 @@ c_2, ...` and so forth.
         \sum_{k = 1}^{k = n}\frac{(1 - x^n)(1 - x^{n - 1}) ... (1 - x^{n - k
         +1})}{(1 -x)(1 - x^2) ... (1 -x^k)}x^\frac{k(k + 1)}{2}z^k.
 
-332. Prove that
+331. Prove that
 
      .. math::
         (1 + xz)(1 + x^2z) ... (1 + x^{2n -1}z) = 1 +
@@ -1696,13 +1692,13 @@ c_2, ...` and so forth.
         \sum_{k = 1}^{k = n}\frac{(1 - x^{2n})(1 - x{2n - 2}) ... (1 - x^{2n -
         2k + 2})}{(1 - x^2)(1 - x^4) ... (1 - x^2k)}x^{k^2}z^k.
 
-333. Let :math:`p_k = (1 - x)(1 - x^2) ... (1 - x^k).` Prove that
+332. Let :math:`p_k = (1 - x)(1 - x^2) ... (1 - x^k).` Prove that
 
      .. math::
         \frac{1}{p_n} - \frac{x}{p_1p_{n - 1}} + \frac{x^3}{p_2p_{n - 2}} - ...
         \pm \frac{x^{\frac{n(n + 1)}{2}}}{p_n} = 1.
 
-334. Determine the coefficients :math:`C_0, C_1, C-2, ..., C-n` in the
+333. Determine the coefficients :math:`C_0, C_1, C-2, ..., C-n` in the
      following identity
 
      .. math::
@@ -1711,7 +1707,7 @@ c_2, ...` and so forth.
 
         C_0 + C_1(z + z^{-1}) + C_2(z^2 + z^{-2}) + ... + C_n(z^n + z^{-n}).
 
-335. Let
+334. Let
 
      .. math::
         u_k = \frac{sin 2nx sin (2n - 1)x ... sin (2n - k + 1)x}{sin x sin 2x
