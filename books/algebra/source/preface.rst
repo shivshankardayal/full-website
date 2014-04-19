@@ -61,3 +61,6 @@ I am sorry but no hard copy or pdf will be available online. I can give pdf
 copies for free to individuals if you contact me through email. This book will
 never be published or you can make one yourself using sphinx sources available
 at website.
+
+Problems and solutions are given in separate chapters to avoid rendering delay
+of MathJax.

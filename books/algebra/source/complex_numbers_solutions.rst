@@ -1532,4 +1532,184 @@ Complex Numbers Solutions
 
      The greatest root of this equation is :math:`\sqrt{5} + 1.` Hence proven.
 
-131. 
+131. Since :math:`\alpha, \beta, \gamma, \delta` are root of the equation.
+
+     .. math::
+        (x - \alpha)(x - \beta)(x - \gamma)(x - \delta) = ax^4 + bx^3 + cx^2 +
+        dx + e
+
+     Substituting :math:`x = i` we get following
+
+     .. math::
+        (i - \alpha)(i - \beta)(i - \gamma)(i - \delta) = ai^4 + bi^3 + ci^2 +
+        di + e
+   
+        \Rightarrow (1 + i\alpha)(1 + i\beta)(1 + i\gamma)(1 + i\delta) = a -
+        ib - c + id + e
+
+     Taking modulus and squaring we get our desired result.
+
+132. This is similar to 131 and is left as an exercise.
+
+133. Let :math:`|z_1| = |z_2| = |z_3| = R.` :math:`\therefore` origin is the
+     circumcenter of triangle. Since triangle is also equilateral circumcenter
+     and origin coincide. Therefore, origin is also centroid. Thus
+
+     .. math::
+        \frac{z_1 + z_2 + z_3}{3} = 0 \Rightarrow z_1 + z_2 + z_3 = 0
+
+134. Similar to 133 it can be proven that it is an equilateral triangle. Now
+     since :math:`|z_1| = |z_2| = |z_3| = 1` therefore it is an equilateral
+     triangle inscribed in an unit circle.
+
+135. Circumcenter of an equilateral triangle is given by :math:`z_0 = \frac{z_1 + z_2
+     + z_3}{3}` which is same as centroid. Now since this triangle is
+     equilateral
+
+     .. math::
+        \sum z_1^2 = \sum z_1z_2
+
+        (\sum z_1)^2 = \sum z_1^2 + 2\sum z_1z_2 = 3\sum z_1^2
+
+     Also,
+
+     .. math::
+        z_0 = \frac{\sum z_1}{3} \Rightarrow \sum z_1 = 3z_0
+
+        \Rightarrow 3\sum z_1^2 = 9z_0^2 \Rightarrow \sum z_1^2 = 3z_0^2
+
+136. Since :math:`z_1, z_2` and origin form an equilateral triangle we have
+
+     .. math::
+        z_1^2 + z_2^2 + 0^2 - z_1z_2 - z_2*0 - z_1*0 = 0
+
+     Hence, proven.
+
+137. From 136 :math:`z_1, z_2` and origin will form a triangle if
+     :math:`z_1^2 + z_2^2 - z_1z_2 = 0.` Therefore,
+
+     .. math::
+        (z_1 + z_2)^2 = 3z_1z_2 \Rightarrow a^2 = 3b.
+
+138. Centroid of the triangle is given by :math:`\frac{z_1 + z_2 + z_3}{3}`
+     i.e. :math:`\frac{-3\alpha}{3}` i.e. :math:`-\alpha.` Triangle will be
+     equilateral if
+
+     .. math::
+        z_1^2 + z_2^2 + z_3^2 = z_1z_2 + z_2z_3 + z_3z_1
+
+        \Rightarrow (z_1 + z_2 + z_3)^2 = 3(z_1z_2 + z_2z_3 + z_3z_1)
+
+        \Rightarrow 9\alpha^2 = 9\beta \Rightarrow \alpha^2 = \beta
+
+139. Given,
+
+     .. math::
+        z_2 = \frac{z_1 + z_3}{2}
+
+     Clearly, from section formula we can deduce that :math:`z_2` divides line
+     segment joining :math:`z_1` and :math:`z_3` in two equal segments hence
+     the complex numbers are collinear.
+
+140. :math:`z_3` will divide line segment joining :math:`z_1` and :math:`z_2`
+     either externally or internally. Now section formula can be used to prove
+     remaining.
+
+141. We have,
+
+     .. math::
+        \frac{z - i}{ z + i}
+
+     as a purely imaginary quantity. Let :math:`z = x + iy.`
+
+     .. math::
+        \frac{[x + i(y - 1)][x - i(y + 1)])}{x^2 + (y + 1)^2}
+
+     Equating real part to 0 we have
+
+     .. math::
+        \Rightarrow x^2 + y^2 - 1 = 0
+
+     Therefore locus of z represents the circle :math:`x^2 + y^2 = 1.`
+
+142. :math:`z` represents the ring between the concentric circles whose center
+     is at (3, 4i) having radii 1 and 2.
+
+143. Let :math:`z = x+ iy.` Now we have
+
+     .. math::
+        \sqrt{(x - 1)^2 + y^2} + \sqrt{(x + 1)^2 + y^2} \le 4
+
+     Let :math:`L + M = 4`
+
+     .. math::
+        L^2 - M^2 = -4x \therefore L^2 - M^2 = -x \therefore 4L^2 = (4 - x)^2
+
+        4(x^2 + y^2 - 2x + 1) = 16 + x^2 - 8x
+
+        3x^2 + 4y^2 = 12
+
+        \frac{x^2}{4} + \frac{y^2}{3} = 1
+
+     Hence it represent the above ellipse.
+
+144. Let :math:`z = x + iy` then we have
+
+     .. math::
+        x = t + 5 \text{ and } y = \sqrt{4 -t^2}
+
+        \Rightarrow (x - 5)^2 = t^2 \text{ and } y^2 = 4 -t^2
+
+     Adding we get, :math:`(x - 5)^2 + y^2 = 4` which represents a circle with
+     radius at (5, 0) with radius 2.
+
+145. Given :math:`\frac{z^2}{z - 1}` is real i.e. its imaginary part is zero.
+
+     .. math::
+        \frac{(x^2 - y^2 + i2xy)((x - 1) - iy)}{(x - 1)^2 + y^2}
+
+     Equating imaginary part to 0 we have
+
+     .. math::
+        x^2 + y^2 - 2x = 0 \therefore (x - 1)^2 + y^ = 1
+
+     which represents a circle having center at (1, 0) and radius unity.
+
+146. Given, :math:`|z^2 + (-1)| = |z|^2 + |(-1)| \Rightarrow \frac{z^2}{-1}` is
+     non-negative real number. Thus :math:`z` is purely imaginary number. Thus
+     locus of z is a straight line.
+
+Question 147 to 149 are left as exercises.
+
+150. Given,
+
+     .. math::
+        \log_{\sqrt{3}}\frac{|z|^2 - |z| + 1}{2 + |z|} < 2
+
+        \Rightarrow \frac{|z|^2 - |z| + 1}{2 + |z|} < (\sqrt{3})^2
+
+        \Rightarrow |z|^2 - 4|z| - 5 < 0
+
+        \Rightarrow |z| < 5
+
+151. Clearly A is (1, 0) or (-1, 0). Let A is (1, 0). Then :math:`z = cos0 +
+     isin0.` Clearly, B and C would be :math:`cos150 + isin150` and
+     :math:`cos210 + isin210.`
+
+152. Equation of line :math:`DM` can be found from straight line formula. Line
+     :math:`AM` is perpendicular to :math:`BD` and :math:`BD = 2AC` so
+     :math:`A` can be found.
+
+153. Vector representing line joining :math:`z_1` and :math:`z_2` is :math:`z_2
+     - z_1.` Now if this is rotated by 90 degree and shifted by :math:`z_2 -
+     z_1` then it would represent side joining :math:`z_2` and :math:`z_3.`
+     First let us rotate it so line segement is :math:`(z_2 - z_1)(cos90 +
+     isin90)` i.e. :math:`i(z_2 - z_1).` Now shifting this by :math:`z_2 - z_1`
+     we get :math:`z_3 - z_1 = iz_2 - iz_1 + z_2 - z_1` i.e. :math:`z_3 = -iz_1
+     + (1 + i)z_2.` Similarly :math:`z_4` can also be found.
+
+154. Clearly, :math:`z_2 = z_1(cos150 + isin150)` \Rightarrow :math:`z_2 =
+     -\sqrt{3} - i.` Similarly, :math:`z_3 = z_2(cos150 + isin150)` which can
+     be computed.
+
+Rest of the problems are left as exercises.

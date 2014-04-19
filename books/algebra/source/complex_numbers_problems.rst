@@ -532,7 +532,7 @@ Find the square root of following complex numbers:
         a_3 + ...)^2
 
 133. If the complex numbers :math:`z_1, z_2, z_2` are the vertices of an
-     equilateral trianle such that :math:`|z_1| = |z_2| = |z_3|,` prove that
+     equilateral triangle such that :math:`|z_1| = |z_2| = |z_3|,` prove that
      :math:`z_1 + z_2 + z_3 = 0.`
 
 134. If :math:`z_1 + z_2 + z_3 = 0` and :math:`|z_1| = |z_2| = |z_3| = 1,` then
@@ -602,7 +602,7 @@ Find the square root of following complex numbers:
      |z| + 1}{2 + |z|} < 2.`
 
 151. If :math:`O` be the center of the circle circumscribing the equilateral
-     :math:`\triangle ABC` and its radius be unity and :math:`A` lies of the
+     :math:`\triangle ABC` and its radius be unity and :math:`A` lies on the
      :math:`x`-axis. Find the complex numbers represented by :math:`B` and
      :math:`C.`
 
@@ -610,7 +610,7 @@ Find the square root of following complex numbers:
      intersect at a point :math:`M` and satisfy :math:`BD = 2AC.` If the points
      :math:`D` and :math:`M` represent the complex numbers :math:`1 + i` and
      :math:`2 - i` respectively, then find the complex number represented by
-     :math:`A`.`
+     :math:`A`.
 
 153. If :math:`z_1, z_2, z_3` and :math:`z_4` are the vertices of a square
      taken in anticlockwise order, prove that :math:`z_3 = -iz_1 + (1 + i)z_2`

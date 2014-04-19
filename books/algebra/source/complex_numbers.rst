@@ -631,7 +631,7 @@ previous two points in the ration :math:`m;n` can be given by using the results
 from co-ordinate geometry as below:
 
 .. math::
-   x=\frac{mx_2+nx_1}{m+n}, \text{ and } y=\frac{my_2+ny-1}{m+n}
+   x=\frac{mx_2+nx_1}{m+n}, \text{ and } y=\frac{my_2+ny_1}{m+n}
 
    \therefore~z=\frac{mz_2+nz_1}{m+n}
 
