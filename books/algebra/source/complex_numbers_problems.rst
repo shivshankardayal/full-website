@@ -744,7 +744,7 @@ Find the square root of following complex numbers:
      (i) :math:`(3 + 3\omega + 5\omega^2)^6 - (2 + 6\omega + 2\omega^2) = 0`
      (ii) :math:`(2 - \omega)(2 - \omega^2)(2 -\omega^{10})(2 - \omega^{11}) =
           49`
-     (iii) :math:`(1 - \omega)(1 - \omega^2)(1 - \omega^4)(1 -omega^5) = 9`
+     (iii) :math:`(1 - \omega)(1 - \omega^2)(1 - \omega^4)(1 - \omega^5) = 9`
      (iv) :math:`(1 - \omega + \omega^2)^5 + (1 + \omega - \omega^2)^5 = 32`
      (v) :math:`1 + \omega^n + \omega^{2n} = 3` where :math:`n > 0, n \in
          \mathbf{I}` and is a multiple of 3.

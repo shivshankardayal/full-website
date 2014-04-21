@@ -395,7 +395,7 @@ Now by the same analogy let us try to find out sum of squares.
 
 .. math::
 
-	\sum_{i=0}{n}(i+1)^3 - i^3 = \sum_{i=0}{n}(3i^2 + 3i +1) = (n+1)^3 - 1^3
+	\sum_{i=0}^{n}(i+1)^3 - i^3 = \sum_{i=0}^{n}(3i^2 + 3i +1) = (n+1)^3 - 1^3
 
 	\Rightarrow \sum_{i=0}^ni^2 = \frac{n(n+1)(2n+1)}{6}
 
