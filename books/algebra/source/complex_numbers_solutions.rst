@@ -912,6 +912,15 @@ Complex Numbers Solutions
        z = t\left(\frac{z_1}{|z_1|} + \frac{z_2}{|z_2|}\right), \text{ where }
        t \text{ is an arbitrary number.}
 
+83. .. tikz::
+      \draw (-.707, -.707) -- (.707, -.707) -- (0, 1) -- cycle;
+      \draw (-.707, -.707) node{anchor=north east} {$B$};
+      \draw (.707, -.707) node{anchor=north west} {$C$};
+      \draw (0, 1) node{anchor=south} {$A$};
+      \draw (0, 1) -- (0, -.707);
+      \draw (-.707, -.707) -- (.354, .196);
+      \draw (.707, -.707) -- (-.354, .196);
+
     Problem no. 83. to 90 are based on basic geometry and is left as exercises
     for the reader.
 
