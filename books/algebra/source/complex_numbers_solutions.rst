@@ -909,8 +909,8 @@ Complex Numbers Solutions
     bisector of angle between these two will be given by
 
     .. math::
-       z = t(\frac{z_1}{|z_1|} + \frac{z_2}{|z_2|}), \text{ where } t \text{ is
-       an arbitrary number.}
+       z = t\left(\frac{z_1}{|z_1|} + \frac{z_2}{|z_2|}\right), \text{ where }
+       t \text{ is an arbitrary number.}
 
     Problem no. 83. to 90 are based on basic geometry and is left as exercises
     for the reader.

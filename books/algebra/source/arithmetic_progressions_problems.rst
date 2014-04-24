@@ -210,4 +210,4 @@ Arithmetic Progression Problems
     the following sum
 
     .. math::
-       S = \sum_{i = 1}^{i = n}\frac{a_ia_{i + 1}a_{i + 2}}{a_ia_{i + 2}}.
+       S = \sum_{i = 1}^{i = n}\frac{a_ia_{i + 1}a_{i + 2}}{a_i + a_{i + 2}}.

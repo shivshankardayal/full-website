@@ -23,4 +23,5 @@ Informal Algebra's Contents
    complex_numbers_solutions
    arithmetic_progressions
    arithmetic_progressions_problems
+   arithmetic_progressions_solutions
 
