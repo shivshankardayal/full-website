@@ -635,7 +635,7 @@ Find the square root of following complex numbers:
 158. Prove that the points :math:`a(cos\alpha + i sin\alpha), b(cos\beta + i
      sin\beta)` and :math:`c(cos\gamma + i sin\gamma)` in the Argand plane are
      collinear if :math:`bcsin(\beta - \gamma) + casin(\gamma - \alpha) +
-     absin(\alpha -\beta).`
+     absin(\alpha -\beta) = 0.`
 
 159. :math:`A` represents the number :math:`6i, B` the number :math:`3` and
      :math:`P` the complex number :math:`z`. If :math:`P` moves such that

@@ -912,15 +912,6 @@ Complex Numbers Solutions
        z = t\left(\frac{z_1}{|z_1|} + \frac{z_2}{|z_2|}\right), \text{ where }
        t \text{ is an arbitrary number.}
 
-83. .. tikz::
-      \draw (-.707, -.707) -- (.707, -.707) -- (0, 1) -- cycle;
-      \draw (-.707, -.707) node{anchor=north east} {$B$};
-      \draw (.707, -.707) node{anchor=north west} {$C$};
-      \draw (0, 1) node{anchor=south} {$A$};
-      \draw (0, 1) -- (0, -.707);
-      \draw (-.707, -.707) -- (.354, .196);
-      \draw (.707, -.707) -- (-.354, .196);
-
     Problem no. 83. to 90 are based on basic geometry and is left as exercises
     for the reader.
 
@@ -1721,4 +1712,47 @@ Question 147 to 149 are left as exercises.
      -\sqrt{3} - i.` Similarly, :math:`z_3 = z_2(cos150 + isin150)` which can
      be computed.
 
+155. We know that three vertices represent an equilateral triangle if
+     :math:`z_1^2 + z_2^2 + z_3^2 - z_1z_2 - z_2z_3 -z_1z_3 = 0.` Substituting
+     the respecctive values we get
+
+     .. math::
+        a^2 - 1 + 2ai + 1 - b^2 + 2bi - a + b - abi - i = 0
+
+     Equating real and imaginary parts we get
+
+     .. math::
+        a^ - b^2 - a + b = 0 \Rightarrow (a - b)(a + b + 1) = 0
+
+     So either :math:`a = b` or :math:`a + b = -1` but if we choose :math:`a +
+     b = -1` then the other part leads us to :math:`ab = 3` which is not
+     solvable.
+
+     Choosing :math:`a = b` the imaginary part becomes
+
+     .. math::
+        2a + 2b - ab - 1 = 0
+
+        4a - a^2 - 1 = 0
+
+        a = 2 \pm \sqrt{3}
+
+     But :math:`a = 2 + \sqrt{3}` does not make triangle equillateral. So
+     :math:`a = b = 2 - \sqrt{3}.`
+
+156 and 157 are left as exxercises to the reader.
+
+158. Three points :math:`z_1, z_2` and :math:`z_3` will be collinear if
+
+     .. math::
+        \begin{vmatrix}
+        z_1 & \overline{z_1}&1\\
+        z_2 & \overline{z_2}&1\\
+        z_3 & \overline{z_3}&1
+        \end{vmatrix}=0
+
+     Given our three points it becomes
+
+     .. math::
+        
 Rest of the problems are left as exercises.
