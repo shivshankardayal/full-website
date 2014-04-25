@@ -1693,8 +1693,8 @@ Question 147 to 149 are left as exercises.
         \Rightarrow |z| < 5
 
 151. Clearly A is (1, 0) or (-1, 0). Let A is (1, 0). Then :math:`z = cos0 +
-     isin0.` Clearly, B and C would be :math:`cos150 + isin150` and
-     :math:`cos210 + isin210.`
+     isin0.` Clearly, B and C would be :math:`cos120 + isin120` and
+     :math:`cos240 + isin240.`
 
 152. Equation of line :math:`DM` can be found from straight line formula. Line
      :math:`AM` is perpendicular to :math:`BD` and :math:`BD = 2AC` so
@@ -1708,9 +1708,9 @@ Question 147 to 149 are left as exercises.
      we get :math:`z_3 - z_1 = iz_2 - iz_1 + z_2 - z_1` i.e. :math:`z_3 = -iz_1
      + (1 + i)z_2.` Similarly :math:`z_4` can also be found.
 
-154. Clearly, :math:`z_2 = z_1(cos150 + isin150)` \Rightarrow :math:`z_2 =
-     -\sqrt{3} - i.` Similarly, :math:`z_3 = z_2(cos150 + isin150)` which can
-     be computed.
+154. Clearly, :math:`z_2 = z_1(cos(120 + arg(z_1)) + isin(120 + arg(z_1)))`
+     Similarly, :math:`z_3 = z_1(cos(240 + arg(z_1) + isin(240 + arg(z_1)))`
+     which can be computed.
 
 155. We know that three vertices represent an equilateral triangle if
      :math:`z_1^2 + z_2^2 + z_3^2 - z_1z_2 - z_2z_3 -z_1z_3 = 0.` Substituting
