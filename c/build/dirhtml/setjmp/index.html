@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>25. Nonlocal jumps &lt;setjmp.h&gt; &mdash; C99  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="C99  documentation" href="../" />
+    <link rel="next" title="26. Signal handling &lt;signal.h&gt;" href="../signal/" />
+    <link rel="prev" title="24. Mathematics &lt;math.h&gt;" href="../math/" />
+<script src="../_static/analytics.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../css/math.css" type="text/css" />
+
+  </head>
+  <body>
+
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="../">
+          C99</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">9. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">10. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">11. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">12. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">13. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">14. Diagnostics <tt class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">15. Complex arithmetic <tt class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">16. Character Handling <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">17. Errors <tt class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">18. Floating-point environment <tt class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">19. Characteristics of floating types <tt class="docutils literal"><span class="pre">&lt;float.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">20. Format conversion of integer types <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">21. Alternative spellings <tt class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">22. Sizes of integer types <tt class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">23. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">24. Mathematics <tt class="docutils literal"><span class="pre">&lt;math.h&gt;</span></tt></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">25. Nonlocal jumps <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">26. Signal handling <tt class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">27. Variable arguments <tt class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">28. Boolean type and values <tt class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">29. Common definitions <tt class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">30. Integer types <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">31. Input/output <tt class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">32. General utilities <tt class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">33. String handling <tt class="docutils literal"><span class="pre">&lt;string.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">34. Type-generic math <tt class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">35. Date and time <tt class="docutils literal"><span class="pre">&lt;time.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">36. Extended multibyte and wide character utilities <tt class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">37. Wide character classification and mapping utilities <tt class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">38. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">39. License</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">25. Nonlocal jumps <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt></a><ul>
+<li><a class="reference internal" href="#save-calling-environment">25.1. Save calling environment</a><ul>
+<li><a class="reference internal" href="#the-setjmp-macro">25.1.1. The <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#restore-calling-environment">25.2. Restore calling environment</a><ul>
+<li><a class="reference internal" href="#the-longjmp-function">25.2.1. The <tt class="docutils literal"><span class="pre">longjmp</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../math/" title="Previous Chapter: 24. Mathematics <math.h>"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 24. Mathematics ...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../signal/" title="Next Chapter: 26. Signal handling <signal.h>"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">26. Signal handl... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/setjmp.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="nonlocal-jumps-setjmp-h">
+<span id="index-0"></span><h1>25. Nonlocal jumps <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt><a class="headerlink" href="#nonlocal-jumps-setjmp-h" title="Permalink to this headline">¶</a></h1>
+<p>The header <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt> defines the macro <tt class="docutils literal"><span class="pre">setjmp</span></tt>, and declares one function and
+one type, for bypassing the normal function call and return discipline. <a class="footnote-reference" href="#id2" id="id1">[1]</a></p>
+<p id="index-1">The type declared is</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><tt class="docutils literal"><span class="pre">jmp_buf</span></tt></div>
+</div>
+</div></blockquote>
+<p>which is an array type suitable for holding the information needed to restore a calling
+environment. The environment of a call to the setjmp macro consists of information
+sufficient for a call to the longjmp function to return execution to the correct block and
+invocation of that block, were it called recursively. It does not include the state of the
+floating-point status flags, of open files, or of any other component of the abstract
+machine.</p>
+<p>It is unspecified whether <tt class="docutils literal"><span class="pre">setjmp</span></tt> is a macro or an identifier declared with external
+linkage. If a macro definition is suppressed in order to access an actual function, or a
+program defines an external identifier with the name setjmp, the behavior is undefined.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>These functions are useful for dealing with unusual conditions encountered in a low-level function of
+a program.</td></tr>
+</tbody>
+</table>
+<div class="section" id="save-calling-environment">
+<span id="index-2"></span><h2>25.1. Save calling environment<a class="headerlink" href="#save-calling-environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-setjmp-macro">
+<span id="index-3"></span><h3>25.1.1. The <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro<a class="headerlink" href="#the-setjmp-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;setjmp.h&gt;</span>
+<span class="kt">int</span> <span class="nf">setjmp</span><span class="p">(</span><span class="kt">jmp_buf</span> <span class="n">env</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro saves its calling environment in its <tt class="docutils literal"><span class="pre">jmp_buf</span></tt> argument for later use
+by the <tt class="docutils literal"><span class="pre">longjmp</span></tt> function.</p>
+<p><strong>Returns</strong></p>
+<p>If the return is from a direct invocation, the <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro returns the value zero. If the
+return is from a call to the <tt class="docutils literal"><span class="pre">longjmp</span></tt> function, the <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro returns a nonzero
+value.</p>
+<p><strong>Environmental limits</strong></p>
+<p>An invocation of the <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro shall appear only in one of the following contexts:</p>
+<ul class="simple">
+<li>the entire controlling expression of a selection or iteration statement;</li>
+<li>one operand of a relational or equality operator with the other operand an integer
+constant expression, with the resulting expression being the entire controlling
+expression of a selection or iteration statement;</li>
+<li>the operand of a unary ! operator with the resulting expression being the entire
+controlling expression of a selection or iteration statement; or</li>
+<li>the entire expression of an expression statement (possibly cast to void).</li>
+</ul>
+<p>If the invocation appears in any other context, the behavior is undefined.</p>
+</div>
+</div>
+<div class="section" id="restore-calling-environment">
+<span id="index-4"></span><h2>25.2. Restore calling environment<a class="headerlink" href="#restore-calling-environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-longjmp-function">
+<span id="index-5"></span><h3>25.2.1. The <tt class="docutils literal"><span class="pre">longjmp</span></tt> function<a class="headerlink" href="#the-longjmp-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;setjmp.h&gt;</span>
+<span class="kt">void</span> <span class="nf">longjmp</span><span class="p">(</span><span class="kt">jmp_buf</span> <span class="n">env</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">longjmp</span></tt> function restores the environment saved by the most recent invocation of
+the setjmp macro in the same invocation of the program with the corresponding
+<tt class="docutils literal"><span class="pre">jmp_buf</span></tt> argument. If there has been no such invocation, or if the function containing
+the invocation of the setjmp macro has terminated execution <a class="footnote-reference" href="#id5" id="id3">[2]</a> in the interim, or if the
+invocation of the <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro was within the scope of an identifier with variably
+modified type and execution has left that scope in the interim, the behavior is undefined.</p>
+<p>All accessible objects have values, and all other components of the abstract machine <a class="footnote-reference" href="#id6" id="id4">[3]</a>
+have state, as of the time the <tt class="docutils literal"><span class="pre">longjmp</span></tt> function was called, except that the values of
+objects of automatic storage duration that are local to the function containing the
+invocation of the corresponding setjmp macro that do not have volatile-qualified type
+and have been changed between the <tt class="docutils literal"><span class="pre">setjmp</span></tt> invocation and <tt class="docutils literal"><span class="pre">longjmp</span></tt> call are
+indeterminate.</p>
+<p><strong>Returns</strong></p>
+<p>After <tt class="docutils literal"><span class="pre">longjmp</span></tt> is completed, program execution continues as if the corresponding
+invocation of the <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro had just returned the value specified by <tt class="docutils literal"><span class="pre">val</span></tt>. The
+<tt class="docutils literal"><span class="pre">longjmp</span></tt> function cannot cause the <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro to return the value 0; if <tt class="docutils literal"><span class="pre">val</span></tt> is 0,
+the <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro returns the value 1.</p>
+<p>EXAMPLE The <tt class="docutils literal"><span class="pre">longjmp</span></tt> function that returns control back to the point of the <tt class="docutils literal"><span class="pre">setjmp</span></tt> invocation
+might cause memory associated with a variable length array object to be squandered.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;setjmp.h&gt;</span>
+
+<span class="kt">jmp_buf</span> <span class="n">buf</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">g</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">h</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">];</span> <span class="c1">// valid: f is not terminated</span>
+  <span class="n">setjmp</span><span class="p">(</span><span class="n">buf</span><span class="p">);</span>
+  <span class="n">g</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">g</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">];</span> <span class="c1">// a may remain allocated</span>
+  <span class="n">h</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">h</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">b</span><span class="p">[</span><span class="n">n</span><span class="p">];</span> <span class="c1">// b may remain allocated</span>
+  <span class="n">longjmp</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// might cause memory loss</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>For example, by executing a <tt class="docutils literal"><span class="pre">return</span></tt> statement or because another <tt class="docutils literal"><span class="pre">longjmp</span></tt> call has caused a
+transfer to a <tt class="docutils literal"><span class="pre">setjmp</span></tt> invocation in a function earlier in the set of nested calls.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[3]</a></td><td>This includes, but is not limited to, the floating-point status flags and the state of open files.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

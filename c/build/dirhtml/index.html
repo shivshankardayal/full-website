@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="C Programming with C99" name="description" />
+<meta content="Free C Book, C Programming, C99 Programming, C99 Specification" name="keywords" />
+
+    <title>C Programming with C99 Contents &mdash; C99  documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="C99  documentation" href="#" />
+    <link rel="next" title="1. Introduction" href="introduction/" />
+<script src="../_static/analytics.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../css/math.css" type="text/css" />
+
+  </head>
+  <body>
+
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="#">
+          C99</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fs/">9. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="env/">10. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lang/">11. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macros/">12. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="std/">13. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assert/">14. Diagnostics <tt class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="complex/">15. Complex arithmetic <tt class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="ctypes/">16. Character Handling <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="errno/">17. Errors <tt class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="fenv/">18. Floating-point environment <tt class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="float/">19. Characteristics of floating types <tt class="docutils literal"><span class="pre">&lt;float.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="inttypes/">20. Format conversion of integer types <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="iso646/">21. Alternative spellings <tt class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="limits/">22. Sizes of integer types <tt class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="locale/">23. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math/">24. Mathematics <tt class="docutils literal"><span class="pre">&lt;math.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="setjmp/">25. Nonlocal jumps <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="signal/">26. Signal handling <tt class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdarg/">27. Variable arguments <tt class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdbool/">28. Boolean type and values <tt class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="stddef/">29. Common definitions <tt class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdint/">30. Integer types <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdio/">31. Input/output <tt class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdlib/">32. General utilities <tt class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="string/">33. String handling <tt class="docutils literal"><span class="pre">&lt;string.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tgmath/">34. Type-generic math <tt class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="time/">35. Date and time <tt class="docutils literal"><span class="pre">&lt;time.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="wchar/">36. Extended multibyte and wide character utilities <tt class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="wtype/">37. Wide character classification and mapping utilities <tt class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems/">38. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license/">39. License</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">C Programming with C99 Contents</a><ul>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="introduction/" title="Next Chapter: 1. Introduction"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">1. Introduction &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/index.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="c-programming-with-c99-contents">
+<h1>C Programming with C99 Contents<a class="headerlink" href="#c-programming-with-c99-contents" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction/">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction/#organization">1.1. Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/#why-c">1.2. Why C?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/#history">1.3. History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/#comparison-with-other-languages">1.4. Comparison with Other Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/#how-to-learn-programming">1.5. How to Learn Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/#what-is-a-computer-program">1.6. What is a Computer Program?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/#attributes-of-a-program">1.7. Attributes of a Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/#tools-of-trade">1.8. Tools of Trade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/#bits-and-bytes">1.9. Bits and Bytes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/#compiling-and-executing">1.10. Compiling and Executing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basics/">2. Basics of C</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics/#the-c-character-set">2.1. The C Character Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/#keywords">2.2. Keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/#index-2">2.3. Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/#programming">2.4. Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/#data-types">2.5. Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/#new-data-types-of-c99">2.6. New Data Types of C99</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/#boolean-types">2.7. Boolean Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/#complex-types">2.8. Complex Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/#void-and-enum-types">2.9. Void and Enum Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/#constants">2.10. Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/#escape-sequences">2.11. Escape Sequences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="io/">3. Console I/O</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="io/#c-s-memory-model">3.1. C&#8217;s Memory Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io/#printf">3.2. printf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io/#conversion-specification">3.3. Conversion Specification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io/#scanf">3.4. scanf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io/#character-string-i-o-functions">3.5. Character String I/O Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io/#single-character-i-o">3.6. Single Character I/O</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="oae/">4. Operators and Expressions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="oae/#usual-arithmetic-conversions">4.1. Usual Arithmetic Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#expressions">4.2. Expressions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oae/#primary-expressions">4.2.1. Primary Expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#operators">4.3. Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#additive-operators">4.4. Additive Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#multiplicative-operators">4.5. Multiplicative Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#relational-operators">4.6. Relational Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#equality-operators">4.7. Equality Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#increment-and-decrement-operators">4.8. Increment and Decrement Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#logical-operators">4.9. Logical Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#bitwise-operators">4.10. Bitwise Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#bitwise-shift-operators">4.11. Bitwise Shift Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#assignment-operators">4.12. Assignment Operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oae/#simple-assignment">4.12.1. Simple Assignment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oae/#compound-assignment">4.12.2. Compound Assignment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oae/#conditoinal-operators">4.12.3. Conditoinal Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oae/#comma-operators">4.12.4. Comma Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oae/#sizeof-operators">4.12.5. sizeof Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oae/#unary-arithmetic-operators">4.12.6. Unary Arithmetic Operators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="oae/#grouping-parentheses">4.13. Grouping parentheses</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cf/">5. Control Flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cf/#storage-classes">5.1. Storage Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cf/#if-else-statement">5.2. if-else Statement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cf/#dangling-else-problem">5.2.1. Dangling Else Problem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cf/#switch-statement">5.3. switch Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cf/#while-loop">5.4. while Loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cf/#do-while-loop">5.5. do while Loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cf/#for-loop">5.6. for Loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cf/#break-and-continue-statements">5.7. break and continue Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cf/#typedef-and-return-statements">5.8. typedef and return Statements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ap/">6. Arrays and Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ap/#single-dimensional-array">6.1. Single-Dimensional Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ap/#multi-dimensional-array">6.2. Multi-Dimensional Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ap/#pointers">6.3. Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ap/#address-and-indirection-operators">6.4. Address and Indirection Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ap/#arrays-of-pointers">6.5. Arrays of Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ap/#pointers-of-pointers">6.6. Pointers of Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ap/#realloc-function">6.7. realloc() Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ap/#free-function">6.8. free() Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ap/#constness">6.9. Constness</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="func/">7. Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="func/#pass-by-value">7.1. Pass-by-value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="func/#pass-by-address">7.2. Pass-by-address</a></li>
+<li class="toctree-l2"><a class="reference internal" href="func/#recursion">7.3. Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="func/#function-like-macros">7.4. Function Like Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="func/#inline-functions">7.5. inline Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="func/#function-pointers">7.6. Function Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="func/#passing-and-receiving-function-pointers">7.7. Passing and Receiving Function Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="su/">8. Structures and Unions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="su/#pointer-members-of-a-structure">8.1. Pointer members of a Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="su/#usage-of-structures-and-unions">8.2. Usage of Structures and Unions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="su/#structures-and-arrays">8.3. Structures and Arrays</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fs/">9. Following Specification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fs/#terms-definitions-and-symbols">9.1. Terms, Definitions and Symbols</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="env/">10. Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="env/#conceptual-model">10.1. Conceptual Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="env/#translation-environment">10.1.1. Translation Environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="env/#program-structure">10.1.1.1. Program Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="env/#translation-phases">10.1.1.2. Translation Phases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="env/#diagnostics">10.1.1.3. Diagnostics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="env/#execution-environment">10.1.2. Execution Environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="env/#freestanding-environment">10.1.2.1. Freestanding Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="env/#hosted-environment">10.1.2.2. Hosted Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="env/#program-execution">10.1.2.3. Program Execution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="env/#index-7">10.1.2.4. Program Execution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="env/#environmental-considerations">10.2. Environmental considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="env/#character-sets">10.2.1. Character Sets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="env/#trigraph-sequences">10.2.1.1. Trigraph sequences</a></li>
+<li class="toctree-l4"><a class="reference internal" href="env/#multibyte-characters">10.2.1.2. Multibyte characters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="env/#character-display-semantics">10.2.2. Character display semantics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="env/#signals-and-interrupts">10.2.3. Signals and interrupts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="env/#environmental-limits">10.2.4. Environmental limits</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="env/#translation-limits">10.2.4.1. Translation limits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="env/#numerical-limits">10.2.4.2. Numerical limits</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lang/">11. Language</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lang/#notation">11.1. Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lang/#concepts">11.2. Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lang/#scope-of-identifiers">11.2.1. Scope of Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#linkages-of-identifiers">11.2.2. Linkages of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#name-spaces-of-the-identifiers">11.2.3. Name Spaces of the Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#storage-duration-of-objects">11.2.4. Storage duration of objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#types">11.2.5. Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#representation-of-types">11.2.6. Representation of Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#general">11.2.6.1. General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#integer-types">11.2.6.2. Integer Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#compatible-and-composite-types">11.2.7. Compatible and Composite Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lang/#conversions">11.3. Conversions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lang/#arithmetic-operands">11.3.1. Arithmetic Operands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#booleans-characters-and-integers">11.3.1.1. Booleans, Characters and Integers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#boolean-type">11.3.1.2. Boolean Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#signed-and-unsigned-integers">11.3.1.3. Signed and Unsigned Integers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#real-floating-and-integer">11.3.1.4. Real Floating and Integer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#real-floating-types">11.3.1.5. Real Floating Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#complex-types">11.3.1.6. Complex Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#real-and-complex">11.3.1.7. Real and Complex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#usual-arithmetic-conversions">11.3.1.8. Usual Arithmetic Conversions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#other-operands">11.3.2. Other Operands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#lvalues-arrays-and-function-designators">11.3.2.1. Lvalues, Arrays and Function Designators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#void">11.3.2.2. void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#pointers">11.3.2.3. Pointers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lang/#lexical-elements">11.4. Lexical Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lang/#keywords">11.4.1. Keywords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#id87">11.4.2. Identifiers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#id88">11.4.2.1. General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#predefined-identifiers">11.4.2.2. Predefined identifiers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#universal-character-names">11.4.3. Universal character names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#constants">11.4.4. Constants</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#integer-constants">11.4.4.1. Integer Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#floating-constants">11.4.4.2. Floating Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#enumeration-constants">11.4.4.3. Enumeration constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#character-constants">11.4.4.4. Character constants</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#string-literals">11.4.5. String literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#punctuators">11.4.6. Punctuators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#header-names">11.4.7. Header names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#preprocessing-numbers">11.4.8. Preprocessing numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#comments">11.4.9. Comments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lang/#expressions">11.5. Expressions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lang/#primary-expressions">11.5.1. Primary expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#postfix-operators">11.5.2. Postfix operators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#array-subscripting">11.5.2.1. Array subscripting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#function-calls">11.5.2.2. Function calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#structure-and-union-members">11.5.2.3. Structure and union members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#postfix-increment-and-decrement-operators">11.5.2.4. Postfix increment and decrement operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#compound-literals">11.5.2.5. Compound literals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#unary-operators">11.5.3. Unary operators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#prefix-increment-and-decrement-operators">11.5.3.1. Prefix increment and decrement operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#address-and-indirection-operators">11.5.3.2. Address and indirection operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#unary-arithmetic-operators">11.5.3.3. Unary arithmetic operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#the-sizeof-operator">11.5.3.4. The <tt class="docutils literal"><span class="pre">sizeof</span></tt> operator</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#cast-operators">11.5.4. Cast operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#multiplicative-operators">11.5.5. Multiplicative operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#additive-operators">11.5.6. Additive operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#bitwise-shift-operators">11.5.7. Bitwise shift operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#relational-operators">11.5.8. Relational operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#equality-operators">11.5.9. Equality operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#bitwise-and-operator">11.5.10. Bitwise AND operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#bitwise-exclusive-or-operator">11.5.11. Bitwise exclusive OR operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#bitwise-inclusive-or-operator">11.5.12. Bitwise inclusive OR operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#logical-and-operator">11.5.13. Logical AND operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#logical-or-operator">11.5.14. Logical OR operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#conditional-operator">11.5.15. Conditional operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#assignment-operators">11.5.16. Assignment operators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#simple-assignment">11.5.16.1. Simple assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#compound-assignment">11.5.16.2. Compound assignment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#comma-operator">11.5.17. Comma operator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lang/#constant-expressions">11.6. Constant expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lang/#declarations">11.7. Declarations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lang/#storage-class-specifiers">11.7.1. Storage-class specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#type-specifiers">11.7.2. Type specifiers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#structure-and-union-specifiers">11.7.2.1. Structure and union specifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#enumeration-specifiers">11.7.2.2. Enumeration specifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#tags">11.7.2.3. Tags</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#type-qualifiers">11.7.3. Type qualifiers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#formal-definition-of-restrict">11.7.3.1. Formal definition of <tt class="docutils literal"><span class="pre">restrict</span></tt></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#function-specifiers">11.7.4. Function specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#declarators">11.7.5. Declarators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#pointer-declarators">11.7.5.1. Pointer declarators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#array-declarators">11.7.5.2. Array declarators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#function-declarators-including-prototypes">11.7.5.3. Function declarators (including prototypes)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#type-names">11.7.6. Type names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#type-definitions">11.7.7. Type definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#initialization">11.7.8. Initialization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lang/#statements-and-blocks">11.8. Statements and blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lang/#labeled-statements">11.8.1. Labeled statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#compound-statement">11.8.2. Compound statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#expression-and-null-statements">11.8.3. Expression and null statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#selection-statements">11.8.4. Selection statements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#the-if-statement">11.8.4.1. The <tt class="docutils literal"><span class="pre">if</span></tt> statement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#the-switch-statement">11.8.5. The <tt class="docutils literal"><span class="pre">switch</span></tt> statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#iteration-statements">11.8.6. Iteration statements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#the-while-statement">11.8.6.1. The <tt class="docutils literal"><span class="pre">while</span></tt> statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#the-do-statement">11.8.6.2. The <tt class="docutils literal"><span class="pre">do</span></tt> statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#the-for-statement">11.8.6.3. The <tt class="docutils literal"><span class="pre">for</span></tt> statement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#jump-statements">11.8.7. Jump statements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lang/#the-goto-statement">11.8.7.1. The <tt class="docutils literal"><span class="pre">goto</span></tt> statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#the-continue-statement">11.8.7.2. The <tt class="docutils literal"><span class="pre">continue</span></tt> statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#the-break-statement">11.8.7.3. The <tt class="docutils literal"><span class="pre">break</span></tt> statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lang/#the-return-statement">11.8.7.4. The <tt class="docutils literal"><span class="pre">return</span></tt> statement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lang/#external-definitions">11.9. External definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lang/#function-definitions">11.9.1. Function definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#external-object-definitions">11.9.2. External object definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lang/#preprocessing-directives">11.10. Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lang/#future-language-directions">11.11. Future language directions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lang/#floating-types">11.11.1. Floating types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#id325">11.11.2. Linkages of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#external-names">11.11.3. External names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#character-escape-sequences">11.11.4. Character escape sequences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#id329">11.11.5. Storage-class specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#function-declarators">11.11.6. Function declarators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#id332">11.11.7. Function definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#pragma-directives">11.11.8. Pragma directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lang/#predefined-macro-names">11.11.9. Predefined macro names</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="macros/">12. Preprocessing Directives</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="macros/#conditional-inclusion">12.1. Conditional Inclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros/#source-file-inclusion">12.2. Source File Inclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros/#macro-replacement">12.3. Macro Replacement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="macros/#argument-substitution">12.3.1. Argument Substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#the-operator">12.3.2. The # Operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#id22">12.3.3. The ## Operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#rescanning-and-further-replacement">12.3.4. Rescanning and Further Replacement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#scope-of-macro-definitions">12.3.5. Scope of Macro Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="macros/#line-control">12.4. Line Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros/#error-directive">12.5. Error directive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros/#pragma-directive">12.6. Pragma Directive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros/#null-directive">12.7. Null Directive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros/#predefined-macro-names">12.8. Predefined Macro Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros/#pragma-operator">12.9. Pragma Operator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros/#usage">12.10. Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="macros/#include">12.10.1. #include</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#why-we-need-headers">12.10.2. Why We Need Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#define">12.10.3. #define</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#undef">12.10.4. #undef</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#and">12.10.5. # and ##</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#error">12.10.6. #error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#pragma">12.10.7. #pragma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/#miscellaneous">12.10.8. Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="std/">13. The C Standard Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="std/#introduction">13.1. Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="std/#definitions-of-terms">13.1.1. Definitions of terms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="std/#standard-headers">13.1.2. Standard Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="std/#reserved-identifiers">13.1.3. Reserved Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="std/#use-of-library-functions">13.1.4. Use of Library Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="assert/">14. Diagnostics <tt class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assert/#program-diagnostics">14.1. Program diagnostics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="assert/#the-assert-macro">14.1.1. The <tt class="docutils literal"><span class="pre">assert</span></tt> macro</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="complex/">15. Complex arithmetic <tt class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="complex/#introduction">15.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="complex/#conventions">15.2. Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="complex/#branch-cuts">15.3. Branch Cuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="complex/#the-cx-limited-range-pragma">15.4. The <tt class="docutils literal"><span class="pre">CX_LIMITED_RANGE</span></tt> Pragma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="complex/#trigonometric-functions">15.5. Trigonometric Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-cacos-functions">15.5.1. The <tt class="docutils literal"><span class="pre">cacos</span></tt> Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-casin-functions">15.5.2. The <tt class="docutils literal"><span class="pre">casin</span></tt> Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-catan-functions">15.5.3. The <tt class="docutils literal"><span class="pre">catan</span></tt> Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-ccos-functions">15.5.4. The <tt class="docutils literal"><span class="pre">ccos</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-csin-functions">15.5.5. The <tt class="docutils literal"><span class="pre">csin</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-ctan-functions">15.5.6. The <tt class="docutils literal"><span class="pre">ctan</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="complex/#hyperbolic-functions">15.6. Hyperbolic functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-cacosh-functions">15.6.1. The <tt class="docutils literal"><span class="pre">cacosh</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-casinh-functions">15.6.2. The <tt class="docutils literal"><span class="pre">casinh</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-catanh-functions">15.6.3. The <tt class="docutils literal"><span class="pre">catanh</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-ccosh-functions">15.6.4. The <tt class="docutils literal"><span class="pre">ccosh</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-csinh-functions">15.6.5. The <tt class="docutils literal"><span class="pre">csinh</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-ctanh-functions">15.6.6. The <tt class="docutils literal"><span class="pre">ctanh</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="complex/#exponential-and-logarithmic-functions">15.7. Exponential and logarithmic functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-cexp-functions">15.7.1. The <tt class="docutils literal"><span class="pre">cexp</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-clog-functions">15.7.2. The <tt class="docutils literal"><span class="pre">clog</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="complex/#power-and-absolute-value-functions">15.8. Power and absolute-value functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-cabs-functions">15.8.1. The <tt class="docutils literal"><span class="pre">cabs</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-cpow-functions">15.8.2. The <tt class="docutils literal"><span class="pre">cpow</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-csqrt-functions">15.8.3. The <tt class="docutils literal"><span class="pre">csqrt</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="complex/#manipulation-functions">15.9. Manipulation functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-carg-functions">15.9.1. The <tt class="docutils literal"><span class="pre">carg</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-cimag-functions">15.9.2. The <tt class="docutils literal"><span class="pre">cimag</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-conj-functions">15.9.3. The <tt class="docutils literal"><span class="pre">conj</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-cproj-functions">15.9.4. The <tt class="docutils literal"><span class="pre">cproj</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="complex/#the-creal-functions">15.9.5. The <tt class="docutils literal"><span class="pre">creal</span></tt> functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ctypes/">16. Character Handling <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ctypes/#character-classification-functions">16.1. Character classification functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-isalnum-function">16.1.1. The <tt class="docutils literal"><span class="pre">isalnum</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-isalpha-function">16.1.2. The <tt class="docutils literal"><span class="pre">isalpha</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-isblank-function">16.1.3. The <tt class="docutils literal"><span class="pre">isblank</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-iscntrl-function">16.1.4. The <tt class="docutils literal"><span class="pre">iscntrl</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-isdigit-function">16.1.5. The <tt class="docutils literal"><span class="pre">isdigit</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-isgraph-function">16.1.6. The <tt class="docutils literal"><span class="pre">isgraph</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-islower-function">16.1.7. The <tt class="docutils literal"><span class="pre">islower</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-isprint-function">16.1.8. The <tt class="docutils literal"><span class="pre">isprint</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-ispunct-function">16.1.9. The <tt class="docutils literal"><span class="pre">ispunct</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-isspace-function">16.1.10. The <tt class="docutils literal"><span class="pre">isspace</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-isupper-function">16.1.11. The <tt class="docutils literal"><span class="pre">isupper</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ctypes/#the-isxdigit-function">16.1.12. The <tt class="docutils literal"><span class="pre">isxdigit</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="errno/">17. Errors <tt class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="fenv/">18. Floating-point environment <tt class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fenv/#the-fenv-access-pragma">18.1. The <tt class="docutils literal"><span class="pre">FENV_ACCESS</span></tt> pragma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fenv/#floating-point-exceptions">18.2. Floating-point exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-feclearexcept-function">18.2.1. The feclearexcept function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-fegetexceptflag-function">18.2.2. The <tt class="docutils literal"><span class="pre">fegetexceptflag</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-feraiseexcept-function">18.2.3. The <tt class="docutils literal"><span class="pre">feraiseexcept</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-fesetexceptflag-function">18.2.4. The <tt class="docutils literal"><span class="pre">fesetexceptflag</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-fetestexcept-function">18.2.5. The <tt class="docutils literal"><span class="pre">fetestexcept</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fenv/#rounding">18.3. Rounding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-fegetround-function">18.3.1. The fegetround function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-fesetround-function">18.3.2. The <tt class="docutils literal"><span class="pre">fesetround</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fenv/#environment">18.4. Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-fegetenv-function">18.4.1. The <tt class="docutils literal"><span class="pre">fegetenv</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-feholdexcept-function">18.4.2. The <tt class="docutils literal"><span class="pre">feholdexcept</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-fesetenv-function">18.4.3. The <tt class="docutils literal"><span class="pre">fesetenv</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenv/#the-feupdateenv-function">18.4.4. The <tt class="docutils literal"><span class="pre">feupdateenv</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="float/">19. Characteristics of floating types <tt class="docutils literal"><span class="pre">&lt;float.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="inttypes/">20. Format conversion of integer types <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inttypes/#macros-for-format-specifiers">20.1. Macros for format specifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inttypes/#functions-for-greatest-width-integer-types">20.2. Functions for greatest-width integer types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="inttypes/#the-imaxabs-function">20.2.1. The <tt class="docutils literal"><span class="pre">imaxabs</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inttypes/#the-imaxdiv-function">20.2.2. The <tt class="docutils literal"><span class="pre">imaxdiv</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inttypes/#the-strtoimax-and-strtoumax-functions">20.2.3. The <tt class="docutils literal"><span class="pre">strtoimax</span></tt> and <tt class="docutils literal"><span class="pre">strtoumax</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inttypes/#the-wcstoimax-and-wcstoumax-functions">20.2.4. The <tt class="docutils literal"><span class="pre">wcstoimax</span></tt> and <tt class="docutils literal"><span class="pre">wcstoumax</span></tt> functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iso646/">21. Alternative spellings <tt class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="limits/">22. Sizes of integer types <tt class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="locale/">23. Localization &lt;locale.h&gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="locale/#locale-control">23.1. Locale control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="locale/#the-setlocale-function">23.1.1. The <tt class="docutils literal"><span class="pre">setlocale</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="locale/#numeric-formatting-convention-inquiry">23.2. Numeric formatting convention inquiry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="locale/#the-localeconv-function">23.2.1. The localeconv function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="math/">24. Mathematics <tt class="docutils literal"><span class="pre">&lt;math.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="math/#treatment-of-error-conditions">24.1. Treatment of error conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math/#the-fp-contract-pragma">24.2. The FP_CONTRACT pragma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math/#classification-macros">24.3. Classification macros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-fpclassify-macro">24.3.1. The <tt class="docutils literal"><span class="pre">fpclassify</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-isfinite-macro">24.3.2. The <tt class="docutils literal"><span class="pre">isfinite</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-isinf-macro">24.3.3. The <tt class="docutils literal"><span class="pre">isinf</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-isnan-macro">24.3.4. The <tt class="docutils literal"><span class="pre">isnan</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-isnormal-macro">24.3.5. The <tt class="docutils literal"><span class="pre">isnormal</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-signbit-macro">24.3.6. The <tt class="docutils literal"><span class="pre">signbit</span></tt> macro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#trigonometric-functions">24.4. Trigonometric functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-acos-functions">24.4.1. The <tt class="docutils literal"><span class="pre">acos</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-asin-functions">24.4.2. The <tt class="docutils literal"><span class="pre">asin</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-atan-functions">24.4.3. The <tt class="docutils literal"><span class="pre">atan</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-atan2-functions">24.4.4. The <tt class="docutils literal"><span class="pre">atan2</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-cos-functions">24.4.5. The <tt class="docutils literal"><span class="pre">cos</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-sin-functions">24.4.6. The <tt class="docutils literal"><span class="pre">sin</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-tan-functions">24.4.7. The <tt class="docutils literal"><span class="pre">tan</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#hyperbolic-functions">24.5. Hyperbolic functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-acosh-functions">24.5.1. The <tt class="docutils literal"><span class="pre">acosh</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-asinh-functions">24.5.2. The <tt class="docutils literal"><span class="pre">asinh</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-atanh-functions">24.5.3. The <tt class="docutils literal"><span class="pre">atanh</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-cosh-functions">24.5.4. The <tt class="docutils literal"><span class="pre">cosh</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-sinh-functions">24.5.5. The <tt class="docutils literal"><span class="pre">sinh</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-tanh-functions">24.5.6. The <tt class="docutils literal"><span class="pre">tanh</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#exponential-and-logarithmic-functions">24.6. Exponential and logarithmic functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-exp-functions">24.6.1. The <tt class="docutils literal"><span class="pre">exp</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-exp2-functions">24.6.2. The <tt class="docutils literal"><span class="pre">exp2</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-expm1-functions">24.6.3. The <tt class="docutils literal"><span class="pre">expm1</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-frexp-functions">24.6.4. The <tt class="docutils literal"><span class="pre">frexp</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-ilogb-functions">24.6.5. The <tt class="docutils literal"><span class="pre">ilogb</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-ldexp-functions">24.6.6. The <tt class="docutils literal"><span class="pre">ldexp</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-log-functions">24.6.7. The <tt class="docutils literal"><span class="pre">log</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-log10-functions">24.6.8. The <tt class="docutils literal"><span class="pre">log10</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-log1p-functions">24.6.9. The <tt class="docutils literal"><span class="pre">log1p</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-log2-functions">24.6.10. The <tt class="docutils literal"><span class="pre">log2</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-logb-functions">24.6.11. The <tt class="docutils literal"><span class="pre">logb</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-modf-functions">24.6.12. The <tt class="docutils literal"><span class="pre">modf</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-scalbn-and-scalbln-functions">24.6.13. The <tt class="docutils literal"><span class="pre">scalbn</span></tt> and <tt class="docutils literal"><span class="pre">scalbln</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#power-and-absolute-value-functions">24.7. Power and absolute-value functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-cbrt-functions">24.7.1. The <tt class="docutils literal"><span class="pre">cbrt</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-fabs-functions">24.7.2. The <tt class="docutils literal"><span class="pre">fabs</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-hypot-functions">24.7.3. The <tt class="docutils literal"><span class="pre">hypot</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-pow-functions">24.7.4. The <tt class="docutils literal"><span class="pre">pow</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-sqrt-functions">24.7.5. The <tt class="docutils literal"><span class="pre">sqrt</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#error-and-gamma-functions">24.8. Error and gamma functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-erf-functions">24.8.1. The <tt class="docutils literal"><span class="pre">erf</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-erfc-functions">24.8.2. The <tt class="docutils literal"><span class="pre">erfc</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-lgamma-functions">24.8.3. The <tt class="docutils literal"><span class="pre">lgamma</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-tgamma-functions">24.8.4. The <tt class="docutils literal"><span class="pre">tgamma</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#nearest-integer-functions">24.9. Nearest integer functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-ceil-functions">24.9.1. The <tt class="docutils literal"><span class="pre">ceil</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-floor-functions">24.9.2. The <tt class="docutils literal"><span class="pre">floor</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-nearbyint-functions">24.9.3. The <tt class="docutils literal"><span class="pre">nearbyint</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-rint-functions">24.9.4. The <tt class="docutils literal"><span class="pre">rint</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-lrint-and-llrint-functions">24.9.5. The <tt class="docutils literal"><span class="pre">lrint</span></tt> and <tt class="docutils literal"><span class="pre">llrint</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-round-functions">24.9.6. The <tt class="docutils literal"><span class="pre">round</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-lround-and-llround-functions">24.9.7. The <tt class="docutils literal"><span class="pre">lround</span></tt> and <tt class="docutils literal"><span class="pre">llround</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-trunc-functions">24.9.8. The <tt class="docutils literal"><span class="pre">trunc</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#remainder-functions">24.10. Remainder functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-fmod-functions">24.10.1. The <tt class="docutils literal"><span class="pre">fmod</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-remainder-functions">24.10.2. The <tt class="docutils literal"><span class="pre">remainder</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-remquo-functions">24.10.3. The <tt class="docutils literal"><span class="pre">remquo</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#manipulation-functions">24.11. Manipulation functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-copysign-functions">24.11.1. The <tt class="docutils literal"><span class="pre">copysign</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-nan-functions">24.11.2. The nan functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-nextafter-functions">24.11.3. The <tt class="docutils literal"><span class="pre">nextafter</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-nexttoward-functions">24.11.4. The <tt class="docutils literal"><span class="pre">nexttoward</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#maximum-minimum-and-positive-difference-functions">24.12. Maximum, minimum and positive difference functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-fdim-functions">24.12.1. The <tt class="docutils literal"><span class="pre">fdim</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-fmax-functions">24.12.2. The <tt class="docutils literal"><span class="pre">fmax</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-fmin-functions">24.12.3. The <tt class="docutils literal"><span class="pre">fmin</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#floating-multiply-add">24.13. Floating multiply-add</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-fma-functions">24.13.1. The <tt class="docutils literal"><span class="pre">fma</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math/#comparison-macros">24.14. Comparison macros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-isgreater-macro">24.14.1. The <tt class="docutils literal"><span class="pre">isgreater</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-isgreaterequal-macro">24.14.2. The <tt class="docutils literal"><span class="pre">isgreaterequal</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-isless-macro">24.14.3. The <tt class="docutils literal"><span class="pre">isless</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-islessequal-macro">24.14.4. The <tt class="docutils literal"><span class="pre">islessequal</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-islessgreater-macro">24.14.5. The <tt class="docutils literal"><span class="pre">islessgreater</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math/#the-isunordered-macro">24.14.6. The <tt class="docutils literal"><span class="pre">isunordered</span></tt> macro</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setjmp/">25. Nonlocal jumps <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setjmp/#save-calling-environment">25.1. Save calling environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="setjmp/#the-setjmp-macro">25.1.1. The <tt class="docutils literal"><span class="pre">setjmp</span></tt> macro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="setjmp/#restore-calling-environment">25.2. Restore calling environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="setjmp/#the-longjmp-function">25.2.1. The <tt class="docutils literal"><span class="pre">longjmp</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="signal/">26. Signal handling <tt class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="signal/#specify-signal-handling">26.1. Specify signal handling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="signal/#the-signal-function">26.1.1. The <tt class="docutils literal"><span class="pre">signal</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="signal/#send-signal">26.2. Send signal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="signal/#the-raise-function">26.2.1. The <tt class="docutils literal"><span class="pre">raise</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stdarg/">27. Variable arguments <tt class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stdarg/#variable-argument-list-access-macros">27.1. Variable argument list access macros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdarg/#the-va-arg-macro">27.1.1. The <tt class="docutils literal"><span class="pre">va_arg</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdarg/#the-va-copy-macro">27.1.2. The <tt class="docutils literal"><span class="pre">va_copy</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdarg/#the-va-end-macro">27.1.3. The <tt class="docutils literal"><span class="pre">va_end</span></tt> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdarg/#the-va-start-macro">27.1.4. The <tt class="docutils literal"><span class="pre">va_start</span></tt> macro</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stdbool/">28. Boolean type and values <tt class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="stddef/">29. Common definitions <tt class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdint/">30. Integer types <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stdint/#integer-types">30.1. Integer types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#exact-width-integer-types">30.1.1. Exact-width integer types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#minimum-width-integer-types">30.1.2. Minimum-width integer types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#fastest-minimum-width-integer-types">30.1.3. Fastest minimum-width integer types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#integer-types-capable-of-holding-object-pointers">30.1.4. Integer types capable of holding object pointers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#greatest-width-integer-types">30.1.5. Greatest-width integer types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdint/#limits-of-specified-width-integer-types">30.2. Limits of specified-width integer types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#limits-of-exact-width-integer-types">30.2.1. Limits of exact-width integer types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#limits-of-minimum-width-integer-types">30.2.2. Limits of minimum-width integer types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#limits-of-fastest-minimum-width-integer-types">30.2.3. Limits of fastest minimum-width integer types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#limits-of-integer-types-capable-of-holding-object-pointers">30.2.4. Limits of integer types capable of holding object pointers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#limits-of-greatest-width-integer-types">30.2.5. Limits of greatest-width integer types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdint/#limits-of-other-integer-types">30.3. Limits of other integer types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stdint/#macros-for-integer-constants">30.4. Macros for integer constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#macros-for-minimum-width-integer-constants">30.4.1. Macros for minimum-width integer constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdint/#macros-for-greatest-width-integer-constants">30.4.2. Macros for greatest-width integer constants</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stdio/">31. Input/output <tt class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stdio/#introduction">31.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stdio/#streams">31.2. Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stdio/#files">31.3. Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stdio/#operations-on-files">31.4. Operations on files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-remove-function">31.4.1. The <tt class="docutils literal"><span class="pre">remove</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-rename-function">31.4.2. The <tt class="docutils literal"><span class="pre">rename</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-tmpfile-function">31.4.3. The <tt class="docutils literal"><span class="pre">tmpfile</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-tmpnam-function">31.4.4. The <tt class="docutils literal"><span class="pre">tmpnam</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdio/#file-access-functions">31.5. File access functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fclose-function">31.5.1. The <tt class="docutils literal"><span class="pre">fclose</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fflush-function">31.5.2. The <tt class="docutils literal"><span class="pre">fflush</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fopen-function">31.5.3. The <tt class="docutils literal"><span class="pre">fopen</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-freopen-function">31.5.4. The <tt class="docutils literal"><span class="pre">freopen</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-setbuf-function">31.5.5. The <tt class="docutils literal"><span class="pre">setbuf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-setvbuf-function">31.5.6. The <tt class="docutils literal"><span class="pre">setvbuf</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdio/#formatted-input-output-functions">31.6. Formatted input/output functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fprintf-function">31.6.1. The <tt class="docutils literal"><span class="pre">fprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fscanf-function">31.6.2. The <tt class="docutils literal"><span class="pre">fscanf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-printf-function">31.6.3. The <tt class="docutils literal"><span class="pre">printf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-scanf-function">31.6.4. The <tt class="docutils literal"><span class="pre">scanf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-snprintf-function">31.6.5. The <tt class="docutils literal"><span class="pre">snprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-sprintf-function">31.6.6. The <tt class="docutils literal"><span class="pre">sprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-sscanf-function">31.6.7. The <tt class="docutils literal"><span class="pre">sscanf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-vfprintf-function">31.6.8. The <tt class="docutils literal"><span class="pre">vfprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-vfscanf-function">31.6.9. The <tt class="docutils literal"><span class="pre">vfscanf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-vprintf-function">31.6.10. The <tt class="docutils literal"><span class="pre">vprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-vscanf-function">31.6.11. The <tt class="docutils literal"><span class="pre">vscanf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-vsnprintf-function">31.6.12. The <tt class="docutils literal"><span class="pre">vsnprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-vsprintf-function">31.6.13. The <tt class="docutils literal"><span class="pre">vsprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-vsscanf-function">31.6.14. The <tt class="docutils literal"><span class="pre">vsscanf</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdio/#character-input-output-functions">31.7. Character input/output functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fgetc-function">31.7.1. The <tt class="docutils literal"><span class="pre">fgetc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fgets-function">31.7.2. The <tt class="docutils literal"><span class="pre">fgets</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fputc-function">31.7.3. The <tt class="docutils literal"><span class="pre">fputc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fputs-function">31.7.4. The <tt class="docutils literal"><span class="pre">fputs</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-getc-function">31.7.5. The <tt class="docutils literal"><span class="pre">getc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-getchar-function">31.7.6. The <tt class="docutils literal"><span class="pre">getchar</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-gets-function">31.7.7. The <tt class="docutils literal"><span class="pre">gets</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-putc-function">31.7.8. The <tt class="docutils literal"><span class="pre">putc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-putchar-function">31.7.9. The <tt class="docutils literal"><span class="pre">putchar</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-puts-function">31.7.10. The <tt class="docutils literal"><span class="pre">puts</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-ungetc-function">31.7.11. The <tt class="docutils literal"><span class="pre">ungetc</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdio/#direct-input-output-functions">31.8. Direct input/output functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fread-function">31.8.1. The <tt class="docutils literal"><span class="pre">fread</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fwrite-function">31.8.2. The <tt class="docutils literal"><span class="pre">fwrite</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdio/#file-positioning-functions">31.9. File positioning functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fgetpos-function">31.9.1. The <tt class="docutils literal"><span class="pre">fgetpos</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fseek-function">31.9.2. The <tt class="docutils literal"><span class="pre">fseek</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-fsetpos-function">31.9.3. The <tt class="docutils literal"><span class="pre">fsetpos</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-ftell-function">31.9.4. The <tt class="docutils literal"><span class="pre">ftell</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-rewind-function">31.9.5. The <tt class="docutils literal"><span class="pre">rewind</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdio/#error-handling-functions">31.10. Error-handling functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-clearerr-function">31.10.1. The <tt class="docutils literal"><span class="pre">clearerr</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-feof-function">31.10.2. The <tt class="docutils literal"><span class="pre">feof</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-ferror-function">31.10.3. The <tt class="docutils literal"><span class="pre">ferror</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdio/#the-perror-function">31.10.4. The <tt class="docutils literal"><span class="pre">perror</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stdlib/">32. General utilities <tt class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stdlib/#numeric-conversion-functions">32.1. Numeric conversion functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-atof-function">32.1.1. The <tt class="docutils literal"><span class="pre">atof</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-atoi-atol-and-atoll-functions">32.1.2. The <tt class="docutils literal"><span class="pre">atoi,</span> <span class="pre">atol</span></tt> and <tt class="docutils literal"><span class="pre">atoll</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-strtod-strtof-and-strtold-functions">32.1.3. The <tt class="docutils literal"><span class="pre">strtod,</span> <span class="pre">strtof</span></tt> and <tt class="docutils literal"><span class="pre">strtold</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-strtol-strtoll-strtoul-and-strtoull-functions">32.1.4. The <tt class="docutils literal"><span class="pre">strtol,</span> <span class="pre">strtoll,</span> <span class="pre">strtoul</span></tt> and <tt class="docutils literal"><span class="pre">strtoull</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdlib/#pseudo-random-sequence-generation-functions">32.2. Pseudo-random sequence generation functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-rand-function">32.2.1. The <tt class="docutils literal"><span class="pre">rand</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-srand-function">32.2.2. The <tt class="docutils literal"><span class="pre">srand</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdlib/#memory-management-functions">32.3. Memory management functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-calloc-function">32.3.1. The <tt class="docutils literal"><span class="pre">calloc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-free-function">32.3.2. The <tt class="docutils literal"><span class="pre">free</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-malloc-function">32.3.3. The <tt class="docutils literal"><span class="pre">malloc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-realloc-function">32.3.4. The <tt class="docutils literal"><span class="pre">realloc</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdlib/#communication-with-the-environment">32.4. Communication with the environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-abort-function">32.4.1. The <tt class="docutils literal"><span class="pre">abort</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-atexit-function">32.4.2. The <tt class="docutils literal"><span class="pre">atexit</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-exit-function">32.4.3. The <tt class="docutils literal"><span class="pre">exit</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#id17">32.4.4. The <tt class="docutils literal"><span class="pre">_Exit</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-getenv-function">32.4.5. The <tt class="docutils literal"><span class="pre">getenv</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-system-function">32.4.6. The <tt class="docutils literal"><span class="pre">system</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdlib/#searching-and-sorting-utilities">32.5. Searching and sorting utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-bsearch-function">32.5.1. The <tt class="docutils literal"><span class="pre">bsearch</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-qsort-function">32.5.2. The <tt class="docutils literal"><span class="pre">qsort</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdlib/#integer-arithmetic-functions">32.6. Integer arithmetic functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-abs-labs-and-llabs-functions">32.6.1. The <tt class="docutils literal"><span class="pre">abs,</span> <span class="pre">labs</span></tt> and <tt class="docutils literal"><span class="pre">llabs</span></tt> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-div-ldiv-and-lldiv-functions">32.6.2. The <tt class="docutils literal"><span class="pre">div,</span> <span class="pre">ldiv</span></tt> and <tt class="docutils literal"><span class="pre">lldiv</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdlib/#multibyte-wide-character-conversion-functions">32.7. Multibyte/wide character conversion functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-mblen-function">32.7.1. The <tt class="docutils literal"><span class="pre">mblen</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-mbtowc-function">32.7.2. The <tt class="docutils literal"><span class="pre">mbtowc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-wctomb-function">32.7.3. The <tt class="docutils literal"><span class="pre">wctomb</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdlib/#multibyte-wide-string-conversion-functions">32.8. Multibyte/wide string conversion functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-mbstowcs-function">32.8.1. The <tt class="docutils literal"><span class="pre">mbstowcs</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stdlib/#the-wcstombs-function">32.8.2. The <tt class="docutils literal"><span class="pre">wcstombs</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="string/">33. String handling <tt class="docutils literal"><span class="pre">&lt;string.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="string/#string-function-conventions">33.1. String function conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string/#copying-functions">33.2. Copying functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-memcpy-function">33.2.1. The <tt class="docutils literal"><span class="pre">memcpy</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-memmove-function">33.2.2. The <tt class="docutils literal"><span class="pre">memmove</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strcpy-function">33.2.3. The <tt class="docutils literal"><span class="pre">strcpy</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strncpy-function">33.2.4. The <tt class="docutils literal"><span class="pre">strncpy</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="string/#concatenation-functions">33.3. Concatenation functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strcat-function">33.3.1. The <tt class="docutils literal"><span class="pre">strcat</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strncat-function">33.3.2. The <tt class="docutils literal"><span class="pre">strncat</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="string/#comparison-functions">33.4. Comparison functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-memcmp-function">33.4.1. The <tt class="docutils literal"><span class="pre">memcmp</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strcmp-function">33.4.2. The <tt class="docutils literal"><span class="pre">strcmp</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strcoll-function">33.4.3. The <tt class="docutils literal"><span class="pre">strcoll</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strncmp-function">33.4.4. The <tt class="docutils literal"><span class="pre">strncmp</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strxfrm-function">33.4.5. The <tt class="docutils literal"><span class="pre">strxfrm</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="string/#search-functions">33.5. Search functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-memchr-function">33.5.1. The <tt class="docutils literal"><span class="pre">memchr</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strchr-function">33.5.2. The <tt class="docutils literal"><span class="pre">strchr</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strcspn-function">33.5.3. The <tt class="docutils literal"><span class="pre">strcspn</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strpbrk-function">33.5.4. The <tt class="docutils literal"><span class="pre">strpbrk</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strrchr-function">33.5.5. The <tt class="docutils literal"><span class="pre">strrchr</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strspn-function">33.5.6. The <tt class="docutils literal"><span class="pre">strspn</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strstr-function">33.5.7. The <tt class="docutils literal"><span class="pre">strstr</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strtok-function">33.5.8. The <tt class="docutils literal"><span class="pre">strtok</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="string/#miscellaneous-functions">33.6. Miscellaneous functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-memset-function">33.6.1. The <tt class="docutils literal"><span class="pre">memset</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strerror-function">33.6.2. The <tt class="docutils literal"><span class="pre">strerror</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="string/#the-strlen-function">33.6.3. The <tt class="docutils literal"><span class="pre">strlen</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tgmath/">34. Type-generic math <tt class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="time/">35. Date and time <tt class="docutils literal"><span class="pre">&lt;time.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="time/#components-of-time">35.1. Components of time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time/#time-manipulation-functions">35.2. Time manipulation functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="time/#the-clock-function">35.2.1. The <tt class="docutils literal"><span class="pre">clock</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="time/#the-difftime-function">35.2.2. The <tt class="docutils literal"><span class="pre">difftime</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="time/#the-mktime-function">35.2.3. The <tt class="docutils literal"><span class="pre">mktime</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="time/#the-time-function">35.2.4. The <tt class="docutils literal"><span class="pre">time</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="time/#time-conversion-functions">35.3. Time conversion functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="time/#the-asctime-function">35.3.1. The <tt class="docutils literal"><span class="pre">asctime</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="time/#the-ctime-function">35.3.2. The <tt class="docutils literal"><span class="pre">ctime</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="time/#the-gmtime-function">35.3.3. The <tt class="docutils literal"><span class="pre">gmtime</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="time/#the-localtime-function">35.3.4. The <tt class="docutils literal"><span class="pre">localtime</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="time/#the-strftime-function">35.3.5. The <tt class="docutils literal"><span class="pre">strftime</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wchar/">36. Extended multibyte and wide character utilities <tt class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wchar/#introduction">36.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wchar/#formatted-wide-character-input-output-functions">36.2. Formatted wide character input/output functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-fwprintf-function">36.2.1. The <tt class="docutils literal"><span class="pre">fwprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-fwscanf-function">36.2.2. The <tt class="docutils literal"><span class="pre">fwscanf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-swprintf-function">36.2.3. The <tt class="docutils literal"><span class="pre">swprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-swscanf-function">36.2.4. The <tt class="docutils literal"><span class="pre">swscanf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-vfwprintf-function">36.2.5. The <tt class="docutils literal"><span class="pre">vfwprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-vfwscanf-function">36.2.6. The <tt class="docutils literal"><span class="pre">vfwscanf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-vswprintf-function">36.2.7. The <tt class="docutils literal"><span class="pre">vswprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-vswscanf-function">36.2.8. The <tt class="docutils literal"><span class="pre">vswscanf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-vwprintf-function">36.2.9. The <tt class="docutils literal"><span class="pre">vwprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-vwscanf-function">36.2.10. The <tt class="docutils literal"><span class="pre">vwscanf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-wprintf-function">36.2.11. The <tt class="docutils literal"><span class="pre">wprintf</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-wscanf-function">36.2.12. The <tt class="docutils literal"><span class="pre">wscanf</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wchar/#wide-character-input-output-functions">36.3. Wide character input/output functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-fgetwc-function">36.3.1. The <tt class="docutils literal"><span class="pre">fgetwc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-fgetws-function">36.3.2. The <tt class="docutils literal"><span class="pre">fgetws</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-fputwc-function">36.3.3. The <tt class="docutils literal"><span class="pre">fputwc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-fputws-function">36.3.4. The <tt class="docutils literal"><span class="pre">fputws</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-fwide-function">36.3.5. The <tt class="docutils literal"><span class="pre">fwide</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-getwc-function">36.3.6. The <tt class="docutils literal"><span class="pre">getwc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-getwchar-function">36.3.7. The <tt class="docutils literal"><span class="pre">getwchar</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-putwc-function">36.3.8. The <tt class="docutils literal"><span class="pre">putwc</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-putwchar-function">36.3.9. The <tt class="docutils literal"><span class="pre">putwchar</span></tt> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-ungetwc-function">36.3.10. The <tt class="docutils literal"><span class="pre">ungetwc</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wchar/#general-wide-string-utilities">36.4. General wide string utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#wide-string-numeric-conversion-functions">36.4.1. Wide string numeric conversion functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcstod-wcstof-and-wcstold-functions">36.4.1.1. The <tt class="docutils literal"><span class="pre">wcstod,</span> <span class="pre">wcstof</span></tt> and <tt class="docutils literal"><span class="pre">wcstold</span></tt> functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcstol-wcstoll-wcstoul-and-wcstoull-functions">36.4.1.2. The <tt class="docutils literal"><span class="pre">wcstol,</span> <span class="pre">wcstoll,</span> <span class="pre">wcstoul</span></tt> and <tt class="docutils literal"><span class="pre">wcstoull</span></tt> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#wide-string-copying-functions">36.4.2. Wide string copying functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcscpy-function">36.4.2.1. The <tt class="docutils literal"><span class="pre">wcscpy</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcsncpy-function">36.4.2.2. The <tt class="docutils literal"><span class="pre">wcsncpy</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wmemcpy-function">36.4.2.3. The <tt class="docutils literal"><span class="pre">wmemcpy</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wmemmove-function">36.4.2.4. The <tt class="docutils literal"><span class="pre">wmemmove</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#wide-string-concatenation-functions">36.4.3. Wide string concatenation functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcscat-function">36.4.3.1. The <tt class="docutils literal"><span class="pre">wcscat</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcsncat-function">36.4.3.2. The <tt class="docutils literal"><span class="pre">wcsncat</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#wide-string-comparison-functions">36.4.4. Wide string comparison functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcscmp-function">36.4.4.1. The <tt class="docutils literal"><span class="pre">wcscmp</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcscoll-function">36.4.4.2. The <tt class="docutils literal"><span class="pre">wcscoll</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcsncmp-function">36.4.4.3. The <tt class="docutils literal"><span class="pre">wcsncmp</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcsxfrm-function">36.4.4.4. The <tt class="docutils literal"><span class="pre">wcsxfrm</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wmemcmp-function">36.4.4.5. The <tt class="docutils literal"><span class="pre">wmemcmp</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#wide-string-search-functions">36.4.5. Wide string search functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcschr-function">36.4.5.1. The <tt class="docutils literal"><span class="pre">wcschr</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcscspn-function">36.4.5.2. The <tt class="docutils literal"><span class="pre">wcscspn</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcspbrk-function">36.4.5.3. The <tt class="docutils literal"><span class="pre">wcspbrk</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcsrchr-function">36.4.5.4. The <tt class="docutils literal"><span class="pre">wcsrchr</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcsspn-function">36.4.5.5. The <tt class="docutils literal"><span class="pre">wcsspn</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcsstr-function">36.4.5.6. The <tt class="docutils literal"><span class="pre">wcsstr</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcstok-function">36.4.5.7. The <tt class="docutils literal"><span class="pre">wcstok</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wmemchr-function">36.4.5.8. The <tt class="docutils literal"><span class="pre">wmemchr</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#miscellaneous-functions">36.4.6. Miscellaneous functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcslen-function">36.4.6.1. The <tt class="docutils literal"><span class="pre">wcslen</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wmemset-function">36.4.6.2. The <tt class="docutils literal"><span class="pre">wmemset</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wchar/#wide-character-time-conversion-functions">36.5. Wide character time conversion functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#the-wcsftime-function">36.5.1. The <tt class="docutils literal"><span class="pre">wcsftime</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wchar/#extended-multibyte-wide-character-conversion-utilities">36.6. Extended multibyte/wide character conversion utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#single-byte-wide-character-conversion-functions">36.6.1. Single-byte/wide character conversion functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-btowc-function">36.6.1.1. The <tt class="docutils literal"><span class="pre">btowc</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wctob-function">36.6.1.2. The <tt class="docutils literal"><span class="pre">wctob</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#conversion-state-functions">36.6.2. Conversion state functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-mbsinit-function">36.6.2.1. The <tt class="docutils literal"><span class="pre">mbsinit</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#restartable-multibyte-wide-character-conversion-functions">36.6.3. Restartable multibyte/wide character conversion functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-mbrlen-function">36.6.3.1. The <tt class="docutils literal"><span class="pre">mbrlen</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-mbrtowc-function">36.6.3.2. The <tt class="docutils literal"><span class="pre">mbrtowc</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcrtomb-function">36.6.3.3. The <tt class="docutils literal"><span class="pre">wcrtomb</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wchar/#restartable-multibyte-wide-string-conversion-functions">36.6.4. Restartable multibyte/wide string conversion functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-mbsrtowcs-function">36.6.4.1. The <tt class="docutils literal"><span class="pre">mbsrtowcs</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wchar/#the-wcsrtombs-function">36.6.4.2. The <tt class="docutils literal"><span class="pre">wcsrtombs</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wtype/">37. Wide character classification and mapping utilities <tt class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wtype/#introduction">37.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wtype/#wide-character-classification-utilities">37.2. Wide character classification utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wtype/#wide-character-classification-functions">37.2.1. Wide character classification functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswalnum-function">37.2.1.1. The <tt class="docutils literal"><span class="pre">iswalnum</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswalpha-function">37.2.1.2. The <tt class="docutils literal"><span class="pre">iswalpha</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswblank-function">37.2.1.3. The <tt class="docutils literal"><span class="pre">iswblank</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswcntrl-function">37.2.1.4. The <tt class="docutils literal"><span class="pre">iswcntrl</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswdigit-function">37.2.1.5. The <tt class="docutils literal"><span class="pre">iswdigit</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswgraph-function">37.2.1.6. The <tt class="docutils literal"><span class="pre">iswgraph</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswlower-function">37.2.1.7. The <tt class="docutils literal"><span class="pre">iswlower</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswprint-function">37.2.1.8. The <tt class="docutils literal"><span class="pre">iswprint</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswpunct-function">37.2.1.9. The <tt class="docutils literal"><span class="pre">iswpunct</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswspace-function">37.2.1.10. The <tt class="docutils literal"><span class="pre">iswspace</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswupper-function">37.2.1.11. The <tt class="docutils literal"><span class="pre">iswupper</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswxdigit-function">37.2.1.12. The <tt class="docutils literal"><span class="pre">iswxdigit</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wtype/#extensible-wide-character-classification-functions">37.2.2. Extensible wide character classification functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-iswctype-function">37.2.2.1. The <tt class="docutils literal"><span class="pre">iswctype</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-wctype-function">37.2.2.2. The <tt class="docutils literal"><span class="pre">wctype</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wtype/#wide-character-case-mapping-utilities">37.3. Wide character case mapping utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wtype/#wide-character-case-mapping-functions">37.3.1. Wide character case mapping functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-towlower-function">37.3.1.1. The <tt class="docutils literal"><span class="pre">towlower</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-towupper-function">37.3.1.2. The <tt class="docutils literal"><span class="pre">towupper</span></tt> function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wtype/#extensible-wide-character-case-mapping-functions">37.3.2. Extensible wide character case mapping functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-towctrans-function">37.3.2.1. The <tt class="docutils literal"><span class="pre">towctrans</span></tt> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wtype/#the-wctrans-function">37.3.2.2. The <tt class="docutils literal"><span class="pre">wctrans</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="problems/">38. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license/">39. License</a></li>
+</ul>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex/"><em>Index</em></a></li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

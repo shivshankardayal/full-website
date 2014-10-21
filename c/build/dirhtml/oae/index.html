@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4. Operators and Expressions &mdash; C99  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="C99  documentation" href="../" />
+    <link rel="next" title="5. Control Flow" href="../cf/" />
+    <link rel="prev" title="3. Console I/O" href="../io/" />
+<script src="../_static/analytics.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../css/math.css" type="text/css" />
+
+  </head>
+  <body>
+
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="../">
+          C99</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">9. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">10. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">11. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">12. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">13. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">14. Diagnostics <tt class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">15. Complex arithmetic <tt class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">16. Character Handling <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">17. Errors <tt class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">18. Floating-point environment <tt class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">19. Characteristics of floating types <tt class="docutils literal"><span class="pre">&lt;float.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">20. Format conversion of integer types <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">21. Alternative spellings <tt class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">22. Sizes of integer types <tt class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">23. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">24. Mathematics <tt class="docutils literal"><span class="pre">&lt;math.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">25. Nonlocal jumps <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">26. Signal handling <tt class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">27. Variable arguments <tt class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">28. Boolean type and values <tt class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">29. Common definitions <tt class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">30. Integer types <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">31. Input/output <tt class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">32. General utilities <tt class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">33. String handling <tt class="docutils literal"><span class="pre">&lt;string.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">34. Type-generic math <tt class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">35. Date and time <tt class="docutils literal"><span class="pre">&lt;time.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">36. Extended multibyte and wide character utilities <tt class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">37. Wide character classification and mapping utilities <tt class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">38. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">39. License</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">4. Operators and Expressions</a><ul>
+<li><a class="reference internal" href="#usual-arithmetic-conversions">4.1. Usual Arithmetic Conversions</a></li>
+<li><a class="reference internal" href="#expressions">4.2. Expressions</a><ul>
+<li><a class="reference internal" href="#primary-expressions">4.2.1. Primary Expressions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operators">4.3. Operators</a></li>
+<li><a class="reference internal" href="#additive-operators">4.4. Additive Operators</a></li>
+<li><a class="reference internal" href="#multiplicative-operators">4.5. Multiplicative Operators</a></li>
+<li><a class="reference internal" href="#relational-operators">4.6. Relational Operators</a></li>
+<li><a class="reference internal" href="#equality-operators">4.7. Equality Operators</a></li>
+<li><a class="reference internal" href="#increment-and-decrement-operators">4.8. Increment and Decrement Operators</a></li>
+<li><a class="reference internal" href="#logical-operators">4.9. Logical Operators</a></li>
+<li><a class="reference internal" href="#bitwise-operators">4.10. Bitwise Operators</a></li>
+<li><a class="reference internal" href="#bitwise-shift-operators">4.11. Bitwise Shift Operators</a></li>
+<li><a class="reference internal" href="#assignment-operators">4.12. Assignment Operators</a><ul>
+<li><a class="reference internal" href="#simple-assignment">4.12.1. Simple Assignment</a></li>
+<li><a class="reference internal" href="#compound-assignment">4.12.2. Compound Assignment</a></li>
+<li><a class="reference internal" href="#conditoinal-operators">4.12.3. Conditoinal Operators</a></li>
+<li><a class="reference internal" href="#comma-operators">4.12.4. Comma Operators</a></li>
+<li><a class="reference internal" href="#sizeof-operators">4.12.5. sizeof Operators</a></li>
+<li><a class="reference internal" href="#unary-arithmetic-operators">4.12.6. Unary Arithmetic Operators</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#grouping-parentheses">4.13. Grouping parentheses</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../io/" title="Previous Chapter: 3. Console I/O"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 3. Console I/O</span>
+    </a>
+  </li>
+  <li>
+    <a href="../cf/" title="Next Chapter: 5. Control Flow"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">5. Control Flow &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/oae.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="operators-and-expressions">
+<h1>4. Operators and Expressions<a class="headerlink" href="#operators-and-expressions" title="Permalink to this headline">¶</a></h1>
+<p>Operators and expressions are in the core of every programming language. They
+form the major part of BNF grammar. They also decide how the syntax will look
+like. You as a programmer will spend considerable time using C operators. C has
+sevral type of operators like arithmetic operators, relational operators,
+bitwise operators, unary operators, logical operators to name some of them.
+Since C was first of very poopular structured general-pupose lnguages therefore
+many modern language use almost all the operators and supplement with their own.
+It is needless to say that to become a good programmar you must know all the
+operators of C and know where to use which one as it may decide performance,
+readability, simplicity of your code. Whenever you see array and pointer in
+following sections just plow through them. All will be clear soon.</p>
+<p>Whenever operators and expressions come in picture you may have a set of mixed
+data then to perform opration data is converted from one type to another. This
+is known as &#8220;Usual Arithmetic Conversion&#8221;, which I am going to tell you next.</p>
+<div class="section" id="usual-arithmetic-conversions">
+<span id="index-0"></span><h2>4.1. Usual Arithmetic Conversions<a class="headerlink" href="#usual-arithmetic-conversions" title="Permalink to this headline">¶</a></h2>
+<p>Many operators that expect operands of arithmetic type cause conversions and
+yield result types in a similar way. The purpose is to determine a common real
+type for the operands and result. For the specified operands, each operand is
+converted, without change of type domain, to a type whose corresponding real
+type is the common real type. Unless explicitly stated otherwise, the common
+real type is alo the corresponding real type of the result, whose type domain is
+the type domian of the operands if they are the same, and complex otherwise.
+This pattern is called the usual <em>arithmetic convresions</em>:</p>
+<ul class="simple">
+<li>First, if the corresponding real type of either operand is <tt class="docutils literal"><span class="pre">long</span> <span class="pre">double</span></tt>,
+the other operand is converted, without change of type domain, to a type
+whose coresponding real type is <tt class="docutils literal"><span class="pre">long</span> <span class="pre">double</span></tt>.</li>
+<li>Otherwise, if the corresponding real type of either operand is <tt class="docutils literal"><span class="pre">double</span></tt>, the
+other operand is converted, without change of type domain, to a type whose
+coreesponding real type is <tt class="docutils literal"><span class="pre">double</span></tt>.</li>
+<li>Otherwise, if the corresponding real type of either operand is <tt class="docutils literal"><span class="pre">float</span></tt>, the
+other operand is converted, without change of type domain, to a type whose
+coreesponding real type is <tt class="docutils literal"><span class="pre">float</span></tt>.</li>
+<li>Otherwise, the integer promotions are performed on both operands. Then the
+following rules are applied to the promoted operands:<ul>
+<li>If both operands have the same type, then no further conversion is needed.</li>
+<li>Otherwise, if both operands have signed integer types or both have unsigned
+integer types, the operand with the type of lesser integer conversion rank
+is converted to the type of the operand with greater rank.</li>
+<li>Otherwise, if the operand that has unsigned integer type has rank greater
+or equal to the rank of the type of the other operand, then the operand with
+signed integer type is converted to the type of the operand with unsigned
+integer type.</li>
+<li>Otherwise, if the type of the operand with signed integer type can represent
+all of the values of the type of the operand with unsigned integer type,
+then the operand with unsigned integer type is converted to the type of the
+operand with signed integer type.</li>
+<li>Otherwise, both operands are converted to the unsigned integer type
+corresponding to the type of the operand with signed integer type.</li>
+</ul>
+</li>
+<li>The values of floating operands and of the results of floating expressions may
+be represented in greater precision and range than that required by the type;
+the types are not changed thereby.</li>
+</ul>
+</div>
+<div class="section" id="expressions">
+<span id="index-1"></span><h2>4.2. Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h2>
+<p>Majority of this comes from specification n1124.pdf. It can be found at
+<a class="reference external" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf">http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf</a>. An expression is a
+sequence of operators and operands. This sequence of operators and operands will
+lead to some computation; needless to say, however, it may designate an object
+or a function or it may generate a side effect or a combination. The value
+computations of the operands of an operator are sequenced before the value
+computation of the result of the operator.</p>
+<p>Consider the following where <tt class="docutils literal"><span class="pre">++</span></tt> is used as prefix and postfix increment
+unary operator, which should increment the value of operand after evaluating the
+operand:</p>
+<blockquote>
+<div><p>i = ++i + 1;</p>
+<p>a[i++] = i;</p>
+</div></blockquote>
+<p>however, this is an undefined bahavior because if a side effect on a scalar
+(all arithmetic and pointer types are scalar) object is unsequenced relative to
+either a different side effect on the same scalar onject or a value computation
+using the value of the same scalar object,  the behavior is undefined. If there
+are multiple allowable orderings of the subexpression of an expression, the
+behavior is undefined if such an unsequenced side effect occurs in any of the
+orderings.</p>
+<p>The groupings of operators and operands is indicated by the syntax. The syntax
+specifies the precedence of operators in the evaluation, highest precedence
+first. The table is given later. The exceptions are cast expressions as operands
+of unary operators, and an operand contained between any of the following pairs
+of operators: grouping parentheses (), subscripting brackets[], function call
+parentheses (), and the conditional operator ?:. Except as specified later,
+side effects and value computations of subexpressions are unsequenced. In an
+expression that is evaluated more than once during the execution of a program,
+unsequenced and indeterminately sequenced evaluations of its subexpressions
+need not be performed consistently in different evaluations.</p>
+<p>Some operators (the unary operator ~, and the binary operators &lt;&lt;, &gt;&gt;, &amp;, ^,
+and |, collectively described as bitwise opearators) are required to have
+operands that have integer types. These operators yield values that depend on
+the internal representation of intergers, and have implementation-defined and
+undefined aspects for signed types.</p>
+<p>If an exceptional condition occurs during the evaluation of an expression (that
+is, if the result is not mathematicslly defined or not in the range of
+representable values for its type), the behavior is undefined.</p>
+<p>The effective type of an object for an access to its stored value is the
+declared type of the object, if any. Note that allocated objects have no
+declared type. If a value is stored into an object having no declared type
+through an lvalue (a value whose address can be taken) having a type that is not
+a character type, then the type of the lvalue becomes the effective type of the
+object for that access and for subsequent accesses that do not modify the stored
+value. If a value is copied into an object having no declared type using
+<tt class="docutils literal"><span class="pre">memcpy</span></tt> or <tt class="docutils literal"><span class="pre">memmove</span></tt>, or is copied as an array of character type, then the
+effective type of the modified object for that access and for subsequent
+accesses that do not modify the value is the effective type of the object from
+which the value is copied, if it has one. For all other accesses to an object
+having no declared type, the effective type of the object is simply the type of
+the lvalue used for the access.</p>
+<p>An object will have its stored value accessed only by an lvalue expression that
+has one of the following types:</p>
+<ul class="simple">
+<li>a type compatible with the effective type of the object,</li>
+<li>a qualified version of a type compatible with the effective type of the
+object,</li>
+<li>a type that is the signed or unsigned type corresponding to the effective type
+of the object,</li>
+<li>a type that is the signed or unsigned type corresponding to a qualified</li>
+<li>version of the effective type of the object,</li>
+<li>an aggregate or union type that includes one of the aforementioned types among
+its members (including, recursively, a member of a subaggregate or contained
+union), or a character type.</li>
+</ul>
+<p>A floating expression may be contracted, that is, evaluated as though it were
+an atomic operation, thereby omitting rounding errors implied by the source code
+and the expression evaluation method. A contracted expression might also omit
+raising of floating-point exceptions. The <tt class="docutils literal"><span class="pre">FP_CONTRACT</span></tt> pragma in provides a
+way to disallow contracted expressions. Otherwise, whether and how expressions
+are contracted is implementation-defined.</p>
+<div class="section" id="primary-expressions">
+<span id="index-2"></span><h3>4.2.1. Primary Expressions<a class="headerlink" href="#primary-expressions" title="Permalink to this headline">¶</a></h3>
+<p>An identifer is a primary expression, provided it has been decared as
+designating an object (in which case it is an lvalue) or a function (in which
+case it is a function designator). Thus, an undeclared identifire is a violation
+of syntax.</p>
+<p>A constant is a primary expression. Its type depends on its form and lvalue (A
+value whose memory address can be taken. All variables except addresses
+themselves fall in this category).</p>
+<p>A string literal is a primary expression. It is an lvalue.</p>
+<p>A parenthesized expression is a primary expression. Its type and value are
+identical to those of upparenthesized expression. It is an lvalue, a function
+designator, or a void expression if the unparenthesized expression is,
+respectively, an lvalue, a function designator, or a void expression.</p>
+</div>
+</div>
+<div class="section" id="operators">
+<h2>4.3. Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<p>C is very rich in operators considering the fact that it is so old. So what I
+will do is that divide them in groups and then study them. Each operator is
+given in its own section to ease the navigation. After describing the operators
+example programs are also given with their output and brief description as
+always.</p>
+</div>
+<div class="section" id="additive-operators">
+<span id="index-3"></span><h2>4.4. Additive Operators<a class="headerlink" href="#additive-operators" title="Permalink to this headline">¶</a></h2>
+<p>There are two operators in this category. One you have seen in second chapter.
+These are + and -.</p>
+<p>For addition, either both the operands will have arithmetic type, or one operand
+will be a pointer to an object type and the other will have integer type.
+(Incrementing is equivalent to adding 1.) We will see pointer arithmetic in the
+chapter dealing with pointers and arrays.</p>
+<p>For subtraction following will hold:</p>
+<ul class="simple">
+<li>both operands have arithmetic type;</li>
+<li>both operands are pointers to qualified or unqualified versions of compatible
+object types; or</li>
+<li>the left operand is a pointer to an object type and the right operand has
+integer type. (Decrementing is equivalent to subtracting 1.)</li>
+</ul>
+<p>If both operands have arithmetic type, the usual arithmetic conversions are
+performed on them. The result of the binary + operator is the sum of the
+operands. The result of the binary - operator is the difference resulting from
+the subtraction of the second operand from the first. There is also something
+called pointer arithmetic which we will see in Chapter 6 describing pointers and
+arrays.</p>
+</div>
+<div class="section" id="multiplicative-operators">
+<span id="index-4"></span><h2>4.5. Multiplicative Operators<a class="headerlink" href="#multiplicative-operators" title="Permalink to this headline">¶</a></h2>
+<p>There are three multiplicative operators. These are *, / and %. Each of the
+operands for these operands will have arithmetic type. That is character string
+cannot participate. The operands of % will have interger type. The usual
+arithmetic conversion are performed on the operands. The result of binary *
+operator is the product of operands. The result of the / operator is the
+quotient from the division; the result of the % operator is the remainder. In
+both the operations, if denominator is zero, the behavior is undefined. When
+integers are divided, the result of / operator is the algebraic quotient with
+any fractional parts discarded. This is often called &#8220;truncation towards zero&#8221;.
+Let us see a small program demonstrating these five arithmetic operators:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Arithmetic operators</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of arithmetic operators</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">f</span><span class="o">=</span> <span class="mf">6.45</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">iResult</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">fResult</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">cResult</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+
+  <span class="n">cResult</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;cResult = %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">cResult</span><span class="p">);</span>
+  <span class="n">cResult</span> <span class="o">=</span> <span class="n">cResult</span> <span class="o">-</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;cResult = %c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">cResult</span><span class="p">);</span>
+
+  <span class="n">iResult</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;iResult = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">iResult</span><span class="p">);</span>
+  <span class="n">iResult</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">c</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;iResult = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">iResult</span><span class="p">);</span>
+  <span class="n">iResult</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Result = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">iResult</span><span class="p">);</span>
+  <span class="n">iResult</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;iesult = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">iResult</span><span class="p">);</span>
+
+  <span class="n">fResult</span> <span class="o">=</span> <span class="n">f</span> <span class="o">*</span> <span class="mf">2.12</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;fesult = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">fResult</span><span class="p">);</span>
+  <span class="n">fResult</span> <span class="o">=</span> <span class="n">f</span> <span class="o">-</span> <span class="n">i</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;fesult = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">fResult</span><span class="p">);</span>
+  <span class="n">fResult</span> <span class="o">=</span> <span class="n">f</span> <span class="o">/</span> <span class="mf">1.12</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;fesult = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">fResult</span><span class="p">);</span>
+  <span class="n">fResult</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">%</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;fesult = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">fResult</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">cResult</span> <span class="o">=</span> <span class="n">K</span>
+<span class="n">cResult</span> <span class="o">=</span> <span class="n">F</span>
+<span class="n">iResult</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">iResult</span> <span class="o">=</span> <span class="mi">650</span>
+<span class="n">Result</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">iesult</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">fesult</span> <span class="o">=</span> <span class="mf">13.674000</span>
+<span class="n">fesult</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.550000</span>
+<span class="n">fesult</span> <span class="o">=</span> <span class="mf">5.758928</span>
+<span class="n">fesult</span> <span class="o">=</span> <span class="mf">1.000000</span>
+</pre></div>
+</div>
+<p>First cResult is sumof <tt class="docutils literal"><span class="pre">'A'</span> <span class="pre">+</span> <span class="pre">i</span></tt> which is <tt class="docutils literal"><span class="pre">'K'</span></tt> as <tt class="docutils literal"><span class="pre">'K'</span></tt> comes ten
+positions after <tt class="docutils literal"><span class="pre">A</span></tt> in ASCII table. Then we subtract five and go back to
+<tt class="docutils literal"><span class="pre">F</span></tt>.</p>
+<p>First iReasult is <tt class="docutils literal"><span class="pre">10</span> <span class="pre">-</span> <span class="pre">i</span></tt> where value of <tt class="docutils literal"><span class="pre">i</span></tt> is <tt class="docutils literal"><span class="pre">10</span></tt> hence result is
+<tt class="docutils literal"><span class="pre">0</span></tt>. Next we multiply it with <tt class="docutils literal"><span class="pre">c</span></tt> which contains <tt class="docutils literal"><span class="pre">'A'</span></tt> who has got ASCII
+value of <tt class="docutils literal"><span class="pre">65</span></tt> and result becomes <tt class="docutils literal"><span class="pre">650</span></tt>. Then We take sum of <tt class="docutils literal"><span class="pre">'A'</span></tt> and
+<tt class="docutils literal"><span class="pre">i</span></tt> and divide by <tt class="docutils literal"><span class="pre">3</span></tt> so the result is <tt class="docutils literal"><span class="pre">25</span></tt> as it is a division of <tt class="docutils literal"><span class="pre">75</span></tt>
+by <tt class="docutils literal"><span class="pre">3</span></tt>. Next we use modulus operator and remainder is <tt class="docutils literal"><span class="pre">1</span></tt>. Note that in case
+of / and % if denominator is zero the behavior is undefined.</p>
+<p>Same way you can udnerstand floating-point operations. Note that you cannot use
+modulus operator if either of the operands are floating-point numbers as it will
+make no sense because of data type promotion rules. Here data type promotion
+rule says smaller data types will be converted to bigger data types. Also, if
+there is a data type on left side of assignment the result of applying the
+operator to operands will be converted to the type of that. chars are promoted
+to ints, ints are promoted to floats anf floats to double. The point is that
+conversion will try to keep as much data as possible.</p>
+</div>
+<div class="section" id="relational-operators">
+<span id="index-5"></span><h2>4.6. Relational Operators<a class="headerlink" href="#relational-operators" title="Permalink to this headline">¶</a></h2>
+<p>There are four relational operators: &lt;, &gt;, &lt;= and &gt;=. One of the following will
+be true for these operators:</p>
+<ul class="simple">
+<li>both operands have real type;</li>
+<li>both operands are pointers to qualified or unqualified versions of compatible
+object types (types that fully describe onjects; we will see pointers later);
+or</li>
+<li>both operands are pointers to qualified or unqualified versions of compatible
+incomplete types (types that describe onjects but lack information needed to
+determine their size).</li>
+<li>If both the operands have arithmetic type, the usual arithmetic convrsions are
+performed.</li>
+<li>For the purposes of these operators, a pointer to an object that is not an
+element of an array behaves the same as a pointer to the first element of an
+array of length onr with the type of the object as its element type.</li>
+<li>When two pointers are compared, the result depends on the relative locations
+in the address space of the objects pointed to. If two pointers to object or
+incomplete types both point to the same object, or both point one past the
+last element of the same array object, they compare equal. If the objects
+pointed to are members of the same aggregate object, pointers to structure
+members declared later compare greater than pointers to members declared
+earlier in the structure, and pointers to array elements with larger
+subscript values compare greater than pointers to elements of the same array
+with lower subscript values. All pointers to members of the same union object
+compare equal. If the expression <tt class="docutils literal"><span class="pre">P</span></tt> points to an element of an array object
+and the expression <tt class="docutils literal"><span class="pre">Q</span></tt> points to the last element of the same array object,
+the pointer expression <tt class="docutils literal"><span class="pre">Q+1</span></tt> compares greater than <tt class="docutils literal"><span class="pre">P</span></tt>. In all other
+cases, the behavior is undefined.</li>
+<li>Each of the operators <tt class="docutils literal"><span class="pre">&lt;</span></tt> (less than), <tt class="docutils literal"><span class="pre">&gt;</span></tt> (greater than), <tt class="docutils literal"><span class="pre">&lt;=</span></tt> (less
+than or equal to), and <tt class="docutils literal"><span class="pre">&gt;=</span></tt> (greater than or equal to) will yield 1 if the
+specified relation is true and 0 if it is false. The expression a&lt;b&lt;c is not
+implemented as in ordinary mathematics. As the syntax indicates, it means
+(a&lt;b)&lt;c. The result has type int.</li>
+</ul>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Author : Shiv S. Dayal</span>
+<span class="c1">// Description : Demo of relational operator</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdbool.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="kt">_Bool</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">1</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">0</span>
+</pre></div>
+</div>
+<p>Note that you should not apply these to floating-point data types as they may
+not be represented correctly and two different entities have the same internal
+representation.</p>
+</div>
+<div class="section" id="equality-operators">
+<span id="index-6"></span><h2>4.7. Equality Operators<a class="headerlink" href="#equality-operators" title="Permalink to this headline">¶</a></h2>
+<p>There are two equlity operators == and !=. Following contraints apply to these:</p>
+<ul class="simple">
+<li>both operands have arithmetic type;</li>
+<li>both operands are pointers to qualified or unqualified versions of compatible
+types; or</li>
+<li>one operand is a pointer to an object or incomplete type and the other is a</li>
+<li>pointer to a qualified or unqualified version of void; or</li>
+<li>one operand is a pointer and the other is a null pointer constant.</li>
+</ul>
+<p>Given below are semantics of these operators.</p>
+<ul class="simple">
+<li>The == (equal to) and != (not equal to) operators are analogous to the
+relational operators except for their lower precedence. Because of the
+precedences, a&lt;b == c&lt;d is 1 whenever a&lt;b and c&lt;d have the same truth-value.
+Each of the operators yields 1 if the specified relation is true and 0 if it
+is false. The result has type int. For any pair of operands, exactly one of
+the relations is true.</li>
+<li>If both of the operands have arithmetic type, the usual arithmetic conversions
+are performed. Values of complex types are equal if and only if both their
+real parts are equal and also their imaginary parts are equal. Any two values
+of arithmetic types from different type domains are equal if and only if the
+results of their conversions to the (complex) result type determined by the
+usual arithmetic conversions are equal.</li>
+<li>Otherwise, at least one operand is a pointer. If one operand is a pointer and
+the other is a null pointer constant, the null pointer constant is converted
+to the type of the pointer. If one operand is a pointer to an object or
+incomplete type and the other is a pointer to a qualified or unqualified
+version of void, the former is converted to the type of the latter.</li>
+<li>Two pointers compare equal if and only if both are null pointers, both are
+pointers to the same object (including a pointer to an object and a subobject
+at its beginning) or function, both are pointers to one past the last element
+of the same array object, or one is a pointer to one past the end of one array
+object and the other is a pointer to the start of a different array object
+that happens to immediately follow the first array object in the address
+space.</li>
+<li>For the purposes of these operators, a pointer to an object that is not an
+element of an array behaves the same as a pointer to the first element of an
+array of length one with the type of the object as its element type.</li>
+</ul>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Author : Shiv S. Dayal</span>
+<span class="c1">// Description : Demo of equality operator</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdbool.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="kt">_Bool</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">0</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="increment-and-decrement-operators">
+<span id="index-7"></span><h2>4.8. Increment and Decrement Operators<a class="headerlink" href="#increment-and-decrement-operators" title="Permalink to this headline">¶</a></h2>
+<p>There is one increment and one decrement operator. ++ and <tt class="docutils literal"><span class="pre">--</span></tt>. Both come
+in two forms prefix and postfix. First we will see prefix versions then postfix
+ones. There is only one constraint on prefix operators of these and that is the
+operand of the prefix increment or decrement operator will have qualified or
+unqualified real or pointer type and will be a modifiable lvalue.</p>
+<p>The value of the operand of prefix ++ operator is incremented. The result is the
+new value of the operand after incrementation. The ++E is equivalent to (E +=
+1).</p>
+<p>The prefix &#8211; operator is analogous to the prefix ++ operator except that the
+value of the operand is decremented. Now we will see postfix ones; the
+constraints are the same as prefix ones.</p>
+<p>The result of the postfix ++ operator is the value of the operand. As a side
+effect, the value of the operand object is incremented (that is, the value 1 of
+the appropriate type is added to it). The value computation of the result is
+sequenced before the side effect of updating the stored value of the operand.
+With respect to an indeterminately-sequenced function call, the operation of
+postfix ++ is a single evaluation. The prefix <tt class="docutils literal"><span class="pre">--</span></tt> operator is analogous
+to the prefix ++ operator except that the value of the operand is incremented.
+Here is the demo:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Author : Shiv S. Dayal</span>
+<span class="c1">// Description : Demo of increment decrement operators</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">7.123</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">++</span><span class="n">f</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">--</span><span class="n">f</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">++</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">--</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">8.123000</span>
+<span class="mf">7.123000</span>
+<span class="mf">7.123000</span>
+<span class="mf">8.123000</span>
+<span class="mf">7.123000</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="logical-operators">
+<span id="index-8"></span><h2>4.9. Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h2>
+<p>There are two such operators. &amp;&amp; logical AND and || locical OR. Both the
+operators have the same constraints and it is that both the operands will have
+scalar type.</p>
+<p>The &amp;&amp; operator gives 1 if both the operands are non-zero else 0. The result type
+is <strong>int</strong>. It is different from bitwise &amp; operator in the sense that it
+guarantess left-to-right evaluation; if the second operand is evaluated, there is
+a sequence point between the evaluations of the first and second operands. If the
+first operand is 0 then the second operand is not evaluated. This is known as
+&#8220;short-circuit evaluation&#8221;.</p>
+<p>The || operator gives 1 if any of operands are non-zero else it gives 0. Same as
+logical AND operator and unlike bitwise | operator it guarantees left-to-right
+evaluation and same goes for sequence points. If first operand is non-zero, the
+second is not evaluated.</p>
+<div class="highlight-c"><div class="highlight"><pre>      <span class="c1">// Author : Shiv S. Dayal</span>
+<span class="c1">// Description : Demo of logical AND &amp; OR operators</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdbool.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="n">result</span><span class="p">;</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span><span class="o">&amp;&amp;</span><span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span><span class="o">||</span><span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">k</span><span class="o">&amp;&amp;</span><span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">k</span><span class="o">||</span><span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">1</span>
+<span class="mi">1</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>note the use of <strong>bool</strong> here instead of <strong>_Bool</strong>.</p>
+</div>
+<div class="section" id="bitwise-operators">
+<span id="index-9"></span><h2>4.10. Bitwise Operators<a class="headerlink" href="#bitwise-operators" title="Permalink to this headline">¶</a></h2>
+<p>There are three bitwise operators. &amp;, |, and ^. AND, OR and EX-OR respectively.
+OR is also called inclusive OR. These have the same contsraints and it is that
+operands should be integer types. The usual arithmetic conversions are performed
+on the operands.</p>
+<p>The result of bianry &amp; is the bitwise AND of operands (that is, each bit in the
+result is set if and only if each of the corresponding bits in the operands is
+set.)</p>
+<p>The result of the ^ operator is the bitwise exclusive OR of the operands (that
+is, each bit in the result is set if and only if exactly one of the corresponding
+bits in the converted operands is set).</p>
+<p>The result of the | operator is the bitwise inclusive OR of the operands (that
+is, each bit in the result is set if and only if at least one of the
+corresponding bits in the converted operands is set).</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Author : Shiv S. Dayal</span>
+<span class="c1">// Description : Demo of bitwise operators</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdbool.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span><span class="o">&amp;</span><span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span><span class="o">|</span><span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">i</span><span class="o">^</span><span class="n">j</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bitwise-shift-operators">
+<span id="index-10"></span><h2>4.11. Bitwise Shift Operators<a class="headerlink" href="#bitwise-shift-operators" title="Permalink to this headline">¶</a></h2>
+<p>The constraint is same as other bitwise operators that operands should be
+integers. The integer promotions are performed on each of the operands. The type
+of the result if that of the promoted left operand. If the value of the right
+operand is negative or is greater than or equal to the width of the promoted left
+operand, the behavior is undefined.</p>
+<p>The result of E1 &lt;&lt; E2 is E1 left-shifted E2 bit-positions; vacated
+bits are filled with zeros. If E1 has an unsigned type, the value of the
+result is <span class="math">\(E1 * 2^{E2}\)</span> , reduced modulo one more than the maximum value
+representable in the reasult type. If E1 has a signed type and and
+nonnegative value, and <span class="math">\(E1 * 2^{E2}\)</span>  is representable in the result type,
+then that is the resulting value; otherwise the behavior is undefined.</p>
+<p>The result of E1 &gt;&gt; E2 is E1 right-shifted E2 bit-positions. If
+E1 has an unsigned type or if E1 has a signed type and a nonegative
+value, the value of the result is the integral part of the quotient of
+<span class="math">\(E1/2^{E2}\)</span>. If E1 has a signed type and a negative value, the
+resulting value is implementation-defined.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Author : Shiv S. Dayal</span>
+<span class="c1">// Description : Demo of shift operators</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span>  <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span><span class="sc">&#39;A&#39;</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">c</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">c</span><span class="o">&gt;&gt;</span><span class="n">i</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="assignment-operators">
+<span id="index-11"></span><h2>4.12. Assignment Operators<a class="headerlink" href="#assignment-operators" title="Permalink to this headline">¶</a></h2>
+<p>These are = *= /= %= += -= &lt;&lt;= &gt;&gt;= &amp;= ^= and |= The only constraint is that
+left operand should be modifiable lvalue. An assignment operator stores a value
+in the object designated by the left operand. An assignment expression has the
+value of the left operand after the assignment, but is not an lvalue. The type of
+an assignment expression is the type of the left operand unless the left operand
+has qualified type, in which case it is the unqualified version of the type of
+the left operand. The side effect of updating the stored value of the left
+operand is sequenced after the value computations of the left and right operands.
+The evaluations of the operands are unsequenced.</p>
+<div class="section" id="simple-assignment">
+<span id="index-12"></span><h3>4.12.1. Simple Assignment<a class="headerlink" href="#simple-assignment" title="Permalink to this headline">¶</a></h3>
+<p>One of the following will hold:</p>
+<ul class="simple">
+<li>the left operand has qualified or unqualified arithmetic type and the right has
+arithmetic type;</li>
+<li>the left operand has a qualified or unqualified version of a structure or union  type compatible with the type of the right;</li>
+<li>both operands are pointers to qualified or unqualified versions of compatible
+types, and the type pointed to by the left has all the qualifiers of the type
+pointed to by the right;</li>
+<li>one operand is a pointer to an object or incomplete type and the other is a
+pointer to a qualified or unqualified version of void, and the type pointed to
+by the left has all the qualifiers of the type pointed to by the right;</li>
+<li>the left operand is a pointer and the right is a null pointer constant; or</li>
+<li>the left operand has type _Bool and the right is a pointer.</li>
+</ul>
+<p>In simple assignment (=), the value of the right operand is converted to the type
+of the assignment expression and replaces the value stored in the object
+designated by the left operand.</p>
+<p>If the value being stored in an object is read from another object that overlaps
+in any way the storage of the first object, then the overlap will be exact and
+the two objects will have qualified or unqualified versions of a compatible type;
+otherwise, the behavior is undefined.</p>
+</div>
+<div class="section" id="compound-assignment">
+<span id="index-13"></span><h3>4.12.2. Compound Assignment<a class="headerlink" href="#compound-assignment" title="Permalink to this headline">¶</a></h3>
+<p>For the operators += and -= only, either the left operand will be a pointer to an
+object type and the right will have integer type, or the left operand will have
+qualified or unqualified arithmetic type and the right will have arithmetic type.
+For the other operators, each operand will have arithmetic type consistent with
+those allowed by the corresponding binary operator.</p>
+<p>A compound assignment of the form E1 op= E2 is equivalent to the simple
+assignment expression E1 = E1 op (E2), except that the lvalue E1 is evaluated
+only once, and with respect to an indeterminately-sequenced function call, the
+operation of a compound assignment is a single evaluation.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of compound assignments.</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span>   <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">j</span>   <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">4.7</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">result</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+
+  <span class="n">result</span> <span class="o">+=</span> <span class="n">i</span><span class="o">+</span><span class="n">f</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">result</span> <span class="o">-=</span> <span class="n">f</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+  <span class="n">j</span> <span class="o">&lt;&lt;=</span> <span class="n">i</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">7.700000</span>
+<span class="mf">3.000000</span>
+<span class="mi">24</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conditoinal-operators">
+<span id="index-14"></span><h3>4.12.3. Conditoinal Operators<a class="headerlink" href="#conditoinal-operators" title="Permalink to this headline">¶</a></h3>
+<p>It has the following form: E1 ? E2 :E3;. If E1 is true then E2 is assigned to
+lvalue else E2 is assigned. It has following constraints:</p>
+<ul class="simple">
+<li>The first operand will have scalar type.</li>
+<li>One of the following will hold for the second and third operands:<ul>
+<li>both operands have arithmetic type;</li>
+<li>both opearands have the same structure or union type;</li>
+<li>both operands have void type;</li>
+<li>both operands are pointers to qualified or unqualified versions of compatible
+types;</li>
+<li>one operand is a pointer and the other is a null pointer constant; or</li>
+<li>one operand is a pointer to an object or incomplete type and the other is a
+pointer to a qualified or unqualified version of void.</li>
+</ul>
+</li>
+</ul>
+<p>The first operand is evaluated; there is a sequence point between its evaluation
+and the evaluation of the second or third operand (whichever is evaluated). The
+second operand is evaluated only if the first compares unequal to 0; the third
+operand is evaluated only if the first compares equal to 0; the result is the
+value of the second or third operand (whichever is evaluated), converted to the
+type described below. Note that a conditional expression does not give an lvalue.</p>
+<p>If both the second and third operands have arithmetic type, the result type that
+would be determined by the usual arithmetic conversions, were they applied to
+those two operands, is the type of the result. If both the operands have
+structure or union type, the result has that type. If both operands have void
+type, the result has void type.</p>
+<p>If both the second and third operands are pointers or one is a null pointer
+constant and the other is a pointer, the result type is a pointer to a type
+qualified with all the type qualifiers of the types pointed-to by both operands.
+Furthermore, if both operands are pointers to compatible types or to differently qualified versions of compatible types, the result type is a pointer to an
+appropriately qualified version of the composite type; if one operand is a null
+pointer constant, the result has the type of the other operand; otherwise, one
+operand is a pointer to void or a qualified version of void, in which case the
+result type is a pointer to an appropriately qualified version of void.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Author : Shiv S. Dayal</span>
+<span class="c1">// Description : Demo of conditional operator</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span><span class="o">?</span> <span class="mi">7</span><span class="o">:</span><span class="mi">10</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>output is 7 as 4 is less than 5 which is true.</p>
+</div>
+<div class="section" id="comma-operators">
+<span id="index-15"></span><h3>4.12.4. Comma Operators<a class="headerlink" href="#comma-operators" title="Permalink to this headline">¶</a></h3>
+<p>It is a very simple operator. The left operand of a comma operator is evaluated
+as a void expression; there is a sequence point between its evaluation and that
+of the right operand. Then the right operand is evaluated; the result has its
+type and value. A comma operator does not give an lvalue.</p>
+</div>
+<div class="section" id="sizeof-operators">
+<span id="index-16"></span><h3>4.12.5. sizeof Operators<a class="headerlink" href="#sizeof-operators" title="Permalink to this headline">¶</a></h3>
+<p>You have already see sizeof operator in second chapter when we saw sizes of data
+types. However here is the constraint: the sizeof operator will not be applied to
+an expression that has function type or an incomplete type, to the parenthesized
+name of such a type, or to an expression that designates a bit-field member.</p>
+<p>The sizeof operator yields the size (in bytes) of its operand, which may be an
+expression or the parenthesized name of a type. The size is determined from the
+type of the operand. The result is an integer. If the type of the operand is a
+variable length array type, the operand is evaluated; otherwise, the operand is
+not evaluated and the result is an integer constant.</p>
+<p>When applied to an operand that has type char, unsigned char, or signed char,
+(or a qualified version thereof) the result is 1. When applied to an operand that
+has array type, the result is the total number of bytes in the array. When
+applied to an operand that has structure or union type, the result is the total
+number of bytes in such an object, including internal and trailing padding.</p>
+</div>
+<div class="section" id="unary-arithmetic-operators">
+<span id="index-17"></span><h3>4.12.6. Unary Arithmetic Operators<a class="headerlink" href="#unary-arithmetic-operators" title="Permalink to this headline">¶</a></h3>
+<p>The operand of the unary + or - operator will have arithmetic type; of the ~
+operator, integer type; of the ! operator, scalar type.</p>
+<p>The result of the unary + operator is the value of its (promoted) operand. The
+integer promotions are performed on the operand, and the result has the promoted
+type.</p>
+<p>The result of the unary - operator is the negative of its (promoted) operand. The
+integer promotions are performed on the operand, and the result has the promoted
+type.</p>
+<p>The result of the ~ operator is the bitwise complement of its (promoted) operand
+(that is, each bit in the result is set if and only if the corresponding bit in
+the converted operand is not set). The integer promotions are performed on the
+operand, and the result has the promoted type. If the promoted type is an
+unsigned type, the expression ~E is equivalent to the maximum value representable
+in that type minus E.</p>
+<p>The result of the logical negation operator ! is 0 if the value of its operand compares
+unequal to 0, 1 if the value of its operand compares equal to 0. Theresult has type
+int. The expression !E is equivalent to (0==E).</p>
+<p>We will see casting, array subscripting, function parenthes, address and
+indirection operators later at appropriate time. For now I am going to tell you
+about operator precedence and associativity and then about grouping parenthes.
+Given below is the table for operator precedence and associativity, however, you
+may not be familiar with few of them but later you will be:</p>
+<table border="1" class="docutils" id="index-18">
+<colgroup>
+<col width="70%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operators</th>
+<th class="head">Associativity</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>() [] . -&gt; ++ &#8211; (postfix)</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-odd"><td>++ &#8211; + - (unary) ! ~ (types) * &amp; sizeof</td>
+<td>right-to-lfet</td>
+</tr>
+<tr class="row-even"><td>* / %</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-odd"><td>+ - (Addition/Subtraction)</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-even"><td>&lt;&lt; &gt;&gt;</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-odd"><td>&lt; &gt; &lt;= &gt;=</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-even"><td>== !=</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-odd"><td>&amp;</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-even"><td>^</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-odd"><td>|</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-even"><td>&amp;&amp;</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-odd"><td>||</td>
+<td>left-to-right</td>
+</tr>
+<tr class="row-even"><td>Assignement operators</td>
+<td>right-to-left</td>
+</tr>
+<tr class="row-odd"><td>,</td>
+<td>left-to-right</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="grouping-parentheses">
+<span id="index-19"></span><h2>4.13. Grouping parentheses<a class="headerlink" href="#grouping-parentheses" title="Permalink to this headline">¶</a></h2>
+<p>Grouping parentheses are used to override operator precedence and group
+expressions. NEVER EVER try to memorize and rely on precedence of operators.
+Always use grouping parentheses. Till now I have shown very simple examples of
+operators; here are some complex ones:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Author: Shiv Shankar Dayal</span>
+<span class="c1">// Description: Demo of grouping parentheses</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mf">5.2</span><span class="o">*</span><span class="p">(</span><span class="mf">3.7</span><span class="o">+</span><span class="mf">2.3</span><span class="p">));</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">((</span><span class="mi">4</span><span class="o">&amp;</span><span class="mi">5</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="mi">7</span><span class="o">^</span><span class="mi">5</span><span class="p">)));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This small program shows you what can go wrong if you rely on memory. It allows
+you do addition first and then multiplcation. Inner parentheses are evaluated
+first then inner ones. This concludes our chapter on operators and expressions.
+Next we focus on control statements and flow statements.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

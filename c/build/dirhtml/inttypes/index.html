@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>20. Format conversion of integer types &lt;inttypes.h&gt; &mdash; C99  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="C99  documentation" href="../" />
+    <link rel="next" title="21. Alternative spellings &lt;iso646.h&gt;" href="../iso646/" />
+    <link rel="prev" title="19. Characteristics of floating types &lt;float.h&gt;" href="../float/" />
+<script src="../_static/analytics.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../css/math.css" type="text/css" />
+
+  </head>
+  <body>
+
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="../">
+          C99</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">9. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">10. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">11. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">12. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">13. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">14. Diagnostics <tt class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">15. Complex arithmetic <tt class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">16. Character Handling <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">17. Errors <tt class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">18. Floating-point environment <tt class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">19. Characteristics of floating types <tt class="docutils literal"><span class="pre">&lt;float.h&gt;</span></tt></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">20. Format conversion of integer types <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">21. Alternative spellings <tt class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">22. Sizes of integer types <tt class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">23. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">24. Mathematics <tt class="docutils literal"><span class="pre">&lt;math.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">25. Nonlocal jumps <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">26. Signal handling <tt class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">27. Variable arguments <tt class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">28. Boolean type and values <tt class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">29. Common definitions <tt class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">30. Integer types <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">31. Input/output <tt class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">32. General utilities <tt class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">33. String handling <tt class="docutils literal"><span class="pre">&lt;string.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">34. Type-generic math <tt class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">35. Date and time <tt class="docutils literal"><span class="pre">&lt;time.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">36. Extended multibyte and wide character utilities <tt class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">37. Wide character classification and mapping utilities <tt class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">38. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">39. License</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">20. Format conversion of integer types <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt></a><ul>
+<li><a class="reference internal" href="#macros-for-format-specifiers">20.1. Macros for format specifiers</a></li>
+<li><a class="reference internal" href="#functions-for-greatest-width-integer-types">20.2. Functions for greatest-width integer types</a><ul>
+<li><a class="reference internal" href="#the-imaxabs-function">20.2.1. The <tt class="docutils literal"><span class="pre">imaxabs</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-imaxdiv-function">20.2.2. The <tt class="docutils literal"><span class="pre">imaxdiv</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-strtoimax-and-strtoumax-functions">20.2.3. The <tt class="docutils literal"><span class="pre">strtoimax</span></tt> and <tt class="docutils literal"><span class="pre">strtoumax</span></tt> functions</a></li>
+<li><a class="reference internal" href="#the-wcstoimax-and-wcstoumax-functions">20.2.4. The <tt class="docutils literal"><span class="pre">wcstoimax</span></tt> and <tt class="docutils literal"><span class="pre">wcstoumax</span></tt> functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../float/" title="Previous Chapter: 19. Characteristics of floating types <float.h>"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 19. Characterist...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../iso646/" title="Next Chapter: 21. Alternative spellings <iso646.h>"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">21. Alternative ... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/inttypes.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="format-conversion-of-integer-types-inttypes-h">
+<span id="index-0"></span><h1>20. Format conversion of integer types <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt><a class="headerlink" href="#format-conversion-of-integer-types-inttypes-h" title="Permalink to this headline">¶</a></h1>
+<p>The header <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt> includes the header <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt> and extends it
+with additional facilities provided by hosted implementations.</p>
+<p>It declares functions for manipulating greatest-width integers and converting
+numeric character strings to greatest-width integers, and it declares the type
+<tt class="docutils literal"><span class="pre">imaxdiv_t</span></tt> which is a structure type that is the type of the value returned
+by the <tt class="docutils literal"><span class="pre">imaxdiv</span></tt> function.</p>
+<p>For each type declared in <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt>, it defines corresponding macros for
+conversion specifiers for use with the formatted input/output functions.</p>
+<p><strong>Forward references:</strong> integer types <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt> (<a class="reference internal" href="../stdint/#stdint"><em>Integer types &lt;stdint.h&gt;</em></a>), formatted
+input/output functions (<a class="reference internal" href="../stdio/#id26"><em>Formatted input/output functions</em></a>), formatted wide character input/output
+functions (<a class="reference internal" href="../wchar/#id6"><em>Formatted wide character input/output functions</em></a>).</p>
+<div class="section" id="macros-for-format-specifiers">
+<span id="index-1"></span><h2>20.1. Macros for format specifiers<a class="headerlink" href="#macros-for-format-specifiers" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-2"></span><span class="target" id="index-3"></span><span class="target" id="index-4"></span><span class="target" id="index-5"></span><span class="target" id="index-6"></span><span class="target" id="index-7"></span><span class="target" id="index-8"></span><span class="target" id="index-9"></span><span class="target" id="index-10"></span><span class="target" id="index-11"></span><p id="index-12">Each of the following object-like macros <a class="footnote-reference" href="#id3" id="id1">[1]</a> expands to a character string
+literal containing a conversion specifier, possibly modified by a length
+modifier, suitable for use within the format argument of a formatted
+input/output function when converting the corresponding integer type. These
+macro names have the general form of <tt class="docutils literal"><span class="pre">PRI</span></tt> (character string literals for the
+<tt class="docutils literal"><span class="pre">fprintf</span></tt> and <tt class="docutils literal"><span class="pre">fwprintf</span></tt> family) or SCN (character string literals for the
+<tt class="docutils literal"><span class="pre">fscanf</span></tt> and <tt class="docutils literal"><span class="pre">fwscanf</span></tt> family), <a class="footnote-reference" href="#id4" id="id2">[2]</a> followed by the conversion specifier,
+followed by a name corresponding to a similar type name in <a class="reference internal" href="../stdint/#id3"><em>Integer types</em></a>. In these
+names, <tt class="docutils literal"><span class="pre">N</span></tt> represents the width of the type as described in <a class="reference internal" href="../stdint/#id3"><em>Integer types</em></a>. For
+example, <tt class="docutils literal"><span class="pre">PRIdFAST32</span></tt> can be used in a format string to print the value of an
+integer of type <tt class="docutils literal"><span class="pre">int_fast32_t</span></tt>.</p>
+<p>The <tt class="docutils literal"><span class="pre">fprintf</span></tt> macros for signed integers are:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">`` PRIdN PRIdLEASTN PRIdFASTN PRIdMAX PRIdPTR``</div>
+<div class="line">`` PRIiN PRIiLEASTN PRIiFASTN PRIiMAX PRIiPTR``</div>
+</div>
+</div></blockquote>
+<p>The <tt class="docutils literal"><span class="pre">fprintf</span></tt> macros for unsigned integers are:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">`` PRIoN PRIoLEASTN PRIoFASTN PRIoMAX PRIoPTR``</div>
+<div class="line">`` PRIuN PRIuLEASTN PRIuFASTN PRIuMAX PRIuPTR``</div>
+<div class="line">`` PRIxN PRIxLEASTN PRIxFASTN PRIxMAX PRIxPTR``</div>
+<div class="line">`` PRIXN PRIXLEASTN PRIXFASTN PRIXMAX PRIXPTR``</div>
+</div>
+</div></blockquote>
+<p>The <tt class="docutils literal"><span class="pre">fscanf</span></tt> macros for signed integers are:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">`` SCNdN SCNdLEASTN SCNdFASTN SCNdMAX SCNdPTR``</div>
+<div class="line">`` SCNiN SCNiLEASTN SCNiFASTN SCNiMAX SCNiPTR``</div>
+</div>
+</div></blockquote>
+<p>The <tt class="docutils literal"><span class="pre">fscanf</span></tt> macros for unsigned integers are:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">`` SCNoN SCNoLEASTN SCNoFASTN SCNoMAX SCNoPTR``</div>
+<div class="line">`` SCNuN SCNuLEASTN SCNuFASTN SCNuMAX SCNuPTR``</div>
+<div class="line">`` SCNxN SCNxLEASTN SCNxFASTN SCNxMAX SCNxPTR``</div>
+</div>
+</div></blockquote>
+<p>For each type that the implementation provides in <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt>, the
+corresponding fprintf macros shall be defined and the corresponding <tt class="docutils literal"><span class="pre">fscanf</span></tt>
+macros shall be defined unless the implementation does not have a suitable
+<tt class="docutils literal"><span class="pre">fscanf</span></tt> length modifier for the type.</p>
+<p>EXAMPLE</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;inttypes.h&gt;</span>
+<span class="cp">#include &lt;wchar.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">uintmax_t</span> <span class="n">i</span> <span class="o">=</span> <span class="n">UINTMAX_MAX</span><span class="p">;</span> <span class="c1">// this type always exists</span>
+
+  <span class="n">wprintf</span><span class="p">(</span><span class="s">L&quot;The largest integer value is %020&quot;</span> <span class="n">PRIxMAX</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>C++ implementations should define these macros only when
+<tt class="docutils literal"><span class="pre">__STDC_FORMAT_MACROS</span></tt> is defined before <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt> is included.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Separate macros are given for use with <tt class="docutils literal"><span class="pre">fprintf</span></tt> and <tt class="docutils literal"><span class="pre">fscanf</span></tt>
+functions because, in the general case, different format specifiers may be
+required for <tt class="docutils literal"><span class="pre">fprintf</span></tt> and <tt class="docutils literal"><span class="pre">fscanf</span></tt>, even when the type is the same.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions-for-greatest-width-integer-types">
+<h2>20.2. Functions for greatest-width integer types<a class="headerlink" href="#functions-for-greatest-width-integer-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-imaxabs-function">
+<span id="index-13"></span><h3>20.2.1. The <tt class="docutils literal"><span class="pre">imaxabs</span></tt> function<a class="headerlink" href="#the-imaxabs-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;inttypes.h&gt;</span>
+<span class="kt">intmax_t</span> <span class="nf">imaxabs</span><span class="p">(</span><span class="kt">intmax_t</span> <span class="n">j</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">imaxabs</span></tt> function computes the absolute value of an integer <tt class="docutils literal"><span class="pre">j</span></tt>. If the
+result cannot be represented, the behavior is undefined. <a class="footnote-reference" href="#id6" id="id5">[3]</a></p>
+<p><strong>Returns</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">imaxabs</span></tt> function returns the absolute value.</p>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[3]</a></td><td>The absolute value of the most negative number cannot be represented in
+two&#8217;s complement.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-imaxdiv-function">
+<span id="index-14"></span><h3>20.2.2. The <tt class="docutils literal"><span class="pre">imaxdiv</span></tt> function<a class="headerlink" href="#the-imaxdiv-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;inttypes.h&gt;</span>
+<span class="kt">imaxdiv_t</span> <span class="nf">imaxdiv</span><span class="p">(</span><span class="kt">intmax_t</span> <span class="n">numer</span><span class="p">,</span> <span class="kt">intmax_t</span> <span class="n">denom</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">imaxdiv</span></tt> function computes <tt class="docutils literal"><span class="pre">numer</span> <span class="pre">/</span> <span class="pre">denom</span></tt> and <tt class="docutils literal"><span class="pre">numer</span> <span class="pre">%</span> <span class="pre">denom</span></tt> in a
+single operation.</p>
+<p><strong>Returns</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">imaxdiv</span></tt> function returns a structure of type <tt class="docutils literal"><span class="pre">imaxdiv_t</span></tt> comprising
+both the quotient and the remainder. The structure shall contain (in either
+order) the members quot (the quotient) and rem (the remainder), each of
+which has type <tt class="docutils literal"><span class="pre">intmax_t</span></tt>. If either part of the result cannot be represented,
+the behavior is undefined.</p>
+</div>
+<div class="section" id="the-strtoimax-and-strtoumax-functions">
+<span id="index-15"></span><h3>20.2.3. The <tt class="docutils literal"><span class="pre">strtoimax</span></tt> and <tt class="docutils literal"><span class="pre">strtoumax</span></tt> functions<a class="headerlink" href="#the-strtoimax-and-strtoumax-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;inttypes.h&gt;</span>
+<span class="kt">intmax_t</span> <span class="nf">strtoimax</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">nptr</span><span class="p">,</span>
+<span class="kt">char</span> <span class="o">**</span> <span class="kr">restrict</span> <span class="n">endptr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">base</span><span class="p">);</span>
+<span class="kt">uintmax_t</span> <span class="nf">strtoumax</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">nptr</span><span class="p">,</span>
+<span class="kt">char</span> <span class="o">**</span> <span class="kr">restrict</span> <span class="n">endptr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">base</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">strtoimax</span></tt> and <tt class="docutils literal"><span class="pre">strtoumax</span></tt> functions are equivalent to the <tt class="docutils literal"><span class="pre">strtol,</span>
+<span class="pre">strtoll,</span> <span class="pre">strtoul</span></tt> and <tt class="docutils literal"><span class="pre">strtoull</span></tt> functions, except that the initial portion of
+the string is converted to <tt class="docutils literal"><span class="pre">intmax_t</span></tt> and <tt class="docutils literal"><span class="pre">uintmax_t</span></tt> representation,
+respectively.</p>
+<p><strong>Returns</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">strtoimax</span></tt> and <tt class="docutils literal"><span class="pre">strtoumax</span></tt> functions return the converted value, if any.
+If no conversion could be performed, zero is returned. If the correct value is
+outside the range of representable values, <tt class="docutils literal"><span class="pre">INTMAX_MAX,</span> <span class="pre">INTMAX_MIN</span></tt> or
+<tt class="docutils literal"><span class="pre">UINTMAX_MAX</span></tt> is returned (according to the return type and sign of the value,
+if any), and the value of the macro <tt class="docutils literal"><span class="pre">ERANGE</span></tt> is stored in <tt class="docutils literal"><span class="pre">errno</span></tt>.</p>
+<p><strong>Forward references:</strong> the <tt class="docutils literal"><span class="pre">strtol,</span> <span class="pre">strtoll,</span> <span class="pre">strtoul</span></tt> and <tt class="docutils literal"><span class="pre">strtoull</span></tt> functions
+(<a class="reference internal" href="../stdlib/#id9"><em>The strtol, strtoll, strtoul and strtoull functions</em></a>).</p>
+</div>
+<div class="section" id="the-wcstoimax-and-wcstoumax-functions">
+<span id="index-16"></span><h3>20.2.4. The <tt class="docutils literal"><span class="pre">wcstoimax</span></tt> and <tt class="docutils literal"><span class="pre">wcstoumax</span></tt> functions<a class="headerlink" href="#the-wcstoimax-and-wcstoumax-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stddef.h&gt; </span><span class="c1">// for wchar_t</span>
+<span class="cp">#include &lt;inttypes.h&gt;</span>
+<span class="kt">intmax_t</span> <span class="nf">wcstoimax</span><span class="p">(</span><span class="k">const</span> <span class="kt">wchar_t</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">nptr</span><span class="p">,</span>
+<span class="kt">wchar_t</span> <span class="o">**</span> <span class="kr">restrict</span> <span class="n">endptr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">base</span><span class="p">);</span>
+<span class="kt">uintmax_t</span> <span class="nf">wcstoumax</span><span class="p">(</span><span class="k">const</span> <span class="kt">wchar_t</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">nptr</span><span class="p">,</span>
+<span class="kt">wchar_t</span> <span class="o">**</span> <span class="kr">restrict</span> <span class="n">endptr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">base</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">wcstoimax</span></tt> and <tt class="docutils literal"><span class="pre">wcstoumax</span></tt> functions are equivalent to the <tt class="docutils literal"><span class="pre">wcstol,</span>
+<span class="pre">wcstoll,</span> <span class="pre">wcstoul</span></tt> and <tt class="docutils literal"><span class="pre">wcstoull</span></tt> functions except that the initial portion of
+the wide string is converted to <tt class="docutils literal"><span class="pre">intmax_t</span></tt> and <tt class="docutils literal"><span class="pre">uintmax_t</span></tt> representation,
+respectively.</p>
+<p><strong>Returns</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">wcstoimax</span></tt> function returns the converted value, if any. If no conversion
+could be performed, zero is returned. If the correct value is outside the range
+of representable values, <tt class="docutils literal"><span class="pre">INTMAX_MAX,</span> <span class="pre">INTMAX_MIN</span></tt> or <tt class="docutils literal"><span class="pre">UINTMAX_MAX</span></tt> is
+returned (according to the return type and sign of the value, if any), and the
+value of the macro <tt class="docutils literal"><span class="pre">ERANGE</span></tt> is stored in <tt class="docutils literal"><span class="pre">errno</span></tt>.</p>
+<p><strong>Forward references:</strong> the <tt class="docutils literal"><span class="pre">wcstol,</span> <span class="pre">wcstoll,</span> <span class="pre">wcstoul</span></tt> and <tt class="docutils literal"><span class="pre">wcstoull</span></tt> functions
+(<a class="reference internal" href="../wchar/#id46"><em>The wcstol, wcstoll, wcstoul and wcstoull functions</em></a>).</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

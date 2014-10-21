@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="C Programming with C99" name="description" />
+<meta content="Free C Book, C Programming, C99 Programming, C99 Specification" name="keywords" />
+
+    <title>2. Basics of C &mdash; C99  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="C99  documentation" href="../" />
+    <link rel="next" title="3. Console I/O" href="../io/" />
+    <link rel="prev" title="1. Introduction" href="../introduction/" />
+<script src="../_static/analytics.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../css/math.css" type="text/css" />
+
+  </head>
+  <body>
+
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="../">
+          C99</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">9. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">10. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">11. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">12. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">13. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">14. Diagnostics <tt class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">15. Complex arithmetic <tt class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">16. Character Handling <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">17. Errors <tt class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">18. Floating-point environment <tt class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">19. Characteristics of floating types <tt class="docutils literal"><span class="pre">&lt;float.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">20. Format conversion of integer types <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">21. Alternative spellings <tt class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">22. Sizes of integer types <tt class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">23. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">24. Mathematics <tt class="docutils literal"><span class="pre">&lt;math.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">25. Nonlocal jumps <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">26. Signal handling <tt class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">27. Variable arguments <tt class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">28. Boolean type and values <tt class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">29. Common definitions <tt class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">30. Integer types <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">31. Input/output <tt class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">32. General utilities <tt class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">33. String handling <tt class="docutils literal"><span class="pre">&lt;string.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">34. Type-generic math <tt class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">35. Date and time <tt class="docutils literal"><span class="pre">&lt;time.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">36. Extended multibyte and wide character utilities <tt class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">37. Wide character classification and mapping utilities <tt class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">38. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">39. License</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">2. Basics of C</a><ul>
+<li><a class="reference internal" href="#the-c-character-set">2.1. The C Character Set</a></li>
+<li><a class="reference internal" href="#keywords">2.2. Keywords</a></li>
+<li><a class="reference internal" href="#index-2">2.3. Identifiers</a></li>
+<li><a class="reference internal" href="#programming">2.4. Programming</a></li>
+<li><a class="reference internal" href="#data-types">2.5. Data Types</a></li>
+<li><a class="reference internal" href="#new-data-types-of-c99">2.6. New Data Types of C99</a></li>
+<li><a class="reference internal" href="#boolean-types">2.7. Boolean Types</a></li>
+<li><a class="reference internal" href="#complex-types">2.8. Complex Types</a></li>
+<li><a class="reference internal" href="#void-and-enum-types">2.9. Void and Enum Types</a></li>
+<li><a class="reference internal" href="#constants">2.10. Constants</a></li>
+<li><a class="reference internal" href="#escape-sequences">2.11. Escape Sequences</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../introduction/" title="Previous Chapter: 1. Introduction"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 1. Introduction</span>
+    </a>
+  </li>
+  <li>
+    <a href="../io/" title="Next Chapter: 3. Console I/O"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">3. Console I/O &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/basics.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="basics-of-c">
+<h1>2. Basics of C<a class="headerlink" href="#basics-of-c" title="Permalink to this headline">¶</a></h1>
+<p>Now is the time for learning basics. There are certain rules in every language,
+certain grammar which dictates the way language will be spoken and written. It
+has a script to write using. Similarly, programming languages have BNF
+(Backus-Naur Form) context-free grammar. There are valid characters in a
+programming language and a set of keywords. However, programming language
+ruleset is very small compared to a natural programming language. Also, when
+using natural programming language like talking to someone or writing something
+the other person can understand your intent but in programming you cannot
+violate rules. The grammar is context-free. Compilers or interpreters cannot
+deduce your intent by reading code. They are not intelligent. You make a mistake
+and it will refuse to listen to you no matter what you do. Therefore, it is very
+essential to understand these rules very clearly and correctly.</p>
+<div class="section" id="the-c-character-set">
+<span id="id1"></span><span id="index-0"></span><h2>2.1. The C Character Set<a class="headerlink" href="#the-c-character-set" title="Permalink to this headline">¶</a></h2>
+<p>The following form the C character set you are allowed to use in it:</p>
+<p><tt class="docutils literal"><span class="pre">[a-z]</span> <span class="pre">[A-Z]</span> <span class="pre">[0-9]</span> <span class="pre">~</span> <span class="pre">!</span> <span class="pre">#</span> <span class="pre">%</span> <span class="pre">^</span> <span class="pre">&amp;</span> <span class="pre">*</span> <span class="pre">(</span> <span class="pre">)</span> <span class="pre">-</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">]</span> <span class="pre">\</span> <span class="pre">;</span> <span class="pre">'</span> <span class="pre">,</span> <span class="pre">.</span> <span class="pre">/</span> <span class="pre">_</span> <span class="pre">+</span> <span class="pre">{</span> <span class="pre">}</span> <span class="pre">|</span> <span class="pre">:</span> <span class="pre">&quot;</span> <span class="pre">&lt;</span> <span class="pre">&gt;</span> <span class="pre">?</span></tt></p>
+<p>This means along with other symbols you can use all English alphabets (both
+uppercase and lowercase) and Arabic numerals. However, English is not the only
+spoken language in the world. Therefore in other non-English speaking counties
+there are keyboard where certain characters present in above set are not
+present. The inventors of C were wise enough to envision this and provide the
+facility in form of trigraph sequences. Here, I am presenting table of trigraph
+sequences.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="18%" />
+<col width="15%" />
+<col width="18%" />
+<col width="15%" />
+<col width="18%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Trigraph</th>
+<th class="head">Equivalent</th>
+<th class="head">Trigraph</th>
+<th class="head">Equivalent</th>
+<th class="head">Trigraph</th>
+<th class="head">Equivalent</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>??=</td>
+<td>#</td>
+<td>??&#8217;</td>
+<td>^</td>
+<td>??!</td>
+<td>|</td>
+</tr>
+<tr class="row-odd"><td>??(</td>
+<td>[</td>
+<td>??)</td>
+<td>]</td>
+<td>??&lt;</td>
+<td>{</td>
+</tr>
+<tr class="row-even"><td>??&gt;</td>
+<td>}</td>
+<td>??/</td>
+<td>\</td>
+<td>??-</td>
+<td>~</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="keywords">
+<span id="id2"></span><span id="index-1"></span><h2>2.2. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<p>The following are reserved keywords for C programming language which you are not
+allows to use other than what they are meant for:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="30%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="4">Keywords of C</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>auto</td>
+<td>enum</td>
+<td>restricted</td>
+<td>unsigned</td>
+</tr>
+<tr class="row-odd"><td>break</td>
+<td>extern</td>
+<td>return</td>
+<td>void</td>
+</tr>
+<tr class="row-even"><td>case</td>
+<td>float</td>
+<td>short</td>
+<td>volatile</td>
+</tr>
+<tr class="row-odd"><td>char</td>
+<td>for</td>
+<td>signed</td>
+<td>while</td>
+</tr>
+<tr class="row-even"><td>const</td>
+<td>goto</td>
+<td>sizeof</td>
+<td>_Bool</td>
+</tr>
+<tr class="row-odd"><td>continue</td>
+<td>if</td>
+<td>static</td>
+<td>_Complex</td>
+</tr>
+<tr class="row-even"><td>default</td>
+<td>inline</td>
+<td>struct</td>
+<td>_Imaginary</td>
+</tr>
+<tr class="row-odd"><td>do</td>
+<td>int</td>
+<td>switch</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>double</td>
+<td>long</td>
+<td>typedef</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>else</td>
+<td>register</td>
+<td>union</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>These keywords serve specific purpose. You will come to know about all of them
+as you progress through the book. Next we look at identifiers.</p>
+</div>
+<div class="section" id="index-2">
+<span id="identifiers"></span><h2>2.3. Identifiers<a class="headerlink" href="#index-2" title="Permalink to this headline">¶</a></h2>
+<p>The names which we give to our variables are known as identifiers. Something
+with which we identify. As you have already seen what is allowed in C&#8217;s
+character set but not all are allowed in an identifiers name. Only alphabets
+from English language both lowercase and uppercase, Arabic digits from zero to
+nine and underscore (_) are allowed in an identifiers name. The rule for
+constructing names is that among the allowed characters it can only begin with
+only English alphabets and underscore. Numbers must not be first character. For
+example, <tt class="docutils literal"><span class="pre">x,</span> <span class="pre">_myVar,</span> <span class="pre">varX,</span> <span class="pre">yourId78</span></tt> are all valid names. However, take care
+with names starting from underscore as they are mostly used by different library
+authors. Invalid identifier examples are <tt class="docutils literal"><span class="pre">9x,</span> <span class="pre">my$,</span> <span class="pre">your</span> <span class="pre">age</span></tt>. Please read this
+section carefully and make sure understand the rules for naming identifiers.
+Later at the end of chapter there are some simple problems to work on.</p>
+</div>
+<div class="section" id="programming">
+<h2>2.4. Programming<a class="headerlink" href="#programming" title="Permalink to this headline">¶</a></h2>
+<p>Now is time for some programming. Let us revisit our first program and try to
+understand what it does. Here I am giving code once again for quick reference:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">//My first program</span>
+<span class="cm">/* Author: Shiv Shankar Dayal</span>
+<span class="cm">   Description: This program does nothing.*/</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can now issue a command as <tt class="docutils literal"><span class="pre">$clang</span> <span class="pre">nothing.c</span></tt> where <tt class="docutils literal"><span class="pre">nothing.c</span></tt> is the
+filename by which you saved the source code. Note that <tt class="docutils literal"><span class="pre">$</span></tt> is the prompt not
+part of command itself. Then you can do an ls and you will find that <tt class="docutils literal"><span class="pre">a.out</span></tt>
+is a file which has been produced by clang. Now you can run this program by
+saying <tt class="docutils literal"><span class="pre">./a.out</span></tt> and nothing will happen. But if you type <tt class="docutils literal"><span class="pre">echo</span> <span class="pre">$?</span></tt> then you
+will find that 0 is printed on screen which is nothing but 0 after return of our
+program.</p>
+<p>As you can see this program does almost nothing but it is fairly complete
+program and we can learn a lot from it about C. The first line is a comment.
+Whenever C compiler parses C programs and it encounters <tt class="docutils literal"><span class="pre">//</span></tt> it ignores rest
+of line as code i.e. it does not compile them. This type of single line comment
+were introduced in C99 standard and if your compiler is really old the compiler
+may give you error message about it. The second and third lines are also
+comments. Anything between <tt class="docutils literal"><span class="pre">/*</span></tt> and <tt class="docutils literal"><span class="pre">*/</span></tt> is ignored like <tt class="docutils literal"><span class="pre">//</span></tt>. However, be
+careful of something like <tt class="docutils literal"><span class="pre">/*</span> <span class="pre">some</span> <span class="pre">comment</span> <span class="pre">*/</span> <span class="pre">more</span> <span class="pre">comment</span> <span class="pre">*/</span></tt>. Such comments
+will produce error messages and your program will fail to compile.</p>
+<p>Comments are very integral part of programming. They are used to describe
+various things. You can write whatever you want. They may also be used to
+generate documentation with tools like doxygen. Typically comments tell what
+the program is doing. Sometimes how, when the logic is really complex. One
+should be generous while commenting the code.</p>
+<p><tt class="docutils literal"><span class="pre">#include</span></tt> is a pre-processor directive. It will look for whatever is
+contained in angular brackets in the <tt class="docutils literal"><span class="pre">INCLUDEPATH</span></tt> of compiler. For now you
+can assume that <tt class="docutils literal"><span class="pre">/usr/include</span></tt> is in include path of compiler. For the curious
+I refer you to <a class="reference external" href="http://clang.llvm.org/doxygen/InitHeaderSearch_8cpp_source.html">http://clang.llvm.org/doxygen/InitHeaderSearch_8cpp_source.html</a>.
+Basically what it does is that it looks for a file names <tt class="docutils literal"><span class="pre">stdio.h</span></tt> in the
+<tt class="docutils literal"><span class="pre">INCLUDEPATH</span></tt>. If that is found the content of that file is pasted here in our
+program.If you really want to see what happens then you can type
+<tt class="docutils literal"><span class="pre">$clang</span> <span class="pre">-E</span> <span class="pre">nothing.c</span></tt>. You will see lots of text scrolling on your screen. The <tt class="docutils literal"><span class="pre">-E</span></tt> switch
+tells clang that just preprocess the file, do not compile it, and send the
+resulting output to standard output (we will know about this more later), which
+happens to be your monitor in this case..</p>
+<p>Next line is <tt class="docutils literal"><span class="pre">int</span> <span class="pre">main(int</span> <span class="pre">argc,</span> <span class="pre">char*</span> <span class="pre">argv[])</span></tt>. Now this is very special
+function. Every complete executable(shared objects or dlls do not have main even
+though they are C programs) C program will have one main function unless you do
+assembly hacking. This function is where the programs start. The first word
+<tt class="docutils literal"><span class="pre">int</span></tt> is a keyword which stands for integer. This signifies the return type of
+function. <tt class="docutils literal"><span class="pre">main</span></tt> is the name of the function. Inside parenthesis you see <tt class="docutils literal"><span class="pre">int</span>
+<span class="pre">argc</span></tt> which tells how many arguments were passed to program. While <tt class="docutils literal"><span class="pre">char*</span>
+<span class="pre">argv[]</span></tt> is a pointer to array which we will see later. For now it holds all the
+arguments to the program.</p>
+<p>Next is a brace. The scope in C is determined by braces. Something outside any
+brace has global scope (we will see these later), something inside first level
+of brace has function or local scope. Something inside second or more level of
+braces have got that particular block scope. Scope here means that when there
+will be a closing brace that particular variable which is valid in that scope
+will cease to exist. However, we do not have to worry about that yet as we do
+not have any variable. Just note that a corresponding closing brace will be the
+end of main function.</p>
+<p>Next line is <tt class="docutils literal"><span class="pre">return</span> <span class="pre">0;</span></tt> This means whoever has called <tt class="docutils literal"><span class="pre">main()</span></tt> will get a 0
+as return is returning 0. In this case, receiver is the shell or operating
+system which has invoked the very program. The semicolon is called the
+terminator and used also on Java or C++ for example. The very requirement of
+semicolon is to terminate the statement and move on to next statement.</p>
+<p>However, the program shown does not do much. Let us write a program which has
+some more functionality and we can explore more of C. So here is a program which
+takes two integers as input from users and presents their sum as output. Here is
+the program:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// My second program</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: It adds two numbers</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Please enter an integer:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Please enter another integer:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+
+  <span class="n">sum</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d + %d = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>shiv@shiv:~/book/code$ ./addition
+Please enter an integer:
+7
+Please enter another integer:
+8
+7 + 8 = 15
+shiv@shiv:~/book/code$
+</pre></div>
+</div>
+<p>Note that <tt class="docutils literal"><span class="pre">shiv&#64;shiv:~/book/code$</span></tt> is the prompt. The Makefile is also
+updated:</p>
+<div class="highlight-make"><div class="highlight"><pre><span class="nf">check-syntax</span><span class="o">:</span>
+    clang -o nul -Wall -S <span class="nv">$ </span><span class="o">(</span>CHK_SOURCES<span class="o">)</span>
+
+<span class="nf">nothing</span><span class="o">:</span><span class="m">nothing.c</span>
+    clang nothing.c -o nothing
+
+<span class="nf">addition</span><span class="o">:</span><span class="m">addition.c</span>
+    clang addition.c -o addition
+</pre></div>
+</div>
+<p>You can choose <tt class="docutils literal"><span class="pre">Tools-&gt;Compile</span></tt> then enter <tt class="docutils literal"><span class="pre">make</span> <span class="pre">-k</span> <span class="pre">addition</span></tt> as make
+commands in the Emacs&#8217;s minibuffer and execute like <tt class="docutils literal"><span class="pre">$./addition</span></tt>.</p>
+<p>Let us discuss new lines one by one. The line <tt class="docutils literal"><span class="pre">int</span> <span class="pre">x=0,</span> <span class="pre">y=0,</span> <span class="pre">z=0;</span></tt> is
+declaration and definition or initialization of three ints. <tt class="docutils literal"><span class="pre">int</span></tt> keyword in C
+is used to represent integers. Now we have three integers with there values set
+to 0. Note that how the variables are separated by commas and terminated by
+semicolon(as we saw in last program also). We could have also written it like
+this:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">z</span><span class="p">;</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>However, the first method is best and most preferred as it prevents use before
+definition. int is a data-type in C. <tt class="docutils literal"><span class="pre">x,</span> <span class="pre">y,</span></tt> and <tt class="docutils literal"><span class="pre">z</span></tt> are variables of type
+<tt class="docutils literal"><span class="pre">int</span></tt>. This means that the size of these variables will be same as <tt class="docutils literal"><span class="pre">int</span></tt>.
+Note that C is a statically typed language and all types have predefined memory
+requirements. In cour case, int requires 4 bytes on 32-bit systems.</p>
+<p>Now I will talk about <tt class="docutils literal"><span class="pre">printf()</span></tt> function. This function is declared in
+<tt class="docutils literal"><span class="pre">stdio.h</span></tt>. The prototype of <tt class="docutils literal"><span class="pre">printf()</span></tt> is</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">int</span> <span class="nf">printf</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="kr">restrict</span> <span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+</pre></div>
+</div>
+<p>The first argument format is what we have in first two function calls. The
+second is a <tt class="docutils literal"><span class="pre">...</span></tt> which means it can take variable number of arguments known
+as variable-list. We have seen this in the third call.This means it will take a
+string with optional variable no. of arguments. The string is called the
+format-string and determines what can be printed with supplied arguments. These
+<tt class="docutils literal"><span class="pre">...</span></tt> are used to supply variable no. of arguments. In the first two
+<tt class="docutils literal"><span class="pre">printf()</span></tt> statements we just print the format-string so that is simple.
+However, in the last one, we have format as <tt class="docutils literal"><span class="pre">%d</span></tt> which signifies a decimal
+integer. The integers printed are in the same order in which they were supplied.</p>
+<p>Time for some input. <tt class="docutils literal"><span class="pre">scanf()</span></tt> is scan function which scans for keyboard
+input. As by now you know that <tt class="docutils literal"><span class="pre">%d</span></tt> is for decimal integer but we have not
+said <tt class="docutils literal"><span class="pre">x</span></tt> or <tt class="docutils literal"><span class="pre">y</span></tt>. The reason is <tt class="docutils literal"><span class="pre">x</span></tt> and <tt class="docutils literal"><span class="pre">y</span></tt> are values while <tt class="docutils literal"><span class="pre">&amp;x</span></tt> and
+<tt class="docutils literal"><span class="pre">&amp;y</span></tt> are the addresses of <tt class="docutils literal"><span class="pre">x</span></tt> and <tt class="docutils literal"><span class="pre">y</span></tt> in memory. <tt class="docutils literal"><span class="pre">scanf()</span></tt> needs the
+memory address to which it can write the contents to. You will see <tt class="docutils literal"><span class="pre">&amp;</span></tt>
+operator in action later when we deal with pointers. Just remember for now that
+to use a simple variable with <tt class="docutils literal"><span class="pre">scanf()</span></tt> requires <tt class="docutils literal"><span class="pre">&amp;</span></tt> before its name.</p>
+<p>Now I am going to take you on a tour of data types. Till now we have just seen
+only <tt class="docutils literal"><span class="pre">int</span></tt>. So onward to data types.</p>
+</div>
+<div class="section" id="data-types">
+<span id="index-3"></span><h2>2.5. Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<p>Why data types? What is the need? When everything is a voltage level why not
+just deal with 0s and 1s? The answer is simple. You need to abstract and
+segregate how much is required. For example, say you are given a sequence of 0s
+and 1s how much can you work with them. We as humans are not very versed with 0s
+and 1s. Also, say we encode character &#8216;A&#8217; for 10101 will it be easy for you to
+see A or numbers. Also, numbers range from <span class="math">\(-\infty\)</span> to <span class="math">\(\infty\)</span>.
+Also, since C is statically typed the sizes of data types have to be known at
+compile time. There are four types of data types. Integral, floating-point,
+arrays and pointers. Here, I will deal with the two former types and leave
+latter two for later. The integral types are <tt class="docutils literal"><span class="pre">char,</span> <span class="pre">short</span> <span class="pre">int,</span> <span class="pre">int,</span> <span class="pre">long</span></tt> and
+<tt class="docutils literal"><span class="pre">long</span> <span class="pre">long</span></tt> and floating-point types are <tt class="docutils literal"><span class="pre">float,</span> <span class="pre">double</span></tt> and <tt class="docutils literal"><span class="pre">long</span>
+<span class="pre">double</span></tt>. <tt class="docutils literal"><span class="pre">signed</span></tt> and <tt class="docutils literal"><span class="pre">unsigned</span></tt> are sign modifiers which also modified the
+range of data types but do not affect their memory requirements. By default all
+basic data types are signed in nature and you must qualify you variables with
+unsigned if you want that behavior. <tt class="docutils literal"><span class="pre">short</span></tt> and <tt class="docutils literal"><span class="pre">long</span></tt> are modifiers for
+size which the data type occupies but I consider them as different types because
+memory requirements are different. The ranges of integral data types directly
+reflect their memory requirements and if you know how much memory they are going
+to occupy you can easily compute their ranges. The range of floating-point comes
+from IEEE specification. Clang at present does not support C99 floating-point
+specification at the time of this writing but rest assured they will st some
+point of time. However, I will present the C99 floating-point specification
+given by C99.</p>
+<p>Let us write a program to find out ranges for integral data types:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// My range program</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: It gives ranges of integral data types</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;limits.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Size of char is..........%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">));</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Size of short int is.....%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">short</span> <span class="kt">int</span><span class="p">));</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Size of int is...........%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Size of long is..........%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Size of long long is.....%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">));</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Size of float is.........%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">));</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Size of double is........%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Size of long double is...%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span><span class="p">));</span><span class="n">c</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output will be:</p>
+<div class="highlight-python"><div class="highlight"><pre>Size of char is..........1
+Size of short int is.....2
+Size of int is...........4
+Size of long is..........4
+Size of long long is.....8
+Size of float is.........4
+Size of double is........8
+Size of long double is...12
+</pre></div>
+</div>
+<p>Based on this it is left as an exercise to reader to compute the ranges of these
+data types. Here I am giving the contents of limits.h for you to see limits of
+data types and check for yourself.</p>
+<div class="highlight-c" id="index-4"><div class="highlight"><pre>/* Copyright (C) 1991, 1992, 1996, 1997, 1998, 1999, 2000, 2005
+Free Software Foundation, Inc.
+This file is part of the GNU C Library.
+
+The GNU C Library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+The GNU C Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with the GNU C Library; if not, write to the Free
+Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+02111-1307 USA.  */
+
+/*
+*      ISO C99 Standard: 7.10/5.2.4.2.1 Sizes of integer types &lt;limits.h&gt;
+*/
+
+#ifndef _LIBC_LIMITS_H_
+#define _LIBC_LIMITS_H_ 1
+
+#include &lt;features.h&gt;
+
+
+/* Maximum length of any multibyte character in any locale.
+ We define this value here since the gcc header does not define
+ the correct value.  */
+ #define MB_LEN_MAX      16
+
+
+/* If we are not using GNU CC we have to define all the symbols ourself.
+Otherwise use gcc&#39;s definitions (see below).  */
+#if !defined __GNUC__ || __GNUC__ &lt; 2
+
+/* We only protect from multiple inclusion here, because all the other
+#include&#39;s protect themselves, and in GCC 2 we may #include_next through
+multiple copies of this file before we get to GCC&#39;s.  */
+# ifndef _LIMITS_H
+#  define _LIMITS_H     1
+
+#include &lt;bits/wordsize.h&gt;
+
+/* We don&#39;t have #include_next.
+Define ANSI &lt;limits.h&gt; for standard 32-bit words.  */
+
+/* These assume 8-bit `char&#39;s, 16-bit `short int&#39;s,
+and 32-bit `int&#39;s and `long int&#39;s.  */
+
+/* Number of bits in a `char&#39;.  */
+#  define CHAR_BIT      8
+
+/* Minimum and maximum values a `signed char&#39; can hold.  */
+#  define SCHAR_MIN     (-128)
+#  define SCHAR_MAX     127
+
+/* Maximum value an `unsigned char&#39; can hold.  (Minimum is 0.)  */
+#  define UCHAR_MAX     255
+
+/* Minimum and maximum values a `char&#39; can hold.  */
+#  ifdef __CHAR_UNSIGNED__
+#   define CHAR_MIN     0
+#   define CHAR_MAX     UCHAR_MAX
+#  else
+#   define CHAR_MIN     SCHAR_MIN
+#   define CHAR_MAX     SCHAR_MAX
+#  endif
+
+/* Minimum and maximum values a `signed short int&#39; can hold.  */
+#  define SHRT_MIN      (-32768)
+#  define SHRT_MAX      32767
+
+/* Maximum value an `unsigned short int&#39; can hold.  (Minimum is 0.)  */
+#  define USHRT_MAX     65535
+
+/* Minimum and maximum values a `signed int&#39; can hold.  */
+#  define INT_MIN       (-INT_MAX - 1)
+#  define INT_MAX       2147483647
+
+/* Maximum value an `unsigned int&#39; can hold.  (Minimum is 0.)  */
+#  define UINT_MAX      4294967295U
+
+/* Minimum and maximum values a `signed long int&#39; can hold.  */
+#  if __WORDSIZE == 64
+#   define LONG_MAX     9223372036854775807L
+#  else
+#   define LONG_MAX     2147483647L
+#  endif
+#  define LONG_MIN      (-LONG_MAX - 1L)
+
+/* Maximum value an `unsigned long int&#39; can hold.  (Minimum is 0.)  */
+#  if __WORDSIZE == 64
+#   define ULONG_MAX    18446744073709551615UL
+#  else
+#   define ULONG_MAX    4294967295UL
+#  endif
+
+#  ifdef __USE_ISOC99
+
+/* Minimum and maximum values a `signed long long int&#39; can hold.  */
+#   define LLONG_MAX    9223372036854775807LL
+#   define LLONG_MIN    (-LLONG_MAX - 1LL)
+
+/* Maximum value an `unsigned long long int&#39; can hold.  (Minimum is 0.)  */
+#   define ULLONG_MAX   18446744073709551615ULL
+
+#  endif /* ISO C99 */
+
+# endif /* limits.h  */
+#endif  /* GCC 2.  */
+
+#endif  /* !_LIBC_LIMITS_H_ */
+
+/* Get the compiler&#39;s limits.h, which defines almost all the ISO constants.
+
+We put this #include_next outside the double inclusion check because
+it should be possible to include this file more than once and still get
+the definitions from gcc&#39;s header.  */
+#if defined __GNUC__ &amp;&amp; !defined _GCC_LIMITS_H_
+/* `_GCC_LIMITS_H_&#39; is what GCC&#39;s file defines.  */
+# include_next &lt;limits.h&gt;
+#endif
+
+/* The &lt;limits.h&gt; files in some gcc versions don&#39;t define LLONG_MIN,
+LLONG_MAX, and ULLONG_MAX.  Instead only the values gcc defined for
+ages are available.  */
+#if defined __USE_ISOC99 &amp;&amp; defined __GNUC__
+# ifndef LLONG_MIN
+#  define LLONG_MIN     (-LLONG_MAX-1)
+# endif
+# ifndef LLONG_MAX
+#  define LLONG_MAX     __LONG_LONG_MAX__
+# endif
+# ifndef ULLONG_MAX
+#  define ULLONG_MAX    (LLONG_MAX * 2ULL + 1)
+# endif
+#endif
+
+#ifdef  __USE_POSIX
+/* POSIX adds things to &lt;limits.h&gt;.  */
+# include &lt;bits/posix1_lim.h&gt;
+#endif
+
+#ifdef  __USE_POSIX2
+# include &lt;bits/posix2_lim.h&gt;
+#endif
+
+#ifdef  __USE_XOPEN
+# include &lt;bits/xopen_lim.h&gt;
+#endif
+</pre></div>
+</div>
+<p>Here, I have given gcc&#8217;s limits.h as clang includes that. For knowing exact
+implementation for floating-point implementation on your platform I recommend
+you to read <a class="reference external" href="http://en.wikipedia.org/wiki/IEEE_754-2008">http://en.wikipedia.org/wiki/IEEE_754-2008</a> . It is not possible to
+present all the information in detail here and I do not want to give you
+partial information. :-) I recommend you to go through
+<a class="reference external" href="http://en.wikipedia.org/wiki/Single_precision">http://en.wikipedia.org/wiki/Single_precision</a> and
+<a class="reference external" href="http://en.wikipedia.org/wiki/Double_precision">http://en.wikipedia.org/wiki/Double_precision</a> in particular. The range of log
+double varies from compiler to compiler.</p>
+</div>
+<div class="section" id="new-data-types-of-c99">
+<h2>2.6. New Data Types of C99<a class="headerlink" href="#new-data-types-of-c99" title="Permalink to this headline">¶</a></h2>
+<p>There are some new data types introduced in C99. They are <tt class="docutils literal"><span class="pre">_Bool,</span> <span class="pre">_Complex</span></tt>
+and <tt class="docutils literal"><span class="pre">_Imaginary</span></tt>.</p>
+</div>
+<div class="section" id="boolean-types">
+<span id="index-5"></span><h2>2.7. Boolean Types<a class="headerlink" href="#boolean-types" title="Permalink to this headline">¶</a></h2>
+<p><tt class="docutils literal"><span class="pre">_Bool</span></tt> counts as an integral type and is used to represent boolean values.
+Here is <tt class="docutils literal"><span class="pre">stdbool.h</span></tt> for your quick reference.</p>
+<div class="highlight-c" id="index-6"><div class="highlight"><pre><span class="cm">/*===---- stdbool.h - Standard header for booleans -------------------------===</span>
+<span class="cm"> *</span>
+<span class="cm"> * Copyright (c) 2008 Eli Friedman</span>
+<span class="cm"> *</span>
+<span class="cm"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span class="cm"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
+<span class="cm"> * in the Software without restriction, including without limitation the rights</span>
+<span class="cm"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<span class="cm"> * copies of the Software, and to permit persons to whom the Software is</span>
+<span class="cm"> * furnished to do so, subject to the following conditions:</span>
+<span class="cm"> *</span>
+<span class="cm"> * The above copyright notice and this permission notice shall be included in</span>
+<span class="cm"> * all copies or substantial portions of the Software.</span>
+<span class="cm"> *</span>
+<span class="cm"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="cm"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="cm"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
+<span class="cm"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="cm"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
+<span class="cm"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span>
+<span class="cm"> * THE SOFTWARE.</span>
+<span class="cm"> *</span>
+<span class="cm"> *===-----------------------------------------------------------------------===</span>
+<span class="cm"> */</span>
+
+<span class="cp">#ifndef __STDBOOL_H</span>
+<span class="cp">#define __STDBOOL_H</span>
+
+<span class="cm">/* Don&#39;t define bool, true, and false in C++, except as a GNU extension. */</span>
+<span class="cp">#ifndef __cplusplus</span>
+<span class="cp">#define bool _Bool</span>
+<span class="cp">#define true 1</span>
+<span class="cp">#define false 0</span>
+<span class="cp">#elif defined(__GNUC__) &amp;&amp; !defined(__STRICT_ANSI__)</span>
+<span class="cm">/* Define _Bool, bool, false, true as a GNU extension. */</span>
+<span class="cp">#define _Bool bool</span>
+<span class="cp">#define bool  bool</span>
+<span class="cp">#define false false</span>
+<span class="cp">#define true  true</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#define __bool_true_false_are_defined 1</span>
+
+<span class="cp">#endif </span><span class="cm">/* __STDBOOL_H */</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>As you can see from the definition true is 1 and false is 0. Any non-zero value
+is considered to be true. Here is a program demonstrating that.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Boolean Program</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of boolean data typec</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdbool.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">bool</span> <span class="n">bcpp</span>      <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+  <span class="kt">_Bool</span> <span class="n">bc</span>       <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="n">True</span>      <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="kt">_Bool</span> <span class="n">False</span>    <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="n">bFalseCPP</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span><span class="p">;</span>
+  <span class="kt">_Bool</span> <span class="n">bFalseC</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">7</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d %d %d %d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">bcpp</span><span class="p">,</span> <span class="n">bc</span><span class="p">,</span> <span class="n">True</span><span class="p">,</span> <span class="n">False</span><span class="p">,</span> <span class="n">bFalseCPP</span><span class="p">,</span> <span class="n">bFalseC</span><span class="p">);</span>
+
+  <span class="n">getchar</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>1 1 1 0 1 1
+</pre></div>
+</div>
+<p>Note that <tt class="docutils literal"><span class="pre">true</span></tt> and <tt class="docutils literal"><span class="pre">false</span></tt> are keywords while <tt class="docutils literal"><span class="pre">True</span></tt> and <tt class="docutils literal"><span class="pre">False</span></tt> are
+identifiers.</p>
+<p>Though I wanted to avoid dealing with this but since I am including header files
+verbatim I must give an explanation of #define pre-processor macro at least. I
+will touch it very little as it will be covered in more detail later.
+<tt class="docutils literal"><span class="pre">#define</span></tt> has two parameters though not as function arguments. Whenever the
+first part is encountered second will be replaced. Consider this example:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Boolean Program</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of boolean data type</span>
+
+<span class="cp">#define MAX 7</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">MAX</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Just do <tt class="docutils literal"><span class="pre">$clang</span> <span class="pre">-E</span> <span class="pre">define.c</span></tt> to see the magic. Note that <tt class="docutils literal"><span class="pre">#define</span></tt>
+parameters are not type safe. Compiler will just paste the contents. Notice how
+<tt class="docutils literal"><span class="pre">MAX</span></tt> is replaced by 7.</p>
+</div>
+<div class="section" id="complex-types">
+<span id="index-7"></span><h2>2.8. Complex Types<a class="headerlink" href="#complex-types" title="Permalink to this headline">¶</a></h2>
+<p>For complex types, there is a system header <tt class="docutils literal"><span class="pre">complex.h</span></tt> which internally
+includes various other headers. However I am giving you the summary here. There
+are following <tt class="docutils literal"><span class="pre">#define</span></tt> macros:</p>
+<p><tt class="docutils literal"><span class="pre">complex</span></tt>: Expands to <tt class="docutils literal"><span class="pre">_Complex</span></tt></p>
+<p><tt class="docutils literal"><span class="pre">_Complex_I</span></tt>: Expands to a constant expression of type <tt class="docutils literal"><span class="pre">const</span> <span class="pre">float</span>
+<span class="pre">_Complex</span></tt> with the value of the imaginary.</p>
+<p><tt class="docutils literal"><span class="pre">imaginary</span></tt>: Expands to <tt class="docutils literal"><span class="pre">_Imaginary</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">_Imaginary_I</span></tt>: Expands to a constant expression of type <tt class="docutils literal"><span class="pre">const</span> <span class="pre">float</span>
+<span class="pre">_Imaginary</span></tt> with the value of the imaginary value. <tt class="docutils literal"><span class="pre">I</span></tt>: Expands to either
+<tt class="docutils literal"><span class="pre">_Imaginary_I</span></tt> or <tt class="docutils literal"><span class="pre">_Complex_I</span></tt>. If <tt class="docutils literal"><span class="pre">_Imaginary_I</span></tt> is not defined, <tt class="docutils literal"><span class="pre">I</span></tt>
+expands to <tt class="docutils literal"><span class="pre">_Complex_I</span></tt>.</p>
+<dl class="docutils">
+<dt>Complex types are declared as given below:</dt>
+<dd><ol class="first last arabic simple">
+<li>float complex fCompZ;</li>
+<li>double complex dCompZ;</li>
+<li>long double ldCompZ;</li>
+</ol>
+</dd>
+</dl>
+<p>Now I will present a summary of library functions provided by complex.h</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">//cabs, cabsf, cabsl - these compute and return absolute value</span>
+<span class="c1">//of a complex number z</span>
+
+<span class="kt">double</span> <span class="nf">cabs</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">cabsf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">cabsl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//carg, cargf, cargl - these compute and return argument of a complex</span>
+<span class="c1">//number z. The range of return value&#39;s range from one +ve pi radian</span>
+<span class="c1">//to one -ve pi radian.</span>
+
+<span class="kt">double</span> <span class="nf">carg</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">cargf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">cargl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//cimag, cimagf, cimagl - these compute imaginary part of a complex</span>
+<span class="c1">//number z and return that as a real number.</span>
+
+<span class="kt">double</span> <span class="nf">cimag</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">cimagf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">cimagl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//creal, crealf, creall - these compute real part of a complex</span>
+<span class="c1">//number z and return the computed value.</span>
+
+<span class="kt">double</span> <span class="nf">creal</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">crealf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">creall</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//conj, conjf, conjl - these functions compute the complex conjugate</span>
+<span class="c1">//of z, by reversing the sign of its imaginary part and return the</span>
+<span class="c1">//computed value.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">conj</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">conjf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">conjl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//cproj, cprojf, cprojl - these functions compute a projection of z</span>
+<span class="c1">// onto the Riemann sphere: z projects to z, except that all complex</span>
+<span class="c1">//infinities (even those with one infinite part and one NaN (not a</span>
+<span class="c1">//number) part) project to positive infinity on the real axis. If z</span>
+<span class="c1">//has an infinite part, then cproj( z) shall be equivalent to:</span>
+<span class="c1">//INFINITY + I * copysign(0.0, cimag(z))</span>
+<span class="c1">//These functions return the computed value.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">cproj</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">cprojf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">cprojl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//cexp, cexpf, cexpl - these functions shall compute the complex</span>
+<span class="c1">//exponent of z, defined as e^z and return the computed value</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">cexp</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">cexpf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">cexpl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//clog, clogf, clogl - these functions compute the complex</span>
+<span class="c1">//natural (base e) logarithm of z, with a branch cut along</span>
+<span class="c1">//the negative real axis and return complex natural logarithm</span>
+<span class="c1">//value, in a range of a strip mathematically unbounded along</span>
+<span class="c1">//real axis and in the interval -ipi to +ipi along the</span>
+<span class="c1">//imaginary axis.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">clog</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">clogf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">clogl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//csqrt, csqrtf, csqrtl - these functions compute the complex</span>
+<span class="c1">//square root of z, with a branch cut along the negative real</span>
+<span class="c1">//axis and return the computed value in the range of the right</span>
+<span class="c1">//half-plane (including the imaginary axis)</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">csqrt</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">csqrtf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">csqrtl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//cpow, cpowf, cpowl - these functions compute the complex</span>
+<span class="c1">//power function x^y, with a branch cut for the first</span>
+<span class="c1">//parameter along the negative real axis and return the</span>
+<span class="c1">//computed value.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">cpow</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">cpowf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">complex</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">cpowl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">x</span><span class="p">,</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">y</span><span class="p">);</span>
+
+<span class="c1">//csin, csinf, csinl - these functions compute the complex</span>
+<span class="c1">//sine of z and return the computed value.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">csin</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">csinf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">csinl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//ccos, ccosf, ccosl - these functions compute the complex</span>
+<span class="c1">//cosine of z and return the computed value.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">ccos</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">ccosf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">ccosl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//ctan, ctanf, ctanl - these functions compute the complex</span>
+<span class="c1">//tangent of z and return the computed value.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">ctan</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">ctanf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">ctanl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//casin, casinf, casinl - these functions compute the complex</span>
+<span class="c1">//arc sine of z, with branch cuts outside the interval</span>
+<span class="c1">//[-1, +1] along the real axis and return the computed value</span>
+<span class="c1">//in the range of a strip mathematically unbounded along the</span>
+<span class="c1">//imaginary axis and in the interval -0.5pi to +0.5pi radian</span>
+<span class="c1">//inclusive along the real axis.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">casin</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">casinf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">casinl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//cacos, cacosf, cacosl - these functions compute the complex</span>
+<span class="c1">//arc cosine of z, with branch cuts outside the interval</span>
+<span class="c1">//[-1, +1] along the real axis and return the computed value</span>
+<span class="c1">//in the range of a strip mathematically unbounded along the</span>
+<span class="c1">//imaginary axis and in the interval -0 to +pi radian</span>
+<span class="c1">//inclusive along the real axis.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">cacos</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">cacosf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">cacosl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//catan, catanf, catanl - these functions compute the complex</span>
+<span class="c1">//arc tangent of z, with branch cuts outside the interval</span>
+<span class="c1">//[-i, +i] along the real axis and return the computed value</span>
+<span class="c1">//in the range of a strip mathematically unbounded along the</span>
+<span class="c1">//imaginary axis and in the interval -0.5pi to +0.5pi radian</span>
+<span class="c1">//inclusive along the real axis.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">catan</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">catanf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">catanl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//csinh, csinhf, csinhl - these functions compute the complex</span>
+<span class="c1">//hyperbolic sine of z and return the comupted value.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">csinh</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">csinhf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">csinhl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//ccosh, ccoshf, ccoshl - these functions shall compute the</span>
+<span class="c1">//complex hyperbolic cosine of z and return the computed</span>
+<span class="c1">//value</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">ccosh</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">ccoshf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">ccoshl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//ctanh, ctanhf, ctanhl - these functions compute the</span>
+<span class="c1">//complex hyperbolic tangent of z and return the computed</span>
+<span class="c1">//value.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">ctanh</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">ctanhf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">ctanhl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//casinh, casinhf, casinhl - these functions compute the</span>
+<span class="c1">//complex arc hyperbolic sine of z, with branch cuts</span>
+<span class="c1">//outside the interval [-i, +i] along the imaginary axis and</span>
+<span class="c1">//return the complex arc hyperbolic sine value, in the range</span>
+<span class="c1">//of a strip mathematically unbounded along the real axis</span>
+<span class="c1">//and in the interval [-i0.5pi, +i0.5pi] along the imaginary</span>
+<span class="c1">//axis.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">casinh</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">casinhf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">casinhl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="n">cacosh</span><span class="p">,</span> <span class="n">cacoshf</span><span class="p">,</span> <span class="n">cacoshl</span> <span class="o">-</span> <span class="n">theese</span> <span class="n">functions</span> <span class="n">compute</span> <span class="n">the</span>
+
+<span class="c1">//complex arc hyperbolic cosine of z, with a branch cut at</span>
+<span class="c1">//values less than 1 along the real axis and return the complex</span>
+<span class="c1">//arc hyperbolic cosine value, in the range of a half-strip</span>
+<span class="c1">//of non-negative values along the real axis and in the</span>
+<span class="c1">//interval [-ipi, +ipi] along the imaginary axis.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="n">cacosh</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">cacoshf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">cacoshl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+
+<span class="c1">//catanh, catanhf, catanhl - these functions shall compute the</span>
+<span class="c1">//complex arc hyperbolic tangent of z, with branch cuts outside</span>
+<span class="c1">//the interval [-1, +1] along the real axis and return the</span>
+<span class="c1">//complex arc hyperbolic tangent value, in the range of a strip</span>
+<span class="c1">//mathematically unbounded along the real axis and in the</span>
+<span class="c1">//interval [-i0.5pi, +i0.5pi] along the imaginary axis.</span>
+
+<span class="kt">double</span> <span class="n">complex</span> <span class="nf">catanh</span><span class="p">(</span><span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="n">complex</span> <span class="nf">catanhf</span><span class="p">(</span><span class="kt">float</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="nf">catanhl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Hers is a small demo program which explains two functions:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Complex Number Program</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of complex data type</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;complex.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">complex</span> <span class="n">z</span> <span class="o">=</span> <span class="mf">4.0</span> <span class="o">+</span> <span class="mf">3.0</span><span class="n">i</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Absolute value of z is %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">cabs</span><span class="p">(</span><span class="n">z</span><span class="p">));</span>
+
+  <span class="kt">double</span> <span class="n">complex</span> <span class="n">zConj</span> <span class="o">=</span> <span class="n">conj</span><span class="p">(</span><span class="n">z</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Imaghinary part of conjugate is now %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">cimag</span><span class="p">(</span><span class="n">zConj</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>Absolute value of z is 5.000000
+Imaghinary part of conjugate is now -3.000000
+</pre></div>
+</div>
+<p>You must note that in Makefile you must compile it like <tt class="docutils literal"><span class="pre">$clang</span> <span class="pre">complex.c</span> <span class="pre">-o</span>
+<span class="pre">complex</span> <span class="pre">-lm</span></tt>. Note the <tt class="docutils literal"><span class="pre">-lm</span></tt> part. It tells to look for definition of these
+functions in Math library of C. Without it the program won&#8217;t compile. At this
+point I encourage you to further explore different functions presented in the
+summary.</p>
+<p>There are even more data types for integral type. I am sorry but I am unwrapping
+the layers one by one. These types are defined in <tt class="docutils literal"><span class="pre">inttypes.h</span></tt> and
+<tt class="docutils literal"><span class="pre">stdint.h</span></tt>. The types are <tt class="docutils literal"><span class="pre">int8_t,</span> <span class="pre">int16_t,</span> <span class="pre">int32_t,</span> <span class="pre">uint8_t,</span> <span class="pre">uint16_t</span></tt> and
+<tt class="docutils literal"><span class="pre">uint32_t</span></tt>. The numbers tell you how many bits each data type will occupy. The
+types without leading u are of signed type and the ones with it are of unsigned
+type. You can use the good old <tt class="docutils literal"><span class="pre">%d</span></tt> or <tt class="docutils literal"><span class="pre">%i</span></tt> for decimal integers and others
+for octals and hexes. Have a look at headers and try to decipher them.</p>
+</div>
+<div class="section" id="void-and-enum-types">
+<span id="index-8"></span><h2>2.9. Void and Enum Types<a class="headerlink" href="#void-and-enum-types" title="Permalink to this headline">¶</a></h2>
+<p>There are these four types remianing. void type comprises an empty set of
+values; it is an incomplete type that cannot be completed. You cannot declare an
+array of void. It is a generic type in the sense that any other pointer to any
+type can be converted to pointer type of void and vice-versa. It is a low level
+type and should be only used to convert data types from one type to another and
+sparingly. A type occupies one byte. Typically you never declare a variable of
+void type. It is used mostly for casting.</p>
+<p>enum comprises a set of named integer constant values. Each distinct enumeration
+constitutes a different enumerated type. In C enums are very much equivalent to
+integers. You can do all operations of an enum on an enumeration member. An
+enumeration is is a set of values. It starts from zero by default and increments
+by one unless specifically specified. Consider the following example:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of enum</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">zero</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">}</span> <span class="n">enum1</span><span class="p">;</span>
+  <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">alpha</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">omega</span><span class="p">}</span> <span class="n">enum2</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;zero = %d, one = %d, two=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">zero</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;alpha = %d, beta = %d, gamma=%d, theta=%d, delta=%d, omega=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> \
+          <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">omega</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">zero</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">one</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">two</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="n">beta</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=-</span><span class="mi">3</span><span class="p">,</span> <span class="n">tehta</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">omega</span><span class="o">=</span><span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="constants">
+<span id="index-9"></span><h2>2.10. Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<p>We have seen some variables now let us see some constants. There are five
+categories of constants: character, integer, floating-point, string, and
+enumeration constant. We will see enumeration constants later first we see
+remaining four types of constants. There are certain rules about constants.
+Commas and spaces are not allowed except for character and string constants.
+Their range cannot outgrow the range of there data type. For numeric type of
+stants they can have a leading (-)minus sign.</p>
+<p>Given below is an example:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Integer constants</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of integer constants</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">decimal</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">octal</span> <span class="o">=</span> <span class="mo">06</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">hex</span> <span class="o">=</span> <span class="mh">0xb</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %o %x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">decimal</span><span class="p">,</span> <span class="n">octal</span><span class="p">,</span> <span class="n">hex</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>7 6 b
+</pre></div>
+</div>
+<p>As you can see there are three different categories for integer constants:
+decimal constants (base 10), octal constants (base 8) and hexadecimal constants
+(base 16). Also, you must have noticed how a zero is prefixed before octal type
+and a zero and x for hexadecimal type. The %d format specifier is already known
+to you for signed decimals. However, now you know two more %o and %x for
+unsigned octal and unsigned hexadecimal respectively. For unsigned integer it
+is %u. There is one more format specifier which you may encounter for signed
+decimal and that is %i.</p>
+<p>Note that there is nothing for binary constants. I leave this as an exercise
+to you to convert a number in any base shown above to binary and print it.
+Also vice-versa that is take a input in binary and convert to these three.
+Later I will show you this program.</p>
+<p>Now let us move to floating-point constants. Again, I will explain using an
+example:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Floating-point constants</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of floating-point constants</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">7.5384589234</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">13.894578834538578234784</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="kt">double</span> <span class="n">ld</span> <span class="o">=</span> <span class="mf">759.8263478234729402354028358208358230829304</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f %lf, %Lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">ld</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>7.538459 13.894579, 759.826348
+</pre></div>
+</div>
+<p>We will learn to change precision later when we deal with format specifiers
+along with printf and all input/output family. Here also, you learn three
+format specifiers. Other are %e or %E for scientific notation of float
+family. Then there is %g or %G which uses shorter of %e and %f types.</p>
+<p>Now we move on to character and string type constants and as usual with a
+small program.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Character constants</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of character constants</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;S&#39;</span><span class="p">;</span>
+  <span class="kt">char</span><span class="o">*</span> <span class="n">str</span> <span class="o">=</span><span class="s">&quot;Shiv S, Dayal&quot;</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the ouput is:</p>
+<div class="highlight-python"><div class="highlight"><pre>S Shiv S, Dayal
+</pre></div>
+</div>
+<p>As I had said that commas and blanks are not allowed in numeric types but you
+can see both are allowed on character and string types. Also, the string is a
+character pointer that is it can point to memory location where a character is
+stored. In this case the string is stored in an area of memory called stack.
+When memory is allocated the compiler knows how much has been allocated. For
+string there is something called null character represented by &#8216;\0&#8217; which is
+used to terminate string. By using this mechanism the program knows where the
+string is terminating. It is treated in next section as well.A very
+interesting thing to be noted is char is considered to be an integral type.
+It is allowed to perform addition etc on char type. Till now you have learnt
+many format specifiers and have seen they all start with %. Think how will you
+print % on stdout. It is printed like %%. It was simple,wasn&#8217;t it? C program
+have got something called ASCII table which is a 7-bit character table values
+ranging from0 to 127. There is also
+something called escape sequences and it is worth to have a look at them.</p>
+</div>
+<div class="section" id="escape-sequences">
+<span id="id3"></span><span id="index-10"></span><h2>2.11. Escape Sequences<a class="headerlink" href="#escape-sequences" title="Permalink to this headline">¶</a></h2>
+<p>All escape sequences start with a leading \ . Following table shows them:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="31%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Chracter</th>
+<th class="head">Escape Sequences</th>
+<th class="head">ASCII Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>null</td>
+<td>\0</td>
+<td>000</td>
+</tr>
+<tr class="row-odd"><td>bell(alert)</td>
+<td>\a</td>
+<td>007</td>
+</tr>
+<tr class="row-even"><td>backspace</td>
+<td>\b</td>
+<td>008</td>
+</tr>
+<tr class="row-odd"><td>horizontal tab</td>
+<td>\t</td>
+<td>009</td>
+</tr>
+<tr class="row-even"><td>newline (line feed)</td>
+<td>\n</td>
+<td>010</td>
+</tr>
+<tr class="row-odd"><td>vertical tab</td>
+<td>\v</td>
+<td>011</td>
+</tr>
+<tr class="row-even"><td>form feed</td>
+<td>\f</td>
+<td>012</td>
+</tr>
+<tr class="row-odd"><td>carriage return</td>
+<td>\r</td>
+<td>013</td>
+</tr>
+<tr class="row-even"><td>quotation mark (&#8221;)</td>
+<td>\&#8221;</td>
+<td>034</td>
+</tr>
+<tr class="row-odd"><td>apostrophe (&#8216;)</td>
+<td>\&#8217;</td>
+<td>039</td>
+</tr>
+<tr class="row-even"><td>question mark</td>
+<td>\?</td>
+<td>063</td>
+</tr>
+<tr class="row-odd"><td>backslash</td>
+<td>\ \</td>
+<td>092</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Note that there is no space between two backslashes. Sphinx does not allow me
+to write four continuous backslashes. Now we will talk about all these one by
+one. \0 which is also known as NULL is the string terminating character, as
+said previously, and must be present in string for it to terminate. For
+example, in our character constant program the str string is &#8220;Shiv S. Dayal&#8221;.
+So how many characters are there 13? Wrong 14! The NULL character is hidden.
+Even if we say str=&#8221;&#8221;; then it will contain one character and that is this
+NULL. Many standard C functions rely on this presence of NULL and causes a
+lot of mess because of this.</p>
+<p>The bell escape sequence if for a bell from CPU. Let us write a program and
+see it in effect.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Bell Program</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of bell escape sequence</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello</span><span class="se">\a</span><span class="s">&quot;</span><span class="p">);</span>
+
+  <span class="n">getchar</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The output of this program will be hello on stdout and an audible or
+visible bell as per settings of your shell. Notice the <tt class="docutils literal"><span class="pre">getchar()</span></tt>
+function which waits for input and reads a character from stdin.
+Next is backspace escape sequence. Let us see a program for its demo as
+well:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Backspace Program</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of backspace escape sequence</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;h</span><span class="se">\b</span><span class="s">*e</span><span class="se">\b</span><span class="s">*l</span><span class="se">\b</span><span class="s">*l</span><span class="se">\b</span><span class="s">*o</span><span class="se">\b</span><span class="s">*</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\b</span><span class="s">&quot;</span><span class="p">);</span>
+
+  <span class="n">getchar</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>*****
+</pre></div>
+</div>
+<p>It is hello replaced by <strong>*</strong>. A minor modification in this program to
+replace the character as soon as key is pressed by some other character
+will turn it into a password program. Backspace escape sequence means
+when it is encountered the cursor moves to the previous position on the
+line in context. If active position of cursor is initial position then
+C99 standard does not specify the behavior of display device. However,
+the behavior on my system is that cursor remains at initial position.
+Check out on yours. The second printf function determines this behavior.</p>
+<p>Next we are going to deal with newline and horizontal tab escape
+sequences together as combined together they are used to format output
+in a beautiful fashion. The program is listed below:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">// Newline and Horizontal tab program Program</span>
+<span class="c1">// Author: Shiv S. Dayal</span>
+<span class="c1">// Description: Demo of newline and horizontal tab escape sequence</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Before tab</span><span class="se">\t</span><span class="s">Aftertab</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">After newline</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+  <span class="n">getchar</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>Before tab      Aftertab
+
+After newline
+</pre></div>
+</div>
+<p>Here I leave you to experiment with other escape sequences. Feel free to
+explore them. Try various combinations. Let your creative juices flow.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

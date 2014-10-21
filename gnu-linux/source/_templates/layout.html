@@ -1,0 +1,16 @@
+{% extends "!layout.html" %}
+
+
+{% block rootrellink %}
+        <li><a href="http://libreprogramming.org">home</a>|&nbsp;</li>
+        <li><a href="{{ pathto('search') }}">search</a>|&nbsp;</li>
+       <li><a href="http://libreprogramming.org/programming/c/">C99 Programming</a> &raquo;</li>
+{% endblock %}
+{% block extrahead %}
+<script src="/css/analytics.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../css/math.css" type="text/css" />
+{% endblock %}
+{% block relbar1 %}
+
+{{ super() }}
+{% endblock %}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. Ratio &mdash; Informal Algebra</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Informal Algebra" href="../" />
+    <link rel="next" title="3. Solutions for Ratios" href="../ratio_sol/" />
+    <link rel="prev" title="1. Number System" href="../ns/" />
+<script src="/css/analytics.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../css/math.css" type="text/css" />
+
+  </head>
+  <body>
+
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="../">
+          Informal Algebra</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ns/">1. Number System</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">2. Ratio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ratio_sol/">3. Solutions for Ratios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proportions/">4. Proportions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prop_sol/">5. Solutions for Proportions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../variations/">6. Variations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../variations_solutions/">7. Solutions for Variations Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex_numbers/">8. Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex_numbers_problems/">9. Complex Numbers Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex_numbers_solutions/">10. Complex Numbers Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arithmetic_progressions/">11. Arithmetic Progressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arithmetic_progressions_problems/">12. Arithmetic Progression Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arithmetic_progressions_solutions/">13. Arithmetic Progression Solutions</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">2. Ratio</a><ul>
+<li><a class="reference internal" href="#comparing-two-ratios">2.1. Comparing Two Ratios</a></li>
+<li><a class="reference internal" href="#ratio-of-ratios">2.2. Ratio of Ratios</a></li>
+<li><a class="reference internal" href="#surds-and-ratios">2.3. Surds and Ratios</a></li>
+<li><a class="reference internal" href="#compounding-ratios">2.4. Compounding Ratios</a></li>
+<li><a class="reference internal" href="#duplicating-ratios">2.5. Duplicating Ratios</a></li>
+<li><a class="reference internal" href="#antecedent-vs-consequent">2.6. Antecedent vs Consequent</a></li>
+<li><a class="reference internal" href="#common-properties-of-ratios">2.7. Common Properties of Ratios</a></li>
+<li><a class="reference internal" href="#problems">2.8. Problems</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../ns/" title="Previous Chapter: 1. Number System"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 1. Number System</span>
+    </a>
+  </li>
+  <li>
+    <a href="../ratio_sol/" title="Next Chapter: 3. Solutions for Ratios"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">3. Solutions for... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/ratio.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="ratio">
+<h1>2. Ratio<a class="headerlink" href="#ratio" title="Permalink to this headline">¶</a></h1>
+<p>In his book <em>Elements of Algebra</em>, Euler says that anything we can increase
+or decrase is <em>magnitude</em> or <em>quantity</em>.</p>
+<p>We will study ratios of quantities in this chapter. Many of you might
+already be knowing about ratios from earlier classes. A ratio is nothing
+but a comparison between two quantities of same kine. For example, 4
+balls vs 7 balls or 12 shoes vs 8 shoes.</p>
+<p>A ratio beween two qualtities <span class="math">\(Q1\)</span> and <span class="math">\(Q2\)</span> is written as
+<span class="math">\(Q1:Q2\)</span> most of the time. <span class="math">\(Q1\)</span> or the first term is called the
+<strong>antecedent</strong> and the <span class="math">\(Q2\)</span> or the second term is called the
+<strong>consequent</strong>.</p>
+<p>To measure the ratio between two quantities typically we use fractions. A
+reduced fraction is tells us about one quanity being multiples of another or
+part of that. For example, 2 dozen bananas compared to 6 bananas can be written
+as <span class="math">\(\frac{2*12}{6}\)</span> or 4.</p>
+<p>Ratios are <em>abstract quantities</em> because they are sheer numbers. In practice,
+considering our previous example we can say 2 dozen banans are four times 6
+bananas. This four is an abstract quantity because it does not have a physical
+form.</p>
+<p>Clearly, you can see that</p>
+<div class="math">
+\[\frac{Q1}{Q1} = \frac{mQ1}{mQ2}\]</div>
+<p>so the ratio does not change if numerator or antecedent and denominator or
+consequent are multiplied by the same quantity.</p>
+<div class="section" id="comparing-two-ratios">
+<h2>2.1. Comparing Two Ratios<a class="headerlink" href="#comparing-two-ratios" title="Permalink to this headline">¶</a></h2>
+<p>To compare two ratios we need to make their denominator same the we can deduce
+if they are equal or unequal. For example consider two ratios <span class="math">\(r1:r2\)</span> and
+<span class="math">\(r3:r4\)</span>. Then we can have</p>
+<div class="math">
+\[\begin{split}\frac{r1}{r2} = \frac{r1r4}{r2r4} ~~\&amp;~~ \frac{r3}{r4} = \frac{r3r2}{r2r4}\end{split}\]</div>
+<p>Now since consequent is same for both the ratios we can determine which ratio
+is bigger or equal or smaller by determining if <span class="math">\(r1r4\)</span> is bigger or
+equal or smaller as compared to <span class="math">\(r2r3\)</span>.</p>
+</div>
+<div class="section" id="ratio-of-ratios">
+<h2>2.2. Ratio of Ratios<a class="headerlink" href="#ratio-of-ratios" title="Permalink to this headline">¶</a></h2>
+<p>Clearly, a ratio can be represented by a fraction of two integers. Now let us
+try to see what happens to ratio of two ratios:</p>
+<p>Consider two ratios: <span class="math">\(a:b\)</span> and math:<cite>c:d</cite>. Thus we can write ratio of
+these two raios as fraction</p>
+<div class="math">
+\[\frac{\frac{a}{b}}{\frac{c}{d}} ~~or~~ \frac{ad}{bc}\]</div>
+<p>Therefore we can conclude that it is eqauivalent to <span class="math">\(ad:bc\)</span>.</p>
+</div>
+<div class="section" id="surds-and-ratios">
+<h2>2.3. Surds and Ratios<a class="headerlink" href="#surds-and-ratios" title="Permalink to this headline">¶</a></h2>
+<p>When I said a ratio can be applied as a fraction of two integers then that
+applied to finite numbers. A <em>surd</em> like <span class="math">\(\sqrt{x}\)</span> is not a finite
+number because certain portion of its fractional part if recurring.
+Therefore, when a surd if involved a ratio cannot be represented as a fraction
+of two integers.</p>
+<p>When we can represent a ratio <em>exactly</em> by two integers the quantities are
+called <strong>commensurable</strong> else they are called <strong>incommensurable</strong>.</p>
+</div>
+<div class="section" id="compounding-ratios">
+<h2>2.4. Compounding Ratios<a class="headerlink" href="#compounding-ratios" title="Permalink to this headline">¶</a></h2>
+<p>Ratios are compounded by multiplying ratios. The multiplication is done in
+simple fashion. Antecedents with antecedents and consequents with consequents.</p>
+<p>For example, consider some ratios: <span class="math">\(a:b\)</span>, <span class="math">\(c:d\)</span> and <span class="math">\(e:f\)</span>.
+The compounded ratio is <span class="math">\(abc:def\)</span>.</p>
+</div>
+<div class="section" id="duplicating-ratios">
+<h2>2.5. Duplicating Ratios<a class="headerlink" href="#duplicating-ratios" title="Permalink to this headline">¶</a></h2>
+<p>When a ratio is compounded with itself once it is called <strong>duplicate ratio</strong>.
+If it is compunded twice then it is called <strong>triplicate ratio</strong>. If a square
+root is taken then it is called <strong>subduplicate ratio</strong>.</p>
+</div>
+<div class="section" id="antecedent-vs-consequent">
+<h2>2.6. Antecedent vs Consequent<a class="headerlink" href="#antecedent-vs-consequent" title="Permalink to this headline">¶</a></h2>
+<p>A ratio is of <em>greater inequality</em>, or <em>less inequality</em> or of <em>equality</em>
+depending on whether antecedent is greater or smaller or equal to the
+consequent.</p>
+</div>
+<div class="section" id="common-properties-of-ratios">
+<h2>2.7. Common Properties of Ratios<a class="headerlink" href="#common-properties-of-ratios" title="Permalink to this headline">¶</a></h2>
+<p>A ratio of greater inequality is diminished and a ratio of less inequality is
+increased if we add same quanitty to both its terms.</p>
+<p>Let <span class="math">\(\frac{a}{b}\)</span> be a ratio and we add <span class="math">\(x\)</span> to both its terms so we
+have <span class="math">\(\frac{a+x}{b+x}\)</span> as our new ratio.</p>
+<p>Now,</p>
+<div class="math">
+\[\begin{split}\frac{a}{b}~-~\frac{a+x}{b+x}~=~\frac{ax-bx}{b(b+x)} \\
+=\frac{x(a-b)}{b(b+x)}.\end{split}\]</div>
+<p>and <span class="math">\(a-b\)</span> is positive or negative depending upon the fact whether
+<span class="math">\(a\)</span> is greater or smaller than <span class="math">\(b\)</span>. Hence,</p>
+<div class="math">
+\[\begin{split}\text{if}~a&gt; b,~~ \frac{a}{b}&gt;\frac{a+x}{b+x}\end{split}\]\[\begin{split}\text{and if}~ a&lt; b,~~ \frac{a}{b}&lt;\frac{a+x}{b+x}\end{split}\]</div>
+<p>Similarly, it can be proved that a ratio of greater inequality is icreased and
+a ratio of less inequality is decreased if we subtract same quanitty to both
+its terms.</p>
+<p>When two or more ratios are equal we can denote that by a single symbol which
+helps us in many ways.</p>
+<p>Consider,</p>
+<div class="math">
+\[\text{If}~\frac{a}{b}=\frac{c}{d}=\frac{e}{f}= ... ,\]\[\text{each of these ratios}~=\left(\frac{pa^n+qc^n+re^n+ ...}{{pb^n+qd^n+rf^n}+ ...}\right)^\frac{1}{n}\]\[\text{Let}~\frac{a}{b}=\frac{c}{d}=\frac{e}{f}=...=k;\]\[\text{the}~a=bk, c=dk, e=fk, ...;\]\[\text{Hence},~pa^n=pb^nk^n,~qc^n=qd^nk^n,~re^n=rf^nk^n,...;\]\[\implies \left(\frac{pa^n+qb^n+re^n+ ...}{{pb^n+qd^n+rf^n}+ ...}\right) = \left(\frac{pb^nk^n+qd^nk^n+rf^nk^n+ ...}{{pb^n+qd^n+rf^n}+ ...}\right) = k^n\]\[\begin{split}\implies \left(\frac{pa^n+qb^n+re^n+ ...}{{pb^n+qd^n+rf^n}+  ...}\right)^\frac{1}{n} = k\\\end{split}\]</div>
+<p>Similarly, we can say that when a a number of fractions are equal, each of them
+is equal to the sum of all the numerators divided by the sum of denominators,</p>
+<div class="math">
+\[\text{If}~\frac{a}{b}=\frac{c}{d}=\frac{e}{f}= ... ,\]\[\implies \frac{a+c+e}{b+d+f} = \frac{bk+dk+fk}{b+d+f} = k.\]</div>
+<p>if <span class="math">\(\frac{a_1}{b_1}, \frac{a_2}{b_2}, ..., \frac{a_n}{b_n}\)</span> be unequal
+fractions, of which denominators are all having the same sign, then the
+fraction</p>
+<div class="math">
+\[\frac{a_1 + a_2 + ... + a_n}{b_1 + b_2+ .. +b_n}\]</div>
+<p>lies in magnitude between the greatest and least of them.</p>
+<p>Let all the denominators are positive. Let <span class="math">\(\frac{a_r}{b_r}\)</span> be the least fraction,
+and denote it by <span class="math">\(k\)</span>; then</p>
+<div class="math">
+\[\frac{a_r}{b_r} = k; \therefore a_r = kb_r;\]\[\frac{a_1}{b_1} = k; \therefore a_1 = kb_1;\]\[\frac{a_2}{b_2} = k; \therefore a_2 = kb_2;\]\[\text{and so on;}\]\[\therefore \text{by addition,}\]\[\begin{split}a_1 + a_2 + ... + a_n &gt; (b_1 + b_2 + ... + b_n)k;\end{split}\]\[\begin{split}\therefore\frac{a_1 + a_2 + ... + a_n}{b_1 + b_2 + ... + b_n}&gt; k; \text{that is,}&gt;\frac{a_r}{b_r}\end{split}\]</div>
+<p>Similarly, we may prove that</p>
+<div class="math">
+\[\begin{split}\frac{a_1 + a_2 + ... + a_n}{b_1 + b_2 + ... + b_n}&gt; k; \text{that is,}&lt;\frac{a_s}{b_s}\end{split}\]</div>
+<p>where <span class="math">\(\frac{a_s}{b_s}\)</span> is greatest of the given functions.</p>
+<p>If we have two equations containing three unknown variables in the first degree
+such as</p>
+<div class="math" id="equation-Equation 1">
+<span class="eqno">(1)</span>\[a_1x + b_1y + c_1z = 0\]</div>
+<div class="math" id="equation-Equation 2">
+<span class="eqno">(2)</span>\[a_2x + b_2y + c_2z = 0\]</div>
+<p>Rewriting these we can have following;</p>
+<div class="math">
+\[a_1\left(\frac{x}{z}\right) + b_1\left(\frac{y}{z}\right) + c_1 =0,\]\[a_2\left(\frac{x}{z}\right) + b_2\left(\frac{y}{z}\right) + c_2 =0,\]</div>
+<p>Solving these we obtain,</p>
+<div class="math">
+\[\frac{x}{z}=\frac{b_1c_2-b_2c_1}{a_1b_2-a_2b_1},~~~\frac{y}{z}=\frac{c_1a_2-c_2a_1}{a_1b_2-a_2b_1}\]</div>
+<p>or,</p>
+<div class="math" id="equation-Equation 3">
+<span class="eqno">(3)</span>\[\frac{x}{b_1c_2-b_2c_1} = \frac{y}{c_1a_2-c_2a_1}=\frac{z}{a_1b_2-a_2b_1}\]</div>
+<p>So we can see that for <span class="math">\(x\)</span> coefficients of <span class="math">\(y\)</span> and <span class="math">\(z\)</span> are
+used and for <span class="math">\(y\)</span>, that of <span class="math">\(x\)</span> and <span class="math">\(z\)</span> are used and so on in
+a cyclic manner as given in image below:</p>
+<div class="figure">
+<p><img src="../_images/tikz-74887806b08779e4f54cff09ced0fb3011433937.png" alt="\draw (0,0) node {$b2$};
+\draw (1.5,0) node {$c2$};
+\draw (3,0) node {$a2$};
+\draw (4.5,0) node {$b2$};
+\draw (0,1.5) node {$b1$};
+\draw (1.5,1.5) node {$c1$};
+\draw (3,1.5) node {$a1$};
+\draw (4.5,1.5) node {$b1$};
+\draw[-&gt;, &gt;=stealth, thick] (0, 0.2) -- (1.5, 1.3);
+\draw[-&gt;, &gt;=stealth, thick] (1.5, 0.2) -- (3, 1.3);
+\draw[-&gt;, &gt;=stealth, thick] (3, 0.2) -- (4.5, 1.3);
+\draw[-&gt;, &gt;=stealth, thick] (0.1, 1.3) -- (1.4, 0.2);
+\draw[-&gt;, &gt;=stealth, thick] (1.6, 1.3) -- (2.9, 0.2);
+\draw[-&gt;, &gt;=stealth, thick] (3.1, 1.3) -- (4.4, 0.2);" /></p>
+<p class="caption">Cross multiplication of co-efficients</p></div><p>Multiply the coefficients as indicated by the arrows. The ascending arrows are
+positive and descending ones are negative. This is called the <strong>Rules of Cross
+Multiplication</strong>.</p>
+<p>Now expanding on previous discussion consider following set of three equations:</p>
+<div class="math" id="equation-Equation 4">
+<span class="eqno">(4)</span>\[a_1x + b_1y + c_1z=0\]</div>
+<div class="math" id="equation-Equation 5">
+<span class="eqno">(5)</span>\[a_2x + b_2y + c_2z=0\]</div>
+<div class="math" id="equation-Equation 6">
+<span class="eqno">(6)</span>\[a_3x + b_3y + c_3z=0\]</div>
+<p>So by our previous rule of cross-multiplication between eq. (4) and (5) we have</p>
+<div class="math">
+\[\frac{x}{z}=\frac{b_1c_2-b_2c_1}{a_1b_2-a_2b_1},~~~\frac{y}{z}=\frac{c_1a_2-c_2a_1}{a_1b_2-a_2b_1}\]</div>
+<p>Now if we take these ratios to be equal to <span class="math">\(k\)</span> then multiplying and
+substituting in equation (6) we have</p>
+<div class="math">
+\[a_3(b_1c_2-b_1c_2)+b_3(c_1a_2-c_2a_1)+c_3(a_1b_2-a_2b_1) = 0\]</div>
+<p>This particular relation is known as the <strong>eliminant</strong> of the given equations.</p>
+</div>
+<div class="section" id="problems">
+<h2>2.8. Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Find the ratio of ratios <span class="math">\(4:7\)</span> and <span class="math">\(11:5\)</span>.</li>
+<li>Find the ratio of ratios <span class="math">\(13:24\)</span> and <span class="math">\(34:23\)</span>.</li>
+<li>Find out that among the following pair of ratios which one is greater in
+the pair:<ol class="loweralpha">
+<li><span class="math">\(4:5\)</span> and <span class="math">\(5:6\)</span>,</li>
+<li><span class="math">\(34:33\)</span> and <span class="math">\(68:67\)</span> and</li>
+<li><span class="math">\(123:63\)</span> and <span class="math">\(233:120\)</span>.</li>
+</ol>
+</li>
+<li>Find the duplicate, triplicate and subduplicate of following ratios:<ol class="loweralpha">
+<li><span class="math">\(2(x+3):y-5\)</span></li>
+<li><span class="math">\(a^2+ab+b^2:a^3-b^3\)</span></li>
+</ol>
+</li>
+<li>If <span class="math">\(x-2:3(x+7)\)</span> has a ratio of <span class="math">\(7:9\)</span> then find <span class="math">\(x\)</span>.</li>
+<li>Find two numbers in the ratio of <span class="math">\(11:17\)</span> where one exceeds other by
+126.</li>
+<li>What number must be added to each of the tems of <span class="math">\(5:13\)</span> to make it
+equal to <span class="math">\(5:7\)</span>?</li>
+<li>What number must be subtracted from each of the terms of <span class="math">\(33:37\)</span> to
+make it equal to <span class="math">\(7:9\)</span>?</li>
+<li>If <span class="math">\(x-2:y-3=3:5\)</span>, find the ratio of <span class="math">\(9x-2y:4x+2y\)</span>.</li>
+<li>If</li>
+</ol>
+<div class="math">
+\[\frac{a}{b}=\frac{c}{d}=\frac{e}{f},\]</div>
+<p>prove that</p>
+<div class="math">
+\[\frac{7a^4b^2+8a^2c^2-5e^4f}{7b^6+8b^2f^2-5e^5} = \frac{a^4}{b^4}.\]</div>
+<ol class="arabic simple" start="11">
+<li>If</li>
+</ol>
+<div class="math">
+\[\frac{a}{b}=\frac{b}{c}=\frac{c}{d},\]</div>
+<p>prove that <span class="math">\(\frac{a}{d}\)</span> is equal to</p>
+<div class="math">
+\[\sqrt{\frac{a^5+b^2c^2+a^3c^2}{b^4c+d^4+b^2cd^2}}..\]</div>
+<ol class="arabic simple" start="12">
+<li>If</li>
+</ol>
+<div class="math">
+\[\frac{x}{q+r-p}=\frac{y}{r+p-q}=\frac{z}{p=q-r}\]</div>
+<p>prove that</p>
+<div class="math">
+\[(q-r)x + (r-p)y + (p-q)z = 0.\]</div>
+<ol class="arabic simple" start="13">
+<li>If</li>
+</ol>
+<div class="math">
+\[\frac{y+z}{pb+qc}=\frac{z+x}{pc+qa}=\frac{x+y}{pa+qb},\]</div>
+<p>prove that</p>
+<div class="math">
+\[\frac{2(x+y+z)}{a+b+c} = \frac{(b+c)x+(c+a)y+(a+b)z}{ab+bc+ca}.\]</div>
+<ol class="arabic simple" start="14">
+<li>If</li>
+</ol>
+<div class="math">
+\[\frac{x}{x}=\frac{y}{b}=\frac{z}{c},\]</div>
+<p>prove that</p>
+<div class="math">
+\[\frac{x^3+a^3}{x^2+a^2}+\frac{y^3+b^3}{y^2+b^2}+\frac{z^3+c^3}{z^2+c^2}=\frac{(x+y+z)^3+(a+b+c)3}{(x+y+z)^2+(a+b+c)^2}.\]</div>
+<ol class="arabic simple" start="15">
+<li>If</li>
+</ol>
+<div class="math">
+\[\frac{2y+2z-x}{a}=\frac{2z+2x-y}{b}=\frac{2x+2y-z},\]</div>
+<p>prove that</p>
+<div class="math">
+\[\frac{x}{2b+2c-a}=\frac{y}{2c+2a-b}=\frac{z}{qa+2b-c}.\]</div>
+<p>16. If <span class="math">\((a^2+b^2+c^2)(x^2+y^2+z^2)=(ax+by+cz)^2\)</span> show that
+<span class="math">\(x:a=y:b=z:c\)</span>.</p>
+<ol class="arabic simple" start="17">
+<li>If</li>
+</ol>
+<div class="math">
+\[x=\frac{a-b}{a+b},~y=\frac{b-c}{b+c},~z=\frac{c-a}{c+a}\]</div>
+<p>prove that</p>
+<div class="math">
+\[(1+x)(1+y)(1+z) = (1-x)(1-y)(1-z).\]</div>
+<ol class="arabic simple" start="18">
+<li>If <span class="math">\(l(my+nz-lx)=m(nz+lx-my)=n(lx+my-nz),\)</span> prove that</li>
+</ol>
+<div class="math">
+\[\frac{y+z-x}{l}=\frac{z+x-y}{m}=\frac{x+y-z}{n}\]</div>
+<p>19. Show that the eliminant of <span class="math">\(ax+by+cz=0, cx+by+az=0, bx+ay+cz=0\)</span>, is
+<span class="math">\(a^3+b^3+c^3-3abc\)</span>.</p>
+<p>20. Eliminate <span class="math">\(x, y, z\)</span> from the equations <span class="math">\(ax+hy+gz=0,
+hx+by+fz=0, gx+fy+cz=0\)</span>.</p>
+<ol class="arabic simple" start="21">
+<li>If <span class="math">\(x=cy+bz, y=az+cx, z=bx+ay\)</span>, prove that</li>
+</ol>
+<div class="math">
+\[\frac{x^2}{1-a^2}=\frac{y^2}{1-b^2}=\frac{z^2}{1-c^2}\]</div>
+<ol class="arabic simple" start="22">
+<li>If <span class="math">\(a(y+z)=x, b(z+x)=y, c(x+y)=z\)</span> prove that <span class="math">\(bc+ca+ab+2abc=1\)</span>.</li>
+<li>Solve the following equations:<ol class="loweralpha">
+<li><span class="math">\(3x-4y+7z=0, 2x-y-2z=0, 3x^3-y^3+z^3=18\)</span>.</li>
+<li><span class="math">\(x+y-z=0, 3x-2y+17z=0, x^3+3y^3+2z^3=167\)</span>.</li>
+<li><span class="math">\(4xy-7yz-3zx=0, 4xy-21yz+3zx=0, x+2y+3z=19\)</span>.</li>
+<li><span class="math">\(3x^2-2y^2+5z^2=0, 7x^2-3y^2-15z^2=0, 5x-4y+7z=0\)</span>.</li>
+</ol>
+</li>
+<li>If</li>
+</ol>
+<div class="math">
+\[\frac{l}{\sqrt{a}-\sqrt{b}}+\frac{m}{\sqrt{b}-\sqrt{c}}+\frac{n}{\sqrt{c}-\sqrt{a}}=0,\]\[\frac{l}{\sqrt{a}+\sqrt{b}}+\frac{m}{\sqrt{b}+\sqrt{c}}+\frac{n}{\sqrt{c}+\sqrt{a}}=0,\]</div>
+<p>show that</p>
+<div class="math">
+\[\frac{l}{(a-b)(c-\sqrt{ab})}=\frac{m}{(b-c)(a-\sqrt{bc})}=\frac{n}{(c-a)(b-\sqrt{ac})}\]</div>
+<ol class="arabic simple" start="25">
+<li>Solve the following equations:<ol class="loweralpha">
+<li><span class="math">\(ax+by+cz=0, bcx+cay+abz=0,xyz+abc(a^3x+b^3y+c^3z)=0\)</span>.</li>
+<li><span class="math">\(ax+by+cz=a^2x+b^2y+c^2z=0,x+y+z+(a-b)(b-c)(c-a)=0\)</span>.</li>
+</ol>
+</li>
+<li>If <span class="math">\(a(y+z)=x, b(z+x)=y, c(x+y)=z\)</span> prove that</li>
+</ol>
+<div class="math">
+\[\frac{x^2}{a(1-bc)}=\frac{y^2}{b(1-ca)}=\frac{z^2}{c(1-ab)}.\]</div>
+<ol class="arabic simple" start="27">
+<li>If <span class="math">\(ax+hy+gz=0, hx+by+fz=0, gx+fy+cz=0\)</span>, prove that</li>
+</ol>
+<div class="math">
+\[\frac{x^2}{bc-f^2}=\frac{y^2}{ca-g^2}=\frac{z^2}{ab-h^2}~~\text{and}\]</div>
+<div class="math">
+\[(bc-f^2)(ca-g^2)(ab-h^2)=(gh-af)(fg-ch)(hf-bg)\]</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Shiv S. Dayal.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

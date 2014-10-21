@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>16. Character Handling &lt;ctype.h&gt; &mdash; C99  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="C99  documentation" href="../" />
+    <link rel="next" title="17. Errors &lt;errno.h&gt;" href="../errno/" />
+    <link rel="prev" title="15. Complex arithmetic &lt;complex.h&gt;" href="../complex/" />
+<script src="../_static/analytics.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../css/math.css" type="text/css" />
+
+  </head>
+  <body>
+
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="../">
+          C99</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">9. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">10. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">11. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">12. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">13. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">14. Diagnostics <tt class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">15. Complex arithmetic <tt class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></tt></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">16. Character Handling <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">17. Errors <tt class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">18. Floating-point environment <tt class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">19. Characteristics of floating types <tt class="docutils literal"><span class="pre">&lt;float.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">20. Format conversion of integer types <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">21. Alternative spellings <tt class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">22. Sizes of integer types <tt class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">23. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">24. Mathematics <tt class="docutils literal"><span class="pre">&lt;math.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">25. Nonlocal jumps <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">26. Signal handling <tt class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">27. Variable arguments <tt class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">28. Boolean type and values <tt class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">29. Common definitions <tt class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">30. Integer types <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">31. Input/output <tt class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">32. General utilities <tt class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">33. String handling <tt class="docutils literal"><span class="pre">&lt;string.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">34. Type-generic math <tt class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">35. Date and time <tt class="docutils literal"><span class="pre">&lt;time.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">36. Extended multibyte and wide character utilities <tt class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">37. Wide character classification and mapping utilities <tt class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">38. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">39. License</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">16. Character Handling <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt></a><ul>
+<li><a class="reference internal" href="#character-classification-functions">16.1. Character classification functions</a><ul>
+<li><a class="reference internal" href="#the-isalnum-function">16.1.1. The <tt class="docutils literal"><span class="pre">isalnum</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-isalpha-function">16.1.2. The <tt class="docutils literal"><span class="pre">isalpha</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-isblank-function">16.1.3. The <tt class="docutils literal"><span class="pre">isblank</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-iscntrl-function">16.1.4. The <tt class="docutils literal"><span class="pre">iscntrl</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-isdigit-function">16.1.5. The <tt class="docutils literal"><span class="pre">isdigit</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-isgraph-function">16.1.6. The <tt class="docutils literal"><span class="pre">isgraph</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-islower-function">16.1.7. The <tt class="docutils literal"><span class="pre">islower</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-isprint-function">16.1.8. The <tt class="docutils literal"><span class="pre">isprint</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-ispunct-function">16.1.9. The <tt class="docutils literal"><span class="pre">ispunct</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-isspace-function">16.1.10. The <tt class="docutils literal"><span class="pre">isspace</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-isupper-function">16.1.11. The <tt class="docutils literal"><span class="pre">isupper</span></tt> function</a></li>
+<li><a class="reference internal" href="#the-isxdigit-function">16.1.12. The <tt class="docutils literal"><span class="pre">isxdigit</span></tt> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../complex/" title="Previous Chapter: 15. Complex arithmetic <complex.h>"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 15. Complex arit...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../errno/" title="Next Chapter: 17. Errors <errno.h>"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">17. Errors <errn... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/ctypes.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="character-handling-ctype-h">
+<span id="ctype"></span><span id="index-0"></span><h1>16. Character Handling <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt><a class="headerlink" href="#character-handling-ctype-h" title="Permalink to this headline">¶</a></h1>
+<p>The header <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt> declares several functions useful for classifying and
+mapping characters. In all cases the argument is an <tt class="docutils literal"><span class="pre">int</span></tt>, the value of which
+shall be representable as an <tt class="docutils literal"><span class="pre">unsigned</span> <span class="pre">char</span></tt> or shall equal the value of the
+macro <tt class="docutils literal"><span class="pre">EOF</span></tt>. If the argument has any other value, the behavior is undefined.</p>
+<p>The behavior of these functions is affected by the current locale. Those
+functions that have locale-specific aspects only when not in the &#8220;C&#8221; locale are
+noted below.</p>
+<p>The term printing character refers to a member of a locale-specific set of
+characters, each of which occupies one printing position on a display device;
+the term control character refers to a member of a locale-specific set of
+characters that are not printing characters. <a class="footnote-reference" href="#id2" id="id1">[1]</a> All letters and digits are
+printing characters.</p>
+<p><strong>Forward references:</strong> EOF (14.19.1), localization (14.11).</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>In an implementation that uses the seven-bit US ASCII character set, the
+printing characters are those whose values lie from <tt class="docutils literal"><span class="pre">0x20</span></tt> (space) through
+<tt class="docutils literal"><span class="pre">0x7E</span></tt> (<tt class="docutils literal"><span class="pre">tilde</span></tt>); the control characters are those whose values lie from
+<tt class="docutils literal"><span class="pre">0</span></tt> (<tt class="docutils literal"><span class="pre">NUL</span></tt>) through <tt class="docutils literal"><span class="pre">0x1F</span></tt> (<tt class="docutils literal"><span class="pre">US</span></tt>), and the character <tt class="docutils literal"><span class="pre">0x7F</span></tt>
+(<tt class="docutils literal"><span class="pre">DEL</span></tt>).</td></tr>
+</tbody>
+</table>
+<div class="section" id="character-classification-functions">
+<span id="id3"></span><span id="index-1"></span><h2>16.1. Character classification functions<a class="headerlink" href="#character-classification-functions" title="Permalink to this headline">¶</a></h2>
+<p>The functions in this subclause return nonzero (true) if and only if the value
+of the argument c conforms to that in the description of the function.</p>
+<div class="section" id="the-isalnum-function">
+<span id="index-2"></span><h3>16.1.1. The <tt class="docutils literal"><span class="pre">isalnum</span></tt> function<a class="headerlink" href="#the-isalnum-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isalnum</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">isalnum</span></tt> function tests for any character for which <tt class="docutils literal"><span class="pre">isalpha</span></tt> or
+<tt class="docutils literal"><span class="pre">isdigit</span></tt> is true.</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isalnum</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for an alphanumeric character; it is equivalent to <tt class="docutils literal"><span class="pre">(isalpha(c)</span> <span class="pre">||</span>
+<span class="pre">isdigit(c))</span></tt>.</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c</span><span class="o">=</span><span class="sc">&#39;c&#39;</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="sc">&#39;$&#39;</span><span class="p">,</span> <span class="n">c3</span><span class="o">=</span><span class="sc">&#39;9&#39;</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d %d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">isalnum</span><span class="p">(</span><span class="n">c</span><span class="p">),</span> <span class="n">isalnum</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">isalnum</span><span class="p">(</span><span class="n">c2</span><span class="p">),</span> <span class="n">isalnum</span><span class="p">(</span><span class="n">c3</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>8 0 0 8
+</pre></div>
+</div>
+<p>The output does not need any explation as it is blind-obvious.</p>
+</div>
+<div class="section" id="the-isalpha-function">
+<span id="index-3"></span><h3>16.1.2. The <tt class="docutils literal"><span class="pre">isalpha</span></tt> function<a class="headerlink" href="#the-isalpha-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isalpha</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">isalpha</span></tt> function tests for any character for which <tt class="docutils literal"><span class="pre">isupper</span></tt> or
+<tt class="docutils literal"><span class="pre">islower</span></tt> is true, or any character that is one of a locale-specific set of
+alphabetic characters for which none of <tt class="docutils literal"><span class="pre">iscntrl,</span> <span class="pre">isdigit,</span> <span class="pre">ispunct</span></tt> or
+<tt class="docutils literal"><span class="pre">isspace</span></tt> is true. In the &#8220;C&#8221; locale, <tt class="docutils literal"><span class="pre">isalpha</span></tt> returns true only for the
+characters for which <tt class="docutils literal"><span class="pre">isupper</span></tt> or <tt class="docutils literal"><span class="pre">islower</span></tt> is true.</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isalpha</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks  for an alphabetic character; in the standard &#8220;C&#8221; locale, it  is
+equivalent to <tt class="docutils literal"><span class="pre">(isupper(c)</span> <span class="pre">||</span> <span class="pre">islower(c))</span></tt>. In some locales, there may be
+additional characters for which <tt class="docutils literal"><span class="pre">isalpha()</span></tt> is true—letters which are
+neither upper case nor lower case.</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c</span><span class="o">=</span><span class="sc">&#39;c&#39;</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="sc">&#39;$&#39;</span><span class="p">,</span> <span class="n">c3</span><span class="o">=</span><span class="sc">&#39;9&#39;</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d %d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">isalpha</span><span class="p">(</span><span class="n">c</span><span class="p">),</span> <span class="n">isalpha</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">isalpha</span><span class="p">(</span><span class="n">c2</span><span class="p">),</span> <span class="n">isalpha</span><span class="p">(</span><span class="n">c3</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>1024 0 0 0
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-isblank-function">
+<span id="index-4"></span><h3>16.1.3. The <tt class="docutils literal"><span class="pre">isblank</span></tt> function<a class="headerlink" href="#the-isblank-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isblank</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">isblank</span></tt> function tests for any character that is a standard blank
+character or is one of a locale-specific set of characters for which
+<tt class="docutils literal"><span class="pre">isspace</span></tt> is true and that is used to separate words within a line of text.
+The standard blank characters are the following: space (&#8216; &#8216;), and horizontal
+tab (&#8216;\t&#8217;). In the &#8220;C&#8221; locale, <tt class="docutils literal"><span class="pre">isblank</span></tt> returns true only for the standard
+blank characters.</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isblank</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for a blank character; that is, a space or a tab.</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main()
+{
+  char c=&#39; &#39;, c1=&#39;\n&#39;, c2=&#39;   &#39;, c3=&#39;9&#39;;
+
+  printf(&quot;%d %d %d %d\n&quot;, isblank(c), isblank(c1), isblank(c2), isblank(c3));
+
+  return 0;
+}
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>1 0 1 0
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-iscntrl-function">
+<h3>16.1.4. The <tt class="docutils literal"><span class="pre">iscntrl</span></tt> function<a class="headerlink" href="#the-iscntrl-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">iscntrl</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">iscntrl</span></tt> function tests for any control character.</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">iscntrl</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for a control character.</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>  <span class="c1">//NUL</span>
+  <span class="kt">char</span> <span class="n">c1</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//SOH or ctrl-A</span>
+  <span class="kt">char</span> <span class="n">c2</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span> <span class="c1">//STX or ctrl-B</span>
+  <span class="kt">char</span> <span class="n">c3</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span> <span class="c1">//ETX or ctrl-C</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d %d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">iscntrl</span><span class="p">(</span><span class="n">c</span><span class="p">),</span> <span class="n">iscntrl</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">iscntrl</span><span class="p">(</span><span class="n">c2</span><span class="p">),</span> <span class="n">iscntrl</span><span class="p">(</span><span class="n">c3</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>2 2 2 2
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-isdigit-function">
+<span id="index-5"></span><h3>16.1.5. The <tt class="docutils literal"><span class="pre">isdigit</span></tt> function<a class="headerlink" href="#the-isdigit-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isdigit</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">isdigit</span></tt> function tests for any decimal-digit character.</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isdigit</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for a digit (0 through 9).</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c1</span><span class="o">=</span><span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">isdigit</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">isdigit</span><span class="p">(</span><span class="n">c2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>0 2048
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-isgraph-function">
+<span id="index-6"></span><h3>16.1.6. The <tt class="docutils literal"><span class="pre">isgraph</span></tt> function<a class="headerlink" href="#the-isgraph-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isgraph</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">isgraph</span></tt> function tests for any printing character except space (&#8216; &#8216;).</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isgraph</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for any printable character except space.</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c1</span><span class="o">=</span><span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="sc">&#39; &#39;</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">isgraph</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">isgraph</span><span class="p">(</span><span class="n">c2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>32768 0
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-islower-function">
+<span id="index-7"></span><h3>16.1.7. The <tt class="docutils literal"><span class="pre">islower</span></tt> function<a class="headerlink" href="#the-islower-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">islower</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">islower</span></tt> function tests for any character that is a lowercase letter or
+is one of a locale-specific set of characters for which none of <tt class="docutils literal"><span class="pre">iscntrl,</span>
+<span class="pre">isdigit,</span> <span class="pre">ispunct</span></tt> or <tt class="docutils literal"><span class="pre">isspace</span></tt> is true. In the &#8220;C&#8221; locale, <tt class="docutils literal"><span class="pre">islower</span></tt>
+returns true only for the lowercase letters</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">islower</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for a lower-case character.</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c1</span><span class="o">=</span><span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="sc">&#39; &#39;</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">islower</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">islower</span><span class="p">(</span><span class="n">c2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>512 0
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-isprint-function">
+<span id="id4"></span><span id="index-8"></span><h3>16.1.8. The <tt class="docutils literal"><span class="pre">isprint</span></tt> function<a class="headerlink" href="#the-isprint-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isprint</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">isprint</span></tt> function tests for any printing character including space (&#8216; &#8216;).</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isprint</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for any printable character including space.</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c1</span><span class="o">=</span><span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">isprint</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">isprint</span><span class="p">(</span><span class="n">c2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>16384 0
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-ispunct-function">
+<span id="index-9"></span><h3>16.1.9. The <tt class="docutils literal"><span class="pre">ispunct</span></tt> function<a class="headerlink" href="#the-ispunct-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">ispunct</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">ispunct</span></tt> function tests for any printing character that is one of a
+locale-specific set of punctuation characters for which neither <tt class="docutils literal"><span class="pre">isspace</span></tt> nor
+<tt class="docutils literal"><span class="pre">isalnum</span></tt> is true. In the &#8220;C&#8221; locale, ispunct returns true for every printing
+character for which neither <tt class="docutils literal"><span class="pre">isspace</span></tt> nor <tt class="docutils literal"><span class="pre">isalnum</span></tt> is true.</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">ispunct</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for any printable character which is not a space or an alphanumeric character.</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c1</span><span class="o">=</span><span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="sc">&#39;;&#39;</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ispunct</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">ispunct</span><span class="p">(</span><span class="n">c2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>0 4
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-isspace-function">
+<span id="index-10"></span><h3>16.1.10. The <tt class="docutils literal"><span class="pre">isspace</span></tt> function<a class="headerlink" href="#the-isspace-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isspace</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">isspace</span></tt> function tests for any character that is a standard white-space
+character or is one of a locale-specific set of characters for which
+<tt class="docutils literal"><span class="pre">isalnum</span></tt> is false. The standard white-space characters are the following:
+space (&#8216; &#8216;), form feed (&#8216;f&#8217;), new-line (&#8216;n&#8217;), carriage return (&#8216;r&#8217;),
+horizontal tab (&#8216;t&#8217;), and vertical tab (&#8216;v&#8217;). In the &#8220;C&#8221; locale, <tt class="docutils literal"><span class="pre">isspace</span></tt>
+returns true only for the standard white-space characters.</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isspace</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for white-space  characters.   In  the  &#8220;C&#8221;  and  &#8220;POSIX&#8221;
+locales,  these  are:  space,  form-feed (&#8216;f&#8217;), newline (&#8216;n&#8217;),
+carriage return (&#8216;r&#8217;), horizontal tab (&#8216;t&#8217;), and vertical  tab
+(&#8216;v&#8217;).</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c1</span><span class="o">=</span><span class="sc">&#39;\n&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="sc">&#39;;&#39;</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">isspace</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">isspace</span><span class="p">(</span><span class="n">c2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>8192 0
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-isupper-function">
+<span id="index-11"></span><h3>16.1.11. The <tt class="docutils literal"><span class="pre">isupper</span></tt> function<a class="headerlink" href="#the-isupper-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isupper</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">isupper</span></tt> function tests for any character that is an uppercase letter or
+is one of a locale-specific set of characters for which none of <tt class="docutils literal"><span class="pre">iscntrl,</span>
+<span class="pre">isdigit,</span> <span class="pre">ispunct</span></tt> or <tt class="docutils literal"><span class="pre">isspace</span></tt> is true. In the &#8220;C&#8221; locale, <tt class="docutils literal"><span class="pre">isupper</span></tt>
+returns true only for the uppercase letters.</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isupper</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for an uppercase letter.</p>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c1</span><span class="o">=</span><span class="sc">&#39;A&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="sc">&#39;;&#39;</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">isupper</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">isupper</span><span class="p">(</span><span class="n">c2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>256 0
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-isxdigit-function">
+<span id="index-12"></span><h3>16.1.12. The <tt class="docutils literal"><span class="pre">isxdigit</span></tt> function<a class="headerlink" href="#the-isxdigit-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isxdigit</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">isxdigit</span></tt> function tests for any hexadecimal-digit character.</p>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isxdigit</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Checks for a hexadecimal digits, that is, one of:</p>
+<div class="highlight-python"><div class="highlight"><pre>0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F.
+</pre></div>
+</div>
+<p><strong>Return Value</strong></p>
+<p>The  values  returned  are  nonzero  if  the character <tt class="docutils literal"><span class="pre">c</span></tt> falls into the
+tested class, and a zero value if not.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c1</span><span class="o">=</span><span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="sc">&#39;;&#39;</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">isxdigit</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="n">isxdigit</span><span class="p">(</span><span class="n">c2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>4096 0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

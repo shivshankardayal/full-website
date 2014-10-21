@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. Linear Structures &mdash; Data Structures &amp; Algorithms 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Data Structures &amp; Algorithms 0.1 documentation" href="../" />
+    <link rel="next" title="3. Stacks and Queues" href="../stackq/" />
+    <link rel="prev" title="1. Introduction" href="../intro/" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="../">
+          Data Structures &amp; Algorithms</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/">1. Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">2. Linear Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stackq/">3. Stacks and Queues</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">2. Linear Structures</a><ul>
+<li><a class="reference internal" href="#singly-linked-list">2.1. Singly Linked List</a><ul>
+<li><a class="reference internal" href="#insertion-at-the-beginning">2.1.1. Insertion at the Beginning</a></li>
+<li><a class="reference internal" href="#insertion-at-some-position">2.1.2. Insertion at Some Position</a></li>
+<li><a class="reference internal" href="#insertion-at-the-end-or-append">2.1.3. Insertion at the End or Append</a></li>
+<li><a class="reference internal" href="#searching-an-element">2.1.4. Searching an Element</a></li>
+<li><a class="reference internal" href="#deleting-an-element">2.1.5. Deleting an Element</a></li>
+<li><a class="reference internal" href="#counting-the-size">2.1.6. Counting the Size</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#singly-linked-list-vs-array">2.2. Singly Linked List vs Array</a></li>
+<li><a class="reference internal" href="#questions-on-singly-linked-lists">2.3. Questions on Singly Linked Lists</a></li>
+<li><a class="reference internal" href="#solutions">2.4. Solutions</a></li>
+<li><a class="reference internal" href="#doubly-linked-lists">2.5. Doubly Linked Lists</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../intro/" title="Previous Chapter: 1. Introduction"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 1. Introduction</span>
+    </a>
+  </li>
+  <li>
+    <a href="../stackq/" title="Next Chapter: 3. Stacks and Queues"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">3. Stacks and Qu... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/ls.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="linear-structures">
+<h1>2. Linear Structures<a class="headerlink" href="#linear-structures" title="Permalink to this headline">¶</a></h1>
+<p>A computer processes some data. Always. Now what we are interested in this
+chapter is the structure of the data. Typically we will study linear structures
+like arrays, linked lists, stacks, queues etc. The structure of data is
+important because it governs how we can perform insertion, deletion, update and
+more such operations on data. It not only governs but also how fast we will be
+able to do such stuff. Some languages which have big standard libraries like
+C++, Pytho, Java etc they provide many utilities data structures and most
+common operations as a part of it. However, since C99 is having a much smaller
+standard library such facilities are not there.</p>
+<p>Some of the linear structures are linked lists, stacks and queues. We will
+start with linked lists. Linked lists are also simply known as lists. A list
+can be mathematically modeled as <span class="math">\(t_1, t_2, ..., t_n\)</span> i.e. a list having
+n items of element type. <span class="math">\(t_i\)</span> is known as node at position <span class="math">\(i\)</span>
+where <span class="math">\(i\)</span> is used to indicate the position. All the elements are of the
+same type.</p>
+<div class="section" id="singly-linked-list">
+<h2>2.1. Singly Linked List<a class="headerlink" href="#singly-linked-list" title="Permalink to this headline">¶</a></h2>
+<p>Let us begin with singlly linked lists. When we say linked typically we mean
+singly linked list. There is other types as well. Doubly linked lists and
+circular linked list for example. For now we will start with singly linked
+list because it is simplest to understand and can be used for as a base data
+structure to implement stacks and queues which are going to be coming
+chapters. A singly linked list looks something like given below:</p>
+<div align="center" class="align-center"><img src="../_images/linkedlist.xfig.svg" /></div>
+<p>A linked list&#8217;s first element is typically known as <cite>head</cite> and last element is
+known as <cite>tail</cite>. All nodes have a pointer which points to next node so that
+you can traverse list in forward direction. Note that it is impossible
+to traverse in opposite direction. tail&#8217;s next pointer point to NULL which
+indicates the ending point of the linked list. <cite>tail</cite> is not mandatory to
+have when dealing with linked list but a pointer to <cite>head</cite> is aleways present.</p>
+<p>Impementation of a linked list involved a self referencing structure. Given
+below is a typical self referencing structure:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="k">struct</span> <span class="n">S</span> <span class="p">{</span>
+  <span class="k">struct</span> <span class="n">S</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">S</span><span class="o">*</span> <span class="n">head</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The presence of <cite>next</cite> which is a pointer of C causes some meory to be wasted
+in linear order equal to number of nodes in linked list.
+Note that real implementations will have some data members as well. Some common
+operation on a linked list are insertion at beginning, in between somewhere
+and at the end. We also can have an operation for counting number of nodes.
+Deletion and searching of a node is also there. Note that to do any of these
+operations except insertion at beginning we need to search the appropriate node
+which is an operation involving traversal of list in linear fashion. Therefore
+time compexity of all such operations is <span class="math">\(O(n)\)</span>. Insertion at beginning
+will have <span class="math">\(O(1)\)</span> time complexity. However, if search operation for a
+particular node is to be considered separate then deletion and insertion at
+any place will have time complexity of <span class="math">\(O(n)\)</span>.</p>
+<p>Let us implement a linked list and its operations:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">linked_list</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">linked_list</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span><span class="n">ll</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">menu</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">add_at_beg</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">ll</span><span class="o">*</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">search</span><span class="p">(</span><span class="n">ll</span><span class="o">*</span><span class="p">);</span>
+
+<span class="kt">void</span> <span class="nf">delete</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span> <span class="n">head</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ll</span> <span class="o">*</span><span class="n">temp</span><span class="p">,</span> <span class="o">*</span><span class="n">q</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;There is no element to be deleted.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter the value of data to be deleted.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">==</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="o">*</span><span class="n">head</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">==</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+                <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">q</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;The element to be deleted was not found.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">count</span><span class="p">(</span><span class="n">ll</span><span class="o">*</span> <span class="n">head</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;The no. of elements in linked list is %d.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">head</span> <span class="o">=</span> <span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;The no. of elements in linked list is %d.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">menu</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;1. Add an element at beginning.&quot;</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;2. Add an element at position n.&quot;</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;3. Add an element at end.&quot;</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;4. Count the number of elements.&quot;</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;5. Delete an element.&quot;</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;6. Search an element.&quot;</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;7. Print the list.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">append</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span> <span class="n">head</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ll</span><span class="o">*</span> <span class="n">temp</span><span class="p">,</span> <span class="o">*</span><span class="n">q</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter the number which is to be appended to the list.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">);</span>
+
+    <span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="n">ll</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">ll</span><span class="p">));</span>
+    <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="o">*</span><span class="n">head</span><span class="o">=</span><span class="n">temp</span><span class="p">;</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">add_in_bet</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span> <span class="n">head</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ll</span> <span class="o">*</span><span class="n">temp</span><span class="p">,</span> <span class="o">*</span><span class="n">q</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">position</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter position at which the number is to be added.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">position</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">position</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">add_at_beg</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+
+    <span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="n">ll</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">ll</span><span class="p">));</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter an integer to be added in between.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">);</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="o">++</span><span class="n">j</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">position</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+            <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">add_at_beg</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span> <span class="n">head</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ll</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="n">ll</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">ll</span><span class="p">));</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter an integer to be added at beginning</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">);</span>
+
+    <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">head</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">ll</span><span class="o">*</span> <span class="n">head</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Head--&gt;&quot;</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">head</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d---&gt;&quot;</span><span class="p">,</span> <span class="n">head</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+        <span class="n">head</span> <span class="o">=</span> <span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;NULL</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">search</span><span class="p">(</span><span class="n">ll</span><span class="o">*</span> <span class="n">head</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter the number to be searched.&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">);</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="n">head</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">==</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d is found at position %dth</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">position</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">head</span> <span class="o">=</span> <span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="n">position</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d was not found in linked list.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">ll</span><span class="o">*</span> <span class="n">head</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">option</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">menu</span><span class="p">();</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter 1 to 7 to choose an action. 0 to quit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">);</span>
+    <span class="n">getchar</span><span class="p">();</span> <span class="c1">// to remove \n</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="n">option</span>  <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">option</span> <span class="o">&lt;=</span> <span class="mi">7</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">switch</span><span class="p">(</span><span class="n">option</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="mi">1</span>:
+                <span class="n">add_at_beg</span><span class="p">(</span><span class="o">&amp;</span><span class="n">head</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">2</span>:
+                <span class="n">add_in_bet</span><span class="p">(</span><span class="o">&amp;</span><span class="n">head</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">3</span>:
+                <span class="n">append</span><span class="p">(</span><span class="o">&amp;</span><span class="n">head</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">4</span>:
+                <span class="n">count</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">5</span>:
+                <span class="n">delete</span><span class="p">(</span><span class="o">&amp;</span><span class="n">head</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">6</span>:
+                <span class="n">search</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">7</span>:
+                <span class="n">print</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="nl">default:</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">menu</span><span class="p">();</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter 1 to 7 to choose an action. 0 to quit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">);</span>
+        <span class="n">getchar</span><span class="p">();</span> <span class="c1">// to remove \n</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now I will explain these function one by one using images. First we discuss
+<cite>add_at_begin</cite>. Note that we can wrap all insertion functions by calling single
+insert function of the type <cite>insert(ll* head, int item, size_t position)</cite>.
+Please note that I have used <cite>size_t</cite> for position
+because I want the list to be able to have as many members as malloc allows.
+If we use something like <cite>int</cite> which is nothing but <cite>signed int</cite> then we would
+be restricted to 2 * 1024 * 1024 <a href="#id1"><span class="problematic" id="id2">*</span></a>1024 or 2147483648 members. Note that
+<cite>size_t</cite> is nothing but <cite>unsigned long</cite> which is 4 bytes on 32-bit systems and
+8 bytes
+on 64-bit systems.</p>
+<div class="section" id="insertion-at-the-beginning">
+<h3>2.1.1. Insertion at the Beginning<a class="headerlink" href="#insertion-at-the-beginning" title="Permalink to this headline">¶</a></h3>
+<p>Insertion at beginning is simple. We create a new node. Then we make its <cite>next</cite>
+pointer to point to current head and then use current head pointer to point to
+this new node. The entire operation is shown graphically below:</p>
+<p>TODO: Make images for operation.</p>
+</div>
+<div class="section" id="insertion-at-some-position">
+<h3>2.1.2. Insertion at Some Position<a class="headerlink" href="#insertion-at-some-position" title="Permalink to this headline">¶</a></h3>
+<p>If position is 0 then call insertion at beginning. Note that in the code it is
+assumed that position will be less than size of list. Because if position is
+more then <cite>temp</cite> is allocated but it is not linked in to the structure and
+will cause <strong>memory leak</strong>. We iterate in the while loop to reach the position
+and then we do similar pointer manipulation like in last case to insert a node
+in between which is shown using images below.</p>
+<p>TODO: Make images for operation.</p>
+</div>
+<div class="section" id="insertion-at-the-end-or-append">
+<h3>2.1.3. Insertion at the End or Append<a class="headerlink" href="#insertion-at-the-end-or-append" title="Permalink to this headline">¶</a></h3>
+<p>If the list is not empty append is easy just moving a few pointers at the end.
+Making the <cite>next</cite> of last node point to the newly allocated memory and <cite>next</cite>
+of newly allocated memory at <cite>NULL</cite>. However, if the list is empty is is
+simply insetion at beginning.</p>
+<p>TODO: Make images for operation.</p>
+</div>
+<div class="section" id="searching-an-element">
+<h3>2.1.4. Searching an Element<a class="headerlink" href="#searching-an-element" title="Permalink to this headline">¶</a></h3>
+<p>Perhaps one of the important operations because it also affects deletion or
+insetion before/after a particular node. It is ealiy implemented by starting
+from <cite>head</cite> examining data and proceeding to next untill a match is found.</p>
+<p>TODO: Make images for operation.</p>
+</div>
+<div class="section" id="deleting-an-element">
+<h3>2.1.5. Deleting an Element<a class="headerlink" href="#deleting-an-element" title="Permalink to this headline">¶</a></h3>
+<p>This is similar to insertion just reverse in nature. If the node to be deleted
+is head node the we simply copy the name of <cite>head</cite> to <cite>temp</cite> and make <cite>head</cite>
+point to next element. Then we free <cite>temp.</cite> It is slightly more involving to
+delete if the node is not head. In that case we point current node&#8217;s next to `
+temp&#8217;s ` next and then delete temp. It is shown below using diagrams.</p>
+<p>TODO: Make images for operation.</p>
+</div>
+<div class="section" id="counting-the-size">
+<h3>2.1.6. Counting the Size<a class="headerlink" href="#counting-the-size" title="Permalink to this headline">¶</a></h3>
+<p>Most list implementations provide a size attribute which is always updated upon
+insertion and deletion and can be used to know the current size of list.
+The <cite>count</cite> function is similar in functionality just that to maintain a size
+we will need to call it whenever a value is inserted or deleted. The
+implementation of count is easily doby by starting with <cite>head</cite> and incrementing
+a variable as long as end (marked by NULL) is not encountered.</p>
+</div>
+</div>
+<div class="section" id="singly-linked-list-vs-array">
+<h2>2.2. Singly Linked List vs Array<a class="headerlink" href="#singly-linked-list-vs-array" title="Permalink to this headline">¶</a></h2>
+<p>For size based comparison an array is fixed while a singly linked list can grow
+as needed so there is no competition there. Just that allocating one node at a
+time may make things less efficient. However, this is also good in one sense
+that on a system low with RAM the problems caused by memory fragmentation will
+be less problematic.</p>
+<p>For time complexity let us analyze that:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="37%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operation</th>
+<th class="head">Linked Lists</th>
+<th class="head">Arrays</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Search</td>
+<td><span class="math">\(\Theta(n)\)</span></td>
+<td><span class="math">\(\Theta(1)\)</span></td>
+</tr>
+<tr class="row-odd"><td>Insert/Delete at
+beginning</td>
+<td><span class="math">\(\Theta(1)\)</span></td>
+<td>N/A</td>
+</tr>
+<tr class="row-even"><td>Insert/Delete at
+end</td>
+<td><span class="math">\(\Theta(n)\)</span>
+Last element is unknown
+<span class="math">\(\Theta(1)\)</span>
+Last element is unknown</td>
+<td>N/A</td>
+</tr>
+<tr class="row-odd"><td>Insert/Delete in
+middle</td>
+<td>search time +
+<span class="math">\(\Theta(1)\)</span></td>
+<td>N/A</td>
+</tr>
+<tr class="row-even"><td>Wasted space</td>
+<td><span class="math">\(\Theta(n)\)</span></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>As we can see lists are on the slower side but deleting is problematic in
+arrays. In fixed arrays you can mark as deleted while in dynamic arrays
+you need to shift entire content which is not efficient. Lists also waste
+small amount of memory for pointer members which are needed to enforce the
+structure. However, the flexibility of linked lists is a big win. This is not
+to say that for all situations any of these are a sure-fire solution. It
+depends on the problem whether arrays should be used or lists should be used.</p>
+</div>
+<div class="section" id="questions-on-singly-linked-lists">
+<h2>2.3. Questions on Singly Linked Lists<a class="headerlink" href="#questions-on-singly-linked-lists" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Implement a stack using singly linked list. (This is done in chapter of
+Stacks and Queues)</li>
+<li>Implement a queue using singly linked list.  (This is done in chapter of
+Stacks and Queues)</li>
+<li>Reverse a singly linked list iteratively and recursively.</li>
+<li>Sort a linked list using bubble sort. (Look for sorting chapter or on
+internet for details on bubble sort)</li>
+<li>Sort a linked list using quick sort.(Look for sorting chapter or on
+internet for details on quick sort).</li>
+<li>Sort a linked list using merge sort.(Look for sorting chapter or on
+internet for details on merge sort).</li>
+<li>Detect a loop in a singly linked list. (HINT: This can happen only at last
+node whose next pointer will end up pointing to one of previous nodes.)</li>
+<li>Use singly linked lists to implement arbitrary-precision arithmetic library
+having basic functionality of addition, subtraction, multiplication and
+devision. Fist do it for integers then do it for floats.</li>
+<li>Given two lists find their union and intersection.</li>
+</ol>
+</div>
+<div class="section" id="solutions">
+<h2>2.4. Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>and 2. will be implemented in next chapter.</li>
+</ol>
+<ol class="arabic" start="3">
+<li><p class="first">You can add these two lines to linked list implementation as prototype for
+implementation for iterative and recursive version.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">rreverse</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The most important thing is to be able to think how we are going to do
+the implementation. Let us first take the case of non-recursive part. We
+can visualize the linked list as nodes attached with pointers. So all we
+have to do is make <cite>head</cite> point to the last node. We reverse the pointer.
+Now since the pointer is broken we need to maintain two pointers the current
+node and the next node, hence, we will need two extra pointers. Now as
+<cite>next</cite> pointer is broken we can keep assigning current pointer to it as
+shown in the diagram below:</p>
+<p>TODO: Make images for reversal.</p>
+<p>The equivalent code for the above can be written as:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span> <span class="n">head</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ll</span> <span class="o">*</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">ll</span> <span class="o">*</span><span class="n">current</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+    <span class="k">while</span><span class="p">((</span><span class="o">*</span><span class="n">head</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">next</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">)</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Notice that when we reach the end of node the pointer <cite>next</cite> will be in
+broken state and therefore from last pointer whose next would be pointing
+<cite>NULL</cite> must be made to point to current node as shown.</p>
+<p>For recursive version first we need a condition to iterate to last node.
+Then if <cite>next</cite> of <cite>next</cite> is not <cite>NULL</cite> then we make that point to currrent
+node. The current node&#8217;s next is useless for us and we make it <cite>NULL</cite>
+because the first node which will be last after reversal will have next
+pointing to <cite>NULL</cite> which is good for us. Now if <cite>next</cite> is NULL then we are
+at last node and let us make this <cite>head</cite>. The entire operation can be
+visualized below:</p>
+<p>TODO: Make images for reversal.</p>
+<p>The code which does recursive iteration is given below:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="nf">rreverse</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span> <span class="n">head</span><span class="p">,</span> <span class="n">ll</span><span class="o">*</span> <span class="n">current</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">rreverse</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+        <span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+        <span class="o">*</span><span class="n">head</span><span class="o">=</span><span class="n">current</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The call to rreverse must ensure that <cite>current</cite> is sent with the same value
+as head. Also, remember to update the menu and switch cases.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="doubly-linked-lists">
+<h2>2.5. Doubly Linked Lists<a class="headerlink" href="#doubly-linked-lists" title="Permalink to this headline">¶</a></h2>
+<p>Singly linked lists are pretty good but quite inflexible as far as traversal
+is concerned. You can traverse only in ofrward direction. We can improve this
+by having another pointer to each node <cite>prev</cite> which will point to previous
+node. Having this new <cite>prev</cite> pointer will allow us to traverse in both the
+directions which is very nice to have functionality in certain situations.
+The nature of doubly linked list provides another feature that is we can make
+useful circular lists.</p>
+<p>You might have noticed that I have kept only a head <cite>pointer</cite> in the singly
+linked list representation and no <cite>tail</cite> pointer. The reason for having a
+<cite>tail</cite> pointer will help in appending at the end for sure. However, since we
+can move only in forward direction the <cite>tail</cite> pointer is useless in deletion.
+For deletion we will have to traverser from <cite>head</cite> in any case. But when we
+are designing a doubly linked list a <cite>tail</cite> pointer helps both in appending
+as well as deleting a node.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

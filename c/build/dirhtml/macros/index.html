@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>12. Preprocessing Directives &mdash; C99  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="C99  documentation" href="../" />
+    <link rel="next" title="13. The C Standard Library" href="../std/" />
+    <link rel="prev" title="11. Language" href="../lang/" />
+<script src="../_static/analytics.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../css/math.css" type="text/css" />
+
+  </head>
+  <body>
+
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="../">
+          C99</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">9. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">10. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">11. Language</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">12. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">13. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">14. Diagnostics <tt class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">15. Complex arithmetic <tt class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">16. Character Handling <tt class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">17. Errors <tt class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">18. Floating-point environment <tt class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">19. Characteristics of floating types <tt class="docutils literal"><span class="pre">&lt;float.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">20. Format conversion of integer types <tt class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">21. Alternative spellings <tt class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">22. Sizes of integer types <tt class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">23. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">24. Mathematics <tt class="docutils literal"><span class="pre">&lt;math.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">25. Nonlocal jumps <tt class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">26. Signal handling <tt class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">27. Variable arguments <tt class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">28. Boolean type and values <tt class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">29. Common definitions <tt class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">30. Integer types <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">31. Input/output <tt class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">32. General utilities <tt class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">33. String handling <tt class="docutils literal"><span class="pre">&lt;string.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">34. Type-generic math <tt class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">35. Date and time <tt class="docutils literal"><span class="pre">&lt;time.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">36. Extended multibyte and wide character utilities <tt class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">37. Wide character classification and mapping utilities <tt class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></tt></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">38. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">39. License</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">12. Preprocessing Directives</a><ul>
+<li><a class="reference internal" href="#conditional-inclusion">12.1. Conditional Inclusion</a></li>
+<li><a class="reference internal" href="#source-file-inclusion">12.2. Source File Inclusion</a></li>
+<li><a class="reference internal" href="#macro-replacement">12.3. Macro Replacement</a><ul>
+<li><a class="reference internal" href="#argument-substitution">12.3.1. Argument Substitution</a></li>
+<li><a class="reference internal" href="#the-operator">12.3.2. The # Operator</a></li>
+<li><a class="reference internal" href="#id22">12.3.3. The ## Operator</a></li>
+<li><a class="reference internal" href="#rescanning-and-further-replacement">12.3.4. Rescanning and Further Replacement</a></li>
+<li><a class="reference internal" href="#scope-of-macro-definitions">12.3.5. Scope of Macro Definitions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#line-control">12.4. Line Control</a></li>
+<li><a class="reference internal" href="#error-directive">12.5. Error directive</a></li>
+<li><a class="reference internal" href="#pragma-directive">12.6. Pragma Directive</a></li>
+<li><a class="reference internal" href="#null-directive">12.7. Null Directive</a></li>
+<li><a class="reference internal" href="#predefined-macro-names">12.8. Predefined Macro Names</a></li>
+<li><a class="reference internal" href="#pragma-operator">12.9. Pragma Operator</a></li>
+<li><a class="reference internal" href="#usage">12.10. Usage</a><ul>
+<li><a class="reference internal" href="#include">12.10.1. #include</a></li>
+<li><a class="reference internal" href="#why-we-need-headers">12.10.2. Why We Need Headers</a></li>
+<li><a class="reference internal" href="#define">12.10.3. #define</a></li>
+<li><a class="reference internal" href="#undef">12.10.4. #undef</a></li>
+<li><a class="reference internal" href="#and">12.10.5. # and ##</a></li>
+<li><a class="reference internal" href="#error">12.10.6. #error</a></li>
+<li><a class="reference internal" href="#pragma">12.10.7. #pragma</a></li>
+<li><a class="reference internal" href="#miscellaneous">12.10.8. Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../lang/" title="Previous Chapter: 11. Language"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 11. Language</span>
+    </a>
+  </li>
+  <li>
+    <a href="../std/" title="Next Chapter: 13. The C Standard Library"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">13. The C Standa... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/macros.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="preprocessing-directives">
+<span id="macros"></span><span id="index-0"></span><h1>12. Preprocessing Directives<a class="headerlink" href="#preprocessing-directives" title="Permalink to this headline">¶</a></h1>
+<p>The following come from section 6.10 of specification. It will terminate when you
+see code starting. :-)
+<strong>Description</strong></p>
+<p>A <em>preprocessing directive</em> consists of a sequence of preprocessing tokens that
+begins with a <tt class="docutils literal"><span class="pre">#</span></tt> preprocessing token that (at the start of translation phase
+4) is either the first character in the source file (optionally after white space
+containing no new-line characters) or that follows white space containing at
+least one new-line character, and is ended by the next new-line character. <a class="footnote-reference" href="#id2" id="id1">[1]</a>
+A new-line character ends the preprocessing directive even if it occurs within
+what would otherwise be an invocation of a function-like macro.</p>
+<p>A text line shall not begin with a <tt class="docutils literal"><span class="pre">#</span></tt> preprocessing token. A non-directive
+shall not begin with any of the directive names appearing in the syntax.</p>
+<p>When in a group that is skipped (12.1), the directive syntax is relaxed to allow
+any sequence of preprocessing tokens to occur between the directive name and the
+following new-line character.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Thus, preprocessing directives are commonly called &#8220;lines&#8221;. These &#8220;lines&#8221;
+have no other syntactic significance, as all white space is equivalent except
+in certain situations during preprocessing (see the # character string literal
+creation operator in 12.3.2, for example).</td></tr>
+</tbody>
+</table>
+<p><strong>Constraints</strong></p>
+<p>The only white-space characters that shall appear between preprocessing tokens
+within a preprocessing directive (from just after the introducing <tt class="docutils literal"><span class="pre">#</span></tt>
+preprocessing token through just before the terminating new-line character) are
+space and horizontal-tab (including spaces that have replaced comments or
+possibly other white-space characters in translation phase 3).</p>
+<p><strong>Semantics</strong></p>
+<p>The implementation can process and skip sections of source files conditionally,
+include other source files, and replace macros. These capabilities are called
+preprocessing, because conceptually they occur before translation of the
+resulting translation unit.</p>
+<p>The preprocessing tokens within a preprocessing directive are not subject to
+macro expansion unless otherwise stated.</p>
+<p>EXAMPLE In:</p>
+<div class="highlight-c"><div class="highlight"><pre>#define EMPTY
+EMPTY # include &lt;file.h&gt;
+</pre></div>
+</div>
+<p>the sequence of preprocessing tokens on the second line is not a preprocessing
+directive, because it does not begin with a <tt class="docutils literal"><span class="pre">#</span></tt> at the start of translation
+phase 4, even though it will do so after the macro <tt class="docutils literal"><span class="pre">EMPTY</span></tt> has been replaced.</p>
+<div class="section" id="conditional-inclusion">
+<span id="id3"></span><span id="index-1"></span><h2>12.1. Conditional Inclusion<a class="headerlink" href="#conditional-inclusion" title="Permalink to this headline">¶</a></h2>
+<p><strong>Contraints</strong></p>
+<p>The expression that controls conditional inclusion shall be an integer constant
+expression except that: it shall not contain a cast; identifiers (including those
+lexically identical to keywords) are interpreted as described below; <a class="footnote-reference" href="#id5" id="id4">[2]</a> and it
+may contain unary operator expressions of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre>defined identifier
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">defined</span> <span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which evaluate to 1 if the identifier is currently defined as a macro name (that
+is, if it is predefined or if it has been the subject of a <tt class="docutils literal"><span class="pre">#define</span></tt>
+preprocessing directive without an intervening <tt class="docutils literal"><span class="pre">#undef</span></tt> directive with the same
+subject identifier), 0 if it is not.</p>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[2]</a></td><td>Because the controlling constant expression is evaluated during
+translation phase 4, all identifiers either are or are not macro names - there
+simply are no keywords, enumeration constants, etc.</td></tr>
+</tbody>
+</table>
+<p><strong>Semantics</strong></p>
+<p>Preprocessing directives of the forms:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># if constant-expression new-line group_opt</span>
+<span class="c"># elif constant-expression new-line group_opt</span>
+</pre></div>
+</div>
+<p>check whether the controlling constant expression evaluates to nonzero.</p>
+<p>Prior to evaluation, macro invocations in the list of preprocessing tokens that
+will become the controlling constant expression are replaced (except for those
+macro names modified by the <tt class="docutils literal"><span class="pre">defined</span></tt> unary operator), just as in normal text.
+If the token <tt class="docutils literal"><span class="pre">defined</span></tt> is generated as a result of this replacement process or
+use of the <tt class="docutils literal"><span class="pre">defined</span></tt> unary operator does not match one of the two specified
+forms prior to macro replacement, the behavior is undefined. After all
+replacements due to macro expansion and the <tt class="docutils literal"><span class="pre">defined</span></tt> unary operator have been
+performed, all remaining identifiers are replaced with the pp-number 0, and then
+each preprocessing token is converted into a token. The resulting tokens
+compose the controlling constant expression which is evaluated according to the
+rules of constant expressions. For the purposes of this token conversion and
+evaluation, all signed integer types and all unsigned integer types act as if
+they hav e the same representation as, respectively, the types <tt class="docutils literal"><span class="pre">intmax_t</span></tt> and
+<tt class="docutils literal"><span class="pre">uintmax_t</span></tt> defined in the header <tt class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></tt>. <a class="footnote-reference" href="#id9" id="id6">[3]</a> This includes
+interpreting character constants, which may involve converting escape sequences
+into execution character set members. Whether the numeric value for these
+character constants matches the value obtained when an identical character
+constant occurs in an expression (other than within a <tt class="docutils literal"><span class="pre">#if</span></tt> or <tt class="docutils literal"><span class="pre">#elif</span></tt>
+directive) is implementation-defined. <a class="footnote-reference" href="#id10" id="id7">[4]</a> Also, whether a single-character
+character constant may have a neg ative value is implementation-defined.</p>
+<p>Preprocessing directives of the forms:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># ifdef identifier new-line group_opt</span>
+<span class="c"># ifndef identifier new-line group_opt</span>
+</pre></div>
+</div>
+<p>check whether the identifier is or is not currently defined as a macro name.
+Their conditions are equivalent to <tt class="docutils literal"><span class="pre">#if</span> <span class="pre">defined</span></tt> <em>identifier</em> and <tt class="docutils literal"><span class="pre">#if</span>
+<span class="pre">!defined</span></tt> <em>identifier</em> respectively.</p>
+<p>Each directive&#8217;s condition is checked in order. If it evaluates to false (zero),
+the group that it controls is skipped: directives are processed only through the
+name that determines the directive in order to keep track of the level of nested
+conditionals; the rest of the directives&#8217; preprocessing tokens are ignored, as
+are the other preprocessing tokens in the group. Only the first group whose
+control condition evaluates to true (nonzero) is processed. If none of the
+conditions evaluates to true, and there is a <tt class="docutils literal"><span class="pre">#else</span></tt> directive, the group
+controlled by the <tt class="docutils literal"><span class="pre">#else</span></tt> is processed; lacking a <tt class="docutils literal"><span class="pre">#else</span></tt> directive, all the
+groups until the <tt class="docutils literal"><span class="pre">#endif</span></tt> are skipped. <a class="footnote-reference" href="#id11" id="id8">[5]</a></p>
+<p><strong>Forward references:</strong> macro replacement (12.3), source file inclusion (12.2),
+largest integer types (13.18.1.5).</p>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[3]</a></td><td>Thus, on an implementation where <tt class="docutils literal"><span class="pre">INT_MAX</span></tt> is <tt class="docutils literal"><span class="pre">0x7FFF</span></tt> and
+<tt class="docutils literal"><span class="pre">UINT_MAX</span></tt> is <tt class="docutils literal"><span class="pre">0xFFFF</span></tt>, the constant <tt class="docutils literal"><span class="pre">0x8000</span></tt> is signed and positive
+within a <tt class="docutils literal"><span class="pre">#if</span></tt> expression even though it would be unsigned in translation
+phase 7.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[4]</a></td><td><p class="first">Thus, the constant expression in the following <tt class="docutils literal"><span class="pre">#if</span></tt> directive and
+<tt class="docutils literal"><span class="pre">if</span></tt> statement is not guaranteed to evaluate to the same value in these two
+contexts.</p>
+<p><tt class="docutils literal"><span class="pre">#if</span> <span class="pre">'z'</span> <span class="pre">-</span> <span class="pre">'a'</span> <span class="pre">==</span> <span class="pre">25</span></tt></p>
+<p class="last"><tt class="docutils literal"><span class="pre">if</span> <span class="pre">('z'</span> <span class="pre">-</span> <span class="pre">'a'</span> <span class="pre">==</span> <span class="pre">25)</span></tt></p>
+</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id8">[5]</a></td><td>As indicated by the syntax, a preprocessing token shall not follow a
+<tt class="docutils literal"><span class="pre">#else</span></tt> or <tt class="docutils literal"><span class="pre">#endif</span></tt> directive before the terminating new-line character.
+However, comments may appear anywhere in a source file, including within a
+preprocessing directive.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="source-file-inclusion">
+<span id="id12"></span><span id="index-2"></span><h2>12.2. Source File Inclusion<a class="headerlink" href="#source-file-inclusion" title="Permalink to this headline">¶</a></h2>
+<p><strong>Constraints</strong></p>
+<p>A <tt class="docutils literal"><span class="pre">#include</span></tt> directive shall identify a header or source file that can be
+processed by the implementation.</p>
+<p><strong>Semantics</strong></p>
+<p>A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># include &lt;h-char-sequence&gt; new-line</span>
+</pre></div>
+</div>
+<p>searches a sequence of implementation-defined places for a header identified
+uniquely by the specified sequence between the &lt; and &gt; delimiters, and causes the
+replacement of that directive by the entire contents of the header. How the
+places are specified or the header identified is implementation-defined.</p>
+<p>A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># include &quot;q-char-sequence&quot; new-line</span>
+</pre></div>
+</div>
+<p>causes the replacement of that directive by the entire contents of the source
+file identified by the specified sequence between the &#8221; delimiters. The named
+source file is searched for in an implementation-defined manner. If this search
+is not supported, or if the search fails, the directive is reprocessed as if it
+read:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># include &lt;h-char-sequence&gt; new-line</span>
+</pre></div>
+</div>
+<p>with the identical contained sequence (including &gt; characters, if any) from the
+original directive.</p>
+<p>A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># include pp-tokens new-line</span>
+</pre></div>
+</div>
+<p>(that does not match one of the two previous forms) is permitted. The
+preprocessing tokens after include in the directive are processed just as in
+normal text. (Each identifier currently defined as a macro name is replaced by
+its replacement list of preprocessing tokens.) The directive resulting after all
+replacements shall match one of the two previous forms. <a class="footnote-reference" href="#id14" id="id13">[6]</a> The method by which
+a sequence of preprocessing tokens between a &lt; and a &gt; preprocessing token pair
+or a pair of &#8221; characters is combined into a single header name preprocessing
+token is implementation-defined.</p>
+<p>The implementation shall provide unique mappings for sequences consisting of one
+or more letters or digits followed by a period (.) and a single letter. The
+first character shall be a letter. The implementation may ignore the
+distinctions of alphabetical case and restrict the mapping to eight significant
+characters before the period.</p>
+<p>A <tt class="docutils literal"><span class="pre">#include</span></tt> preprocessing directive may appear in a source file that has been
+read because of a <tt class="docutils literal"><span class="pre">#include</span></tt> directive in another file, up to an
+implementation-defined nesting limit.</p>
+<p><strong>Forward references:</strong> macro replacement (12.3).</p>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id13">[6]</a></td><td>Note that adjacent string literals are not concatenated into a single
+string literal; thus, an expansion that results in two string literals is an
+invalid directive.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="macro-replacement">
+<span id="id15"></span><span id="index-3"></span><h2>12.3. Macro Replacement<a class="headerlink" href="#macro-replacement" title="Permalink to this headline">¶</a></h2>
+<p><strong>Constraints</strong></p>
+<p>Two replacement lists are identical if and only if the preprocessing tokens in
+both have  the same number, ordering, spelling, and white-space separation, where
+all white-space separations are considered identical.</p>
+<p>An identifier currently defined as an object-like macro shall not be redefined by
+another <tt class="docutils literal"><span class="pre">#define</span></tt> preprocessing directive unless the second definition is an
+object-like macro definition and the two replacement lists are identical.
+Likewise, an identifier currently defined as a function-like macro shall not be
+redefined by another <tt class="docutils literal"><span class="pre">#define</span></tt> preprocessing directive unless the second
+definition is a function-like macro definition that has the same number and
+spelling of parameters, and the two replacement lists are identical.</p>
+<p>There shall be white-space between the identifier and the replacement list in the
+definition of an object-like macro.</p>
+<p>If the identifier-list in the macro definition does not end with an ellipsis, the
+number of arguments (including those arguments consisting of no preprocessing
+tokens) in an invocation of a function-like macro shall equal the number of
+parameters in the macro definition. Otherwise, there shall be more arguments in
+the invocation than there are parameters in the macro definition (excluding the
+...). There shall exist a ) preprocessing token that terminates the invocation.</p>
+<p>The identifier <tt class="docutils literal"><span class="pre">__VA_ARGS__</span></tt> shall occur only in the replacement-list of a
+function-like macro that uses the ellipsis notation in the parameters.</p>
+<p>A parameter identifier in a function-like macro shall be uniquely declared within
+its scope.</p>
+<p><strong>Semantics</strong></p>
+<p>The identifier immediately following the define is called the macro name. There
+is one name space for macro names. Any white-space characters preceding or
+following the replacement list of preprocessing tokens are not considered part of
+the replacement list for either form of macro.</p>
+<p>If a <tt class="docutils literal"><span class="pre">#</span></tt> preprocessing token, followed by an identifier, occurs lexically at
+the point at which a preprocessing directive could begin, the identifier is not
+subject to macro replacement.</p>
+<p>A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># define identifier replacement-list new-line</span>
+</pre></div>
+</div>
+<p>defines an object-like macro that causes each subsequent instance of the macro
+name <a class="footnote-reference" href="#id18" id="id16">[7]</a> to be replaced by the replacement list of preprocessing tokens that
+constitute the remainder of the directive.</p>
+<p>A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># define identifier lparen identifier-listopt ) replacement-list new-line</span>
+<span class="c"># define identifier lparen ... ) replacement-list new-line</span>
+<span class="c"># define identifier lparen identifier-list , ... ) replacement-list new-line</span>
+</pre></div>
+</div>
+<p>defines a function-like macro with arguments, similar syntactically to a function
+call. The parameters are specified by the optional list of identifiers, whose
+scope extends from their declaration in the identifier list until the new-line
+character that terminates the <tt class="docutils literal"><span class="pre">#define</span></tt> preprocessing directive. Each
+subsequent instance of the function-like macro name followed by a ( as the next
+preprocessing token introduces the sequence of preprocessing tokens that is
+replaced by the replacement list in the definition (an invocation of the macro).
+The replaced sequence of preprocessing tokens is terminated by the matching )
+preprocessing token, skipping intervening matched pairs of left and right
+parenthesis preprocessing tokens. Within the sequence of preprocessing tokens
+making up an invocation of a function-like macro, new-line is considered a normal
+white-space character.</p>
+<p>The sequence of preprocessing tokens bounded by the outside-most matching
+parentheses forms the list of arguments for the function-like macro. The
+individual arguments within the list are separated by comma preprocessing tokens,
+but comma preprocessing tokens between matching inner parentheses do not separate
+arguments. If there are sequences of preprocessing tokens within the list of
+arguments that would otherwise act as preprocessing directives, <a class="footnote-reference" href="#id19" id="id17">[8]</a> the behavior
+is undefined.</p>
+<p>If there is a ... in the identifier-list in the macro definition, then the
+trailing arguments, including any separating comma preprocessing tokens, are
+merged to form a single item: the <em>variable arguments</em>. The number of arguments
+combined is such that, following merger, the number of arguments is one more than
+the number of parameters in the macro definition (excluding the ...).</p>
+<table class="docutils footnote" frame="void" id="id18" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id16">[7]</a></td><td>Since, by macro-replacement time, all character constants and string
+literals are preprocessing tokens, not sequences possibly containing
+identifier-like subsequences, they are never scanned for macro names or
+parameters.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id19" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id17">[8]</a></td><td>Despite the name, a non-directive is a preprocessing directive.</td></tr>
+</tbody>
+</table>
+<div class="section" id="argument-substitution">
+<span id="id20"></span><span id="index-4"></span><h3>12.3.1. Argument Substitution<a class="headerlink" href="#argument-substitution" title="Permalink to this headline">¶</a></h3>
+<p>After the arguments for the invocation of a function-like macro have been
+identified, argument substitution takes place. A parameter in the replacement
+list, unless preceded by a <tt class="docutils literal"><span class="pre">#</span></tt> or <tt class="docutils literal"><span class="pre">##</span></tt> preprocessing token or followed by a
+<tt class="docutils literal"><span class="pre">##</span></tt> preprocessing token (see below), is replaced by the corresponding argument
+after all macros contained therein have been expanded. Before being substituted,
+each argument&#8217;s preprocessing tokens are completely macro replaced as if they
+formed the rest of the preprocessing file; no other preprocessing tokens are
+available.</p>
+<p>An identifier <tt class="docutils literal"><span class="pre">__VA_ARGS__</span></tt> that occurs in the replacement list shall be
+treated as if it were a parameter, and the variable arguments shall form the
+preprocessing tokens used to replace it.</p>
+</div>
+<div class="section" id="the-operator">
+<span id="id21"></span><span id="index-5"></span><h3>12.3.2. The # Operator<a class="headerlink" href="#the-operator" title="Permalink to this headline">¶</a></h3>
+<p><strong>Constraints</strong></p>
+<p>Each <tt class="docutils literal"><span class="pre">#</span></tt> preprocessing token in the replacement list for a function-like macro
+shall be followed by a parameter as the next preprocessing token in the
+replacement list.</p>
+<p><strong>Semantics</strong></p>
+<p>If, in the replacement list, a parameter is immediately preceded by a <tt class="docutils literal"><span class="pre">#</span></tt>
+preprocessing token, both are replaced by a single character string literal
+preprocessing token that contains the spelling of the preprocessing token
+sequence for the corresponding argument. Each occurrence of white space between
+the argument&#8217;s preprocessing tokens becomes a single space character in the
+character string literal. White space before the first preprocessing token and
+after the last preprocessing token composing the argument is deleted. Otherwise,
+the original spelling of each preprocessing token in the argument is retained in
+the character string literal, except for special handling for producing the
+spelling of string literals and character constants: a \ character is inserted
+before each &#8221; and \ character of a character constant or string literal
+(including the delimiting &#8221; characters), except that it is implementation-defined
+whether a \ character is inserted before the \ character beginning a universal
+character name. If the replacement that results is not a valid character string
+literal, the behavior is undefined. The character string literal corresponding
+to an empty argument is &#8220;&#8221;. The order of evaluation of <tt class="docutils literal"><span class="pre">#</span></tt> and <tt class="docutils literal"><span class="pre">##</span></tt> operators
+is unspecified.</p>
+</div>
+<div class="section" id="id22">
+<span id="index-6"></span><span id="id23"></span><h3>12.3.3. The ## Operator<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p><strong>Constraints</strong></p>
+<p>A <tt class="docutils literal"><span class="pre">##</span></tt> preprocessing token shall not occur at the beginning or at the end of a
+replacement list for either form of macro definition.</p>
+<p><strong>Semantics</strong></p>
+<p>If, in the replacement list of a function-like macro, a parameter is immediately
+preceded or followed by a <tt class="docutils literal"><span class="pre">##</span></tt> preprocessing token, the parameter is replaced
+by the corresponding argument&#8217;s preprocessing token sequence; however, if an
+argument consists of no preprocessing tokens, the parameter is replaced by a
+placemarker preprocessing token instead. <a class="footnote-reference" href="#id25" id="id24">[9]</a></p>
+<p>For both object-like and function-like macro invocations, before the replacement
+list is reexamined for more macro names to replace, each instance of a <tt class="docutils literal"><span class="pre">##</span></tt>
+preprocessing token in the replacement list (not from an argument) is deleted and
+the preceding preprocessing token is concatenated with the following
+preprocessing token. Placemarker preprocessing tokens are handled specially:
+concatenation of two placemarkers results in a single placemarker preprocessing
+token, and concatenation of a placemarker with a non-placemarker preprocessing
+token results in the non-placemarker preprocessing token. If the result is not a
+valid preprocessing token, the behavior is undefined. The resulting token is
+available for further macro replacement. The order of evaluation of <tt class="docutils literal"><span class="pre">##</span></tt>
+operators is unspecified.</p>
+<table class="docutils footnote" frame="void" id="id25" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id24">[9]</a></td><td>Placemarker preprocessing tokens do not appear in the syntax because they
+are temporary entities that exist only within translation phase 4.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rescanning-and-further-replacement">
+<span id="id26"></span><h3>12.3.4. Rescanning and Further Replacement<a class="headerlink" href="#rescanning-and-further-replacement" title="Permalink to this headline">¶</a></h3>
+<p>After all parameters in the replacement list have been substituted and <tt class="docutils literal"><span class="pre">#</span></tt> and
+<tt class="docutils literal"><span class="pre">##</span></tt> processing has taken place, all placemarker preprocessing tokens are
+removed. Then, the resulting preprocessing token sequence is rescanned, along
+with all subsequent preprocessing tokens of the source file, for more macro names
+to replace.</p>
+<p>If the name of the macro being replaced is found during this scan of the
+replacement list (not including the rest of the source file’s preprocessing
+tokens), it is not replaced. Furthermore, if any nested replacements encounter
+the name of the macro being replaced, it is not replaced. These nonreplaced macro
+name preprocessing tokens are no longer available for further replacement even if
+they are later (re)examined in contexts in which that macro name preprocessing
+token would otherwise have been replaced.</p>
+<p>The resulting completely macro-replaced preprocessing token sequence is not
+processed as a preprocessing directive even if it resembles one, but all pragma
+unary operator expressions within it are then processed as specified in 12.9
+below.</p>
+</div>
+<div class="section" id="scope-of-macro-definitions">
+<span id="id27"></span><span id="index-7"></span><h3>12.3.5. Scope of Macro Definitions<a class="headerlink" href="#scope-of-macro-definitions" title="Permalink to this headline">¶</a></h3>
+<p>A macro definition lasts (independent of block structure) until a corresponding
+<tt class="docutils literal"><span class="pre">#undef</span></tt> directive is encountered or (if none is encountered) until the end of
+the preprocessing translation unit. Macro definitions have no significance after
+translation phase 4.</p>
+<p>A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># undef identifier new-line</span>
+</pre></div>
+</div>
+<p>causes the specified identifier no longer to be defined as a macro name. It is
+ignored if the specified identifier is not currently defined as a macro name.</p>
+</div>
+</div>
+<div class="section" id="line-control">
+<span id="id28"></span><span id="index-8"></span><h2>12.4. Line Control<a class="headerlink" href="#line-control" title="Permalink to this headline">¶</a></h2>
+<p><strong>Constraints</strong></p>
+<p>The string literal of a #line directive, if present, shall be a character string
+literal.</p>
+<p><strong>Semantics</strong></p>
+<p>The line number of the current source line is one greater than the number of
+new-line characters read or introduced in translation phase 1 while processing
+the source file to the current token.</p>
+<p>A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># line digit-sequence new-line</span>
+</pre></div>
+</div>
+<p>causes the implementation to behave as if the following sequence of source lines
+begins with a source line that has a line number as specified by the digit
+sequence (interpreted as a decimal integer). The digit sequence shall not specify
+zero, nor a number greater than 2147483647.</p>
+<p>A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># line digit-sequence &quot;s-char-sequenceopt&quot; new-line</span>
+</pre></div>
+</div>
+<p>sets the presumed line number similarly and changes the presumed name of the
+source file to be the contents of the character string literal.</p>
+<p>A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># line pp-tokens new-line</span>
+</pre></div>
+</div>
+<p>(that does not match one of the two previous forms) is permitted. The
+preprocessing tokens after line on the directive are processed just as in normal
+text (each identifier currently defined as a macro name is replaced by its
+replacement list of preprocessing tokens). The directive resulting after all
+replacements shall match one of the two previous forms and is then processed as
+appropriate.</p>
+</div>
+<div class="section" id="error-directive">
+<span id="id29"></span><span id="index-9"></span><h2>12.5. Error directive<a class="headerlink" href="#error-directive" title="Permalink to this headline">¶</a></h2>
+<p>Semantics
+1 A preprocessing directive of the form
+# error pp-tokensopt new-line
+causes the implementation to produce a diagnostic message that includes the specified
+sequence of preprocessing tokens.</p>
+</div>
+<div class="section" id="pragma-directive">
+<span id="id30"></span><span id="index-10"></span><h2>12.6. Pragma Directive<a class="headerlink" href="#pragma-directive" title="Permalink to this headline">¶</a></h2>
+<p><strong>Semantics</strong>
+A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># pragma pp-tokensopt new-line</span>
+</pre></div>
+</div>
+<p>where the preprocessing token STDC does not immediately follow pragma in the
+directive (prior to any macro replacement) <a class="footnote-reference" href="#id32" id="id31">[10]</a> causes the implementation to
+behave in an implementation-defined manner. The behavior might cause translation
+to fail or cause the translator or the resulting program to behave in a
+non-conforming manner. Any such pragma that is not recognized by the
+implementation is ignored.</p>
+<p>If the preprocessing token STDC does immediately follow pragma in the directive
+(prior to any macro replacement), then no macro replacement is performed on the
+directive, and the directive shall have one of the following forms whose
+meanings are described elsewhere:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#pragma STDC FP_CONTRACT on-off-switch</span>
+<span class="c">#pragma STDC FENV_ACCESS on-off-switch</span>
+<span class="c">#pragma STDC CX_LIMITED_RANGE on-off-switch</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><em>on-off-switch:</em> one of</dt>
+<dd><strong>ON OFF DEFAULT</strong></dd>
+</dl>
+<p><strong>Forward references:</strong> the <tt class="docutils literal"><span class="pre">FP_CONTRACT</span></tt> pragma (13.12.2), the
+<tt class="docutils literal"><span class="pre">FENV_ACCESS</span></tt> pragma (13.6.1), the <tt class="docutils literal"><span class="pre">CX_LIMITED_RANGE</span></tt> pragma (13.3.4).
+149).</p>
+<table class="docutils footnote" frame="void" id="id32" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id31">[10]</a></td><td>An implementation is not required to perform macro replacement in pragmas,
+but it is permitted except for in standard pragmas (where <tt class="docutils literal"><span class="pre">STDC</span></tt> immediately
+follows pragma). If the result of macro replacement in a non-standard pragma
+has the same form as a standard pragma, the behavior is still
+implementation-defined; an implementation is permitted to behave as if it were
+the standard pragma, but is not required to.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="null-directive">
+<span id="id33"></span><span id="index-11"></span><h2>12.7. Null Directive<a class="headerlink" href="#null-directive" title="Permalink to this headline">¶</a></h2>
+<p><strong>Semantics</strong></p>
+<p>A preprocessing directive of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># new-line</span>
+</pre></div>
+</div>
+<p>has no effect.</p>
+</div>
+<div class="section" id="predefined-macro-names">
+<span id="id34"></span><span id="index-12"></span><h2>12.8. Predefined Macro Names<a class="headerlink" href="#predefined-macro-names" title="Permalink to this headline">¶</a></h2>
+<p>The following macro names shall be defined by the implementation:</p>
+<p><tt class="docutils literal"><span class="pre">__DATE__</span></tt> The date of translation of the preprocessing translation unit: a
+character string literal of the form &#8220;Mmm dd yyyy&#8221;, where the names of the
+months are the same as those generated by the asctime function, and the
+first character of dd is a space character if the value is less than 10. If the
+date of translation is not available, an implementation-defined valid date
+shall be supplied.</p>
+<p><tt class="docutils literal"><span class="pre">__FILE__</span></tt> The presumed name of the current source file (a character string
+literal) <a class="footnote-reference" href="#id38" id="id35">[11]</a></p>
+<p><tt class="docutils literal"><span class="pre">__LINE__</span></tt> The presumed line number (within the current source file) of the
+current source line (an integer constant). <a class="footnote-reference" href="#id39" id="id36">[12]</a></p>
+<p><tt class="docutils literal"><span class="pre">__STDC__</span></tt> The integer constant 1, intended to indicate a conforming
+implementation. <tt class="docutils literal"><span class="pre">__STDC_HOSTED__</span></tt> The integer constant 1 if the
+implementation is a hosted implementation or the integer constant 0 if it is
+not.</p>
+<p><tt class="docutils literal"><span class="pre">__STDC_VERSION__</span></tt> The integer constant 199901L. <a class="footnote-reference" href="#id39" id="id37">[12]</a></p>
+<p><tt class="docutils literal"><span class="pre">__TIME__</span></tt> The time of translation of the preprocessing translation unit: a
+character string literal of the form &#8220;hh:mm:ss&#8221; as in the time generated by the
+asctime function. If the time of translation is not available, an
+implementation-defined valid time shall be supplied.</p>
+<p>The following macro names are conditionally defined by the implementation:
+<tt class="docutils literal"><span class="pre">__STDC_IEC_559__</span></tt> The integer constant 1, intended to indicate conformance to
+the specifications in annex F (IEC 60559 floating-point arithmetic).</p>
+<p><tt class="docutils literal"><span class="pre">__STDC_IEC_559_COMPLEX__</span></tt> The integer constant 1, intended to indicate
+adherence to the specifications in informative annex G (IEC 60559
+compatible complex arithmetic).</p>
+<p><tt class="docutils literal"><span class="pre">__STDC_ISO_10646__</span></tt> An integer constant of the form yyyymmL (for example,
+199712L). If this symbol is defined, then every character in the Unicode
+required set, when stored in an object of type wchar_t, has the same
+value as the short identifier of that character. The Unicode required set
+consists of all the characters that are defined by ISO/IEC 10646, along with
+all amendments and technical corrigenda, as of the specified year and
+month.</p>
+<p>The values of the predefined macros (except for <tt class="docutils literal"><span class="pre">__FILE__</span></tt> and <tt class="docutils literal"><span class="pre">__LINE__</span></tt>)
+remain constant throughout the translation unit.</p>
+<p>None of these macro names, nor the identifier defined, shall be the subject of a
+<tt class="docutils literal"><span class="pre">#define</span></tt> or a <tt class="docutils literal"><span class="pre">#undef</span></tt> preprocessing directive. Any other predefined macro
+names shall begin with a leading underscore followed by an uppercase letter or a
+second underscore.</p>
+<p>The implementation shall not predefine the macro _ _cplusplus, nor shall it
+define it in any standard header.</p>
+<p><strong>Forward references:</strong> the asctime function (13.23.3.1), standard headers
+(13.1.2).</p>
+<table class="docutils footnote" frame="void" id="id38" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id35">[11]</a></td><td>The presumed source file name and line number can be changed by the
+<tt class="docutils literal"><span class="pre">#line</span></tt> directive.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id39" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id36">[12]</a></td><td>This macro was not specified in ISO/IEC 9899:1990 and was specified as
+199409L in ISO/IEC 9899/AMD1:1995. The intention is that this will remain an
+integer constant of type long int that is increased with each revision of
+International Standard.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pragma-operator">
+<span id="id40"></span><span id="index-13"></span><h2>12.9. Pragma Operator<a class="headerlink" href="#pragma-operator" title="Permalink to this headline">¶</a></h2>
+<p><strong>Semantics</strong></p>
+<p>A unary operator expression of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">_Pragma</span> <span class="p">(</span> <span class="n">string</span><span class="o">-</span><span class="n">literal</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>is processed as follows: The string literal is destringized by deleting the L
+prefix, if present, deleting the leading and trailing double-quotes, replacing
+each escape sequence \&#8221; by a double-quote, and replacing each escape sequence
+\\ by a single backslash. The resulting sequence of characters is processed
+through translation phase 3 to produce preprocessing tokens that are executed as
+if they were the pp-tokens in a pragma directive. The original four preprocessing
+tokens in the unary operator expression are removed.</p>
+<p>At this point specification material ends here and now we will see usage of above
+discussed macros.</p>
+</div>
+<div class="section" id="usage">
+<h2>12.10. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Note that for this part the compilation command should be <tt class="docutils literal"><span class="pre">clang</span> <span class="pre">-E</span>
+<span class="pre">filename.c</span></tt>. Let us create two files test.c and test1.c and their contents are
+given below respectively.</p>
+<div class="section" id="include">
+<span id="index-14"></span><h3>12.10.1. #include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &quot;test1.c&quot;</span>
+<span class="n">I</span> <span class="n">am</span> <span class="n">test</span><span class="p">.</span>
+</pre></div>
+</div>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &quot;test.c&quot;</span>
+<span class="n">I</span> <span class="n">am</span> <span class="n">test1</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>Keep both the files in same directory and execute <tt class="docutils literal"><span class="pre">clang</span> <span class="pre">-E</span> <span class="pre">test.c</span></tt> you will
+see following:</p>
+<div class="highlight-c"><div class="highlight"><pre># 1 &quot;test.c&quot;
+# 1 &quot;test.c&quot; 1
+# 1 &quot;&lt;built-in&gt;&quot; 1
+# 1 &quot;&lt;built-in&gt;&quot; 3
+# 143 &quot;&lt;built-in&gt;&quot; 3
+# 1 &quot;&lt;command line&gt;&quot; 1
+# 1 &quot;&lt;built-in&gt;&quot; 2
+# 1 &quot;test.c&quot; 2
+# 1 &quot;./test1.c&quot; 1
+...
+In file included from test.c:1:
+In file included from ./test1.c:1:
+In file included from test.c:1:
+In file included from ./test1.c:1:
+In file included from test.c:1:
+In file included from ./test1.c:1:
+...
+In file included from test.c:1:
+./test1.c:1:10: error: #include nested too deeply
+#include &quot;test.c&quot;
+
+I am test1.
+# 2 &quot;test.c&quot; 2
+I am test
+# 2 &quot;./test1.c&quot; 2
+I am test1.
+# 2 &quot;test.c&quot; 2
+I am test
+# 2 &quot;./test1.c&quot; 2
+I am test1.
+# 2 &quot;test.c&quot; 2
+</pre></div>
+</div>
+<p>As you can see <tt class="docutils literal"><span class="pre">test.c</span></tt> includes <tt class="docutils literal"><span class="pre">test1.c</span></tt> and <tt class="docutils literal"><span class="pre">test1.c</span></tt> includes
+<tt class="docutils literal"><span class="pre">test.c</span></tt>. So they are including each other which is causing nested includes.
+After processesing for some time preprocessor&#8217;s head starts spinning as if it
+has drunk a full bottle of rum and it bails out. As you know headers are
+included in all meaningful C programs and headers include each other as well.
+This inclusion of each other can easily lead to nested inclusion so how do
+header authors circumvent this problem. Well, a technique has been devised
+known popularly as <em>header guard</em>. The lines which have the form <tt class="docutils literal"><span class="pre">#</span> <span class="pre">number</span>
+<span class="pre">text</span></tt> is actually <tt class="docutils literal"><span class="pre">#</span> <span class="pre">line</span></tt> direective.</p>
+<p>Consider following code:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#ifndef ANYTHING</span>
+<span class="cp">#define ANYTHING</span>
+
+<span class="cp">#include &quot;test1.c&quot;</span>
+
+<span class="n">I</span> <span class="n">am</span> <span class="n">test</span><span class="p">.</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#ifndef ANYTHING_ELSE</span>
+<span class="cp">#define ANYTHING_ELSE</span>
+
+<span class="cp">#include &quot;test.c&quot;</span>
+
+<span class="n">I</span> <span class="n">am</span> <span class="n">test1</span><span class="p">.</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>Now what will happen that when <tt class="docutils literal"><span class="pre">test.c</span></tt> is included <tt class="docutils literal"><span class="pre">ANYTHING</span></tt> is defined
+and when <tt class="docutils literal"><span class="pre">test1.c</span></tt> is included via it <tt class="docutils literal"><span class="pre">ANYTHING_ELSE</span></tt> will be defined.
+After first round of inclusion no more inclusion can happen as governed by
+the directives. Please see headers of standard library to see the conventions
+for <tt class="docutils literal"><span class="pre">ANYTHING</span></tt>.</p>
+</div>
+<div class="section" id="why-we-need-headers">
+<h3>12.10.2. Why We Need Headers<a class="headerlink" href="#why-we-need-headers" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have seen the <tt class="docutils literal"><span class="pre">#include</span></tt> directive I would like to tell that why
+we even need header files. Header files contain several elements of libraries
+which come with C. For example, function prototypes, structure/type,
+declarations, macros, global variable declaration etc. Actual code resides inside
+*.a or *.so library files on GNU/Linux os. Now let us consider a case that we
+want to access a C function of standard library. The compilation phase requires
+that prototype of function should be known at compilation time. If we do not have
+headers we have no way to provide this function prototype at compile time. Same
+stands true for global variables. The declaration of these must be known at
+compilation time. You take any language there has to be a mechanism to include
+code from other files. Be it <tt class="docutils literal"><span class="pre">use</span></tt> directive of <tt class="docutils literal"><span class="pre">Perl</span></tt> or <tt class="docutils literal"><span class="pre">import</span></tt> of
+<tt class="docutils literal"><span class="pre">Python</span></tt> or any other mechanism of any other language.</p>
+</div>
+<div class="section" id="define">
+<span id="index-15"></span><h3>12.10.3. #define<a class="headerlink" href="#define" title="Permalink to this headline">¶</a></h3>
+<p><tt class="docutils literal"><span class="pre">#define</span></tt> and <tt class="docutils literal"><span class="pre">#include</span></tt> are probably the most encountered macro in all C
+files. There are many usage of it. We will first see the text replacement and
+function like usage which can be avoided and should be replaced by global
+constants and <tt class="docutils literal"><span class="pre">inline</span></tt> functions. First let us see what text replacement
+functionality we get using <tt class="docutils literal"><span class="pre">#define</span></tt>. Consider the following code fragment:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#define MAX 5</span>
+
+<span class="n">MAX</span>
+
+<span class="n">I</span> <span class="n">am</span> <span class="n">MAX</span>
+</pre></div>
+</div>
+<p>Now run it though <tt class="docutils literal"><span class="pre">clang</span> <span class="pre">-E</span> <span class="pre">filename.c</span></tt> and you will get following output:</p>
+<div class="highlight-python"><div class="highlight"><pre># 1 &quot;test.c&quot;
+# 1 &quot;&lt;built-in&gt;&quot;
+# 1 &quot;&lt;command-line&gt;&quot;
+# 1 &quot;test.c&quot;
+
+
+5
+
+I am 5
+</pre></div>
+</div>
+<p>So as you see both the occurrences are replaced by the text 5. This is the
+simplest form of text replacement which people use to handle many things. Most
+common are array sizes and symbolic constants. Another form is the form like
+functions which has been shown in 10.4.</p>
+<p>The bad part of these two is that both do not enter symbol table and make code
+hard to debug. The former can be replaced by <tt class="docutils literal"><span class="pre">const</span></tt> variables and latter by
+inline functions.</p>
+<p>The other usage of it is to define names. For example, we revisit our old
+example headers. Header guards usually declare something like this:</p>
+<div class="highlight-python"><div class="highlight"><pre>#ifndef SOMETHING
+#define SOMETHING
+
+/* header code */
+#endif
+</pre></div>
+</div>
+<p>As you can see <tt class="docutils literal"><span class="pre">#define</span></tt> is used to define <tt class="docutils literal"><span class="pre">SOEMTHING</span></tt> so second time the
+conditional inclusion <tt class="docutils literal"><span class="pre">#ifndef</span></tt> will fail. It can also be tested by defiend
+like <tt class="docutils literal"><span class="pre">if(defined(SOMETHING)</span></tt>. Now if <tt class="docutils literal"><span class="pre">SOMETHING</span></tt> has been defined <tt class="docutils literal"><span class="pre">if</span></tt>
+test will pass successfully. Similarly <tt class="docutils literal"><span class="pre">#ifdef</span></tt> can be used to test it as a
+shortcut i.e. <tt class="docutils literal"><span class="pre">#ifdef</span> <span class="pre">SOMETHING</span></tt>. The normal if-else statements are replaced
+in preprocessing directives using <tt class="docutils literal"><span class="pre">#if</span></tt>, <tt class="docutils literal"><span class="pre">#elif</span></tt> and <tt class="docutils literal"><span class="pre">#endif</span></tt>.</p>
+</div>
+<div class="section" id="undef">
+<span id="index-16"></span><h3>12.10.4. #undef<a class="headerlink" href="#undef" title="Permalink to this headline">¶</a></h3>
+<p>Anything defined by <tt class="docutils literal"><span class="pre">#define</span></tt> can be undefined by <tt class="docutils literal"><span class="pre">#undef</span></tt>. For example
+consider the following code:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#define test</span>
+<span class="cp">#ifdef test</span>
+
+<span class="c1">//do something</span>
+
+<span class="cp">#undef test</span>
+<span class="cp">#ifdef test</span>
+
+<span class="c1">//do something else</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>If you do this then first <tt class="docutils literal"><span class="pre">something</span> <span class="pre">else</span></tt> will be executed while the second
+will not be.</p>
+</div>
+<div class="section" id="and">
+<span id="index-17"></span><h3>12.10.5. # and ##<a class="headerlink" href="#and" title="Permalink to this headline">¶</a></h3>
+<p>You can use following two examples and description given above to understand
+both of these:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#define hash_hash # ## #</span>
+<span class="cp">#define mkstr(a) # a</span>
+<span class="cp">#define in_between(a) mkstr(a)</span>
+<span class="cp">#define join(c, d) in_between(c hash_hash d)</span>
+
+<span class="kt">char</span> <span class="n">p</span><span class="p">[]</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span> <span class="c1">//char p[]=&quot;x ## y&quot;</span>
+
+<span class="cp">#define FIRST a # b</span>
+<span class="cp">#define SECOND a ## b</span>
+
+<span class="kt">char</span> <span class="n">first</span><span class="p">[]</span> <span class="o">=</span> <span class="n">FIRST</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">second</span><span class="p">[]</span> <span class="o">=</span> <span class="n">SECOND</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="error">
+<span id="index-18"></span><h3>12.10.6. #error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h3>
+<p>This one is simple. Consider the following:</p>
+<div class="highlight-c"><div class="highlight"><pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+  # error MAX
+
+  return 0;
+}
+</pre></div>
+</div>
+<p>If you try to compile this like <tt class="docutils literal"><span class="pre">clang</span> <span class="pre">filename.c</span></tt> then you will get
+following:</p>
+<div class="highlight-python"><div class="highlight"><pre>clang test.c
+test.c:5:5: error: #error MAX
+  # error MAX
+  ^
+1 error generated.
+</pre></div>
+</div>
+<p>You can combine <tt class="docutils literal"><span class="pre">#</span> <span class="pre">error</span></tt> with <tt class="docutils literal"><span class="pre">#if</span></tt> but I have yet to see purposeful code
+written that way. Non-preprocessing constructs are better for handling such
+situations. Only if you want to test a preprocessing token then it should be
+used.</p>
+</div>
+<div class="section" id="pragma">
+<span id="index-19"></span><h3>12.10.7. #pragma<a class="headerlink" href="#pragma" title="Permalink to this headline">¶</a></h3>
+<p><tt class="docutils literal"><span class="pre">#pragma</span></tt> is dependent on what follows it. You should consult compiler
+documentation as it is mostly implementation-defined.</p>
+</div>
+<div class="section" id="miscellaneous">
+<span id="index-20"></span><h3>12.10.8. Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h3>
+<p>Usage of <tt class="docutils literal"><span class="pre">__LINE__,</span> <span class="pre">__FILE__,</span> <span class="pre">__DATE__</span></tt> and <tt class="docutils literal"><span class="pre">__TIME__</span></tt> is simple and shown
+in following example:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s:%d:%s:%s&quot;</span><span class="p">,</span> <span class="n">__FILE__</span><span class="p">,</span> <span class="n">__LINE__</span><span class="p">,</span> <span class="n">__DATE__</span><span class="p">,</span> <span class="n">__TIME__</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the output is:</p>
+<div class="highlight-python"><div class="highlight"><pre>test.c:5:Jun 24 2012:11:24:57
+</pre></div>
+</div>
+<p>This concluded our discussion on macros. Rest of the book will describe the
+standard library.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
