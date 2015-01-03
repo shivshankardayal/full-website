@@ -23,6 +23,7 @@ C Programming Contents
   func
   su
   strings
+  fileio
   fs
   env
   lang

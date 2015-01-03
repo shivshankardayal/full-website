@@ -5,9 +5,10 @@
 ************************
 Following Specification
 ************************
-At this point of time I would like to look back and refer to C99 specification
-n1124.pdf located at http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf,
-which, is the C99 specification with me. Since my thoughts are random in nature 
+At this point of time I would like to look back and refer to C11 specification
+n1570.pdf, which, is the C11 specification with me. Threading is not yet
+implemented in any compiler so we will have to wait for compilers to support it 
+before we can study it. 
 I will try to follow the organization of content given in the specification.
 This treatment of C99 is very tightly coupled with compiler(gcc) and
 specification. If someone says that a book can be written by ignoring any of

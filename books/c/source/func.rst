@@ -777,4 +777,242 @@ and the output is::
 
 Type Generic Functions
 ======================
-C11 has introduced a new type of functions called type generic functions.
+C11 has introduced a new type of functions called type generic functions. If
+you read clause 2 of ``tgmath.`` then you will find following.
+
+Of the ``<math.h>`` and ``<complex.h>`` functions without an ``f`` (``float``)
+or ``l`` (``long double``) suffix, several have one or more parameters whose
+corresponding real type is ``double``. For each such function, except ``modf``,
+there is a corresponding type-generic macro. [1]_ The parameters whose
+corresponding real type is ``double`` in the function synopsis are generic
+parameters. Use of the macro invokes a function whose corresponding real type
+and type domain are determined by the arguments for the generic
+parameters. [2]_
+
+.. [1] Like other function-like macros in Standard libraries, each type-generic
+       macro can be suppressed to make available the corresponding ordinary
+       function.
+
+.. [2] If the type of the argument is not compatible with the type of the
+       parameter for the selected function, the behavior is undefined.
+
+Since we have three different floating-point types and three different versions
+of complex numbers (``float, double`` and ``long double``) therefore we have
+six versions of each function which will be called based on argument type.
+
+This is achieved through keyword ``_Generic`` which is used to create a generic
+selection expression. For example, consider the following code:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     printf("%d", _Generic((6), char: 1, int: 2, long: 3, default: 0));
+
+     return 0;
+   }
+
+Note that you need version 4.9 of ``gcc`` or ``clang`` to compile this. I am
+using ``clang`` version 3.4 to compile this program. The output is:
+
+.. code-block:: text
+
+   2
+
+as you can see we are passing 6 which is an integer and value 2 is associated
+with the ``int`` therefore the output is 2.
+
+We can make a macro which will allow us to reuse the functionality. For
+example:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   #define type(T) _Generic( (T), char: 1, int: 2, long: 3, default: 0)
+
+   int main()
+   {
+     printf("%d", type(87364563853));
+
+     return 0;
+   }
+
+which will output 3 because value passed is ``long``.
+
+The grammar is given below:
+
+*generic-selection:*
+  *_Generic ( assignment-expression , generic-assoc-list )*
+*generic-assoc-list:*
+  *generic-association*
+
+  *generic-assoc-list , generic-association*
+*generic-association:*
+  *type-name : assignment-expression*
+
+  *default : assignment-expression*
+
+Section 6.5.1.1 of n1570.pdf describes generic selection in great detail. To
+summarize following points can be noted:
+
+* A generic selection consists of a controlling expression (which is not
+  evaluated) and one or more, comma-separated, generic associations.
+* Each generic association consists of a type-name (or default) and a result
+  expression separated by a colon.
+* The result of the generic selection expression is the result expression of
+  the corresponding compatible type provided in the matching generic
+  association.
+* If none of the provided types are compatible with the type of the controlling
+  expression, a default selection is used if provided, otherwise the construct
+  is erroneous.
+* The order of the generic associations in the list is inconsequential; no more
+  than one compatible type may be provided in a generic selection so there is
+  never more than one case that could match.
+* The type and value of a generic selection are identical to those of its
+  result expression. It is an lvalue, a function designator, or a void
+  expression if its result expression is, respectively, an lvalue, a function
+  designator, or a void expression.
+
+A pseudo type-polymorphism is used to provide ``_Generic`` facility. For
+example, the ``acos`` macro defined in ``tgmath.h`` could be implemented as:
+
+.. code-block:: c
+
+   #define acos(X) _Generic((X), \
+     long double complex: cacosl, \
+     double complex: cacos, \
+     float complex: cacosf, \
+     long double: acosl, \
+     float: acosf, \
+     default: acos \
+   )(X)
+
+Multiple arguments are far more complex. For example,
+
+.. code-block:: c
+
+   #define pow(x, y) _Generic((x), \
+     long double complex: cpowl, \
+ 
+     double complex: _Generic((y), \
+     long double complex: cpowl, \
+     default: cpow), \
+ 
+     float complex: _Generic((y), \
+     long double complex: cpowl, \
+     double complex: cpow, \
+     default: cpowf), \
+ 
+     long double: _Generic((y), \
+     long double complex: cpowl, \
+     double complex: cpow, \
+     float complex: cpowf, \
+     default: powl), \
+ 
+     default: _Generic((y), \
+     long double complex: cpowl, \
+     double complex: cpow, \
+     float complex: cpowf, \
+     long double: powl, \
+     default: pow), \
+ 
+     float: _Generic((y), \
+     long double complex: cpowl, \
+     double complex: cpow, \
+     float complex: cpowf, \
+     long double: powl, \
+     float: powf, \
+     default: pow) \
+   )(x, y)
+
+Another Example
+"""""""""""""""
+Similar to selecting the name of a function to call based on the argument type,
+we can select, for example, a printf format specifier based on type. This
+allows the creation of a macro that can print any type of value that printf
+supports without having to specify the type explicitly in the call:
+
+.. code-block:: c
+
+   #define printf_dec_format(x) _Generic((x), \
+       char: "%c", \
+       signed char: "%hhd", \
+       unsigned char: "%hhu", \
+       signed short: "%hd", \
+       unsigned short: "%hu", \
+       signed int: "%d", \
+       unsigned int: "%u", \
+       long int: "%ld", \
+       unsigned long int: "%lu", \
+       long long int: "%lld", \
+       unsigned long long int: "%llu", \
+       float: "%f", \
+       double: "%f", \
+       long double: "%Lf", \
+       char *: "%s", \
+       void *: "%p")
+ 
+   #define print(x) printf(printf_dec_format(x), x)
+   #define printnl(x) printf(printf_dec_format(x), x), printf("\n");
+
+   printnl('a');    // prints "97" (on an ASCII system)
+   printnl((char)'a');  // prints "a"
+   printnl(123);    // prints "123"
+   printnl(1.234);      // prints "1.234000"
+
+Note that since 'a' is an ``int`` because characters are fundamentally integers
+we have to cast it to a ``char`` if we want to print out the letter.
+
+
+A string literal like ``printnl("abc")`` will produce error. The reason is that
+the type of this string is ``char [4]`` while we have type as ``char*`` so we
+can cast to that. However, section 6.3.1.2 clause 3 states
+
+  Except when it is the operand of the sizeof operator, the ``_Alignof``
+  operator, or the unary ``&`` operator, or is a string literal used to
+  initialize an array, an expression that has type "array of type" is
+  converted to an expression with type "pointer to type" that points to the
+  initial element of the array object and is not an lvalue. If the array object
+  has register storage class, the behavior is undefined.
+
+This clause makes no mention of ``_Generic`` so we can assume that the
+conversion should occur in this case, this may be a defect in ``clang``.
+
+Type Compatibilty in an Expression
+""""""""""""""""""""""""""""""""""
+A macro can be created that evaluates to ``true`` if an expression is compatible
+with the provided type: ``#define is_compatible(x, T) _Generic((x), T:1,
+default: 0)``
+
+This can be useful for determining the underlying type of a ``typedef`` or
+``enum``: ``is_compatible((size_t){0}, unsigned long);``
+
+will evaluate to ``true`` if ``size_t`` is a ``typedef`` for ``unsigned
+long``. Note that we can only compare an expression with a type, we cannot
+directly compare two expressions or two type names. If we want to compare two
+types, we can use the C99 compound literal to create a literal of a given type
+as we did above. There is no standard-conforming way to test two variables for
+type compatibility with this mechanism. On a compiler that supports the common
+typeof extension, something like this may work: ``is_compatible(x,
+typeof(y));``
+
+``_Generic`` is evaluated at compile-time and can be used with _Static_assert
+if the result is an integer constant expression:
+
+.. code-block:: c
+
+   enum e { E1; };
+   _Static_assert(is_compatible(E1), int);  // always true
+   _Static_assert(is_compatible((enum e){E1}, int);  // not necessarily true
+
+It is possible to define a macro to ensure that an expression, perhaps a
+function argument, is of a given type:
+
+.. code-block:: c
+
+   #define ensure_type(p, t) _Static_assert(is_compatible(p, t), \
+   "incorrect type for parameter '" #p "', expected " #t)
+

@@ -4,10 +4,11 @@ String handling ``<string.h>``
 ******************************
 String function conventions
 ===========================
-The header ``<string.h>`` declares one type and several functions, and defines one
-macro useful for manipulating arrays of character type and other objects treated as arrays
-of character type. The type is ``size_t`` and the macro is ``NULL`` (both described in
-:ref:`stddef`). Various methods are used for determining the lengths of the arrays, but in all cases
+The header ``<string.h>`` declares one type and several functions, and defines
+one macro useful for manipulating arrays of character type and other objects
+treated as arrays of character type. The type is ``size_t`` and the macro is
+``NULL`` (both described in :ref:`stddef`). Various methods are used for
+determining the lengths of the arrays, but in all cases 
 a ``char *`` or ``void *`` argument points to the initial (lowest addressed) character of the
 array. If an array is accessed beyond the end of an object, the behavior is undefined.
 

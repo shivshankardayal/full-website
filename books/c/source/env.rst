@@ -702,6 +702,22 @@ Program Execution
     point and the next sequence point (the ;), and the call to ``getchar`` can occur
     at any point prior to the need of its returned value.
 
+16. EXAMPLE 7 The grouping of an expression does not completely determine its
+    evaluation. In the following fragment
+
+    .. code-block:: c
+
+       #include <stdio.h>
+       int sum;
+       char *p;
+       /* ... */
+       sum = sum * 10 - '0' + (*p++ = getchar());
+
+    the expression statement is grouped as if it were written as ``sum =
+    (((sum * 10) - '0') + ((*(p++)) = (getchar())));`` but the actual increment
+    of ``p`` can occur at any time between the previous sequence point and the
+    next sequence point (the ``;``), and the call to ``getchar`` can occur at
+    any point prior to the need of its returned value. 
 
 .. [#] The IEC 60559 standard for binary floating-point arithmetic requires
   certain user-accessible status flags and control modes. Floating-point
@@ -717,6 +733,228 @@ statements (:ref:`4.8`), the signal function (:ref:`26.1.1`), files (:ref:`31.3`
 
 .. [Blazy] Sandrine Blazy, Zaynah Dargaye, Xavier Leroy, Formal Verification of
   a C Compiler Front-end FM'06: 14th Symposium on Formal Methods 4085 (2006) pp.460-475
+
+========================================
+Multi-threaded executions and data races
+========================================
+1. Under a hosted implementation, a program can have more than one *thread of
+   execution* (or *thread*) running concurrently. The execution of each thread
+   proceeds as defined by the remainder of this standard. The execution of the
+   entire program consists of an execution of all of its threads. [#]_ Under a
+   freestanding implementation, it is implementation-defined whether a program
+   can have more than one thread of execution.
+
+2. The value of an object visible to a thread *T* at a particular point is the
+   initial value of the object, a value stored in the object by *T* , or a
+   value stored in the object by another thread, according to the rules below.
+
+3. NOTE 1 In some cases, there may instead be undefined behavior. Much of this
+   section is motivated by the desire to support atomic operations with
+   explicit and detailed visibility constraints. However, it also implicitly
+   supports a simpler view for more restricted programs.
+
+4. Two expression evaluations conflict if one of them modifies a memory
+   location and the other one reads or modifies the same memory location.
+
+5. The library defines a number of *atomic operations* (7.17) and operations on
+   mutexes (7.26.4) that are specially identified as synchronization
+   operations. These operations play a special role in making assignments in
+   one thread visible to another. A *synchronization operation* on one or more
+   memory locations is either an *acquire operation, a release operation,* both
+   an acquire and release operation, or a *consume operation*. A
+   synchronization operation without an associated memory location is a *fence*
+   and can be either an acquire fence, a release fence, or both an acquire and
+   release fence. In addition, there are *relaxed atomic operations,* which are
+   not synchronization operations, and atomic *read-modify-write operations,*
+   which have special characteristics.
+
+6. NOTE 2 For example, a call that acquires a mutex will perform an acquire
+   operation on the locations composing the mutex. Correspondingly, a call that
+   releases the same mutex will perform a release operation on those same
+   locations. Informally, performing a release operation on A forces prior side
+   effects on other memory locations to become visible to other threads that
+   later perform an acquire or consume operation on A. We do not include
+   relaxed atomic operations as synchronization operations although, like
+   synchronization operations, they cannot contribute to data races.
+
+7. All modifications to a particular atomic object *M* occur in some particular
+   total order, called the *modification order* of *M*. If *A* and *B* are
+   modifications of an atomic object *M*, and *A* happens before *B*, then *A*
+   shall precede *B* in the modification order of *M,* which is defined below.
+
+8. NOTE 3 This states that the modification orders must respect the "happens
+   before" relation. 
+
+9. NOTE 4 There is a separate order for each atomic object. There is no
+   requirement that these can be combined into a single total order for all
+   objects. In general this will be impossible since different threads 
+   may observe modifications to different variables in inconsistent orders.
+
+10. A *release sequence* headed by a release operation *A* on an atomic object
+    *M* is a maximal contiguous sub-sequence of side effects in the
+    modification order of *M*, where the first operation is *A* and every
+    subsequent operation either is performed by the same thread that performed
+    the release or is an atomic read-modify-write operation.
+
+11. Certain library calls *synchronize* with other library calls performed by
+    another thread. In particular, an atomic operation *A* that performs a
+    release operation on an object *M* synchronizes with an atomic operation
+    *B* that performs an acquire operation on *M* and reads a value written by
+    any side effect in the release sequence headed by *A*.
+
+12. NOTE 5 Except in the specified cases, reading a later value does not
+    necessarily ensure visibility as described below. Such a requirement would
+    sometimes interfere with efficient implementation.
+
+13. NOTE 6 The specifications of the synchronization operations define when one
+    reads the value written by another. For atomic variables, the definition is
+    clear. All operations on a given mutex occur in a single total order. Each
+    mutex acquisition "reads the value written" by the last mutex release.
+
+14. An evaluation *A* carries a *dependency* [#]_ to an evaluation *B* if:
+
+    * the value of *A* is used as an operand of *B*, unless:
+
+      * *B* is an invocation of the **kill_dependency** macro,
+      * *A* is the left operand of a **&&** or **||** operator,
+      * *A* is the left operand of a **? :** operator, or
+      * *A* is the left operand of a **,** operator;
+
+    or,
+
+    * *A* writes a scalar object or bit-field *M, B* reads from *M* the value
+      written by *A,* and *A* is sequenced before *B,* or
+    * for some evaluation *X, A* carries a dependency to *X* and *X* carries a
+      dependency to *B*.
+
+15. An evaluation *A* is *dependency-ordered before* [#]_ an evaluation *B* if:
+
+    * *A* performs a release operation on an atomic object *M*, and, in another
+      thread, *B* performs a consume operation on *M* and reads a value written
+      by any side effect in the release sequence headed by *A,* or
+    * for some evaluation *X, A* is dependency-ordered before *X* and *X*
+      carries a dependency to *B*.
+
+16. An evaluation *A inter-thread happens before* an evaluation *B* if *A*
+    synchronizes with *B, A* is dependency-ordered before *B,* or, for some
+    evaluation *X:*
+
+    * A synchronizes with *X* and *X* is sequenced before *B,*
+    * A is sequenced before *X* and *X* inter-thread happens before *B,* or
+    * A inter-thread happens before *X* and *X* inter-thread happens before
+      *B.*
+
+17. NOTE 7 The "inter-thread happens before" relation describes arbitrary
+    concatenations of "sequenced before", "synchronizes with", and
+    "dependency-ordered before" relationships, with two exceptions. The first
+    exception is that a concatenation is not permitted to end with
+    "dependency-ordered before" followed by "sequenced before". The reason for
+    this limitation is that a consume operation participating in a
+    "dependency-ordered before" relationship provides ordering only with
+    respect to operations to which this consume operation actually carries a
+    dependency. The reason that this limitation applies only to the end of 
+    such a concatenation is that any subsequent release operation will provide
+    the required ordering for a prior consume operation. The second exception
+    is that a concatenation is not permitted to consist entirely of "sequenced
+    before". The reasons for this limitation are (1) to permit "inter-thread
+    happens before" to be transitively closed and (2) the "happens before"
+    relation, defined below, provides for relationships consisting entirely of
+    "sequenced before".
+
+18. An evaluation *A happens before* an evaluation *B* if *A* is sequenced
+    before *B* or *A* inter-thread happens before *B*.
+
+19. A *visible side effect A* on an object *M* with respect to a value
+    computation *B* of *M* satisfies the conditions:
+
+    * *A* happens before *B,* and
+    * there is no other side effect *X* to *M* such that *A* happens before *X*
+      and *X* happens before *B*.
+
+    The value of a non-atomic scalar object *M,* as determined by evaluation
+    *B,* shall be the value stored by the visible side effect *A*.
+
+20. NOTE 8 If there is ambiguity about which side effect to a non-atomic object
+    is visible, then there is a data race and the behavior is undefined.
+
+21. NOTE 9 This states that operations on ordinary variables are not visibly
+    reordered. This is not actually detectable without data races, but it is
+    necessary to ensure that data races, as defined here, and with suitable 
+    restrictions on the use of atomics, correspond to data races in a simple
+    interleaved (sequentially consistent) execution.
+
+22. The *visible sequence of side effects* on an atomic object *M,* with
+    respect to a value computation *B* of *M,* is a maximal contiguous
+    sub-sequence of side effects in the modification order of *M,* where the
+    first side effect is visible with respect to *B,* and for every subsequent
+    side effect, it is not the case that *B* happens before it. The value of an 
+    atomic object *M,* as determined by evaluation *B,* shall be the value
+    stored by some operation in the visible sequence of *M* with respect to
+    *B*. Furthermore, if a value computation *A* of an atomic object *M*
+    happens before a value computation *B* of *M,* and the value computed by
+    *A* corresponds to the value stored by side effect *X*, then the value 
+    computed by *B* shall either equal the value computed by *A,* or be the
+    value stored by side effect *Y,* where *Y* follows *X* in the modification
+    order of *M*.
+
+23. NOTE 10 This effectively disallows compiler reordering of atomic operations
+    to a single object, even if both operations are "relaxed" loads. By doing
+    so, we effectively make the "cache coherence" guarantee provided by most
+    hardware available to C atomic operations.
+
+24. NOTE 11 The visible sequence depends on the "happens before" relation,
+    which in turn depends on the values observed by loads of atomics, which we
+    are restricting here. The intended reading is that there must exist an
+    association of atomic loads with modifications they observe that, together
+    with suitably chosen modification orders and the "happens before" relation
+    derived as described above, satisfy the resulting constraints as imposed
+    here.
+
+25. The execution of a program contains a *data race* if it contains two
+    conflicting actions in different threads, at least one of which is not
+    atomic, and neither happens before the other. Any such data race results in
+    undefined behavior.
+
+26. NOTE 12 It can be shown that programs that correctly use simple mutexes and
+    ``memory_order_seq_cst operations`` to prevent all data races, and use no
+    other synchronization operations, behave as though the operations executed
+    by their constituent threads were simply interleaved, with each value
+    computation of an object being the last value stored in that
+    interleaving. This is normally referred to as "sequential
+    consistency". However, this applies only to data-race-free programs, and
+    data-race-free programs cannot observe most program transformations that do
+    not change single-threaded program semantics. In fact, most single-threaded
+    program transformations continue to be allowed, since any program that
+    behaves differently as a result must contain undefined behavior.
+
+27. NOTE 13 Compiler transformations that introduce assignments to a
+    potentially shared memory location that would not be modified by the
+    abstract machine are generally precluded by this standard, since such an
+    assignment might overwrite another assignment by a different thread in
+    cases in which an abstract machine execution would not have encountered a
+    data race. This includes implementations of data member assignment that
+    overwrite adjacent members in separate memory locations. We also generally
+    preclude reordering of atomic loads in cases in which the atomics in
+    question may alias, since this may violate the "visible sequence" rules.
+
+28. NOTE 14 Transformations that introduce a speculative read of a potentially
+    shared memory location may not preserve the semantics of the program as
+    defined in this standard, since they potentially introduce a data
+    race. However, they are typically valid in the context of an optimizing
+    compiler that targets a specific machine with well-defined semantics for
+    data races. They would be invalid for a hypothetical machine that is not
+    tolerant of races or provides hardware race detection.
+
+.. [#] The execution can usually be viewed as an interleaving of all of the
+	threads. However, some kinds of atomic operations, for example, allow
+	executions inconsistent with a simple interleaving as described below.
+
+.. [#] The "carries a dependency" relation is a subset of the "sequenced
+       before" relation, and is similarly strictly intra-thread.
+
+.. [#] The "dependency-ordered before" relation is analogous to the
+       "synchronizes with" relation, but uses release/consume in place of
+       release/acquire.
 
 .. index::
    pair: considerations; environmental

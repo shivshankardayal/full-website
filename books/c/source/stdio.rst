@@ -36,11 +36,10 @@ third argument to the ``setvbuf`` function;
 
   | ``BUFSIZ``
 
-which expands to an integer constant expression that is the size of the buffer used by the
+which expands to an integer constant expression that is the size of the buffer used by the ``setbuf`` function;
 
 .. index:: EOF macro, FOPEN_MAX macro, FILENAME_MAX macro
 
-``setbuf`` function;
 
   | ``EOF``
 
@@ -309,6 +308,7 @@ streams.
 Operations on files
 ===================
 .. index:: remove function
+.. _remove:
 
 The ``remove`` function
 -----------------------
@@ -331,6 +331,7 @@ function is implementation-defined.
 The ``remove`` function returns zero if the operation succeeds, nonzero if it fails.
 
 .. index:: rename function
+.. _rename:
 
 The ``rename`` function
 -----------------------
@@ -357,6 +358,7 @@ which case if the file existed previously it is still known by its original name
        or that it is necessary to copy its contents to effectuate its renaming.
 
 .. index:: tmpfile function
+.. _tmpfile:
 
 The ``tmpfile`` function
 ------------------------
@@ -391,6 +393,7 @@ cannot be created, the tmpfile function returns a null pointer.
 .. index:: tmpnam function
 
 .. _31.4.4:
+.. _tmpnam:
 
 The ``tmpnam`` function
 -----------------------
@@ -436,6 +439,8 @@ File access functions
 =====================
 .. index:: fclose function
 
+.. _fclose:
+
 The ``fclose`` function
 -----------------------
 **Synopsis**
@@ -460,6 +465,7 @@ The ``fclose`` function returns zero if the stream was successfully closed, or `
 errors were detected.
 
 .. index:: fflush function
+.. _fflush:
 
 The ``fflush`` function
 -----------------------
@@ -490,6 +496,8 @@ error occurs, otherwise it returns zero.
 .. index:: fopen function
 
 .. _31.5.3:
+
+.. _fopen:
 
 The ``fopen`` function
 ----------------------
@@ -1633,6 +1641,7 @@ Character input/output functions
 .. index:: fgetc funciton
 
 .. _31.7.1:
+.. _fgetc:
 
 The ``fgetc`` function
 ----------------------
@@ -1688,6 +1697,7 @@ indeterminate and a null pointer is returned.
 .. index:: fputc function
 
 .. _31.7.3:
+.. _fputc:
 
 The ``fputc`` function
 ----------------------
@@ -1979,6 +1989,7 @@ File positioning functions
 .. index:: fgetpos position
 
 .. _31.9.1:
+.. _fgetpos:
 
 The ``fgetpos`` function
 ------------------------
@@ -2006,6 +2017,7 @@ returns nonzero and stores an implementation-defined positive value in ``errno``
 .. index:: fseek function
 
 .. _31.9.2:
+.. _fseek:
 
 The ``fseek`` function
 ----------------------
@@ -2045,6 +2057,7 @@ The ``fseek`` function returns nonzero only for a request that cannot be satisfi
 .. index:: fsetpos function
 
 .. _31.9.3:
+.. _fsetpos:
 
 The ``fsetpos`` function
 ------------------------
@@ -2076,6 +2089,7 @@ returns nonzero and stores an implementation-defined positive value in errno.
 .. index:: ftell function
 
 .. _31.9.4:
+.. _ftell:
 
 The ``ftell`` function
 ----------------------
@@ -2103,6 +2117,8 @@ for the stream. On failure, the ftell function returns ``-1L`` and stores an
 implementation-defined positive value in errno.
 
 .. index:: rewind function
+
+.. _rewind:
 
 The ``rewind`` function
 -----------------------
