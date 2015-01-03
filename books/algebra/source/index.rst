@@ -18,8 +18,14 @@ Informal Algebra's Contents
    variations
    variations_solutions
    complex_numbers
-   complex_numbers_problems
-   complex_numbers_solutions
+   complex_numbers_problems_1
+   complex_numbers_solutions_1
+   complex_numbers_problems_2
+   complex_numbers_solutions_2
+   complex_numbers_problems_3
+   complex_numbers_solutions_3
+   complex_numbers_problems_4
+   complex_numbers_solutions_4
    arithmetic_progressions
    arithmetic_progressions_problems
    arithmetic_progressions_solutions
