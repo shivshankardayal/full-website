@@ -169,7 +169,17 @@ which are in question time and space.
 
 There are two ways to measure time complexity. One is called big-O notation and
 another is called amortized complexity. These notations are typically wrtten
-as :math:`O(n)`. There are three types of complexities of an algorithm. Best
+as :math:`O(n), \Omega(n)` and :math:`\Theta(n)`. The symbol:math:`O` was first
+introduced by number theorist Paul Bachmann in 1894, in the second volume of
+his book Analytische Zahlentheorie ("analytic number theory"). The number
+theorist Edmund Landau adopted it, and was thus inspired to introduce in 1909
+the notation :math:`o`; hence both are now called Landau symbols. The big
+:math:`O` was popularized in computer science by Donald Knuth, who 
+re-introduced the related Omega and Theta notations.Knuth also noted that the
+Omega notation had been introduced by Hardy and Littlewood under a different
+meaning ":math:`\ne o`" (i.e. "is not an :math:`o` of").
+
+There are three types of complexities of an algorithm. Best
 case, average case and worst case. In :math:`O(n)` notation worst case
 performance of an algorithm is considered. However, an amortized complexity does
 not work like that. In an algorithm an operation may be costly but then its
@@ -245,9 +255,26 @@ Given below is a plot of some most common functions encountered in algorithms.
 Note that plot of ``log(x)`` is barely visible in output. As you can clearly
 see :math:`log(x)<x<x*log(x)<x^2<x^3<2^n`.
 
-More on Complexity Analysis
----------------------------
-Continuing from our previous section let us discuss a bit more about
+As :math:`O` -notation gives upper bound similarly :math:`\Omega` -notation
+gives lower bound.
+
+:math:`g(n) = \Omega(f(n))` means there exists two constants :math:`L` and
+:math:`n_0` such that
+
+:math:`g(n) \ge L|f(n)|` for all :math:`n> n_0`.
+
+If we want to write exact order of growth without being accurate about constant
+factors :math:`L` and :math:`K` then we use :math:`\Theta` -notation.
+
+:math:`g(n) = \Theta(f(n)) \Leftrightarrow g(n) = O(f(n))` and :math:`g(n) =
+\Omega(f(n))` implying :math:`\Theta` -notation gives both upper and lower
+bounds.
+
+In computer science for algorithm analysis we are almost always worried about
+big-:math:`O` complexity because it gives upper bound i.e. for large set of
+input how the algorithm will behave.
+
+Continuing this let us discuss a bit more about
 big-:math:`O` notation. The problem with big-:math:`O` notation is that even
 though it talks about two contants :math:`x_0` and :math:`K` it does not give
 any hints about there values or how to compute them. It also does not put any
@@ -263,19 +290,100 @@ then neither of these algorithms can be used. One of the sorting algorithms
 among many is external sort. This technique is old because in earlier devices
 memory was less and usually data to be sorted was more.
 
+Examples of Asymptotic Complexity Computation
+=============================================
+In an algorithm analysis we have to consider all operations although many times
+if the code is simple you can just see and guess the complexity. However, in
+case of complex code you will find it difficult to do that. For example
+consider the following code which computes sum of ``n`` numbers stored in an
+array.
+
+.. code-block:: c
+
+   for(i=sum=0; i<n; ++i)
+     sum += a[i];
+
+First we have two initializations for ``i`` and ``sum``. Let cost of assignment
+be :math:`C_1`. Then ``i`` is incremented from ``0`` to ``n-1``. Let cost of
+increment be :math:`C_2`. Now There are ``n`` additions and ``n`` assignments
+for ``sum``. Let cost of addition is :math:`C_3`. So total cost is
+:math:`n*(C_1 + C_3)`. Thus total cost is :math:`2*C_1 + n*C_2 + n*(C_1 + C+3)`
+i.e. :math:`(2+n)C_1 + n*C_2 + n*C_3`. These constants :math:`C_1, C_2` and
+:math:`C_3` can be measured in terms of clock cycles. Thus complexity is
+:math:`O(n)`.
+
+As you can guess if we have nested loops complexity wil increase in terms of
+power of :math:`n`. However, the complexity may not increase exactly by
+integral power.
+
 Simplicity
 ==========
 It is not enough for an algorithm to be efrficient from the perspective of
 memory and time but it should also be simple enough to implement. For example,
 splay-trees are very good for maintaining fast search time. But the
-implementation is complex to a Red-Black tree or AVL-tree therefore they
-are usually not preferred. However, this is not the only reason. I will let
-you know more detail when we discuss trees in their own chapter.
+implementation is complex compared to a Red-Black tree or AVL-tree therefore
+they are usually not preferred. However, this is not the only reason. I will
+let you know more detail when we discuss trees in their own chapter.
 
-Now I will stop this discussion on
-algorithms here and will proceed with our
-discussion on basic data structutes. When we will discuss any data structure
-and algorithm at that point of time we will perform the complexity analysis.
+Problems on Complexity
+======================
+For each of the following pairs of functions :math:`f(n)` and :math:`g(n)`,
+either :math:`f(n) = O(g(n))` or :math:`g(n) = O(f(n))`, but not
+both. Determine the case.
+
+1. :math:`f(n) = (n^2 - n)/2, g(n) = 6n`.
+2. :math:`f(n) = n + 2\sqrt{n}, g(n) = n^2`.
+3. :math:`f(n) = n + \log n, g(n) = n\sqrt{n}`.
+4. :math:`f(n) = n\log n, g(n) = n\sqrt{n}/2`.
+5. :math:`f(n) = n + \log n, g(n) = \sqrt{n}`.
+6. :math:`f(n) = 2(\log n)^2 , g(n) = \log n + 1`.
+7. :math:`f(n) = 2(\log n)^2 , g(n) = \log n + 1`.
+8. :math:`f (n) = 4n \log n + n, g(n) = (n^2 - n)/2`.
+
+Which of the following cases are true and which are false?
+
+9. :math:`n^2 = O(n^3)`.
+10. :math:`n^3 = O(n^2)`.
+11. :math:`n\log n = O(n\sqrt{n})`.
+12. :math:`\sqrt{n} = O(\log n)`.
+13. :math:`\log n = O(\sqrt{n})`.
+14. :math:`n^3 = O(n^2(1 + n^2))`.
+15. :math:`1/n = O(\log n)`.
+16. :math:`\log n = O(1/n)`.
+17. :math:`\log n = O(n^{-1/2})`.
+18. If :math:`f(n) \sim g(n)`, then :math:`f(n) = \Theta(g(n))`.
+19. If :math:`f(n) = \Theta(g(n))`, then :math:`g(n) = \Theta(f(n))`.
+
+Give proof for following:
+
+20. Does :math:`n^{\log n} = O((\log n)^n)`?
+21. Does :math:`n^{\log n} = \Omega((\log n)^n)`?
+22. Does :math:`n^{\log \log \log n} = O((\log n)!)`?
+23. Does :math:`n^{\log \log \log n} = \Omega((\log n)!)`?
+24. Does :math:`(n!)! = O(((n - 1)!)!(n - 1)!^{n!})`?
+25. Does :math:`(n!)! = \Omega(((n - 1)!)!(n - 1)!^{n!})`?
+26. Does
+
+    .. math::
+       O\left(\left(\frac{n^2}{\log \log n}\right)^{1/2}\right) =
+       O(\lfloor\sqrt{n}\rfloor)
+27. Does :math:`2^{(1+O(1/n))} = 2 + O(1/n)`.
+28. Prove that if :math:`f_1(n) = O(g_1(n))` and `f_2(n) = O(g_2(n))`, then
+    :math:`f_1(n) + f_2(n) = O(g_1(n) + g_2(n))`.
+29. Prove that if :math:`f_1(n) = \Omega(g_1(n))` and `f_2(n) =
+    \Omega(g_2(n))`, then :math:`f_1(n) + f_2(n) = O(g_1(n) + g_2(n))`.
+30. Prove that if :math:`f_1(n) = O(g_1(n))` and `f_2(n) = O(g_2(n))`, then
+    :math:`f_1(n) + f_2(n) = O(max\{g_1(n), g_2(n)\})`.
+31. Prove that if :math:`f_1(n) = \Omega(g_1(n))` and `f_2(n) =
+    \Omega(g_2(n))`, then :math:`f_1(n) + f_2(n) = \Omega(min\{g_1(n),
+    g_2(n)\})`.
+32. Prove or disprove: For all functions :math:`f(n)` and :math:`g(n)`, either
+    :math:`f(n) = O(g(n))` or :math:`g(n) = O(f(n))`.
+33. Prove or disprove: If :math:`f(n) > 0` and :math:`g(n) > 0` for all
+    :math:`n`, then :math:`O(f(n) + g(n)) = f(n) + O(g(n))`.
+34. Prove or disprove: :math:`O(f(n)^{\alpha}) = O(f(n))^{\alpha}` for all
+    :math:`\alpha \in \mathbf{R^+}`.
+35. Prove or disprove: :math:`O(x + y)^2 = O(x^2) + O(y^2)`.
 
 Mathematical Induction
 ======================
@@ -287,10 +395,10 @@ and many may not. Therefore, I will start with basics of this
 particular technique. We will then develop some basic formulas to be used in
 this book. We use mathematical induction technique in following way.
 
-Given a statement :math:`S(n)` we first prove :math:`S(1), S(2)` and :math:`S(3)`
-are true. We then assume :math:`S(k)` is true. After that we prove :math:`S(n+1)`
-to be true. After this we can draw conclusion that :math:`S(n)` is true for all
-:math:`n`.
+Given a statement :math:`S(n)` we first prove :math:`S(1), S(2)` and
+:math:`S(3)` are true. We then assume :math:`S(k)` is true. After that we prove
+:math:`S(n+1)` to be true. After this we can draw conclusion that :math:`S(n)`
+is true for all :math:`n`.
 
 Consider a statement that
 

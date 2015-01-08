@@ -27,6 +27,7 @@ import sphinx_bootstrap_theme
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 'sphinx.ext.graphviz', 'sphinx.ext.mathjax', 'sphinxcontrib.tikz', 'sphinxcontrib.googleanalytics']
 
+tikz_tikzlibraries = 'arrows'
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -174,13 +175,24 @@ htmlhelp_basename = 'ProgrammingDataStructuresandAlgorithmsdoc'
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+'papersize': 'a4paper',
 
 # The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+'pointsize': '10pt',
+'babel': '\\usepackage[english]{babel}',
+'classoptions': 'openright,twosided',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+'preamble': r"""\setcounter{secnumdepth}{4}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{tikz}
+\setcounter{tocdepth}{4}
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections}
+"""
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -244,7 +256,7 @@ texinfo_documents = [
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
 
-pngmath_dvipng_args = ['-gamma 1.5', '-D 160', '-bg Transparent']
+pngmath_dvipng_args = ['-gamma 1.5', '-D 112', '-bg Transparent']
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'http://docs.python.org/': None}

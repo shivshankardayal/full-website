@@ -3,11 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Programming Data structures and Algorithms Contents
+Data structures and Algorithms Contents
 ***************************************************
 .. meta::
-  :description: Programming Data Structures and Algorithms
-  :keywords: Programming, Data Structures, Algorithms
+  :description: Data Structures and Algorithms
+  :keywords: Data Structures, Algorithms
 
 .. toctree::
    :maxdepth: 5
@@ -15,7 +15,8 @@ Programming Data structures and Algorithms Contents
 
    intro
    ls
-   stackq
+   stack
+   queues
 
 Indices and tables
 ==================

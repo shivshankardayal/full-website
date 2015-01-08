@@ -1,0 +1,15 @@
+{% extends "!layout.html" %}
+
+
+{% block rootrellink %}
+        <li><a href="https://10hash.com">home</a>|&nbsp;</li>
+        <li><a href="{{ pathto('search') }}">search</a>|&nbsp;</li>
+       <li><a href="https://10hash.com/books/dsa/">Data Structures and Algorithms</a> &raquo;</li>
+{% endblock %}
+{% block extrahead %}
+<link rel="stylesheet" href="../../../css/math.css" type="text/css" />
+{% endblock %}
+{% block relbar1 %}
+
+{{ super() }}
+{% endblock %}
