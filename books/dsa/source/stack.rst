@@ -48,9 +48,10 @@ implementation. As you will notice the array size is controlled by the variable
 which I am going to show.
 
 The implementation has been split into two parts. The header file and the  
-implementation file. This iskept to so that code can be easily reused and this 
+implementation file. This is kept so that code can be easily reused and this 
 code can be converted to library. Please note that this code is not meant to 
-be used in production environment is just an example. More commentary will follow the code:
+be used in production environment is just an example. More commentary
+will follow the code:
 
 Stack.c
 -------
@@ -64,7 +65,7 @@ Stack.c
    #include <stdlib.h>
 
    const int MAX = 128;
-   int top = 0;
+   int top = -1;
 
    void push(int [], int);
    int pop(int []);
@@ -81,85 +82,94 @@ Stack.c
 
     bool isEmpty()
     {
-    printf("top is %d\n", top);
-        if(top == 0)
+        printf("top is %d\n", top);
+        if(top == -1)
         {
-        return true;
+            return true;
         }
         else
         {
-        return false;
+            return false;
         }
     }
 
     void push(int stack[], int element)
     {
       if(top == MAX - 1)
-        {
+      {
           printf("Stack overflow.\n");
           return;
-        }
+      }
       else
-        {
-          stack[top++] = element;
+      {
+          stack[++top] = element;
           printf("Pushed element is %d.\n", element);
-        }
+      }
     }
 
     int pop(int stack[])
     {
-      if(isEmpty(stack))
+        if(isEmpty(stack))
         {
-          printf("Stack underflow.\n");
-          exit(-1);
+            printf("Stack underflow.\n");
+            exit(-1);
         }
-      else
+        else
         {
-          return stack[--top];
+	    int x = stack[top];
+	    --top;
+            return x;
         }
     }
 
     void menu()
     {
-      puts("1. Push an element on top of stack.");
-      puts("2. Pop an element off the top of stack.");  
+        puts("1. Push an element on top of stack.");
+        puts("2. Pop an element off the top of stack.");  
     }
 
     int main()
     {
-      int stack[MAX];
-      int popped_element=0, element=0, option=-1;
+        int stack[MAX] = {0};
+        int popped_element=0, element=0, option=-1;
         
-      menu();
-      printf("Enter 1 or 2 to choose an action. 0 to quit.\n");
-      scanf("%d", &option);
-      fflush(stdin);
-      while(option == 1 || option == 2)
-      {
-      switch(option) 
-        { 
-        case 1:
-          printf("Enter an integer to push onto stack.\n");
-          scanf("%d", &element);
-          push(stack, element);
-          break;
-        case 2: 
-          popped_element = pop(stack);
-          printf("Popped element is %d\n", popped_element);
-          break; 
-        default: 
-          break; 
+        menu();
+        printf("Enter 1 or 2 to choose an action. 0 to quit.\n");
+        scanf("%d", &option);
+        fflush(stdin);
+        while(option == 1 || option == 2)
+        {
+            switch(option) 
+            { 
+		case 1:
+		    printf("Enter an integer to push onto stack.\n");
+		    scanf("%d", &element);
+		    push(stack, element);
+		    break;
+		case 2: 
+		    popped_element = pop(stack);
+		    printf("Popped element is %d\n", popped_element);
+		    break; 
+		default: 
+		    break; 
+	    }
+
+	    menu();
+	    printf("Enter 1 or 2 to choose an action. 0 to quit.\n");
+	    fflush(stdin);
+	    scanf("%d", &option);
+	    fflush(stdin);
         }
-      
-      menu();
-      printf("Enter 1 or 2 to choose an action. 0 to quit.\n");
-      fflush(stdin);
-      scanf("%d", &option);
-      fflush(stdin);
-      }
         
-      return 0;
+        return 0;
     }
+
+Let us try to visualize few operations on this array based stack. Let
+us assume our stack array is limited to 5 elements and we perform
+following operations: ``push(1); push(2); push(3); push(4); push(5);
+pop(); pop(); pop(); pop(); pop(); pop();``. Clearly as you see there
+are 5 push operations and 6 pop operations so program will quit with
+underflow.
 
 Linked List Based Implementation
 ================================
@@ -178,8 +188,8 @@ stack_ll.h
     #include <stdlib.h>
 
     typedef struct Stack{
-      int data;
-      struct Stack *next;
+        int data;
+        struct Stack *next;
     }Stack;
 
     void push(Stack**, int);
@@ -196,38 +206,38 @@ stack_ll.c
 
     bool isEmpty(Stack *top)
     {
-      if(top == NULL)
+        if(top == NULL)
         {
-          return true;
+            return true;
         }
-      else
+	else
         {
-          printf("top is %d\n", top->data);
-          return false;
+            printf("top is %d\n", top->data);
+            return false;
         }
     }
 
     void push(Stack** top, int element)
     {
-      Stack* temp = (Stack*)malloc(sizeof(Stack));
+        Stack* temp = (Stack*)malloc(sizeof(Stack));
           
-      if(temp == NULL)
+        if(temp == NULL)
         {
-          printf("Cannot allocate memory\n");
-          exit(1);
+            printf("Cannot allocate memory\n");
+            exit(1);
         }
 
-      if(top != NULL)
+	if(top != NULL)
         {
-          temp->next = *top;
-          *top = temp;
-          (*top)->data = element;
+            temp->next = *top;
+            *top = temp;
+            (*top)->data = element;
         }
-      else
+	else
         {
-          *top = temp;
-          (*top)->next = NULL;
-          (*top)->data = element;
+            *top = temp;
+            (*top)->next = NULL;
+            (*top)->data = element;
         }
     }
 
@@ -235,11 +245,11 @@ stack_ll.c
     {
         if(isEmpty(*top))
         {
-          printf("Stack underflow.\n");
-          exit(-1);
+            printf("Stack underflow.\n");
+            exit(-1);
         }
         
-        Stack* temp = *top;
+	Stack* temp = *top;
         
         *top = (*top)->next;
         int data = temp->data;
@@ -249,44 +259,44 @@ stack_ll.c
 
     void menu()
     {
-      puts("1. Push an element on top of stack.");
-      puts("2. Pop an element off the top of stack.");  
+        puts("1. Push an element on top of stack.");
+        puts("2. Pop an element off the top of stack.");  
     }
 
     int main()
     {
-      Stack* stack = NULL;
-      int popped_element=0, element=0, option=-1;
+        Stack* stack = NULL;
+	int popped_element=0, element=0, option=-1;
         
-      menu();
-      printf("Enter 1 or 2 to choose an action. 0 to quit.\n");
-      scanf("%d", &option);
-      fflush(stdin);
-      while(option == 1 || option == 2)
+	menu();
+	printf("Enter 1 or 2 to choose an action. 0 to quit.\n");
+	scanf("%d", &option);
+	fflush(stdin);
+	while(option == 1 || option == 2)
         {
-          switch(option) 
+            switch(option) 
             { 
-            case 1:
-              printf("Enter an integer to push onto stack.\n");
-              scanf("%d", &element);
-              push(&stack, element);
-              break;
-            case 2: 
-              popped_element = pop(&stack);
-              printf("Popped element is %d\n", popped_element);
-              break; 
-            default: 
-              break; 
+                case 1:
+		    printf("Enter an integer to push onto stack.\n");
+		    scanf("%d", &element);
+		    push(&stack, element);
+		    break;
+		case 2: 
+		    popped_element = pop(&stack);
+		    printf("Popped element is %d\n", popped_element);
+		    break; 
+		default: 
+                  break; 
             }
           
-          menu();
-          printf("Enter 1 or 2 to choose an action. 0 to quit.\n");
-          fflush(stdin);
-          scanf("%d", &option);
-          fflush(stdin);
+            menu();
+            printf("Enter 1 or 2 to choose an action. 0 to quit.\n");
+            fflush(stdin);
+            scanf("%d", &option);
+            fflush(stdin);
         }
         
-      return 0;
+        return 0;
     }
 
 Usage of Stack

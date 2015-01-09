@@ -6,9 +6,14 @@ like arrays, linked lists, stacks, queues etc. The structure of data is
 important because it governs how we can perform insertion, deletion, update and
 more such operations on data. It not only governs but also how fast we will be
 able to do such stuff. Some languages which have big standard libraries like
-C++, Pytho, Java etc they provide many utilities data structures and most
+C++, Python, Java etc they provide many utilities data structures and most
 common operations as a part of it. However, since C99 is having a much smaller
 standard library such facilities are not there.
+
+It is assumed that the reader i.e. you know about basics of concepts like
+arrays, pointers, functions and recursion. C is primarily used to implement the
+data structures and algorithms therefore if you do not know C then probably you
+would want to read `this </books/c>`_.
 
 Some of the linear structures are linked lists, stacks and queues. We will
 start with linked lists. Linked lists are also simply known as lists. A list
