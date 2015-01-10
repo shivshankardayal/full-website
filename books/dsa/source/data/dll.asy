@@ -1,0 +1,28 @@
+import fontsize;
+
+defaultpen(fontsize(16pt));
+defaultpen(linewidth(1));
+path p = (-.5cm, .5cm) -- (.5cm, .5cm) -- (.5cm, 1.5cm) -- (-.5cm, 1.5cm) -- cycle;
+draw(p);
+path p = (-3.5cm, .5cm) -- (-2.5cm, .5cm) -- (-2.5cm, 1.5cm) -- (-3.5cm, 1.5cm) -- cycle;
+draw(p);
+path p = (2.5cm, .5cm) -- (3.5cm, .5cm) -- (3.5cm, 1.5cm) -- (2.5cm, 1.5cm) -- cycle;
+label("10", (-3cm, 1cm));
+label("20", (0cm, 1cm));
+label("30", (3cm, 1cm));
+draw(p);
+label("$head$", (-5.5cm, 1.4cm));
+label("$NULL$", (-5.5cm, .6cm));
+label("$NULL$", (5.5cm, 1.4cm));
+draw((-4.7cm, 1.4cm) -- (-3.5cm, 1.4cm), EndArrow);
+draw((3.5cm, 1.4cm) -- (4.7cm, 1.4cm), EndArrow);
+draw((-2.5cm, 1.4cm) -- (-.5cm, 1.4cm), EndArrow);
+draw((.5cm, 1.4cm) -- (2.5cm, 1.4cm), EndArrow);
+label(("$next$"), (-1.5cm, 1.8cm));
+label(("$next$"), (1.5cm, 1.8cm));
+label(("$next$"), (4.2cm, 1.8cm));
+draw((-4.7cm, .6cm) -- (-3.5cm, .6cm), BeginArrow);
+draw((-2.5cm, .6cm) -- (-.5cm, .6cm), BeginArrow);
+draw((.5cm, .6cm) -- (2.5cm, .6cm), BeginArrow);
+label(("$prev$"), (-1.3cm, .9cm));
+label(("$prev$"), (1.7cm, .9cm));

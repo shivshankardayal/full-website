@@ -15,7 +15,6 @@ Contents
    :maxdepth: 2
    :numbered:
 
-   preface
    intro
 
 Indices and tables

@@ -6,22 +6,28 @@ in contrast to stacks both the ends are used one for enqueuing and the other
 for dequeuing. Queues have more forms like priority queues which are used to
 schedule things like process or task scheduling. Queues have a lot of other
 uses wherever we want to maintain a **FIFO** (first in first out) behavior.
+For example, scheduling of processes in an operating system, scheduling print
+jobs for a printer etc. Whenever you have to share a single resource for
+multiple request you can maintain a queue of requests for serving the
+requests. Another example could be playlists in music or video player. In
+distributed computing you have message queues like RabbitMQ.
 Similar to stacks I will show you both array based and linked list based
 implementation. Most asynchronous web servers maintain an even loop where
 events are queued as they arrive and dequeued as the processing engine is
 free and then it picks up next task from the even loop.
 
-Like stacks there are two operations, `enqueue` and `dequeue` wcich adds an
+Like stacks there are two operations, ``enqueue`` and ``dequeue`` wcich adds an
 element at the end and removed one element from head respectively. Both these
 operations can be performed in :math:`O(1)` time complexity. For
-`enqueue` we might have an error state when the queue may become full or we
+``enqueue`` we might have an error state when the queue may become full or we
 may not have more memory depending on the fact whether the queue is array
-based or linked list based. For `dequeue` we can always reach a stage when
+based or linked list based. For ``dequeue`` we can always reach a stage when
 the queue is empty.
 
-Complexity wise the space requirement is linear or :math:`O(n)` while `pop` 
-and `push` can be performed in constant time i.e. :math:`O(1)` which you 
-should be able to figure out from code as these are very simple to analyze.
+Complexity wise the space requirement is linear or :math:`O(n)` while
+``enqueue`` and ``dequeue`` can be performed in constant time i.e. :math:`O(1)`
+which you should be able to figure out from code as these are very simple to
+analyze.
 
 Array Based Implementation
 ==========================
@@ -134,6 +140,18 @@ queue.c
         
       return 0;
     }
+
+In this array version of queue array is used as a circular buffer. Let us assume
+value of ``MAX`` is 4. Let us try to visualize operations of ``enqueue(1);
+enqueue(2); enqueue(3); dequeue(); enqueue(4); enqueue(5); dequeue();
+enqueue(6); dequeue(); enqueue(7); dequeue(); dequeue(); dequeue(); dequeue();``
+
+.. figure:: data/queue_array.gif
+   :align: center
+   :alt: Enqueue and dequeue and operation on a queue based on array.
+
+   Enqueue and dequeue and operation on a queue based on array.
+
 
 Linked List Based Implementation
 ================================
@@ -263,3 +281,22 @@ queue_ll.c
         
       return 0;
     }
+
+Enqueue operation on a linked list is like appending an element to list while
+dequeue operation is like deleting first node pointed to by ``head`` pointer of
+linked list.
+    
+Problems on Queues
+==================
+For all these problems use linked list version of queues.
+
+1. Implement a stack using two queues.
+2. Order all elements of a queue using two additional queues.
+3. Order all elements of a queue using one additional queue and some variables.
+4. Assume you have a queue of processes which will do some computation. Each
+   task will take some time in integers with say a mean value of 3
+   second. Supposed you have quad core CPU and so you can run 4 tasks in
+   parallel. Generate these tasks with a task id in monotonically increasing
+   fashion; put them in queue and process them in  fair manner. Once id
+   generates ``UINT_MAX`` let id start from 0. Generate a mean of 4 tasks in 3
+   seconds on average.
