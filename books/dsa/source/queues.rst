@@ -1,7 +1,7 @@
 Queues
 ******
 Similar to stacks queues are found in real-life as well and we are all well
-aware of them. In a queue we get in at then end and get out at the start i.e.
+aware of them. In a queue we get in at the end and get out at the start i.e.
 in contrast to stacks both the ends are used one for enqueuing and the other
 for dequeuing. Queues have more forms like priority queues which are used to
 schedule things like process or task scheduling. Queues have a lot of other
