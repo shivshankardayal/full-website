@@ -17,3 +17,7 @@ ul.globaltoc {
     max-height: 400px;
     overflow: auto;
 }
+
+ul.example-selector {
+    padding-bottom: 40px;
+}

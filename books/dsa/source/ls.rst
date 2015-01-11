@@ -84,7 +84,10 @@ Let us implement a linked list and its operations:
    void add_at_beg(ll**);
    void print(ll*);
    void search(ll*);
-
+   void delete(ll**);
+   void append(ll**);
+   void add_in_bet(**);
+   
    void delete(ll** head)
    {
        ll *temp, *q;
@@ -114,6 +117,12 @@ Let us implement a linked list and its operations:
                q = temp;
                temp = temp->next;
            }
+       }
+
+       if(temp->data == i) { // case of deletion of last node
+           q->next = temp->next;
+	   free(temp);
+           return;
        }
 
        printf("The element to be deleted was not found.\n");
@@ -195,7 +204,7 @@ Let us implement a linked list and its operations:
                temp->next = q->next;
                q->next = temp;
                temp->data = i;
-               break;
+               return;
            }
            q = q->next;
        }
@@ -205,6 +214,8 @@ Let us implement a linked list and its operations:
        if(j == position) {
            append(head);
        }
+       free(temp); // no insertion happened so we need to free temp
+		   // i.e. j was out of possible positions
    }
 
    void add_at_beg(ll** head)
@@ -242,7 +253,7 @@ Let us implement a linked list and its operations:
 
        while(head != NULL) {
            if(head->data == i) {
-	       printf("%d is found at position %dth\n", i, position);
+	       printf("%d is found at %dth position.\n", i, position - 1);
 	       return;
            }
 
@@ -258,7 +269,7 @@ Let us implement a linked list and its operations:
        int option = 0;
 
        menu();
-       printf("Enter 1 to 7 to choose an action. Any other value to quit.\n");
+       printf("Enter 1 to 7 to choose an action. Any other number to quit.\n");
        scanf("%d", &option);
        getchar(); // to remove \n
 
@@ -289,7 +300,7 @@ Let us implement a linked list and its operations:
                    break;
            }
            menu();
-           printf("Enter 1 to 7 to choose an action. 0 to quit.\n");
+           printf("Enter 1 to 7 to choose an action. Any other number to quit.\n");
            fflush(stdin);
            scanf("%d", &option);
            getchar(); // to remove \n
