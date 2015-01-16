@@ -318,8 +318,11 @@ dll.c
        return 0;
    }
 
+You can extrapolate the animations of singly linked list to doubly linked list
+as well just that you have to take care of ``prev`` pointer as well.
+
 Circular Lists
 ==============
 Circular list is a singly linked list where last node's ``next`` pointer is not
 ``NULL`` but rather it points to head of the list. Let us try to reimplement
-all the functions we had implemented for singly linked list.
+all the functions we had implemented for singly linked list. Therefore
