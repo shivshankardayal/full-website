@@ -1,15 +1,18 @@
 .. meta::
-  :description: C Programming with C99
-  :keywords: Free C Book, C Programming, C99 Programming, C99 Specification
+  :description: C Programming
+  :keywords: Free C Book, C Programming, C11 Programming, C11 Specification
 
 ***************
 Introduction
 ***************
-So it begins.The journey to a destination which will never be reached. The
+So it begins! The journey to a destination which will never be reached. The
 journey to perfection! The journey to perfect programs. I have read somewhere
-that a perfect program is one from which nothing can be deleted. Well, the fun
-is not in the destination but in journey. The process of learning is fun. And
-I will share this fun with you. Of all popular mainstream languages C, and Lisp
+that a perfect program is one from which nothing can be deleted. As you know,
+the fun is not in the destination but in the journey. The process of learning
+is fun and if you share the same enthusiasm then I will share this fun with
+you.
+
+Of all popular mainstream languages C, and Lisp
 are two oldest but we cannot really say that Lisp is really popular. It has a
 niche area and it is there for that. So let me redefine my statement. Of all
 general-purpose popular programming language C is the oldest. So what makes C
@@ -31,21 +34,24 @@ popular.
 C is simple, small, succinct. It may be dirty but is quick. It may have its
 quirks but it is a success. C is really so simple yet so deceptive. It will
 take one years of programming to really thoroughly understand it.
-Note that this book will make heavy use of C99 specification. It will contain
-almost a copy of n1124.pdf which I have.
+Note that this book will make heavy use of C11 specification. It will contain
+almost a copy of n1570.pdf which I have. You can download a copy of this draft
+version from `open-std.org
+<http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf>`_.
 
 ============
 Organization
 ============
 I have will classify chapters in two categories. One is compiler/language
-specific and second specification specific. Chapter no. 9, 10 and 11 are very
+specific and second specification specific. Chapter no. 11, 12 and 13 are very
 tightly related to specification while rest of the book is related to
 compiler and programming. Chapters which treat standard library of C include
 information from both specification and compiler. It is suggested that the
-reader reads chapter 9, 10 and 11 after finishing rest of the book.
+reader reads chapter 11, 12 and 13 after finishing rest of the book.
 
-This book is in process of getting some extra content so keep looking at
-contents page changes.
+Since this is an online book changes will be frequent unless I mark is
+reasonably complete. Thus, I request you to revisit from time to time to see if
+new content has been added.
 
 ==============
 Why C?
@@ -81,7 +87,7 @@ available on all the platforms. Therefore, C is the MOST portable language. :-)
 =============
 History
 =============
-C was formally delivered to this world in 1972 and conceived by Dennis
+C was formally delivered to this world in 1972 and started by Dennis
 MacAlistair Ritchie in 1968. What happened was there was a project for
 development of a text processor and GE-645 was bought by AT&T Bell Labs. At
 that time Ken Thompson had developed a game called "Space Travel". Then they
@@ -204,7 +210,7 @@ to extend the editor using scripting languages like Guile, Python, Lua etc.This
 features allows user to collaborate and make your program better. Remember the
 rule is the more the merrier here.
 
-7 **Portability:** It is an elusive and painful goal. Let us say we write our
+7. **Portability:** It is an elusive and painful goal. Let us say we write our
 text editor GUI using something like Xlib directly then we will have to port
 the entire GUI for other non X-based OSes. So we can choose some cross-platform
 GUI libraries like GTK+, Qt, WxWidgets etc. Even then when system calls come in
@@ -217,15 +223,13 @@ compilation.
 ================
 Tools of Trade
 ================
-I am going to use Clang as compiler, Emacs as my editor with CEDET, ECB and
-Flymake. For debugging I will use xxgdb though you can debug in Emacs itself.
-I just love the good old X gui of xxgdb. For dynamic memory checking, heap
+I am going to use GCC as compiler, Emacs as my editor with CEDET, ECB and
+Flymake. For debugging I will use GDB interface in Emacs itself. For dynamic
+memory checking, heap 
 corruption, cache corruption etc I am going to show you how to use valgrind.
 For profiling gprof and for code coverage gcov. Note that you can use gcc for
-compiling programs. Most of the systems come with gcc. However, I like gcc
-for beginners because it is usually faster, produces better error messages
-(which is very important for a beginner) and typically consumes less memory.
-Also, it never hurts to know something new. For compiling programs I will
+compiling programs. Most of the systems come with gcc. For compiling programs I
+will 
 use GNU Make though in the beginning I will show you how to compile on command
 line. Let us begin with Emacs configuration file ``.emacs``:
 
@@ -290,6 +294,18 @@ line. Let us begin with Emacs configuration file ``.emacs``:
       (load "auctex.el" nil t t)
       (load "preview-latex.el" nil t t)
 
+You should not be copying this Emacs configuration as certain things may not
+work in your Emacs version. Rather I would advice you to read its manual and
+then customize accordingly. There is an `Emacs Wiki <http://emacswiki.org/>`_
+site which you can use to learn more about different modules and extensions
+which you can use to gain more functionality.
+
+If you are looking for a simple IDE then you can use `Code::Blocks
+<http://www.codeblocks.org/>`_ which can serve as a nice starting
+point. However, for beginners I advice against IDEs because it hides the actual
+process of compilation for you and you may miss basic points which you must be
+knowing as a C programmer.
+
 Just copy paste the following program in Emacs and the Make file given after
 that:
 
@@ -313,9 +329,9 @@ do not make a mistake here.
 Note that there should be a tab before the second line. If you do all steps
 correctly you should see something like: Note the pink background. If you move
 your mouse there then you will see the error/diagnostic messages from the
-compiler. For now I recommend you to read Emacs tutorial and man page of Clang
-compiler. I will introduce xxgdb and valgrind later. Note that you can modify
-Makefile but this particular content must remain unchanged. It is the enabler
+compiler. For now I recommend you to read Emacs tutorial and man page of `gcc`
+compiler. Note that you can modify
+`Makefile` but this particular content must remain unchanged. It is the enabler
 for Flymake. The screenshot is given below; 
 
 .. image:: _static/flymake.png
@@ -397,8 +413,10 @@ auto completes filename so do not do the following by accident:
 
 ``$gcc nothing.c -o nothing.c``
 
-This will overwrite your nothing.c by nothing. Let us see how to compile this
-program using a Makefile. Edit your Makefile like this:
+This will overwrite your `nothing.c` by `nothing`. Let us see how to compile
+this program using a `Makefile`. In case you are curious about knowing eveything
+about Makefiles at this point of time then you can find its very fine manual at
+`gnu.org <https://www.gnu.org/software/make/manual/>`_. Edit your Makefile like this:
 
 .. code-block:: make
 
@@ -409,7 +427,7 @@ program using a Makefile. Edit your Makefile like this:
   nothing:nothing.c
       gcc nothing.c -o nothing
 
-Now from do this from menu. Tools->compile As the command issue ``make
+Now from do this from menu. ``Tools->compile`` and as the command issue ``make
 -k test``. Your code will be compiled. Makefiles are better than executing
 commands however you must know underlying commands. You can also use something
 like CMake or Scons but I think that should be part of a book covering build

@@ -1,6 +1,6 @@
 .. meta::
-  :description: C Programming with C99
-  :keywords: Free C Book, C Programming, C99 Programming, C99 Specification
+  :description: C Programming
+  :keywords: Free C Book, C Programming, C11 Programming, C11 Specification
   
 ************
 Basics of C
