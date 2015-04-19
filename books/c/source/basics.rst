@@ -5,9 +5,9 @@
 ************
 Basics of C
 ************
-Now is the time for learning basics. There are certain rules in every language,
+There are certain rules in every language;
 certain grammar which dictates the way language will be spoken and written. It
-has a script to write using. Similarly, programming languages have BNF
+has a script to write with. Similarly, programming languages have BNF
 (Backus-Naur Form) context-free grammar. There are valid characters in a
 programming language and a set of keywords. However, programming language
 ruleset is very small compared to a natural programming language. Also, when
@@ -17,6 +17,13 @@ violate rules. The grammar is context-free. Compilers or interpreters cannot
 deduce your intent by reading code. They are not intelligent. You make a mistake
 and it will refuse to listen to you no matter what you do. Therefore, it is very
 essential to understand these rules very clearly and correctly.
+
+Note that C language is governed by ISO specification **ISO/IEC 9899:2011**. As
+much as I would like to refer to specification there are 
+financial reasons why I will not because it is expensive and I do not expect
+all of readers to buy this. Thus I would use n1570.pdf mentioned in previous
+chapter.  Sections of this document will be referred like
+:math:`\S(\text{iso.section number})`.
 
 .. index::
    single: character sets
@@ -84,6 +91,14 @@ allows to use other than what they are meant for:
 |else    |register|union       |            |
 +--------+--------+------------+------------+
 
+Following keywords were added in C11 specification:
+
++----------+---------+------------+------------+---------------------------------+
+|Keywords added in C11 specification                                             |
++==========+=========+============+============+=================+===============+
+|\_Alignof |\_Atomic |\_Generic   |\_Noreturn  |\_Static\_assert |\_Thread\_local| 
++----------+---------+------------+------------+-----------------+---------------+
+
 These keywords serve specific purpose. You will come to know about all of them
 as you progress through the book. Next we look at identifiers.
 
@@ -93,7 +108,8 @@ as you progress through the book. Next we look at identifiers.
 ===========
 Identifiers
 ===========
-The names which we give to our variables are known as identifiers. Something
+The names which we give to our variables are known as :ref:`4.4.2`
+:math:`\S(\text{iso.6.4.2})`. Something
 with which we identify. As you have already seen what is allowed in C's
 character set but not all are allowed in an identifiers name. Only alphabets
 from English language both lowercase and uppercase, Arabic digits from zero to
@@ -102,9 +118,16 @@ constructing names is that among the allowed characters it can only begin with
 only English alphabets and underscore. Numbers must not be first character. For
 example, ``x, _myVar, varX, yourId78`` are all valid names. However, take care
 with names starting from underscore as they are mostly used by different library
-authors. Invalid identifier examples are ``9x, my$, your age``. Please read this
-section carefully and make sure understand the rules for naming identifiers.
-Later at the end of chapter there are some simple problems to work on.
+authors. Invalid identifier examples are ``9x, my$, your age``. Invalid
+identifier examples are ``9x, my$}`` and
+``your age``. If the identifier name contains extended
+characters(i.e. other than what is mentioned for simplicity like, Chinese,
+European, Japanese etc) then it will be replaced with an encoding of universal
+character set, however, it cannot be first character.
+
+Length of an identifer for 31 characters, which, acts as minimum limits, as
+specified in :ref:`3.2.4.1` :math:`\S(\text{iso.5.2.4.1})`, is guaranteed across all
+platforms.
 
 ===========
 Programming
@@ -114,9 +137,8 @@ understand what it does. Here I am giving code once again for quick reference:
 
 .. code-block:: c
 
-  //My first program
-  /* Author: Shiv Shankar Dayal
-     Description: This program does nothing.*/
+  // My first program
+  // Description: This program does nothing.
  
   #include <stdio.h>
  
@@ -196,7 +218,6 @@ the program:
 .. code-block:: c
 
   // My second program
-  // Author: Shiv S. Dayal
   // Description: It adds two numbers
  
   #include <stdio.h>
@@ -312,9 +333,13 @@ only ``int``. So onward to data types.
 ==================
 Data Types
 ==================
-Why data types? What is the need? When everything is a voltage level why not
-just deal with 0s and 1s? The answer is simple. You need to abstract and
-segregate how much is required. For example, say you are given a sequence of 0s
+Why data types? What is the need? C is a statically typed language
+that is every variable has a type associated with it. Types are discussed in
+specification in great length in :ref:`4.2.5` :math:`\S(\text{iso.6.2.5})` to
+:math:`\S(\text{iso.6.2.8})`.
+These types determine
+what kind of values these variables can hold and how they will be
+interpreted. For example, say you are given a sequence of 0s
 and 1s how much can you work with them. We as humans are not very versed with 0s
 and 1s. Also, say we encode character 'A' for 10101 will it be easy for you to
 see A or numbers. Also, numbers range from :math:`-\infty` to :math:`\infty`.
@@ -339,15 +364,12 @@ different. For example, in the range program given below size of `int` is 4
 bytes which is double than what is specified by specification i.e. 2 bytes.
 
 Floating-point data types are covered in great detail in :ref:`3.2.4.2`.
-I have also covered floating-point numbers
-`here <https://10hash.com/articles/a-18b575b8-3a02-11e4-b444-448a5b8822ad/C-Programming-Tutorial-Part-5-Floating-point-Numbers>`_.
 
 Let us write a program to find out memory required for various data types:
 
 .. code-block:: c
 
    // My range program
-   // Author: Shiv S. Dayal
    // Description: It gives ranges of integral data types
  
    #include <stdio.h>
@@ -381,7 +403,221 @@ and the output will be::
     Size of long double is...12
 
 Based on this it is left as an exercise to reader to compute the ranges of these
-data types. Here I am giving the contents of limits.h for you to see limits of
+data types.
+
+Integers
+========
+Integers are probably simplest to understand of all data types in C so I am
+discussing them before any other type. As you have seen the keyword for
+declaring integer type is ``int``. An integer can be 2 bytes or 4 bytes. A
+16-bit compiler will have integer of 2 bytes while a 32-bit or 64-bit compiler
+will have a 4 byte integer. The specified minimum size of an integer is 2
+bytes. Since most modern computers are either 32-bit with
+64-bit becoming more dominant we will assume in this book that integer's size
+is 4 bytes or 32-bit implicitly because 32-bit ``gcc`` gives a 32-bit
+integer. There is a keyword ``signed`` which when 
+applied to a data type splits the range into two parts. Since integer is 32
+bit so it will be split in the range from \\(-2^{31}\\) to \\(2^{31} - 1\\). By default
+integers, characters and long are ``signed``. Floats and doubles are
+always ``signed`` and have no unsigned counterpart. When the integer will
+be \texttt{unsigned} then the positive range doubles and it becomes $0$ to
+\\(2^{32} - 1\\). When the value of intger is more than its range then the values
+rotate in the using modulus with the largest value of the range which is also
+known as ``INT_MAX`` or ``INT_MIN``. For ``unsigned`` types it
+is ``UINT_MAX``. These are macros and are defined in ``limits.h``
+which you can find in ``/usr/include`` or ``/usr/local/include`` by
+default.
+
+There are four different types of integers based on their storage
+requirement. ``short int, int, long`` and ``long long``. Short
+integers are always two bytes. Signed short integer has a range of -32768 to
+32767 while unsigned of that has a range of 0 to 65535. Plain integers
+i.e. ``int`` have already been discussed. ``long`` are having a
+minimum storage requirement of 4 bytes. Usually it is large enough to represent
+all memory addresses of the system because ``size_t`` is
+``unsigned long``.
+
+``short, long`` and ``long long`` qualifiers decrease/increase the
+range of plain integers. On a 64-bit compiler ``short int`` will be 2 bytes
+while ``long int`` will be 8 bytes, which, will be equal to ``long longint``.
+``unsigned long int`` is chose in such a way that it should be 
+capable of representing all memory addresses because it has a ``typedef`` to
+``size_t`` which is the type of argument received by many functions
+including memory allocation functions.
+
+Characters
+==========
+A ``char`` is 1 byte i.e. 8 bits or ``CHAR_BIT`` bits. So its signed
+version i.e. 2's 
+complement where half the range is negative and half is positive will have
+value from -128 to 127. Well that is not exactly opposite because we have only
+one zero for positive and negative numbers. If it would have been 1's
+complement then range would have been from -127 to 127 but since computers
+follow 2's complement the specification clearly mentions that range should be
+from \\(-2^7\\) to \\(2^7 - 1\\). Note that chars are fundamentally integral types and
+ASCII symbols are first 128 numbers or in other words they are 7-bit numbers.
+
+So a character '0' is internally 48 in decimal which is its integral or
+internally it is handled as a sequence of binary numbers representing
+``0x30`` in hexadecimal. These integral values for characters are known as
+ASCII value. A full table of ASCII values is given in the appendix A.
+
+A simple program which takes input for few characters and then prints them on
+console along with their ascii values is given below:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     char c = 0;
+     char c1 = 0, c2 = 0;
+
+     printf("Enter a character on your keyboard and then press ENTER:\n");
+     scanf("%c", &c);
+     printf("The character entered is %c and its ASCII value is %d.\n", c, c);
+     // Their remains '\n' in the stdin stream which needs to be cleared.
+     getchar();
+     printf("Enter a pair of characters on your keyboard and then press \
+             ENTER:\n");
+     scanf("%c%c", &c1, &c2);
+     printf("The characters entered are %c and %c and their ASCII \
+             values are %d and %d respectively.\n", c1, c2, c1, c2);
+
+     short int si = 0;
+
+     si = c1 + c2;
+
+     printf("The sum of c1 and c2 as integers is %hd.\n", si);
+
+     return 0;
+   }
+
+A sample run may have following output:
+
+.. code-block:: text
+
+   Enter a character on your keyboard and then press ENTER:
+   1
+   The character entered is 1 and its ASCII value is 49.
+   Enter a pair of characters on your keyboard and then press ENTER:
+   12
+   The characters entered are 1 and 2 and their ASCII values are 49 and 50
+   respectively.
+   The sum of c1 and c2 as integers is 99.
+
+As you can see from the program that characters are internally stored as
+integers and we can even perform integers which we normally perform on
+numbers like addition as shown. We can perform other operation as subtraction,
+multiplication and division, however, most of the time addition or subtraction
+only makes sense to advance the characters in their class. Multiplication and
+division of characters with other characters or integers does not make sense.
+
+One problem of concern is the extra ``\n`` in the input
+stream. It does not cause trouble with integers but when you want to read
+characters then the ``Enter`` or ``Return`` keys which may be left
+over from the last input will cause trouble. ``\n`` is
+recognized as a character and will be assigned to next variable if it is in
+``stdin``. One of the ways to remove it is to make a call to
+``getchar`` which reads one character from the ``stdin`` stream.
+
+Floating Types
+==============
+Floating point representation is a lot more complicated in computers than it
+is for us human beings. C specification takes floating points description and
+specification from **IEC 60559:1989** which is a standard for floating point
+arithmetic which is same as **IEEE 754**. In C there are three types of floating
+point numbers ``float, double`` and ``long double``. It is described
+in specification in :math:`\S(\text{iso.5.2.4.2.2})`.
+
+A floating-point number is used to represent real-world fractional value which
+is a trade-off between range and accuracy because as I said in fractional
+binary numbers, a decimal fraction cannot represented in binary unless the
+denominator of that number is an integral power of 2. A number is, in general,
+represented approximately to a fixed number of significant digits (*the
+significand*) and scaled using an exponent; numbers are usually binary, octal,
+decimal or hexadecimal. A number that can be represented exactly is of the
+following form:
+
+\\[\text{significand} \times \text{base}^\text{exponent}\\]
+
+For example, \\(1.2345 = \\underbrace{12345}_\\text{significand} \\times
+\\,\\underbrace{10}_\\text{base}\\!\\!\\!\\!\\!\\!^{\\overbrace{-4}^\\text{exponent}}\\)
+
+The term floating point refers to the fact that a number's radix point (decimal
+point, or, more commonly in computers, binary point) can "float"; that is, it
+can be placed anywhere relative to the significant digits of the number.
+
+Representation of Floating-Point Numbers
+----------------------------------------
+Given below are pictorial representations of 32-bit and 64-bit floating point
+numbers:
+
+.. tikz:: 32-bit floating-point numbers
+
+   \foreach \x in {0, ..., 31}
+   \draw (\x*0.4cm, 0) -- +(.4cm, 0) -- +(.4cm, 0.5cm) -- +(0, .5cm) --
+   cycle;
+   \draw (0.2cm, 0.6cm) -- (0.2cm, 1cm);
+   \draw (0.6cm, 0.6cm) -- (0.6cm, 1cm) -- (3.4cm, 1cm) -- (3.4cm, 0.6cm);
+   \draw (3.8cm, 0.6cm) -- (3.8cm, 1cm) -- (12.6cm, 1cm) -- (12.6cm, 0.6cm);
+   \foreach \x in {31, ..., 0}
+   \node at (\x*0.4cm, 0) [xshift=.2cm, yshift=-.3cm, align=center] {\tiny \x};
+   \node at (0.2cm, 1.3cm) [align=center] {sign};
+   \node at (2cm, 1.3cm) [align=center] {exponent(8 bits)};
+   \node at (8.2cm, 1.3cm) [align=center] {fraction(23 bits)};
+
+Similarly in 64-bit floating point numbers we have 1 bit for sign, 11 bits for
+exponent and 52 bits for fractional part. Clearly zero will be represented by
+all sign and exponent bits having value 0 for them.
+
+C also has concept of positive and negative infinities. Sign bit is 0 for
+positive infinity and 1 for negative infinity. Fractional bits are 1 while
+exponent bits are all 1.
+
+Certain operations cause floating point exceptions like division from zero or
+square rooting a negative number. Such exceptions are represented by NANs which
+stands for "not a number". Sign for NaNs is similar i.e. 0 for positive and 1
+for negative. Exponent bits are 1 and fractional part is anything but all 0s
+because that represents positive infinity.
+
+There is also four rounding modes which we will see later.
+
+Now let us see a program to see how we can take input and print the floating
+point numbers.
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     float f = 0.0;
+     double d = 0.0;
+     long double ld = 0.0;
+
+     printf("Enter a float, double and long double separated by space:\n");
+     scanf("%f %lf %Lf", &f, &d, &ld);
+
+     printf("You entered %f %lf %Lf\n", f, d, ld);
+
+     return 0;
+   }
+
+If you run this you might have following output:
+
+.. code-block:: text
+
+   Enter a float, double and long double separated by space:
+   3.4 5.6 7.8
+   You entered 3.400000 5.600000 7.800000
+
+By default these print upto six significant digits but doubles have double
+precision as we have studied. Now that we know basic types let us learn a bit
+about input/output.
+
+Here I am giving the contents of limits.h for you to see limits of
 data types and check for yourself.
 
 .. index::
