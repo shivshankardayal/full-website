@@ -860,7 +860,6 @@ is considered to be true. Here is a program demonstrating that.
 .. code-block:: c
 
   // Boolean Program
-  // Author: Shiv S. Dayal
   // Description: Demo of boolean data typec
  
   #include <stdio.h>
@@ -900,7 +899,6 @@ first part is encountered second will be replaced. Consider this example:
 .. code-block:: c
 
     // Boolean Program
-    // Author: Shiv S. Dayal
     // Description: Demo of boolean data type
 
     #define MAX 7
@@ -1149,7 +1147,6 @@ Hers is a small demo program which explains two functions:
 .. code-block:: c
 
     // Complex Number Program
-    // Author: Shiv S. Dayal
     // Description: Demo of complex data type
 
     #include <stdio.h>
@@ -1211,7 +1208,6 @@ by one unless specifically specified. Consider the following example:
 
 .. code-block:: c
 
-    // Author: Shiv S. Dayal
     // Description: Demo of enum
 
     #include <stdio.h>
@@ -1254,7 +1250,6 @@ Given below is an example:
 .. code-block:: c
 
     // Integer constants
-    // Author: Shiv S. Dayal
     // Description: Demo of integer constants
 
     #include <stdio.h>
@@ -1296,7 +1291,6 @@ example:
 .. code-block:: c
 
     // Floating-point constants
-    // Author: Shiv S. Dayal
     // Description: Demo of floating-point constants
 
     #include <stdio.h>
@@ -1329,7 +1323,6 @@ small program.
 .. code-block:: c
 
     // Character constants
-    // Author: Shiv S. Dayal
     // Description: Demo of character constants
 
     #include <stdio.h>
@@ -1420,7 +1413,6 @@ see it in effect.
 .. code-block:: c
 
     // Bell Program
-    // Author: Shiv S. Dayal
     // Description: Demo of bell escape sequence
 
     #include <stdio.h>
@@ -1445,7 +1437,6 @@ well:
 .. code-block:: c
   
   // Backspace Program
-  // Author: Shiv S. Dayal
   // Description: Demo of backspace escape sequence
  
   #include <stdio.h>
@@ -1482,7 +1473,6 @@ in a beautiful fashion. The program is listed below:
 .. code-block:: c
 
   // Newline and Horizontal tab program Program
-  // Author: Shiv S. Dayal
   // Description: Demo of newline and horizontal tab escape sequence
  
   #include <stdio.h>

@@ -534,7 +534,20 @@ Program Execution
    here you can see that the value of expression ``i%2`` can alter the flow of
    program. The definition of sequence points is given here and possible sequence
    points are discussed later in appendix C.
-3. In the abstract machine, all expressions are evaluated as specified by the
+3. *Sequenced before* is an asymmetric, transitive, pair-wise relation between
+   evaluations executed by a single thread, which induces a partial order among
+   those evaluations. Given any two evaluations *A* and *B*, if *A* is
+   sequenced before *B*, then the execution of *A* shall precede the execution
+   of *B*. (Conversely, if *A* is sequenced before *B*, then *B* is *sequenced
+   after A*.) If *A* is not sequenced before or after *B*, then *A* and *B* are
+   *unsequenced*. Evaluations *A* and *B* are indeterminately sequenced when
+   *A* is sequenced either before or after *B*, but it is unspecified
+   which. [#]_) The presence of a sequence point between the evaluation of
+   expressions *A* and *B* implies that every value computation and 
+   side effect associated with *A* is sequenced before every value computation
+   and side effect associated with *B*. (A summary of the sequence points is
+   given in annex :math:`\S(\text{iso.C}).)
+4. In the abstract machine, all expressions are evaluated as specified by the
    semantics. An actual implementation need not evaluate part of an expression
    if it can deduce that its value is not used and that no needed side effects
    are produced (including any caused by calling a function or accessing a
@@ -546,7 +559,7 @@ Program Execution
    final machine code, but is never executed, is known as *dead code*. Similarly,
    a piece of code, which does not affect output of a program, is known as
    *redundant code*.
-4. When the processing of the abstract machine is interrupted by receipt of a
+5. When the processing of the abstract machine is interrupted by receipt of a
    signal, only the values of objects as of the previous sequence point may be
    relied on. Objects that may be modified between the previous sequence point
    and the next sequence point need not have received their correct values yet.
@@ -554,7 +567,7 @@ Program Execution
    As you may know about modern processors have pipelines so before a signal is
    pipelined more sequence points may be pipelined, however, we cannot rely on
    that.
-5. The least requirements on a conforming implementation are:
+6. The least requirements on a conforming implementation are:
 
    * At sequence points, volatile objects are stable in the sense that previous
      accesses are complete and subsequent accesses have not yet occurred.
@@ -565,34 +578,34 @@ Program Execution
      specified in :ref:`31.3`. The intent of these requirements is that unbuffered
      or line-buffered output appear as soon as possible, to ensure that
      prompting messages actually appear prior to a program waiting for input.
-6. What constitutes an interactive device is implementation-defined.
-7. More stringent correspondences between abstract and actual semantics may be
+7. What constitutes an interactive device is implementation-defined.
+8. More stringent correspondences between abstract and actual semantics may be
    defined by each implementation.
-8. EXAMPLE 1 An implementation might define a one-to-one correspondence between
+9. EXAMPLE 1 An implementation might define a one-to-one correspondence between
    abstract and actual semantics: at every sequence point, the values of the
    actual objects would agree with those specified by the abstract semantics.
    The keyword ``volatile`` would then be redundant.
 
    ``volatile`` can only be redundant if the implementation is able to tell the
    order of evaluation of an expression containing ``volatile`` objects.
-9. Alternatively, an implementation might perform various optimizations within
-   each translation unit, such that the actual semantics would agree with the
-   abstract semantics only when making function calls across translation unit
-   boundaries. In such an implementation, at the time of each function entry
-   and function return where the calling function and the called function are
-   in different translation units, the values of all externally linked objects
-   and of all objects accessible via pointers therein would agree with the abstract
-   semantics. Furthermore, at the time of each such function entry the values
-   of the parameters of the called function and of all objects accessible via
-   pointers therein would agree with the abstract semantics. In this type of
-   implementation, objects referred to by interrupt service routines activated
-   by the ``signal`` function would require explicit specification of ``volatile``
-   storage, as well as other implementation-defined restrictions.
-
-   Requirement that the code declare all object accessed by interrupt service
-   routines as ``volatile`` is difficult to achieve in practice because such
-   routines can be invoked in many ways.
-10. EXAMPLE 2 In executing the fragment
+10. Alternatively, an implementation might perform various optimizations within
+    each translation unit, such that the actual semantics would agree with the
+    abstract semantics only when making function calls across translation unit
+    boundaries. In such an implementation, at the time of each function entry
+    and function return where the calling function and the called function are
+    in different translation units, the values of all externally linked objects
+    and of all objects accessible via pointers therein would agree with the abstract
+    semantics. Furthermore, at the time of each such function entry the values
+    of the parameters of the called function and of all objects accessible via
+    pointers therein would agree with the abstract semantics. In this type of
+    implementation, objects referred to by interrupt service routines activated
+    by the ``signal`` function would require explicit specification of ``volatile``
+    storage, as well as other implementation-defined restrictions.
+    
+    Requirement that the code declare all object accessed by interrupt service
+    routines as ``volatile`` is difficult to achieve in practice because such
+    routines can be invoked in many ways.
+11. EXAMPLE 2 In executing the fragment
 
     .. code-block:: c
 
@@ -605,7 +618,7 @@ Program Execution
     sum. Provided the addition of two ``chars`` can be done without overflow, or
     with overflow wrapping silently to produce the correct result, the actual
     execution need only produce the same result, possibly omitting the promotions.
-11. EXAMPLE 3 Similarly, in the fragment
+12. EXAMPLE 3 Similarly, in the fragment
 
     .. code-block:: c
 
@@ -618,7 +631,7 @@ Program Execution
     implementation can ascertain that the result would be the same as if it were
     executed using double-precision arithmetic (for example, if ``d`` were replaced
     by the constant ``2.0``, which has type ``double``).
-12. EXAMPLE 4 Implementations employing wide registers have to take care to honor
+13. EXAMPLE 4 Implementations employing wide registers have to take care to honor
     appropriate semantics. Values are independent of whether they are represented
     in a register or in memory. For example, an implicit spilling of a register is
     not permitted to alter the value. Also, an explicit store and load is required
@@ -634,7 +647,7 @@ Program Execution
 
     the values assigned to ``d1`` and ``d2`` are required to have been converted
     to ``float``.
-13. EXAMPLE 5 Rearrangement for floating-point expressions is often restricted
+14. EXAMPLE 5 Rearrangement for floating-point expressions is often restricted
     because of limitations in precision as well as range. The implementation
     cannot generally apply the mathematical associative rules for addition or
     multiplication, nor the distributive rule, because of roundoff error, even
@@ -651,7 +664,7 @@ Program Execution
       z = (x - y) + y; // not equivalent to z = x;
       z = x + x * y;   // not equivalent to z = x * (1.0 + y);
       y = x / 5.0;     // not equivalent to y = x * 0.2;
-14. EXAMPLE 6 To illustrate the grouping behavior of expressions, in the following fragment
+15. EXAMPLE 6 To illustrate the grouping behavior of expressions, in the following fragment
 
     .. code-block:: c
 
@@ -683,7 +696,7 @@ Program Execution
     some value and where positive and negative overflows cancel, the above expression
     statement can be rewritten by the implementation in any of the above ways because the
     same result will occur.
-15. EXAMPLE 7 The grouping of an expression does not completely determine its evaluation.
+16. EXAMPLE 7 The grouping of an expression does not completely determine its evaluation.
     In the following fragment
 
     .. code-block:: c
@@ -702,7 +715,7 @@ Program Execution
     point and the next sequence point (the ;), and the call to ``getchar`` can occur
     at any point prior to the need of its returned value.
 
-16. EXAMPLE 7 The grouping of an expression does not completely determine its
+17. EXAMPLE 7 The grouping of an expression does not completely determine its
     evaluation. In the following fragment
 
     .. code-block:: c
@@ -727,6 +740,10 @@ Program Execution
   details. The floating-point environment library <fenv.h> provides a
   programming facility for indicating when these side effects matter, freeing
   the implementations in other cases.
+
+.. [#] The executions of unsequenced evaluations can
+       interleave. Indeterminately sequenced evaluations cannot interleave, but
+       can be executed in any order.
 
 **Forward references:** expressions (:ref:`4.5`), type qualifiers (:ref:`4.7.3`),
 statements (:ref:`4.8`), the signal function (:ref:`26.1.1`), files (:ref:`31.3`).
@@ -1076,6 +1093,8 @@ both character sets, the following shall hold:
 
 * The basic character set shall be present and each character shall be encoded as a
   single byte.
+* The presence, meaning, and representation of any additional members is locale-
+  specific.
 * A multibyte character set may have a *state-dependent encoding*, wherein each
   sequence of multibyte characters begins in an *initial shift state* and enters other
   locale-specific *shift states* when specific multibyte characters are encountered in the

@@ -45,8 +45,8 @@ pngmath_dvipng='/usr/bin/dvipng'
 master_doc = 'index'
 
 # General information about the project.
-project = u'C'
-copyright = u'2012-2014, Shiv S. Dayal'
+project = u'C Programming'
+copyright = u'2012-2015, Shiv S. Dayal'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

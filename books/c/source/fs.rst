@@ -542,9 +542,15 @@ Terms, Definitions and Symbols
     program just like being the lowest common denominator.
 
 .. index::
+   single: memory location
+
+18. memory location: Either an object of scalar type, or a maximal sequence of
+    adjacent bit-fields all having nonzero width.
+
+.. index::
    single: objects    
 
-18. object: region of data storage in the execution environment, the contents of
+19. object: region of data storage in the execution environment, the contents of
     which can represent values. When referenced, an object may be interpreted as
     having a particular type.
 
@@ -556,7 +562,7 @@ Terms, Definitions and Symbols
 .. index::
    single: parameter
 
-19. parameter: Also known as formal parameter or formal argument (deprecated).
+20. parameter: Also known as formal parameter or formal argument (deprecated).
     Object declared as part of a function declaration or definition that
     acquires a value on entry to the function, or an identifier from the
     comma-separated list bounded by the parentheses immediately following the
@@ -574,9 +580,15 @@ Terms, Definitions and Symbols
 .. index::
    single: recommended practice
 
-20. recommended practice: Specification that is strongly recommended as being in
+21. recommended practice: Specification that is strongly recommended as being in
     keeping with the intent of the standard, but that may be impractical for
     some implementations.
+
+.. index::
+   single: runtime-constraint
+
+22. runtime-constraint: Requirement on a program when calling a library
+    function.
 
 .. index::
    single: value
@@ -621,9 +633,22 @@ Terms, Definitions and Symbols
 
     As we have seen in last example the value of the variable will be unspecified
     value.
-25. :math:`\lceil x\rceil`: ceiling of x: the least integer greater than or
+
+.. index::
+   single: trap representation
+
+25. trap representation: An object representation that need not represent a
+    value of the object type.
+
+26. perform a trap: Interrupt execution of the program such that no further
+    operations are performed.
+
+    NOTE In this International Standard, when the word "trap" is not
+    immediately followed by "representation", this is the intended usage.
+
+27. :math:`\lceil x\rceil`: ceiling of x: the least integer greater than or
     equal to x.
-26. :math:`\lfloor x\rfloor`: floor of x: the greatest integer less than or
+28. :math:`\lfloor x\rfloor`: floor of x: the greatest integer less than or
     equal to x.
 
 

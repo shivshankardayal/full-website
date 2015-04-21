@@ -38,10 +38,9 @@ third argument to the ``setvbuf`` function;
 
 which expands to an integer constant expression that is the size of the buffer used by the ``setbuf`` function;
 
-.. index:: EOF macro, FOPEN_MAX macro, FILENAME_MAX macro
-
-
   | ``EOF``
+
+.. index:: EOF macro, FOPEN_MAX macro, FILENAME_MAX macro
 
 which expands to an integer constant expression, with type int and a negative value, that
 is returned by several functions to indicate end-of-file, that is, no more input from a
@@ -675,6 +674,9 @@ actions associated with each specifier. [#]_
 
 .. index:: printf function
 
+.. _31.6.1:
+
+
 The ``fprintf`` function
 ------------------------
 **Synopsis**
@@ -1000,6 +1002,8 @@ the first of which is denoted here by a and the second by an uppercase letter.
        the case of fixed-point conversion by the source value as well.
 
 .. index:: fscanf function
+
+.. _31.6.2:
 
 The ``fscanf`` function
 -----------------------

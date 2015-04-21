@@ -1,5 +1,5 @@
 .. meta::
-  :description: C Programming with C99
+  :description: C Programming
   :keywords: Free C Book, C Programming, C99 Programming, C99 Specification, C Programming Language,
              for loop, do loop, do-while loop, if statement, if-else statement, switch statement, data types,
              identifiers, linkage, auto, static, extern, const
@@ -167,7 +167,8 @@ identifier designates two different entities in the same name space, the scopes
 might overlap. If so, the scope of one entity (the *inner scope*) will be a
 strict subset of the scope of the other entity (the *outer scope*). Within the
 inner scope, the identifier designates the entity declared in the inner scope;
-the entity declared in the outer scope is *hidden* (and not visible) within the inner scope.
+the entity declared in the outer scope is *hidden* (and not visible) within the
+inner scope.
 
 For example, consider the following program:
 
@@ -242,6 +243,10 @@ For example, consider the following program:
 
     return 0;
   }
+
+As a special case, a type name (which is not a declaration of an identifier) is
+considered to have a scope that begins just after the place within the type
+name where the omitted identifier would appear were it not omitted.
 
 **Forward references:** declarations (:ref:`4.7`), function calls (:ref:`4.5.2.2`),
 function definitions (:ref:`4.9.1`), identifiers (:ref:`4.4.2`), name spaces of
@@ -524,10 +529,23 @@ Note that even though 4 has been printed for \*p that is because stack has not
 been touched. Make some function calls between brace and ``printf`` and most
 probably 4 will be overwritten.
 
-An object whose identifier is declared with external or internal linkage, or
-with the storage-class specifier ``static`` has *static storage duration*. Its
-lifetime is the entire execution of the program and its stored value is
-initialized only once, prior to program startup.
+An object whose identifier is declared without the storage-class specifier
+``_Thread_local``, and either with external or internal linkage or with the
+storage-class specifier ``static``, has *static storage duration*. Its lifetime
+is the entire execution of the program and its stored value is initialized only
+once, prior to program startup.
+
+An object whose identifier is declared with the storage-class specifier
+``_Thread_local`` has *thread storage duration*. Its lifetime is the entire
+execution of the thread for which it is created, and its stored value is
+initialized when the thread is started. There is a distinct object per thread,
+and use of the declared name in an expression refers to the object associated
+with the thread evaluating the expression. The result of attempting to
+indirectly access an object with thread storage duration from a thread other
+than the one with which the object is associated is implementation-defined.
+
+Such static values like explicit ``static`` variables or global variables go in
+data segments and exist in program binary after compilation and linking is done.
 
 .. code-block:: c
 
@@ -556,7 +574,10 @@ and the output is::
   2
 
 An object whose identifier is declared with no linkage and without the
-storage-class specifier ``static`` has *automatic storage duration*.
+storage-class specifier ``static`` has *automatic storage duration*, as do some
+compound literals. The result of attempting to indirectly access an object with
+automatic storage duration from a thread other than the one with which the
+object is associated is implementation-defined.
 
 .. code-block:: c
 
@@ -631,6 +652,15 @@ the scope of the declaration. [#]_ If the scope is entered recursively, a new
 instance of the object is created each time. The initial value of the object is
 indeterminate.
 
+A non-lvalue expression with structure or union type, where the structure or
+union contains a member with array type (including, recursively, members of all
+contained structures and unions) refers to an object with automatic storage
+duration and *temporary lifetime*. [#]_ Its lifetime begins when the expression
+is evaluated and its initial value is the value of the expression. Its lifetime
+ends when the evaluation of the containing full expression or full declarator
+ends. Any attempt to modify an object with temporary lifetime results in
+undefined behavior.
+
 **Forward references:** statements (:ref:`4.8`), function calls (:ref:`4.5.2.2`),
 declarators (:ref:`4.7.5`), array declarators (:ref:`4.7.5.2`), initialization
 (:ref:`4.7.8`).
@@ -639,10 +669,12 @@ declarators (:ref:`4.7.5`), array declarators (:ref:`4.7.5.2`), initialization
   constructed at possibly different times will compare equal. The address may be
   different during two different executions of the same program.
 .. [#] In the case of a volatile object, the last store need not be explicit in 
-  the program.
+  the program. 
 .. [#] Leaving the innermost block containing the declaration, or jumping to a
   point in that block or an embedded block prior to the declaration, leaves the 
   scope of the declaration.
+.. [#] The address of such an object is taken implicitly when an array member
+       is accessed.
 
 .. index::
    single: types
@@ -655,9 +687,10 @@ The meaning of a value stored in an object or returned by a function is
 determined by the *type* of the expression used to access it. (An identifier
 declared to be an object is the simplest such expression; the type is specified
 in the declaration of the identifier.) Types are partitioned into *object types*
-(types that fully describe objects), *function types* (types that describe
-functions), and *incomplete types* (types that describe objects but lack
-information needed to determine their sizes).
+(types that fully describe objects) and *function types* (types that describe
+functions). At various points within a translation unit an object type may be
+*incomplete* (lacking sufficient information to determine the size of objects of
+that type) or *complete* (having sufficient information). [#]_
 
 An object declared as type ``_Bool`` is large enough to store the values 0 and
 1.
@@ -847,6 +880,9 @@ incomplete types, as follows:
   pointer type derived from the referenced type *T* is sometimes called "pointer
   to *T*". The construction of a pointer type from a referenced type is called
   "pointer type derivation".
+* An *atomic type* describes the type designated by the construct ``_Atomic`` (
+  type-name ). (Atomic types are a conditional feature that implementations
+  need not support; see :math:`\S(\text{6.10.8.3.})
 
 These methods of constructing derived types can be applied recursively.
 What this mean is you can have structures of structrues of structures and so on.
@@ -877,6 +913,9 @@ defining content later in the same scope.
   {  
     return 0;
   }
+
+A type has *known constant size* if the type is not incomplete and is not a
+variable length array type.
 
 Array, function, and pointer types are collectively called *derived declarator
 types*. A *declarator type derivation* from a type *T* is the construction of a
@@ -924,6 +963,15 @@ that belong to the same type category and have the same representation and
 alignment requirements. [#]_ A derived type is not qualified by the qualifiers
 (if any) of the type from which it is derived.
 
+Further, there is the ``_Atomic`` qualifier. The presence of the ``_Atomic``
+qualifier designates an atomic type. The size, representation, and alignment of
+an atomic type need not be the same as those of the corresponding unqualified
+type. Therefore, this Standard explicitly uses the phrase "atomic, qualified
+or unqualified type" whenever the atomic version of a type is permitted along
+with the other qualified versions of a type. The phrase "qualified or
+unqualified type", without specific mention of atomic, does not include the
+atomic types.
+
 A pointer to ``void`` shall have the same representation and alignment
 requirements as a pointer to a character type. [17]_ Similarly, pointers to
 qualified or unqualified versions of compatible types shall have the same
@@ -933,6 +981,8 @@ pointers to union types shall have the same representation and alignment
 requirements as each other. Pointers to other types need not have the same
 representation or alignment requirements.
 
+.. [#] A type may be incomplete or complete throughout an entire translation
+   unit, or it may change states at different points within a translation unit.
 .. [#] Implementation-defined keywords shall have the form of an identifier
   reserved for any use as described in 7.1.3.
 .. [#] Therefore, any statement in this Standard about signed integer types also
@@ -1051,11 +1101,6 @@ the object by an lvalue expression that does not have character type, the
 behavior is undefined. [#]_ Such a representation is called a *trap
 representation*.
 
-There are two places where trap representation has been talked about in the
-specification. First is parity bits on numeric types which are visible to
-software. This is given in footnote 44 of n1124.pdf at page no. 38. Second is
-negative zeros in non-twos-complement architecture, given on page 39.
-
 When a value is stored in an object of structure or union type, including in a
 member object, the bytes of the object representation that correspond to any
 padding bytes take unspecified values. [#]_ The value of a structure or union
@@ -1074,6 +1119,9 @@ representation, which object representation is used shall not affect the value
 of the result. [#]_ Where a value is stored in an object using a type that has
 more than one object representation for that value, it is unspecified which
 representation is used, but a trap representation shall not be generated.
+
+Loads and stores of objects with atomic types are done with
+``memory_order_seq_cst`` semantics.
 
 For example, ``char`` is integral type. Therefore all operations of integers
 can be done on characters.
@@ -1218,9 +1266,54 @@ a prior declaration of that identifier is visible, [#]_ if the prior declaration
 specifies internal or external linkage, the type of the identifier at the later
 declaration becomes the composite type.
 
-.. [#] Tw o types need not be identical to be compatible.
+.. [#] Two types need not be identical to be compatible.
 .. [#] As specified in :ref:`4.2.1`, the later declaration might hide the prior
 	declaration.
+
+.. index::
+   single: alignment of objects
+
+Alignment of Objects
+====================
+Complete object types have alignment requirements which place restrictions on
+the addresses at which objects of that type may be allocated. An alignment is
+an implementation-defined integer value representing the number of bytes
+between successive addresses at which a given object can be allocated. An
+object type imposes an alignment requirement on every object of that type:
+stricter alignment can be requested using the ``_Alignas`` keyword.
+
+A *fundamental alignment* is represented by an alignment less than or equal to
+the greatest alignment supported by the implementation in all contexts, which
+is equal to ``_Alignof (max_align_t)``.
+
+An *extended alignment* is represented by an alignment greater than ``_Alignof
+(max_align_t)``. It is implementation-defined whether any extended alignments
+are supported and the contexts in which they are supported. A type having an
+extended alignment requirement is an *over-aligned* type. [#]_
+
+Alignments are represented as values of the type ``size_t``. Valid alignments
+include only those values returned by an ``_Alignof`` expression for
+fundamental types, plus an additional implementation-defined set of values,
+which may be empty. Every valid alignment value shall be a nonnegative integral
+power of two.
+
+Alignments have an order from *weaker* to *stronger* or *stricter*
+alignments. Stricter alignments have larger alignment values. An address that
+satisfies an alignment requirement also satisfies any weaker valid alignment
+requirement.
+
+The alignment requirement of a complete type can be queried using an
+``_Alignof`` expression. The types ``char, signed char`` and ``unsigned char``
+shall have the weakest alignment requirement.
+
+Comparing alignments is meaningful and provides the obvious results:
+
+* Two alignments are equal when their numeric values are equal.
+* Two alignments are different when their numeric values are not equal.
+* When an alignment is larger than another it represents a stricter alignment.
+
+.. [#] Every over-aligned type is, or contains, a structure or union type with
+   a member to which an extended alignment has been applied.
 
 .. index::
    single: conversions
@@ -1468,7 +1561,9 @@ Other Operands
 
 Lvalues, Arrays and Function Designators
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-An *lvalue* is an expression with an object type or an incomplete type other than``void``; [#]_ if an lvalue does not designate an object when it is evaluated,
+An *lvalue* is an expression with an object type or an incomplete type other
+than ``void``; [#]_ if an lvalue does not designate an object when it is
+evaluated, 
 the behavior is undefined. When an object is said to have a particular type, the
 type is specified by the lvalue used to designate the object. A *modifiable
 lvalue* is an lvalue that does not have array type, does not have an incomplete
@@ -1476,22 +1571,30 @@ type, does not have a const-qualified type, and if it is a structure or union,
 does not have any member (including, recursively, any member or element of
 all contained aggregates or unions) with a const-qualified type.
 
-Except when it is the operand of the ``sizeof`` operator, the unary & operator,
-the ++ operator, the -- operator, or the left operand of the . operator or an
+Except when it is the operand of the ``sizeof`` operator, the ``_Alignof``
+operator, the unary ``&`` operator, the ``++`` operator, the ``--`` operator,
+or the left operand of the . operator or an 
 assignment operator, an lvalue that does not have array type is converted to the
-value stored in the designated object (and is no longer an lvalue). If the lvalue
+value stored in the designated object (and is no longer an lvalue), this is
+called *lvalue conversion*. If the lvalue
 has qualified type, the value has the unqualified version of the type of the
 lvalue; otherwise, the value has the type of the lvalue. If the lvalue has an
 incomplete type and does not have array type, the behavior is undefined.
+If the lvalue designates an object of automatic storage duration that could
+have been  declared with the ``register`` storage class (never had its address
+taken), and that object is uninitialized (not declared with an initializer and
+no assignment to it has been performed prior to use), the behavior is undefined.
 
-Except when it is the operand of the sizeof operator or the unary & operator, or
+Except when it is the operand of the sizeof operator, the ``_Alignof`` operator
+or the unary ``&`` operator, or 
 is a string literal used to initialize an array, an expression that has type
 "array of type" is converted to an expression with type "pointer to type" that
 points to the initial element of the array object and is not an lvalue. If the
 array object has register storage class, the behavior is undefined.
 
 A *function designator* is an expression that has function type. Except when it
-is the operand of the ``sizeof`` operator [#]_ or the unary & operator, a function
+is the operand of the ``sizeof`` operator, the _Alignof operator [#]_ or the
+unary & operator, a function 
 designator with type "function returning type" is converted to an expression that
 has type "pointer to function returning type".
 
@@ -1541,19 +1644,20 @@ union members (:ref:`4.5.2.3`).
 	example, if ``E`` is a unary expression that is a pointer to an object, ``\*E``
 	is an lvalue that designates the object to which ``E`` points.
 
-.. [#] Because this conversion does not occur, the operand of the sizeof operator
-	remains a function designator and violates the constraint in 4.5.3.4.
+.. [#] Because this conversion does not occur, the operand of the ``sizeof`` or
+       ``_Alignof`` operator remains a function designator and violates the
+       constraint in :ref:`4.5.3.4`.
 
 .. index::
    single: void
 
 void
 ^^^^
-The (nonexistent) value of a *void* expression (an expression that has type void)
-shall not be used in any way, and implicit or explicit conversions (except to
-``void``) shall not be applied to such an expression. If an expression of any
-other type is evaluated as a void expression, its value or designator is
-discarded. (A void expression is evaluated for its side effects.)
+The (nonexistent) value of a *void expression* (an expression that has type
+``void``) shall not be used in any way, and implicit or explicit conversions
+(except to ``void``) shall not be applied to such an expression. If an
+expression of any other type is evaluated as a void expression, its value or
+designator is discarded. (A void expression is evaluated for its side effects.)
 
 .. index::
    single: pointer
@@ -2270,7 +2374,7 @@ EXAMPLE
 
 Expressions
 ===========
-An expression is a sequence of operators and operands that specifies computation of a
+An *expression* is a sequence of operators and operands that specifies computation of a
 value, or that designates an object or a function, or that generates side effects, or that
 performs a combination thereof.
 
@@ -2283,11 +2387,11 @@ later (for the function-call ``(), &&, ||, ?:`` and comma operators), the order 
 of subexpressions and the order in which side effects take place are both unspecified.
 
 Some operators (the unary operator ``~``, and the binary operators ``<<, >>, &, ^`` and ``|``,
-collectively described as bitwise operators) are required to have operands that have
+collectively described as *bitwise operators*) are required to have operands that have
 integer type. These operators yield values that depend on the internal representations of
 integers, and have implementation-defined and undefined aspects for signed types.
 
-If an exceptional condition occurs during the evaluation of an expression (that is, if the
+If an *exceptional condition* occurs during the evaluation of an expression (that is, if the
 result is not mathematically defined or not in the range of representable values for its
 type), the behavior is undefined.
 

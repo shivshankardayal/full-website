@@ -87,7 +87,7 @@ sequence in memory. A conceptual diagram is given below for first three elements
 of above array. Here 1 means first element.
 
 .. index::
-   single: array memry diagram
+   single: array memory diagram
 
 .. image:: _static/arraydia.png
    :align: center

@@ -13,9 +13,70 @@ operators of C and know where to use which one as it may decide performance,
 readability, simplicity of your code. Whenever you see array and pointer in
 following sections just plow through them. All will be clear soon.
 
+Before we can proceed to discuss operators and expressions I will explain
+scope, linkage and storage durations which can be applied to
+variables. These are given in specification starting in
+:math:`\S(\text{iso.6.2.1})` and ending at :math:`\S(\text{iso.6.2.4})`.
+
+
+Scope of an Identifier
+======================
+Till now we have seen plain variables and their identifiers. However, there are
+other identifiers as well which will be discussed later. For now we will
+consider scope of plain variables. In general there are three kinds of
+scope. Global scope, function scope and block scope. Variables declared outside
+any function have global scope and they persist throughout the lifetime of the
+program. Variables declared inside functions at outermost level have function
+scope and they live as long as function remains active. A block in C is marked
+by braces({ and }). Function bodies are also marked by this. Here I mean
+blocks inside a function. Starting from C99 you can declare variables anywhere
+inside a function and this block variables which have less lifetime than
+functions are possible. We will see more of these when we see more code. Note
+that identifiers can be reused in different scopes. For example, a loop index
+integer identifier is repeated many times but every time it is a new
+variable(We will see loops soon). Two identifiers have same scope if and only
+if their scope terminates at the same point.
+
+Linkages of an Identifier
+=========================
+There are three different kinds of linkages. External, internal and
+none. Global variables and functions have external linkage as long as they are
+not static. If they are static then they have internal linkage. By external
+linkage we mean that for a program which consists of multiple source code files
+these functions and variable identifiers can be referred in files other than in
+which they are declared. When functions and global variables are static
+i.e. they have internal linkage they cannot be accessed in other source code
+files.
+
+The following identifiers have no linkage: an identifier declared to be
+anything other than an variable or a function; an identifier declared to be a
+function parameter; a block scope identifier for an object declared without the
+storage-class specifier ``extern``.
+
+Storage Duration of Objects
+===========================
+There are four storage durations. Static, thread, automatic and
+allocated. Here, we will not discuss thread which we will talk about later. A
+static variable which is local to a function of global variable has static
+duration and it lives in data segment in memory and has static storage
+duration. A variable local to a function or block which is not dynamically
+allocated on heap by using either of ``malloc, calloc`` or ``realloc`` has
+automatic storage and has function or block has automatic storage and is
+cleaned up automatically and it lives on stack. Allocated storage duration
+variables can persist as long as they want after allocation on heap by using
+one of ``malloc, calloc`` and ``realloc`` as long as the name is kept
+in scope and a corresponding ``free`` is not called on that name of the
+variable. Now let us discuss operators and expressions.
+
+
 Whenever operators and expressions come in picture you may have a set of mixed
-data then to perform opration data is converted from one type to another. This
-is known as "Usual Arithmetic Conversion", which I am going to tell you next.
+data then to perform oration data is converted from one type to another. This
+has an entire section devoted to it in specification at
+:math:`\S(\text{iso.6.3})`. There are two
+types of conversions. Many operators convert their operands silently which is
+called "implicit conversion" and then we have cast operators
+which we can use to explicitly convert values from one type to another which is
+called "explicit conversion". We will first see implicit conversion.
 
 .. index::
    pair: arithmetic; conversions
@@ -69,8 +130,7 @@ This pattern is called the usual *arithmetic convresions*:
 ============
 Expressions
 ============
-Majority of this comes from specification n1124.pdf. It can be found at
-http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf. An expression is a
+Majority of this comes from specification n1570.pdf. An expression is a
 sequence of operators and operands. This sequence of operators and operands will
 lead to some computation; needless to say, however, it may designate an object
 or a function or it may generate a side effect or a combination. The value
@@ -80,6 +140,8 @@ computation of the result of the operator.
 Consider the following where ``++`` is used as prefix and postfix increment
 unary operator, which should increment the value of operand after evaluating the
 operand:
+
+.. code-block:: text
 
   i = ++i + 1;
 
