@@ -572,7 +572,16 @@ can be implemented by compound types of programming languages such as
 structures in C or classes in C++ or such object-oriented languages.
 A more succinct (and *mathematically close*) definition would be that we can
 think of ADTs as mathematical model with a collection of operations defined
-on that ADT.
+on that ADT. When we define ADT as a mathematical model, we are not concerned
+with time or space efficiency. Time or space complexity are problems of
+implementation not modelling. It is quite possible that a certain ADT cannot be
+implemented on certain hardware or software. But by specifying the mathematical
+and logical attributes of a data type or structure or class, the ADT serves as
+a good starting guideline to programmers at least.
+
+Different books choose different ways to formulate ADT but in this book I will
+focus on implementation using C programming language. Thus we will be dealing
+with more code than abstract concept.
 
 Usually algorithms take form of functions and abstract data types take form
 of classes and structs when written as a program. The reason for this is
