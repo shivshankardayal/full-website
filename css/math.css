@@ -21,3 +21,7 @@ ul.globaltoc {
 ul.example-selector {
     padding-bottom: 40px;
 }
+
+pre {
+    background-color: #fff;
+}

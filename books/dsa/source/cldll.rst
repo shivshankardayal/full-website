@@ -325,4 +325,50 @@ Circular Lists
 ==============
 Circular list is a singly linked list where last node's ``next`` pointer is not
 ``NULL`` but rather it points to head of the list. Let us try to reimplement
-all the functions we had implemented for singly linked list. Therefore
+all the functions we had implemented for singly linked list. The only
+difference is that we will point last nodes next pointer to head. I have said
+it is a singly linked list but a doubly linked list can also have a circular
+representation which we will discuss once we are through with this.
+
+Fundamentally, it should look like following(assume that data contained in each
+node is an integer):
+
+.. tikz:: Circular list representation.
+
+   \draw (0, 0) -- (0, 1) -- (1, 1) -- (1, 0) -- cycle;
+   \draw (2, 0) -- (2, 1) -- (3, 1) -- (3, 0) -- cycle;
+   \draw (4, 0) -- (4, 1) -- (5, 1) -- (5, 0) -- cycle;
+   \draw (6, 0) -- (6, 1) -- (7, 1) -- (7, 0) -- cycle;
+
+   \draw [->, >=stealth] (-1, 0.7) -- (0, 0.7);
+   \draw [->, >=stealth] (1, 0.5) -- (2, 0.5);
+   \draw [->, >=stealth] (3, 0.5) -- (4, 0.5);
+   \draw [->, >=stealth] (5, 0.5) -- (6, 0.5);
+
+   \draw [->, >=stealth] (7, 0.5) -- (7.5, 0.5) -- (7.5, -.5) -- (-.5, -.5) --
+   (-.5, .3) -- (0, .3);
+
+   \draw (-.7, 0.9) node {head};
+   \draw (1.5, 0.8) node {next};
+   \draw (3.5, 0.8) node {next};
+   \draw (5.5, 0.8) node {next};
+   \draw (7.5, 0.8) node {next};
+   \draw (.5, .5) node {1};
+   \draw (2.5, .5) node {2};
+   \draw (4.5, .5) node {3};
+   \draw (6.5, .5) node {4};
+
+Advantages and Applications of Circular Linked Lists
+----------------------------------------------------
+1. Any node can be head i.e. starting point. We can always traverse the entire
+   list using this node. Clearly, we will need to stop when ``next`` pointer of
+   any node becomes points to this node.
+2. Certain problems are solves more easily using circular lists, for example,
+   in the linked list chapter the problem on arbitrary precision integers can
+   be solved much more easily using circular lists. Fibonacci heap is another
+   example where queues are used.
+3. Queues can be implemented using circular lists. We do not need to maintain
+   ``rear`` pointer if we have doubly circular linked list which will allow us
+   to move in both directions.
+4. Real world queues can be simulated using circular linked lists which is
+   obvious from point 2.
