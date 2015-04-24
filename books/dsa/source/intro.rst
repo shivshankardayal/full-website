@@ -117,9 +117,16 @@ algorithm.
 Some algorithms will have flowcharts given for them. For example, given
 below is the flowchart for Euclid's algorithm.
 
-.. image:: data/euclid_fc.png
-	:alt:	Euclid's flowchart.
-	:align: center
+.. tikz:: Euclid's algorithm as a flowchart.
+
+   \node at (0, 0) [rectangle, draw] (A1) {A1. Find remainder.};
+   \node at (5, 0) [rectangle, rounded corners=8pt, draw] (A2) {A2. Is reminder zero?};
+   \node at (10, 0) [rectangle, draw] (A3) {A3. Exchange value.};
+
+   \draw[-latex] (A1.east) -- (A2.west);
+   \draw[-latex] (A2.east) -- (A3.west);
+   \draw[-latex] (A2.south) -- ++(0, -1);
+   \draw[-latex] (A3.north) -- ++(0, .5) -| (A1.north);
 
 Let us see a C99 program which evaluates GCD of two numbers. Given below is
 the sample code.
@@ -432,9 +439,16 @@ induction we have proven the statement.
 
 Therefore we can draw following flowchart for mathematical induction.
 
-.. image:: data/sum_n.png
-	:alt:	Euclid's flowchart.
-	:align: center
+.. tikz:: Flowchart for mathematical induction.
+
+   \node at (0, 0) [rectangle, draw] (A1) {Prove S(1) to be true.};
+   \node at (0, -1.5) [rectangle, draw] (A2) {Prove S(2) to be true.};
+   \node at (0, -3) [rectangle, draw] (A3) {Prove S(k) to be true.};
+   \node at (0, -4.5) [rectangle, draw] (A4) {Prove S(k+1) to be true.};
+
+   \draw[-latex] (A1.south) -- (A2.north);
+   \draw[-latex] (A2.south) -- (A3.north);
+   \draw[-latex] (A3.south) -- (A4.north);
 
 Let us consider another simple example which will further help boost our foundations
 of mathematical induction.

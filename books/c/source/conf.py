@@ -189,14 +189,13 @@ latex_elements = {
 # Additional stuff for the LaTeX preamble.
 'preamble': r"""\setcounter{secnumdepth}{4}
 \usepackage{fancyhdr}
-%\usepackage{lmodern}
 \setcounter{tocdepth}{4}
 \usepackage{fontspec}
 \usepackage{xunicode}
 \usepackage{xltxtra}
-\setmainfont[Mapping=tex-text]{Birka}
-\setsansfont{Myriad}
-\setmonofont{Inconsolata}
+%\setmainfont[Mapping=tex-text]{Birka}
+%\setsansfont{Myriad}
+%\setmonofont{Inconsolata}
 \makeatletter
   \fancypagestyle{normal}{
     \fancyhf{}

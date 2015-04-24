@@ -31,11 +31,26 @@ list because it is simplest to understand and can be used for as a base data
 structure to implement stacks and queues which are going to be coming
 chapters. A singly linked list looks something like given below:
 
-.. figure:: data/sll.png
-   :align: center
-   :alt: An example of a linked list.
+.. tikz:: An example linked list.
+   :libs: calc
 
-   An example linked list.
+   \node at (0, 0) [rectangle, draw] (A1) {10};
+   \node at (2, 0) [rectangle, draw] (A2) {20};
+   \node at (4, 0) [rectangle, draw] (A3) {30};
+   \node at (6, 0) [rectangle, draw] (A4) {40};
+
+   \draw[<-, >=stealth] (A1.west) -- ++(-.5, 0);
+   \draw[->, >=stealth] (A1.east) -- (A2.west);
+   \draw[->, >=stealth] (A2.east) -- (A3.west);
+   \draw[->, >=stealth] (A3.east) -- (A4.west);
+   \draw[->, >=stealth] (A4.east) -- ++(.7, 0);
+
+   \draw (A1.west)+(-1,0) node {head};
+   \draw (A2.west)+(-.7,.2) node {next};
+   \draw (A3.west)+(-.7,.2) node {next};
+   \draw (A4.west)+(-.7,.2) node {next};
+   \draw (A4.east)+(.5,.2) node {next};
+   \draw (A4.east)+(1.5,0) node {NULL};
 
 A linked list's first element is typically known as ``head`` and last element is
 known as ``tail``. All nodes have a pointer which points to next node so that
@@ -324,14 +339,108 @@ Insertion at the Beginning
 --------------------------
 Insertion at beginning is simple. We create a new node. Then we make its ``next``
 pointer to point to current head and then use current head pointer to point to
-this new node. The entire operation is shown graphically below(operations are
-from bottom to top):
+this new node. The entire operation is shown graphically below:
 
-.. figure:: data/sll_insertion_beg.gif
-   :align: center
-   :alt: Insertion at beginning a singly linked list.
+.. tikz::
 
-   Insertion at beginning a singly linked list.
+   \node at(0, 0) [rectangle, draw] (A) {G};
+   \draw[->, >=stealth] (A.east) -- ++(1, 0);
+   \draw (A.east)+(.5, .2) node (B) {next};
+   \draw (A.north)+(0, 1) node (C) {temp};
+   \draw[->, >=stealth] (C.south) -- (A.north);
+   \draw (A.west)+(-4,0) node(D) {*head};
+   \draw[->, >=stealth] (D.east) -- ++(1, 0);
+   \draw (D.east)+(1.8, 0) node (E) {$NULL$};
+
+   \node [label={[align=center, yshift=-2.5cm]Initially $*head$ is $NULL$. We allocate a
+   $temp$ node.\\$temp->data$ contains garbage and $temp->next$ points to
+   unknown location.\\Let us say we want to insert 10.}] (F) {};
+
+.. tikz::
+
+   \node at(0, 0) [rectangle, draw] (A) {G};
+   \draw[->, >=stealth] (A.east) -- ++(1, 0);
+   \draw (A.east)+(.5, .2) node (B) {next};
+   \draw (A.north)+(0, 1) node (C) {temp};
+   \draw[->, >=stealth] (C.south) -- (A.north);
+   \draw (A.west)+(-4,0) node(D) {*head};
+   \draw[->, >=stealth] (D.east) -- ++(1, 0);
+   \draw (D.east)+(1.8, 0) node (E) {$NULL$};
+   \draw (A.east)+(1.8, 0) node {$NULL$};
+
+   \node [label={[align=center, yshift=-1.5cm]$temp->next$ is assigned $*head$
+   pointer which is $NULL$.}] (F) {};
+
+.. tikz::
+
+   \node at(0, 0) [rectangle, draw] (A) {10};
+   \draw[->, >=stealth] (A.east) -- ++(1, 0);
+   \draw (A.east)+(.5, .2) node (B) {next};
+   \draw (A.north)+(0, 1) node (C) {temp};
+   \draw[->, >=stealth] (C.south) -- (A.north);
+   \draw[<-, >=stealth] (A.west) -- ++(-1, 0);
+   \draw (A.west)+(-1.6, 0) node (E) {*head};
+   \draw (A.east)+(1.8, 0) node {$NULL$};
+
+   \node [label={[align=center, yshift=-1.5cm]$*head$ is assigned $temp$ and 10
+   is copied.}] (F) {};
+
+.. tikz::
+
+   \node at(-2, 0) [rectangle, draw] (A) {G};
+   \draw[->, >=stealth] (A.east) -- ++(1, 0);
+   \draw (A.east)+(.5, .2) node (B) {next};
+   \draw (A.north)+(0, 1) node (C) {temp};
+   \draw[->, >=stealth] (C.south) -- (A.north);
+
+   \node at(3, 0) [rectangle, draw] (D) {10};
+   \draw[<-, >=stealth] (D.west) -- ++(-1,0);
+   \draw (D.west)+(-1.6, 0) node (E) {*head};
+   \draw (D.east)+(1.8, 0) node {$NULL$};
+   \draw[->, >=stealth] (D.east) -- ++(1,0);
+
+   \node [label={[align=center, yshift=-1.5cm] To insert another node 20 before
+   10 we allocate $temp$.}] (F) {};
+
+.. tikz::
+   :libs: calc
+
+   \node at(-2, 0) [rectangle, draw] (A) {G};
+   \draw (A.east)+(.5, .2) node (B) {next};
+   \draw (A.north)+(0, 1) node (C) {temp};
+   \draw[->, >=stealth] (C.south) -- (A.north);
+
+   \node at ($(A.east)+(1.5, 0)$) [rectangle, draw] (D) {10};
+   \draw[->, >=stealth] (A.east) -- (D.west);
+   \draw (D.north)+(0, 1) node (E) {*head};
+   \draw[->, >=stealth] (E.south) -- (D.north);
+
+   \draw (D.east)+(1.8, 0) node {$NULL$};
+   \draw[->, >=stealth] (D.east) -- ++(1,0);
+
+   \node [label={[align=center, yshift=-1.5cm]$temp->next$ is assigned
+   $*head.$}] (F) {};
+
+.. tikz:: Insertion at beginning a singly linked list.
+   :libs: calc
+
+   \node at(-2, 0) [rectangle, draw] (A) {20};
+   \draw (A.east)+(.5, .2) node (B) {next};
+   \draw (A.north)+(0, 1) node (C) {temp};
+   \draw[->, >=stealth] (C.south) -- (A.north);
+
+   \node at ($(A.east)+(1.5, 0)$) [rectangle, draw] (D) {10};
+   \draw[->, >=stealth] (A.east) -- (D.west);
+   \node at ($(A.west)+(-1.5, 0)$) (E) {*head};
+   \draw[->, >=stealth] (E.east) -- (A.west);
+   
+   \draw (D.east)+(1.8, 0) node {$NULL$};
+   \draw[->, >=stealth] (D.east) -- ++(1,0);
+
+   \node [label={[align=center, yshift=-1.5cm]$*head$ is assigned $temp$ and
+   data 20 is copied.}] (F) {};
+
+
 
 Insertion at Some Position
 --------------------------
@@ -496,106 +605,6 @@ Questions on Singly Linked Lists
     \le n`. Write a program which creates a linked list for level n by
     constantly extending it.
 
-Solutions
-=========
-1. and 2. will be implemented in next chapter.
-
-3. You can add these two lines to linked list implementation as prototype for
-   implementation for iterative and recursive version.
-
-   .. code-block:: c
-
-      void reverse(ll**);
-      void rreverse(ll**, ll*);
-
-   The most important thing is to be able to think how we are going to do
-   the implementation. Let us first take the case of non-recursive part. We
-   can visualize the linked list as nodes attached with pointers. So all we
-   have to do is make ``head`` point to the last node. We reverse the pointer.
-   Now since the pointer is broken we need to maintain two pointers the current
-   node and the next node, hence, we will need two extra pointers. Now as
-   ``next`` pointer is broken we can keep assigning current pointer to it as
-   shown in the diagram below:
-
-   The equivalent code for the above can be written as:
-
-   .. code-block:: c
-
-        void reverse(ll** head)
-        {
-            ll *next = NULL;
-            ll *current = NULL;
-
-	    if(!(*head))
-	        return;
-
-            while((*head)->next != NULL)
-            {
-                next = (*head)->next;
-                (*head)->next = current;
-                current = *head;
-                (*head) = next;
-            }
-            (*head)->next = current;
-        }
-
-   Notice that when we reach the end of node the pointer ``next`` will be in
-   broken state and therefore from last pointer whose next would be pointing
-   ``NULL`` must be made to point to current node as shown. The entire process
-   is shown in the diagram below(we start with a list having three nodes 10, 20
-   and 30. Again see the image form bottom to top.):
-
-   .. figure:: data/sll_iterative_reverse.gif
-      :align: center
-      :alt: Iterative reversal of a singly linked list.
-
-      Iterative reversal of a singly linked list.
-
-   For recursive version first we need a condition to iterate to last node.
-   Then if ``next`` of ``next`` is not ``NULL`` then we make that point to
-   currrent node. The current node's next is useless for us and we make it
-   ``NULL`` because the first node which will be last after reversal will have
-   next pointing to ``NULL`` which is good for us. Now if ``next`` is NULL then
-   we are at last node and let us make this ``head``. The entire operation can
-   be visualized below:
-
-   The code which does recursive iteration is given below:
-
-   .. code-block:: c
-
-        void rreverse(ll** head, ll* current)
-        {
-
-	    if(!(*head))
-	        return;
-
-            if(current->next != NULL)
-            {
-                rreverse(head, current->next);
-            }
-  
-            if(current->next != NULL)
-            {
-                current->next->next = current;
-                current->next = NULL;
-            }
-            else
-                *head=current;
-        }
-
-   The call to rreverse must ensure that ``current`` is sent with the same value
-   as head. Also, remember to update the menu and switch cases. As you can see
-   if your linked list with less than two elements then code will not change
-   anything. Let us see what happens if we call this function ``rreverse`` like
-   ``rreverse(&head, head);``. For this example consider a list having four
-   elements 10, 20 30 and 40.
-
-   .. figure:: data/sll_rreverse.gif
-      :align: center
-      :alt: Recursive reversal of a singly linked list.
-
-      Resursive reversal of a singly linked list.
-   
 
 Doubly Linked Lists
 ===================
