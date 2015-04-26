@@ -421,7 +421,7 @@ this new node. The entire operation is shown graphically below:
    \node [label={[align=center, yshift=-1.5cm]$temp->next$ is assigned
    $*head.$}] (F) {};
 
-.. tikz:: Insertion at beginning a singly linked list.
+.. tikz:: Insertion at beginning of a singly linked list.
    :libs: calc
 
    \node at(-2, 0) [rectangle, draw] (A) {20};
@@ -462,11 +462,99 @@ to ``q->next`` which is 20.
 Now all is left is to move ``q->next`` and point it to ``temp`` and then copy
 the data and break the loop.
 
-.. figure:: data/sll_insertion_bet.gif
-   :align: center
-   :alt: Insertion in between a singly linked list.
+.. tikz::
+   :libs: calc
 
-   Insertion at beginning a singly linked list.
+   \node at (0, 0) [rectangle, draw] (A) {G};
+   \draw [->, >=stealth](A.east) -- ++(1, 0);
+   \node at ($(A.east) + (.5, .2)$) (B) {next};
+   \draw [<-, >=stealth](A.west) -- ++(-1, 0);
+   \node at ($(A.west) - (1.5, 0)$) (C) {temp};
+
+   \node at (0, -1) [rectangle, draw] (D) {20};
+   \node at (2, -1) [rectangle, draw] (E) {30};
+   \node at (-2, -1) [rectangle, draw] (F) {10};
+
+   \draw [->, >=stealth] (D.east) -- (E.west);
+   \draw [->, >=stealth] (F.east) -- (D.west);
+   \draw [->, >=stealth] (E.east) -- ++(1, 0);
+   \draw [<-, >=stealth](F.south west) -- ++(-1, 0);
+   \draw [<-, >=stealth](F.north west) -- ++(-1, 0);
+
+   \node at ($(D.east) + (.5, .2)$) (G) {next};
+   \node at ($(E.east) + (.5, .2)$) (H) {next};
+   \node at ($(F.east) + (.5, .2)$) (I) {next};
+
+   \node at ($(F.north west) - (1.5, 0)$) (J) {q};
+   \node at ($(F.south west) - (1.5, 0)$) (k) {head};
+
+   \node [label={[align=center, yshift=-3.5cm]We have 3 nodes. Let us say we
+   want to insert 15 after 10.\\We allocate $temp$ which contains garbage and
+   points somewhere.\\$q$ is initialized with $*head$.}] (F) {};
+
+.. tikz::
+   :libs: calc
+
+   \node at (0, 0) [rectangle, draw] (A) {G};
+   \draw [<-, >=stealth](A.west) -- ++(-1, 0);
+   \node at ($(A.west) - (1.5, 0)$) (C) {temp};
+
+   \node at (0, -1) [rectangle, draw] (D) {20};
+   \node at (2, -1) [rectangle, draw] (E) {30};
+   \node at (-2, -1) [rectangle, draw] (F) {10};
+
+   \draw [->, >=stealth] (D.east) -- (E.west);
+   \draw [->, >=stealth] (F.east) -- (D.west);
+   \draw [->, >=stealth] (E.east) -- ++(1, 0);
+   \draw [<-, >=stealth](F.south west) -- ++(-1, 0);
+   \draw [<-, >=stealth](F.north west) -- ++(-1, 0);
+
+   \draw [->, >=stealth](A.south) -- (D.north);
+   \node at ($(A.south)!.5!(D.north) + (.5, 0)$) (B) {next};
+
+   \node at ($(D.east) + (.5, .2)$) (G) {next};
+   \node at ($(E.east) + (.5, .2)$) (H) {next};
+   \node at ($(F.east) + (.5, .2)$) (I) {next};
+
+   \node at ($(F.north west) - (1.5, 0)$) (J) {q};
+   \node at ($(F.south west) - (1.5, 0)$) (k) {head};
+
+   \node [label={[align=center, yshift=-3cm]$q->next$ is not $NULL$. $j$
+   increases to 1. Position is 1.\\$temp->next$ is assigned $q->next$.}] (F)
+   {};
+
+.. tikz:: Insertion in between singly linked list.
+   :libs: calc
+
+   \node at (0, 0) [rectangle, draw] (A) {15};
+   \draw [<-, >=stealth](A.west) -- ++(-1, 0);
+   \node at ($(A.west) - (1.5, 0)$) (C) {temp};
+
+   \node at (0, -1) [rectangle, draw] (D) {20};
+   \node at (2, -1) [rectangle, draw] (E) {30};
+   \node at (-2, -1) [rectangle, draw] (F) {10};
+
+   \draw [->, >=stealth] (D.east) -- (E.west);
+   \draw [->, >=stealth] (F.north east) -- (A.south west);
+   \draw [->, >=stealth] (E.east) -- ++(1, 0);
+   \draw [<-, >=stealth](F.south west) -- ++(-1, 0);
+   \draw [<-, >=stealth](F.north west) -- ++(-1, 0);
+
+   \draw [->, >=stealth](A.south) -- (D.north);
+   \node at ($(A.south)!.5!(D.north) + (.5, 0)$) (B) {next};
+
+   \node at ($(D.east) + (.5, .2)$) (G) {next};
+   \node at ($(E.east) + (.5, .2)$) (H) {next};
+   \node at ($(F.east) + (.5, .2)$) (I) {next};
+
+   \node at ($(F.north west) - (1.5, 0)$) (J) {q};
+   \node at ($(F.south west) - (1.5, 0)$) (k) {head};
+
+   \node [label={[align=center, yshift=-3cm]$q->next$ is assigned $temp$ and
+   data is copied.\\And we break out of loop.}] (F)
+   {};
+
+
 
 Insertion at the End or Append
 ------------------------------
