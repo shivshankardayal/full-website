@@ -357,16 +357,185 @@ Linked List Solutions
       \node at (2, 0) [rectangle, draw] (B) {30};
       \node at (4, 0) [rectangle, draw] (C) {40};
       \node at (-2, 0) [rectangle, draw] (D) {10};
+      \node at(-2, 1.5) (E) {$current$};
 
       \draw [<-, >=stealth] (D.west) -- ++(-1, 0);
       \draw [->, >=stealth] (C.east) -- ++(1, 0);
       \draw [->, >=stealth] (D.east) -- (A.west);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- (C.west);
+      \draw [->, >=stealth] (E.south) -- (D.north);
 
-   .. figure:: data/sll_rreverse.gif
-      :align: center
-      :alt: Recursive reversal of a singly linked list.
+      \node at ($(C.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(D.west)-(1.7, 0)$) {$*head$};
+      \node at ($(D.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+      \node at ($(C.east)+(.5, .2)$) {next};
 
-      Resursive reversal of a singly linked list.
+      \node [label={[align=center, yshift=-1.8cm]$rreverse$ is called with
+      $\&head$ and $head$.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at (0, 0) [rectangle, draw] (A) {20};
+      \node at (2, 0) [rectangle, draw] (B) {30};
+      \node at (4, 0) [rectangle, draw] (C) {40};
+      \node at (-2, 0) [rectangle, draw] (D) {10};
+      \node at(0, 1.5) (E) {$current$};
+
+      \draw [<-, >=stealth] (D.west) -- ++(-1, 0);
+      \draw [->, >=stealth] (C.east) -- ++(1, 0);
+      \draw [->, >=stealth] (D.east) -- (A.west);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- (C.west);
+      \draw [->, >=stealth] (E.south) -- (A.north);
+
+      \node at ($(C.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(D.west)-(1.7, 0)$) {$*head$};
+      \node at ($(D.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+      \node at ($(C.east)+(.5, .2)$) {next};
+
+      \node [label={[align=center, yshift=-1.1cm]$rreverse$ is called with
+      $current$ moving to next node.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at (0, 0) [rectangle, draw] (A) {20};
+      \node at (2, 0) [rectangle, draw] (B) {30};
+      \node at (4, 0) [rectangle, draw] (C) {40};
+      \node at (-2, 0) [rectangle, draw] (D) {10};
+      \node at(2, 1.5) (E) {$current$};
+
+      \draw [<-, >=stealth] (D.west) -- ++(-1, 0);
+      \draw [->, >=stealth] (C.east) -- ++(1, 0);
+      \draw [->, >=stealth] (D.east) -- (A.west);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- (C.west);
+      \draw [->, >=stealth] (E.south) -- (B.north);
+
+      \node at ($(C.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(D.west)-(1.7, 0)$) {$*head$};
+      \node at ($(D.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+      \node at ($(C.east)+(.5, .2)$) {next};
+
+      \node [label={[align=center, yshift=-1.1cm]$rreverse$ is called with
+      $current$ moving to next node.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at (0, 0) [rectangle, draw] (A) {20};
+      \node at (2, 0) [rectangle, draw] (B) {30};
+      \node at (4, 0) [rectangle, draw] (C) {40};
+      \node at (-2, 0) [rectangle, draw] (D) {10};
+      \node at(4, 1.5) (E) {$current$};
+
+      \draw [<-, >=stealth] (C.north east) -- ++(.5, .5);
+      \draw [->, >=stealth] (C.east) -- ++(1, 0);
+      \draw [->, >=stealth] (D.east) -- (A.west);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- (C.west);
+      \draw [->, >=stealth] (E.south) -- (C.north);
+
+      \node at ($(C.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(C.north east)+(1.1, .7)$) {$*head$};
+      \node at ($(D.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+      \node at ($(C.east)+(.5, .2)$) {next};
+
+      \node [label={[align=center, yshift=-2.3cm]$rreverse$ is called with
+      $current$ moving to next node.\\$current->next$ is $NULL$ so recursion
+      stops.\\$*head$ is assigned $current$. Code falls in else as stack
+      unwinds.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at (0, 0) [rectangle, draw] (A) {20};
+      \node at (2, 0) [rectangle, draw] (B) {30};
+      \node at (4, 0) [rectangle, draw] (C) {40};
+      \node at (-2, 0) [rectangle, draw] (D) {10};
+      \node at(2, 1.5) (E) {$current$};
+
+      \draw [<-, >=stealth] (C.north east) -- ++(.5, .5);
+      \draw [->, >=stealth] (C.east) -- ++(1, 0);
+      \draw [->, >=stealth] (D.east) -- (A.west);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- (C.west);
+      \draw [->, >=stealth] (E.south) -- (B.north);
+
+      \node at ($(C.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(C.north east)+(1.1, .7)$) {$*head$};
+      \node at ($(D.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+      \node at ($(C.east)+(.5, .2)$) {next};
+
+      \node [label={[align=center, yshift=-1.1cm]$rreverse$ returns. $current$
+      is now at previous value.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at (0, 0) [rectangle, draw] (A) {20};
+      \node at (2, 0) [rectangle, draw] (B) {30};
+      \node at (4, 0) [rectangle, draw] (C) {40};
+      \node at (-2, 0) [rectangle, draw] (D) {10};
+      \node at(2, 1.5) (E) {$current$};
+
+      \draw [<-, >=stealth] (C.north east) -- ++(.5, .5);
+      \draw [->, >=stealth] (D.east) -- (A.west);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- ($(B.east)!.5!(C.west)$) -- ++(0, -.5);
+      \draw [->, >=stealth] (E.south) -- (B.north);
+      \draw [->, >=stealth] (C.north west) -- ($(C.north west)+(-.3, +.5)$) --
+      ($(B.north east)+(.3, +.5)$) -- (B.north east);
+
+      \node at ($(C.north east)+(1.1, .7)$) {$*head$};
+      \node at ($(D.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+      \node at ($(C.north west)+(+.3, .5)$) {next};
+
+      \node [label={[align=center, yshift=-2.3cm]Now second $if$ is tested
+      which is $true$.\\$current->next$ is $NULL$. $current->next->next$ is
+      assigned $current$.\\$current->next$ is assigned $NULL$.}] (F) {};
+
+   .. tikz:: Resursive reversal of a singly linked list.
+      :libs: calc
+
+      \node at (0, 0) [rectangle, draw] (A) {20};
+      \node at (2, 0) [rectangle, draw] (B) {30};
+      \node at (4, 0) [rectangle, draw] (C) {40};
+      \node at (-2, 0) [rectangle, draw] (D) {10};
+      \node at(0, 1.5) (E) {$current$};
+
+      \draw [<-, >=stealth] (C.north east) -- ++(.5, .5);
+      \draw [->, >=stealth] (D.east) -- (A.west);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- ($(B.east)!.5!(C.west)$) -- ++(0, -.5);
+      \draw [->, >=stealth] (E.south) -- (A.north);
+      \draw [->, >=stealth] (C.north west) -- ($(C.north west)+(-.3, +.5)$) --
+      ($(B.north east)+(.3, +.5)$) -- (B.north east);
+
+      \node at ($(C.north east)+(1.1, .7)$) {$*head$};
+      \node at ($(D.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+      \node at ($(C.north west)+(+.3, .5)$) {next};
+
+      \node [label={[align=center, yshift=-2.2cm]$rreverse$ returns. $current$
+      returns to previous value.\\The process continues and linked list is
+      reversed.}] (F) {};
+
 
 4. This will be done after bubble sort is discussed.
 5. This will be done after quick sort is discussed.
