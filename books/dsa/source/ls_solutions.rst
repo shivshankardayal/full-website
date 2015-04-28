@@ -66,8 +66,7 @@ Linked List Solutions
       \node at ($(B.east)+(.5, .2)$) {next};
 
       \node [label={[align=center, yshift=-1.3cm]Initially we have three nodes in
-      linked list.}] (F)
-      {};
+      linked list.}] (F) {};
 
    .. tikz::
       :libs: calc
@@ -75,7 +74,7 @@ Linked List Solutions
       \node at(0, 0) [rectangle, draw] (A) {20};
       \node at(2, 0) [rectangle, draw] (B) {30};
       \node at(-2, 0) [rectangle, draw] (C) {10};
-      \node at(0, 1.5) (D) {next};
+      \node at(0, 1.5) (D) {$next$};
 
       \draw [->, >=stealth] (C.east) -- (A.west);
       \draw [->, >=stealth] (A.east) -- (B.west);
@@ -90,14 +89,227 @@ Linked List Solutions
       \node at ($(B.east)+(.5, .2)$) {next};
 
       \node [label={[align=center, yshift=-1.3cm]In the while loop $next$
-      variable points to $(*head)->next$.}] (F)
+      variable points to $(*head)->next$.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at(0, 0) [rectangle, draw] (A) {20};
+      \node at(2, 0) [rectangle, draw] (B) {30};
+      \node at(-2, 0) [rectangle, draw] (C) {10};
+      \node at(0, 1.5) (D) {$next$};
+
+      \draw [->, >=stealth] (C.east) -- ($(A.west)!.5!(C.east)$) --
+      ($(A.west)!.5!(C.east)$) -- ++(0, -.5);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- ++(1, 0);
+      \draw [<-, >=stealth] (C.west) -- ++(-1, 0);
+      \draw [->, >=stealth] (D.south) -- (A.north);
+
+      \node at ($(B.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(C.west)-(1.7, 0)$) {$*head$};
+      \node at ($(C.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+
+      \node at ($(A.west)!.5!(C.east)+(0, -.8)$) {$NULL$};
+
+      \node [label={[align=center, yshift=-1.8cm]$(*head)->next$ is assigned
+      $current$ which is $NULL$.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at(0, 0) [rectangle, draw] (A) {20};
+      \node at(2, 0) [rectangle, draw] (B) {30};
+      \node at(-2, 0) [rectangle, draw] (C) {10};
+      \node at(0, 1.5) (D) {$next$};
+      \node at(-2, 1.5) (E) {$current$};
+
+      \draw [->, >=stealth] (C.east) -- ($(A.west)!.5!(C.east)$) --
+      ($(A.west)!.5!(C.east)$) -- ++(0, -.5);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- ++(1, 0);
+      \draw [<-, >=stealth] (C.west) -- ++(-1, 0);
+      \draw [->, >=stealth] (D.south) -- (A.north);
+      \draw [->, >=stealth] (E.south) -- (C.north);
+
+      \node at ($(B.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(C.west)-(1.7, 0)$) {$*head$};
+      \node at ($(C.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+
+      \node at ($(A.west)!.5!(C.east)+(0, -.8)$) {$NULL$};
+
+      \node [label={[align=center, yshift=-1.8cm]Now $current$ points to
+      $*head$.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at(0, 0) [rectangle, draw] (A) {20};
+      \node at(2, 0) [rectangle, draw] (B) {30};
+      \node at(-2, 0) [rectangle, draw] (C) {10};
+      \node at(0, 1.5) (D) {$next$};
+      \node at(-2, 1.5) (E) {$current$};
+
+      \draw [->, >=stealth] (C.east) -- ($(A.west)!.5!(C.east)$) --
+      ($(A.west)!.5!(C.east)$) -- ++(0, -.5);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- ++(1, 0);
+      \draw [->, >=stealth] (D.south) -- (A.north);
+      \draw [->, >=stealth] (E.south) -- (C.north);
+
+      \node at ($(B.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(A.north west)+(-.8, .7)$) {$*head$};
+      \node at ($(C.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+
+      \node at ($(A.west)!.5!(C.east)+(0, -.8)$) {$NULL$};
+      \draw [<-, >=stealth] (A.north west) -- ++(-.5, +.5);
+
+      \node [label={[align=center, yshift=-1.8cm]$*head$ moves to $next$.}] (F)
       {};
 
-   .. figure:: data/sll_iterative_reverse.gif
-      :align: center
-      :alt: Iterative reversal of a singly linked list.
+   .. tikz::
+      :libs: calc
 
-      Iterative reversal of a singly linked list.
+      \node at(0, 0) [rectangle, draw] (A) {20};
+      \node at(2, 0) [rectangle, draw] (B) {30};
+      \node at(-2, 0) [rectangle, draw] (C) {10};
+      \node at(2, 1.5) (D) {$next$};
+      \node at(-2, 1.5) (E) {$current$};
+
+      \draw [->, >=stealth] (C.east) -- ($(A.west)!.5!(C.east)$) --
+      ($(A.west)!.5!(C.east)$) -- ++(0, -.5);
+      \draw [->, >=stealth] (A.east) -- (B.west);
+      \draw [->, >=stealth] (B.east) -- ++(1, 0);
+      \draw [->, >=stealth] (D.south) -- (B.north);
+      \draw [->, >=stealth] (E.south) -- (C.north);
+
+      \node at ($(B.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(A.north west)+(-.8, .7)$) {$*head$};
+      \node at ($(C.east)+(.5, .2)$) {next};
+      \node at ($(A.east)+(.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+
+      \node at ($(A.west)!.5!(C.east)+(0, -.8)$) {$NULL$};
+      \draw [<-, >=stealth] (A.north west) -- ++(-.5, +.5);
+
+      \node [label={[align=center, yshift=-1.8cm]In the next iteration of loop
+      $next$ moves to $(*head)->next$.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at(0, 0) [rectangle, draw] (A) {20};
+      \node at(2, 0) [rectangle, draw] (B) {30};
+      \node at(-2, 0) [rectangle, draw] (C) {10};
+      \node at(2, 1.5) (D) {$next$};
+      \node at(-2, 1.5) (E) {$current$};
+
+      \draw [->, >=stealth] (C.west) -- ++(-.5, 0) -- ++(0, -.5);
+      \draw [->, >=stealth] (A.west) -- (C.east);
+      \draw [->, >=stealth] (B.east) -- ++(1, 0);
+      \draw [->, >=stealth] (D.south) -- (B.north);
+      \draw [->, >=stealth] (E.south) -- (C.north);
+
+      \node at ($(B.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(A.north west)+(-.8, .7)$) {$*head$};
+      \node at ($(C.west)+(-.5, .2)$) {next};
+      \node at ($(A.west)+(-.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+
+      \node at ($(C.west)+(-.5, -.8)$) {$NULL$};
+      \draw [<-, >=stealth] (A.north west) -- ++(-.5, +.5);
+
+      \node [label={[align=center, yshift=-1.8cm]$(*head)->next$ is assigned
+      $current$.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at(0, 0) [rectangle, draw] (A) {20};
+      \node at(2, 0) [rectangle, draw] (B) {30};
+      \node at(-2, 0) [rectangle, draw] (C) {10};
+      \node at(2, 1.5) (D) {$next$};
+      \node at(0, 1.5) (E) {$current$};
+
+      \draw [->, >=stealth] (C.west) -- ++(-.5, 0) -- ++(0, -.5);
+      \draw [->, >=stealth] (A.west) -- (C.east);
+      \draw [->, >=stealth] (B.east) -- ++(1, 0);
+      \draw [->, >=stealth] (D.south) -- (B.north);
+      \draw [->, >=stealth] (E.south) -- (A.north);
+
+      \node at ($(B.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(A.north west)+(-.8, .7)$) {$*head$};
+      \node at ($(C.west)+(-.5, .2)$) {next};
+      \node at ($(A.west)+(-.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+
+      \node at ($(C.west)+(-.5, -.8)$) {$NULL$};
+      \draw [<-, >=stealth] (A.north west) -- ++(-.5, +.5);
+
+      \node [label={[align=center, yshift=-1.8cm]$current$ is assigned
+      $*head$.}] (F) {};
+
+   .. tikz::
+      :libs: calc
+
+      \node at(0, 0) [rectangle, draw] (A) {20};
+      \node at(2, 0) [rectangle, draw] (B) {30};
+      \node at(-2, 0) [rectangle, draw] (C) {10};
+      \node at(2, 1.5) (D) {$next$};
+      \node at(0, 1.5) (E) {$current$};
+
+      \draw [->, >=stealth] (C.west) -- ++(-.5, 0) -- ++(0, -.5);
+      \draw [->, >=stealth] (A.west) -- (C.east);
+      \draw [->, >=stealth] (B.east) -- ++(1, 0);
+      \draw [->, >=stealth] (D.south) -- (B.north);
+      \draw [->, >=stealth] (E.south) -- (A.north);
+
+      \node at ($(B.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(B.north west)+(-.8, .7)$) {$*head$};
+      \node at ($(C.west)+(-.5, .2)$) {next};
+      \node at ($(A.west)+(-.5, .2)$) {next};
+      \node at ($(B.east)+(.5, .2)$) {next};
+
+      \node at ($(C.west)+(-.5, -.8)$) {$NULL$};
+      \draw [<-, >=stealth] (B.north west) -- ++(-.5, +.5);
+
+      \node [label={[align=center, yshift=-1.8cm]$*head$ is assigned
+      $next$.}] (F) {};
+
+   .. tikz:: Iterative reversal of a singly linked list.
+      :libs: calc
+
+      \node at(0, 0) [rectangle, draw] (A) {20};
+      \node at(2, 0) [rectangle, draw] (B) {30};
+      \node at(-2, 0) [rectangle, draw] (C) {10};
+      \node at(2, 1.5) (D) {$next$};
+      \node at(0, 1.5) (E) {$current$};
+
+      \draw [->, >=stealth] (C.west) -- ++(-.5, 0) -- ++(0, -.5);
+      \draw [->, >=stealth] (A.west) -- (C.east);
+      \draw [->, >=stealth] (B.west) -- (A.east);
+      \draw [->, >=stealth] (D.south) -- (B.north);
+      \draw [->, >=stealth] (E.south) -- (A.north);
+
+      \node at ($(B.east)+(1.7, 0)$) {$NULL$};
+      \node at ($(B.north west)+(-.8, .7)$) {$*head$};
+      \node at ($(C.west)+(-.5, .2)$) {next};
+      \node at ($(A.west)+(-.5, .2)$) {next};
+      \node at ($(B.west)+(-.5, .2)$) {next};
+
+      \node at ($(C.west)+(-.5, -.8)$) {$NULL$};
+      \draw [<-, >=stealth] (B.north west) -- ++(-.5, +.5);
+
+      \node [label={[align=center, yshift=-2.3cm]$(*head)->netx$ is NULL.
+      Loop terminates.\\$(*head)->next = current$.}] (F) {};
+
+      
 
    For recursive version first we need a condition to iterate to last node.
    Then if ``next`` of ``next`` is not ``NULL`` then we make that point to
@@ -137,6 +349,18 @@ Linked List Solutions
    anything. Let us see what happens if we call this function ``rreverse`` like
    ``rreverse(&head, head);``. For this example consider a list having four
    elements 10, 20 30 and 40.
+
+   .. tikz::
+      :libs: calc
+
+      \node at (0, 0) [rectangle, draw] (A) {20};
+      \node at (2, 0) [rectangle, draw] (B) {30};
+      \node at (4, 0) [rectangle, draw] (C) {40};
+      \node at (-2, 0) [rectangle, draw] (D) {10};
+
+      \draw [<-, >=stealth] (D.west) -- ++(-1, 0);
+      \draw [->, >=stealth] (C.east) -- ++(1, 0);
+      \draw [->, >=stealth] (D.east) -- (A.west);
 
    .. figure:: data/sll_rreverse.gif
       :align: center
