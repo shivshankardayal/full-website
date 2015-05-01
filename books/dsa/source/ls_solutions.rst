@@ -561,4 +561,41 @@ Linked List Solutions
       increasing by :math:`O(n)`.
 
    3. There are two popular algorithms for cycle detection in any
-      sequence. First is Floyd's algorithm and second is Brent's algorithm.
+      sequence. First is Floyd's algorithm and second is Brent's algorithm. We
+      will study these two in their full glory later. For now, we will
+      concentrate on Floyd's algorithm in context of finding loop in a linked
+      list. We will not concern ourselves with rigorous mathematical proof of
+      this method.
+
+      Floyd's algorithm is based on a simple technique that we need two
+      iterators(read pointers) over our set(linked list). One moves two
+      elements while the other moves one element at a time and eventually they
+      will meet i.e. pointers will become equal and that will prove that our
+      set(linked list) has a loop. The implementation is very simple and in
+      context with our linked list it is implemented as a function which you
+      can execute in conjunction to find if there is a loop in question.
+
+      .. code-block:: c
+
+         int floyd_detect_loop_algorithm(ll *head)
+         {
+           ll *slow = head, *fast = head;
+ 
+           while(slow && fast && fast->next )
+           {
+             slow = slow->next;
+             fast  = fast->next->next;
+             if (slow == fast)
+             {
+               printf("Loop detected.\n");
+               return 1;
+             }
+           }
+
+           return 0;
+         }
+ 
+      Let us say :math:`\lambda` is the length of loop and :math:`\mu` is the
+      index of first element where loop starts then the time complexity of this
+      algorithm is :math:`O(\lambda + \mu)` and as you can see we need storage
+      only for two pointers the space complexity would be :math:`\Theta(1)`.
