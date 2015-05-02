@@ -363,7 +363,7 @@ Advantages and Applications of Circular Linked Lists
 1. Any node can be head i.e. starting point. We can always traverse the entire
    list using this node. Clearly, we will need to stop when ``next`` pointer of
    any node becomes points to this node.
-2. Certain problems are solves more easily using circular lists, for example,
+2. Certain problems are solved more easily using circular lists, for example,
    in the linked list chapter the problem on arbitrary precision integers can
    be solved much more easily using circular lists. Fibonacci heap is another
    example where queues are used.
