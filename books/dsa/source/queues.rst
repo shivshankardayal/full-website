@@ -300,3 +300,16 @@ For all these problems use linked list version of queues.
    fashion; put them in queue and process them in  fair manner. Once id
    generates ``UINT_MAX`` let id start from 0. Generate a mean of 4 tasks in 3
    seconds on average.
+5. Implement a stack of queues, stack of stacks, queue of stacks and queue of
+   queues. Write functions appropriate to implement the operations on these
+   data structures.
+6. A **deque** is a queue in which insertion and deletion can be done from
+   either ends. Implement a deque using an array as circular buffer and linked
+   list. Implement four functions ``insrtlft, insrtrght, rmvlft`` and
+   ``rmvrght``.
+7. An **input-restricted deque** is a deque in which output can be done from
+   one end. Implement one such deque in which insertion can only be done from
+   right side using a linked list and array. Similarly, implement
+   **output-restricted deque** in which deletion can be done from only one
+   end. Implement one such deque in which deletion can be done from left
+   end. Show that such deques can be used either as stack or as queue.
