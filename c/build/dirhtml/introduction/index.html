@@ -1,0 +1,910 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="C Programming" name="description" />
+<meta content="Free C Book, C Programming, C11 Programming, C11 Specification" name="keywords" />
+<script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17487464-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Introduction &mdash; C Programming  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="C Programming  documentation" href="../"/>
+        <link rel="next" title="2. Basics of C" href="../basics/"/>
+        <link rel="prev" title="C Programming Contents" href="../"/>
+<link rel="stylesheet" href="../../css/math.css" type="text/css" />
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../" class="icon icon-home"> C Programming
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#organization">1.1. Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-c">1.2. Why C?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#history">1.3. History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparison-with-other-languages">1.4. Comparison with Other Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-learn-programming">1.5. How to Learn Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-a-computer-program">1.6. What is a Computer Program?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attributes-of-a-program">1.7. Attributes of a Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tools-of-trade">1.8. Tools of Trade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bits-and-bytes">1.9. Bits and Bytes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-on-number-system">1.10. Notes on Number System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#binary-number-system">1.10.1. Binary Number System</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#conversion-of-unsigned-decimals-and-binaries">1.10.1.1. Conversion of Unsigned Decimals and Binaries</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#s-complement-and-1-s-complement">1.10.2. 2&#8217;s Complement and 1&#8217;s Complement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-and-executing">1.11. Compiling and Executing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strings/">9. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fileio/">10. File Input/Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">11. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">12. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">13. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">14. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">15. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">16. Diagnostics <code class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">17. Complex arithmetic <code class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">18. Character Handling <code class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">19. Errors <code class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">20. Floating-point environment <code class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">21. Characteristics of floating types <code class="docutils literal"><span class="pre">&lt;float.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">22. Format conversion of integer types <code class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">23. Alternative spellings <code class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">24. Sizes of integer types <code class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">25. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">26. Mathematics <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">27. Nonlocal jumps <code class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">28. Signal handling <code class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">29. Variable arguments <code class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">30. Boolean type and values <code class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">31. Common definitions <code class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">32. Integer types <code class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">33. Input/output <code class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">34. General utilities <code class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">35. String handling <code class="docutils literal"><span class="pre">&lt;string.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">36. Type-generic math <code class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">37. Date and time <code class="docutils literal"><span class="pre">&lt;time.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">38. Extended multibyte and wide character utilities <code class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">39. Wide character classification and mapping utilities <code class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">40. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">41. License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../">C Programming</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Docs</a> &raquo;</li>
+      
+    <li>1. Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/introduction.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>So it begins! The journey to a destination which will never be reached. The
+journey to perfection! The journey to perfect programs. I have read somewhere
+that a perfect program is one from which nothing can be deleted. As you know,
+the fun is not in the destination but in the journey. The process of learning
+is fun and if you share the same enthusiasm then I will share this fun with
+you.</p>
+<p>Of all popular mainstream languages C, and Lisp
+are two oldest but we cannot really say that Lisp is really popular. It has a
+niche area and it is there for that. So let me redefine my statement. Of all
+general-purpose popular programming language C is the oldest. So what makes C
+so special that it is still out there. Well, C and Unix were born almost
+together in early 1970s. Then Unix was ported in C and the notion that
+operating systems can be only written in assembly language, because it has to
+do time critical things, was destroyed. After that Unix became very popular.
+Then when C++ was not yet there Windows was written in C and more and more
+programs were written in C. It might have been the case that Microsoft and
+Apple would have written their OS in C++ had it been there. So, essentially
+what happened that there is a lot of code base which is there in C. Also, C++&#8217;s
+backward compatibility is one of the reasons why C++ is so popular. When C
+was invented there was no structured programming language and code was mostly
+written in assembly. With C it gave the power of assembly and benefits of
+structured language like code reuse, modularity, and portability among
+others. Because of these reasons C became immensely popular and is still
+popular.</p>
+<p>C is simple, small, succinct. It may be dirty but is quick. It may have its
+quirks but it is a success. C is really so simple yet so deceptive. It will
+take one years of programming to really thoroughly understand it.
+Note that this book will make heavy use of C11 specification. It will contain
+almost a copy of n1570.pdf which I have. You can download a copy of this draft
+version from <a class="reference external" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf">open-std.org</a>.</p>
+<div class="section" id="organization">
+<h2>1.1. Organization<a class="headerlink" href="#organization" title="Permalink to this headline">¶</a></h2>
+<p>I have will classify chapters in two categories. One is compiler/language
+specific and second specification specific. Chapter no. 11, 12 and 13 are very
+tightly related to specification while rest of the book is related to
+compiler and programming. Chapters which treat standard library of C include
+information from both specification and compiler. It is suggested that the
+reader reads chapter 11, 12 and 13 after finishing rest of the book.</p>
+<p>Since this is an online book changes will be frequent unless I mark is
+reasonably complete. Thus, I request you to revisit from time to time to see if
+new content has been added.</p>
+</div>
+<div class="section" id="why-c">
+<h2>1.2. Why C?<a class="headerlink" href="#why-c" title="Permalink to this headline">¶</a></h2>
+<p>Because it is the most common denominator. Any language be it C++, Java, Perl,
+Python etc have got bindings in C. Whenever you are willing to extend these
+languages you need to know C. Also, if by any chance you are going towards
+system programming you need to C. C is everywhere. There is no escape from
+learning it; it does not matter whether you like it or not.</p>
+<p>There is one more important point worth noting here is that C++ is far more
+complex compared to C. Also, the runtime calculations of C++ make it slightly
+slower than C. The library of C is much smaller than C. Therefore wherever
+there is a memory constraint or extreme high performance is needed C is
+preferred. The simple syntax of C means its code is very verbose for programmer
+in the sense that if you read code then you can very easily see what
+instructions the code is going to translate into.</p>
+<p>It is very easy to write interfaces to other languages because other languages
+expose there objects in terms of C structures not the other way around. The
+reason for this is huge popularity of C and large code base perhaps.</p>
+<p>One more important feature is portability. Note that if you want your program
+to have high degree of portability then you should not use C99 features but
+rather ANSI C because ANSI C compilers are available on most platforms. Even
+though Java claims to be portable or other interpreted languages they are
+limited by the fact that the interpreters or VMs(JVM in case of Java) is not
+available on all the platforms. Therefore, C is the MOST portable language. :-)</p>
+</div>
+<div class="section" id="history">
+<span id="index-0"></span><h2>1.3. History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h2>
+<p>C was formally delivered to this world in 1972 and started by Dennis
+MacAlistair Ritchie in 1968. What happened was there was a project for
+development of a text processor and GE-645 was bought by AT&amp;T Bell Labs. At
+that time Ken Thompson had developed a game called &#8220;Space Travel&#8221;. Then they
+had another machine PDP-11. Before that they had PDP-7. Now all the time the
+code for &#8220;Space Travel&#8221; had to be rewritten and also the Unix had to be
+ported. So when C was invented it was used to write Unix code in C. And then
+&#8220;Space Travel&#8221;. I do not know what was the real motivation the language, the OS
+or the game. But such is the story. Also, I have not studied much in this area
+about the exact events. In 1972 C was formally announced. C takes its features
+from BCPL a language by Martin Richard and B by Ken Thompson. AT&amp;T Bells labs
+gave Unix and a C compiler to many universities at a normal fees and it grew
+with leaps and bounds from there and became a ubiquitous language. For many
+years &#8220;The C Programming Language&#8221; served as a reference of C. Later it was
+standardized by ANSI and then by ISO standards.</p>
+</div>
+<div class="section" id="comparison-with-other-languages">
+<h2>1.4. Comparison with Other Languages<a class="headerlink" href="#comparison-with-other-languages" title="Permalink to this headline">¶</a></h2>
+<p>C is a structured, statically typed, somewhat low-level, high-performance
+compiled language. It does not support object-oriented programming like most
+modern programming including C++, Java, Perl, Python, Ruby etc. However, that
+does not mean you cannot do object-oriented programming in C. It is just that C
+does not have support at the language level and it is painful to do so. C is low
+level because it allows you to handle memory contents directly. You have
+something called void which is raw representation of memory content. C also does
+not support functional or generic programming but again it is possible to do so
+with painful hacks. One of the coveted features is C programs deliver very high
+performance if written correctly as it does not have reunite penalties of
+virtual functions of OOP (object-oriented programming) languages.</p>
+</div>
+<div class="section" id="how-to-learn-programming">
+<h2>1.5. How to Learn Programming<a class="headerlink" href="#how-to-learn-programming" title="Permalink to this headline">¶</a></h2>
+<p>Programming is exactly like Mathematics. As in Mathematics you need to read
+theory, understand solved problems and then solve more and more problems by
+yourself. If you cannot solve ask your teacher. Similarly, in programming you
+need to read about language, try examples given, read code written by others
+and then develop your own code. If you get stuck there are umpteen number of
+tutorials, mailing lists and groups to help you. I recommend comp.lang.c user
+group for C programming. Its interface is at
+<a class="reference external" href="http://groups.google.com/group/comp.lang.c/">http://groups.google.com/group/comp.lang.c/</a>. You should join it and participate
+there. <a class="reference external" href="http://www.stackoverflow.com/">http://www.stackoverflow.com/</a> is also a very good forum to ask questions
+about programming in general.</p>
+</div>
+<div class="section" id="what-is-a-computer-program">
+<h2>1.6. What is a Computer Program?<a class="headerlink" href="#what-is-a-computer-program" title="Permalink to this headline">¶</a></h2>
+<p>Since this book is written for even beginner please allow me to start from
+beginning. As the reader may know a computer consists of many components and one
+of the most or rather most important part is processor often named as CPU
+(central processing unit). The logic gates in CPUs are formed and instructions
+like ADD (addition), SUB (subtraction), MUL (multiplication), DIV (division) etc
+are implemented in hardware of CPU. When we write a program say C program the
+instructions given in our program is translated to a format which operating
+system can understand. In our case that is GNU/Linux this executable format is
+known as ELF (executable and linkable format). For the curious you can read
+<a class="reference external" href="http://en.wikipedia.org/wiki/Executable_and_Linkable_Format">http://en.wikipedia.org/wiki/Executable_and_Linkable_Format</a> and there are lots
+of specification for different CPUs. Then operating system interprets these
+files and ask CPU to perform action. So a C program does not directly talk to
+processor but it rather talks to operating system or rather kernel of the
+operating system and in turn the operating system or kernel provides services
+to your program. There is a typical life cycle in development of a program. It
+has been given as a flowchart below.</p>
+<a class="reference internal image-reference" href="../_images/flowchart.png"><img alt="Flowchart of Preparation of a Program" class="align-center" src="../_images/flowchart.png" /></a>
+</div>
+<div class="section" id="attributes-of-a-program">
+<span id="index-1"></span><h2>1.7. Attributes of a Program<a class="headerlink" href="#attributes-of-a-program" title="Permalink to this headline">¶</a></h2>
+<p>You may be wondering so that is very easy. You just learn programming in C and
+start hacking on keyboard to produce software. Well, that is partially true but
+a program has several desired attributes which you must consider. Any program
+cannot be considered a good program unless it satisfies following requirements
+or possess following attributes (Note: These are generic attributes and not
+specific to C programming language):</p>
+<p>1. <strong>Correctness:</strong> Correctness means that a program satisfies its requirement
+specification. It means that for a specified input the specified output should
+be produced. This particular attribute is of most significance. It does not
+matter whether other attributes are present or not but this one is a must. If
+a program behavior is not correct then it is of no use.</p>
+<p>2. <strong>Efficiency:</strong> Efficiency is second to correctness only. Say you are
+developing a text editor and you take 5 seconds to load a 10KB text file then by
+no means you can persuade a user to use you text editor. A program/software must
+be as efficient as possible. Sometimes it clashes with other attributes and also
+depend on the problem domain that how strict are the requirements.</p>
+<p>3. <strong>Security:</strong> A very highly desirable feature in programs which deal with
+more than one computer and also for desktop applications. It is very bad if
+someone can take advantage of buffer overflow, stack overflow, integer overflow
+etc. in your program and you must guard against these at all times. Note that to
+provide security you must put extra checks which will go against efficiency.</p>
+<p>4. <strong>Robustness:</strong> Sometimes users will not give correct inputs. For example
+they may enter a character when an integer is asked for or they can give input
+beyond range. In such cases you must handle the erroneous input. This is just
+one example. Sometimes your memory allocation may fail. The rule is program
+defensively. All such input validations and checks on memory do take a toll on
+our second attribute but that does not mean that we can neglect it.</p>
+<p>5. <strong>Maintainability:</strong> Even a one line program has to be maintained if it is
+worth it! Typically the life of a program far exceeds the development time. In
+almost all the cases the original programmer is not maintainer. Because of these
+reasons you must strive for maintainability. You should follow some coding
+standards like I highly recommend <a class="reference external" href="http://www.gnu.org/prep/standards/">http://www.gnu.org/prep/standards/</a>. Clear
+documentation is one of the prerequisites of maintainability.</p>
+<p>6. <strong>Extensibility:</strong> Let us take our example of text editor and say our editor
+is complete. Now someone else would like to provide a plugin which will enable
+syntax highlighting and project management for this editor. So, in order to do
+so you can choose a plugin-based extensible architecture or you can allow them
+to extend the editor using scripting languages like Guile, Python, Lua etc.This
+features allows user to collaborate and make your program better. Remember the
+rule is the more the merrier here.</p>
+<p>7. <strong>Portability:</strong> It is an elusive and painful goal. Let us say we write our
+text editor GUI using something like Xlib directly then we will have to port
+the entire GUI for other non X-based OSes. So we can choose some cross-platform
+GUI libraries like GTK+, Qt, WxWidgets etc. Even then when system calls come in
+your software you can do not much but either write wrappers and do conditional
+compilation.</p>
+</div>
+<div class="section" id="tools-of-trade">
+<span id="index-2"></span><h2>1.8. Tools of Trade<a class="headerlink" href="#tools-of-trade" title="Permalink to this headline">¶</a></h2>
+<p>I am going to use GCC as compiler, Emacs as my editor with CEDET, ECB and
+Flymake. For debugging I will use GDB interface in Emacs itself. For dynamic
+memory checking, heap
+corruption, cache corruption etc I am going to show you how to use valgrind.
+For profiling gprof and for code coverage gcov. Note that you can use gcc for
+compiling programs. Most of the systems come with gcc. For compiling programs I
+will
+use GNU Make though in the beginning I will show you how to compile on command
+line. Let us begin with Emacs configuration file <code class="docutils literal"><span class="pre">.emacs</span></code>:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="nv">custom-set-variables</span>
+<span class="c1">;; custom-set-variables was added by Custom.</span>
+<span class="c1">;; If you edit it by hand, you could mess it up, so be careful.</span>
+<span class="c1">;; Your init file should contain only one such instance.</span>
+<span class="c1">;; If there is more than one, they won&#39;t work right.</span>
+<span class="o">&#39;</span><span class="p">(</span><span class="nv">column-number-mode</span> <span class="no">t</span><span class="p">)</span>
+<span class="o">&#39;</span><span class="p">(</span><span class="nv">cua-mode</span> <span class="no">t</span> <span class="no">nil</span> <span class="p">(</span><span class="nv">cua-base</span><span class="p">))</span>
+<span class="o">&#39;</span><span class="p">(</span><span class="nv">ecb-layout-name</span> <span class="s">&quot;leftright2&quot;</span><span class="p">)</span>
+<span class="o">&#39;</span><span class="p">(</span><span class="nv">ecb-options-version</span> <span class="s">&quot;2.40&quot;</span><span class="p">)</span>
+<span class="o">&#39;</span><span class="p">(</span><span class="nv">ecb-windows-height</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="o">&#39;</span><span class="p">(</span><span class="nv">ecb-windows-width</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="o">&#39;</span><span class="p">(</span><span class="nv">make-backup-files</span> <span class="no">nil</span><span class="p">)</span>
+<span class="o">&#39;</span><span class="p">(</span><span class="nv">scroll-bar-mode</span> <span class="p">(</span><span class="k">quote</span> <span class="nv">right</span><span class="p">)))</span>
+<span class="p">(</span><span class="nv">custom-set-faces</span>
+<span class="c1">;; custom-set-faces was added by Custom.</span>
+<span class="c1">;; If you edit it by hand, you could mess it up, so be careful.</span>
+<span class="c1">;; Your init file should contain only one such instance.</span>
+<span class="c1">;; If there is more than one, they won&#39;t work right.</span>
+<span class="o">&#39;</span><span class="p">(</span><span class="nv">default</span> <span class="p">((</span><span class="no">t</span> <span class="p">(</span><span class="ss">:inherit</span> <span class="no">nil</span> <span class="ss">:stipple</span> <span class="no">nil</span> <span class="ss">:background</span> <span class="s">&quot;#ffffff&quot;</span> <span class="ss">:foreground</span>
+<span class="s">&quot;#221f1e&quot;</span> <span class="ss">:inverse-video</span> <span class="no">nil</span> <span class="ss">:box</span> <span class="no">nil</span> <span class="ss">:strike-through</span> <span class="no">nil</span> <span class="ss">:overline</span> <span class="no">nil</span>
+<span class="ss">:underline</span> <span class="no">nil</span> <span class="ss">:slant</span> <span class="nv">normal</span> <span class="ss">:weight</span> <span class="nv">normal</span> <span class="ss">:height</span> <span class="mi">98</span> <span class="ss">:width</span>
+<span class="nv">semi-condensed</span> <span class="ss">:foundry</span> <span class="s">&quot;misc&quot;</span> <span class="ss">:family</span> <span class="s">&quot;fixed&quot;</span><span class="p">)))))</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;cedet</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;semantic/analyze</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">provide</span> <span class="ss">&#39;semantic-analyze</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">provide</span> <span class="ss">&#39;semantic-ctxt</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">provide</span> <span class="ss">&#39;semanticdb</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">provide</span> <span class="ss">&#39;semanticdb-find</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">provide</span> <span class="ss">&#39;semanticdb-mode</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">provide</span> <span class="ss">&#39;semantic-load</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">load</span> <span class="s">&quot;~/.emacs.d/flymake.el&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&quot;~/.emacs.d/ecb-snap&quot;</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;ecb</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;ecb-autoloads</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">load</span> <span class="s">&quot;~/.emacs.d/rfringe.el&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;rfringe</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">load</span> <span class="s">&quot;flymake&quot;</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">flymake-pylint-init</span> <span class="p">()</span>
+    <span class="p">(</span><span class="k">let*</span> <span class="p">((</span><span class="nv">temp-file</span> <span class="p">(</span><span class="nv">flymake-init-create-temp-buffer-copy</span>
+    <span class="ss">&#39;flymake-create-temp-inplace</span><span class="p">))</span>
+    <span class="p">(</span><span class="nv">local-file</span> <span class="p">(</span><span class="nv">file-relative-name</span>
+    <span class="nv">temp-file</span>
+    <span class="p">(</span><span class="nv">file-name-directory</span> <span class="nv">buffer-file-name</span><span class="p">))))</span>
+    <span class="p">(</span><span class="nb">list</span> <span class="s">&quot;epylint&quot;</span> <span class="p">(</span><span class="nb">list</span> <span class="nv">local-file</span><span class="p">))))</span>
+
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;flymake-allowed-file-name-masks</span>
+    <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;\.py\&#39;&quot;</span> <span class="nv">flymake-pylint-init</span><span class="p">)))</span>
+    <span class="p">(</span><span class="nv">load-file</span> <span class="s">&quot;/usr/share/git-core/emacs/git.el&quot;</span><span class="p">)</span>
+    <span class="p">(</span><span class="s">&quot;.+\.c$&quot;</span> <span class="nv">flymake-simple-make-init</span> <span class="nv">flymake-simple-cleanup</span>
+    <span class="nv">flymake-get-real-file-name</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">setq</span> <span class="nv">TeX-auto-save</span> <span class="no">t</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">setq</span> <span class="nv">TeX-parse-self</span> <span class="no">t</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">setq-default</span> <span class="nv">TeX-master</span> <span class="no">nil</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">load</span> <span class="s">&quot;auctex.el&quot;</span> <span class="no">nil</span> <span class="no">t</span> <span class="no">t</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">load</span> <span class="s">&quot;preview-latex.el&quot;</span> <span class="no">nil</span> <span class="no">t</span> <span class="no">t</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You should not be copying this Emacs configuration as certain things may not
+work in your Emacs version. Rather I would advice you to read its manual and
+then customize accordingly. There is an <a class="reference external" href="http://emacswiki.org/">Emacs Wiki</a>
+site which you can use to learn more about different modules and extensions
+which you can use to gain more functionality.</p>
+<p>If you are looking for a simple IDE then you can use <a class="reference external" href="http://www.codeblocks.org/">Code::Blocks</a> which can serve as a nice starting
+point. However, for beginners I advice against IDEs because it hides the actual
+process of compilation for you and you may miss basic points which you must be
+knowing as a C programmer.</p>
+<p>Just copy paste the following program in Emacs and the Make file given after
+that:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="c1">//Note:This listing will not compile. It has errors.</span>
+<span class="cp">#include &lt;stdio.h</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>do not make a mistake here.</p>
+<div class="highlight-make"><div class="highlight"><pre><span class="nf">check-syntax</span><span class="o">:</span>
+  gcc -o nul -Wall -S <span class="k">$(</span>CHK_SOURCES<span class="k">)</span>
+</pre></div>
+</div>
+<p>Note that there should be a tab before the second line. If you do all steps
+correctly you should see something like: Note the pink background. If you move
+your mouse there then you will see the error/diagnostic messages from the
+compiler. For now I recommend you to read Emacs tutorial and man page of <cite>gcc</cite>
+compiler. Note that you can modify
+<cite>Makefile</cite> but this particular content must remain unchanged. It is the enabler
+for Flymake. The screenshot is given below;</p>
+<a class="reference internal image-reference" href="../_images/flymake.png"><img alt="Flymake Demo" class="align-center" src="../_images/flymake.png" /></a>
+<p>Move your mouse over pink lines to see the error.</p>
+</div>
+<div class="section" id="bits-and-bytes">
+<span id="index-3"></span><h2>1.9. Bits and Bytes<a class="headerlink" href="#bits-and-bytes" title="Permalink to this headline">¶</a></h2>
+<p>The smallest unit a computer can understand is called a bit. The values for a
+bit is either 0 or 1. Consider a voltage. It can be 0V or 1.5V or whatever the
+core CPU voltage is. CPU does not understand numbers but voltages :-). You
+cannot expect an electronics hardware to understand the same semantics of 0
+and 1 which we know. 0 and 1 are abstraction of CPUs voltages in programming.
+Four bits form a nibble and eight form a byte. A byte is the area of memory
+which can be addressed by CPU and its content manipulated. To address a memory
+a CPU has say 4 or 8 or up to 256 pins. For example, in a common 32-bit CPU
+there are 32 pins whose voltages may represent 0 or 1. Consider all pins are
+low i.e. 0 then the memory location pointed to is
+00000000000000000000000000000000 i.e. a 8 bit memory at location 0 can be
+accessed. This memory is also called primary memory or RAM (Random Access
+Memory). So computing this way we can see that a 32-bit processor can access
+<span class="math">\(2^{32}\)</span> bytes or 4,294,967,296 bytes. You can arrive at this number by
+4*1024*1024*1024. This is equivalent to 4GB of RAM. However, modern Intel
+processors have 36 physical pins to address up to 64GB of memory. That does not
+mean that all 64-bit CPUs have 64 pins for addressing
+memory as 16 Exabytes(approximately \(16*10^{18}\)) is really, really huge amount
+of memory which is not needed by any single monolithic system practically and
+will be very expensive, thus it is not practical.</p>
+<p>Since a byte has 8 bits, its value may range from 0 to 255 as <span class="math">\(2^8\)</span> is
+256. For unsigned data type this will be the range. When all bits are 0 value is
+zero and when all are high it is 255. Computers use two&#8217;s complement form to
+represent binary number. So if these 8-bits represent signed number the range
+will be from <span class="math">\(-2^8\)</span> to <span class="math">\(2^8-1\)</span> that is -128 to 127. As you will see
+later at lowest levels C allows you to access even one bit using something
+called bit-fields. If you read specification it will signify the range of one
+8-bit byte as -127 to 127 because it also takes in to consideration of 1&#8217;s
+complement computers in which positive and negative zeroes are different.</p>
+</div>
+<div class="section" id="notes-on-number-system">
+<span id="index-4"></span><h2>1.10. Notes on Number System<a class="headerlink" href="#notes-on-number-system" title="Permalink to this headline">¶</a></h2>
+<p>A number system is a system which determines the rules and symbols for numbers
+on how we are going to use them.  A number system consists of symbols for
+representing numbers and a dot for representing fractional numbers. Minus sign
+is used to represent negative numbers. A number system ranges from \(-\infty\)
+to \(+\infty\) . It is best represented by a straight line given below:</p>
+<div class="figure">
+<p><img src="../_images/tikz-68a4258b510f1fb13767808f6a6e75360e901ad8.png" alt="\draw (0, 0) -- (6, 0);
+\draw (0, -.2) -- (0, .2);
+\draw (6, -.2) -- (6, .2);
+\draw (3, -.2) -- (3, .2);
+\draw (0, 0.4) node{$-\infty$};
+\draw (6, 0.4) node{$+\infty$};
+\draw (3, 0.4) node{$0$};" /></p>
+<p class="caption">Number axis.</p></div><p>Each point on this axis represents a number. It may be integer or fractional
+number. An integer is a whole number like -1, -2, 0, 5, 7 etc. Floating-point
+numbers have fractional parts like 1.234. The important fact to note is that
+between any two points there exists infinite numbers. In other words between
+any two numbers there exists infinite numbers. For example, between 1.2 and 1.3
+there are 1.21, 1.22, 1.23..., 1.29. Moreover between 1.21 and 1.22 there are
+1.211, 1.212, 1.213 and so on. It enables us to represent a point on this
+axis. The numbers I have written are supposedly in decimal number system. Base
+of decimal number system is 10. Why because it consists of 10 distinct symbols
+0 through 9. Similarly we can have any other number system. Popular number
+systems in computers are binary, octal and hexadecimal not to mention decimal
+of course.</p>
+<p>A number in a generic number system is given below:</p>
+<div class="math">
+\[\begin{split}(.. c_mb^{m-1} + c_{m-1}b^{m-2}+ ... + c_2b^1 + c1_b^0 + c_{-1}b^{-1} +
+... + c_{-m}b^{-m} ) \\ = (... c_mc_{m-1}...c_2c_1.c_{-1}...c_{-m})_b\end{split}\]</div>
+<p>All the terms with \(c\)  are called digits. The leftmost or leading digit is
+called <em>most significant digit</em> and the rightmost or trailing digit is
+called <em>least significant digit</em>. The . is called a point which
+separates the integral part which is towards its left from the fractional part
+which is towards its right. \(b\)  is known as radix or base of the number
+system. Note that all digits will be between \(0\) to \(b-1\). So in our
+decimal system \(b\)  is 10 therefore we have digits from 0 to 9. In binary
+number system it is 2 therefore digits permitted are 0 and 1.</p>
+<div class="section" id="binary-number-system">
+<h3>1.10.1. Binary Number System<a class="headerlink" href="#binary-number-system" title="Permalink to this headline">¶</a></h3>
+<p>As the name suggests binary number system has base of 2. Therefore it has only
+two symbols. 0 and 1. This is the most popular system for computers because TTL
+NAND and NOR gates which are the most basic logic gates using which other gates
+are implemented in processor has only two voltage output levels because of
+their operation in cut-off and saturation zones. These terms are better
+understood with the help of a book on electronics which is out of scope of this
+book. All binary numbers consist of 0 and 1. So the count is like 0, 1, 10, 11,
+100, 101, 110, 111, 1000 and so on.</p>
+<div class="section" id="conversion-of-unsigned-decimals-and-binaries">
+<h4>1.10.1.1. Conversion of Unsigned Decimals and Binaries<a class="headerlink" href="#conversion-of-unsigned-decimals-and-binaries" title="Permalink to this headline">¶</a></h4>
+<p>Consider a decimal number. Let us say 53 then how would be convert it to
+binary. The technique is that of division. Please examine following carefully:</p>
+<div class="highlight-text"><div class="highlight"><pre>2 | 53 | 1
+----------
+2 | 26 | 0
+----------
+2 | 13 | 1
+----------
+2 | 6  | 0
+----------
+2 | 3  | 1
+----------
+  | 1  |
+</pre></div>
+</div>
+<p>So the binary is \(110101_2\). First we divide 53 by 2 and write the
+remainder. Then quotient is 26. We repeat the process for 26 therefore
+remainder is 0 and quotient is 13. This we go on repeating till we have 1 as
+quotient. Note that all the remainders will be 0 or 1 because divisor is
+2. Similarly, final quotient is always 1. Now we take final quotient and start
+writing remainders from top to bottom.</p>
+<p>To convert binary to decimal let us examine following:</p>
+<p>\[1*2^5 +1*2^4 +0*2^3 +1*2^2 +0*2^1 +1*2^0 =53_{10}\]</p>
+<p>The power is to 2 because 2 is the base of source. It starts from 0 for unit&#8217;s
+position and increases to 1 and 2 for ten&#8217;s and hundred&#8217;s position and so
+on. 1&#8217;s and 0&#8217;s are the values of that place. If you note carefully powers of 2
+grow like 1, 2, 4, 8, 16, 32, 64, 128 and so on. Any number can be written by
+using these powers at most one time. For example consider 100. I know it is
+less than 128 so I will use 64. Then 36 remains. So I will use 32 and then
+4. This means 100=64+32+4  which means power 6, 5 and 2 have been
+used. Therefore, I can quickly write down number as \(1100100_2\).</p>
+<p>Fractional numbers are slightly more complicated. Let us consider \(1.1_2\)  . In
+decimal it will be \(1+frac{1}{2}\). This is 1.5 in decimal. Note that when you
+convert a fractional part of binary to decimal denominator will always be power
+of 2. For that matter when you convert from any base to decimal denominator
+will be powers of that base. <strong>Important:</strong> Therefore, when you convert
+from decimal to some base n then denominator of that decimal number can have
+only those prime factors which are available in the set of prime factors of
+\(n\).</p>
+<p>Let us say we have a fractional number in decimal .59 then to convert it to
+decimal we multiply it with 2 which yields 1.018 which is greater than 1 so our
+equivalent binary number is .1. Now we subtract 1 from 1.18 to get .18 which
+is less than 1 so we multiply it with 2 again to get .36. Now since this is
+less than 1 our equivalent binary number is .10. Repeating the process we get
+.72 and .100 then 1.44 and .1001. We put 1 in binary part because decimal part
+has become greater than 1. Now again we subtract 1 from decimal part to get .44
+and repeat the process.</p>
+<p>Operations such as addition, subtraction, multiplication and division are
+similar in all number systems.</p>
+</div>
+</div>
+<div class="section" id="s-complement-and-1-s-complement">
+<h3>1.10.2. 2&#8217;s Complement and 1&#8217;s Complement<a class="headerlink" href="#s-complement-and-1-s-complement" title="Permalink to this headline">¶</a></h3>
+<p>2&#8217;s complement and 1&#8217;s complement are used to convert binary numbers to decimal
+values. In 1&#8217;s complement the number is obtained by inverting bits i.e. making
+0 bit to 1 bit and 1 bit to 0 bit of the binary number in question.</p>
+<p>Consider the following table which contains some numbers for 1&#8217;s complement
+of some 8-bit numbers.</p>
+<p>The 2&#8217;s complement of an \(N\)-bit number is defined as the complement with
+respect to \(2^N\); i.e. it is the result of subtracting the number
+from \(2^N\), which in binary is one followed by \(N\) zeroes. This is also
+equivalent to taking the 1&#8217;s complement and then adding one, since the sum of
+a number and its 1&#8217;s complement is all 1 bits.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="37%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Bits</th>
+<th class="head">Unsigned Value</th>
+<th class="head">1&#8217;s Complement</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0111 1111</td>
+<td>127</td>
+<td>127</td>
+</tr>
+<tr class="row-odd"><td>0111 1110</td>
+<td>126</td>
+<td>126</td>
+</tr>
+<tr class="row-even"><td>0000 0010</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>0000 0001</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>0000 0000</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>1111 1111</td>
+<td>255</td>
+<td>-0</td>
+</tr>
+<tr class="row-even"><td>1111 1110</td>
+<td>254</td>
+<td>-1</td>
+</tr>
+<tr class="row-odd"><td>1000 0010</td>
+<td>130</td>
+<td>-125</td>
+</tr>
+<tr class="row-even"><td>1000 0001</td>
+<td>129</td>
+<td>-126</td>
+</tr>
+<tr class="row-odd"><td>1000 0000</td>
+<td>128</td>
+<td>-127</td>
+</tr>
+</tbody>
+</table>
+<p>For signed numbers MSB(most significant bit) decides sign in both 1&#8217;s
+complement as well as 2&#8217;s complement. 1&#8217;s complement has two zeroes. Positive
+and negative. As you see in table that 1111 1111 is -0 because MSB is 1 so it
+is a negative number and then if you invert all remaining bits then it turns
+out to be 0. In a 1&#8217;s complement system negative numbers are represented by the
+arithmetic negative of the value. An $N$-bit 1&#8217;s complement number system can
+represent integers in the range \(-2^{N-1} - 1\) to \(-2^{N-1} - 1\).</p>
+<p>Now it is easy to do addition, subtraction, multiplication, division and other
+arithmetic operations. Subtraction for 1&#8217;s complement is a bit
+different. Consider the following:</p>
+<div class="highlight-text"><div class="highlight"><pre>+ 0000 0110       6
+- 0001 0011      19
+===========   ====
+1 1111 0011     -12    -An end-around borrow is produced, and the sign bit
+                      of the intermediate result is 1.
+- 0000 0001       1    -Subtract the end-around borrow from the result.
+===========   ====
+  1111 0010     -13    -The correct result (6 - 19 = -13)
+</pre></div>
+</div>
+<p>Borrows are propagated to the left. If the borrow extends past the end then it
+is said to have &#8220;wrapped around&#8221;&#8221;, a condition called an &#8220;end-around
+borrow&#8221;. When this occurs, the bit must be subtracted from the right-most bit
+or least significant bit(LSB). This does not occur in 2&#8217;s complement arithmetic.</p>
+<p>As you see in table and also you can verify the value becomes negative if its
+1&#8217;s complement is computed. However, 2&#8217;s complement is used on most of
+computers because of two zeroes in 1&#8217;s complement, borrowing being complicated
+etc.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="37%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Bits</th>
+<th class="head">Unsigned Value</th>
+<th class="head">2&#8217;s Complement</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0111 1111</td>
+<td>127</td>
+<td>127</td>
+</tr>
+<tr class="row-odd"><td>0111 1110</td>
+<td>126</td>
+<td>126</td>
+</tr>
+<tr class="row-even"><td>0000 0010</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>0000 0001</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>0000 0000</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>1111 1111</td>
+<td>255</td>
+<td>-1</td>
+</tr>
+<tr class="row-even"><td>1111 1110</td>
+<td>254</td>
+<td>-2</td>
+</tr>
+<tr class="row-odd"><td>1000 0010</td>
+<td>130</td>
+<td>-126</td>
+</tr>
+<tr class="row-even"><td>1000 0001</td>
+<td>129</td>
+<td>-127</td>
+</tr>
+<tr class="row-odd"><td>1000 0000</td>
+<td>128</td>
+<td>-128</td>
+</tr>
+</tbody>
+</table>
+<p>Clearly, since \(N\)-bit 1&#8217;s complement can represent numbers in range
+\(-2^{N-1}-1\) to \(2^{N-1} + 1\) 2&#8217;s complement of \(N\)-bit can
+represent \(-2^{N-1}\) to \(2^{N-1} - 1\) as it does not have negative 0
+i.e. its range is more by 1 number.</p>
+<p>The 2&#8217; complement system has the advantage that operations of addition,
+subtraction, and multiplication are same as unsigned binary numbers (as long as
+the inputs are represented in the same number of bits and any overflow beyond
+those bits is discarded from the result). This property makes the system both
+simpler to implement and capable of easily handling higher precision
+arithmetic. Also, as mentioned above zero has only a single
+representation, avoiding the subtleties associated with negative zero, which
+exists in 1&#8217;s complement systems.</p>
+<p>The value \(v\) of an \(N\)-bit integer \(b_{N-1} b_{N-2} dots b_0\) is
+given by the following formula:</p>
+<div class="math">
+\[v=-b_{N-1} 2^{N-1} + \sum_{i=0}^{N-2} b_i 2^i\]</div>
+<p>I will leave it up to you, the reader, to perform basic operations like
+addition, subtraction, multiplication, division etc.</p>
+</div>
+</div>
+<div class="section" id="compiling-and-executing">
+<h2>1.11. Compiling and Executing<a class="headerlink" href="#compiling-and-executing" title="Permalink to this headline">¶</a></h2>
+<p>To compile and execute a program create a new file, edit it and save it. The
+extension of file should be *.c. For example, myprogram.c. After that you can
+give this command at terminal. Here is the corrected code for you.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Execute the following command on your command prompt:</p>
+<p><code class="docutils literal"><span class="pre">$gcc</span> <span class="pre">nothing.c</span> <span class="pre">-o</span> <span class="pre">nothing</span></code></p>
+<p>Then you will see a file named my program is created by compiler if no errors
+were there in your program. In case of errors, like we had in one shown to you
+they have to be resolved first. Suppose nothing is produced then you can execute
+it like</p>
+<p><code class="docutils literal"><span class="pre">$./nothing</span></code></p>
+<p>Note that in both the commands $ is not part of command but it is prompt. For
+you it may be % or # or something fancier (depends on the imagination of your
+system administrator). To execute this command your working directory must be
+same as the directory your program is in. Also, note that on some systems TAB
+auto completes filename so do not do the following by accident:</p>
+<p><code class="docutils literal"><span class="pre">$gcc</span> <span class="pre">nothing.c</span> <span class="pre">-o</span> <span class="pre">nothing.c</span></code></p>
+<p>This will overwrite your <cite>nothing.c</cite> by <cite>nothing</cite>. Let us see how to compile
+this program using a <cite>Makefile</cite>. In case you are curious about knowing eveything
+about Makefiles at this point of time then you can find its very fine manual at
+<a class="reference external" href="https://www.gnu.org/software/make/manual/">gnu.org</a>. Edit your Makefile like this:</p>
+<div class="highlight-make"><div class="highlight"><pre><span class="c">#sample Makefile</span>
+<span class="nf">check-syntax</span><span class="o">:</span>
+    gcc -o nul -Wall -S <span class="k">$(</span>CHK_SOURCES<span class="k">)</span>
+
+<span class="nf">nothing</span><span class="o">:</span><span class="n">nothing</span>.<span class="n">c</span>
+    gcc nothing.c -o nothing
+</pre></div>
+</div>
+<p>Now from do this from menu. <code class="docutils literal"><span class="pre">Tools-&gt;compile</span></code> and as the command issue <code class="docutils literal"><span class="pre">make</span>
+<span class="pre">-k</span> <span class="pre">test</span></code>. Your code will be compiled. Makefiles are better than executing
+commands however you must know underlying commands. You can also use something
+like CMake or Scons but I think that should be part of a book covering build
+systems.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../basics/" class="btn btn-neutral float-right" title="2. Basics of C" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="C Programming Contents" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012-2015, Shiv S. Dayal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

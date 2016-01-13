@@ -1,0 +1,722 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17487464-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>35. String handling &lt;string.h&gt; &mdash; C Programming  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="C Programming  documentation" href="../"/>
+        <link rel="next" title="36. Type-generic math &lt;tgmath.h&gt;" href="../tgmath/"/>
+        <link rel="prev" title="34. General utilities &lt;stdlib.h&gt;" href="../stdlib/"/>
+<link rel="stylesheet" href="../../css/math.css" type="text/css" />
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../" class="icon icon-home"> C Programming
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strings/">9. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fileio/">10. File Input/Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">11. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">12. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">13. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">14. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">15. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">16. Diagnostics <code class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">17. Complex arithmetic <code class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">18. Character Handling <code class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">19. Errors <code class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">20. Floating-point environment <code class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">21. Characteristics of floating types <code class="docutils literal"><span class="pre">&lt;float.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">22. Format conversion of integer types <code class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">23. Alternative spellings <code class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">24. Sizes of integer types <code class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">25. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">26. Mathematics <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">27. Nonlocal jumps <code class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">28. Signal handling <code class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">29. Variable arguments <code class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">30. Boolean type and values <code class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">31. Common definitions <code class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">32. Integer types <code class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">33. Input/output <code class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">34. General utilities <code class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">35. String handling <code class="docutils literal"><span class="pre">&lt;string.h&gt;</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#string-function-conventions">35.1. String function conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#copying-functions">35.2. Copying functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-memcpy-function">35.2.1. The <code class="docutils literal"><span class="pre">memcpy</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-memmove-function">35.2.2. The <code class="docutils literal"><span class="pre">memmove</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strcpy-function">35.2.3. The <code class="docutils literal"><span class="pre">strcpy</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strncpy-function">35.2.4. The <code class="docutils literal"><span class="pre">strncpy</span></code> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#concatenation-functions">35.3. Concatenation functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-strcat-function">35.3.1. The <code class="docutils literal"><span class="pre">strcat</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strncat-function">35.3.2. The <code class="docutils literal"><span class="pre">strncat</span></code> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#comparison-functions">35.4. Comparison functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-memcmp-function">35.4.1. The <code class="docutils literal"><span class="pre">memcmp</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strcmp-function">35.4.2. The <code class="docutils literal"><span class="pre">strcmp</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strcoll-function">35.4.3. The <code class="docutils literal"><span class="pre">strcoll</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strncmp-function">35.4.4. The <code class="docutils literal"><span class="pre">strncmp</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strxfrm-function">35.4.5. The <code class="docutils literal"><span class="pre">strxfrm</span></code> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#search-functions">35.5. Search functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-memchr-function">35.5.1. The <code class="docutils literal"><span class="pre">memchr</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strchr-function">35.5.2. The <code class="docutils literal"><span class="pre">strchr</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strcspn-function">35.5.3. The <code class="docutils literal"><span class="pre">strcspn</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strpbrk-function">35.5.4. The <code class="docutils literal"><span class="pre">strpbrk</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strrchr-function">35.5.5. The <code class="docutils literal"><span class="pre">strrchr</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strspn-function">35.5.6. The <code class="docutils literal"><span class="pre">strspn</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strstr-function">35.5.7. The <code class="docutils literal"><span class="pre">strstr</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strtok-function">35.5.8. The <code class="docutils literal"><span class="pre">strtok</span></code> function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#miscellaneous-functions">35.6. Miscellaneous functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-memset-function">35.6.1. The <code class="docutils literal"><span class="pre">memset</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strerror-function">35.6.2. The <code class="docutils literal"><span class="pre">strerror</span></code> function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-strlen-function">35.6.3. The <code class="docutils literal"><span class="pre">strlen</span></code> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">36. Type-generic math <code class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">37. Date and time <code class="docutils literal"><span class="pre">&lt;time.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">38. Extended multibyte and wide character utilities <code class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">39. Wide character classification and mapping utilities <code class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">40. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">41. License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../">C Programming</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Docs</a> &raquo;</li>
+      
+    <li>35. String handling <code class="docutils literal"><span class="pre">&lt;string.h&gt;</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/string.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="string-handling-string-h">
+<span id="index-0"></span><h1>35. String handling <code class="docutils literal"><span class="pre">&lt;string.h&gt;</span></code><a class="headerlink" href="#string-handling-string-h" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="string-function-conventions">
+<h2>35.1. String function conventions<a class="headerlink" href="#string-function-conventions" title="Permalink to this headline">¶</a></h2>
+<p>The header <code class="docutils literal"><span class="pre">&lt;string.h&gt;</span></code> declares one type and several functions, and defines
+one macro useful for manipulating arrays of character type and other objects
+treated as arrays of character type. The type is <code class="docutils literal"><span class="pre">size_t</span></code> and the macro is
+<code class="docutils literal"><span class="pre">NULL</span></code> (both described in <a class="reference internal" href="../stddef/#stddef"><span>Common definitions &lt;stddef.h&gt;</span></a>). Various methods are used for
+determining the lengths of the arrays, but in all cases
+a <code class="docutils literal"><span class="pre">char</span> <span class="pre">*</span></code> or <code class="docutils literal"><span class="pre">void</span> <span class="pre">*</span></code> argument points to the initial (lowest addressed) character of the
+array. If an array is accessed beyond the end of an object, the behavior is undefined.</p>
+<p>Where an argument declared as <code class="docutils literal"><span class="pre">size_t</span></code> n specifies the length of the array for a
+function, <code class="docutils literal"><span class="pre">n</span></code> can have the value zero on a call to that function. Unless explicitly stated
+otherwise in the description of a particular function in this subclause, pointer arguments
+on such a call shall still have valid values, as described in <a class="reference internal" href="../std/#id11"><span>Use of Library Functions</span></a>. On such a call, a
+function that locates a character finds no occurrence, a function that compares two
+character sequences returns zero, and a function that copies characters copies zero
+characters.</p>
+<p>For all functions in this subclause, each character shall be interpreted as if it had the type
+<code class="docutils literal"><span class="pre">unsigned</span> <span class="pre">char</span></code> (and therefore every possible object representation is valid and has a
+different value).</p>
+</div>
+<div class="section" id="copying-functions">
+<span id="id1"></span><span id="index-1"></span><h2>35.2. Copying functions<a class="headerlink" href="#copying-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-memcpy-function">
+<span id="index-2"></span><h3>35.2.1. The <code class="docutils literal"><span class="pre">memcpy</span></code> function<a class="headerlink" href="#the-memcpy-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">void</span> <span class="o">*</span><span class="nf">memcpy</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s2</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">memcpy</span></code> function copies n characters from the object pointed to by <code class="docutils literal"><span class="pre">s2</span></code> into the
+object pointed to by <code class="docutils literal"><span class="pre">s1</span></code>. If copying takes place between objects that overlap, the behavior
+is undefined.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">memcpy</span></code> function returns the value of <code class="docutils literal"><span class="pre">s1</span></code>.</p>
+</div>
+<div class="section" id="the-memmove-function">
+<span id="index-3"></span><h3>35.2.2. The <code class="docutils literal"><span class="pre">memmove</span></code> function<a class="headerlink" href="#the-memmove-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">void</span> <span class="o">*</span><span class="nf">memmove</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">s2</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">memmove</span></code> function copies n characters from the object pointed to by <code class="docutils literal"><span class="pre">s2</span></code> into the
+object pointed to by <code class="docutils literal"><span class="pre">s1</span></code>. Copying takes place as if the <code class="docutils literal"><span class="pre">n</span></code> characters from the object
+pointed to by <code class="docutils literal"><span class="pre">s2</span></code> are first copied into a temporary array of <code class="docutils literal"><span class="pre">n</span></code> characters that does not
+overlap the objects pointed to by <code class="docutils literal"><span class="pre">s1</span></code> and <code class="docutils literal"><span class="pre">s2</span></code>, and then the <code class="docutils literal"><span class="pre">n</span></code> characters from the
+temporary array are copied into the object pointed to by <code class="docutils literal"><span class="pre">s1</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">memmove</span></code> function returns the value of <code class="docutils literal"><span class="pre">s1</span></code>.</p>
+</div>
+<div class="section" id="the-strcpy-function">
+<span id="index-4"></span><h3>35.2.3. The <code class="docutils literal"><span class="pre">strcpy</span></code> function<a class="headerlink" href="#the-strcpy-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strcpy</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strcpy</span></code> function copies the string pointed to by <code class="docutils literal"><span class="pre">s2</span></code> (including the terminating null
+character) into the array pointed to by <code class="docutils literal"><span class="pre">s1</span></code>. If copying takes place between objects that
+overlap, the behavior is undefined.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strcpy</span></code> function returns the value of <code class="docutils literal"><span class="pre">s1</span></code>.</p>
+</div>
+<div class="section" id="the-strncpy-function">
+<span id="index-5"></span><h3>35.2.4. The <code class="docutils literal"><span class="pre">strncpy</span></code> function<a class="headerlink" href="#the-strncpy-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strncpy</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s2</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strncpy</span></code> function copies not more than <code class="docutils literal"><span class="pre">n</span></code> characters (characters that follow a null
+character are not copied) from the array pointed to by <code class="docutils literal"><span class="pre">s2</span></code> to the array pointed to by
+<code class="docutils literal"><span class="pre">s1</span></code>. <a class="footnote-reference" href="#id3" id="id2">[1]</a> If copying takes place between objects that overlap, the behavior is undefined.</p>
+<p>If the array pointed to by <code class="docutils literal"><span class="pre">s2</span></code> is a string that is shorter than <code class="docutils literal"><span class="pre">n</span></code> characters, null characters
+are appended to the copy in the array pointed to by <code class="docutils literal"><span class="pre">s1</span></code>, until <code class="docutils literal"><span class="pre">n</span></code> characters in all have been
+written.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strncpy</span></code> function returns the value of <code class="docutils literal"><span class="pre">s1</span></code>.</p>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>Thus, if there is no null character in the first <code class="docutils literal"><span class="pre">n</span></code> characters of the array pointed to by <code class="docutils literal"><span class="pre">s2</span></code>, the result will
+not be null-terminated.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="concatenation-functions">
+<span id="index-6"></span><h2>35.3. Concatenation functions<a class="headerlink" href="#concatenation-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-strcat-function">
+<h3>35.3.1. The <code class="docutils literal"><span class="pre">strcat</span></code> function<a class="headerlink" href="#the-strcat-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strcat</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strcat</span></code> function appends a copy of the string pointed to by <code class="docutils literal"><span class="pre">s2</span></code> (including the
+terminating null character) to the end of the string pointed to by <code class="docutils literal"><span class="pre">s1</span></code>. The initial character
+of <code class="docutils literal"><span class="pre">s2</span></code> overwrites the null character at the end of <code class="docutils literal"><span class="pre">s1</span></code>. If copying takes place between
+objects that overlap, the behavior is undefined.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strcat</span></code> function returns the value of <code class="docutils literal"><span class="pre">s1</span></code>.</p>
+</div>
+<div class="section" id="the-strncat-function">
+<span id="index-7"></span><h3>35.3.2. The <code class="docutils literal"><span class="pre">strncat</span></code> function<a class="headerlink" href="#the-strncat-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strncat</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s2</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strncat</span></code> function appends not more than <code class="docutils literal"><span class="pre">n</span></code> characters (a null character and
+characters that follow it are not appended) from the array pointed to by <code class="docutils literal"><span class="pre">s2</span></code> to the end of
+the string pointed to by <code class="docutils literal"><span class="pre">s1</span></code>. The initial character of <code class="docutils literal"><span class="pre">s2</span></code> overwrites the null character at the
+end of <code class="docutils literal"><span class="pre">s1</span></code>. A terminating null character is always appended to the result. <a class="footnote-reference" href="#id5" id="id4">[2]</a> If copying
+takes place between objects that overlap, the behavior is undefined.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strncat</span></code> function returns the value of <code class="docutils literal"><span class="pre">s1</span></code>.</p>
+<p><strong>Forward references:</strong> the <code class="docutils literal"><span class="pre">strlen</span></code> function (<a class="reference internal" href="#id11"><span>The strlen function</span></a>).</p>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[2]</a></td><td>Thus, the maximum number of characters that can end up in the array pointed to by <code class="docutils literal"><span class="pre">s1</span></code> is
+<code class="docutils literal"><span class="pre">strlen(s1)+n+1</span></code>.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="comparison-functions">
+<span id="index-8"></span><h2>35.4. Comparison functions<a class="headerlink" href="#comparison-functions" title="Permalink to this headline">¶</a></h2>
+<p>The sign of a nonzero value returned by the comparison functions <code class="docutils literal"><span class="pre">memcmp,</span> <span class="pre">strcmp</span></code>
+and <code class="docutils literal"><span class="pre">strncmp</span></code> is determined by the sign of the difference between the values of the first
+pair of characters (both interpreted as <code class="docutils literal"><span class="pre">unsigned</span> <span class="pre">char</span></code>) that differ in the objects being
+compared.</p>
+<div class="section" id="the-memcmp-function">
+<span id="index-9"></span><h3>35.4.1. The <code class="docutils literal"><span class="pre">memcmp</span></code> function<a class="headerlink" href="#the-memcmp-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">int</span> <span class="nf">memcmp</span><span class="p">(</span><span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">s2</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">memcmp</span></code> function compares the first <code class="docutils literal"><span class="pre">n</span></code> characters of the object pointed to by <code class="docutils literal"><span class="pre">s1</span></code> to
+the first <code class="docutils literal"><span class="pre">n</span></code> characters of the object pointed to by <code class="docutils literal"><span class="pre">s2</span></code>. <a class="footnote-reference" href="#id7" id="id6">[3]</a></p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">memcmp</span></code> function returns an integer greater than, equal to, or less than zero,
+accordingly as the object pointed to by <code class="docutils literal"><span class="pre">s1</span></code> is greater than, equal to, or less than the object
+pointed to by <code class="docutils literal"><span class="pre">s2</span></code>.</p>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[3]</a></td><td>The contents of &#8220;holes&#8221; used as padding for purposes of alignment within structure objects are
+indeterminate. Strings shorter than their allocated space and unions may also cause problems in
+comparison.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-strcmp-function">
+<span id="index-10"></span><h3>35.4.2. The <code class="docutils literal"><span class="pre">strcmp</span></code> function<a class="headerlink" href="#the-strcmp-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">int</span> <span class="nf">strcmp</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strcmp</span></code> function compares the string pointed to by <code class="docutils literal"><span class="pre">s1</span></code> to the string pointed to by
+<code class="docutils literal"><span class="pre">s2</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strcmp</span></code> function returns an integer greater than, equal to, or less than zero,
+accordingly as the string pointed to by <code class="docutils literal"><span class="pre">s1</span></code> is greater than, equal to, or less than the string
+pointed to by <code class="docutils literal"><span class="pre">s2</span></code>.</p>
+</div>
+<div class="section" id="the-strcoll-function">
+<span id="id8"></span><span id="index-11"></span><h3>35.4.3. The <code class="docutils literal"><span class="pre">strcoll</span></code> function<a class="headerlink" href="#the-strcoll-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">int</span> <span class="nf">strcoll</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strcoll</span></code> function compares the string pointed to by s1 to the string pointed to by
+<code class="docutils literal"><span class="pre">s2</span></code>, both interpreted as appropriate to the <code class="docutils literal"><span class="pre">LC_COLLATE</span></code> category of the current locale.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strcoll</span></code> function returns an integer greater than, equal to, or less than zero,
+accordingly as the string pointed to by <code class="docutils literal"><span class="pre">s1</span></code> is greater than, equal to, or less than the string
+pointed to by <code class="docutils literal"><span class="pre">s2</span></code> when both are interpreted as appropriate to the current locale.</p>
+</div>
+<div class="section" id="the-strncmp-function">
+<span id="index-12"></span><h3>35.4.4. The <code class="docutils literal"><span class="pre">strncmp</span></code> function<a class="headerlink" href="#the-strncmp-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">int</span> <span class="nf">strncmp</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s2</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strncmp</span></code> function compares not more than n characters (characters that follow a
+null character are not compared) from the array pointed to by <code class="docutils literal"><span class="pre">s1</span></code> to the array pointed to
+by <code class="docutils literal"><span class="pre">s2</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strncmp</span></code> function returns an integer greater than, equal to, or less than zero,
+accordingly as the possibly null-terminated array pointed to by <code class="docutils literal"><span class="pre">s1</span></code> is greater than, equal
+to, or less than the possibly null-terminated array pointed to by <code class="docutils literal"><span class="pre">s2</span></code>.</p>
+</div>
+<div class="section" id="the-strxfrm-function">
+<span id="id9"></span><span id="index-13"></span><h3>35.4.5. The <code class="docutils literal"><span class="pre">strxfrm</span></code> function<a class="headerlink" href="#the-strxfrm-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">size_t</span> <span class="nf">strxfrm</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s2</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strxfrm</span></code> function transforms the string pointed to by <code class="docutils literal"><span class="pre">s2</span></code> and places the resulting
+string into the array pointed to by <code class="docutils literal"><span class="pre">s1</span></code>. The transformation is such that if the <code class="docutils literal"><span class="pre">strcmp</span></code>
+function is applied to two transformed strings, it returns a value greater than, equal to, or
+less than zero, corresponding to the result of the <code class="docutils literal"><span class="pre">strcoll</span></code> function applied to the same
+two original strings. No more than <code class="docutils literal"><span class="pre">n</span></code> characters are placed into the resulting array
+pointed to by <code class="docutils literal"><span class="pre">s1</span></code>, including the terminating null character. If <code class="docutils literal"><span class="pre">n</span></code> is zero, <code class="docutils literal"><span class="pre">s1</span></code> is permitted to
+be a null pointer. If copying takes place between objects that overlap, the behavior is
+undefined.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strxfrm</span></code> function returns the length of the transformed string (not including the
+terminating null character). If the value returned is <code class="docutils literal"><span class="pre">n</span></code> or more, the contents of the array
+pointed to by <code class="docutils literal"><span class="pre">s1</span></code> are indeterminate.</p>
+<p>EXAMPLE The value of the following expression is the size of the array needed to hold the
+transformation of the string pointed to by <code class="docutils literal"><span class="pre">s</span></code>.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="mi">1</span> <span class="o">+</span> <span class="n">strxfrm</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="search-functions">
+<span id="index-14"></span><h2>35.5. Search functions<a class="headerlink" href="#search-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-memchr-function">
+<span id="index-15"></span><h3>35.5.1. The <code class="docutils literal"><span class="pre">memchr</span></code> function<a class="headerlink" href="#the-memchr-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">void</span> <span class="o">*</span><span class="nf">memchr</span><span class="p">(</span><span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">memchr</span></code> function locates the first occurrence of <code class="docutils literal"><span class="pre">c</span></code> (converted to an unsigned
+char) in the initial <code class="docutils literal"><span class="pre">n</span></code> characters (each interpreted as <code class="docutils literal"><span class="pre">unsigned</span> <span class="pre">char</span></code>) of the object
+pointed to by <code class="docutils literal"><span class="pre">s</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">memchr</span></code> function returns a pointer to the located character, or a null pointer if the
+character does not occur in the object.</p>
+</div>
+<div class="section" id="the-strchr-function">
+<span id="index-16"></span><h3>35.5.2. The <code class="docutils literal"><span class="pre">strchr</span></code> function<a class="headerlink" href="#the-strchr-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strchr</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strchr</span></code> function locates the first occurrence of <code class="docutils literal"><span class="pre">c</span></code> (converted to a char) in the
+string pointed to by <code class="docutils literal"><span class="pre">s</span></code>. The terminating null character is considered to be part of the
+string.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strchr</span></code> function returns a pointer to the located character, or a null pointer if the
+character does not occur in the string.</p>
+</div>
+<div class="section" id="the-strcspn-function">
+<span id="index-17"></span><h3>35.5.3. The <code class="docutils literal"><span class="pre">strcspn</span></code> function<a class="headerlink" href="#the-strcspn-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">size_t</span> <span class="nf">strcspn</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strcspn</span></code> function computes the length of the maximum initial segment of the string
+pointed to by <code class="docutils literal"><span class="pre">s1</span></code> which consists entirely of characters not from the string pointed to by
+<code class="docutils literal"><span class="pre">s2</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strcspn</span></code> function returns the length of the segment.</p>
+</div>
+<div class="section" id="the-strpbrk-function">
+<span id="index-18"></span><h3>35.5.4. The <code class="docutils literal"><span class="pre">strpbrk</span></code> function<a class="headerlink" href="#the-strpbrk-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strpbrk</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strpbrk</span></code> function locates the first occurrence in the string pointed to by <code class="docutils literal"><span class="pre">s1</span></code> of any
+character from the string pointed to by <code class="docutils literal"><span class="pre">s2</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strpbrk</span></code> function returns a pointer to the character, or a null pointer if no character
+from <code class="docutils literal"><span class="pre">s2</span></code> occurs in <code class="docutils literal"><span class="pre">s1</span></code>.</p>
+</div>
+<div class="section" id="the-strrchr-function">
+<span id="index-19"></span><h3>35.5.5. The <code class="docutils literal"><span class="pre">strrchr</span></code> function<a class="headerlink" href="#the-strrchr-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strrchr</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strrchr</span></code> function locates the last occurrence of <code class="docutils literal"><span class="pre">c</span></code> (converted to a char) in the
+string pointed to by <code class="docutils literal"><span class="pre">s</span></code>. The terminating null character is considered to be part of the
+string.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strrchr</span></code> function returns a pointer to the character, or a null pointer if <code class="docutils literal"><span class="pre">c</span></code> does not
+occur in the string.</p>
+</div>
+<div class="section" id="the-strspn-function">
+<span id="index-20"></span><h3>35.5.6. The <code class="docutils literal"><span class="pre">strspn</span></code> function<a class="headerlink" href="#the-strspn-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">size_t</span> <span class="nf">strspn</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strspn</span></code> function computes the length of the maximum initial segment of the string
+pointed to by <code class="docutils literal"><span class="pre">s1</span></code> which consists entirely of characters from the string pointed to by <code class="docutils literal"><span class="pre">s2</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strspn</span></code> function returns the length of the segment.</p>
+</div>
+<div class="section" id="the-strstr-function">
+<span id="index-21"></span><h3>35.5.7. The <code class="docutils literal"><span class="pre">strstr</span></code> function<a class="headerlink" href="#the-strstr-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strstr</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strstr</span></code> function locates the first occurrence in the string pointed to by <code class="docutils literal"><span class="pre">s1</span></code> of the
+sequence of characters (excluding the terminating null character) in the string pointed to
+by <code class="docutils literal"><span class="pre">s2</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strstr</span></code> function returns a pointer to the located string, or a null pointer if the string
+is not found. If <code class="docutils literal"><span class="pre">s2</span></code> points to a string with zero length, the function returns <code class="docutils literal"><span class="pre">s1</span></code>.</p>
+</div>
+<div class="section" id="the-strtok-function">
+<span id="index-22"></span><h3>35.5.8. The <code class="docutils literal"><span class="pre">strtok</span></code> function<a class="headerlink" href="#the-strtok-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strtok</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="kr">restrict</span> <span class="n">s2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>A sequence of calls to the <code class="docutils literal"><span class="pre">strtok</span></code> function breaks the string pointed to by <code class="docutils literal"><span class="pre">s``1</span> <span class="pre">into</span> <span class="pre">a</span>
+<span class="pre">sequence</span> <span class="pre">of</span> <span class="pre">tokens,</span> <span class="pre">each</span> <span class="pre">of</span> <span class="pre">which</span> <span class="pre">is</span> <span class="pre">delimited</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">character</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">string</span> <span class="pre">pointed</span> <span class="pre">to</span>
+<span class="pre">by</span> <span class="pre">``s2</span></code>. The first call in the sequence has a non-null first argument; subsequent calls in the
+sequence have a null first argument. The separator string pointed to by <code class="docutils literal"><span class="pre">s2</span></code> may be
+different from call to call.</p>
+<p>The first call in the sequence searches the string pointed to by s1`` for the first character
+that is not contained in the current separator string pointed to by <code class="docutils literal"><span class="pre">s2</span></code>. If no such character
+is found, then there are no tokens in the string pointed to by <code class="docutils literal"><span class="pre">s1</span></code> and the <code class="docutils literal"><span class="pre">strtok</span></code> function
+returns a null pointer. If such a character is found, it is the start of the first token.</p>
+<p>The <code class="docutils literal"><span class="pre">strtok</span></code> function then searches from there for a character that is contained in the
+current separator string. If no such character is found, the current token extends to the
+end of the string pointed to by <code class="docutils literal"><span class="pre">s1</span></code>, and subsequent searches for a token will return a null
+pointer. If such a character is found, it is overwritten by a null character, which
+terminates the current token. The strtok function saves a pointer to the following
+character, from which the next search for a token will start.</p>
+<p>Each subsequent call, with a null pointer as the value of the first argument, starts
+searching from the saved pointer and behaves as described above.</p>
+<p>The implementation shall behave as if no library function calls the strtok function.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strtok</span></code> function returns a pointer to the first character of a token, or a null pointer
+if there is no token.</p>
+<p>EXAMPLE</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="k">static</span> <span class="kt">char</span> <span class="n">str</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;?a???b,,,#c&quot;</span><span class="p">;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="n">t</span><span class="p">;</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">strtok</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s">&quot;?&quot;</span><span class="p">);</span>   <span class="c1">// t points to the token &quot;a&quot;</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">&quot;,&quot;</span><span class="p">);</span>  <span class="c1">// t points to the token &quot;??b&quot;</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">&quot;#,&quot;</span><span class="p">);</span> <span class="c1">// t points to the token &quot;c&quot;</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">&quot;?&quot;</span><span class="p">);</span>  <span class="c1">// t is a null pointer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="miscellaneous-functions">
+<h2>35.6. Miscellaneous functions<a class="headerlink" href="#miscellaneous-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-memset-function">
+<span id="index-23"></span><h3>35.6.1. The <code class="docutils literal"><span class="pre">memset</span></code> function<a class="headerlink" href="#the-memset-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">void</span> <span class="o">*</span><span class="nf">memset</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">memset</span></code> function copies the value of <code class="docutils literal"><span class="pre">c</span></code> (converted to an <code class="docutils literal"><span class="pre">unsigned</span> <span class="pre">char</span></code>) into
+each of the first <code class="docutils literal"><span class="pre">n</span></code> characters of the object pointed to by <code class="docutils literal"><span class="pre">s</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">memset</span></code> function returns the value of <code class="docutils literal"><span class="pre">s</span></code>.</p>
+</div>
+<div class="section" id="the-strerror-function">
+<span id="id10"></span><span id="index-24"></span><h3>35.6.2. The <code class="docutils literal"><span class="pre">strerror</span></code> function<a class="headerlink" href="#the-strerror-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strerror</span><span class="p">(</span><span class="kt">int</span> <span class="n">errnum</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strerror</span></code> function maps the number in <code class="docutils literal"><span class="pre">errnum</span></code> to a message string. Typically,
+the values for errnum come from <code class="docutils literal"><span class="pre">errno</span></code>, but <code class="docutils literal"><span class="pre">strerror</span></code> shall map any value of type
+int to a message.</p>
+<p>The implementation shall behave as if no library function calls the <code class="docutils literal"><span class="pre">strerror</span></code> function.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strerror</span></code> function returns a pointer to the string, the contents of which are locale-specific.
+The array pointed to shall not be modified by the program, but may be
+overwritten by a subsequent call to the strerror function.</p>
+</div>
+<div class="section" id="the-strlen-function">
+<span id="id11"></span><span id="index-25"></span><h3>35.6.3. The <code class="docutils literal"><span class="pre">strlen</span></code> function<a class="headerlink" href="#the-strlen-function" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="kt">size_t</span> <span class="nf">strlen</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strlen</span></code> function computes the length of the string pointed to by <code class="docutils literal"><span class="pre">s</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">strlen</span></code> function returns the number of characters that precede the terminating null
+character.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tgmath/" class="btn btn-neutral float-right" title="36. Type-generic math &lt;tgmath.h&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../stdlib/" class="btn btn-neutral" title="34. General utilities &lt;stdlib.h&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012-2015, Shiv S. Dayal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17487464-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>23. Alternative spellings &lt;iso646.h&gt; &mdash; C Programming  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="C Programming  documentation" href="../"/>
+        <link rel="next" title="24. Sizes of integer types &lt;limits.h&gt;" href="../limits/"/>
+        <link rel="prev" title="22. Format conversion of integer types &lt;inttypes.h&gt;" href="../inttypes/"/>
+<link rel="stylesheet" href="../../css/math.css" type="text/css" />
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../" class="icon icon-home"> C Programming
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strings/">9. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fileio/">10. File Input/Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">11. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">12. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">13. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">14. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">15. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">16. Diagnostics <code class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">17. Complex arithmetic <code class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">18. Character Handling <code class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">19. Errors <code class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">20. Floating-point environment <code class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">21. Characteristics of floating types <code class="docutils literal"><span class="pre">&lt;float.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">22. Format conversion of integer types <code class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">23. Alternative spellings <code class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">24. Sizes of integer types <code class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">25. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">26. Mathematics <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">27. Nonlocal jumps <code class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">28. Signal handling <code class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">29. Variable arguments <code class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">30. Boolean type and values <code class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">31. Common definitions <code class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">32. Integer types <code class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">33. Input/output <code class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">34. General utilities <code class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">35. String handling <code class="docutils literal"><span class="pre">&lt;string.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">36. Type-generic math <code class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">37. Date and time <code class="docutils literal"><span class="pre">&lt;time.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">38. Extended multibyte and wide character utilities <code class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">39. Wide character classification and mapping utilities <code class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">40. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">41. License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../">C Programming</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Docs</a> &raquo;</li>
+      
+    <li>23. Alternative spellings <code class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/iso646.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="alternative-spellings-iso646-h">
+<span id="index-0"></span><h1>23. Alternative spellings <code class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></code><a class="headerlink" href="#alternative-spellings-iso646-h" title="Permalink to this headline">¶</a></h1>
+<p id="index-1">The header <code class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></code> defines the following eleven macros (on the left)
+that expand to the corresponding tokens (on the right):</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">and</span> <span class="pre">&amp;&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">and_eq</span> <span class="pre">&amp;=</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">bitand</span> <span class="pre">&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">bitor</span> <span class="pre">|</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">compl</span> <span class="pre">~</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">not</span> <span class="pre">!</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">not_eq</span> <span class="pre">!=</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">or</span> <span class="pre">||</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">or_eq</span> <span class="pre">|=</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">xor</span> <span class="pre">^</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">xor_eq</span> <span class="pre">^=</span></code></div>
+</div>
+</div></blockquote>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../limits/" class="btn btn-neutral float-right" title="24. Sizes of integer types &lt;limits.h&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../inttypes/" class="btn btn-neutral" title="22. Format conversion of integer types &lt;inttypes.h&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012-2015, Shiv S. Dayal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

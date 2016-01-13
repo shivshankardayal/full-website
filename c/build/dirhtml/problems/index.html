@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17487464-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>40. Problems &mdash; C Programming  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="C Programming  documentation" href="../"/>
+        <link rel="next" title="41. License" href="../license/"/>
+        <link rel="prev" title="39. Wide character classification and mapping utilities &lt;wctype.h&gt;" href="../wtype/"/>
+<link rel="stylesheet" href="../../css/math.css" type="text/css" />
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../" class="icon icon-home"> C Programming
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strings/">9. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fileio/">10. File Input/Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">11. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">12. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">13. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">14. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">15. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">16. Diagnostics <code class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">17. Complex arithmetic <code class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">18. Character Handling <code class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">19. Errors <code class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">20. Floating-point environment <code class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">21. Characteristics of floating types <code class="docutils literal"><span class="pre">&lt;float.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">22. Format conversion of integer types <code class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">23. Alternative spellings <code class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">24. Sizes of integer types <code class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">25. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">26. Mathematics <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">27. Nonlocal jumps <code class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">28. Signal handling <code class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">29. Variable arguments <code class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">30. Boolean type and values <code class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">31. Common definitions <code class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">32. Integer types <code class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">33. Input/output <code class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">34. General utilities <code class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">35. String handling <code class="docutils literal"><span class="pre">&lt;string.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">36. Type-generic math <code class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">37. Date and time <code class="docutils literal"><span class="pre">&lt;time.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">38. Extended multibyte and wide character utilities <code class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">39. Wide character classification and mapping utilities <code class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">40. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">41. License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../">C Programming</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Docs</a> &raquo;</li>
+      
+    <li>40. Problems</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/problems.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="problems">
+<h1>40. Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h1>
+<p>This chapter contains all the problems at one place. Please try to solve these to
+gain a better understanding of language. Note that these are not categorized in any
+way but I have tried to maintain a certain order.</p>
+<p>All programs should have function prototypes, global declarations, inline function.
+constants and macros(never use these) radius as input find out its area and perimeter and print them.</p>
+<ol class="arabic simple">
+<li>Try to find which of the following characters are invalid in a variable name
+and which can be used as the first character.</li>
+</ol>
+<table class="hlist"><tr><td><ul class="simple">
+<li>i</li>
+<li>c</li>
+<li>a</li>
+</ul>
+</td><td><ul class="simple">
+<li>~</li>
+<li>*</li>
+</ul>
+</td><td><ul class="simple">
+<li>$</li>
+<li>3</li>
+</ul>
+</td><td><ul class="simple">
+<li>)</li>
+<li>^</li>
+</ul>
+</td><td><ul class="simple">
+<li>_</li>
+<li>,</li>
+</ul>
+</td></tr></table>
+<ol class="arabic simple" start="2">
+<li>Which of the following variable names are valid? Refer to previous problem to find
+the answer.</li>
+</ol>
+<table class="hlist"><tr><td><ul class="simple">
+<li>counter</li>
+<li>my_age</li>
+<li>1record</li>
+</ul>
+</td><td><ul class="simple">
+<li>five$</li>
+<li>%_of_principal</li>
+<li>_application</li>
+</ul>
+</td><td><ul class="simple">
+<li>__try</li>
+<li>Alpha_value_</li>
+<li>int</li>
+</ul>
+</td><td><ul class="simple">
+<li>integer</li>
+<li>switch</li>
+<li>keyword</li>
+</ul>
+</td><td><ul class="simple">
+<li>volatile</li>
+<li>printf</li>
+</ul>
+</td></tr></table>
+<ol class="arabic simple" start="3">
+<li>Write a program which takes a number and prints it. If the number is 1 then
+it prints &#8220;One&#8221; if it is 2 then it prints &#8220;Two&#8221;. Do it for up to 10.</li>
+<li>Given a radius as input find out its area and perimeter and print them.</li>
+<li>Write a program to print Pascal&#8217;s triangle. Details of Pascal&#8217;s triangle can
+be found at <a class="reference external" href="http://en.wikipedia.org/wiki/Pascal%27s_triangle">http://en.wikipedia.org/wiki/Pascal%27s_triangle</a></li>
+<li>Given a number in decimal compute its hex, octal and binary values and print them.</li>
+<li>Given a number in hex compute its decimal, octal and binary values and print them.</li>
+<li>Given an MxN matrix find its inverse and traspose.</li>
+<li>Given an LxM and an MxN matrix find their product.</li>
+<li>Given N find the total number of square on NxN chessboard.</li>
+<li>Given x in degress find Sine, Cosine and Tangent of x using Taylor&#8217;s expansion upto
+an accuracy of 10 places after decimal.</li>
+<li>Take a female&#8217;s name, age and color of dress as input. If she is below 16 and
+wearing blue then print &#8220;She is young and she is wearing blue dress&#8221; else print
+&#8220;She is grown up and wearing blue dress&#8221;. If she is wearing any other color dress
+then print that color. Try to minimise number of comparisons. Also, try to avoid
+lots of if-else. Try this using switch.</li>
+<li>What would be appropriate data type for previous problem?</li>
+<li>Optimize the Fibinacci program given in the book.</li>
+<li>Take a string as input. The string can be of any length then print the string.</li>
+<li>Find out what is the problem with strcpy and strlen functions of standard library.</li>
+<li>Write a pseudo random generator using modular arithmetic.</li>
+<li>Consider a company which has lots of employees. An employee can have name, age,
+address line1, line2, salary, tax cut percentage and take home salary. As input any
+number of employees can be entered with all the data. Find the take home salary
+and display all data for all employees.</li>
+<li>Write signal handlers for kill, terminate and interrupt signals. When program
+receives those signals print the signal number and exit.</li>
+<li>Write a bignum data structure. This structure should be able to take any integral number
+only limited by memory. Perform addition, subtraction, multiplication and division.
+Also write modulus, nth root and nth power functions.</li>
+<li>Given a number upto trillions print its textual form.</li>
+<li>Implement a loop without using any of the loop constructs. Proved two methods. Note
+that procesor does not have any instructions for looping.</li>
+<li>Optimize an m*n iteration single loop for speed.</li>
+<li>Given two strings find out whether second is a substring of first.</li>
+<li>Given a string which has only words, numbers, spaces and final period split the string
+on the basis of spaces. Print all tokens. Print final token without period. Write
+two programs one using strtok library function and one without it.</li>
+<li>Given an array of integers print all duplicates.</li>
+<li>Given an array of integers find the max subarray sum.</li>
+<li>Given a complex number find its square root without using csqrt library function.</li>
+<li>Write a complex number class and implement all functions of complex.h header file.</li>
+<li>Implement strcpy, strlen, strcat, strcmp, strncpy, strncat and strncmp.</li>
+<li>Implement printf. For printing to screen use fprintf.</li>
+<li>Read a text file and print its statistics. Number of alphabets, frequency of alphabets,
+number of words, frequency of words and number of sentences.</li>
+<li>Append &#8220;C is cool.&#8221; to a text file.</li>
+<li>Write a program which will have a function func. It can do anything or nothing. Depending
+on compilation command argument for -D switch the function should be included or discarded while
+compilation.</li>
+<li>Write a program where you malloc an integer pointer. Do not free it. Check
+your code with valgrind for possible memory leak.</li>
+<li>Generate a core of a program. You will need a SIGSEGV or other signals which generate
+a core.</li>
+<li>Use gdb to put a breakpoint, watch (variable, array, pointer, structure members),
+passing command line arguments, examine core, listing source, stepping into a function,
+stepping over and backtrace.</li>
+<li>Learn various functionalities of valgrind.</li>
+<li>Use clang&#8217;s static analyzer for all programs written till now to check your code.</li>
+<li>Traverse a matrix in spiral form. Both going in and out.</li>
+<li>Given a two dimensional array with all values set to 0. You will be given n cells column and
+row number as input. Try to draw a straight line by making all values 1 to construct a
+polygon in best possible fashion. Hint: Use Bresenham&#8217;s line drawing algorithm. You can find
+the details at <a class="reference external" href="http://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm">http://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm</a></li>
+<li>Write a program to parse XML and json files.</li>
+<li>Write a program which will give similar output when run against a filename.c as given by
+&#8220;gcc -E filename.c&#8221;. Essentially you are supposed to write preprocessor.</li>
+<li>What is the problem with following code?</li>
+</ol>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">f</span> <span class="o">+=</span> <span class="mf">0.1</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">f</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="45">
+<li>What is the problem with following code?</li>
+</ol>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Hello there</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="46">
+<li>What is the problem with following code?</li>
+</ol>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
+    <span class="k">continue</span><span class="p">;</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="47">
+<li>Consider a sorted array. How would you search a value in it?</li>
+<li>Print reversed Pascal triangle.</li>
+<li>Print following without using loops.</li>
+</ol>
+<div class="highlight-c"><div class="highlight"><pre>   <span class="o">*</span>
+  <span class="o">***</span>
+ <span class="o">*****</span>
+<span class="o">*******</span>
+ <span class="o">*****</span>
+  <span class="o">***</span>
+   <span class="o">*</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="50">
+<li>Use two files as data. Store parity in third file. Then use one of the data
+files and parity to generate third.</li>
+<li>Find your local time then go back by 5 hrs 20 mins and 36 seconds and print
+that time.</li>
+<li>Take an year as input and generate its calendar.</li>
+<li>Given two dates as input in following format MMDDYYYY find the no. of days
+between them.</li>
+<li>Open a file, fseek it past end and see what happens to its file size.</li>
+<li>Implement tower of Hanoi using iterative and recursive methods. Details of
+tower of Hanoi can be found at <a class="reference external" href="http://en.wikipedia.org/wiki/Tower_of_Hanoi">http://en.wikipedia.org/wiki/Tower_of_Hanoi</a></li>
+<li>Compute value of <span class="math">\(\pi\)</span> using various formulas described at <a class="reference external" href="http://mathworld.wolfram.com/PiFormulas.html">http://mathworld.wolfram.com/PiFormulas.html</a>
+upto a given precision.</li>
+<li>Write a parser for BNF grammar and use it to validate input. Use C99&#8217;s grammar
+as sample. Details of BNF grammar can be found at <a class="reference external" href="http://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form">http://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form</a>
+Hint: Look up Bison and Flex.</li>
+<li>Given an input find that in a given text file. Input can be any valid POSIX regex.</li>
+</ol>
+<p>Please find more problems at SPOJ and Valladolid programming championship and practice them.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../license/" class="btn btn-neutral float-right" title="41. License" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../wtype/" class="btn btn-neutral" title="39. Wide character classification and mapping utilities &lt;wctype.h&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012-2015, Shiv S. Dayal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

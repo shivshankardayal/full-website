@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17487464-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Stacks &mdash; Data Structures &amp; Algorithms 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Data Structures &amp; Algorithms 0.1 documentation" href="../"/>
+        <link rel="next" title="5. Queues" href="../queues/"/>
+        <link rel="prev" title="3. Linked List Solutions" href="../ls_solutions/"/>
+<link rel="stylesheet" href="../../css/math.css" type="text/css" />
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../" class="icon icon-home"> Data Structures & Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ls/">2. Linear Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ls_solutions/">3. Linked List Solutions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#array-based-implementation">4.1. Array Based Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stack-c">4.1.1. Stack.c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">4.1.2. Stack.c</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#linked-list-based-implementation">4.2. Linked List Based Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stack-ll-h">4.2.1. stack_ll.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stack-ll-c">4.2.2. stack_ll.c</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-of-stack">4.3. Usage of Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#problems-on-stacks">4.4. Problems on Stacks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../queues/">5. Queues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cldll/">6. Doubly Linked Lists and Circular Lists</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../">Data Structures & Algorithms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Docs</a> &raquo;</li>
+      
+    <li>4. Stacks</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/stack.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="stacks">
+<h1>4. Stacks<a class="headerlink" href="#stacks" title="Permalink to this headline">¶</a></h1>
+<p>Stacks in computer are very much analogous to the stacks we encounter in real-
+life. For example, a stack of dishes in kitchen or a stack of books on our
+study table. The semantics of stack is also very much similar to real-life. Say
+we want to take a book from a stack of books then we typically remove books
+from top first and then get our desired book and replace other books back. Thus
+a stack is kind of Last-In-First-Out structure (data structure so to say). In
+short it is written as <strong>LIFO</strong>.</p>
+<p>Stacks are typically implemented with few backends like arrays or pointers or
+linked lists. However, even though backend provides its own semantics the way
+stack operates overrules that. For example, we can access any element of an
+array by using its index operation but if we implement a stack using an array
+then the details of array is hidden. The only accessible element is through
+<code class="docutils literal"><span class="pre">top</span></code> of stack. Similarly, when we implement it using linked lists all
+operations happen though <code class="docutils literal"><span class="pre">head</span></code> of the linked list. It is quite possible to use
+<code class="docutils literal"><span class="pre">tail</span></code> as the <code class="docutils literal"><span class="pre">top</span></code> of the stack though, however, that would require small
+bookkeeping cost of tail pointer and <code class="docutils literal"><span class="pre">head</span></code> is not bad at all. Pointers are
+similar to arrays just that they allow for reallocation, when compared to
+arrays, in case more elements are going to come into stack that initially
+allocated.</p>
+<p>Stacks are heavily used in computer science. For example, inpix, postfix and
+prefix evaluations/conversions require stacks. Similarly, traversal of a
+binary tree without recursion requires a stack. Every program which we run on
+typical computer require a stack from memory management system of operating
+system. There are more numerous usage of stacks which you will come to know
+during your programming lifetime.</p>
+<p>Conventionally there are two operations, <code class="docutils literal"><span class="pre">push</span></code> and <code class="docutils literal"><span class="pre">pop</span></code> which pushes a new
+element on top of stack or pops and returns an element off the stack
+respectively. For both the operations one error condition can be encountered.
+When pushing the array may become full or simply there is no more memory left
+for allocation then a stack <em>overflow</em> case happens. Opposite to this is the
+situation when we want to pop an element when there are no elements in the
+stack. This is known as stack <em>underflow</em>.</p>
+<p>Complexity wise the space requirement is linear or <span class="math">\(O(n)\)</span> while <code class="docutils literal"><span class="pre">pop</span></code>
+and <code class="docutils literal"><span class="pre">push</span></code> can be performed in constant time i.e. <span class="math">\(O(1)\)</span> which you
+should be able to figure out from code as these are very simple to analyze.</p>
+<div class="section" id="array-based-implementation">
+<h2>4.1. Array Based Implementation<a class="headerlink" href="#array-based-implementation" title="Permalink to this headline">¶</a></h2>
+<p>In this implementation I have used arrays as backends for stack
+implementation. As you will notice the array size is controlled by the variable
+<code class="docutils literal"><span class="pre">MAX</span></code> which is 128. This is most inflexible but fastest implementation of all
+which I am going to show.</p>
+<p>The implementation has been split into two parts. The header file and the
+implementation file. This is kept so that code can be easily reused and this
+code can be converted to library. Please note that this code is not meant to
+be used in production environment is just an example. More commentary
+will follow the code:</p>
+<div class="section" id="stack-c">
+<h3>4.1.1. Stack.c<a class="headerlink" href="#stack-c" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#ifndef STACK_H</span>
+<span class="cp">#define STACK_H</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdbool.h&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">MAX</span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="p">[],</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">int</span> <span class="p">[]);</span>
+<span class="kt">bool</span> <span class="nf">IsEmpty</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">menu</span><span class="p">();</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>4.1.2. Stack.c<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &quot;stack.h&quot;</span>
+
+<span class="kt">bool</span> <span class="nf">isEmpty</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;top is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">top</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">element</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="n">MAX</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Stack overflow.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+  <span class="p">{</span>
+      <span class="n">stack</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">;</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Pushed element is %d.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">isEmpty</span><span class="p">(</span><span class="n">stack</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Stack underflow.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">];</span>
+        <span class="o">--</span><span class="n">top</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">menu</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;1. Push an element on top of stack.&quot;</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;2. Pop an element off the top of stack.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">stack</span><span class="p">[</span><span class="n">MAX</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+    <span class="kt">int</span> <span class="n">popped_element</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">option</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">menu</span><span class="p">();</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter 1 or 2 to choose an action. 0 to quit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">);</span>
+    <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">option</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">switch</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter an integer to push onto stack.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+                <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">element</span><span class="p">);</span>
+                <span class="n">push</span><span class="p">(</span><span class="n">stack</span><span class="p">,</span> <span class="n">element</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+                <span class="n">popped_element</span> <span class="o">=</span> <span class="n">pop</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Popped element is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">popped_element</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">default</span><span class="o">:</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">menu</span><span class="p">();</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter 1 or 2 to choose an action. 0 to quit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">);</span>
+        <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Let us try to visualize few operations on this array based stack. Let
+us assume our stack array is limited to 5 elements and we perform
+following operations: <code class="docutils literal"><span class="pre">push(1);</span> <span class="pre">push(2);</span> <span class="pre">push(3);</span> <span class="pre">push(4);</span> <span class="pre">push(5);</span>
+<span class="pre">pop();</span> <span class="pre">pop();</span> <span class="pre">pop();</span> <span class="pre">pop();</span> <span class="pre">pop();</span> <span class="pre">pop();</span></code>. Clearly as you see there
+are 5 push operations and 6 pop operations so program will quit with
+underflow.</p>
+<div class="figure align-center" id="id2">
+<img alt="Push and pop operation on a stack based on array." src="../_images/stack_array.gif" />
+<p class="caption"><span class="caption-text">Push and pop operation on a stack based on array.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="linked-list-based-implementation">
+<h2>4.2. Linked List Based Implementation<a class="headerlink" href="#linked-list-based-implementation" title="Permalink to this headline">¶</a></h2>
+<p>Given below is list based implementation of stacks. Note that it can grow as
+much as memory allows it to.</p>
+<div class="section" id="stack-ll-h">
+<h3>4.2.1. stack_ll.h<a class="headerlink" href="#stack-ll-h" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#ifndef STACK_LL_H</span>
+<span class="cp">#define STACK_LL_H</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdbool.h&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">Stack</span><span class="p">{</span>
+    <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">Stack</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span><span class="n">Stack</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="n">Stack</span><span class="o">**</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">pop</span><span class="p">(</span><span class="n">Stack</span><span class="o">**</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">menu</span><span class="p">();</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="stack-ll-c">
+<h3>4.2.2. stack_ll.c<a class="headerlink" href="#stack-ll-c" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &quot;stack_ll.h&quot;</span>
+
+<span class="kt">bool</span> <span class="nf">isEmpty</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">top</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;top is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">top</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="n">Stack</span><span class="o">**</span> <span class="n">top</span><span class="p">,</span> <span class="kt">int</span> <span class="n">element</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Stack</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="n">Stack</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Stack</span><span class="p">));</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Cannot allocate memory</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">top</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="o">*</span><span class="n">top</span><span class="p">;</span>
+        <span class="o">*</span><span class="n">top</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">top</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">element</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="n">top</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">top</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">top</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">element</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">pop</span><span class="p">(</span><span class="n">Stack</span><span class="o">**</span> <span class="n">top</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">isEmpty</span><span class="p">(</span><span class="o">*</span><span class="n">top</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Stack underflow.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">Stack</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">top</span><span class="p">;</span>
+
+    <span class="o">*</span><span class="n">top</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">top</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+    <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">menu</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;1. Push an element on top of stack.&quot;</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;2. Pop an element off the top of stack.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Stack</span><span class="o">*</span> <span class="n">stack</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">popped_element</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">option</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">menu</span><span class="p">();</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter 1 or 2 to choose an action. 0 to quit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">);</span>
+    <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">option</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">switch</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter an integer to push onto stack.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+                <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">element</span><span class="p">);</span>
+                <span class="n">push</span><span class="p">(</span><span class="o">&amp;</span><span class="n">stack</span><span class="p">,</span> <span class="n">element</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+                <span class="n">popped_element</span> <span class="o">=</span> <span class="n">pop</span><span class="p">(</span><span class="o">&amp;</span><span class="n">stack</span><span class="p">);</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Popped element is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">popped_element</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">default</span><span class="o">:</span>
+              <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">menu</span><span class="p">();</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter 1 or 2 to choose an action. 0 to quit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">);</span>
+        <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Push operation on linked list is like inserting in the beginning of a linked
+list and deletion is like removing the node pointed to by <code class="docutils literal"><span class="pre">head</span></code>.</p>
+</div>
+</div>
+<div class="section" id="usage-of-stack">
+<h2>4.3. Usage of Stack<a class="headerlink" href="#usage-of-stack" title="Permalink to this headline">¶</a></h2>
+<p>Stacks are very useful as they are used in various applications of algorithms.
+On many computer architectures stacks are used to represent a section of
+program memory. Calculators use it to evaluate expressions. One of the fairly
+neat usage is complete elimination of recursion using a stack. For example, as
+you will see binary trees are very easy to traverse using recursion but using
+a stack we can completely eliminate this recursion. The basic of elimination
+of reccursion using a stack lies in the fact that recursion calls make stack
+frames in memory similar behavior is simulated when we eliminate any recursion.</p>
+<p>Evaluation of expressions like Polish Notation or Reverse Polish Notation
+using a stack is well known. Stacks are also used to convert one type of
+expression into another type as we will see in examples.</p>
+</div>
+<div class="section" id="problems-on-stacks">
+<h2>4.4. Problems on Stacks<a class="headerlink" href="#problems-on-stacks" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Implement a queue using two stacks.</li>
+<li>Reverse a stack using two additional stacks.</li>
+<li>Reverse a stack using one additional queue.</li>
+<li>Reverse a stack using one additional stack and some additional variables.</li>
+<li>Convert infix to prefix and postfix using stack.</li>
+<li>Convert prefix to postfix and prefix using stack.</li>
+<li>Convert postfix to prefix and infix using stack.</li>
+<li>Implement two stacks in an array.</li>
+<li>Using a stack check for balanced parentheses in an expression.</li>
+<li>Given an array of integers find next greater element using a stack.</li>
+<li>Reverse a stack using recursion.</li>
+<li>Implement a function for a stack which gives minimum of its elements.</li>
+<li>Implement a stack so that operations can be performed over its middle
+element.</li>
+<li>Write a function to merge two stacks into one.</li>
+<li>Implement n stacks in an array with efficiency for space.</li>
+<li>Put the elements of an array in ascending order using one additional stack
+and some additional variables.</li>
+<li>Transfer an element from one stack to another stack using an additional
+stack while maintaining the order. Do it without using additional stack but
+some additional variables.</li>
+<li>Given a string find if it is palindrome using two stacks.</li>
+<li>Write a program for postfix evaluation of an expression.</li>
+<li>Write a program for prefix evaluation of an expression.</li>
+<li>Write a program for infix evaluation of an expression.</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../queues/" class="btn btn-neutral float-right" title="5. Queues" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../ls_solutions/" class="btn btn-neutral" title="3. Linked List Solutions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

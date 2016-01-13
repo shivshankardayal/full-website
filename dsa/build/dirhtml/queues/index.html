@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17487464-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Queues &mdash; Data Structures &amp; Algorithms 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Data Structures &amp; Algorithms 0.1 documentation" href="../"/>
+        <link rel="next" title="6. Doubly Linked Lists and Circular Lists" href="../cldll/"/>
+        <link rel="prev" title="4. Stacks" href="../stack/"/>
+<link rel="stylesheet" href="../../css/math.css" type="text/css" />
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../" class="icon icon-home"> Data Structures & Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ls/">2. Linear Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ls_solutions/">3. Linked List Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stack/">4. Stacks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#array-based-implementation">5.1. Array Based Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#queue-h">5.1.1. queue.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#queue-c">5.1.2. queue.c</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#linked-list-based-implementation">5.2. Linked List Based Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#queue-ll-h">5.2.1. queue_ll.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#queue-ll-c">5.2.2. queue_ll.c</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#problems-on-queues">5.3. Problems on Queues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cldll/">6. Doubly Linked Lists and Circular Lists</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../">Data Structures & Algorithms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Docs</a> &raquo;</li>
+      
+    <li>5. Queues</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/queues.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="queues">
+<h1>5. Queues<a class="headerlink" href="#queues" title="Permalink to this headline">¶</a></h1>
+<p>Similar to stacks queues are found in real-life as well and we are all well
+aware of them. In a queue we get in at the end and get out at the start i.e.
+in contrast to stacks both the ends are used one for enqueuing and the other
+for dequeuing. Queues have more forms like priority queues which are used to
+schedule things like process or task scheduling. Queues have a lot of other
+uses wherever we want to maintain a <strong>FIFO</strong> (first in first out) behavior.
+For example, scheduling of processes in an operating system, scheduling print
+jobs for a printer etc. Whenever you have to share a single resource for
+multiple request you can maintain a queue of requests for serving the
+requests. Another example could be playlists in music or video player. In
+distributed computing you have message queues like RabbitMQ.
+Similar to stacks I will show you both array based and linked list based
+implementation. Most asynchronous web servers maintain an even loop where
+events are queued as they arrive and dequeued as the processing engine is
+free and then it picks up next task from the even loop.</p>
+<p>Like stacks there are two operations, <code class="docutils literal"><span class="pre">enqueue</span></code> and <code class="docutils literal"><span class="pre">dequeue</span></code> wcich adds an
+element at the end and removed one element from head respectively. Both these
+operations can be performed in <span class="math">\(O(1)\)</span> time complexity. For
+<code class="docutils literal"><span class="pre">enqueue</span></code> we might have an error state when the queue may become full or we
+may not have more memory depending on the fact whether the queue is array
+based or linked list based. For <code class="docutils literal"><span class="pre">dequeue</span></code> we can always reach a stage when
+the queue is empty.</p>
+<p>Complexity wise the space requirement is linear or <span class="math">\(O(n)\)</span> while
+<code class="docutils literal"><span class="pre">enqueue</span></code> and <code class="docutils literal"><span class="pre">dequeue</span></code> can be performed in constant time i.e. <span class="math">\(O(1)\)</span>
+which you should be able to figure out from code as these are very simple to
+analyze.</p>
+<div class="section" id="array-based-implementation">
+<h2>5.1. Array Based Implementation<a class="headerlink" href="#array-based-implementation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="queue-h">
+<h3>5.1.1. queue.h<a class="headerlink" href="#queue-h" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#ifndef QUEUE_H</span>
+<span class="cp">#define QUEUE_H</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdbool.h&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">MAX</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">head</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">tail</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">enqueue</span><span class="p">(</span><span class="kt">int</span> <span class="p">[],</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">dequeue</span><span class="p">(</span><span class="kt">int</span><span class="p">[]);</span>
+<span class="kt">void</span> <span class="nf">menu</span><span class="p">();</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="queue-c">
+<h3>5.1.2. queue.c<a class="headerlink" href="#queue-c" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &quot;queue.h&quot;</span>
+
+<span class="kt">void</span> <span class="nf">enqueue</span><span class="p">(</span><span class="kt">int</span> <span class="n">queue</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">element</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">((</span><span class="n">head</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">tail</span><span class="o">==</span> <span class="n">MAX</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">head</span><span class="o">==</span><span class="n">tail</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">Queue is full.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">tail</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+          <span class="n">tail</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+          <span class="n">head</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">tail</span> <span class="o">==</span> <span class="n">MAX</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">tail</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="k">else</span>
+        <span class="n">tail</span><span class="o">++</span><span class="p">;</span>
+      <span class="n">queue</span><span class="p">[</span><span class="n">tail</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">dequeue</span><span class="p">(</span><span class="kt">int</span> <span class="n">queue</span><span class="p">[])</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">element</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Queue is empty.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="p">{</span>
+      <span class="n">element</span> <span class="o">=</span> <span class="n">queue</span><span class="p">[</span><span class="n">head</span><span class="p">];</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="n">tail</span><span class="p">)</span>
+        <span class="p">{</span>
+          <span class="n">head</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+          <span class="n">tail</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="n">MAX</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">head</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="k">else</span>
+        <span class="n">head</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="k">return</span> <span class="n">element</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">menu</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">puts</span><span class="p">(</span><span class="s">&quot;1. Enqueue and element into the queue.&quot;</span><span class="p">);</span>
+  <span class="n">puts</span><span class="p">(</span><span class="s">&quot;2. Dequeque an element from the queue.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">queue</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">dequeued_element</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">option</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+
+  <span class="n">menu</span><span class="p">();</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter 1 or 2 to choose an action. 0 to quit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">);</span>
+  <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">option</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">switch</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter an integer to enqueue into queue.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+          <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">element</span><span class="p">);</span>
+          <span class="n">enqueue</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="n">element</span><span class="p">);</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+          <span class="n">dequeued_element</span> <span class="o">=</span> <span class="n">dequeue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dequeued element is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">dequeued_element</span><span class="p">);</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="k">default</span><span class="o">:</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+
+      <span class="n">menu</span><span class="p">();</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter 1 or 2 to choose an action. 0 to quit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">);</span>
+      <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+    <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this array version of queue array is used as a circular buffer. Let us assume
+value of <code class="docutils literal"><span class="pre">MAX</span></code> is 4. Let us try to visualize operations of <code class="docutils literal"><span class="pre">enqueue(1);</span>
+<span class="pre">enqueue(2);</span> <span class="pre">enqueue(3);</span> <span class="pre">dequeue();</span> <span class="pre">enqueue(4);</span> <span class="pre">enqueue(5);</span> <span class="pre">dequeue();</span>
+<span class="pre">enqueue(6);</span> <span class="pre">dequeue();</span> <span class="pre">enqueue(7);</span> <span class="pre">dequeue();</span> <span class="pre">dequeue();</span> <span class="pre">dequeue();</span> <span class="pre">dequeue();</span></code></p>
+<div class="figure align-center" id="id1">
+<img alt="Enqueue and dequeue and operation on a queue based on array." src="../_images/queue_array.gif" />
+<p class="caption"><span class="caption-text">Enqueue and dequeue and operation on a queue based on array.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="linked-list-based-implementation">
+<h2>5.2. Linked List Based Implementation<a class="headerlink" href="#linked-list-based-implementation" title="Permalink to this headline">¶</a></h2>
+<p>Given below is list based implementation of queues.</p>
+<div class="section" id="queue-ll-h">
+<h3>5.2.1. queue_ll.h<a class="headerlink" href="#queue-ll-h" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#ifndef QUEUE_H</span>
+<span class="cp">#define QUEUE_H</span>
+
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdbool.h&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">Queue</span><span class="p">{</span>
+  <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+  <span class="k">struct</span> <span class="n">Queue</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span><span class="n">Queue</span><span class="p">;</span>
+
+<span class="n">Queue</span> <span class="o">*</span><span class="n">head</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="n">Queue</span> <span class="o">*</span><span class="n">tail</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">enqueue</span><span class="p">(</span><span class="n">Queue</span><span class="o">**</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">dequeue</span><span class="p">(</span><span class="n">Queue</span><span class="o">**</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">menu</span><span class="p">();</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="queue-ll-c">
+<h3>5.2.2. queue_ll.c<a class="headerlink" href="#queue-ll-c" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &quot;queue_ll.h&quot;</span>
+
+<span class="kt">void</span> <span class="nf">enqueue</span><span class="p">(</span><span class="n">Queue</span><span class="o">**</span> <span class="n">t</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Queue</span> <span class="o">*</span><span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="n">Queue</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Queue</span><span class="p">));</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Out of memory!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="n">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+  <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+  <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
+
+  <span class="k">if</span><span class="p">((</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">*</span><span class="n">t</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">))</span>
+    <span class="p">{</span>
+      <span class="n">head</span> <span class="o">=</span> <span class="o">*</span><span class="n">t</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="k">else</span>
+    <span class="p">{</span>
+      <span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+      <span class="o">*</span><span class="n">t</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">dequeue</span><span class="p">(</span><span class="n">Queue</span><span class="o">**</span> <span class="n">h</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">h</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">tail</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Queue empty!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+  <span class="k">if</span><span class="p">((</span><span class="o">*</span><span class="n">h</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">tail</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">*</span><span class="n">h</span> <span class="o">==</span> <span class="n">tail</span><span class="p">))</span>
+    <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+
+      <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+      <span class="n">free</span><span class="p">(</span><span class="o">*</span><span class="n">h</span><span class="p">);</span>
+      <span class="o">*</span><span class="n">h</span> <span class="o">=</span> <span class="n">tail</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+      <span class="k">return</span> <span class="n">data</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="k">else</span>
+    <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+      <span class="n">Queue</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">h</span><span class="p">;</span>
+
+      <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+      <span class="o">*</span><span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+      <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+      <span class="k">return</span> <span class="n">data</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">menu</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">puts</span><span class="p">(</span><span class="s">&quot;1. Enqueue and element into the queue.&quot;</span><span class="p">);</span>
+  <span class="n">puts</span><span class="p">(</span><span class="s">&quot;2. Dequeque an element from the queue.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">dequeued_element</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">option</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+
+  <span class="n">menu</span><span class="p">();</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter 1 or 2 to choose an action. 0 to quit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">);</span>
+  <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">option</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">switch</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter an integer to enqueue into queue.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+          <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">element</span><span class="p">);</span>
+          <span class="n">enqueue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tail</span><span class="p">,</span> <span class="n">element</span><span class="p">);</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+          <span class="n">dequeued_element</span> <span class="o">=</span> <span class="n">dequeue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">head</span><span class="p">);</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Dequeued element is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">dequeued_element</span><span class="p">);</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="k">default</span><span class="o">:</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+
+      <span class="n">menu</span><span class="p">();</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter 1 or 2 to choose an action. 0 to quit.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+      <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">);</span>
+      <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+    <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Enqueue operation on a linked list is like appending an element to list while
+dequeue operation is like deleting first node pointed to by <code class="docutils literal"><span class="pre">head</span></code> pointer of
+linked list.</p>
+</div>
+</div>
+<div class="section" id="problems-on-queues">
+<h2>5.3. Problems on Queues<a class="headerlink" href="#problems-on-queues" title="Permalink to this headline">¶</a></h2>
+<p>For all these problems use linked list version of queues.</p>
+<ol class="arabic simple">
+<li>Implement a stack using two queues.</li>
+<li>Order all elements of a queue using two additional queues.</li>
+<li>Order all elements of a queue using one additional queue and some variables.</li>
+<li>Assume you have a queue of processes which will do some computation. Each
+task will take some time in integers with say a mean value of 3
+second. Supposed you have quad core CPU and so you can run 4 tasks in
+parallel. Generate these tasks with a task id in monotonically increasing
+fashion; put them in queue and process them in  fair manner. Once id
+generates <code class="docutils literal"><span class="pre">UINT_MAX</span></code> let id start from 0. Generate a mean of 4 tasks in 3
+seconds on average.</li>
+<li>Implement a stack of queues, stack of stacks, queue of stacks and queue of
+queues. Write functions appropriate to implement the operations on these
+data structures.</li>
+<li>A <strong>deque</strong> is a queue in which insertion and deletion can be done from
+either ends. Implement a deque using an array as circular buffer and linked
+list. Implement four functions <code class="docutils literal"><span class="pre">insrtlft,</span> <span class="pre">insrtrght,</span> <span class="pre">rmvlft</span></code> and
+<code class="docutils literal"><span class="pre">rmvrght</span></code>.</li>
+<li>An <strong>input-restricted deque</strong> is a deque in which output can be done from
+one end. Implement one such deque in which insertion can only be done from
+right side using a linked list and array. Similarly, implement
+<strong>output-restricted deque</strong> in which deletion can be done from only one
+end. Implement one such deque in which deletion can be done from left
+end. Show that such deques can be used either as stack or as queue.</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../cldll/" class="btn btn-neutral float-right" title="6. Doubly Linked Lists and Circular Lists" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../stack/" class="btn btn-neutral" title="4. Stacks" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

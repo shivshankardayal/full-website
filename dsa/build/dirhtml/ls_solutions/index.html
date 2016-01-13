@@ -1,0 +1,763 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17487464-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Linked List Solutions &mdash; Data Structures &amp; Algorithms 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Data Structures &amp; Algorithms 0.1 documentation" href="../"/>
+        <link rel="next" title="4. Stacks" href="../stack/"/>
+        <link rel="prev" title="2. Linear Structures" href="../ls/"/>
+<link rel="stylesheet" href="../../css/math.css" type="text/css" />
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../" class="icon icon-home"> Data Structures & Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ls/">2. Linear Structures</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Linked List Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stack/">4. Stacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../queues/">5. Queues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cldll/">6. Doubly Linked Lists and Circular Lists</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../">Data Structures & Algorithms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Docs</a> &raquo;</li>
+      
+    <li>3. Linked List Solutions</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/ls_solutions.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="linked-list-solutions">
+<h1>3. Linked List Solutions<a class="headerlink" href="#linked-list-solutions" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>and 2. will be implemented in next chapter.</li>
+</ol>
+<ol class="arabic" start="3">
+<li><p class="first">You can add these two lines to linked list implementation as prototype for
+implementation for iterative and recursive version.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">rreverse</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span><span class="p">,</span> <span class="n">ll</span><span class="o">*</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The most important thing is to be able to think how we are going to do
+the implementation. Let us first take the case of non-recursive part. We
+can visualize the linked list as nodes attached with pointers. So all we
+have to do is make <code class="docutils literal"><span class="pre">head</span></code> point to the last node. We reverse the pointer.
+Now since the pointer is broken we need to maintain two pointers the current
+node and the next node, hence, we will need two extra pointers. Now as
+<code class="docutils literal"><span class="pre">next</span></code> pointer is broken we can keep assigning current pointer to it as
+shown in the diagram below:</p>
+<p>The equivalent code for the above can be written as:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span> <span class="n">head</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ll</span> <span class="o">*</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">ll</span> <span class="o">*</span><span class="n">current</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">))</span>
+        <span class="k">return</span><span class="p">;</span>
+
+    <span class="k">while</span><span class="p">((</span><span class="o">*</span><span class="n">head</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">next</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">)</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Notice that when we reach the end of node the pointer <code class="docutils literal"><span class="pre">next</span></code> will be in
+broken state and therefore from last pointer whose next would be pointing
+<code class="docutils literal"><span class="pre">NULL</span></code> must be made to point to current node as shown. The entire process
+is shown in the diagram below(we start with a list having three nodes 10, 20
+and 30. Again see the image form bottom to top.):</p>
+<div class="figure">
+<p><img src="../_images/tikz-27b23f578a37faf436f4cd4d2b06459a419ad8e5.png" alt="\node at(0, 0) [rectangle, draw] (A) {20};
+\node at(2, 0) [rectangle, draw] (B) {30};
+\node at(-2, 0) [rectangle, draw] (C) {10};
+
+\draw [-&gt;, &gt;=stealth] (C.east) -- (A.west);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ++(1, 0);
+\draw [&lt;-, &gt;=stealth] (C.west) -- ++(-1, 0);
+
+\node at ($(B.east)+(1.7, 0)$) {$NULL$};
+\node at ($(C.west)-(1.7, 0)$) {$*head$};
+\node at ($(C.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+
+\node [label={[align=center, yshift=-1.3cm]Initially we have three nodes in
+linked list.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-f2c1f0a2eb629f0ccbf49cc52f12c26a761f8341.png" alt="\node at(0, 0) [rectangle, draw] (A) {20};
+\node at(2, 0) [rectangle, draw] (B) {30};
+\node at(-2, 0) [rectangle, draw] (C) {10};
+\node at(0, 1.5) (D) {$next$};
+
+\draw [-&gt;, &gt;=stealth] (C.east) -- (A.west);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ++(1, 0);
+\draw [&lt;-, &gt;=stealth] (C.west) -- ++(-1, 0);
+\draw [-&gt;, &gt;=stealth] (D.south) -- (A.north);
+
+\node at ($(B.east)+(1.7, 0)$) {$NULL$};
+\node at ($(C.west)-(1.7, 0)$) {$*head$};
+\node at ($(C.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+
+\node [label={[align=center, yshift=-1.3cm]In the while loop $next$
+variable points to $(*head)-&gt;next$.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-29e5e99f3a4fc208c81fd54c6744c0ccb65c4e25.png" alt="\node at(0, 0) [rectangle, draw] (A) {20};
+\node at(2, 0) [rectangle, draw] (B) {30};
+\node at(-2, 0) [rectangle, draw] (C) {10};
+\node at(0, 1.5) (D) {$next$};
+
+\draw [-&gt;, &gt;=stealth] (C.east) -- ($(A.west)!.5!(C.east)$) --
+($(A.west)!.5!(C.east)$) -- ++(0, -.5);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ++(1, 0);
+\draw [&lt;-, &gt;=stealth] (C.west) -- ++(-1, 0);
+\draw [-&gt;, &gt;=stealth] (D.south) -- (A.north);
+
+\node at ($(B.east)+(1.7, 0)$) {$NULL$};
+\node at ($(C.west)-(1.7, 0)$) {$*head$};
+\node at ($(C.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+
+\node at ($(A.west)!.5!(C.east)+(0, -.8)$) {$NULL$};
+
+\node [label={[align=center, yshift=-1.8cm]$(*head)-&gt;next$ is assigned
+$current$ which is $NULL$.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-2dece46d399553ea06d47d18c0a370e9bd1f111b.png" alt="\node at(0, 0) [rectangle, draw] (A) {20};
+\node at(2, 0) [rectangle, draw] (B) {30};
+\node at(-2, 0) [rectangle, draw] (C) {10};
+\node at(0, 1.5) (D) {$next$};
+\node at(-2, 1.5) (E) {$current$};
+
+\draw [-&gt;, &gt;=stealth] (C.east) -- ($(A.west)!.5!(C.east)$) --
+($(A.west)!.5!(C.east)$) -- ++(0, -.5);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ++(1, 0);
+\draw [&lt;-, &gt;=stealth] (C.west) -- ++(-1, 0);
+\draw [-&gt;, &gt;=stealth] (D.south) -- (A.north);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (C.north);
+
+\node at ($(B.east)+(1.7, 0)$) {$NULL$};
+\node at ($(C.west)-(1.7, 0)$) {$*head$};
+\node at ($(C.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+
+\node at ($(A.west)!.5!(C.east)+(0, -.8)$) {$NULL$};
+
+\node [label={[align=center, yshift=-1.8cm]Now $current$ points to
+$*head$.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-aa5424a3b85092170b603ad60eed6ac6e598886d.png" alt="\node at(0, 0) [rectangle, draw] (A) {20};
+\node at(2, 0) [rectangle, draw] (B) {30};
+\node at(-2, 0) [rectangle, draw] (C) {10};
+\node at(0, 1.5) (D) {$next$};
+\node at(-2, 1.5) (E) {$current$};
+
+\draw [-&gt;, &gt;=stealth] (C.east) -- ($(A.west)!.5!(C.east)$) --
+($(A.west)!.5!(C.east)$) -- ++(0, -.5);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ++(1, 0);
+\draw [-&gt;, &gt;=stealth] (D.south) -- (A.north);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (C.north);
+
+\node at ($(B.east)+(1.7, 0)$) {$NULL$};
+\node at ($(A.north west)+(-.8, .7)$) {$*head$};
+\node at ($(C.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+
+\node at ($(A.west)!.5!(C.east)+(0, -.8)$) {$NULL$};
+\draw [&lt;-, &gt;=stealth] (A.north west) -- ++(-.5, +.5);
+
+\node [label={[align=center, yshift=-1.8cm]$*head$ moves to $next$.}] (F)
+{};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-30e2a894d439b2fdc7558b25c3da74d8fe6fc334.png" alt="\node at(0, 0) [rectangle, draw] (A) {20};
+\node at(2, 0) [rectangle, draw] (B) {30};
+\node at(-2, 0) [rectangle, draw] (C) {10};
+\node at(2, 1.5) (D) {$next$};
+\node at(-2, 1.5) (E) {$current$};
+
+\draw [-&gt;, &gt;=stealth] (C.east) -- ($(A.west)!.5!(C.east)$) --
+($(A.west)!.5!(C.east)$) -- ++(0, -.5);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ++(1, 0);
+\draw [-&gt;, &gt;=stealth] (D.south) -- (B.north);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (C.north);
+
+\node at ($(B.east)+(1.7, 0)$) {$NULL$};
+\node at ($(A.north west)+(-.8, .7)$) {$*head$};
+\node at ($(C.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+
+\node at ($(A.west)!.5!(C.east)+(0, -.8)$) {$NULL$};
+\draw [&lt;-, &gt;=stealth] (A.north west) -- ++(-.5, +.5);
+
+\node [label={[align=center, yshift=-1.8cm]In the next iteration of loop
+$next$ moves to $(*head)-&gt;next$.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-6dc0c98f238a719d3d7053d5ffa4a6c2159f0f03.png" alt="\node at(0, 0) [rectangle, draw] (A) {20};
+\node at(2, 0) [rectangle, draw] (B) {30};
+\node at(-2, 0) [rectangle, draw] (C) {10};
+\node at(2, 1.5) (D) {$next$};
+\node at(-2, 1.5) (E) {$current$};
+
+\draw [-&gt;, &gt;=stealth] (C.west) -- ++(-.5, 0) -- ++(0, -.5);
+\draw [-&gt;, &gt;=stealth] (A.west) -- (C.east);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ++(1, 0);
+\draw [-&gt;, &gt;=stealth] (D.south) -- (B.north);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (C.north);
+
+\node at ($(B.east)+(1.7, 0)$) {$NULL$};
+\node at ($(A.north west)+(-.8, .7)$) {$*head$};
+\node at ($(C.west)+(-.5, .2)$) {next};
+\node at ($(A.west)+(-.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+
+\node at ($(C.west)+(-.5, -.8)$) {$NULL$};
+\draw [&lt;-, &gt;=stealth] (A.north west) -- ++(-.5, +.5);
+
+\node [label={[align=center, yshift=-1.8cm]$(*head)-&gt;next$ is assigned
+$current$.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-6aebd6d95b3059fd7f1433c4dc526e134695ebb1.png" alt="\node at(0, 0) [rectangle, draw] (A) {20};
+\node at(2, 0) [rectangle, draw] (B) {30};
+\node at(-2, 0) [rectangle, draw] (C) {10};
+\node at(2, 1.5) (D) {$next$};
+\node at(0, 1.5) (E) {$current$};
+
+\draw [-&gt;, &gt;=stealth] (C.west) -- ++(-.5, 0) -- ++(0, -.5);
+\draw [-&gt;, &gt;=stealth] (A.west) -- (C.east);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ++(1, 0);
+\draw [-&gt;, &gt;=stealth] (D.south) -- (B.north);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (A.north);
+
+\node at ($(B.east)+(1.7, 0)$) {$NULL$};
+\node at ($(A.north west)+(-.8, .7)$) {$*head$};
+\node at ($(C.west)+(-.5, .2)$) {next};
+\node at ($(A.west)+(-.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+
+\node at ($(C.west)+(-.5, -.8)$) {$NULL$};
+\draw [&lt;-, &gt;=stealth] (A.north west) -- ++(-.5, +.5);
+
+\node [label={[align=center, yshift=-1.8cm]$current$ is assigned
+$*head$.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-bd4a4843291bbd8531d281f535700edf6dd0df58.png" alt="\node at(0, 0) [rectangle, draw] (A) {20};
+\node at(2, 0) [rectangle, draw] (B) {30};
+\node at(-2, 0) [rectangle, draw] (C) {10};
+\node at(2, 1.5) (D) {$next$};
+\node at(0, 1.5) (E) {$current$};
+
+\draw [-&gt;, &gt;=stealth] (C.west) -- ++(-.5, 0) -- ++(0, -.5);
+\draw [-&gt;, &gt;=stealth] (A.west) -- (C.east);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ++(1, 0);
+\draw [-&gt;, &gt;=stealth] (D.south) -- (B.north);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (A.north);
+
+\node at ($(B.east)+(1.7, 0)$) {$NULL$};
+\node at ($(B.north west)+(-.8, .7)$) {$*head$};
+\node at ($(C.west)+(-.5, .2)$) {next};
+\node at ($(A.west)+(-.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+
+\node at ($(C.west)+(-.5, -.8)$) {$NULL$};
+\draw [&lt;-, &gt;=stealth] (B.north west) -- ++(-.5, +.5);
+
+\node [label={[align=center, yshift=-1.8cm]$*head$ is assigned
+$next$.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-32e7a39d14e6c543abe6b3a96afe9355dee30d54.png" alt="\node at(0, 0) [rectangle, draw] (A) {20};
+\node at(2, 0) [rectangle, draw] (B) {30};
+\node at(-2, 0) [rectangle, draw] (C) {10};
+\node at(2, 1.5) (D) {$next$};
+\node at(0, 1.5) (E) {$current$};
+
+\draw [-&gt;, &gt;=stealth] (C.west) -- ++(-.5, 0) -- ++(0, -.5);
+\draw [-&gt;, &gt;=stealth] (A.west) -- (C.east);
+\draw [-&gt;, &gt;=stealth] (B.west) -- (A.east);
+\draw [-&gt;, &gt;=stealth] (D.south) -- (B.north);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (A.north);
+
+\node at ($(B.east)+(1.7, 0)$) {$NULL$};
+\node at ($(B.north west)+(-.8, .7)$) {$*head$};
+\node at ($(C.west)+(-.5, .2)$) {next};
+\node at ($(A.west)+(-.5, .2)$) {next};
+\node at ($(B.west)+(-.5, .2)$) {next};
+
+\node at ($(C.west)+(-.5, -.8)$) {$NULL$};
+\draw [&lt;-, &gt;=stealth] (B.north west) -- ++(-.5, +.5);
+
+\node [label={[align=center, yshift=-2.3cm]$(*head)-&gt;netx$ is NULL.
+Loop terminates.\\$(*head)-&gt;next = current$.}] (F) {};" /></p>
+<p class="caption">Iterative reversal of a singly linked list.</p></div><p>For recursive version first we need a condition to iterate to last node.
+Then if <code class="docutils literal"><span class="pre">next</span></code> of <code class="docutils literal"><span class="pre">next</span></code> is not <code class="docutils literal"><span class="pre">NULL</span></code> then we make that point to
+currrent node. The current node&#8217;s next is useless for us and we make it
+<code class="docutils literal"><span class="pre">NULL</span></code> because the first node which will be last after reversal will have
+next pointing to <code class="docutils literal"><span class="pre">NULL</span></code> which is good for us. Now if <code class="docutils literal"><span class="pre">next</span></code> is NULL then
+we are at last node and let us make this <code class="docutils literal"><span class="pre">head</span></code>. The entire operation can
+be visualized below:</p>
+<p>The code which does recursive iteration is given below:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="nf">rreverse</span><span class="p">(</span><span class="n">ll</span><span class="o">**</span> <span class="n">head</span><span class="p">,</span> <span class="n">ll</span><span class="o">*</span> <span class="n">current</span><span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="o">*</span><span class="n">head</span><span class="p">))</span>
+        <span class="k">return</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">rreverse</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+        <span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+        <span class="o">*</span><span class="n">head</span><span class="o">=</span><span class="n">current</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The call to rreverse must ensure that <code class="docutils literal"><span class="pre">current</span></code> is sent with the same value
+as head. Also, remember to update the menu and switch cases. As you can see
+if your linked list with less than two elements then code will not change
+anything. Let us see what happens if we call this function <code class="docutils literal"><span class="pre">rreverse</span></code> like
+<code class="docutils literal"><span class="pre">rreverse(&amp;head,</span> <span class="pre">head);</span></code>. For this example consider a list having four
+elements 10, 20 30 and 40.</p>
+<div class="figure">
+<p><img src="../_images/tikz-981000727e9ed0065595dca3dbdec3e75c7ecfc2.png" alt="\node at (0, 0) [rectangle, draw] (A) {20};
+\node at (2, 0) [rectangle, draw] (B) {30};
+\node at (4, 0) [rectangle, draw] (C) {40};
+\node at (-2, 0) [rectangle, draw] (D) {10};
+\node at(-2, 1.5) (E) {$current$};
+
+\draw [&lt;-, &gt;=stealth] (D.west) -- ++(-1, 0);
+\draw [-&gt;, &gt;=stealth] (C.east) -- ++(1, 0);
+\draw [-&gt;, &gt;=stealth] (D.east) -- (A.west);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- (C.west);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (D.north);
+
+\node at ($(C.east)+(1.7, 0)$) {$NULL$};
+\node at ($(D.west)-(1.7, 0)$) {$*head$};
+\node at ($(D.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+\node at ($(C.east)+(.5, .2)$) {next};
+
+\node [label={[align=center, yshift=-1.8cm]$rreverse$ is called with
+$\&amp;head$ and $head$.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-304db12c3679f61d913effa7ce61a2acbe16b743.png" alt="\node at (0, 0) [rectangle, draw] (A) {20};
+\node at (2, 0) [rectangle, draw] (B) {30};
+\node at (4, 0) [rectangle, draw] (C) {40};
+\node at (-2, 0) [rectangle, draw] (D) {10};
+\node at(0, 1.5) (E) {$current$};
+
+\draw [&lt;-, &gt;=stealth] (D.west) -- ++(-1, 0);
+\draw [-&gt;, &gt;=stealth] (C.east) -- ++(1, 0);
+\draw [-&gt;, &gt;=stealth] (D.east) -- (A.west);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- (C.west);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (A.north);
+
+\node at ($(C.east)+(1.7, 0)$) {$NULL$};
+\node at ($(D.west)-(1.7, 0)$) {$*head$};
+\node at ($(D.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+\node at ($(C.east)+(.5, .2)$) {next};
+
+\node [label={[align=center, yshift=-1.1cm]$rreverse$ is called with
+$current$ moving to next node.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-6bcdc8ef9c9ac3e10672a3cad85aae92ee43223c.png" alt="\node at (0, 0) [rectangle, draw] (A) {20};
+\node at (2, 0) [rectangle, draw] (B) {30};
+\node at (4, 0) [rectangle, draw] (C) {40};
+\node at (-2, 0) [rectangle, draw] (D) {10};
+\node at(2, 1.5) (E) {$current$};
+
+\draw [&lt;-, &gt;=stealth] (D.west) -- ++(-1, 0);
+\draw [-&gt;, &gt;=stealth] (C.east) -- ++(1, 0);
+\draw [-&gt;, &gt;=stealth] (D.east) -- (A.west);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- (C.west);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (B.north);
+
+\node at ($(C.east)+(1.7, 0)$) {$NULL$};
+\node at ($(D.west)-(1.7, 0)$) {$*head$};
+\node at ($(D.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+\node at ($(C.east)+(.5, .2)$) {next};
+
+\node [label={[align=center, yshift=-1.1cm]$rreverse$ is called with
+$current$ moving to next node.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-3b7b3f1696a8eec7e05e94712cc5e85439352420.png" alt="\node at (0, 0) [rectangle, draw] (A) {20};
+\node at (2, 0) [rectangle, draw] (B) {30};
+\node at (4, 0) [rectangle, draw] (C) {40};
+\node at (-2, 0) [rectangle, draw] (D) {10};
+\node at(4, 1.5) (E) {$current$};
+
+\draw [&lt;-, &gt;=stealth] (C.north east) -- ++(.5, .5);
+\draw [-&gt;, &gt;=stealth] (C.east) -- ++(1, 0);
+\draw [-&gt;, &gt;=stealth] (D.east) -- (A.west);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- (C.west);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (C.north);
+
+\node at ($(C.east)+(1.7, 0)$) {$NULL$};
+\node at ($(C.north east)+(1.1, .7)$) {$*head$};
+\node at ($(D.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+\node at ($(C.east)+(.5, .2)$) {next};
+
+\node [label={[align=center, yshift=-2.3cm]$rreverse$ is called with
+$current$ moving to next node.\\$current-&gt;next$ is $NULL$ so recursion
+stops.\\$*head$ is assigned $current$. Code falls in else as stack
+unwinds.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-608536ea0461ac4379095384714f2bda92108152.png" alt="\node at (0, 0) [rectangle, draw] (A) {20};
+\node at (2, 0) [rectangle, draw] (B) {30};
+\node at (4, 0) [rectangle, draw] (C) {40};
+\node at (-2, 0) [rectangle, draw] (D) {10};
+\node at(2, 1.5) (E) {$current$};
+
+\draw [&lt;-, &gt;=stealth] (C.north east) -- ++(.5, .5);
+\draw [-&gt;, &gt;=stealth] (C.east) -- ++(1, 0);
+\draw [-&gt;, &gt;=stealth] (D.east) -- (A.west);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- (C.west);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (B.north);
+
+\node at ($(C.east)+(1.7, 0)$) {$NULL$};
+\node at ($(C.north east)+(1.1, .7)$) {$*head$};
+\node at ($(D.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+\node at ($(C.east)+(.5, .2)$) {next};
+
+\node [label={[align=center, yshift=-1.1cm]$rreverse$ returns. $current$
+is now at previous value.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-5b9d54e797bd6633bdb9455b792b68838d1820ba.png" alt="\node at (0, 0) [rectangle, draw] (A) {20};
+\node at (2, 0) [rectangle, draw] (B) {30};
+\node at (4, 0) [rectangle, draw] (C) {40};
+\node at (-2, 0) [rectangle, draw] (D) {10};
+\node at(2, 1.5) (E) {$current$};
+
+\draw [&lt;-, &gt;=stealth] (C.north east) -- ++(.5, .5);
+\draw [-&gt;, &gt;=stealth] (D.east) -- (A.west);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ($(B.east)!.5!(C.west)$) -- ++(0, -.5);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (B.north);
+\draw [-&gt;, &gt;=stealth] (C.north west) -- ($(C.north west)+(-.3, +.5)$) --
+($(B.north east)+(.3, +.5)$) -- (B.north east);
+
+\node at ($(C.north east)+(1.1, .7)$) {$*head$};
+\node at ($(D.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+\node at ($(C.north west)+(+.3, .5)$) {next};
+
+\node [label={[align=center, yshift=-2.3cm]Now second $if$ is tested
+which is $true$.\\$current-&gt;next$ is $NULL$. $current-&gt;next-&gt;next$ is
+assigned $current$.\\$current-&gt;next$ is assigned $NULL$.}] (F) {};" /></p>
+</div><div class="figure">
+<p><img src="../_images/tikz-01c9195ca9573fd87f2fb43c2003e2df01f5a6d9.png" alt="\node at (0, 0) [rectangle, draw] (A) {20};
+\node at (2, 0) [rectangle, draw] (B) {30};
+\node at (4, 0) [rectangle, draw] (C) {40};
+\node at (-2, 0) [rectangle, draw] (D) {10};
+\node at(0, 1.5) (E) {$current$};
+
+\draw [&lt;-, &gt;=stealth] (C.north east) -- ++(.5, .5);
+\draw [-&gt;, &gt;=stealth] (D.east) -- (A.west);
+\draw [-&gt;, &gt;=stealth] (A.east) -- (B.west);
+\draw [-&gt;, &gt;=stealth] (B.east) -- ($(B.east)!.5!(C.west)$) -- ++(0, -.5);
+\draw [-&gt;, &gt;=stealth] (E.south) -- (A.north);
+\draw [-&gt;, &gt;=stealth] (C.north west) -- ($(C.north west)+(-.3, +.5)$) --
+($(B.north east)+(.3, +.5)$) -- (B.north east);
+
+\node at ($(C.north east)+(1.1, .7)$) {$*head$};
+\node at ($(D.east)+(.5, .2)$) {next};
+\node at ($(A.east)+(.5, .2)$) {next};
+\node at ($(B.east)+(.5, .2)$) {next};
+\node at ($(C.north west)+(+.3, .5)$) {next};
+
+\node [label={[align=center, yshift=-2.2cm]$rreverse$ returns. $current$
+returns to previous value.\\The process continues and linked list is
+reversed.}] (F) {};" /></p>
+<p class="caption">Resursive reversal of a singly linked list.</p></div></li>
+<li><p class="first">This will be done after bubble sort is discussed.</p>
+</li>
+<li><p class="first">This will be done after quick sort is discussed.</p>
+</li>
+<li><p class="first">This will be done after merge sort is discussed.</p>
+</li>
+<li><p class="first">There are several ways of doing this.</p>
+<ol class="arabic">
+<li><p class="first">You can use a hash table(we have not discussed hashing yet) to store the
+address of each node. If <code class="docutils literal"><span class="pre">NULL</span></code> is reached then you know  that there
+is no loop. However, if insertion in hash table fails because that
+address is already present then you know that there is a loop. This would
+require <span class="math">\(O(n)\)</span> extra space.</p>
+</li>
+<li><p class="first">The second method is rather crude and that requires modification to
+linked list structure. You can put a boolean flag which will mark if a
+node is visited. If a node is visited and you are revisiting again in
+traversal then there is a loop. Using boolean has a flaw that you can
+mark it only once and subsequently you cannot determine if the list has a
+loop. This can be overcome by making the boolean flag an unsigned integer
+which can support a large no. of iterations over the list. You can use
+boolean also and use it repeatedly if you make sure that you reset all
+the values if no loop is found. That would be another overhead of
+<span class="math">\(O(n)\)</span> in terms of time complexity and storage requirement is also
+increasing by <span class="math">\(O(n)\)</span>.</p>
+</li>
+<li><p class="first">There are two popular algorithms for cycle detection in any
+sequence. First is Floyd&#8217;s algorithm and second is Brent&#8217;s algorithm. We
+will study these two in their full glory later. For now, we will
+concentrate on Floyd&#8217;s algorithm in context of finding loop in a linked
+list. We will not concern ourselves with rigorous mathematical proof of
+this method.</p>
+<p>Floyd&#8217;s algorithm is based on a simple technique that we need two
+iterators(read pointers) over our set(linked list). One moves two
+elements while the other moves one element at a time and eventually they
+will meet i.e. pointers will become equal and that will prove that our
+set(linked list) has a loop. The implementation is very simple and in
+context with our linked list it is implemented as a function which you
+can execute in conjunction to find if there is a loop in question.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">int</span> <span class="nf">floyd_detect_loop_algorithm</span><span class="p">(</span><span class="n">ll</span> <span class="o">*</span><span class="n">head</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">ll</span> <span class="o">*</span><span class="n">slow</span> <span class="o">=</span> <span class="n">head</span><span class="p">,</span> <span class="o">*</span><span class="n">fast</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+
+  <span class="k">while</span><span class="p">(</span><span class="n">slow</span> <span class="o">&amp;&amp;</span> <span class="n">fast</span> <span class="o">&amp;&amp;</span> <span class="n">fast</span><span class="o">-&gt;</span><span class="n">next</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">slow</span> <span class="o">=</span> <span class="n">slow</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="n">fast</span>  <span class="o">=</span> <span class="n">fast</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">slow</span> <span class="o">==</span> <span class="n">fast</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Loop detected.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Let us say <span class="math">\(\lambda\)</span> is the length of loop and <span class="math">\(\mu\)</span> is the
+index of first element where loop starts then the time complexity of this
+algorithm is <span class="math">\(O(\lambda + \mu)\)</span> and as you can see we need storage
+only for two pointers the space complexity would be <span class="math">\(\Theta(1)\)</span>.</p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../stack/" class="btn btn-neutral float-right" title="4. Stacks" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../ls/" class="btn btn-neutral" title="2. Linear Structures" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012, Shiv S. Dayal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

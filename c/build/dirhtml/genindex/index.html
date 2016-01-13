@@ -1,0 +1,6399 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17487464-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Index &mdash; C Programming  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="C Programming  documentation" href="../"/>
+<link rel="stylesheet" href="../../css/math.css" type="text/css" />
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../" class="icon icon-home"> C Programming
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strings/">9. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fileio/">10. File Input/Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">11. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">12. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">13. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">14. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">15. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">16. Diagnostics <code class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">17. Complex arithmetic <code class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">18. Character Handling <code class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">19. Errors <code class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">20. Floating-point environment <code class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">21. Characteristics of floating types <code class="docutils literal"><span class="pre">&lt;float.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">22. Format conversion of integer types <code class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">23. Alternative spellings <code class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">24. Sizes of integer types <code class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">25. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/">26. Mathematics <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">27. Nonlocal jumps <code class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">28. Signal handling <code class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">29. Variable arguments <code class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">30. Boolean type and values <code class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">31. Common definitions <code class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">32. Integer types <code class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">33. Input/output <code class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">34. General utilities <code class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">35. String handling <code class="docutils literal"><span class="pre">&lt;string.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">36. Type-generic math <code class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">37. Date and time <code class="docutils literal"><span class="pre">&lt;time.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">38. Extended multibyte and wide character utilities <code class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">39. Wide character classification and mapping utilities <code class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">40. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">41. License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../">C Programming</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Docs</a> &raquo;</li>
+      
+    <li></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#Symbols"><strong>Symbols</strong></a>
+ | <a href="#_"><strong>_</strong></a>
+ | <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
+ 
+</div>
+<h2 id="Symbols">Symbols</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../macros/#index-17">#</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../macros/#index-5">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../macros/#index-17">##</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../macros/#index-6">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../macros/#index-15">#define</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-18">#error</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../macros/#index-14">#include</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-19">#pragma</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-16">#undef</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="_">_</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../stdbool/#index-0">__bool_true_flase_are_defined macro</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-12">__DATE__</a>, <a href="../macros/#index-20">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../assert/#index-1">__FILE__</a>, <a href="../macros/#index-12">[1]</a>, <a href="../macros/#index-20">[2]</a>
+  </dt>
+
+      
+  <dt><a href="../assert/#index-1">__func__</a>
+  </dt>
+
+      
+  <dt><a href="../assert/#index-1">__LINE__</a>, <a href="../macros/#index-12">[1]</a>, <a href="../macros/#index-20">[2]</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-12">__STDC__</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-12">__STDC_HOSTED__</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-12">__STDC_IEC_559__</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-12">__STDC_IEC_559_COMPLEX__</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-12">__STDC_ISO_10646__</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../macros/#index-12">__STDC_VERSION__</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-12">__TIME__</a>, <a href="../macros/#index-20">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdbool/#index-0">_bool</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-1">_Complex</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-1">_Complex_I</a>, <a href="../complex/#index-1">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-18">_Exit function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-1">_IOFBF macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-1">_IOLBF macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-1">_IONBF macro</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../stdlib/#index-15">abort function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-25">abs function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-21">absolute-value functions</a>, <a href="../math/#index-47">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-0">access</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-19">acos function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-19">acosf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-27">acosh function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-27">acoshf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-27">acoshl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-19">acosl function</a>
+  </dt>
+
+      
+  <dt>
+    actual
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fs/#index-3">argument</a>
+  </dt>
+
+        
+  <dt><a href="../fs/#index-3">parameter</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    additive
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-49">operators</a>, <a href="../oae/#index-3">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    address
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../ap/#index-8">operators</a>, <a href="../lang/#index-44">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../fs/#index-1">alignment</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-8">alignment of objects</a>
+  </dt>
+
+      
+  <dt><a href="../iso646/#index-1">and macro</a>
+  </dt>
+
+      
+  <dt><a href="../iso646/#index-1">and_eq macro</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-2">argument</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fs/#index-3">actual</a>
+  </dt>
+
+        
+  <dt><a href="../fs/#index-3">formal</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../macros/#index-4">argument substition</a>
+  </dt>
+
+      
+  <dt>
+    arithmetic
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-17">conversions</a>, <a href="../oae/#index-0">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-10">operands</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-45">operators</a>
+  </dt>
+
+        
+  <dt><a href="../oae/#index-17">operators, unary</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../ap/#index-0">array</a>, <a href="../lang/#index-18">[1]</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-72">declarators</a>
+  </dt>
+
+        
+  <dt><a href="../ap/#index-4">multi-dimensional</a>
+  </dt>
+
+        
+  <dt><a href="../ap/#index-0">single-dimensional</a>
+  </dt>
+
+        
+  <dt><a href="../ap/#index-3">size</a>
+  </dt>
+
+        
+  <dt><a href="../ap/#index-3">size of</a>
+  </dt>
+
+        
+  <dt><a href="../ap/#index-2">variable length</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../ap/#index-1">array memory diagram</a>
+  </dt>
+
+      
+  <dt><a href="../ap/#index-9">array of pointers</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-37">array subscripting</a>
+  </dt>
+
+      
+  <dt>
+    arrays
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../su/#index-5">structures</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../time/#index-9">asctime function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../math/#index-20">asin function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-20">asinf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-28">asinh function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-28">asinhf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-28">asinhl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-20">asinl function</a>
+  </dt>
+
+      
+  <dt>
+    assert
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../assert/#index-1">macros</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../assert/#index-0">assert.h</a>
+  </dt>
+
+      
+  <dt>
+    assignment
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../oae/#index-13">compound</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-59">operators</a>, <a href="../oae/#index-11">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../oae/#index-12">simple</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-21">atan function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-22">atan2 function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-22">atan2f function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-22">atan2l function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-21">atanf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-29">atanh function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-21">atanl function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-16">atexit function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-29">atnhf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-29">atnhl function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-3">atof function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-4">atoi function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-4">atol function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-4">atoll function</a>
+  </dt>
+
+      
+  <dt><a href="../introduction/#index-1">attributes of a program</a>
+  </dt>
+
+      
+  <dt><a href="../cf/#index-0">auto</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../fs/#index-4">behavior</a>, <a href="../fs/#index-8">[1]</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fs/#index-5">implementation-defined</a>
+  </dt>
+
+        
+  <dt><a href="../fs/#index-6">locale-specific</a>
+  </dt>
+
+        
+  <dt><a href="../fs/#index-7">undefined</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../su/#index-2">big-endian</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-9">bit</a>, <a href="../introduction/#index-3">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../iso646/#index-1">bitand macro</a>
+  </dt>
+
+      
+  <dt><a href="../iso646/#index-1">bitor macro</a>
+  </dt>
+
+      
+  <dt>
+    bitwise
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../oae/#index-9">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    bitwise AND
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-53">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    bitwise EX-OR
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-54">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    bitwise OR
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-55">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    bitwise shift
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-50">operators</a>, <a href="../oae/#index-10">[1]</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../lang/#index-77">blocks</a>
+  </dt>
+
+      
+  <dt><a href="../stdbool/#index-0">bool macro</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-11">boolean</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../basics/#index-5">type</a>, <a href="../lang/#index-12">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../complex/#index-2">branch cuts</a>
+  </dt>
+
+      
+  <dt>
+    break
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-7">statement</a>, <a href="../lang/#index-91">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdlib/#index-22">bsearch function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-58">btowc function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-1">BUFSIZ macro</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-10">byte</a>, <a href="../introduction/#index-3">[1]</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../locale/#index-1">C locale</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-22">cabs function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-22">cabsf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-22">cabsl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-5">cacos function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-5">cacosf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-12">cacosh funciton</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-12">cacoshf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-12">cacoshl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-5">cacosl function</a>
+  </dt>
+
+      
+  <dt>
+    calculation
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../func/#index-4">Fibonacci numbers</a>
+  </dt>
+
+        
+  <dt><a href="../func/#index-3">factorial</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../ap/#index-6">calloc</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-11">calloc function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-25">carg function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-25">cargf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-25">cargl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-6">casin function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-6">casinf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-13">casinh funciton</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-13">casinhf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-13">casinhl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-6">casinl function</a>
+  </dt>
+
+      
+  <dt>
+    cast
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-47">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../complex/#index-7">catan function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-7">catanf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-14">catanh function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-14">catanhf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-14">catanhl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-7">catanl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-48">cbrt function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-48">cbrtf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-48">cbrtl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-8">ccos function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-15">ccosh function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-15">ccoshf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-15">ccoshl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-8">ccosl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-8">ccsof function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-59">ceil function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-59">ceilf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-59">ceill function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-19">cexp funciton</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-19">cexpf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-19">cexpl function</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-11">character</a>, <a href="../lang/#index-11">[1]</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-28">constants</a>
+  </dt>
+
+        
+  <dt><a href="../env/#index-12">display semantics</a>
+  </dt>
+
+        
+  <dt><a href="../stdio/#index-34">input/output</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../ctypes/#index-1">character classification functions</a>
+  </dt>
+
+      
+  <dt>
+    character conversion functions
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdlib/#index-27">multibyte</a>
+  </dt>
+
+        
+  <dt><a href="../stdlib/#index-27">wide</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../basics/#index-0">character sets</a>, <a href="../env/#index-9">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-26">cimag function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-26">cimagf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-26">cimagl function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-56">clearerr function</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-4">clock function</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-2">clock_t type</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-1">CLOCKS_PER_SEC macro</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-20">clog function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-20">clogf cunction</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-20">clogl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-81">comaprison macros</a>
+  </dt>
+
+      
+  <dt>
+    comma
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../oae/#index-15">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../lang/#index-33">comments</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../string/#index-8">comparison functions</a>
+  </dt>
+
+      
+  <dt>
+    compatible
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-7">type</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    compilation
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../introduction/#index-4">execution</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../iso646/#index-1">compl macro</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-1">complex</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../basics/#index-7">type</a>, <a href="../lang/#index-16">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../complex/#index-0">complex.h</a>
+  </dt>
+
+      
+  <dt>
+    composite
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-7">type</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    compound
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../oae/#index-13">assignment</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-41">lierals</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    compund
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-79">statement</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../string/#index-6">concatenation functions</a>
+  </dt>
+
+      
+  <dt>
+    conditional
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../macros/#index-1">inclusion</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-58">operators</a>, <a href="../oae/#index-14">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../complex/#index-27">conj function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-27">conjf cuntion</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-27">conjl function</a>
+  </dt>
+
+      
+  <dt>
+    considerations
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../env/#index-8">environmental</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../basics/#index-9">constant</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-60">expressions</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../lang/#index-24">constants</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-28">character</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-27">enumeration</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-25">integer</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../ap/#index-13">constness</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-12">constraint</a>
+  </dt>
+
+      
+  <dt>
+    contants
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-26">floating</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    continue
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-7">statement</a>, <a href="../lang/#index-90">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../io/#index-2">conversion specification</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-9">conversions</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-17">arithmetic</a>, <a href="../oae/#index-0">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../string/#index-1">copying functions</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-72">copysign function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-72">copysignf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-72">copysignl function</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-13">correctly rounded result</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-23">cos function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-23">cosf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-30">cosh function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-30">coshf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-30">coshl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-23">cosl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-23">cpow function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-23">cpowf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-23">cpowl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-28">cproj function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-28">cprojf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-28">cprojl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-29">creal function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-29">crealf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-29">creall function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-9">csin function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-9">csinf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-16">csinh function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-16">csinhf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-16">csinhl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-9">csinl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-24">csqrt function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-24">csqrtf funciton</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-24">csqrtl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-10">ctan function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-10">ctanf function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-17">ctanh function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-17">ctanhf cuntion</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-17">ctanhl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-10">ctanl function</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-10">ctime function</a>
+  </dt>
+
+      
+  <dt><a href="../ctypes/#index-0">ctype.h</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-3">CX_LIMITED_RANGE pragma</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../cf/#index-2">dangling else</a>
+  </dt>
+
+      
+  <dt><a href="../std/#index-0">decimal-point character</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-61">declarations</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-70">declarators</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-72">array</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-73">function</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    decrement
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-40">operators</a>, <a href="../lang/#index-43">[1]</a>, <a href="../oae/#index-7">[2]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    definitions
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-93">external</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-95">external object</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-94">funciton</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-75">type</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    Dennis
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../introduction/#index-0">Ritchie</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    designator
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-18">function</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../fs/#index-14">diagnostic message</a>
+  </dt>
+
+      
+  <dt><a href="../env/#index-1">diagnostics</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../time/#index-5">difftime function</a>
+  </dt>
+
+      
+  <dt>
+    direct
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdio/#index-46">input/output</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    directives
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../macros/#index-10">pragma</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    display semantics
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../env/#index-12">character</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdlib/#index-26">div funciton</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-1">div_t type</a>
+  </dt>
+
+      
+  <dt>
+    divide-by-zero
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fenv/#index-9">exception</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    do
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-86">statement</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    do-while
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-5">statement</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-1">double_t</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../errno/#index-1">EDOM macro</a>
+  </dt>
+
+      
+  <dt><a href="../errno/#index-1">EILSEQ macro</a>
+  </dt>
+
+      
+  <dt>
+    else
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-1">statement</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../su/#index-2">endianness</a>
+  </dt>
+
+      
+  <dt>
+    enum
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../basics/#index-8">type</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    enumeration
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-27">constants</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    enumerations
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-65">specifiers</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    environment
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../env/#index-2">execution</a>
+  </dt>
+
+        
+  <dt><a href="../env/#index-3">freestanding</a>
+  </dt>
+
+        
+  <dt><a href="../env/#index-4">hosted</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    environmental
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../env/#index-8">considerations</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdio/#index-2">EOF macro</a>
+  </dt>
+
+      
+  <dt>
+    equality
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-52">operators</a>, <a href="../oae/#index-6">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../errno/#index-1">ERANGE macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-54">erf funciton</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-55">erfc function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-55">erfcf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-55">erfcl funciton</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-54">erff funciton</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-54">erfl function</a>
+  </dt>
+
+      
+  <dt><a href="../errno/#index-1">errno</a>
+  </dt>
+
+      
+  <dt><a href="../errno/#index-0">errno.h</a>
+  </dt>
+
+      
+  <dt>
+    error
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../macros/#index-9">directives</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-53">error functions</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-55">error-handling functions</a>
+  </dt>
+
+      
+  <dt><a href="../basics/#index-10">escape sequences</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt>
+    exact-width
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-2">integer types</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    exact-width integer types
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-10">limit of</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    exception
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fenv/#index-9">divide-by-zero</a>
+  </dt>
+
+        
+  <dt><a href="../fenv/#index-9">inexact</a>
+  </dt>
+
+        
+  <dt><a href="../fenv/#index-9">invalid</a>
+  </dt>
+
+        
+  <dt><a href="../fenv/#index-9">overflow</a>
+  </dt>
+
+        
+  <dt><a href="../fenv/#index-9">underflow</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    execution
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../env/#index-2">environment</a>
+  </dt>
+
+        
+  <dt><a href="../env/#index-5">program</a>, <a href="../env/#index-7">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdlib/#index-17">exit function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-1">EXIT_FAILURE macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-1">EXIT_SUCCESS macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-34">exp function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-35">exp2 function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-35">exp2f function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-35">exp2l function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-34">expf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-34">expl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-36">expm1 function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-36">expm1f function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-36">expm1l function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-18">exponential funcitons</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-33">exponential functions</a>
+  </dt>
+
+      
+  <dt>
+    expression
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-80">statement</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../lang/#index-34">expressions</a>, <a href="../oae/#index-1">[1]</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-60">constant</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-35">primary</a>, <a href="../oae/#index-2">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../cf/#index-0">extern</a>
+  </dt>
+
+      
+  <dt>
+    external
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-93">definitions</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    external object
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-95">definitions</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../math/#index-49">fabs function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-49">fabsf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-49">fabsl function</a>
+  </dt>
+
+      
+  <dt>
+    factorial
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../func/#index-3">calculation</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdbool/#index-0">false macro</a>
+  </dt>
+
+      
+  <dt>
+    fastest
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-5">minimum-width integer types</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    fastets minimum-width integer types
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-12">limit of</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdio/#index-12">fclose function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-77">fdim function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-77">fdimf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-77">fdiml function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-3">FE_ALL_EXCEPT</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-5">FE_DFL_ENV macro</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-2">FE_DIVBYZERO macro</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-4">FE_DOWNEARD macro</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-2">FE_INEXACT macro</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-2">FE_INVALID macro</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-2">FE_OVERFLOW macro</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-4">FE_TONEAREST macro</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-4">FE_TOWARDZERO macro</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-2">FE_UNDERFLOW macro</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-4">FE_UPWARD macro</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-8">feclearexcept function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-11">fegetexceptflag function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-19">feholdexcept function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-0">fenv.h</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-6">FENV_ACCESS pragma</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-1">fenv_t</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-57">feof function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-12">feraiseexcept function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-58">ferror function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-20">fesetenv function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-13">fesetexceptflag function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-14">fetestexcept function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-21">feupdateenv function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-1">fexcept_t</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-13">fflush function</a>
+  </dt>
+
+      
+  <dt><a href="../fileio/#index-0">fgetc</a>, <a href="../io/#index-5">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-35">fgetc funciton</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-18">fgetenv function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-50">fgetpos position</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-16">fgetround function</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-4">fgets</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-36">fgets function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-17">fgetwc function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-18">fgetws function</a>
+  </dt>
+
+      
+  <dt>
+    Fibonacci numbers
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../func/#index-4">calculation</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdio/#index-11">file access functions</a>
+  </dt>
+
+      
+  <dt>
+    file opening
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdio/#index-15">modes for</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdio/#index-49">file positioning functions</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-1">FILE type</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-2">FILENAME_MAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-5">Files</a>
+  </dt>
+
+      
+  <dt>
+    files
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdio/#index-6">oerations on</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../float/#index-0">float.h</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-1">float_t</a>
+  </dt>
+
+      
+  <dt>
+    floating
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-26">contants</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../fenv/#index-7">floating-point exceptions</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-60">floor function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-60">floorf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-60">floorl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-2">FLT_EVAL_METHOD macro</a>
+  </dt>
+
+      
+  <dt><a href="../introduction/#index-2">flymake</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-80">fma function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-80">fmaf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-80">fmal function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../math/#index-78">fmax function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-78">fmaxf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-78">fmaxl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-79">fmin function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-79">fminf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-79">fminl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-68">fmod function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-68">fmodf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-68">fmodl function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-14">fopen function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-2">FOPEN_MAX macro</a>
+  </dt>
+
+      
+  <dt>
+    for
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-6">statement</a>, <a href="../lang/#index-87">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    formal
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fs/#index-3">argument</a>
+  </dt>
+
+        
+  <dt><a href="../fs/#index-3">parameter</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    formal definition
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-68">restrict</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../inttypes/#index-1">format specifier macros</a>
+  </dt>
+
+      
+  <dt>
+    formatted
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdio/#index-19">input/output</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    formatted wide character
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../wchar/#index-3">input/output function</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../fs/#index-15">forward reference</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-11">FP_CONTRACT pragma</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-7">FP_FAST_FMA macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-7">FP_FAST_FMAF macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-7">FP_FAST_FMAL macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-8">FP_ILOGB0 macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-8">FP_ILOGBNAN macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-6">FP_INFINITE macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-6">FP_NAN macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-6">FP_NORMAL macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-6">FP_SUBNORMAL macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-6">FP_ZERO macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-12">fpclassify macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-1">fpos_t type</a>
+  </dt>
+
+      
+  <dt><a href="../fileio/#index-0">fpuc</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-5">fputc</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-37">fputc function</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-4">fputs</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-38">fputs function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-19">fputwc function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-20">fputws function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-47">fread function</a>
+  </dt>
+
+      
+  <dt><a href="../ap/#index-12">free</a>, <a href="../ap/#index-6">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-12">free function</a>
+  </dt>
+
+      
+  <dt>
+    freestanding
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../env/#index-3">environment</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdio/#index-16">freopen function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-37">frexp function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-37">frexpf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-37">frexpl function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-21">fscanf function</a>
+  </dt>
+
+      
+  <dt><a href="../fileio/#index-2">fseek</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-51">fseek function</a>
+  </dt>
+
+      
+  <dt><a href="../fileio/#index-1">fsetpos</a>, <a href="../fileio/#index-3">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-52">fsetpos function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-17">fsetround function</a>
+  </dt>
+
+      
+  <dt><a href="../fileio/#index-4">ftell</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-53">ftell function</a>
+  </dt>
+
+      
+  <dt>
+    funciton
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-94">definitions</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../func/#index-5">funcitons like macros</a>
+  </dt>
+
+      
+  <dt>
+    function
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-73">declarators</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-18">designator</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-69">specifiers</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../lang/#index-38">function calls</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-63">function lrint function</a>
+  </dt>
+
+      
+  <dt><a href="../func/#index-7">function pointers</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-96">future language directions</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-21">fwide function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-4">fwprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-48">fwrite function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-5">fwscanf function</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../math/#index-53">gamma functions</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-5">getc</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-39">getc function</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-5">getchar</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-40">getchar function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-19">getenv function</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-4">gets</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-41">gets function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../wchar/#index-22">getwc function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-23">getwchar function</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-11">gmtime function</a>
+  </dt>
+
+      
+  <dt>
+    goto
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-89">statement</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    greatest-width
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-8">integer types</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    greatest-width integer constants
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-17">macros for</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    greatest-width integer types
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-13">limit of</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../oae/#index-19">grouping parentheses</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../lang/#index-31">headers</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-3">HIGE_VAL macro</a>
+  </dt>
+
+      
+  <dt>
+    hosted
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../env/#index-4">environment</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-3">HUGE_VALF macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-3">HUGE_VALL macro</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../complex/#index-11">hyperbolic functions</a>, <a href="../math/#index-26">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-50">hypot function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-50">hypotf funciton</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-50">hypotl function</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../complex/#index-1">I</a>
+  </dt>
+
+      
+  <dt><a href="../basics/#index-2">identifiers</a>, <a href="../lang/#index-21">[1]</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-2">namespace</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-22">predefined</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-1">scope</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    if
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-1">statement</a>, <a href="../lang/#index-82">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-38">ilogb function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-38">ilogbf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-38">ilogbl function</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-13">imaxabs function</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-14">imaxdiv function</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-16">implementation</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-17">implementation limit</a>
+  </dt>
+
+      
+  <dt>
+    implementation-defined
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fs/#index-5">behavior</a>
+  </dt>
+
+        
+  <dt><a href="../fs/#index-24">value</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    increment
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-40">operators</a>, <a href="../lang/#index-43">[1]</a>, <a href="../oae/#index-7">[2]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    indeterminate
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fs/#index-25">value</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    indirection
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../ap/#index-8">operators</a>, <a href="../lang/#index-44">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    inexact
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fenv/#index-9">exception</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-4">INFINITY macro</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-76">initialization</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../su/#index-3">structure</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../func/#index-6">inline functions</a>
+  </dt>
+
+      
+  <dt>
+    input/output
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdio/#index-34">character</a>
+  </dt>
+
+        
+  <dt><a href="../stdio/#index-46">direct</a>
+  </dt>
+
+        
+  <dt><a href="../stdio/#index-19">formatted</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    input/output function
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../wchar/#index-3">formatted wide character</a>
+  </dt>
+
+        
+  <dt><a href="../wchar/#index-16">wide character</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdint/#index-6">int_fast16_t</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-6">int_fast32_t</a>, <a href="../stdint/#index-6">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-6">int_fast8_t</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-4">int_least16_t</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-4">int_least32_t</a>, <a href="../stdint/#index-4">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-4">int_least8_t</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-11">integer</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-25">constants</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-13">signed</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-6">type</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-13">unsigned</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdlib/#index-24">integer arithmetic functions</a>
+  </dt>
+
+      
+  <dt>
+    integer constants
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-15">macros for</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdint/#index-1">integer types</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-2">exact-width</a>
+  </dt>
+
+        
+  <dt><a href="../stdint/#index-5">fastest minimum-width</a>
+  </dt>
+
+        
+  <dt><a href="../stdint/#index-8">greatest-width</a>
+  </dt>
+
+        
+  <dt><a href="../stdint/#index-3">minimum-width</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../env/#index-13">interrupts</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-9">intmax_t</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-7">intptr_t</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-0">inttypes.h</a>
+  </dt>
+
+      
+  <dt>
+    invalid
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fenv/#index-9">exception</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../ctypes/#index-2">isalnum function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../ctypes/#index-3">isalpha function</a>
+  </dt>
+
+      
+  <dt><a href="../ctypes/#index-4">isblank function</a>
+  </dt>
+
+      
+  <dt><a href="../ctypes/#index-5">isdigit function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-13">isfinite macro</a>
+  </dt>
+
+      
+  <dt><a href="../ctypes/#index-6">isgraph function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-82">isgreater macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-83">isgreaterequal macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-14">isinf macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-84">isless macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-85">islessequal macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-86">islessgreater macro</a>
+  </dt>
+
+      
+  <dt><a href="../ctypes/#index-7">islower function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-15">isnan macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-16">isnormal macro</a>
+  </dt>
+
+      
+  <dt><a href="../iso646/#index-0">iso646.h</a>
+  </dt>
+
+      
+  <dt><a href="../ctypes/#index-8">isprint function</a>
+  </dt>
+
+      
+  <dt><a href="../ctypes/#index-9">ispunct function</a>
+  </dt>
+
+      
+  <dt><a href="../ctypes/#index-10">isspace function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-87">isunordered macro</a>
+  </dt>
+
+      
+  <dt><a href="../ctypes/#index-11">isupper function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-3">iswalnum function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-4">iswalpha function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-5">iswblank function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-6">iswcntrl function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-15">iswctype function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-7">iswdigit function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-8">iswgraph function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-9">iswlower function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-10">iswprint function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-11">iswpunct function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-12">iswspace function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-13">iswupper function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-14">iswxdigit function</a>
+  </dt>
+
+      
+  <dt><a href="../ctypes/#index-12">isxdigit function</a>
+  </dt>
+
+      
+  <dt>
+    iteration
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-84">statement</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt>
+    jump
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-88">statement</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../setjmp/#index-1">jump_buf</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../basics/#index-1">keywords</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt>
+    labeled
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-78">statement</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdlib/#index-25">labs function</a>
+  </dt>
+
+      
+  <dt><a href="../locale/#index-2">LC_ALL macro</a>
+  </dt>
+
+      
+  <dt><a href="../locale/#index-2">LC_COLLATE macro</a>
+  </dt>
+
+      
+  <dt><a href="../locale/#index-2">LC_CTYPE macro</a>
+  </dt>
+
+      
+  <dt><a href="../locale/#index-2">LC_MONETARY macro</a>
+  </dt>
+
+      
+  <dt><a href="../locale/#index-2">LC_NUMERIC macro</a>
+  </dt>
+
+      
+  <dt><a href="../locale/#index-2">LC_TIME macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-39">ldexp function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-39">ldexpf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-39">ldexpl function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-26">ldiv function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-1">ldiv_t type</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-56">lgamma function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-56">lgammaf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-56">lgammal function</a>
+  </dt>
+
+      
+  <dt>
+    lierals
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-41">compound</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    limit of
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-10">exact-width integer types</a>
+  </dt>
+
+        
+  <dt><a href="../stdint/#index-12">fastets minimum-width integer types</a>
+  </dt>
+
+        
+  <dt><a href="../stdint/#index-13">greatest-width integer types</a>
+  </dt>
+
+        
+  <dt><a href="../stdint/#index-11">minimum-width integer types</a>
+  </dt>
+
+        
+  <dt><a href="../stdint/#index-14">other integer types</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../basics/#index-4">limits.h</a>, <a href="../limits/#index-0">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../macros/#index-8">line control</a>
+  </dt>
+
+      
+  <dt>
+    literals
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-29">string</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../su/#index-2">little-endian</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-25">llabs function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-26">lldiv function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-1">lldiv_t type</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-63">llrint function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-63">llrintf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-63">llrintl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-65">llround function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../math/#index-65">llroundf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-65">llroundl function</a>
+  </dt>
+
+      
+  <dt><a href="../locale/#index-0">locale.h</a>
+  </dt>
+
+      
+  <dt><a href="../locale/#index-4">localeconv function</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-12">localtime function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-40">log function</a>, <a href="../math/#index-43">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-41">log10 function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-41">log10f function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-41">log10l function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-42">log1p function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-42">log1pf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-42">log1pl function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-18">logarithmic functions</a>, <a href="../math/#index-33">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-44">logb function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-44">logbf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-44">logbl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-40">logf function</a>, <a href="../math/#index-43">[1]</a>
+  </dt>
+
+      
+  <dt>
+    logical
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../oae/#index-8">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    logical AND
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-56">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    logical OR
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-57">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-40">logl function</a>, <a href="../math/#index-43">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../setjmp/#index-5">longjmp function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-63">lrinf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-63">lrintl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-65">lround function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-65">lroundl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-65">lrounf function</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-18">lvalue</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt>
+    macro definitions
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../macros/#index-7">scope</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../macros/#index-3">macro replacement</a>
+  </dt>
+
+      
+  <dt>
+    macros
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../assert/#index-1">assert</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    macros for
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-17">greatest-width integer constants</a>
+  </dt>
+
+        
+  <dt><a href="../stdint/#index-15">integer constants</a>
+  </dt>
+
+        
+  <dt><a href="../stdint/#index-16">minimum-width integer constants</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../ap/#index-6">malloc</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-13">malloc function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-71">manipulation functions</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-0">math.h</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-9">MATH_ERREXCEPT macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-9">math_errhandling macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-9">MATH_ERRNO macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-76">maximum functions</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-1">MB_CUR_MAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-28">mblen funciton</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-61">mbrlen function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-62">mbrtowc function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-60">mbsinit function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-64">mbsrtowcs function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-1">mbstate_t type</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-32">mbstowcs function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-29">mbtowc function</a>
+  </dt>
+
+      
+  <dt>
+    member
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-39">structure</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-39">union</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../string/#index-15">memchr function</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-9">memcmp function</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-2">memcpy function</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-3">memmove function</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-18">memory location</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-10">memory management functions</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-0">memory model</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-23">memset function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-76">minimum functions</a>
+  </dt>
+
+      
+  <dt>
+    minimum-width
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-3">integer types</a>
+  </dt>
+
+        
+  <dt><a href="../stdint/#index-5">integer types, fastest</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    minimum-width integer constants
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-16">macros for</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    minimum-width integer types
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-11">limit of</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../time/#index-6">mktime function</a>
+  </dt>
+
+      
+  <dt>
+    modes for
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdio/#index-15">file opening</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-45">modf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-45">modff function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-45">modfl function</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-0">modify</a>
+  </dt>
+
+      
+  <dt>
+    multi-dimensional
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../ap/#index-4">array</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    multibyte
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdlib/#index-27">character conversion functions</a>
+  </dt>
+
+        
+  <dt><a href="../stdlib/#index-31">string conversion functions</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    multiplicative
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-48">operators</a>, <a href="../oae/#index-4">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../env/#index-11">mutlibyte characters</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt>
+    names
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-74">type</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    namespace
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-2">identifiers</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-73">nan function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-5">NAN macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-73">nanf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-73">nanl function</a>
+  </dt>
+
+      
+  <dt>
+    NDEBUG
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../assert/#index-2">macros</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-61">nearbyint function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-61">nearbyintf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-61">nearbyintl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-58">nearest integer functions</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-74">nextafter function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-74">nextafterf function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../math/#index-74">nextafterl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-75">nexttoward funciton</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-75">nexttowardf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-75">nexttowardl function</a>
+  </dt>
+
+      
+  <dt><a href="../iso646/#index-1">not macro</a>
+  </dt>
+
+      
+  <dt><a href="../iso646/#index-1">not_eq macro</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-0">notation</a>
+  </dt>
+
+      
+  <dt><a href="../stddef/#index-1">NULL</a>
+  </dt>
+
+      
+  <dt>
+    null
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../macros/#index-11">directives</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-80">statement</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdlib/#index-1">NULL macro</a>, <a href="../time/#index-1">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../std/#index-0">null wide charcater</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-2">numeric conversion functions</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../fs/#index-19">objects</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-3">storge duration</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    oerations on
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdio/#index-6">files</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stddef/#index-1">offsetof</a>
+  </dt>
+
+      
+  <dt>
+    operands
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-10">arithmetic</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../oae/#index-18">operator precedence</a>
+  </dt>
+
+      
+  <dt>
+    operators
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../macros/#index-5">#</a>
+  </dt>
+
+        
+  <dt><a href="../macros/#index-6">##</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-49">additive</a>, <a href="../oae/#index-3">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../ap/#index-8">address</a>, <a href="../lang/#index-44">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-45">arithmetic</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-59">assignment</a>, <a href="../oae/#index-11">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../oae/#index-9">bitwise</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-53">bitwise AND</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-54">bitwise EX-OR</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-55">bitwise OR</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-50">bitwise shift</a>, <a href="../oae/#index-10">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-47">cast</a>
+  </dt>
+
+        
+  <dt><a href="../oae/#index-15">comma</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-58">conditional</a>, <a href="../oae/#index-14">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-40">decrement</a>, <a href="../lang/#index-43">[1]</a>, <a href="../oae/#index-7">[2]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-52">equality</a>, <a href="../oae/#index-6">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-40">increment</a>, <a href="../lang/#index-43">[1]</a>, <a href="../oae/#index-7">[2]</a>
+  </dt>
+
+        
+  <dt><a href="../ap/#index-8">indirection</a>, <a href="../lang/#index-44">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../oae/#index-8">logical</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-56">logical AND</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-57">logical OR</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-48">multiplicative</a>, <a href="../oae/#index-4">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-36">postfix</a>, <a href="../lang/#index-40">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../macros/#index-13">pragma</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-43">prefix</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-51">relational</a>, <a href="../oae/#index-5">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../oae/#index-10">shift</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-46">sizeof</a>, <a href="../oae/#index-16">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-42">unary</a>, <a href="../lang/#index-45">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../oae/#index-17">unary arithmetic</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../iso646/#index-1">or macro</a>
+  </dt>
+
+      
+  <dt><a href="../iso646/#index-1">or_eq macro</a>
+  </dt>
+
+      
+  <dt>
+    other integer types
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdint/#index-14">limit of</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    overflow
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fenv/#index-9">exception</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../oae/#index-19">overriding precedence</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../fs/#index-2">parameter</a>, <a href="../fs/#index-20">[1]</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fs/#index-3">actual</a>
+  </dt>
+
+        
+  <dt><a href="../fs/#index-3">formal</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../func/#index-1">pass by address</a>
+  </dt>
+
+      
+  <dt><a href="../func/#index-0">pass by value</a>
+  </dt>
+
+      
+  <dt><a href="../func/#index-8">passing funciton pointers</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-59">perror function</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-20">pointer</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-71">qualifiers</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../ap/#index-7">pointer arithmetic</a>
+  </dt>
+
+      
+  <dt>
+    pointer members
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../su/#index-4">structure</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../ap/#index-5">pointers</a>
+  </dt>
+
+      
+  <dt><a href="../ap/#index-10">pointers of pointers</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-76">positive difference functions</a>
+  </dt>
+
+      
+  <dt>
+    postfix
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-36">operators</a>, <a href="../lang/#index-40">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-51">pow function</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-21">power functions</a>, <a href="../math/#index-47">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-51">powf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-51">powl function</a>
+  </dt>
+
+      
+  <dt>
+    pragma
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../macros/#index-10">directives</a>
+  </dt>
+
+        
+  <dt><a href="../macros/#index-13">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    predefined
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-22">identifiers</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../macros/#index-12">predefined macro names</a>
+  </dt>
+
+      
+  <dt>
+    prefix
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-43">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../macros/#index-0">preprocessing directives</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-32">preprocessing numbers</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-2">PRIdFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-2">PRIdLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-2">PRIdMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-2">PRIdN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-2">PRIdPTR macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-3">PRIiFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-3">PRIiLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-3">PRIiMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-3">PRIiN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-3">PRIiPTR macro</a>
+  </dt>
+
+      
+  <dt>
+    primary
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-35">expressions</a>, <a href="../oae/#index-2">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../io/#index-1">printf</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../stdio/#index-20">printf function</a>, <a href="../stdio/#index-22">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-4">PRIoFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-4">PRIoLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-4">PRIoMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-4">PRIoN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-4">PRIoPTR macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-5">PRIuFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-5">PRIuLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-5">PRIuMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-5">PRIuN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-5">PRIuPTR macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-7">PRIXFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-6">PRIxFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-7">PRIXLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-6">PRIxLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-7">PRIXMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-6">PRIxMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-7">PRIXN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-6">PRIxN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-7">PRIXPTR macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-6">PRIxPTR macro</a>
+  </dt>
+
+      
+  <dt>
+    program
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../env/#index-5">execution</a>, <a href="../env/#index-7">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../env/#index-6">termination</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdlib/#index-7">pseudo-random number generation function</a>
+  </dt>
+
+      
+  <dt><a href="../stddef/#index-1">ptrdiff_t type</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-30">punctuators</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-5">putc</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-42">putc function</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-5">putchar</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-43">putchar function</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-4">puts</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-44">puts function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-24">putwc function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-25">putwchar function</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../stdlib/#index-23">qsort function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt>
+    qualifiers
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-71">pointer</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-67">type</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../signal/#index-4">raise function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-8">rand function</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-0">read</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-14">real floating</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-15">type</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../lang/#index-14">real integer</a>
+  </dt>
+
+      
+  <dt><a href="../ap/#index-11">realloc</a>, <a href="../ap/#index-6">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-14">realloc function</a>
+  </dt>
+
+      
+  <dt><a href="../func/#index-8">receiving funciton pointers</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-21">recommended practice</a>
+  </dt>
+
+      
+  <dt><a href="../func/#index-2">recursion</a>
+  </dt>
+
+      
+  <dt><a href="../cf/#index-0">register</a>
+  </dt>
+
+      
+  <dt>
+    relational
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-51">operators</a>, <a href="../oae/#index-5">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-69">remainder function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-67">remainder functions</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-69">remainderf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-69">remainderl function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-7">remove function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-70">remquo function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-70">remquof function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-70">remquol function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../stdio/#index-8">rename function</a>
+  </dt>
+
+      
+  <dt>
+    representation
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-5">type</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../std/#index-2">reserved identifiers</a>
+  </dt>
+
+      
+  <dt>
+    restrict
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-68">formal definition</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../setjmp/#index-4">restroring calling environment</a>
+  </dt>
+
+      
+  <dt>
+    return
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-8">statement</a>, <a href="../lang/#index-92">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../fileio/#index-5">rewind</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-54">rewind function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-62">rint function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-62">rintf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-62">rintl function</a>
+  </dt>
+
+      
+  <dt>
+    Ritchie
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../introduction/#index-0">Dennis</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdlib/#index-1">RND_MAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-64">round function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-64">roundf function</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-15">rounding functions</a>
+  </dt>
+
+      
+  <dt><a href="../fenv/#index-10">rounding mode</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-64">roundl function</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-22">runtime-constraint</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../setjmp/#index-2">saving calling environment</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-46">scalbln function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-46">scalblnf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-46">scalblnl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-46">scalbn function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-46">scalbnf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-46">scalbnl function</a>
+  </dt>
+
+      
+  <dt><a href="../io/#index-3">scanf</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-23">scanf function</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-8">SCNdFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-8">SCNdLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-8">SCNdMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-8">SCNdN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-8">SCNdPTR macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-9">SCNiFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-9">SCNiLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-9">SCNiMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-9">SCNiN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-9">SCNiPTR macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-10">SCNoFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-10">SCNoLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-10">SCNoMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-10">SCNoN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-10">SCNoPTR macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-11">SCNuFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-11">SCNuLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-11">SCNuMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-11">SCNuN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-11">SCNuPTR macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-12">SCNxFASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-12">SCNxLEASTN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-12">SCNxMAX macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-12">SCNxN macro</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-12">SCNxPTR macro</a>
+  </dt>
+
+      
+  <dt>
+    scope
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-1">identifiers</a>
+  </dt>
+
+        
+  <dt><a href="../macros/#index-7">macro definitions</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../string/#index-14">search functions</a>
+  </dt>
+
+      
+  <dt>
+    searching
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdlib/#index-21">utilities</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    selection
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-81">statement</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../signal/#index-4">sending signal</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-1">setbuf funciton</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-17">setbuf function</a>
+  </dt>
+
+      
+  <dt><a href="../setjmp/#index-3">setjmp macro</a>
+  </dt>
+
+      
+  <dt><a href="../setjmp/#index-0">setjmp.h</a>
+  </dt>
+
+      
+  <dt><a href="../locale/#index-3">setlocale function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-18">setvbuf function</a>
+  </dt>
+
+      
+  <dt>
+    shift
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../oae/#index-10">operators</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../std/#index-0">shift sequence</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-1">sig_atomic_t</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-1">SIG_DFL macro</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-1">SIG_ERR macro</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-1">SIG_IGN macro</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-2">SIGABRT macro</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-2">SIGFPE macro</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-2">SIGILL macro</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-2">SIGINT macro</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-3">signal function</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-0">signal.h</a>
+  </dt>
+
+      
+  <dt><a href="../env/#index-13">signals</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-17">signbit macro</a>
+  </dt>
+
+      
+  <dt>
+    signed
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-13">integer</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../signal/#index-2">SIGSEGV macro</a>
+  </dt>
+
+      
+  <dt><a href="../signal/#index-2">SIGTERM macro</a>
+  </dt>
+
+      
+  <dt>
+    simple
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../oae/#index-12">assignment</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-24">sin function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-24">sinf function</a>
+  </dt>
+
+      
+  <dt>
+    single-dimensional
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../ap/#index-0">array</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-31">sinh function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../math/#index-31">sinhf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-31">sinhl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-24">sinl function</a>
+  </dt>
+
+      
+  <dt>
+    size
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../ap/#index-3">array</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    size of
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../ap/#index-3">array</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../ap/#index-6">size_t</a>
+  </dt>
+
+      
+  <dt><a href="../stddef/#index-1">size_t type</a>, <a href="../stdio/#index-1">[1]</a>, <a href="../time/#index-2">[2]</a>, <a href="../wchar/#index-1">[3]</a>
+  </dt>
+
+      
+  <dt>
+    sizeof
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-46">operators</a>, <a href="../oae/#index-16">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../su/#index-1">structure</a>
+  </dt>
+
+        
+  <dt><a href="../su/#index-1">union</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdio/#index-24">snprintf function</a>
+  </dt>
+
+      
+  <dt>
+    sorting
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdlib/#index-21">utilities</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../macros/#index-2">source file inclusion</a>
+  </dt>
+
+      
+  <dt>
+    specifiers
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-65">enumerations</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-69">function</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-62">storage-class</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-64">structure</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-63">type</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-64">union</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdio/#index-25">sprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-52">sqrt function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-52">sqrtf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-52">sqrtl function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-9">srand function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-26">sscanf function</a>
+  </dt>
+
+      
+  <dt><a href="../std/#index-1">standard headers</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-77">statement</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-7">break</a>, <a href="../lang/#index-91">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-79">compund</a>
+  </dt>
+
+        
+  <dt><a href="../cf/#index-7">continue</a>, <a href="../lang/#index-90">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-86">do</a>
+  </dt>
+
+        
+  <dt><a href="../cf/#index-5">do-while</a>
+  </dt>
+
+        
+  <dt><a href="../cf/#index-1">else</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-80">expression</a>
+  </dt>
+
+        
+  <dt><a href="../cf/#index-6">for</a>, <a href="../lang/#index-87">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-89">goto</a>
+  </dt>
+
+        
+  <dt><a href="../cf/#index-1">if</a>, <a href="../lang/#index-82">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-84">iteration</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-88">jump</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-78">labeled</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-80">null</a>
+  </dt>
+
+        
+  <dt><a href="../cf/#index-8">return</a>, <a href="../lang/#index-92">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-81">selection</a>
+  </dt>
+
+        
+  <dt><a href="../cf/#index-3">switch</a>, <a href="../lang/#index-83">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../cf/#index-8">typedef</a>
+  </dt>
+
+        
+  <dt><a href="../cf/#index-4">while</a>, <a href="../lang/#index-85">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../cf/#index-0">static</a>
+  </dt>
+
+      
+  <dt><a href="../stdarg/#index-0">stdarg.h</a>
+  </dt>
+
+      
+  <dt><a href="../basics/#index-6">stdbool.h</a>
+  </dt>
+
+      
+  <dt><a href="../stddef/#index-0">stddef.h</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-3">stderr macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-3">stdin macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-0">stdint.h</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-0">stdio.h</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-0">stdlib.h</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-3">stdout macro</a>
+  </dt>
+
+      
+  <dt><a href="../cf/#index-0">storage-class</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-62">specifiers</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    storge duration
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-3">objects</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../string/#index-16">strchr function</a>, <a href="../string/#index-19">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-10">strcmp function</a>, <a href="../string/#index-12">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-11">strcoll function</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-4">strcpy function</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-17">strcspn function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-4">streams</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-24">strerror function</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-13">strfttime function</a>
+  </dt>
+
+      
+  <dt><a href="../std/#index-0">string</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-29">literals</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    string conversion functions
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdlib/#index-31">multibyte</a>
+  </dt>
+
+        
+  <dt><a href="../stdlib/#index-31">wide</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../string/#index-0">string.h</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-25">strlen function</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-7">strncat function</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-5">strncpy function</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-18">strpbrk function</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-20">strspn function</a>
+  </dt>
+
+      
+  <dt><a href="../string/#index-21">strstr function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-5">strtod function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-5">strtof function</a>
+  </dt>
+
+      
+  <dt>
+    strtoimax function
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../inttypes/#index-15">strtoumax function</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../string/#index-22">strtok function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-6">strtol function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-5">strtold function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-6">strtoll function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-6">strtoul function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-6">strtoull function</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-2">struct tm type</a>
+  </dt>
+
+      
+  <dt>
+    structure
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../su/#index-3">initialization</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-39">member</a>
+  </dt>
+
+        
+  <dt><a href="../su/#index-4">pointer members</a>
+  </dt>
+
+        
+  <dt><a href="../su/#index-1">sizeof</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-64">specifiers</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../su/#index-0">structures</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../su/#index-5">arrays</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../string/#index-13">strxfrm function</a>
+  </dt>
+
+      
+  <dt>
+    switch
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-3">statement</a>, <a href="../lang/#index-83">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../wchar/#index-6">swprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-7">swscanf function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-20">system function</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../lang/#index-66">tags</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-25">tan function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-25">tanf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-32">tanh function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-32">tanhf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-32">tanhl function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-25">tanl function</a>
+  </dt>
+
+      
+  <dt>
+    termination
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../env/#index-6">program</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../math/#index-57">tgamma function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-57">tgammaf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-57">tgammal function</a>
+  </dt>
+
+      
+  <dt><a href="../tgmath/#index-0">tgmath.h</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-8">time conversion function</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-7">time function</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-3">time manipulation functions</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-0">time.h</a>
+  </dt>
+
+      
+  <dt><a href="../time/#index-2">time_t type</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-9">tmpfile function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../stdio/#index-10">tmpnam function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-19">towctrans function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-17">towlower function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-18">towupper function</a>
+  </dt>
+
+      
+  <dt><a href="../env/#index-0">translation phases</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-27">trap representation</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-10">treatment of error conditions</a>
+  </dt>
+
+      
+  <dt><a href="../complex/#index-4">trigonometric functions</a>, <a href="../math/#index-18">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../basics/#index-0">trigraph sequences</a>, <a href="../env/#index-10">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdbool/#index-0">true macro</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-66">trunc function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-66">truncf function</a>
+  </dt>
+
+      
+  <dt><a href="../math/#index-66">truncl function</a>
+  </dt>
+
+      
+  <dt>
+    type
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../basics/#index-5">boolean</a>, <a href="../lang/#index-12">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-7">compatible</a>
+  </dt>
+
+        
+  <dt><a href="../basics/#index-7">complex</a>, <a href="../lang/#index-16">[1]</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-7">composite</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-75">definitions</a>
+  </dt>
+
+        
+  <dt><a href="../basics/#index-8">enum</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-6">integer</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-74">names</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-67">qualifiers</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-15">real floating</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-5">representation</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-63">specifiers</a>
+  </dt>
+
+        
+  <dt><a href="../basics/#index-8">void</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../tgmath/#index-1">type-generic math</a>
+  </dt>
+
+      
+  <dt>
+    typedef
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-8">statement</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../basics/#index-3">types</a>, <a href="../lang/#index-4">[1]</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../stdint/#index-6">uint_fast16_t</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-6">uint_fast32_t</a>, <a href="../stdint/#index-6">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-4">uint_least16_t</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-4">uint_least32_t</a>, <a href="../stdint/#index-4">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-9">uintmax_t</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-7">uintptr_t</a>
+  </dt>
+
+      
+  <dt>
+    unary
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../oae/#index-17">arithmetic operators</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-42">operators</a>, <a href="../lang/#index-45">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    underflow
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fenv/#index-9">exception</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdio/#index-45">ungetc function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../wchar/#index-26">ungetwc function</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-6">unint_fast8_t</a>
+  </dt>
+
+      
+  <dt><a href="../stdint/#index-4">unint_least8_t</a>
+  </dt>
+
+      
+  <dt>
+    union
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-39">member</a>
+  </dt>
+
+        
+  <dt><a href="../su/#index-1">sizeof</a>
+  </dt>
+
+        
+  <dt><a href="../lang/#index-64">specifiers</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../su/#index-0">unions</a>
+  </dt>
+
+      
+  <dt><a href="../lang/#index-23">universal character names</a>
+  </dt>
+
+      
+  <dt>
+    unsigned
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../lang/#index-13">integer</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../fs/#index-8">unspecified</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fs/#index-26">value</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    utilities
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdlib/#index-21">searching</a>
+  </dt>
+
+        
+  <dt><a href="../stdlib/#index-21">sorting</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../stdarg/#index-2">va_arg_macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdarg/#index-3">va_copy macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdarg/#index-4">va_end macro</a>
+  </dt>
+
+      
+  <dt><a href="../stdarg/#index-1">va_list</a>
+  </dt>
+
+      
+  <dt><a href="../stdarg/#index-2">va_start macro</a>, <a href="../stdarg/#index-5">[1]</a>
+  </dt>
+
+      
+  <dt><a href="../fs/#index-23">value</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../fs/#index-24">implementation-defined</a>
+  </dt>
+
+        
+  <dt><a href="../fs/#index-25">indeterminate</a>
+  </dt>
+
+        
+  <dt><a href="../fs/#index-26">unspecified</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    variable length
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../ap/#index-2">array</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdio/#index-27">vfprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-28">vfscanf function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-8">vfwprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-9">vfwscanf function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../lang/#index-19">void</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../basics/#index-8">type</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../stdio/#index-29">vprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-30">vscanf function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-31">vsnprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-32">vsprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../stdio/#index-33">vsscanf function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-10">vswprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-11">vswscanf function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-12">vwprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-13">vwscanf function</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../wchar/#index-0">wchar.h</a>
+  </dt>
+
+      
+  <dt><a href="../stddef/#index-1">wchar_t type</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-1">wchat_t type</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-63">wcrtomb function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-37">wcscat function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-46">wcschr function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-40">wcscmp function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-41">wcscoll function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-32">wcscpy function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-47">wcscspn function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-57">wcsftime function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-54">wcslen function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-38">wcsncat function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-42">wcsncmp function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-33">wcsncpy function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-48">wcspbrk function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-49">wcsrchr function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-65">wcsrtombs function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-50">wcsspn function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-51">wcsstr function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-29">wcstod function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-29">wcstof function</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-16">wcstoimax function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-52">wcstok function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-30">wcstol function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-29">wcstold function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-30">wcstoll function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-33">wcstombs function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-30">wcstoul function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-30">wcstoull function</a>
+  </dt>
+
+      
+  <dt><a href="../inttypes/#index-16">wcstoumax function</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../wchar/#index-43">wcsxfrm function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-59">wctob function</a>
+  </dt>
+
+      
+  <dt><a href="../stdlib/#index-30">wctomb function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-20">wctrans function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-1">wctrans_t function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-16">wctype function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-1">wctype_t function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-2">WEOF macro</a>
+  </dt>
+
+      
+  <dt>
+    while
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../cf/#index-4">statement</a>, <a href="../lang/#index-85">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    wide
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../stdlib/#index-27">character conversion functions</a>
+  </dt>
+
+        
+  <dt><a href="../stdlib/#index-31">string conversion functions</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt>
+    wide character
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../wchar/#index-16">input/output function</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="../wtype/#index-2">wide character classification functions</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-56">wide character time conversion functions</a>
+  </dt>
+
+      
+  <dt><a href="../std/#index-0">wide string</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-39">wide string comparison function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-36">wide string conctatenation function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-31">wide string copying function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-28">wide string numeric conversion functions</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-45">wide string search function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-27">wide string utilities</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-1">wint_t function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-1">wint_t type</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-53">wmemchr function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-44">wmemcmp function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-34">wmemcpy function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-35">wmemmove function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-55">wmemset function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-14">wprintf function</a>
+  </dt>
+
+      
+  <dt><a href="../wchar/#index-15">wscanf function</a>
+  </dt>
+
+      
+  <dt><a href="../wtype/#index-0">wtype.h</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../iso646/#index-1">xor macro</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../iso646/#index-1">xor_eq macro</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012-2015, Shiv S. Dayal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

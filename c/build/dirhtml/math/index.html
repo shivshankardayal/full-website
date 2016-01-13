@@ -1,0 +1,1748 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17487464-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>26. Mathematics &lt;math.h&gt; &mdash; C Programming  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="C Programming  documentation" href="../"/>
+        <link rel="next" title="27. Nonlocal jumps &lt;setjmp.h&gt;" href="../setjmp/"/>
+        <link rel="prev" title="25. Localization &lt;locale.h&gt;" href="../locale/"/>
+<link rel="stylesheet" href="../../css/math.css" type="text/css" />
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../" class="icon icon-home"> C Programming
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/">2. Basics of C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io/">3. Console I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oae/">4. Operators and Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cf/">5. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ap/">6. Arrays and Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../func/">7. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../su/">8. Structures and Unions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strings/">9. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fileio/">10. File Input/Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fs/">11. Following Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../env/">12. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lang/">13. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macros/">14. Preprocessing Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../std/">15. The C Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assert/">16. Diagnostics <code class="docutils literal"><span class="pre">&lt;assert.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../complex/">17. Complex arithmetic <code class="docutils literal"><span class="pre">&lt;complex.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ctypes/">18. Character Handling <code class="docutils literal"><span class="pre">&lt;ctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errno/">19. Errors <code class="docutils literal"><span class="pre">&lt;errno.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fenv/">20. Floating-point environment <code class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../float/">21. Characteristics of floating types <code class="docutils literal"><span class="pre">&lt;float.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inttypes/">22. Format conversion of integer types <code class="docutils literal"><span class="pre">&lt;inttypes.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iso646/">23. Alternative spellings <code class="docutils literal"><span class="pre">&lt;iso646.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../limits/">24. Sizes of integer types <code class="docutils literal"><span class="pre">&lt;limits.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../locale/">25. Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">26. Mathematics <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#treatment-of-error-conditions">26.1. Treatment of error conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-fp-contract-pragma">26.2. The FP_CONTRACT pragma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classification-macros">26.3. Classification macros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-fpclassify-macro">26.3.1. The <code class="docutils literal"><span class="pre">fpclassify</span></code> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-isfinite-macro">26.3.2. The <code class="docutils literal"><span class="pre">isfinite</span></code> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-isinf-macro">26.3.3. The <code class="docutils literal"><span class="pre">isinf</span></code> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-isnan-macro">26.3.4. The <code class="docutils literal"><span class="pre">isnan</span></code> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-isnormal-macro">26.3.5. The <code class="docutils literal"><span class="pre">isnormal</span></code> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-signbit-macro">26.3.6. The <code class="docutils literal"><span class="pre">signbit</span></code> macro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#trigonometric-functions">26.4. Trigonometric functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-acos-functions">26.4.1. The <code class="docutils literal"><span class="pre">acos</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-asin-functions">26.4.2. The <code class="docutils literal"><span class="pre">asin</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-atan-functions">26.4.3. The <code class="docutils literal"><span class="pre">atan</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-atan2-functions">26.4.4. The <code class="docutils literal"><span class="pre">atan2</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-cos-functions">26.4.5. The <code class="docutils literal"><span class="pre">cos</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-sin-functions">26.4.6. The <code class="docutils literal"><span class="pre">sin</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-tan-functions">26.4.7. The <code class="docutils literal"><span class="pre">tan</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hyperbolic-functions">26.5. Hyperbolic functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-acosh-functions">26.5.1. The <code class="docutils literal"><span class="pre">acosh</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-asinh-functions">26.5.2. The <code class="docutils literal"><span class="pre">asinh</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-atanh-functions">26.5.3. The <code class="docutils literal"><span class="pre">atanh</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-cosh-functions">26.5.4. The <code class="docutils literal"><span class="pre">cosh</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-sinh-functions">26.5.5. The <code class="docutils literal"><span class="pre">sinh</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-tanh-functions">26.5.6. The <code class="docutils literal"><span class="pre">tanh</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exponential-and-logarithmic-functions">26.6. Exponential and logarithmic functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-exp-functions">26.6.1. The <code class="docutils literal"><span class="pre">exp</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-exp2-functions">26.6.2. The <code class="docutils literal"><span class="pre">exp2</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-expm1-functions">26.6.3. The <code class="docutils literal"><span class="pre">expm1</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-frexp-functions">26.6.4. The <code class="docutils literal"><span class="pre">frexp</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-ilogb-functions">26.6.5. The <code class="docutils literal"><span class="pre">ilogb</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-ldexp-functions">26.6.6. The <code class="docutils literal"><span class="pre">ldexp</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-log-functions">26.6.7. The <code class="docutils literal"><span class="pre">log</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-log10-functions">26.6.8. The <code class="docutils literal"><span class="pre">log10</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-log1p-functions">26.6.9. The <code class="docutils literal"><span class="pre">log1p</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-log2-functions">26.6.10. The <code class="docutils literal"><span class="pre">log2</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-logb-functions">26.6.11. The <code class="docutils literal"><span class="pre">logb</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-modf-functions">26.6.12. The <code class="docutils literal"><span class="pre">modf</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-scalbn-and-scalbln-functions">26.6.13. The <code class="docutils literal"><span class="pre">scalbn</span></code> and <code class="docutils literal"><span class="pre">scalbln</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#power-and-absolute-value-functions">26.7. Power and absolute-value functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-cbrt-functions">26.7.1. The <code class="docutils literal"><span class="pre">cbrt</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-fabs-functions">26.7.2. The <code class="docutils literal"><span class="pre">fabs</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-hypot-functions">26.7.3. The <code class="docutils literal"><span class="pre">hypot</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-pow-functions">26.7.4. The <code class="docutils literal"><span class="pre">pow</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-sqrt-functions">26.7.5. The <code class="docutils literal"><span class="pre">sqrt</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#error-and-gamma-functions">26.8. Error and gamma functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-erf-functions">26.8.1. The <code class="docutils literal"><span class="pre">erf</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-erfc-functions">26.8.2. The <code class="docutils literal"><span class="pre">erfc</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-lgamma-functions">26.8.3. The <code class="docutils literal"><span class="pre">lgamma</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-tgamma-functions">26.8.4. The <code class="docutils literal"><span class="pre">tgamma</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nearest-integer-functions">26.9. Nearest integer functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-ceil-functions">26.9.1. The <code class="docutils literal"><span class="pre">ceil</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-floor-functions">26.9.2. The <code class="docutils literal"><span class="pre">floor</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-nearbyint-functions">26.9.3. The <code class="docutils literal"><span class="pre">nearbyint</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-rint-functions">26.9.4. The <code class="docutils literal"><span class="pre">rint</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-lrint-and-llrint-functions">26.9.5. The <code class="docutils literal"><span class="pre">lrint</span></code> and <code class="docutils literal"><span class="pre">llrint</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-round-functions">26.9.6. The <code class="docutils literal"><span class="pre">round</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-lround-and-llround-functions">26.9.7. The <code class="docutils literal"><span class="pre">lround</span></code> and <code class="docutils literal"><span class="pre">llround</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-trunc-functions">26.9.8. The <code class="docutils literal"><span class="pre">trunc</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#remainder-functions">26.10. Remainder functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-fmod-functions">26.10.1. The <code class="docutils literal"><span class="pre">fmod</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-remainder-functions">26.10.2. The <code class="docutils literal"><span class="pre">remainder</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-remquo-functions">26.10.3. The <code class="docutils literal"><span class="pre">remquo</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulation-functions">26.11. Manipulation functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-copysign-functions">26.11.1. The <code class="docutils literal"><span class="pre">copysign</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-nan-functions">26.11.2. The nan functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-nextafter-functions">26.11.3. The <code class="docutils literal"><span class="pre">nextafter</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-nexttoward-functions">26.11.4. The <code class="docutils literal"><span class="pre">nexttoward</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#maximum-minimum-and-positive-difference-functions">26.12. Maximum, minimum and positive difference functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-fdim-functions">26.12.1. The <code class="docutils literal"><span class="pre">fdim</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-fmax-functions">26.12.2. The <code class="docutils literal"><span class="pre">fmax</span></code> functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-fmin-functions">26.12.3. The <code class="docutils literal"><span class="pre">fmin</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#floating-multiply-add">26.13. Floating multiply-add</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-fma-functions">26.13.1. The <code class="docutils literal"><span class="pre">fma</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#comparison-macros">26.14. Comparison macros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-isgreater-macro">26.14.1. The <code class="docutils literal"><span class="pre">isgreater</span></code> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-isgreaterequal-macro">26.14.2. The <code class="docutils literal"><span class="pre">isgreaterequal</span></code> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-isless-macro">26.14.3. The <code class="docutils literal"><span class="pre">isless</span></code> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-islessequal-macro">26.14.4. The <code class="docutils literal"><span class="pre">islessequal</span></code> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-islessgreater-macro">26.14.5. The <code class="docutils literal"><span class="pre">islessgreater</span></code> macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-isunordered-macro">26.14.6. The <code class="docutils literal"><span class="pre">isunordered</span></code> macro</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../setjmp/">27. Nonlocal jumps <code class="docutils literal"><span class="pre">&lt;setjmp.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal/">28. Signal handling <code class="docutils literal"><span class="pre">&lt;signal.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg/">29. Variable arguments <code class="docutils literal"><span class="pre">&lt;stdarg.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbool/">30. Boolean type and values <code class="docutils literal"><span class="pre">&lt;stdbool.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stddef/">31. Common definitions <code class="docutils literal"><span class="pre">&lt;stddef.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdint/">32. Integer types <code class="docutils literal"><span class="pre">&lt;stdint.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdio/">33. Input/output <code class="docutils literal"><span class="pre">&lt;stdio.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib/">34. General utilities <code class="docutils literal"><span class="pre">&lt;stdlib.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string/">35. String handling <code class="docutils literal"><span class="pre">&lt;string.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tgmath/">36. Type-generic math <code class="docutils literal"><span class="pre">&lt;tgmath.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time/">37. Date and time <code class="docutils literal"><span class="pre">&lt;time.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wchar/">38. Extended multibyte and wide character utilities <code class="docutils literal"><span class="pre">&lt;wchar.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wtype/">39. Wide character classification and mapping utilities <code class="docutils literal"><span class="pre">&lt;wctype.h&gt;</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/">40. Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">41. License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../">C Programming</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Docs</a> &raquo;</li>
+      
+    <li>26. Mathematics <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/math.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mathematics-math-h">
+<span id="math"></span><span id="index-0"></span><h1>26. Mathematics <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code><a class="headerlink" href="#mathematics-math-h" title="Permalink to this headline">¶</a></h1>
+<p id="index-1">The header <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code> declares two types and many mathematical functions and defines
+several macros. Most synopses specify a family of functions consisting of a principal
+function with one or more <code class="docutils literal"><span class="pre">double</span></code> parameters, a <code class="docutils literal"><span class="pre">double</span></code> return value, or both; and
+other functions with the same name but with <code class="docutils literal"><span class="pre">f</span></code> and <code class="docutils literal"><span class="pre">l</span></code> suffixes, which are corresponding
+functions with <code class="docutils literal"><span class="pre">float</span></code> and <code class="docutils literal"><span class="pre">long</span> <span class="pre">double</span></code> parameters, return values, or both. <a class="footnote-reference" href="#id6" id="id1">[1]</a>
+Integer arithmetic functions and conversion functions are discussed later.</p>
+<p>The types</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">float_t</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">double_t</span></code></div>
+</div>
+</div></blockquote>
+<p id="index-2">are floating types at least as wide as <code class="docutils literal"><span class="pre">float</span></code> and <code class="docutils literal"><span class="pre">double</span></code>, respectively, and such that
+<code class="docutils literal"><span class="pre">double_t</span></code> is at least as wide as <code class="docutils literal"><span class="pre">float_t</span></code>. If <code class="docutils literal"><span class="pre">FLT_EVAL_METHOD</span></code> equals 0,
+<code class="docutils literal"><span class="pre">float_t</span></code> and <code class="docutils literal"><span class="pre">double_t</span></code> are <code class="docutils literal"><span class="pre">float</span></code> and <code class="docutils literal"><span class="pre">double</span></code>, respectively; if
+<code class="docutils literal"><span class="pre">FLT_EVAL_METHOD</span></code> equals 1, they are both <code class="docutils literal"><span class="pre">double`;</span> <span class="pre">if</span> <span class="pre">``FLT_EVAL_METHOD</span></code> equals
+2, they are both <code class="docutils literal"><span class="pre">long</span> <span class="pre">double</span></code>; and for other values of <code class="docutils literal"><span class="pre">FLT_EVAL_METHOD</span></code>, they are
+otherwise implementation-defined. <a class="footnote-reference" href="#id7" id="id2">[2]</a></p>
+<p id="index-3">The macro</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">HUGE_VAL</span></code></div>
+</div>
+</div></blockquote>
+<p>expands to a positive double constant expression, not necessarily representable as a
+<code class="docutils literal"><span class="pre">float</span></code>. The macros</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">HUGE_VALF</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">HUGE_VALL</span></code></div>
+</div>
+</div></blockquote>
+<p>are respectively <code class="docutils literal"><span class="pre">float</span></code> and <code class="docutils literal"><span class="pre">long</span> <span class="pre">double</span></code> analogs of <code class="docutils literal"><span class="pre">HUGE_VAL</span></code>. <a class="footnote-reference" href="#id8" id="id3">[3]</a></p>
+<p id="index-4">The macro</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">INFINITY</span></code></div>
+</div>
+</div></blockquote>
+<p>expands to a constant expression of type <code class="docutils literal"><span class="pre">float</span></code> representing positive or unsigned
+infinity, if available; else to a positive constant of type <code class="docutils literal"><span class="pre">float</span></code> that overflows at
+translation time. <a class="footnote-reference" href="#id9" id="id4">[4]</a></p>
+<p id="index-5">The macro</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">NAN</span></code></div>
+</div>
+</div></blockquote>
+<p>is defined if and only if the implementation supports quiet NaNs for the <code class="docutils literal"><span class="pre">float</span></code> type. It
+expands to a constant expression of type <code class="docutils literal"><span class="pre">float</span></code> representing a quiet NaN.</p>
+<p id="index-6">The <em>number classification macros</em></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">FP_INFINITE</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FP_NAN</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FP_NORMAL</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FP_SUBNORMAL</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FP_ZERO</span></code></div>
+</div>
+</div></blockquote>
+<p>represent the mutually exclusive kinds of floating-point values. They expand to integer
+constant expressions with distinct values. Additional implementation-defined floatingpoint
+classifications, with macro definitions beginning with <code class="docutils literal"><span class="pre">FP_1</span></code> and an uppercase letter,
+may also be specified by the implementation.</p>
+<p id="index-7">The macro</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">FP_FAST_FMA</span></code></div>
+</div>
+</div></blockquote>
+<p>is optionally defined. If defined, it indicates that the fma function generally executes
+about as fast as, or faster than, a multiply and an add of double operands. <a class="footnote-reference" href="#id10" id="id5">[5]</a> The
+macros</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">FP_FAST_FMAF</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FP_FAST_FMAL</span></code></div>
+</div>
+</div></blockquote>
+<p>are, respectively, <code class="docutils literal"><span class="pre">float</span></code> and <code class="docutils literal"><span class="pre">long</span> <span class="pre">double</span></code> analogs of <code class="docutils literal"><span class="pre">FP_FAST_FMA</span></code>. If defined,
+these macros expand to the integer constant 1.</p>
+<p id="index-8">The macros</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">FP_ILOGB0</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FP_ILOGBNAN</span></code></div>
+</div>
+</div></blockquote>
+<p>expand to integer constant expressions whose values are returned by <code class="docutils literal"><span class="pre">ilogb(x)</span></code> if <code class="docutils literal"><span class="pre">x</span></code> is
+zero or NaN, respectively. The value of <code class="docutils literal"><span class="pre">FP_ILOGB0</span></code> shall be either <code class="docutils literal"><span class="pre">INT_MIN</span></code> or
+<code class="docutils literal"><span class="pre">-INT_MAX</span></code>. The value of <code class="docutils literal"><span class="pre">FP_ILOGBNAN</span></code> shall be either <code class="docutils literal"><span class="pre">INT_MAX</span></code> or <code class="docutils literal"><span class="pre">INT_MIN</span></code>.</p>
+<p id="index-9">The macros</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">MATH_ERRNO</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">MATH_ERREXCEPT</span></code></div>
+</div>
+</div></blockquote>
+<p>expand to the integer constants 1 and 2, respectively; the macro</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">math_errhandling</span></code></div>
+</div>
+</div></blockquote>
+<p>expands to an expression that has type int and the value <code class="docutils literal"><span class="pre">MATH_ERRNO,</span>
+<span class="pre">MATH_ERREXCEPT</span></code> or the bitwise OR of both. The value of <code class="docutils literal"><span class="pre">math_errhandling</span></code> is
+constant for the duration of the program. It is unspecified whether
+<code class="docutils literal"><span class="pre">math_errhandling</span></code> is a macro or an identifier with external linkage. If a macro
+definition is suppressed or a program defines an identifier with the name
+<code class="docutils literal"><span class="pre">math_errhandling</span></code>, the behavior is undefined. If the expression
+<code class="docutils literal"><span class="pre">math_errhandling</span></code> &amp; <code class="docutils literal"><span class="pre">MATH_ERREXCEPT</span></code> can be nonzero, the implementation
+shall define the macros <code class="docutils literal"><span class="pre">FE_DIVBYZERO,</span> <span class="pre">FE_INVALID</span></code> and <code class="docutils literal"><span class="pre">FE_OVERFLOW</span></code> in
+<code class="docutils literal"><span class="pre">&lt;fenv.h&gt;</span></code>.</p>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Particularly on systems with wide expression evaluation, a <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code> function might pass arguments
+and return values in wider format than the synopsis prototype indicates.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>The types <code class="docutils literal"><span class="pre">float_t</span></code> and <code class="docutils literal"><span class="pre">double_t</span></code> are intended to be the implementation&#8217;s most efficient types at
+least as wide as <code class="docutils literal"><span class="pre">float</span></code> and <code class="docutils literal"><span class="pre">double</span></code>, respectively. For <code class="docutils literal"><span class="pre">FLT_EVAL_METHOD</span> <span class="pre">equal</span></code> 0, 1 or 2, the
+type <code class="docutils literal"><span class="pre">float_t</span></code> is the narrowest type used by the implementation to evaluate floating expressions.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td><code class="docutils literal"><span class="pre">HUGE_VAL,</span> <span class="pre">HUGE_VALF</span></code> and <code class="docutils literal"><span class="pre">HUGE_VALL</span></code> can be positive infinities in an implementation that
+supports infinities.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>In this case, using <code class="docutils literal"><span class="pre">INFINITY</span></code> will violate the constraint in <a class="reference internal" href="../lang/#id108"><span>Constants</span></a> and thus require a diagnostic.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td>Typically, the <code class="docutils literal"><span class="pre">FP_FAST_FMA</span></code> macro is defined if and only if the <code class="docutils literal"><span class="pre">fma</span></code> function is implemented
+directly with a hardware multiply-add instruction. Software implementations are expected to be
+substantially slower.</td></tr>
+</tbody>
+</table>
+<div class="section" id="treatment-of-error-conditions">
+<span id="id11"></span><span id="index-10"></span><h2>26.1. Treatment of error conditions<a class="headerlink" href="#treatment-of-error-conditions" title="Permalink to this headline">¶</a></h2>
+<p>The behavior of each of the functions in <code class="docutils literal"><span class="pre">&lt;math.h&gt;</span></code> is specified for all representable
+values of its input arguments, except where stated otherwise. Each function shall execute
+as if it were a single operation without generating any externally visible exceptional
+conditions.</p>
+<p>For all functions, a domain error occurs if an input argument is outside the domain over
+which the mathematical function is defined. The description of each function lists any
+required domain errors; an implementation may define additional domain errors, provided
+that such errors are consistent with the mathematical definition of the function. <a class="footnote-reference" href="#id14" id="id12">[6]</a> On a
+domain error, the function returns an implementation-defined value; if the integer
+expression <code class="docutils literal"><span class="pre">math_errhandling</span></code> &amp; <code class="docutils literal"><span class="pre">MATH_ERRNO</span></code> is nonzero, the integer expression
+errno acquires the value <code class="docutils literal"><span class="pre">EDOM</span></code>; if the integer expression <code class="docutils literal"><span class="pre">math_errhandling</span></code> &amp;
+<code class="docutils literal"><span class="pre">MATH_ERREXCEPT</span></code> is nonzero, the &#8220;invalid&#8221; floating-point exception is raised.</p>
+<p>Similarly, a range error occurs if the mathematical result of the function cannot be
+represented in an object of the specified type, due to extreme magnitude.</p>
+<p>A floating result overflows if the magnitude of the mathematical result is finite but so
+large that the mathematical result cannot be represented without extraordinary roundoff
+error in an object of the specified type. If a floating result overflows and default rounding
+is in effect, or if the mathematical result is an exact infinity (for example <code class="docutils literal"><span class="pre">log(0.0)</span></code>),
+then the function returns the value of the macro <code class="docutils literal"><span class="pre">HUGE_VAL,</span> <span class="pre">HUGE_VALF</span></code> or
+<code class="docutils literal"><span class="pre">HUGE_VALL</span></code> according to the return type, with the same sign as the correct value of the
+function; if the integer expression math_errhandling &amp; <code class="docutils literal"><span class="pre">MATH_ERRNO</span></code> is nonzero,
+the integer expression errno acquires the value <code class="docutils literal"><span class="pre">ERANGE</span></code>; if the integer expression
+<code class="docutils literal"><span class="pre">math_errhandling</span></code> &amp; <code class="docutils literal"><span class="pre">MATH_ERREXCEPT</span></code> is nonzero, the &#8220;divide-by-zero&#8221;
+floating-point exception is raised if the mathematical result is an exact infinity and the
+&#8220;overflow&#8221; floating-point exception is raised otherwise.</p>
+<p>The result underflows if the magnitude of the mathematical result is so small that the
+mathematical result cannot be represented, without extraordinary roundoff error, in an
+object of the specified type. <a class="footnote-reference" href="#id15" id="id13">[7]</a> If the result underflows, the function returns an
+implementation-defined value whose magnitude is no greater than the smallest
+normalized positive number in the specified type; if the integer expression
+<code class="docutils literal"><span class="pre">math_errhandling</span></code> &amp; <code class="docutils literal"><span class="pre">MATH_ERRNO</span></code> is nonzero, whether errno acquires the
+value <code class="docutils literal"><span class="pre">ERANGE</span></code> is implementation-defined; if the integer expression
+<code class="docutils literal"><span class="pre">math_errhandling</span></code> &amp; <code class="docutils literal"><span class="pre">MATH_ERREXCEPT</span></code> is nonzero, whether the &#8220;underflow&#8221;
+floating-point exception is raised is implementation-defined.</p>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id12">[6]</a></td><td>In an implementation that supports infinities, this allows an infinity as an argument to be a domain
+error if the mathematical domain of the function does not include the infinity.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id15" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id13">[7]</a></td><td>The term underflow here is intended to encompass both &#8220;gradual underflow&#8221; as in IEC 60559 and
+also &#8220;flush-to-zero&#8221; underflow.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-fp-contract-pragma">
+<span id="id16"></span><span id="index-11"></span><h2>26.2. The FP_CONTRACT pragma<a class="headerlink" href="#the-fp-contract-pragma" title="Permalink to this headline">¶</a></h2>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="cp">#pragma STDC FP_CONTRACT on-off-switch</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">FP_CONTRACT</span></code> pragma can be used to allow (if the state is &#8220;on&#8221;) or disallow (if the
+state is &#8220;off&#8221;) the implementation to contract expressions (<a class="reference internal" href="../lang/#id130"><span>Expressions</span></a>). Each pragma can occur
+either outside external declarations or preceding all explicit declarations and statements
+inside a compound statement. When outside external declarations, the pragma takes
+effect from its occurrence until another <code class="docutils literal"><span class="pre">FP_CONTRACT</span></code> pragma is encountered, or until
+the end of the translation unit. When inside a compound statement, the pragma takes
+effect from its occurrence until another <code class="docutils literal"><span class="pre">FP_CONTRACT</span></code> pragma is encountered
+(including within a nested compound statement), or until the end of the compound
+statement; at the end of a compound statement the state for the pragma is restored to its
+condition just before the compound statement. If this pragma is used in any other
+context, the behavior is undefined. The default state (&#8220;on&#8221; or &#8220;off&#8221;) for the pragma is
+implementation-defined.</p>
+</div>
+<div class="section" id="classification-macros">
+<h2>26.3. Classification macros<a class="headerlink" href="#classification-macros" title="Permalink to this headline">¶</a></h2>
+<p>In the synopses in this subclause, real-floating indicates that the argument shall be an
+expression of real floating type.</p>
+<div class="section" id="the-fpclassify-macro">
+<span id="index-12"></span><h3>26.3.1. The <code class="docutils literal"><span class="pre">fpclassify</span></code> macro<a class="headerlink" href="#the-fpclassify-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">fpclassify</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fpclassify</span></code> macro classifies its argument value as NaN, infinite, normal,
+subnormal, zero, or into another implementation-defined category. First, an argument
+represented in a format wider than its semantic type is converted to its semantic type.
+Then classification is based on the type of the argument. <a class="footnote-reference" href="#id18" id="id17">[8]</a></p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fpclassify</span></code> macro returns the value of the number classification macro
+appropriate to the value of its argument.</p>
+<p>EXAMPLE The <code class="docutils literal"><span class="pre">fpclassify</span></code> macro might be implemented in terms of ordinary functions as</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#define fpclassify(x) \</span>
+<span class="cp">        ((sizeof (x) == sizeof (float)) ? _ _fpclassifyf(x) : \</span>
+<span class="cp">        (sizeof (x) == sizeof (double)) ? _ _fpclassifyd(x) : \</span>
+<span class="cp">        _ _fpclassifyl(x))</span>
+</pre></div>
+</div>
+<table class="docutils footnote" frame="void" id="id18" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id17">[8]</a></td><td>Since an expression can be evaluated with more range and precision than its type has, it is important to
+know the type that classification is based on. For example, a normal <code class="docutils literal"><span class="pre">long</span> <span class="pre">double</span></code> value might
+become subnormal when converted to <code class="docutils literal"><span class="pre">double</span></code>, and zero when converted to <code class="docutils literal"><span class="pre">float</span></code>.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-isfinite-macro">
+<span id="index-13"></span><h3>26.3.2. The <code class="docutils literal"><span class="pre">isfinite</span></code> macro<a class="headerlink" href="#the-isfinite-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isfinite</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isfinite</span></code> macro determines whether its argument has a finite value (zero,
+subnormal, or normal, and not infinite or NaN). First, an argument represented in a
+format wider than its semantic type is converted to its semantic type. Then determination
+is based on the type of the argument.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isfinite</span></code> macro returns a nonzero value if and only if its argument has a finite
+value.</p>
+</div>
+<div class="section" id="the-isinf-macro">
+<span id="index-14"></span><h3>26.3.3. The <code class="docutils literal"><span class="pre">isinf</span></code> macro<a class="headerlink" href="#the-isinf-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isinf</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isinf</span></code> macro determines whether its argument value is an infinity (positive or
+negative). First, an argument represented in a format wider than its semantic type is
+converted to its semantic type. Then determination is based on the type of the argument.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isinf</span></code> macro returns a nonzero value if and only if its argument has an infinite
+value.</p>
+</div>
+<div class="section" id="the-isnan-macro">
+<span id="index-15"></span><h3>26.3.4. The <code class="docutils literal"><span class="pre">isnan</span></code> macro<a class="headerlink" href="#the-isnan-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isnan</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isnan</span></code> macro determines whether its argument value is a NaN. First, an argument
+represented in a format wider than its semantic type is converted to its semantic type.
+Then determination is based on the type of the argument. <a class="footnote-reference" href="#id20" id="id19">[9]</a></p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isnan</span></code> macro returns a nonzero value if and only if its argument has a NaN value.</p>
+<table class="docutils footnote" frame="void" id="id20" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id19">[9]</a></td><td>For the <code class="docutils literal"><span class="pre">isnan</span></code> macro, the type for determination does not matter unless the implementation supports
+NaNs in the evaluation type but not in the semantic type.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-isnormal-macro">
+<span id="index-16"></span><h3>26.3.5. The <code class="docutils literal"><span class="pre">isnormal</span></code> macro<a class="headerlink" href="#the-isnormal-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isnormal</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isnormal</span></code> macro determines whether its argument value is normal (neither zero,
+subnormal, infinite, nor NaN). First, an argument represented in a format wider than its
+semantic type is converted to its semantic type. Then determination is based on the type
+of the argument.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isnormal</span></code> macro returns a nonzero value if and only if its argument has a normal
+value.</p>
+</div>
+<div class="section" id="the-signbit-macro">
+<span id="index-17"></span><h3>26.3.6. The <code class="docutils literal"><span class="pre">signbit</span></code> macro<a class="headerlink" href="#the-signbit-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">signbit</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">signbit</span></code> macro determines whether the sign of its argument value is negative. <a class="footnote-reference" href="#id22" id="id21">[10]</a></p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">signbit</span></code> macro returns a nonzero value if and only if the sign of its argument value
+is negative.</p>
+<table class="docutils footnote" frame="void" id="id22" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id21">[10]</a></td><td>The <code class="docutils literal"><span class="pre">signbit</span></code> macro reports the sign of all values, including infinities, zeros, and NaNs. If zero is
+unsigned, it is treated as positive.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="trigonometric-functions">
+<span id="index-18"></span><h2>26.4. Trigonometric functions<a class="headerlink" href="#trigonometric-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-acos-functions">
+<span id="index-19"></span><h3>26.4.1. The <code class="docutils literal"><span class="pre">acos</span></code> functions<a class="headerlink" href="#the-acos-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">acos</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">acosf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">acosl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">acos</span></code> functions compute the principal value of the arc cosine of <code class="docutils literal"><span class="pre">x</span></code>. A domain error
+occurs for arguments not in the interval [-1, +1].</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">acos</span></code> functions return arccos x in the interval [<span class="math">\(0, \pi\)</span>] radians.</p>
+</div>
+<div class="section" id="the-asin-functions">
+<span id="index-20"></span><h3>26.4.2. The <code class="docutils literal"><span class="pre">asin</span></code> functions<a class="headerlink" href="#the-asin-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">asin</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">asinf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">asinl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">asin</span></code> functions compute the principal value of the arc sine of <code class="docutils literal"><span class="pre">x</span></code>. A domain error
+occurs for arguments not in the interval [-1, +1].</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">asin</span></code> functions return arcsin x in the interval [<span class="math">\(-\pi/2, +\pi/2\)</span>] radians.</p>
+</div>
+<div class="section" id="the-atan-functions">
+<span id="index-21"></span><h3>26.4.3. The <code class="docutils literal"><span class="pre">atan</span></code> functions<a class="headerlink" href="#the-atan-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">atan</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">atanf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">atanl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">atan</span></code> functions compute the principal value of the arc tangent of <code class="docutils literal"><span class="pre">x</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">atan</span></code> functions return arctan <code class="docutils literal"><span class="pre">x</span></code> in the interval [<span class="math">\(-\pi/2, +\pi/2\)</span>] radians.</p>
+</div>
+<div class="section" id="the-atan2-functions">
+<span id="index-22"></span><h3>26.4.4. The <code class="docutils literal"><span class="pre">atan2</span></code> functions<a class="headerlink" href="#the-atan2-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">atan2</span><span class="p">(</span><span class="kt">double</span> <span class="n">y</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">atan2f</span><span class="p">(</span><span class="kt">float</span> <span class="n">y</span><span class="p">,</span> <span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">atan2l</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">atan2</span></code> functions compute the value of the arc tangent of <code class="docutils literal"><span class="pre">y/x</span></code>, using the signs of both
+arguments to determine the quadrant of the return value. A domain error may occur if
+both arguments are zero.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">atan2</span></code> functions return arctan <code class="docutils literal"><span class="pre">y/x</span></code> in the interval [<span class="math">\(-\pi, +\pi\)</span>] radians.</p>
+</div>
+<div class="section" id="the-cos-functions">
+<span id="index-23"></span><h3>26.4.5. The <code class="docutils literal"><span class="pre">cos</span></code> functions<a class="headerlink" href="#the-cos-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">cos</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">cosf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">cosl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">cos</span></code> functions compute the cosine of <code class="docutils literal"><span class="pre">x</span></code> (measured in radians).</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">cos</span></code> functions return cos <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</div>
+<div class="section" id="the-sin-functions">
+<span id="index-24"></span><h3>26.4.6. The <code class="docutils literal"><span class="pre">sin</span></code> functions<a class="headerlink" href="#the-sin-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">sin</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">sinf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">sinl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">sin</span></code> functions compute the sine of <code class="docutils literal"><span class="pre">x</span></code> (measured in radians).</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">sin</span></code> functions return sin <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</div>
+<div class="section" id="the-tan-functions">
+<span id="index-25"></span><h3>26.4.7. The <code class="docutils literal"><span class="pre">tan</span></code> functions<a class="headerlink" href="#the-tan-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">tan</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">tanf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">tanl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">tan</span></code> functions return the tangent of <code class="docutils literal"><span class="pre">x</span></code> (measured in radians).</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">tan</span></code> functions return tan <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</div>
+</div>
+<div class="section" id="hyperbolic-functions">
+<span id="index-26"></span><h2>26.5. Hyperbolic functions<a class="headerlink" href="#hyperbolic-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-acosh-functions">
+<span id="index-27"></span><h3>26.5.1. The <code class="docutils literal"><span class="pre">acosh</span></code> functions<a class="headerlink" href="#the-acosh-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">acosh</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">acoshf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">acoshl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">acosh</span></code> functions compute the (nonnegative) arc hyperbolic cosine of <code class="docutils literal"><span class="pre">x</span></code>. A domain
+error occurs for arguments less than 1.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">acosh</span></code> functions return arcosh <code class="docutils literal"><span class="pre">x</span></code> in the interval [<span class="math">\(0, +\infty\)</span>].</p>
+</div>
+<div class="section" id="the-asinh-functions">
+<span id="index-28"></span><h3>26.5.2. The <code class="docutils literal"><span class="pre">asinh</span></code> functions<a class="headerlink" href="#the-asinh-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">asinh</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">asinhf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">asinhl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">asinh</span></code> functions compute the arc hyperbolic sine of <code class="docutils literal"><span class="pre">x</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">asinh</span></code> functions return arsinh <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</div>
+<div class="section" id="the-atanh-functions">
+<span id="index-29"></span><h3>26.5.3. The <code class="docutils literal"><span class="pre">atanh</span></code> functions<a class="headerlink" href="#the-atanh-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">atanh</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">atanhf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">atanhl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">atanh</span></code> functions compute the arc hyperbolic tangent of <code class="docutils literal"><span class="pre">x</span></code>. A domain error occurs
+for arguments not in the interval [-1, +1]. A range error may occur if the argument
+equals -1 or +1.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">atanh</span></code> functions return atanh <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</div>
+<div class="section" id="the-cosh-functions">
+<span id="index-30"></span><h3>26.5.4. The <code class="docutils literal"><span class="pre">cosh</span></code> functions<a class="headerlink" href="#the-cosh-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">cosh</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">coshf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">coshl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">cosh</span></code> functions compute the hyperbolic cosine of <code class="docutils literal"><span class="pre">x</span></code>. A range error occurs if the
+magnitude of <code class="docutils literal"><span class="pre">x</span></code> is too large.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">cosh</span></code> functions return cosh <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</div>
+<div class="section" id="the-sinh-functions">
+<span id="index-31"></span><h3>26.5.5. The <code class="docutils literal"><span class="pre">sinh</span></code> functions<a class="headerlink" href="#the-sinh-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">sinh</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">sinhf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">sinhl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">sinh</span></code> functions compute the hyperbolic sine of <code class="docutils literal"><span class="pre">x</span></code>. A range error occurs if the
+magnitude of <code class="docutils literal"><span class="pre">x</span></code> is too large.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">sinh</span></code> functions return sinh <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</div>
+<div class="section" id="the-tanh-functions">
+<span id="index-32"></span><h3>26.5.6. The <code class="docutils literal"><span class="pre">tanh</span></code> functions<a class="headerlink" href="#the-tanh-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">tanh</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">tanhf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">tanhl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">tanh</span></code> functions compute the hyperbolic tangent of <code class="docutils literal"><span class="pre">x</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">tanh</span></code> functions return tanh <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</div>
+</div>
+<div class="section" id="exponential-and-logarithmic-functions">
+<span id="index-33"></span><h2>26.6. Exponential and logarithmic functions<a class="headerlink" href="#exponential-and-logarithmic-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-exp-functions">
+<span id="index-34"></span><h3>26.6.1. The <code class="docutils literal"><span class="pre">exp</span></code> functions<a class="headerlink" href="#the-exp-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">exp</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">expf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">expl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">exp</span></code> functions compute the base-e exponential of <code class="docutils literal"><span class="pre">x</span></code>. A range error occurs if the
+magnitude of <code class="docutils literal"><span class="pre">x</span></code> is too large.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">exp</span></code> functions return <span class="math">\(e^x\)</span>.</p>
+</div>
+<div class="section" id="the-exp2-functions">
+<span id="index-35"></span><h3>26.6.2. The <code class="docutils literal"><span class="pre">exp2</span></code> functions<a class="headerlink" href="#the-exp2-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">exp2</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">exp2f</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">exp2l</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong>
+The <code class="docutils literal"><span class="pre">exp2</span></code> functions compute the base-2 exponential of <code class="docutils literal"><span class="pre">x</span></code>. A range error occurs if the
+magnitude of <code class="docutils literal"><span class="pre">x</span></code> is too large.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">exp2</span></code> functions return <span class="math">\(2^x\)</span>.</p>
+</div>
+<div class="section" id="the-expm1-functions">
+<span id="index-36"></span><h3>26.6.3. The <code class="docutils literal"><span class="pre">expm1</span></code> functions<a class="headerlink" href="#the-expm1-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">expm1</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">expm1f</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">expm1l</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">expm1</span></code> functions compute the base-e exponential of the argument, minus 1. A range
+error occurs if <code class="docutils literal"><span class="pre">x</span></code> is too large. <a class="footnote-reference" href="#id24" id="id23">[11]</a></p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">expm1</span></code> functions return <span class="math">\(e^x-1\)</span>.</p>
+<table class="docutils footnote" frame="void" id="id24" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id23">[11]</a></td><td>For small magnitude <code class="docutils literal"><span class="pre">x,</span> <span class="pre">expm1(x)</span></code> is expected to be more accurate than <code class="docutils literal"><span class="pre">exp(x)</span> <span class="pre">-</span> <span class="pre">1</span></code>.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-frexp-functions">
+<span id="index-37"></span><h3>26.6.4. The <code class="docutils literal"><span class="pre">frexp</span></code> functions<a class="headerlink" href="#the-frexp-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">frexp</span><span class="p">(</span><span class="kt">double</span> <span class="n">value</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">exp</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">frexpf</span><span class="p">(</span><span class="kt">float</span> <span class="n">value</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">exp</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">frexpl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">value</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">exp</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">frexp</span></code> functions break a floating-point number into a normalized fraction and an
+integral power of 2. They store the integer in the int object pointed to by <code class="docutils literal"><span class="pre">exp</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>If <code class="docutils literal"><span class="pre">value</span></code> is not a floating-point number, the results are unspecified. Otherwise, the
+<code class="docutils literal"><span class="pre">frexp</span></code> functions return the value <code class="docutils literal"><span class="pre">x</span></code>, such that <code class="docutils literal"><span class="pre">x</span></code> has a magnitude in the interval [1/2, 1) or
+zero, and <code class="docutils literal"><span class="pre">value</span></code> equals <span class="math">\(x *2^{*exp}\)</span>. If value is zero, both parts of the result are zero.</p>
+</div>
+<div class="section" id="the-ilogb-functions">
+<span id="index-38"></span><h3>26.6.5. The <code class="docutils literal"><span class="pre">ilogb</span></code> functions<a class="headerlink" href="#the-ilogb-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">ilogb</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">ilogbf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">ilogbl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">ilogb</span></code> functions extract the exponent of <code class="docutils literal"><span class="pre">x</span></code> as a signed <code class="docutils literal"><span class="pre">int</span></code> value. If <code class="docutils literal"><span class="pre">x</span></code> is zero they
+compute the value <code class="docutils literal"><span class="pre">FP_ILOGB0</span></code>; if <code class="docutils literal"><span class="pre">x</span></code> is infinite they compute the value <code class="docutils literal"><span class="pre">INT_MAX</span></code>; if <code class="docutils literal"><span class="pre">x</span></code> is
+a NaN they compute the value <code class="docutils literal"><span class="pre">FP_ILOGBNAN</span></code>; otherwise, they are equivalent to calling
+the corresponding <code class="docutils literal"><span class="pre">logb</span></code> function and casting the returned value to type <code class="docutils literal"><span class="pre">int</span></code>. A domain
+error or range error may occur if <code class="docutils literal"><span class="pre">x</span></code> is zero, infinite, or NaN. If the correct value is outside
+the range of the return type, the numeric result is unspecified.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">ilogb</span></code> functions return the exponent of <code class="docutils literal"><span class="pre">x</span></code> as a signed <code class="docutils literal"><span class="pre">int</span></code> value.</p>
+<p><strong>Forward references:</strong> the logb functions (<a class="reference internal" href="#id27"><span>The logb functions</span></a>).</p>
+</div>
+<div class="section" id="the-ldexp-functions">
+<span id="index-39"></span><h3>26.6.6. The <code class="docutils literal"><span class="pre">ldexp</span></code> functions<a class="headerlink" href="#the-ldexp-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">ldexp</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exp</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">ldexpf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exp</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">ldexpl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exp</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">ldexp</span></code> functions multiply a floating-point number by an integral power of 2. A
+range error may occur.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">ldexp</span></code> functions return <span class="math">\(x * 2^{exp}\)</span>.</p>
+</div>
+<div class="section" id="the-log-functions">
+<span id="index-40"></span><h3>26.6.7. The <code class="docutils literal"><span class="pre">log</span></code> functions<a class="headerlink" href="#the-log-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">log</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">logf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">logl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">log</span></code> functions compute the base-e (natural) logarithm of <code class="docutils literal"><span class="pre">x</span></code>. A domain error occurs if
+the argument is negative. A range error may occur if the argument is zero.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">log</span></code> functions return <span class="math">\(log_e x\)</span>.</p>
+</div>
+<div class="section" id="the-log10-functions">
+<span id="index-41"></span><h3>26.6.8. The <code class="docutils literal"><span class="pre">log10</span></code> functions<a class="headerlink" href="#the-log10-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">log10</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">log10f</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">log10l</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">log10</span></code> functions compute the base-10 (common) logarithm of <code class="docutils literal"><span class="pre">x</span></code>. A domain error
+occurs if the argument is negative. A range error may occur if the argument is zero.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">log10</span></code> functions return <span class="math">\(log_{10} x\)</span>.</p>
+</div>
+<div class="section" id="the-log1p-functions">
+<span id="index-42"></span><h3>26.6.9. The <code class="docutils literal"><span class="pre">log1p</span></code> functions<a class="headerlink" href="#the-log1p-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">log1p</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">log1pf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">log1pl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">log1p</span></code> functions compute the base-e (natural) logarithm of 1 plus the argument. <a class="footnote-reference" href="#id26" id="id25">[12]</a>
+A domain error occurs if the argument is less than -1. A range error may occur if the
+argument equals 11.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">log1p</span></code> functions return <span class="math">\(log_e (1 + x)\)</span>.</p>
+<table class="docutils footnote" frame="void" id="id26" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id25">[12]</a></td><td>For small magnitude <code class="docutils literal"><span class="pre">x,</span> <span class="pre">log1p(x)</span></code> is expected to be more accurate than <code class="docutils literal"><span class="pre">log(1</span> <span class="pre">+</span> <span class="pre">x)</span></code>.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-log2-functions">
+<span id="index-43"></span><h3>26.6.10. The <code class="docutils literal"><span class="pre">log2</span></code> functions<a class="headerlink" href="#the-log2-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">log2</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">log2f</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">log2l</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">log2</span></code> functions compute the base-2 logarithm of <code class="docutils literal"><span class="pre">x</span></code>. A domain error occurs if the
+argument is less than zero. A range error may occur if the argument is zero.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">log2</span></code> functions return <span class="math">\(log_2 x\)</span>.</p>
+</div>
+<div class="section" id="the-logb-functions">
+<span id="id27"></span><span id="index-44"></span><h3>26.6.11. The <code class="docutils literal"><span class="pre">logb</span></code> functions<a class="headerlink" href="#the-logb-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">logb</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">logbf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">logbl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">logb</span></code> functions extract the exponent of <code class="docutils literal"><span class="pre">x</span></code>, as a signed integer value in floating-point
+format. If x is subnormal it is treated as though it were normalized; thus, for positive
+finite <code class="docutils literal"><span class="pre">x</span></code>,</p>
+<div class="math">
+\[\begin{split}1~\leq~x~*~FLT\_RADIX^{-logb(x)}~&lt;~FLT\_RADIX\end{split}\]</div>
+<p>A domain error or range error may occur if the argument is zero.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">logb</span></code> functions return the signed exponent of <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</div>
+<div class="section" id="the-modf-functions">
+<span id="index-45"></span><h3>26.6.12. The <code class="docutils literal"><span class="pre">modf</span></code> functions<a class="headerlink" href="#the-modf-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">modf</span><span class="p">(</span><span class="kt">double</span> <span class="n">value</span><span class="p">,</span> <span class="kt">double</span> <span class="o">*</span><span class="n">iptr</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">modff</span><span class="p">(</span><span class="kt">float</span> <span class="n">value</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">iptr</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">modfl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">value</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="o">*</span><span class="n">iptr</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">modf</span></code> functions break the argument value into integral and fractional parts, each of
+which has the same type and sign as the argument. They store the integral part (in
+floating-point format) in the object pointed to by <code class="docutils literal"><span class="pre">iptr</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">modf</span></code> functions return the signed fractional part of value.</p>
+</div>
+<div class="section" id="the-scalbn-and-scalbln-functions">
+<span id="index-46"></span><h3>26.6.13. The <code class="docutils literal"><span class="pre">scalbn</span></code> and <code class="docutils literal"><span class="pre">scalbln</span></code> functions<a class="headerlink" href="#the-scalbn-and-scalbln-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">scalbn</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">scalbnf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">scalbnl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">double</span> <span class="nf">scalbln</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">scalblnf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">scalblnl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">scalbn</span></code> and <code class="docutils literal"><span class="pre">scalbln</span></code> functions compute <span class="math">\(x*FLT\_RADIX^n\)</span> efficiently, not
+normally by computing <span class="math">\(FLT\_RADIX^n\)</span> explicitly. A range error may occur.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">scalbn</span></code> and <code class="docutils literal"><span class="pre">scalbln</span></code> functions return <span class="math">\(x*FLT\_RADIX^n\)</span>.</p>
+</div>
+</div>
+<div class="section" id="power-and-absolute-value-functions">
+<span id="index-47"></span><h2>26.7. Power and absolute-value functions<a class="headerlink" href="#power-and-absolute-value-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-cbrt-functions">
+<span id="index-48"></span><h3>26.7.1. The <code class="docutils literal"><span class="pre">cbrt</span></code> functions<a class="headerlink" href="#the-cbrt-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">cbrt</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">cbrtf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">cbrtl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">cbrt</span></code> functions compute the real cube root of <code class="docutils literal"><span class="pre">x</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">cbrt</span></code> functions return <span class="math">\(x^{1/3}\)</span>.</p>
+</div>
+<div class="section" id="the-fabs-functions">
+<span id="index-49"></span><h3>26.7.2. The <code class="docutils literal"><span class="pre">fabs</span></code> functions<a class="headerlink" href="#the-fabs-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">fabs</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">fabsf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">fabsl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fabs</span></code> functions compute the absolute value of a floating-point number <code class="docutils literal"><span class="pre">x</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fabs</span></code> functions return <span class="math">\(|x|\)</span>.</p>
+</div>
+<div class="section" id="the-hypot-functions">
+<span id="index-50"></span><h3>26.7.3. The <code class="docutils literal"><span class="pre">hypot</span></code> functions<a class="headerlink" href="#the-hypot-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">hypot</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">hypotf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">hypotl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">hypot</span></code> functions compute the square root of the sum of the squares of <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code>,
+without undue overflow or underflow. A range error may occur.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">hypot</span></code> functions return <span class="math">\(\sqrt{x^2+y^2}\)</span>.</p>
+</div>
+<div class="section" id="the-pow-functions">
+<span id="index-51"></span><h3>26.7.4. The <code class="docutils literal"><span class="pre">pow</span></code> functions<a class="headerlink" href="#the-pow-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">pow</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">powf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">powl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">pow</span></code> functions compute <code class="docutils literal"><span class="pre">x</span></code> raised to the power <code class="docutils literal"><span class="pre">y</span></code>. A domain error occurs if <code class="docutils literal"><span class="pre">x</span></code> is finite
+and negative and <code class="docutils literal"><span class="pre">y</span></code> is finite and not an integer value. A range error may occur. A domain
+error may occur if <code class="docutils literal"><span class="pre">x</span></code> is zero and <code class="docutils literal"><span class="pre">y</span></code> is zero. A domain error or range error may occur if <code class="docutils literal"><span class="pre">x</span></code>
+is zero and <code class="docutils literal"><span class="pre">y</span></code> is less than zero.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">pow</span></code> functions return <span class="math">\(x^y\)</span>.</p>
+</div>
+<div class="section" id="the-sqrt-functions">
+<span id="index-52"></span><h3>26.7.5. The <code class="docutils literal"><span class="pre">sqrt</span></code> functions<a class="headerlink" href="#the-sqrt-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">sqrt</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">sqrtf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">sqrtl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">sqrt</span></code> functions compute the nonnegative square root of <code class="docutils literal"><span class="pre">x</span></code>. A domain error occurs if
+the argument is less than zero.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">sqrt</span></code> functions return <span class="math">\(\sqrt{x}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="error-and-gamma-functions">
+<span id="index-53"></span><h2>26.8. Error and gamma functions<a class="headerlink" href="#error-and-gamma-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-erf-functions">
+<span id="index-54"></span><h3>26.8.1. The <code class="docutils literal"><span class="pre">erf</span></code> functions<a class="headerlink" href="#the-erf-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">erf</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">erff</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">erfl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">erf</span></code> functions compute the error function of <code class="docutils literal"><span class="pre">x</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">erf</span></code> functions return erf <span class="math">\(x = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2} dt\)</span></p>
+</div>
+<div class="section" id="the-erfc-functions">
+<span id="index-55"></span><h3>26.8.2. The <code class="docutils literal"><span class="pre">erfc</span></code> functions<a class="headerlink" href="#the-erfc-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">erfc</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">erfcf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">erfcl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">erfc</span></code> functions compute the complementary error function of <code class="docutils literal"><span class="pre">x</span></code>. A range error
+occurs if <code class="docutils literal"><span class="pre">x</span></code> is too large.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">erfc</span></code> functions return erfc <span class="math">\(x = 1 - erf x = \frac{2}{\sqrt{\pi}}\int_0^{\infty} e^{-t^2} dt\)</span></p>
+</div>
+<div class="section" id="the-lgamma-functions">
+<span id="index-56"></span><h3>26.8.3. The <code class="docutils literal"><span class="pre">lgamma</span></code> functions<a class="headerlink" href="#the-lgamma-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">lgamma</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">lgammaf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">lgammal</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">lgamma</span></code> functions compute the natural logarithm of the absolute value of gamma of
+<code class="docutils literal"><span class="pre">x</span></code>. A range error occurs if <code class="docutils literal"><span class="pre">x</span></code> is too large. A range error may occur if <code class="docutils literal"><span class="pre">x</span></code> is a negative
+integer or zero.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">lgamma</span></code> functions return <span class="math">\(log_e |\Gamma (x)|\)</span>.</p>
+</div>
+<div class="section" id="the-tgamma-functions">
+<span id="index-57"></span><h3>26.8.4. The <code class="docutils literal"><span class="pre">tgamma</span></code> functions<a class="headerlink" href="#the-tgamma-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">tgamma</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">tgammaf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">tgammal</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">tgamma</span></code> functions compute the gamma function of <code class="docutils literal"><span class="pre">x</span></code>. A domain error or range error
+may occur if <code class="docutils literal"><span class="pre">x</span></code> is a negative integer or zero. A range error may occur if the magnitude of
+<code class="docutils literal"><span class="pre">x</span></code> is too large or too small.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">tgamma</span></code> functions return <span class="math">\(\Gamma (x)\)</span>.</p>
+</div>
+</div>
+<div class="section" id="nearest-integer-functions">
+<span id="index-58"></span><h2>26.9. Nearest integer functions<a class="headerlink" href="#nearest-integer-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-ceil-functions">
+<span id="index-59"></span><h3>26.9.1. The <code class="docutils literal"><span class="pre">ceil</span></code> functions<a class="headerlink" href="#the-ceil-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">ceil</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">ceilf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">ceill</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">ceil</span></code> functions compute the smallest integer value not less than <code class="docutils literal"><span class="pre">x</span></code>.</p>
+<p>The <code class="docutils literal"><span class="pre">ceil</span></code> functions return <span class="math">\(\lceil x\rceil\)</span>, expressed as a floating-point number.</p>
+</div>
+<div class="section" id="the-floor-functions">
+<span id="index-60"></span><h3>26.9.2. The <code class="docutils literal"><span class="pre">floor</span></code> functions<a class="headerlink" href="#the-floor-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">floor</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">floorf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">floorl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">floor</span></code> functions compute the largest integer value not greater than <code class="docutils literal"><span class="pre">x</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">floor</span></code> functions return <span class="math">\(\lfloor x\rfloor\)</span>, expressed as a floating-point number.</p>
+</div>
+<div class="section" id="the-nearbyint-functions">
+<span id="id28"></span><span id="index-61"></span><h3>26.9.3. The <code class="docutils literal"><span class="pre">nearbyint</span></code> functions<a class="headerlink" href="#the-nearbyint-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">nearbyint</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">nearbyintf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">nearbyintl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">nearbyint</span></code> functions round their argument to an integer value in floating-point
+format, using the current rounding direction and without raising the &#8220;inexact&#8221; floatingpoint
+exception.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">nearbyint</span></code> functions return the rounded integer value.</p>
+</div>
+<div class="section" id="the-rint-functions">
+<span id="index-62"></span><h3>26.9.4. The <code class="docutils literal"><span class="pre">rint</span></code> functions<a class="headerlink" href="#the-rint-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">rint</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">rintf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">rintl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">rint</span></code> functions differ from the <code class="docutils literal"><span class="pre">nearbyint</span></code> functions (<a class="reference internal" href="#id28"><span>The nearbyint functions</span></a>) only in that the
+rint functions may raise the &#8220;inexact&#8221; floating-point exception if the result differs in
+value from the argument.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">rint</span></code> functions return the rounded integer value.</p>
+</div>
+<div class="section" id="the-lrint-and-llrint-functions">
+<span id="index-63"></span><h3>26.9.5. The <code class="docutils literal"><span class="pre">lrint</span></code> and <code class="docutils literal"><span class="pre">llrint</span></code> functions<a class="headerlink" href="#the-lrint-and-llrint-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">long</span> <span class="kt">int</span> <span class="nf">lrint</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">int</span> <span class="nf">lrintf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">int</span> <span class="nf">lrintl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">long</span> <span class="kt">int</span> <span class="nf">llrint</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">long</span> <span class="kt">int</span> <span class="nf">llrintf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">long</span> <span class="kt">int</span> <span class="nf">llrintl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">lrint</span></code> and <code class="docutils literal"><span class="pre">llrint</span></code> functions round their argument to the nearest integer value,
+rounding according to the current rounding direction. If the rounded value is outside the
+range of the return type, the numeric result is unspecified and a domain error or range
+error may occur.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">lrint</span></code> and <code class="docutils literal"><span class="pre">llrint</span></code> functions return the rounded integer value.</p>
+</div>
+<div class="section" id="the-round-functions">
+<span id="index-64"></span><h3>26.9.6. The <code class="docutils literal"><span class="pre">round</span></code> functions<a class="headerlink" href="#the-round-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">round</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">roundf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">roundl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The round functions round their argument to the nearest integer value in floating-point
+format, rounding halfway cases away from zero, regardless of the current rounding
+direction.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">round</span></code> functions return the rounded integer value.</p>
+</div>
+<div class="section" id="the-lround-and-llround-functions">
+<span id="index-65"></span><h3>26.9.7. The <code class="docutils literal"><span class="pre">lround</span></code> and <code class="docutils literal"><span class="pre">llround</span></code> functions<a class="headerlink" href="#the-lround-and-llround-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">long</span> <span class="kt">int</span> <span class="nf">lround</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">int</span> <span class="nf">lroundf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">int</span> <span class="nf">lroundl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">long</span> <span class="kt">int</span> <span class="nf">llround</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">long</span> <span class="kt">int</span> <span class="nf">llroundf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">long</span> <span class="kt">int</span> <span class="nf">llroundl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">lround</span></code> and <code class="docutils literal"><span class="pre">llround</span></code> functions round their argument to the nearest integer value,
+rounding halfway cases away from zero, regardless of the current rounding direction. If
+the rounded value is outside the range of the return type, the numeric result is unspecified
+and a domain error or range error may occur.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">lround</span></code> and <code class="docutils literal"><span class="pre">llround</span></code> functions return the rounded integer value.</p>
+</div>
+<div class="section" id="the-trunc-functions">
+<span id="index-66"></span><h3>26.9.8. The <code class="docutils literal"><span class="pre">trunc</span></code> functions<a class="headerlink" href="#the-trunc-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">trunc</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">truncf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">truncl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">trunc</span></code> functions round their argument to the integer value, in floating format,
+nearest to but no larger in magnitude than the argument.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">trunc</span></code> functions return the truncated integer value.</p>
+</div>
+</div>
+<div class="section" id="remainder-functions">
+<span id="index-67"></span><h2>26.10. Remainder functions<a class="headerlink" href="#remainder-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-fmod-functions">
+<span id="index-68"></span><h3>26.10.1. The <code class="docutils literal"><span class="pre">fmod</span></code> functions<a class="headerlink" href="#the-fmod-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">fmod</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">fmodf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">fmodl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fmod</span></code> functions compute the floating-point remainder of <span class="math">\(x/y\)</span>.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fmod</span></code> functions return the value <span class="math">\(x - ny\)</span>, for some integer <code class="docutils literal"><span class="pre">n</span></code> such that, if <code class="docutils literal"><span class="pre">y</span></code> is nonzero,
+the result has the same sign as <code class="docutils literal"><span class="pre">x</span></code> and magnitude less than the magnitude of <code class="docutils literal"><span class="pre">y</span></code>. If <code class="docutils literal"><span class="pre">y</span></code> is zero,
+whether a domain error occurs or the fmod functions return zero is implementationdefined.</p>
+</div>
+<div class="section" id="the-remainder-functions">
+<span id="index-69"></span><h3>26.10.2. The <code class="docutils literal"><span class="pre">remainder</span></code> functions<a class="headerlink" href="#the-remainder-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">remainder</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">remainderf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">remainderl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">remainder</span></code> functions compute the remainder <span class="math">\(x REM y\)</span> required by IEC 60559. <a class="footnote-reference" href="#id30" id="id29">[13]</a></p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">remainder</span></code> functions return <span class="math">\(x REM y\)</span>. If <cite>y</cite> is zero, whether a domain error occurs
+or the functions return zero is implementation defined.</p>
+<table class="docutils footnote" frame="void" id="id30" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id29">[13]</a></td><td>&#8220;When <span class="math">\(y\neq 0\)</span>, the remainder <span class="math">\(r = x REM y\)</span> is defined regardless of the rounding mode by the
+mathematical relation <span class="math">\(r = x - ny\)</span>, where <span class="math">\(n\)</span> is the integer nearest the exact value of <span class="math">\(x/y\)</span>; whenever
+<span class="math">\(| n - x/y | = 1/2\)</span>, then <span class="math">\(n\)</span> is even. Thus, the remainder is always exact. If <span class="math">\(r = 0\)</span>, its sign shall be that of
+<span class="math">\(x\)</span>.&#8221; This definition is applicable for all implementations.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-remquo-functions">
+<span id="index-70"></span><h3>26.10.3. The <code class="docutils literal"><span class="pre">remquo</span></code> functions<a class="headerlink" href="#the-remquo-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">remquo</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">quo</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">remquof</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">quo</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">remquol</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">quo</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">remquo</span></code> functions compute the same remainder as the <cite>remainder`</cite> functions. In
+the object pointed to by quo they store a value whose sign is the sign of <code class="docutils literal"><span class="pre">x/y</span></code> and whose
+magnitude is congruent modulo <span class="math">\(2^n\)</span> to the magnitude of the integral quotient of <code class="docutils literal"><span class="pre">x/y</span></code>, where
+<span class="math">\(n\)</span> is an implementation-defined integer greater than or equal to 3.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">remquo</span></code> functions return <span class="math">\(x REM y\)</span>. If y is zero, the value stored in the object
+pointed to by <code class="docutils literal"><span class="pre">quo</span></code> is unspecified and whether a domain error occurs or the functions
+return zero is implementation defined.</p>
+</div>
+</div>
+<div class="section" id="manipulation-functions">
+<span id="index-71"></span><h2>26.11. Manipulation functions<a class="headerlink" href="#manipulation-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-copysign-functions">
+<span id="index-72"></span><h3>26.11.1. The <code class="docutils literal"><span class="pre">copysign</span></code> functions<a class="headerlink" href="#the-copysign-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">copysign</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">copysignf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">copysignl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The copysign functions produce a value with the magnitude of <code class="docutils literal"><span class="pre">x</span></code> and the sign of <code class="docutils literal"><span class="pre">y</span></code>.
+They produce a NaN (with the sign of <code class="docutils literal"><span class="pre">y</span></code>) if <code class="docutils literal"><span class="pre">x</span></code> is a NaN. On implementations that
+represent a signed zero but do not treat negative zero consistently in arithmetic
+operations, the copysign functions regard the sign of zero as positive.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">copysign`</span> <span class="pre">functions</span> <span class="pre">return</span> <span class="pre">a</span> <span class="pre">value</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">magnitude</span> <span class="pre">of</span> <span class="pre">``x</span></code> and the sign of <code class="docutils literal"><span class="pre">y</span></code>.</p>
+</div>
+<div class="section" id="the-nan-functions">
+<span id="index-73"></span><h3>26.11.2. The nan functions<a class="headerlink" href="#the-nan-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">nan</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">tagp</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">nanf</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">tagp</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">nanl</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">tagp</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The call <code class="docutils literal"><span class="pre">nan(&quot;*n-char-sequence*&quot;)</span></code> is equivalent to <code class="docutils literal"><span class="pre">strtod(&quot;NAN(*n-char-sequence*)&quot;,</span>
+<span class="pre">(char**)</span> <span class="pre">NULL);</span></code> the call <code class="docutils literal"><span class="pre">nan(&quot;&quot;)</span></code> is equivalent to
+<code class="docutils literal"><span class="pre">strtod(&quot;NAN()&quot;,</span> <span class="pre">(char**)</span> <span class="pre">NULL)</span></code>. If tagp does not point to an n-char
+sequence or an empty string, the call is equivalent to <code class="docutils literal"><span class="pre">strtod(&quot;NAN&quot;,</span> <span class="pre">(char**)</span>
+<span class="pre">NULL)</span></code>. Calls to <code class="docutils literal"><span class="pre">nanf</span></code> and <code class="docutils literal"><span class="pre">nanl</span></code> are equivalent to the corresponding calls to <code class="docutils literal"><span class="pre">strtof</span></code>
+and <code class="docutils literal"><span class="pre">strtold</span></code>.</p>
+<p><strong>Returns</strong></p>
+<p>The nan functions return a quiet NaN, if available, with content indicated through tagp.
+If the implementation does not support quiet NaNs, the functions return zero.</p>
+<p><strong>Forward references:</strong> the <code class="docutils literal"><span class="pre">strtod,</span> <span class="pre">strtof</span></code> and <code class="docutils literal"><span class="pre">strtold</span></code> functions (<a class="reference internal" href="../stdlib/#id2"><span>The strtod, strtof and strtold functions</span></a>).</p>
+</div>
+<div class="section" id="the-nextafter-functions">
+<span id="index-74"></span><h3>26.11.3. The <code class="docutils literal"><span class="pre">nextafter</span></code> functions<a class="headerlink" href="#the-nextafter-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">nextafter</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">nextafterf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">nextafterl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">nextafter</span></code> functions determine the next representable value, in the type of the
+function, after <code class="docutils literal"><span class="pre">x</span></code> in the direction of <code class="docutils literal"><span class="pre">y</span></code>, where <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> are first converted to the type of the
+function. <a class="footnote-reference" href="#id32" id="id31">[14]</a> The nextafter functions return <code class="docutils literal"><span class="pre">y</span></code> if <code class="docutils literal"><span class="pre">x</span></code> equals <code class="docutils literal"><span class="pre">y</span></code>. A range error may occur
+if the magnitude of <code class="docutils literal"><span class="pre">x</span></code> is the largest finite value representable in the type and the result is
+infinite or not representable in the type.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">nextafter</span></code> functions return the next representable value in the specified format
+after <code class="docutils literal"><span class="pre">x</span></code> in the direction of <code class="docutils literal"><span class="pre">y</span></code>.</p>
+<table class="docutils footnote" frame="void" id="id32" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id31">[14]</a></td><td>The argument values are converted to the type of the function, even by a macro implementation of the
+function.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-nexttoward-functions">
+<span id="index-75"></span><h3>26.11.4. The <code class="docutils literal"><span class="pre">nexttoward</span></code> functions<a class="headerlink" href="#the-nexttoward-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">nexttoward</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">nexttowardf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">nexttowardl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">nexttoward</span></code> functions are equivalent to the nextafter functions except that the
+second parameter has type <code class="docutils literal"><span class="pre">long</span> <span class="pre">double</span></code> and the functions return <code class="docutils literal"><span class="pre">y</span></code> converted to the
+type of the function if <code class="docutils literal"><span class="pre">x</span></code> equals <code class="docutils literal"><span class="pre">y</span></code>. <a class="footnote-reference" href="#id34" id="id33">[15]</a></p>
+<table class="docutils footnote" frame="void" id="id34" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id33">[15]</a></td><td>The result of the <code class="docutils literal"><span class="pre">nexttoward</span></code> functions is determined in the type of the function, without loss of
+range or precision in a floating second argument.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="maximum-minimum-and-positive-difference-functions">
+<span id="index-76"></span><h2>26.12. Maximum, minimum and positive difference functions<a class="headerlink" href="#maximum-minimum-and-positive-difference-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-fdim-functions">
+<span id="index-77"></span><h3>26.12.1. The <code class="docutils literal"><span class="pre">fdim</span></code> functions<a class="headerlink" href="#the-fdim-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">fdim</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">fdimf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">fdiml</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fdim</span></code> functions determine the positive difference between their arguments:</p>
+<div class="math">
+\[\begin{split}\left\{\begin{array}{ll}
+x-y &amp; \quad\text{if $x\geq y$}\\
++0  &amp; \quad\text{if $x\leq y$}
+\end{array}\right.\end{split}\]</div>
+<p>A range error may occur.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fdim</span></code> functions return the positive difference value.</p>
+</div>
+<div class="section" id="the-fmax-functions">
+<span id="index-78"></span><h3>26.12.2. The <code class="docutils literal"><span class="pre">fmax</span></code> functions<a class="headerlink" href="#the-fmax-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">fmax</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">fmaxf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">fmaxl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fmax</span></code> functions determine the maximum numeric value of their arguments. <a class="footnote-reference" href="#id36" id="id35">[16]</a></p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fmax</span></code> functions return the maximum numeric value of their arguments.</p>
+<table class="docutils footnote" frame="void" id="id36" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id35">[16]</a></td><td>NaN arguments are treated as missing data: if one argument is a NaN and the other numeric, then the
+<code class="docutils literal"><span class="pre">fmax</span></code> functions choose the numeric value. See F.9.9.2.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-fmin-functions">
+<span id="index-79"></span><h3>26.12.3. The <code class="docutils literal"><span class="pre">fmin</span></code> functions<a class="headerlink" href="#the-fmin-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">fmin</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">fminf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">fminl</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fmin</span></code> functions determine the minimum numeric value of their arguments. <a class="footnote-reference" href="#id38" id="id37">[17]</a></p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fmin</span></code> functions return the minimum numeric value of their arguments.</p>
+<table class="docutils footnote" frame="void" id="id38" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id37">[17]</a></td><td>The <code class="docutils literal"><span class="pre">fmin</span></code> functions are analogous to the <code class="docutils literal"><span class="pre">fmax</span></code> functions in their treatment of NaNs.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="floating-multiply-add">
+<h2>26.13. Floating multiply-add<a class="headerlink" href="#floating-multiply-add" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-fma-functions">
+<span id="index-80"></span><h3>26.13.1. The <code class="docutils literal"><span class="pre">fma</span></code> functions<a class="headerlink" href="#the-fma-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">fma</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">,</span> <span class="kt">double</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">fmaf</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">,</span> <span class="kt">float</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span> <span class="kt">double</span> <span class="nf">fmal</span><span class="p">(</span><span class="kt">long</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">y</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span> <span class="n">z</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fma</span></code> functions compute <code class="docutils literal"><span class="pre">(x</span> <span class="pre">*</span> <span class="pre">y)</span> <span class="pre">+</span> <span class="pre">z</span></code>, rounded as one ternary operation: they compute
+the value (as if) to infinite precision and round once to the result format, according to the
+rounding mode characterized by the value of <code class="docutils literal"><span class="pre">FLT_ROUNDS</span></code>. A range error may occur.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">fma</span></code> functions return <code class="docutils literal"><span class="pre">(x</span> <span class="pre">*</span> <span class="pre">y)</span> <span class="pre">+</span> <span class="pre">z</span></code>, rounded as one ternary operation.</p>
+</div>
+</div>
+<div class="section" id="comparison-macros">
+<span id="index-81"></span><h2>26.14. Comparison macros<a class="headerlink" href="#comparison-macros" title="Permalink to this headline">¶</a></h2>
+<p>The relational and equality operators support the usual mathematical relationships
+between numeric values. For any ordered pair of numeric values exactly one of the
+relationships &#8212; <em>less, greater</em> and <em>equal</em> &#8212; is true. Relational operators may raise the
+&#8220;invalid&#8221; floating-point exception when argument values are NaNs. For a NaN and a
+numeric value, or for two NaNs, just the unordered relationship is true. <a class="footnote-reference" href="#id40" id="id39">[18]</a> The following
+subclauses provide macros that are quiet (non floating-point exception raising) versions
+of the relational operators, and other comparison macros that facilitate writing efficient
+code that accounts for NaNs without suffering the &#8220;invalid&#8221; floating-point exception. In
+the synopses in this subclause, <em>real-floating</em> indicates that the argument shall be an
+expression of real floating type.</p>
+<table class="docutils footnote" frame="void" id="id40" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id39">[18]</a></td><td>IEC 60559 requires that the built-in relational operators raise the &#8220;invalid&#8221; floating-point exception if
+the operands compare unordered, as an error indicator for programs written without consideration of
+NaNs; the result in these cases is false.</td></tr>
+</tbody>
+</table>
+<div class="section" id="the-isgreater-macro">
+<span id="index-82"></span><h3>26.14.1. The <code class="docutils literal"><span class="pre">isgreater</span></code> macro<a class="headerlink" href="#the-isgreater-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isgreater</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">,</span> <span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isgreater</span></code> macro determines whether its first argument is greater than its second
+argument. The value of <code class="docutils literal"><span class="pre">isgreater(x,</span> <span class="pre">y)</span></code> is always equal to <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&gt;</span> <span class="pre">(y);</span></code> however,
+unlike <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&gt;</span> <span class="pre">(y)</span></code>, <code class="docutils literal"><span class="pre">isgreater(x,</span> <span class="pre">y)</span></code> does not raise the &#8220;invalid&#8221; floating-point
+exception when <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> are unordered.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isgreater</span></code> macro returns the value of <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&gt;</span> <span class="pre">(y)</span></code>.</p>
+</div>
+<div class="section" id="the-isgreaterequal-macro">
+<span id="index-83"></span><h3>26.14.2. The <code class="docutils literal"><span class="pre">isgreaterequal</span></code> macro<a class="headerlink" href="#the-isgreaterequal-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isgreaterequal</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">,</span> <span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isgreaterequal</span></code> macro determines whether its first argument is greater than or
+equal to its second argument. The value of <code class="docutils literal"><span class="pre">isgreaterequal(x,</span> <span class="pre">y)</span></code> is always equal
+to <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&gt;=</span> <span class="pre">(y);</span></code> howev er, unlike <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&gt;=</span> <span class="pre">(y)</span></code>, <code class="docutils literal"><span class="pre">isgreaterequal(x,</span> <span class="pre">y)</span></code> does
+not raise the &#8220;invalid&#8221; floating-point exception when <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> are unordered.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isgreaterequal</span></code> macro returns the value of <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&gt;=</span> <span class="pre">(y)</span></code>.</p>
+</div>
+<div class="section" id="the-isless-macro">
+<span id="index-84"></span><h3>26.14.3. The <code class="docutils literal"><span class="pre">isless</span></code> macro<a class="headerlink" href="#the-isless-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isless</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">,</span> <span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isless</span></code> macro determines whether its first argument is less than its second
+argument. The value of <code class="docutils literal"><span class="pre">isless(x,</span> <span class="pre">y)</span></code> is always equal to <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&lt;</span> <span class="pre">(y);</span></code> however,
+unlike <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&lt;</span> <span class="pre">(y)</span></code>, <code class="docutils literal"><span class="pre">isless(x,</span> <span class="pre">y)</span></code> does not raise the &#8220;invalid&#8221; floating-point
+exception when <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> are unordered.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isless</span></code> macro returns the value of <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&lt;</span> <span class="pre">(y)</span></code>.</p>
+</div>
+<div class="section" id="the-islessequal-macro">
+<span id="index-85"></span><h3>26.14.4. The <code class="docutils literal"><span class="pre">islessequal</span></code> macro<a class="headerlink" href="#the-islessequal-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">islessequal</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">,</span> <span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">islessequal</span></code> macro determines whether its first argument is less than or equal to
+its second argument. The value of <code class="docutils literal"><span class="pre">islessequal(x,</span> <span class="pre">y)</span></code> is always equal to
+<code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&lt;=</span> <span class="pre">(y);</span></code> however, unlike <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&lt;=</span> <span class="pre">(y)</span></code>, <code class="docutils literal"><span class="pre">islessequal(x,</span> <span class="pre">y)</span></code> does not raise
+the &#8220;invalid&#8221; floating-point exception when <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> are unordered.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">islessequal</span></code> macro returns the value of <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&lt;=</span> <span class="pre">(y)</span></code>.</p>
+</div>
+<div class="section" id="the-islessgreater-macro">
+<span id="index-86"></span><h3>26.14.5. The <code class="docutils literal"><span class="pre">islessgreater</span></code> macro<a class="headerlink" href="#the-islessgreater-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">islessgreater</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">,</span> <span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">islessgreater</span></code> macro determines whether its first argument is less than or
+greater than its second argument. The <code class="docutils literal"><span class="pre">islessgreater(x,</span> <span class="pre">y)</span></code> macro is similar to
+<code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&lt;</span> <span class="pre">(y)</span> <span class="pre">||</span> <span class="pre">(x)</span> <span class="pre">&gt;</span> <span class="pre">(y);</span></code> however, <code class="docutils literal"><span class="pre">islessgreater(x,</span> <span class="pre">y)</span></code> does not raise
+the &#8220;invalid&#8221; floating-point exception when <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> are unordered (nor does it evaluate <code class="docutils literal"><span class="pre">x</span></code>
+and <code class="docutils literal"><span class="pre">y</span></code> twice).</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">islessgreater</span></code> macro returns the value of <code class="docutils literal"><span class="pre">(x)</span> <span class="pre">&lt;</span> <span class="pre">(y)</span> <span class="pre">||</span> <span class="pre">(x)</span> <span class="pre">&gt;</span> <span class="pre">(y)</span></code>.</p>
+</div>
+<div class="section" id="the-isunordered-macro">
+<span id="index-87"></span><h3>26.14.6. The <code class="docutils literal"><span class="pre">isunordered</span></code> macro<a class="headerlink" href="#the-isunordered-macro" title="Permalink to this headline">¶</a></h3>
+<p><strong>Synopsis</strong></p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">isunordered</span><span class="p">(</span><span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">x</span><span class="p">,</span> <span class="n">real</span><span class="o">-</span><span class="n">floating</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isunordered</span></code> macro determines whether its arguments are unordered.</p>
+<p><strong>Returns</strong></p>
+<p>The <code class="docutils literal"><span class="pre">isunordered</span></code> macro returns 1 if its arguments are unordered and 0 otherwise.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../setjmp/" class="btn btn-neutral float-right" title="27. Nonlocal jumps &lt;setjmp.h&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../locale/" class="btn btn-neutral" title="25. Localization &lt;locale.h&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012-2015, Shiv S. Dayal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
