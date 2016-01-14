@@ -108,7 +108,7 @@ as you progress through the book. Next we look at identifiers.
 ===========
 Identifiers
 ===========
-The names which we give to our variables are known as :ref:`4.4.2`
+The names which we give to our variables are known as
 :math:`\S(\text{iso.6.4.2})`. Something
 with which we identify. As you have already seen what is allowed in C's
 character set but not all are allowed in an identifiers name. Only alphabets
@@ -126,7 +126,7 @@ European, Japanese etc) then it will be replaced with an encoding of universal
 character set, however, it cannot be first character.
 
 Length of an identifer for 31 characters, which, acts as minimum limits, as
-specified in :ref:`3.2.4.1` :math:`\S(\text{iso.5.2.4.1})`, is guaranteed across all
+specified in :math:`\S(\text{iso.5.2.4.1})`, is guaranteed across all
 platforms.
 
 ===========
@@ -175,8 +175,7 @@ should be generous while commenting the code.
 
 ``#include`` is a pre-processor directive. It will look for whatever is
 contained in angular brackets in the ``INCLUDEPATH`` of compiler. For now you
-can assume that ``/usr/include`` is in include path of compiler. For the curious
-I refer you to http://gcc.llvm.org/doxygen/InitHeaderSearch_8cpp_source.html.
+can assume that ``/usr/include`` is in include path of compiler.
 Basically what it does is that it looks for a file names ``stdio.h`` in the
 ``INCLUDEPATH``. If that is found the content of that file is pasted here in our
 program.If you really want to see what happens then you can type
@@ -333,9 +332,9 @@ only ``int``. So onward to data types.
 ==================
 Data Types
 ==================
-Why data types? What is the need? C is a statically typed language
+C is a statically typed language
 that is every variable has a type associated with it. Types are discussed in
-specification in great length in :ref:`4.2.5` :math:`\S(\text{iso.6.2.5})` to
+specification in great length in :math:`\S(\text{iso.6.2.5})` to
 :math:`\S(\text{iso.6.2.8})`.
 These types determine
 what kind of values these variables can hold and how they will be
@@ -358,12 +357,57 @@ reflect their memory requirements and if you know how much memory they are going
 to occupy you can easily compute their ranges. The range of floating-point comes
 from IEEE specification.
 
-The range of data types is given in :ref:`3.2.4.2`. Note that these limits are
-minimum limits imposed by specification and actual limits of data types may be
-different. For example, in the range program given below size of `int` is 4
-bytes which is double than what is specified by specification i.e. 2 bytes.
+The range of data types is given in Numerical limits
+:math:`\S(\text{iso.5.2.4.2})`. For example, in the range program given below
+size of ``int`` is 4 bytes which is double than what is specified by
+specification i.e. 2 bytes. Given below is the table for numerical limits
+for reference from specification. Note that these are in 1's complement
+form thus you have to adjust for 2's complement. Note that these limits
+are minimum limits imposed by specification and actual limits of data
+types may be different on your particular platform. The actual values of
+these limits can be found in headers ``<limits.h>, <float.h>`` and
+``<stdint.h>``. The values given below are replaced by constant
+expressions suitable for use in ``#if`` preprocessing
+directives. Moreover, except for ``CHAR_BIT`` and ``MB_LEN_MAX``, the
+following are replaced by expressions that have the same type as an
+expression that is an object of the corresponding type converted
+according to the integer promotions. Their implementation-defined values
+are equal or greater in magnitude (absolute value) to those shown, with
+the same sign. Note that these ranges are for 1's complement. While most
+probably your computer uses 2's complement so you should add -1 to the
+negative range. Thus MINs are greater than MAXes.
+      
+* number of bits for smallest object that is not a bit-field (byte)
 
-Floating-point data types are covered in great detail in :ref:`3.2.4.2`.
+  ``CHAR_BIT`` 8
+
+* minimum value for an object of type ``signed char``
+
+  ``SCHAR_MIN`` -127 :math:`~~~~-2^7 - 1`
+
+* maximum value for an object of type ``signed char``
+
+  ``SCHAR_MAX`` 127 :math:`~~~~2^7 - 1`
+
+* maximum value for an object of type ``unsigned char``
+
+  ``UCHAR_MAX`` 255 :math:`2^8 - 1`
+
+* minimum value for an object of type ``char``
+
+  ``CHAR_MIN`` *see below*
+
+* maximum value for an object of type ``char``
+
+  ``CHAR_MAX`` *see below*
+
+* maximum number of bytes in a multibyte character, for any supported locale
+
+  ``MB_LEN_MAX`` 1
+
+* minimum value for an object of type ``short int``
+
+  ``SHRT_MIN`` -32767 :math:`-2^{15} - 1`
 
 Let us write a program to find out memory required for various data types:
 

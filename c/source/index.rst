@@ -24,9 +24,6 @@ C Programming Contents
   su
   strings
   fileio
-  fs
-  env
-  lang
   macros
   std
   assert

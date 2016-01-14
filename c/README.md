@@ -1,3 +1,3 @@
-C Programming with C99
+C Programming with C11
 ======================
-A C book on C99
+A C book on C11

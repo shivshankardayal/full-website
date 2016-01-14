@@ -1,6 +1,6 @@
-books/c/build/
-books/cpp/build/
-books/dsa/build/
-books/algebra/build/
-books/gnu-linux/build/
+c/build/
+cpp/build/
+dsa/build/
+algebra/build/
+gnu-linux/build/
 *.log
