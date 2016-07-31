@@ -314,8 +314,17 @@ Complex Numbers Solutions Part 4
 182. Let :math:`f(x) = k(x - \alpha)(x - \beta - i\gamma)(x - \beta + i\gamma)`
      i.e. :math:`f(x) = k(x - \alpha)[(x - \beta)]^2 + \gamma^2]`
 
+     :math:`f^\prime(x) = k[{(x - \beta)^2 + \gamma^2} + (x - \alpha)2(x -
+     \beta)]` i.e.  :math:`k[3x^2 -2(a + 2\beta)x + \beta^2 + \gamma^2 +
+     2\alpha\beta]`
 
+     Descriminant of above equation is given by
 
+     :math:`D = 4[(\alpha + 2\beta)^2 -3(\beta^2 + \gamma^2 + 2\alpha\beta)]`
+     i.e. :math:`4(\alpha^2 + \beta^2 -3\gamma^2 -2\alpha\beta)`
+
+     The roots are complex if :math:`D < 0` i.e. :math:`(\beta - \alpha)^2 <
+     3\gamma^2` i.e. 
 
 
 Rest of the problems are left as exercises.

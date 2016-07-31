@@ -1,5 +1,5 @@
 settings.outformat="pdf";
-unitsize(2cm);
+unitsize(1.5cm);
 
 draw(circle((0, 0), 2.0));
 dot((0,0));
