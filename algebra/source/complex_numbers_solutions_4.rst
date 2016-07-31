@@ -324,7 +324,178 @@ Complex Numbers Solutions Part 4
      i.e. :math:`4(\alpha^2 + \beta^2 -3\gamma^2 -2\alpha\beta)`
 
      The roots are complex if :math:`D < 0` i.e. :math:`(\beta - \alpha)^2 <
-     3\gamma^2` i.e. 
+     3\gamma^2` i.e. :math:`\left|\beta - \alpha\right| <
+     \sqrt{3}\left|\gamma\right|`.
+
+     This is possible if :math:`A` lies inside the equilateral triangle with
+     base :math:`BC`.
+
+183. Let :math:`a = \alpha + i\beta` and :math:`z = x + iy`, then
+     :math:`\overline{a}z + a\overline{z} = 0` becomes as :math:`\alpha x +
+     \beta y = 0` or :math:`y = \left(\frac{-\alpha}{\beta}\right)x.`
+
+     Its reflection in the x-axis is
+
+     .. math::
+        y = \frac{\alpha}{\beta}x or \alpha x - \beta y = 0
+
+     .. math::
+        \left(\frac{a + \overline{a}}{2}\right)\left(\frac{z +
+        \overline{z}}{2}\right) - \left(\frac{a -
+        \overline{a}}{2}\right)\left(\frac{z - 
+        \overline{z}}{2}\right) = 0
+
+     .. math::
+        \Rightarrow az + \overline{a}\overline{z} = 0
+
+184. .. math::
+       z = \frac{\alpha + \beta t}{\gamma + \delta t} \Rightarrow (\gamma +
+       \delta t)z = \alpha + \beta t \Rightarrow (\delta z - \beta)t = \alpha -
+       \gamma z
+
+     .. math::
+        \Rightarrow t = \frac{\alpha - \gamma z}{\delta z - \beta}
+
+     As :math:`t` is real,
+
+     .. math::
+        \frac{\alpha - \gamma z}{\delta z - \beta} = \frac{\overline{\alpha} -
+        \overline{\gamma z}}{\overline{\delta z} - \overline{\beta}}
+
+     .. math::
+        \Rightarrow (\alpha - \gamma z)(\overline{\delta z} - \overline{\beta})
+        = (\overline{\alpha} - \overline{\gamma z})(\delta z - \beta)
+
+     .. math::
+        :label: Equation 3
+
+        \Rightarrow (\overline{\gamma}\delta -
+        \gamma\overline{\delta})z\overline{z} +
+        (\gamma\overline{\beta}-\overline{\alpha}\delta)z +
+        (\alpha\overline{\delta} - \beta\overline{\gamma})\overline{z} =
+        (\alpha\overline{\beta} - \overline{\alpha}\beta)
+
+     Since :math:`\frac{\gamma}{\delta}` is real, :math:`\frac{\gamma}{\delta}
+     = \frac{\overline{\gamma}}{\overline{\delta}}` or
+     :math:`\gamma\overline{\delta} - \delta\overline{\gamma} = 0`
+
+     Therefore, (3) can be written as
+
+     .. math::
+
+        \overline{a}z + a\overline{z} = c
+
+     where :math:`a = i(\alpha\overline{\delta}) - \beta\overline{\gamma}` and
+     :math:`c = i(\overline{\alpha}\beta - \alpha\overline{\beta})`
+
+     Note that :math:`a \ne 0` for if :math:`a = 0` then
+
+     .. math::
+        \alpha\overline{\delta} - \beta\overline{\gamma} = 0
+
+     .. math::
+        \Rightarrow \frac{\alpha}{\beta} =
+        \frac{\overline{\gamma}}{\overline{\delta}} = \frac{\gamma}{\delta}
+
+     .. math::
+        \Rightarrow \alpha\delta - \beta\gamma = 0.
+
+     which is against the hypothesis.
+
+     Also, note that :math:`c = i(\overline{\alpha}\beta -
+     \alpha\overline{\beta})` is a purely real number. Thus, :math:`z =
+     \frac{\alpha + \beta t}{\gamma + \delta t}` represents a straight line.
+
+185.
+     1. :math:`(3 + 3\omega + 5\omega^2)^2 - (2 + 6\omega + 2\omega^2)`
+        i.e. :math:`(3 + 3\omega + 3\omega^2 + 2\omega^2)^2 - (2 + 2\omega +
+        2\omega^2 + 4\omega)` i.e. :math:`4\omega^4 - 4\omega = 0 \because
+        \omega^3 = 1`
+
+     2. .. math::
+          (2 - \omega)(2 - \omega^2)(2 - \omega^{10})(2 - \omega^{11})
+
+        .. math::
+           = (2 - \omega)(2 - \omega^2)(2 - \omega)(2 - \omega^2)
+
+        .. math::
+           = [(2 - \omega)(2 - \omega^2)(2 - \omega)(2 - \omega^2)]^2
+
+        .. math::
+           = (4 - 2\omega - 2\omega^2 + \omega^3)^2
+
+        .. math::
+           = (5 - 2(\omega + \omega^2))^2
+
+        .. math::
+           = (5 + 2)^2 = 49
+
+     3. Evaluating,
+     
+        .. math::
+          [(1 - \omega)(1 - \omega^2)]^2
+
+        .. math::
+           = [1 -(\omega + \omega^2) + \omega^3]^2
+
+        .. math::
+           = [1 - (-1) + 1]^2 = 9
+
+     4. Evaluating,
+
+        .. math::
+           (-\omega -\omega)^5 + (-\omega^2 - \omega^2)^5
+
+        .. math::
+           = -32\omega^2 - 32\omega = 32
+
+        5th and 6th parts are left as exercises for the reader.
+
+186. .. math::
+       a^2 + b^2 + c^2 - ab - bc - ca
+
+       = a^2 + \omega^3b^2 + \omega^3c^2 + (\omega + \omega^2)ab + (\omega +
+       \omega^2)bc + (\omega + \omega^2)ca
+
+       = (a^2 + ab\omega + ca\omega^2) + (ab\omega^2 + b^2\omega^3 +
+       bc\omega) + (ca\omega + bc\omega^2 + c^2\omega^3)
+
+       = a(a + b\omega + c\omega^2) + b\omega^2(a + b\omega + c\omega^2) +
+       c\omega(a + b\omega + c\omega^2)
+
+       = (a + b\omega + c\omega^2)(a + b\omega^2 + c\omega)
+
+187. Let :math:`x = \sqrt{-1 - \sqrt{-1 - \sqrt{-1 - ... to \infty}}}`
+
+     :math:`\therefore x = \sqrt{-1 - x}` or :math:`x^2 = -1 - x` or :math:`x^2
+     + x + 1`. Thus, the two roots are :math:`\omega` and :math:`\omega^2.`
+
+188. This problem has been left as an exercise to the reader.
+       
+189.
+     1. :math:`a^2 - ab + b^2 = a^2 + (\omega + \omega^2)ab + b^2\omega^3`
+
+        :math:`\Rightarrow a^2 + ab\omega + ab\omega^2 + b^2\omega^3`
+
+        :math:`\Rightarrow a(a + b\omega) + b\omega^2(a +b\omega)`
+
+        :math:`(a +b\omega)(a + b\omega^2)`
+
+     2. It can be solves as 1.
+
+     3. :math:`a^3 + b^3 = (a + b)(a^ - ab + b^2)` which can be solved using 2.
+
+     4. :math:`a^3 - b^3 = (a - b)(a^2 + ab + b^2)` which can be solved using 2
+        as well.
+
+     5. Given expression is :math:`(a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca).`
+        Now this can be solved using previous problems' solution
+
+190. 
+
+
+
+
 
 
 Rest of the problems are left as exercises.
