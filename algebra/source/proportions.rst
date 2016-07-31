@@ -15,14 +15,14 @@ a proportion then product of extremes is equal to the product of means i.e.
 
 Continued Proportion
 ====================
-Quatities are said to be in **continued proportion** when first is to second
+Quantities are said to be in **continued proportion** when first is to second
 is equal to second is to third, third is to fourth is equal to first two; and
 so on. Therefore, if
 
 .. math::
   \frac{a}{b}=\frac{b}{c}=\frac{c}{d}=.....
 
-then :math:`a, b, c, d, ...` are in contunued proportion.
+then :math:`a, b, c, d, ...` are in continued proportion.
 
 If three quantities :math:`a, b` and :math:`c` are in proportion then,
 
@@ -140,7 +140,7 @@ This relation is known as *Componendo & Dividendo*.
 
 Problems
 ========
-1.  Find the fourth proportional to fowllowing:
+1.  Find the fourth proportional to following:
 
     (a) :math:`3, 4, 9`.
     (b) :math:`34, 47, 85`.
@@ -190,18 +190,18 @@ If :math:`a, b, c` and :math:`d` are in continued proportion prove that
 15. Find four proportionals such that sum of the extremes is 21, the sum of the
     means 19, and the sum of square of all four numbers is 442.
 16. Two casks :math:`a` and :math:`b` were filled with two kinds of sherry,
-    mixed omj the  cask :math:`a` in the ratio :math:`2:7`, and in the cask
+    mixed in the  cask :math:`a` in the ratio :math:`2:7`, and in the cask
     :math:`b` in the ratio :math:`1:5`. What quantity must be taken from each
-    to form a mixture which shall consist of 2 gallons of one kins and 9
+    to form a mixture which shall consist of 2 gallons of one kind and 9
     gallons of the other?
 17. Nine gallons are drawn from a cask full of wine; it is then filled with
-    water, then nine gallong of the mixture are frawn, and the cask is again
-    filled with water. If the quqantity of wine now in the cask to be quantity
+    water, then nine gallons of the mixture are drawn, and the cask is again
+    filled with water. If the quantity of wine now in the cask to be quantity
     of water in it as 16 to 9, how much does the cask hold?
-18. In a certain country the assumptio of tea is five times the consumption of
+18. In a certain country the assumption of tea is five times the consumption of
     coffee. If :math:`a` more tea and :math:`b` percent more coffee were
     consumed, the aggregate amount consumed would be :math:`7c` percent more;
-    but if :math:`b` percent more tea and :math:`a` mroe coffee were consumed,
+    but if :math:`b` percent more tea and :math:`a` more coffee were consumed,
     the aggregate amount consumed would be :math:`3c` percent more. Compare
     :math:`a` and :math:`b`.
 19. If four quantities are in continued proportion show that the difference
@@ -210,8 +210,8 @@ If :math:`a, b, c` and :math:`d` are in continued proportion prove that
 20. In England the population increased 15.9 per cent, between1871 and 1881 ;
     if the town population increased 18 per cent, and the country population 4
     per cent, compare the town and country populations in 1871.
-21. Brass is an alloy of copper and zinc; bronze is an alloycontaining 80
-    percent, of copper, 4 of zinc, and 16 of tin. A fusedmass of brass and
+21. Brass is an alloy of copper and zinc; bronze is an alloy containing 80
+    percent, of copper, 4 of zinc, and 16 of tin. A fused mass of brass and
     bronze is found to contain 74 percent, of copper, 16 of zinc, and 10 of tin
     : find the ratio of copper to zinc in the composition of brass.
 22. A crew can row a certain course up stream in 84 minutes;they can row the

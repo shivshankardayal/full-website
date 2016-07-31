@@ -133,7 +133,7 @@ Find the square root of following complex numbers:
     :math:`z_2` has negative imaginary part then prove that
     :math:`\frac{z_1+z_2}{z_1-z_2}` is either zero or purely imaginary.
 
-44. For comples numbers :math:`z_1=x_1+iy_1` and :math:`z_2=x_2+iy_2` the
+44. For complex numbers :math:`z_1=x_1+iy_1` and :math:`z_2=x_2+iy_2` the
     notation of :math:`z_1\cap z_2` if :math:`x_1\le x_2` and :math:`y_1\le y_2.`
     Show that for all complex numbers :math:`z` with :math:`1\cap z` we have
     :math:`\frac{1-z}{1+z}\cap 0.`
@@ -152,4 +152,3 @@ Find the square root of following complex numbers:
 
 50. If :math:`(1+x)^n=a_0+a_1x+a_2x^2+ ... +a_nx^n,` prove that
     :math:`2^n=(a_0-a_2+a_4- ...)^2 + (a_1-a_3+a_5- ...)^2`
-

@@ -50,7 +50,7 @@ Arithmetic Mean
 ===============
 When three quantities are in arithmetic progression the quantity in the middle
 is known to be arithmetic mean of the other two. For example, if :math:`a, b,
-c` are in A.P. then :math:`b` is said to be aithmetic mean of :math:`a` and
+c` are in A.P. then :math:`b` is said to be arithmetic mean of :math:`a` and
 :math:`c.` In general it is written as :math:`b = \frac{a + c}{2}.` This can be
 examined further. Let :math:`b = a + d` then :math:`c = a + 2d.` Clearly,
 :math:`b = \frac{a + c}{2}.`
@@ -92,7 +92,7 @@ give it a meaning.
 
 Some Observations on an A.P.
 ============================
-1. If a fixed number is added to or substracted from each term of a given
+1. If a fixed number is added to or subtracted from each term of a given
    A.P., then the resulting sequence is also an A.P., and it has the same
    common difference as that of the given A.P.
 2. If each term of an A.P. is multiplied or divided by a non-zero fixed

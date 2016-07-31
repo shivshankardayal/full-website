@@ -169,7 +169,7 @@ Complex Numbers Solutions Part 3
      Now equating for real part and then evaluating the desired equation will
      yield the result.
 
-109. :math:`sin25\theta + icos25\theta` This question is left as en exercise.
+109. :math:`sin25\theta + icos25\theta` This question is left as an exercise.
 
 110. Let :math:`z = x + iy.` Now we have
 
@@ -185,7 +185,7 @@ Complex Numbers Solutions Part 3
      Since :math:`x` is real the only possible solution is :math:`x = 0`. So
      :math:`z = 0.`
 
-     If :math:`x = 0` then weh have
+     If :math:`x = 0` then we have
 
      .. math::
         y^2 + \sqrt{-y^2} = 0
@@ -196,7 +196,7 @@ Complex Numbers Solutions Part 3
 
      Thus we have :math:`z = \pm i.`
 
-111. Problem no. 111 to 118 have been left as exercises ot the reader.
+111. Problem no. 111 to 118 have been left as exercises to the reader.
 
 119. Given,
 
@@ -319,7 +319,7 @@ Complex Numbers Solutions Part 3
      modulus of both we have :math:`|p + q| = |a|` and :math:`|pq| = b.` Now it
      is required that :math:`|p| = |q| = 1.` Therefore we have :math:`|p + q|
      \le |p| + |q| = 2 \therefore |a| \le 2.` Similarly :math:`|b| = |pq| =
-     |p||q| = 1.` Since :math:`p, q` have unit modullii we can have them as
+     |p||q| = 1.` Since :math:`p, q` have unit modulii we can have them as
      :math:`p = cos\theta_1 + isin\theta_1` and :math:`q = cos\theta_2 +
      isin\theta_2.`
 

@@ -29,7 +29,7 @@ Complex Numbers Solutions Part 2
     Thus we have our desired result.
 
 52. Let :math:`f(z) = m(z - i) + i` and :math:`f(z) = n(z + i) + 1 + i` where
-    :math:`m` and :math:`n` are quotients upon division. Substituing :math:`z =
+    :math:`m` and :math:`n` are quotients upon division. Substituting :math:`z =
     i` in the first equation and :math:`z = -i` in the second we
     get. :math:`f(i) = i` and :math:`f(-i) = 1+i`.
 
@@ -192,7 +192,7 @@ Complex Numbers Solutions Part 2
        (x - a)(x - b) ... (x - k) = x^n + p_1x^{n-1} + p_2x^{n-2} + ... +
        p_{n-1}x + p_n
 
-    substituing :math:`x = i` we get
+    substituting :math:`x = i` we get
 
     .. math::
        (i - a)(i - b) ... (i - k) = i^n + p_1i^{n-1} + p_2i^{n - 2} + ... +
@@ -228,7 +228,7 @@ Complex Numbers Solutions Part 2
        \Rightarrow (z1 - z2)(z2 - z3) + (z1 - z2)(z3 - z1) + (z3 - z1)(z2 - z3)
        = 0
 
-    Now this leads upon multipliation and rearranging to:
+    Now this leads upon multiplication and rearranging to:
 
     .. math::
        z1^2 + z2^2 + z3^2 = z1z2 + z2z3 + z3z1
@@ -243,7 +243,7 @@ Complex Numbers Solutions Part 2
     .. math::
        \left(\frac{z_1}{z_2}\right)^2 + 1 - 2\frac{z_1}{z_2}cos\theta = 0
 
-    Solving this as a quaddratic equation we have roots as
+    Solving this as a quadratic equation we have roots as
 
     .. math::
        \frac{z_1}{z_2} = \frac{2cos\theta \pm~\sqrt{4cos^2\theta - 4} }{2}
@@ -255,7 +255,7 @@ Complex Numbers Solutions Part 2
     Hence, :math:`z_1, z_2` and origin form an isosceles triangle.
 
 69. Let points :math:`O, P` and :math:`Q` represents origin, :math:`A` and
-    :math:`B` respectivel.
+    :math:`B` respectively.
 
     Given,
 
@@ -333,7 +333,7 @@ Complex Numbers Solutions Part 2
 
     Hence proven.
 
-73. Equation of line passing trhough :math:`a` and :math:`ib` is given by
+73. Equation of line passing through :math:`a` and :math:`ib` is given by
 
     .. math::
        \begin{vmatrix}z & \overline{z} & 1\\ a & \overline{a} & 1\\ ib &
@@ -422,7 +422,7 @@ Complex Numbers Solutions Part 2
        az_1 + bz_2 - (a + b)z_3 = 0 \Rightarrow z_3 = \frac{az_1 + bz_2}{a + b}
 
     This implies that :math:`z_3` lies on the line joining :math:`z_1` and
-    :math:`z_3` in the ratio of :math:`a:b` inernally or externally depending
+    :math:`z_3` in the ratio of :math:`a:b` internally or externally depending
     on their sign.
 
 80. Let equation of a line passing through origin is :math:`a\overline{z} +
@@ -566,7 +566,7 @@ Complex Numbers Solutions Part 2
 
        \Rightarrow x^2 + y^2 - 2y - 1 = 0
 
-    Clearly, it is a cricle having center at (0, 1) and radius
+    Clearly, it is a circle having center at (0, 1) and radius
     :math:`\sqrt{2}.` Again, :math:`\frac{z - 1}{z + 1}` is in first
     quadrant. This means :math:`x^2 + y^2 > 1` and :math:`y > 0.`
 
@@ -703,3 +703,4 @@ Complex Numbers Solutions Part 2
 
      Solving this will yield :math:`z = \frac{z_1z_3}{z_1}.`
 
+ 

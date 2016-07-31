@@ -61,7 +61,7 @@ Complex Numbers Problems Part 4
 163. If :math:`a, b, c` and :math:`u, v, \omega` are the complex numbers
      representing two triangles such that :math:`c = (1 - r)a + rb` and
      :math:`\omega = (i - r)u + rv,` where :math:`r` is a complex number, prove
-     that the two trriangles are similar.
+     that the two triangles are similar.
 
 164. Find the equation of perpendicular bisector of the line segment joining
      points :math:`z_1` and :math:`z_2.`
@@ -75,7 +75,7 @@ Complex Numbers Problems Part 4
 167. If :math:`|z| = 1,` find the locus of the point :math:`\frac{2}{z}.`
 
 168. If for any two complex numbers :math:`z_1` and :math:`z_2, |z_1 + z_2| =
-     |z_1| + |z_2|` prove that :math:`arg z_1 - arg z_2 = 2n\pi.`
+     |z_1| + |z_2|` prove that :math:`arg(z_1) - arg(z_2) = 2n\pi.`
 
 169. Find the complex number :math:`z` the least in absolute value which
      satisfies the condition :math:`|z - 2 + 2i| = 1.`
@@ -83,13 +83,13 @@ Complex Numbers Problems Part 4
 170. Find the point in the first quadrant, on the curve :math:`|z - 5i| = 3`
      whose argument is minimum.
 
-171. Find the set of points of the co-ordinate plane which satisfy the
+171. Find the set of points of the coordinate plane which satisfy the
      inequality
 
      .. math::
-        log_\frac{1}{3}\left(\frac{|z - 1| + 4}{3|z - 1| - 2}\right) > 1
+        log_\frac{1}{2}\left(\frac{|z - 1| + 4}{3|z - 1| - 2}\right) > 1
 
-172. Find the set of all points on the :math:`xy`-plane whose co-ordinates
+172. Find the set of all points on the :math:`xy`-plane whose coordinates
      satisfy the following conditions: the number :math:`z^2 + z + 1` is real
      and positive.
 
@@ -104,14 +104,14 @@ Complex Numbers Problems Part 4
 175. Among the complex numbers which satisfy the condition :math:`|z - 15i| \le
      15,` find the number having least positive argument.
 
-176. Find :math:`z` for which :math:`|z - 5i| \le 1` and :math:`arg z` is
+176. Find :math:`z` for which :math:`|z - 5i| \le 1` and :math:`arg(z)` is
      minimum.
 
 177. Find the real value of :math:`a` for which there is at least one complex
      number satisfying :math:`|z + 4i| = \sqrt{a^2 - 12a + 28}` and :math:`|z -
      4\sqrt{3}| < a.`
 
-178. Find the set of points belonging to the co-ordinate plane :math:`xy,` for
+178. Find the set of points belonging to the coordinate plane :math:`xy,` for
      which the real part of complex number :math:`(1 + i)z^2` is positive.
 
 179. Solve the equation :math:`2z = |z| + 2i` in complex numbers.
@@ -318,7 +318,7 @@ Complex Numbers Problems Part 4
 218. If :math:`\alpha, \beta` are the roots of the equation :math:`x^2 -2x +4 =
      0,` prove that :math:`\alpha^n + \beta^n = 2^{n + 1}cos\frac{n\pi}{3}`
 
-219. Find the equation whose roots are :math:`n`th powers of the roots of the
+219. Find the equation whose roots are :math:`n` th powers of the roots of the
      equation :math:`x^2 -2xcos\theta + 1 = 0`
 
 220. If :math:`\alpha, \beta` are imaginary cube roots of 1 then show that
@@ -397,12 +397,17 @@ formulas:
         C = x + y\omega^2 + z\omega, C' = x' + y'\omega^2 + z'\omega, CC' =
         x'' + y''\omega^2 + z''\omega.
 
-     then find :math:`x'', y''` abd :math:`z''` in terms of :math:`x, y, z` and
+     then find :math:`x'', y''` and :math:`z''` in terms of :math:`x, y, z` and
      :math:`x', y', z'.`
 
-231. Prove the equality :math:`(ax - by -cz -dt)^2 + (bx + ay -dz + ct)^2 + (cx
-     + dy + az -bt)^2 + (dx - cy + bz + at)^2 = (a^2 + b^2 + c^2 + d^2)(x^2 +
-     y^2 + z^2 + t^2).`
+231. Prove the equality
+
+     .. math::
+        (ax - by -cz -dt)^2 + (bx + ay -dz + ct)^2 + (cx
+        + dy + az -bt)^2 + (dx - cy + bz + at)^2 =
+
+     .. math::
+        (a^2 + b^2 + c^2 + d^2)(x^2 + y^2 + z^2 + t^2).
 
 232. Prove the following equalities:
 
@@ -513,7 +518,7 @@ formulas:
      c, d` are positive integers.
 
 249. Find out at what :math:`n` the polynomial :math:`1 + x^2 + x^4 + ... +
-     x^{2n - 2}` si divisible by the polynomial :math:`1 + x + x^2 + ... + x^{n
+     x^{2n - 2}` is divisible by the polynomial :math:`1 + x + x^2 + ... + x^{n
      - 1}.`
 
 250. Prove that the polynomial :math:`(cos\theta + x sin\theta)^n -
@@ -523,7 +528,7 @@ formulas:
      n\theta + k^n sin(n - 1)\theta` is divisible by :math:`x^2 - 2kx
      cos\theta + k^2.`
 
-252. Find the sum of the :math:`p`the powers of the roots of the equation
+252. Find the sum of the :math:`p` the powers of the roots of the equation
      :math:`x^n - 1 = 0` where :math:`p` is a positive integer.
 
 253. Let :math:`\alpha = cos\frac{2\pi}{n} + isin\frac{2\pi}{n}` where
@@ -542,7 +547,7 @@ formulas:
      .. math::
         \sum_{k = 0}^{k = n - 1}|A_k|^2 = n\{|x|^2 + |y|^2 + ... + |w|^2\}
 
-Prove tha following identities:
+Prove the following identities:
 
 254. .. math::
        x^{2n - 1} - 1= (x^2 - 1)\sum_{k = 1}^{k = n - 1}\left(x^2
@@ -617,510 +622,3 @@ Prove tha following identities:
      .. math::
         \sqrt[3]{cos \frac{2\pi}{9}} + \sqrt[3]{cos \frac{4\pi}{9}} +
         \sqrt[3]{cos \frac{8\pi}{9}} = \sqrt[3]{\frac{1}{2}(3\sqrt[3]{9} - 6)}
-
-267. If :math:`a + b + c = 0` and let :math:`a^k + b^k + c^k = s_k` then prove
-     the following relations:
-
-     (i) :math:`2s_4 = s_2^2`
-     (ii) :math:`6s_5 = 5s_2s_3`
-     (iii) :math:`6s_7 = 7s_3s_4`
-     (iv) :math:`10s_7 = 7s_2s_5`
-     (v) :math:`25s_7s_3 = 21s_5^2`
-     (vi) :math:`50s_7^2 = 49s_4s_5^2`
-     (vii) :math:`s_{n+3} = abcs_n + \frac{1}{2}s_2s_{n+1}`
-
-268. Given :math:`x + y = u + v, x^2 + y^2 = u^2 + v^2` prove that :math:`x^n +
-     y^n = u^n + v^n` for any :math:`n.`
-
-269. Given :math:`x + y + z = u + v + t, x^2 + y^2 + z^2 = u^2 + v^2 + t^2, x^3
-     + y^3 + z^3 = u^3 + v^3 + t^3` prove that :math:`x^n + y^n + z^n = u^n +
-     v^n + t^n` for any :math:`n.`
-
-270. Let :math:`A = x_1 + x_2\omega + x_3\omega^2, B = x_1 + x_2\omega^2 +
-     x_3\omega,` where :math:`\omega` is cube root of unity and :math:`x_1,
-     x_2, x_3` are the roots of the equation :math:`x^3 + px + q = 0.` Prove
-     that :math:`A^3` and :math:`B^3` are the roots of the quadratic equation
-     :math:`z^3 + 27qz - 27p^3 = 0.`
-
-271. Solve the equation :math:`(x + a)(x + b)(x + c)(x + d) = m` if :math:`a =
-     b = c + d.`
-
-272. Solve the equation :math:`(x + a)^4 + (x + b)^4 = c.`
-
-273. Solve the equation :math:`(x + b + c)(x + a + c)(x + a + b)(a + b + c) -
-     abcx = 0.`
-
-274. Solve the equation :math:`x^3 + 3ax^2 + 3(a^2 - bc)x + a^3 + b^3 +
-     c^3 -3abc = 0.`
-
-275. Solve the equation :math:`ax^4 + bx^3 + cx^2 + dx + e = 0` if :math:`a + b
-     = b + c + d = d + e.`
-
-276. Solve the equation :math:`(a + b + x)^3 - 4(a^3 + b^3 + x^3) - 12abx = 0.`
-
-277. Solve the equation
-
-     .. math::
-
-        x^2 + \frac{a^2x^2}{(a + x)^2} = m
-
-     where :math:`a` and :math:`m > 0.`
-
-     Deduce the condition under which all the roots are real, and determine the
-     number of positive and negative roots.
-
-278. Solve the equation
-
-     .. math::
-        \frac{(5x^4 + 10x^2 + 1)(5a^4 + 10a^2 + 1)}{(x^4 + 10x^2 + 1)(a^4 +
-        10a^2 + 5)} = ax.
-
-279. Solve the equation
-
-     .. math::
-        1 + \frac{a_1}{x - a_1} + \frac{a_2x}{(x - a_1)(x - a_2)} +
-        \frac{a_3x^2}{(x - a_1)(x - a_2)(x - a_3)} + ...
-
-        + \frac{a_{2m}x^{2m -
-        1}}{(x - a_1)(x - a_2) ... (x - a_{2m})} = \frac{2px^m - p^2}{(x -
-        a_1)(x - a_2) ... (x - a_{2m})}.
-
-280. Solve the equation :math:`x^3 + px^2 + qa + r = 0` if :math:`x_1^2 =
-     x_2x_3.` Solve it again if :math:`x_1 = x_2 + x_3.`
-
-281. Solve the system
-
-     .. math::
-        y^3 + z^3 + a^3 = 3ayz
-
-        z^3 + x^3 + b^3 = 3bzx
-
-        x^3 + y^3 + c^3 = 3cxy
-
-        if a + b + c + d = 0.
-
-282. Solve the equations :math:`x^4 - a = y^4 - b = z^4 -c = u^4 - d = xyzu` if
-     :math:`a + b + c + d = 0.`
-
-283. Prove that for :math:`x > 1, px^q - qx^p - p + q > 0` where :math:`p, q`
-     are positive integers and :math:`q > p.`
-
-284. Prove that :math:`x^m - x(x - 1)^m + {x \choose 2}(x - 2)^m + ... +
-     (-1)^{x - 1}x * 1^m = 0` if :math:`x > m` and :math:`x, m` are positive
-     integers.
-
-285. Prove that :math:`m^m - m(m - 1)^m + {m \choose 2}(m - 2)^m + ... +
-     (-1)^{m - 1}m = m!` where :math:`m` is a positive integer.
-
-286. Prove the equality
-
-     .. math::
-       (x^2 + a^2)^n = {x^n - C^n_2x^{n - 2}a^2 + C^n_4x^{n - 4}a^4 - ...}^2 +
-       {C^n_1x^{n - 1}a - C^n_3x^{n - 3}a + ...}^2
-
-287. Deternmine the coefficients of :math:`x^l (l = 0, 1, ..., 2n)` in the
-     following products
-
-     (i) :math:`(1 + x + x^2 + ... + x^n) (1 + x + x^2 + ... + x^n)`
-     (ii) :math:`(1 + x + x^2 + ... + x^n) (1 - x + x^2 -x^3 + ... +
-          (-1)^nx^n)`
-     (iii) :math:`(1 + 2x + 3x^2 + ... + (n + 1)x^n) (1 + 2x + 3x^2 + ... + (n +
-           1)x^n)`
-     (iv) :math:`(1 + 2x + 3x^2 + ... + (n + 1)x^n) (1 - 2x + 3x^2 +
-          ... (-1)^n(n + 1)x^n)`
-
-288. If :math:`a_1, a_2, a_3` and :math:`a_4` are four successive coefficients
-     in the expansion of :math:`(1 + x)^n` in powers of :math:`x,` then
-
-     .. math::
-        \frac{a_1}{a_1 + a_2} + \frac{a_3}{a_3 + a_4} = \frac{2a_2}{a_2 + a_3}
-
-289. Prove the equality
-
-     .. math::
-        1^2 + 2^2 + ... + n^2 = C^{n + 1}_2 + 2(C^n_2 + C^{n - 1}_2 + C_2^2).
-
-290. Prove the equality
-
-     .. math::
-        \frac{1}{1(n - 1)!} + \frac{1}{3!(n - 3)!} + \frac{1}{5!(n - 5)!} +
-        ... + \frac{1}{(n - 1)!1!} = \frac{2^{n - 1}}{n!}
-
-     where :math:`n` is even.
-
-291. Find the magnitude of the sum
-
-     .. math::
-        S = C^n_1 - 3C^n_3 + 3^2C^n_5 - 3^3C^n_7 + ...
-
-292. Find the magnitude of the following sums
-
-     .. math::
-        S = 1 - C^n_2 + C^n_4 - C^n_6 + ...
-
-        S = C^n_1 - C^n_3 + C^n_5 -C^n_7 + ...
-
-293. Prove the identities:
-
-     (i) :math:`C^n_0 + 2C^n_1 + 3C^n_2 + ... + (n + 1)C^n_n = (n + 2)2^{n - 1}`
-     (ii) :math:`C^n_1 - 2C^n_1 + 3C^n_2 + ... + (-1)^{n - 1}(n)C^n_n = 0.`
-
-294. Prove that
-
-     .. math::
-        \frac{1}{2}C^n_1 - \frac{1}{3}C^n_2 + \frac{1}{4}C^n_3 + ... +
-        \frac{(-1)^{n - 1}}{n + 1}C^n_n = \frac{n}{n + 1}
-
-295. Prove that
-
-     .. math::
-        1 + \frac{1}{2}C^n_1 + \frac{1}{3}C^n_2 + ... + \frac{1}{n + 1}C^n_n =
-        \frac{2^{n + 1} - 1}{n + 1}
-
-296. Prove that
-
-     .. math::
-        2C^n_0 + \frac{2^2C^n_1}{2} + \frac{2^3C^n_2}{3} + \frac{2^4C^n_3}{4} +
-        ... + \frac{2^{n + 1}C^n_n}{n + 1} = \frac{3^{n + 1} - 1}{n + 1}
-
-297. Prove the identity
-
-     .. math::
-        C^n_1 - \frac{1}{2}C^n_2 + \frac{1}{3}C^n_3 + ... + \frac{(-1)^{n -
-        1}}{n}C^n_n = 1 + \frac{1}{2} + \frac{1}{3} + ... + \frac{1}{n}
-
-298. Prove that
-
-     .. math::
-        C^n_n + C^{n + 1}_n + C^{n + 2}_n + ... + C^{n + k}_n = C^{n + k +
-        1}_{n + 1}
-
-299. Prove that
-
-     .. math::
-        C^n_0 - C^n_1 + C^n_2 + ... + (-1)^hC^n_h = (-1)^hC^{n - 1}_h.
-
-300. Prove the following identity:
-
-     .. math::
-        C^n_0C^m_p + C^n_1C^m_{p - 1} + ... + C^n_pC^m_0 = C^{m + n}_p
-
-301. Prove that
-
-     .. math::
-        C^n_0C^n_r + C^n_1C^n_{r + 1} + ... + C^n_{n - r}C^n_n =
-        \frac{2n!}{(n - r)!(n + r)!}.
-
-302. Prove that
-
-     .. math::
-        (C^n_0)^2 + (C^n_1)^2 + (C^n_2)^2 + ... + (C^n_n)^2 = C^{2n}_n.
-
-303. Prove that
-
-     .. math::
-        (C^{2n}_0)^2 - (C^{2n}_1)^2 + (C^{2n}_2)^2 - ... +
-        (C^{2n}_{2n})^2 = (-1)^nC^{2n}_n.
-
-304. Prove that
-
-     .. math::
-        (C^{2n + 1}_0)^2 - (C^{2n + 1}_1)^2 + (C^{2n + 1}_2)^2 - ... -
-        (C^{2n + 1}_{2n + 1})^2 = 0.
-
-305. Prove that
-
-     .. math::
-        (C^n_1)^2 + 2(C^n_2)^2 + ... + n(C^n_n)^2 = \frac{(2n -
-        1)!}{(n - 1)!(n - 1)!}.
-
-306. Let :math:`f(x) = g(x)(x - a) + A` and :math:`f(x) = h(x)(x - b) + B`
-     where :math:`a \ne b.` If :math:`f(x) = k(x)(x - a)(x -b) + C` then find
-     :math:`C.`
-
-307. Let :math:`f(x) = g(x)(x - a) + A ,f(x) = h(x)(x - b) + B` and :math:`f(x)
-     = k(x) + C` and :math:`a \ne b \ne c.` If :math:`f(x) = l(x)(x - a)(x -
-     b)(x - c) + D` then find :math:`D.`
-
-308. Find the polynomials of :math:`x` of degress :math:`m - 1` which at
-     :math:`m` different values of :math:`x, x_1, x_2, ..., x_m,` attains
-     respectively the values of :math:`y_1, y_2, ..., y_m.`
-
-309. Let :math:`f(x)` be a polynomial leaving a remainder :math:`A_1` when
-     devided by :math:`x - a_1,` the remainder :math:`A_2` when divided by
-     :math:`x - a_2`, ..., and, finally, the remainder :math:`A_m` when divided
-     by :math:`x -a_m.` Find the remainder when the polynomial is divided by
-     :math:`(x - a_1)(x - a_2) ... (x - a_m).`
-
-310. Prove that if :math:`x_1, x_2, ..., x_m` are :math:`m` different arbitrary
-     quantities, :math:`f(x)` is a polynomial of degree less than :math:`m,`
-     then there exists the identity
-
-     .. math::
-        f(x) = f(x_1)\frac{(x - x_2)(x - x_3) ... (x - x_m)}{(x_1 - x_2)(x_1 -
-        x_3) ... (x_1 - x_m)} +
-
-        f(x_2)\frac{(x - x_1)(x - x_3) ... (x - x_m)}{(x_2 - x_1)(x_2 - x_3)
-        ... (x_2 - x_m)} + ... 
-
-        + f(x_1)\frac{(x - x_1)(x - x_2) ... (x - x_{m - 1})}{(x_m - x_1)(x_m - x_2)
-          ... (x_m - x_{m - 1})}.
-
-311. Prove that if :math:`f(x)` is a polynomial whose degree is less than, or
-     equal to, :math:`m - 2` and :math:`x_1, x_2, ..., x_m` are :math:`m`
-     arbitrary equal quantities, then there exists the identity
-
-     .. math::
-        \frac{f(x_1)}{(x_1 - x_2)(x_1 - x_3) ... (x_1 - x_m)} +
-
-        \frac{f(x_2)}{(x_2 - x_1)(x_2 - x_3) ... (x_2 - x_m)} + ... +
-
-        \frac{f(x_m)}{(x_m - x_1)(x_m - x_3) ... (x_m - x_{m - 1})} = 0.
-
-312. If
-
-     .. math::
-        s_n = \frac{x_1^n}{(x_1 - x_2)(x_1 - x_3) ... (x_1 - x_m)} +
-
-        + \frac{x_2^n}{(x_2 - x_1)(x_2 - x_3) ... (x_2 - x_m)} + ...
-
-        + \frac{x_m^n}{(x_m - x_1)(x_m - x_2) ... (x_m - x_{m-1})}.
-
-     where :math:`x_1, x_2, ..., x_m` are :math:`m` are arbitrary unequal
-     quantities. Show that :math:`s_n = 0` if :math:`0 \le n < m - 1,` and
-     :math:`s_{m - 1} = 1,` and compute :math:`s_n` if :math:`n \ge m.`
-
-313. Compute the following
-
-     .. math::
-        s_{-n} = \frac{x_1^{-n}}{(x_1 - x_2)(x_1 - x_3) ... (x_1 - x_m)} +
-
-        + \frac{x_2^{-n}}{(x_2 - x_1)(x_2 - x_3) ... (x_2 - x_m)} + ...
-
-        + \frac{x_m^{-n}}{(x_m - x_1)(x_m - x_2) ... (x_m - x_{m-1})}.
-     
-        n = (1, 2, 3, ...).
-
-314. Show that if :math:`f(x)` is a polynomial whose degree is less than
-     :math:`m,` then the fraction
-
-     .. math::
-        \frac{f(x)}{(x - x_1)(x - x_2) ... (x -x_m)},
-
-     where :math:`x_1, x_2, ..., x_m` are arbirary and not equal to each other,
-     can be represented as a sum of :math:`m` partial fractions
-
-     .. math::
-        \frac{A_1}{x - x_1} + \frac{A_2}{x - x_2} + ... + \frac{A_m}{x - x_m},
-
-     where :math:`A_1, A_2, ..., A_m` are independent of :math:`x.`
-
-315. Solve the system of equations
-
-     .. math::
-        \frac{x_1}{a_1 - b_1} + \frac{x_2}{a_1 - b_2} + ... + \frac{x_n}{a_1 -
-        b_n} = 1
-
-        \frac{x_1}{a_2 - b_1} + \frac{x_2}{a_2 - b_2} + ... + \frac{x_n}{a_2 -
-        b_n} = 1
-
-        ...
-
-        \frac{x_1}{a_n - b_1} + \frac{x_2}{a_n - b_2} + ... + \frac{x_n}{a_n -
-        b_n} = 1.
-
-316. Prove that
-
-     .. math::
-        \frac{n!}{(x + 1)(x + 2) ... (x + n)} = \frac{C^n_1}{x + 1} -
-        \frac{2C^n_2}{x + 2} + \frac{3C^n_3}{x + 3} - ... + (-1)^{n +
-        1}\frac{nC^n_n}{x + n}.
-
-     In particular,
-
-     .. math::
-        \frac{1}{n + 1} = \frac{C^n_1}{2} - \frac{2}{3}C^n_2 +
-        \frac{3}{4}C^n_3 - \frac{4}{5}C^n_4 + ...
-
-317. Prove that
-
-     .. math::
-        (-1)^n\frac{a_1a_2...a_n}{b_1b_2...b_n} + \frac{(a_1 - b_1)(a_2 - b_1)
-        ... (a_n - b_1)}{b_1(b_1 - b_2) ... (b_1 - b_n)} +
-
-        \frac{(a_1 - b_2)(a_2 - b_2) ... (a_n - b_2)}{b_2(b_2 - b_1) ... (b_2 -
-        b_n)} + ... +
-
-        \frac{(a_1 - b_n)(a_2 - b_n) ... (a_n - b_n)}{b_n(b_n - b_1) ... (b_n -
-        b_{n - 1})} = (-1)^n.
-
-318. Prove that
-
-     .. math::
-        \frac{(x + \beta) ... (x + n\beta)}{(x - \beta) ... (x - n\beta)} =
-
-        \sum_{r = 1}^{r = n}(-1)^{n - r}\frac{n(n + r)(n^2 - 1^2)(n^2 - 2^2)
-        ... [n^2 - (r - 1)^2]}{(r!)^2}*\frac{r\beta}{x - r\beta}.
-
-Given a series of numbers :math:`c_0, c_1, c_2, ..., c_k, c_{k + 1}, ...`. Let
-:math:`\triangle c_k = c_{k + 1} - c_k,` so that using the given series we can
-form a new one :math:`\triangle c_0, \triangle c_1, \triangle c_2, ...`.
-
-We then let :math:`\triangle^2 c_k = \triangle c_{k + 1} - \triangle c_k` so as
-to get one more series: :math:`\triangle^2 c_0, \triangle^2 c_1, \triangle^2
-c_2, ...` and so forth.
-
-319. Prove that
-
-     .. math::
-        c_{k + n} = c_k + \frac{n}{1}\triangle c_k + \frac{n(n -
-        1)}{1*2}\triangle^2 c_k + ... + \triangle^n c_k
-
-320. Prove that
-
-     .. math::
-        \triangle^n c_{k} = c_{k + n} - \frac{n}{1}c_{k + n - 1} + \frac{n(n -
-        1)}{1*2} c_{k + n -2} + ... + (-1)^nc_k.
-
-321. Show that if :math:`f(x)` is any polynomial of nth degree in
-     :math:`x,` then there exists the following identity
-
-     .. math::
-        f(x) = f(0) + \frac{x}{1}\triangle f(0) + \frac{x(x -
-        1)}{1*2}\triangle^2f(0) + ... + \frac{x(x - 1) ... (x - n +
-        1)}{n!}\triangle^nf(0)
-
-     where :math:`\triangle f(0), \triangle^2 f(0), ..., \triangle^n f(0)` are
-     obtained, proceeding from the basic series: :math:`f(0), f(1), f(2), ...`.
-
-322. Prove that
-
-     .. math::
-        x^n = A_0 + \frac{A_1}{1}(x - 1) + \frac{A_2}{2!}(x - 1)(x - 2) + ... +
-        \frac{A_n}{n}(x - 1)(x - 2) ... (x - n),
-
-     then :math:`A_s = (s + 1)^n - C^s_1s^n + C^s_2(s - 1)^n + ... +
-     (-1)^sC_s^s 1^n.`
-
-323. Prove that
-
-     .. math::
-        \frac{n!}{x(x + 1) ... (x + n)}\left\{\frac{1}{x} + \frac{1}{x + 1} +
-        ... + \frac{1}{x + n}\right\} =
-
-        \frac{1}{x^2} - \frac{C^n_1}{(x + 1)^2} + \frac{C^n_2}{(x + 2)^2} +
-        ... + (-1)^n\frac{1}{(x + n)^2}.
-
-324. Let :math:`\phi_k(x) = x(x - 1)(x - 2) ... (x -k +1).` Prove that
-
-     .. math::
-        \phi_n(x + y) = \phi_n(x) + c^n_1\phi_{n - 1}(x)\phi_1(y) +
-        c^n_2\phi_{n - 2}(x)\phi_2(y) + ... + C^n_{n - 1}\phi_1(x)\phi_{n -
-        1}(y) + \phi_n(y).
-
-325. Prove the following where :math:`p = x + y` and :math:`q = xy`
-
-     (i) .. math::
-           x^n + y^n = p^n - np^{n - 2}q + \frac{n(n - 3)}{1*2}p^{n - 4}q^2 -
-           ... + 
-
-           (-1)^r\frac{(n - r - 1)(n - r - 2) ... (n - 2r +1)}{r!}p^{n -
-           2r}q^r + ....
-
-     (ii) .. math::
-            \frac{x^{n + 1} - y^{n + 1}}{x - y} = p^n - C^{n - 1}_1p^{n - 2}q +
-            ...+
-
-            (-1)^rC^{n - r}_rp^{n - 2r}q^r + ...
-
-326. Let :math:`x + y = 1` then prove that
-
-     .. math::
-        x^m(1 + C^m_1y + C^{m + 1}_2y^2 + ... + C^{2m -2}_{m - 2}y^{m - 1}) +
-        ...
-
-        + y^m(1 + C^m_1x + C^{m + 1}_2x^2 + ... + C^{2m -2}_{m - 2}x^{m - 1}) =
-          1
-
-327. Prove that
-
-     .. math::
-        \frac{1}{(x - a)^m(x - b)^m} = \frac{1}{(a - b)^m}\left\{\frac{1}{(x -
-        a)^m} + \frac{C^m_1}{(x - a)^{m - 1}(b - a)} + ... + \frac{C^{2m -
-        2}_{m - 1}}{(x - a)(b - a)^{m - 1}}\right\}
-
-        + \frac{1}{(b - a)^m}\left\{\frac{1}{(x - b)^m} + \frac{C^m_1}{(x
-        -b)^{m - 1}(a - b)} + ... + \frac{C^{2m - 2}_{m - 1}}{(x - b)(a -
-        b)^{m - 1}}\right\}.
-
-328. Show that constants :math:`A_1, A_2, A-3` can always be chosen so that
-
-     .. math::
-        (x + y)^n = x^n + y^n + A_1xy(x^{n - 2} + y^{n - 2}) + A_2x^2y^2(x^{n
-        -4}y^{n - 4}) + ...
-
-329. Let :math:`m` and :math:`n` be positive integers (:math:`n \le m`). Let
-
-     .. math::
-        \frac{(1 - x^m)(1 - x^{m -1}) ... (1 - x^{m - n +1})}{(1 - x)(1 - x^2)
-        ... (1 - x^n)} = (m, n).
-
-     Prove that
-
-     (i) :math:`(m, n) = (m, m - n),`
-     (ii) :math:`(m , n + 1) = (m - 1, n + 1) + x^{m - n - 1}(m - 1, n),`
-     (iii) :math:`(m, n + 1) = (n, n) + x(n + 1, n) + x^2(n + 2, n) + ... +
-           x^{m - n - 1}(m - 1, n),`
-     (iv) :math:`(m, n)` is a polynomial in :math:`x`,
-     (v) :math:`1 - (m, 1) + (m, 2) - (m, 3) + ...` is equal to :math:`(1 -
-         x)(1 -x^2) ... (1 - x^{m - 1})` if :math:`m` is even and 0 if
-         :math:`m` is odd.
-
-330. Prove that
-
-     .. math::
-        (1 + xz)(1 + x^2z) ... (1 + x^nz) = 1 +
-
-        \sum_{k = 1}^{k = n}\frac{(1 - x^n)(1 - x^{n - 1}) ... (1 - x^{n - k
-        +1})}{(1 -x)(1 - x^2) ... (1 -x^k)}x^\frac{k(k + 1)}{2}z^k.
-
-331. Prove that
-
-     .. math::
-        (1 + xz)(1 + x^2z) ... (1 + x^{2n -1}z) = 1 +
-
-        \sum_{k = 1}^{k = n}\frac{(1 - x^{2n})(1 - x{2n - 2}) ... (1 - x^{2n -
-        2k + 2})}{(1 - x^2)(1 - x^4) ... (1 - x^2k)}x^{k^2}z^k.
-
-332. Let :math:`p_k = (1 - x)(1 - x^2) ... (1 - x^k).` Prove that
-
-     .. math::
-        \frac{1}{p_n} - \frac{x}{p_1p_{n - 1}} + \frac{x^3}{p_2p_{n - 2}} - ...
-        \pm \frac{x^{\frac{n(n + 1)}{2}}}{p_n} = 1.
-
-333. Determine the coefficients :math:`C_0, C_1, C-2, ..., C-n` in the
-     following identity
-
-     .. math::
-        (1 + xz)(1 + xz^{-1})(1 + x^3z)(1 + x^3z^{-1}) ... + (1 + x^{2n +
-        1}z)(1 + x^{2n + 1}z^{-1}) =
-
-        C_0 + C_1(z + z^{-1}) + C_2(z^2 + z^{-2}) + ... + C_n(z^n + z^{-n}).
-
-334. Let
-
-     .. math::
-        u_k = \frac{sin 2nx sin (2n - 1)x ... sin (2n - k + 1)x}{sin x sin 2x
-        ... sin kx}.
-
-     Prove that
-
-     .. math::
-        1 - u_1 + u_2 - u_3 + ... + u_{2n} = 2^n(1 - cos x)(1 - cos 3x)
-        ... [1 -  cos (2n - 1)x]
-
-     and also that
-
-     .. math::
-        1 - u_1^2 + u^2_2 - u^2_3 + ... + u_{2n}^2 = (-1)^n\frac{sin(2n + 2)x
-        sin(2n + 4)x ... sin4nx}{sin2x sin4x ... sin2nx}.

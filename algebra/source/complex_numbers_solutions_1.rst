@@ -59,14 +59,14 @@ Complex Numbers Solutions Part 1
     .. math::
        sinu cosv\frac{e^{ix}e^{iy}} {e^{iu}e^{i\left(\frac{\pi}{2} - v\right)}}.`
 
-    Now, all which remains is simplyfying this which the reader can do.
+    Now, all which remains is simplifying this which the reader can do.
 	
 18. Let :math:`z=x+iy` then
 
     .. math::
        \Rightarrow~z^2 + |z| = x^2 - y^2 + 2ixy + \sqrt{x^2 + y^2} = 0
 
-    Since both real and imaginary parts are zero we have following
+    Since both real and imaginary parts are zeros we have following
 
     .. math::
        2xy = 0 \Rightarrow~ x=0 \text{ or } y=0 \\
@@ -84,7 +84,7 @@ Complex Numbers Solutions Part 1
        \Rightarrow~x=\pm 1
 
     But when :math:`x=\pm 1, x^2 + \sqrt{x^2} = 2 \ne 0`
-    So our complex numebr is  0 or :math:`\pm i`. 
+    So our complex number is  0 or :math:`\pm i`. 
 
     **Second Method:** :math:`z^2 = -|z|` = a real number
 
@@ -151,7 +151,7 @@ Complex Numbers Solutions Part 1
        \frac{A^2}{y + iz -a} + \frac{B^2}{y + iz -b} + ... + \frac{H^2}{y + iz
        -h} = y + iz + l
 
-    Multiplying and dividng each term with conjugate of denominator we get
+    Multiplying and dividing each term with conjugate of denominator we get
 
     .. math::
        \frac{A^2(y - a -iz)}{(y - a)^2 + z^2} + \frac{B^2(y - b -iz)}{(y -
@@ -172,7 +172,7 @@ Complex Numbers Solutions Part 1
     than 1. :math:`\therefore iz = 0 \Rightarrow z = 0`. Hence, proven.
 
 28. Since our complex number is unimodular :math:`|z| = 1`. Let, :math:`z =
-    cos\theta + isin\theta`. Eqauting it to given equivalent ratio we have
+    cos\theta + isin\theta`. Equating it to given equivalent ratio we have
 
     .. math::
        cos\theta + isin\theta = \frac{c + i}{c - i} = \frac{(c + i)(c +
@@ -189,7 +189,7 @@ Complex Numbers Solutions Part 1
        \text{And} sin\theta = \frac{2c}{c^2 + 1} \Rightarrow c =
        cot\frac{\theta}{2}, tan\frac{theta}{2}
 
-    From these two common value of :math:`c` is :math:`cot\frac{\theta}{2}`
+    From these two common values of :math:`c` is :math:`cot\frac{\theta}{2}`
     where :math:`\theta \ne 2n\pi`.[:math:`\because z` is not purely real.]
 
     :math:`\therefore z = \frac{c + i}{c - i}`.
@@ -411,7 +411,7 @@ Complex Numbers Solutions Part 1
        y + 2 = 0 \Rightarrow y = -2 \text{and } x + \alpha \sqrt{(x - 1)^2 +
        y^2} = 0
 
-    Substituing value of :math:`y` in second equation
+    Substituting value of :math:`y` in second equation
 
     .. math::
        \alpha \sqrt{x^2 -2x + 5} = -x \Rightarrow (\alpha^2 - 1)x^2 -
@@ -445,7 +445,7 @@ Complex Numbers Solutions Part 1
 50. .. math::
       (1 + x)^n = a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + ...
 
-    Substituing :math:`x = i` we get
+    Substituting :math:`x = i` we get
 
     .. math::
        (1 + i)^n = a_0 + ia_1 - a_2 - ia_3 + a_4 + ...

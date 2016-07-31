@@ -14,16 +14,16 @@ problem is:
 .. math::
    y = \frac{1*64}{3*9} = \frac{4}{3}.
 
-4. Since x vaies as y and z jointly we have x=yzk. From given values of x, y
+4. Since x varies as y and z jointly we have x=yzk. From given values of x, y
 and z let us compute k.
 
 .. math::
-   k = \frac{x}{yz} = 2*\frac{5}{3}*\frac{27}{10} = \frac{1}{9}
+   k = \frac{x}{yz} = 2*\frac{5}{3}*\frac{27}{10} = 9
 
 Now we need to compute z when x=54 and y=3
 
 .. math::
-   z = \frac{x}{ky} = \frac{54*9}{3} = 162.
+   z = \frac{x}{ky} = \frac{54}{3*9} = 2.
 
 5. Given a=ck1 and b=ck2 where k1 and k2 are some constants. :math:`a\pm b`
 implies :math:`c(k1\pm k2)` therefore it varies as c. Similarly,

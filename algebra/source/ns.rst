@@ -4,7 +4,7 @@ In this chapter we will study about number systems. We normally deal in
 decimal number system. First question which will come to your mind is what is
 a number system? Well, a number system is a system which determines the rules
 and symbols for numbers on how we are going to use them. The symbols for
-decimal number system are arabic but they were taken from India, presumably.
+decimal number system are Arabic but they were taken from India, presumably.
 A number system consists of symbols for representing numbers and a dot for
 representing fractional numbers. Minus sign is used to represent negative
 numbers. A number system ranges from :math:`-\infty` to :math:`+\infty`. It
@@ -38,7 +38,7 @@ a point on this axis. The numbers I have written are supposedly in decimal
 number system. Base of decimal number system is 10. Why because it consists
 of 10 distinct symbols 0 through 9. Similarly we can have any other number
 system. Popular number systems in computers are binary, octal and hexadecimal
-not to mention decimal ofcourse.
+not to mention decimal of course.
 
 Definitions
 ===========
@@ -66,7 +66,7 @@ treated as a non-negative as well as non-positive integer.
 i)   Set of positive integers = {1, 2,3, ...}
 ii)  Set of negative integers = {-1, -2, -3, ...}
 iii) Set of non-negative integers = {0, 1, 2, ...}
-iv)  Set of non-postive integers = {0, -1, -2, ...}
+iv)  Set of non-positive integers = {0, -1, -2, ...}
 
 .. tikz:: Integer Classification
 
@@ -90,7 +90,7 @@ is an integer it can very well be 1 therefore each number of the form
 :math:`\frac{a}{1}` which is nothing but :math:`a` is also a rational number.
 
 Clearly, :math:`N\subset Z\subset Q`. Examples of rational numbers are
-:math:`\frac{2}{3}, -\frac{3}{4}, 7` etc. 0 is an inetger and hence a rational
+:math:`\frac{2}{3}, -\frac{3}{4}, 7` etc. 0 is an integer and hence a rational
 number.
 
 5. **Decimal form of a rational number is either recurring or terminating** As
@@ -103,7 +103,7 @@ radix :math:`r` which has say prime factors :math:`r_1, r_2, ..., r_n` then in
 that case if denominator contains any other factor than these then that
 rational number will be recurring else terminating.
   
-For exmaple :math:`\frac{3}{4}=0.75` while
+For example :math:`\frac{3}{4}=0.75` while
 :math:`\frac{3}{7}=.4285714285714...`
   
 It is safe to assume that :math:`a` and :math:`b` do not have a common factor
@@ -123,7 +123,7 @@ rational number cannot be square root of a number. Hence, we can conclude that
 this fraction :math:`\frac{a}{b}` is an irrational numbers and there are
 infinite such irrational numbers.
 
-8. **Decimal form of an irational number is neither terminating nor
+8. **Decimal form of an irrational number is neither terminating nor
 recurring** For example \:math:`sqrt{5}=1.732...`
 
 9. **Real numbers:** All rational and irrational numbers are also
@@ -138,7 +138,7 @@ Binary Number System
 
 As the name suggests binary number system has base of 2. Therefore it has
 only two symbols. 0 and 1. This is the most popular system for computers
-becasue TTL NAND and NOR gates which are the most basic logic gates using
+because TTL NAND and NOR gates which are the most basic logic gates using
 which other gates are implemented in processor has only two voltage output
 levels because of their operation in cut-off and saturation zones. These
 terms are better understood with the help of a book on electronics which is
@@ -175,7 +175,7 @@ binary. The technique is that of division. Please watch following carefully::
 So the binary is :math:`110101_2`. Please allow me to explain the process
 even though it is trivial and obvious. First we divide 53 by 2 and write
 the remainder. Then quotient is 26. We repeat the process for 26 therefore
-remainder is 0 and quotient is 13. This we go on repeatin till we have 1 as
+remainder is 0 and quotient is 13. This we go on repeating till we have 1 as
 quotient. Note that all the remainders will be 0 or 1 because divisor is 2.
 Similarly, final quotient is always 1. Now we take final quotient and start
 writing remainders from top to bottom.
@@ -223,7 +223,7 @@ below:
 As you can see all the terms with :math:`c` are called digits. The leftmost or
 leading digit is called *most significant digit* and the rightmost or trailing
 digit is called *least significant digit*. The . is called a point which
-separates the integral part which is toards its left from the fractional part
+separates the integral part which is towards its left from the fractional part
 which is towards its right. :math:`b` is known as radix or base of the number
 system. Note that all digits will be between 0 to :math:`b-1`. So in our
 decimal system :math:`b` is 10 therefore we have digits from 0 to 9. In binary
@@ -232,4 +232,4 @@ number system it is 2 therefore digits permitted are 0 and 1.
 These are the basics of number systems i.e. the numbers themselves. When we
 return back from our journey of Mathematics to Data structures and Algorithms
 I will discuss more on number theory and about Alan Turing and how the world's
-shpae changed because of him and foundation of computer science was laid.
+shape changed because of him and foundation of computer science was laid.

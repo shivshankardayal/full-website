@@ -6,7 +6,7 @@ Complex Numbers Problems Part 2
     \alpha)=(\beta-\overline{\beta})^2`
 
 52. Dividing :math:`f(z)` by :math:`z-i,` we get :math:`i` as remainder and if
-    we divide by :math:`z+i,` we get :math:`1+i` as remainder. Find the remiander
+    we divide by :math:`z+i,` we get :math:`1+i` as remainder. Find the remainder
     upon division of :math:`f(z)` by :math:`z^2+1`
 
 53. If :math:`iz^3+z^2-z+i=0,` then show that :math:`|z|=1`
@@ -33,11 +33,11 @@ Complex Numbers Problems Part 2
     3+i=3|`
 
 59. If :math:`z\le 1, |w|\le 1,` show that :math:`|z - w|^2\le (|z| - |w|)^2 +
-    (Args(z) - Arg(w))^2`
+    (Arg(z) - Arg(w))^2`
 
 60. If :math:`z` is any non-zero complex number, show that
 
-    (i) :math:`\left|\frac{z}{|z|} - 1\right| \le |argz|` (ii) :math:`|z-1| \le
+    (i) :math:`\left|\frac{z}{|z|} - 1\right| \le |arg z|` (ii) :math:`|z-1| \le
     ||z| - 1|+ |z| |arg z|`
 
 61. If :math:`\left|z+\frac{1}{z}\right|=a,` where :math:`z` is a complex
@@ -141,7 +141,7 @@ Complex Numbers Problems Part 2
        ... + \frac{1}{z_2} \ne 0
 
 82. The points :math:`z_1 = 9+ 12i` and :math:`z_2 = 6 - 8i` are given on a
-    comlex plane. Find the equation of the bisector of the angle formed by the
+    complex plane. Find the equation of the bisector of the angle formed by the
     vector representing :math:`z_1` and :math:`z_2.`
 
 83. If the vertices of a triangle :math:`ABC` are :math:`z_1, z_2, z_3,` then
@@ -217,7 +217,7 @@ Complex Numbers Problems Part 2
     a_2z^2 + ... + a_nz^n = 0` show that :math:`z` does not lies in the
     interior of the circle :math:`|z| = \frac{1}{3}.`
 
-98. Show that the roots of teh equation :math:`z^n cos\theta_0 + z^{n-1}
+98. Show that the roots of the equation :math:`z^n cos\theta_0 + z^{n-1}
     cos\theta_1 + ... + cos\theta_n = 2` where :math:`\theta_0 + \theta_1 +
     ... + \theta_n \in R` lies outside the circle :math:`|z| = \frac{1}{2}.`
 
@@ -231,4 +231,3 @@ Complex Numbers Problems Part 2
      altitude of the triangle through the vertex :math:`A` meets the
      circle again at :math:`P,` prove that :math:`P` represents the complex
      number :math:`\frac{z_2z_3}{z_1}.`
-

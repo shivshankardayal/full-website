@@ -27,7 +27,7 @@ Arithmetic Progression Problems
 9. Find the 10th term of the sequence whose 7th and 12th are 34 and 64
    respectively.
 
-10. Each of the sequences 3, 5, 7, ... and 4, 9, 14, ... are cotinued for 40
+10. Each of the sequences 3, 5, 7, ... and 4, 9, 14, ... are continued for 40
     terms. Find the identical terms.
 
 11. Divide 15 into three terms which are in A.P. and sum of their squares

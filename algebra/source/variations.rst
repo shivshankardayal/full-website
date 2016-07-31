@@ -1,6 +1,6 @@
 Variations
 **********
-Teo quantities are said to be vary as with each other if the ratio between them
+Two quantities are said to be vary as with each other if the ratio between them
 is constant. For example, if :math:`a=kb`, where :math:`a` and :math:`b` are
 variables and :math:`k` is a constant which is also known as proportionality
 constant. Most of the time it is said that :math:`a` is directly proportional
@@ -9,10 +9,10 @@ to :math:`b` or :math:`a` varies directly as :math:`b`.
 The symbol :math:`\varpropto` is used to denote variation; so that
 :math:`a\varpropto b` is read as ":math:`a` varies as :math:`b`".
 
-For example, if a person drink 5 litres of water in one day then in 10 days he
-will drink 50 litres and in 20 days he will drink 100 litres.
+For example, if a person drink 5 liters of water in one day then in 10 days he
+will drink 50 liters and in 20 days he will drink 100 liters.
 
-One qyanity :math:`a` is said to vary inversely as another :math:`b` or
+One quantity :math:`a` is said to vary inversely as another :math:`b` or
 :math:`a` is inversely proportional to :math:`b` if product of these two is
 constant.
 

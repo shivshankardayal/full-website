@@ -2,7 +2,7 @@
 Complex Numbers
 ***************
 Certain portions of these chapter require facts from other parts like
-determinants, equations tec. Student is encouraged to look ahead into these
+determinants, equations etc. Student is encouraged to look ahead into these
 chapters for referenced results/equations used.
 
 Imaginary Numbers
@@ -33,7 +33,7 @@ If you examine carefully you will find that following holds true:
   i^{4m}=1,i^{4m+1} = i, i^{4m+2}=-1, \text{ and }i^{4m+3}=-i, \text{ where
   }m\in P
 
-:math:`P` is the set of positive numbers inclduing zero. Proof of the above one
+:math:`P` is the set of positive numbers including zero. Proof of the above one
 is simple and therefore left as an exercise to reader.
 
 **Gotcha**
@@ -123,9 +123,9 @@ Properties of Conjugates
 ------------------------
 1.  :math:`z_1=z_2\Leftrightarrow \bar{z_1}=\bar{z_2}`.
 
-    Clearly as we know for two complex numbers toi be equal both parts must be
+    Clearly as we know for two complex numbers to be equal both parts must be
     equal so this is very easy to understand that if :math:`x_1=x_2` and
-    :math:`y_1=y_2` then this bidirection consition is always satisfied.
+    :math:`y_1=y_2` then this bidirectional condition is always satisfied.
 2.  :math:`\overline{(\bar{z})}=z`.
 
     :math:`z=x+iy`, hence, :math:`\bar{z}=x-iy`, hence,
@@ -262,15 +262,15 @@ Following relations are very easy and can be proved by the student. If
 Geometrical Representation
 ==========================
 A complex number z which we have considered to be equal to x+iy in our previous
-representations can be represented by a point P whose Cartesian co-ordinates
+representations can be represented by a point P whose Cartesian coordinates
 are (x,y) referred to rectangular axes Ox and Oy where O is origin i.e. (0, 0)
 and are called *real* and *imaginary* axes respectively. The xy two-dimensional
 plane is also called *Argand plane, complex plane* or *Gaussian plane*. The
 point P is also called the *image* of the complex number and z is also called
-the *affix* or *complex co-ordinate* of point P.
+the *affix* or *complex coordinate* of point P.
 
 Now as you can easily figure out that all real numbers will lie on real axis
-and all imaginary numbers will lie onimaginary axis as their counterparts will
+and all imaginary numbers will lie on imaginary axis as their counterparts will
 be zero.
 
 The modulus is given by the length of segment OP which is equal to
@@ -296,9 +296,9 @@ OP. Given below is the graphical representation of the complex number.
 
 In the above diagram :math:`\theta` is known as the argument of z. This is
 nothing but angle made with positive direction (i.e. counter-clockwise) of real
-axis. Now thie argument is not unique. If :math:`\theta` is an argument of a
+axis. Now this argument is not unique. If :math:`\theta` is an argument of a
 complex number z then :math:`2n\pi+\theta` where :math:`n\in I` where I is the
-set of integerts. The value of argument for which :math:`-\pi<\theta\leq\pi` is
+set of integers. The value of argument for which :math:`-\pi<\theta\leq\pi` is
 called the *principal value* of argument or *principal argument*.
 
 Different Arguments of a Complex Number
@@ -313,13 +313,13 @@ this value is for when z is in first quadrant.
 When z will lie in second, third and fourth quadrants then arguments will be
 
 .. math::
-   arg(z) = \pi -tan^{-1}\left(\frac{y}{|x|}\right)
+   arg(z) = \pi - tan^{-1}\left(\frac{y}{|x|}\right)
 
-   arg(z) = \pi -tan^{-1}\left(\frac{|y|}{|x|}\right)
+   arg(z) =  -\pi + tan^{-1}\left(\frac{|y|}{|x|}\right)
 
-   arg(z) = \pi -tan^{-1}\left(\frac{|y|}{x}\right)
+   arg(z) = -tan^{-1}\left(\frac{|y|}{x}\right)
 
-repectively.
+respectively.
 
 Polar Form of a Complex Number
 ------------------------------
@@ -332,7 +332,7 @@ In this case z is also given by
 Euler's Formula
 ^^^^^^^^^^^^^^^
 The complex number :math:`cos\theta+i~sin\theta` is denoted by
-:math:`e^{i\theta}` or :math:`cis~\theta.`
+:math:`e^{i\theta}` or :math:`c` is :math:`\theta.`
 
 Important Results Involving Arguments
 -------------------------------------
@@ -366,7 +366,7 @@ If :math:`z, z_1 \text{ and } z_2` are complex numbers then
 Vector Representation
 =====================
 Complex numbers can also be represented as vectors. Length of the vector is
-nothing bu modulus of complex number and argument is the angle which the vector
+nothing but modulus of complex number and argument is the angle which the vector
 makes with read axis. It is denoted as :math:`\overrightarrow{OP}` where
 :math:`OP` represents the vector of the complex number z.
 
@@ -378,7 +378,7 @@ represented by two points :math:`P1` and :math:`P2` in the following diagrams.
 Addition
 --------
 Now as we know that :math:`z_1+z_2 = (x_1+x_2)+i(y_1+y-2).` Let us try to
-achive this through geometrical means.
+achieve this through geometrical means.
 
 .. tikz:: Complex number addition
 
@@ -414,7 +414,7 @@ congruent. Very simple analysis will result in the fact that
 Subtraction
 -----------
 TO subtract we will have to make :math:`P_2` rotate by :math:`180^\circ .` Now
-this means that in prebious diagram it will fall in third quadrant and then
+this means that in precious diagram it will fall in third quadrant and then
 again it can be proven that
 
 .. math::
@@ -510,7 +510,7 @@ Let :math:`(x+iy)^n=a, \therefore x+iy = a^n`
 
 Now if :math:`a` is real :math:`a^n` will also be real but from above an
 imaginary number :math:`x+iy` is equal to a real number :math:`a^n` which is
-not posiible. Hence, a must be imaginary.
+not possible. Hence, a must be imaginary.
 
 Square Root of a Complex Number
 -------------------------------
@@ -628,7 +628,7 @@ Section Formula
 ---------------
 Let :math:`z_1=x_1+iy_1, z_2=x_2+iy_2` then if :math:`z=z+iy` which divides the
 previous two points in the ration :math:`m;n` can be given by using the results
-from co-ordinate geometry as below:
+from coordinate geometry as below:
 
 .. math::
    x=\frac{mx_2+nx_1}{m+n}, \text{ and } y=\frac{my_2+ny_1}{m+n}
@@ -641,7 +641,7 @@ line in two equal parts i.e. the point is mid-point then :math:`m = 1` and :math
 
 Distance Formula
 ----------------
-Distance betwenn :math:`A(z_1)` and :math:`B(z_2)` is given by :math:`AB = |z_1 + z_2|`
+Distance between :math:`A(z_1)` and :math:`B(z_2)` is given by :math:`AB = |z_1 + z_2|`
 
 Equation of a Line Passing Through Two Points
 ---------------------------------------------
@@ -660,7 +660,7 @@ or,
 .. math::
    \frac{z-z_1}{\overline{z}-\overline{z_1}}=\frac{z_1-z_2}{\overline{z_1}-\overline{z_2}}
 
-Please refer to determinants section and co-ordinate geomtry books on how to
+Please refer to determinants section and coordinate geometry books on how to
 establish this result.
 
 The proof is left as an exercise to the reader.
@@ -681,7 +681,7 @@ Three points :math:`z_1, z_2 \text{ and } z_3` are collinear if and only if
 This follows from the formula for a line passing through two points. Just
 substitute :math:`z_3` as a point in the equation to satisfy the equality.
 
-Parrallelogram
+Parallelogram
 --------------
 Four complex numbers :math:`A(z_1), B(z_2), C(z_3)` and :math:`D(z_4)`
 represent the vertices of a parallelogram if :math:`z_1 + z_3 = z_2 + z_4.`
@@ -959,7 +959,7 @@ as when :math:`P` is in same segment of different.
 
    arg\left[\frac{(z - z_1)(z_3 - z_2)}{(z - z_2)(z_3 - z_1)}\right] = \pi
 
-So in both the cases the fraction must be purely real. This menas
+So in both the cases the fraction must be purely real. This means
 
 .. math::
    \frac{(z - z_1)(z_3 - z_2)}{(z - z_2)(z_3 - z_1)} = \frac{\overline{(z -
@@ -981,8 +981,8 @@ Finding Loci by Examination
 i. :math:`arg(z - z_0) = \alpha`
 
    If :math:`\alpha` is a real number and :math:`z_0` is a fixed point, then
-   :math:`arg(z - z_0) = \alpha` represents a verctor starting at :math:`z_0`
-   (exclusing the point :math:`z_0`) and making an angle :math:`\alpha` with
+   :math:`arg(z - z_0) = \alpha` represents a vector starting at :math:`z_0`
+   (excluding the point :math:`z_0`) and making an angle :math:`\alpha` with
    the real :math:`x`-axis.
 
    .. tikz::

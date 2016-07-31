@@ -1,25 +1,25 @@
 Ratio
 *****
 In his book *Elements of Algebra*, Euler says that anything we can increase
-or decrase is *magnitude* or *quantity*.
+or decrease is *magnitude* or *quantity*.
 
 We will study ratios of quantities in this chapter. Many of you might
 already be knowing about ratios from earlier classes. A ratio is nothing
-but a comparison between two quantities of same kine. For example, 4
+but a comparison between two quantities of same kind. For example, 4
 balls vs 7 balls or 12 shoes vs 8 shoes.
 
-A ratio beween two qualtities :math:`Q1` and :math:`Q2` is written as
+A ratio between two quantities :math:`Q1` and :math:`Q2` is written as
 :math:`Q1:Q2` most of the time. :math:`Q1` or the first term is called the
 **antecedent** and the :math:`Q2` or the second term is called the
 **consequent**.
 
 To measure the ratio between two quantities typically we use fractions. A
-reduced fraction is tells us about one quanity being multiples of another or
+reduced fraction is tells us about one quantity being multiples of another or
 part of that. For example, 2 dozen bananas compared to 6 bananas can be written
 as :math:`\frac{2*12}{6}` or 4.
 
 Ratios are *abstract quantities* because they are sheer numbers. In practice,
-considering our previous example we can say 2 dozen banans are four times 6
+considering our previous example we can say 2 dozen bananas are four times 6
 bananas. This four is an abstract quantity because it does not have a physical
 form.
 
@@ -52,12 +52,12 @@ Clearly, a ratio can be represented by a fraction of two integers. Now let us
 try to see what happens to ratio of two ratios:
 
 Consider two ratios: :math:`a:b` and math:`c:d`. Thus we can write ratio of
-these two raios as fraction
+these two ratios as fraction
 
 .. math::
   \frac{\frac{a}{b}}{\frac{c}{d}} ~~or~~ \frac{ad}{bc}
 
-Therefore we can conclude that it is eqauivalent to :math:`ad:bc`.
+Therefore we can conclude that it is equivalent to :math:`ad:bc`.
 
 Surds and Ratios
 ================
@@ -81,7 +81,7 @@ The compounded ratio is :math:`abc:def`.
 Duplicating Ratios
 ==================
 When a ratio is compounded with itself once it is called **duplicate ratio**.
-If it is compunded twice then it is called **triplicate ratio**. If a square
+If it is compounded twice then it is called **triplicate ratio**. If a square
 root is taken then it is called **subduplicate ratio**.
 
 Antecedent vs Consequent
@@ -93,7 +93,7 @@ consequent.
 Common Properties of Ratios
 ===========================
 A ratio of greater inequality is diminished and a ratio of less inequality is
-increased if we add same quanitty to both its terms.
+increased if we add same quantity to both its terms.
 
 Let :math:`\frac{a}{b}` be a ratio and we add :math:`x` to both its terms so we
 have :math:`\frac{a+x}{b+x}` as our new ratio.
@@ -114,8 +114,8 @@ and :math:`a-b` is positive or negative depending upon the fact whether
 
   \text{and if}~ a< b,~~ \frac{a}{b}<\frac{a+x}{b+x}
 
-Similarly, it can be proved that a ratio of greater inequality is icreased and
-a ratio of less inequality is decreased if we subtract same quanitty to both
+Similarly, it can be proved that a ratio of greater inequality is increased and
+a ratio of less inequality is decreased if we subtract same quantity to both
 its terms.
 
 When two or more ratios are equal we can denote that by a single symbol which
@@ -291,7 +291,7 @@ Problems
 5.  If :math:`x-2:3(x+7)` has a ratio of :math:`7:9` then find :math:`x`.
 6.  Find two numbers in the ratio of :math:`11:17` where one exceeds other by
     126.
-7.  What number must be added to each of the tems of :math:`5:13` to make it
+7.  What number must be added to each of the terms of :math:`5:13` to make it
     equal to :math:`5:7`?
 8.  What number must be subtracted from each of the terms of :math:`33:37` to
     make it equal to :math:`7:9`?

@@ -27,12 +27,12 @@ Second part is left as an exercise.
 .. math::
    \frac{a}{b}=\frac{c}{d}~\Rightarrow~a=bk,~c=dk
 
-Now let us evaluate L.H.S. by substituing above value for a and c.
+Now let us evaluate L.H.S. by substituting above value for a and c.
 
 .. math::
    \frac{a^c+ac^2}{b^d+bd^2}=\frac{b^2k^2dk+bkd^2k^2}{b^d+db^2}=k^3
 
-Now let us evaluate R.H.S. by substituing above value for a and c.
+Now let us evaluate R.H.S. by substituting above value for a and c.
 
 .. math::
    \frac{(bk+dk)^3}{(b+d)^3}=k^3
@@ -110,13 +110,13 @@ have following:
 .. math::
    a=bk\text{ and }c=dk;~e=fl\text{ and }g=hl
 
-Substituing these value for :math:`a, c, e \text{ and } g` we get both left
+Substituting these value for :math:`a, c, e \text{ and } g` we get both left
 hand side and right hand side equal to
 
 .. math::
    \frac{kl+1}{kl-1}
 
-13. Proceeding similarly as prvious problems we can say that :math:`a=bk` and
+13. Proceeding similarly as previous problems we can say that :math:`a=bk` and
 :math:`c=dk`. Now substituting for :math:`a` and :math:`c` we get L.H.S. as
 
 .. math::

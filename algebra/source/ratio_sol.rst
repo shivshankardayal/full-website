@@ -48,7 +48,7 @@ Clearly, 123:63 is greater than 233:63.
    \left(\frac{2(x+3)}{y-5}\right)^2, \left(\frac{2(x+3)}{y-5}\right)^3
    \text{and} \sqrt{\frac{2(x+3)}{y-5}}.
 
-Expanding the forst two will give:
+Expanding the first two will give:
 
 .. math::
 
@@ -103,7 +103,7 @@ of ratios. Substituting these in third ratio yields 29:26.
 
 10. Let, :math:`\frac{a}{b}=\frac{c}{d}=\frac{e}{f}=k` then if we multiply and
 divide numerator with :math:`a^4` and denominator with :math:`b^4` then we
-willl have following:
+will have following:
 
 .. math::
    \frac{a^4\left(7b^2+\frac{8c^2}{a^2}-\frac{5e^4f}{a^4}\right)}{b^4\left(7b^2+\frac{8f^2}{b^2}-\frac{5e^5}{b^4}\right)}
@@ -120,7 +120,7 @@ Now, similarly e can be written as :math:`\frac{cf}{d}`,
 .. math::
    \Rightarrow~\frac{e^2}{a^2} = \frac{c^2f^2}{d^2a^2}
 
-CLearly, from first two ratios :math:`\frac{c}{a}=\frac{d}{b}`. Therefore,
+Clearly, from first two ratios :math:`\frac{c}{a}=\frac{d}{b}`. Therefore,
 second term in consideration comes to be equal. Similarly, third can be proven
 as well and is left to reader to do that.
 
@@ -133,7 +133,7 @@ following:
    \frac{d^5k^{15}+d^2k^4d^2k^2+d^3k^9d2k^2}{d4k^8dk+d^4+d^2k^4dkd^2}
    \Rightarrow~\frac{d^5k^{15}+d^4k^6+d^5k^{11}}{d^5k^9+d^4+d4k^5}
 
-Now, multiplying and dividing numerator by :math:`d^4k^6` and denomitor by
+Now, multiplying and dividing numerator by :math:`d^4k^6` and denominator by
 :math:`d^4` i.e. in other words we are taking out these common factors. This
 will reduce the fraction to following:
 

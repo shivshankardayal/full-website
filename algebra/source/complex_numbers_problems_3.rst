@@ -26,7 +26,7 @@ Complex Numbers Problems Part 3
      then show that :math:`arg\left( \frac{z_3}{z_2}\right) = arg\left( \frac{z_3 -
      z_1}{z_2 - z_1}\right)^2.`
 
-104. :math:`P` is such a point that on a cicle with :math:`OP` as diameter two
+104. :math:`P` is such a point that on a circle with :math:`OP` as diameter two
      points :math:`Q` and :math:`R` are taken such that :math:`\angle POQ =
      \angle QOR = \theta.` If :math:`O` is the origin and :math:`P, Q \text{
      and }R` are represented by the complex numbers :math:`z_1, z_2 \text{ and
@@ -157,7 +157,7 @@ Complex Numbers Problems Part 3
 
 134. If :math:`z_1 + z_2 + z_3 = 0` and :math:`|z_1| = |z_2| = |z_3| = 1,` then
      prove that the points :math:`z_1, z_2, z_3` are the vertices of an
-     equialteral triangle inscribed in an unit circle.
+     equilateral triangle inscribed in an unit circle.
 
 135. If :math:`z_1, z_2, z_3` be the vertices of of an equilateral triangle in
      the Argand plane whose circumcenter is :math:`z_0` then prove that
@@ -190,10 +190,10 @@ Complex Numbers Problems Part 3
 
         z_1|z_2 - z_3| + z_2|z_3 - z_1| - z_3|z_1 - z_2| = 0
 
-141. Find the locus of point :math:`z` if :math:`\frac{z - i}{z + i}` is purley
+141. Find the locus of point :math:`z` if :math:`\frac{z - i}{z + i}` is purely
      imaginary.
 
-142. What region in the Argand plane is represneted by the inequality :math:`1
+142. What region in the Argand plane is represented by the inequality :math:`1
      < |z - 3 -4i| < 2.`
 
 143. Find the locus of point :math:`z` if :math:`|z - 1| + |z + 1| \le 4.`
@@ -215,7 +215,7 @@ Complex Numbers Problems Part 3
 
 149. Show that the locus of the point :math:`z` satisfying the condition
      :math:`arg\left(\frac{z - 1}{z + 1}\right) = \frac{\pi}{2}` is the
-     semicircle above :math:`x`-axis whose diemeter is the joins of the points
+     semicircle above :math:`x`-axis whose diameter is the joins of the points
      :math:`(-1, 0)` and :math:`(1, 0)` excluding those points.
 
 150. Find the locus of the point :math:`z` if :math:`\log_{\sqrt{3}}\frac{|z|^2 -
