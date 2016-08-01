@@ -491,11 +491,97 @@ Complex Numbers Solutions Part 4
      5. Given expression is :math:`(a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca).`
         Now this can be solved using previous problems' solution
 
-190. 
+190. :math:`x^2 + x + 1 = 0 \Rightarrow x = \frac{-1 \pm \sqrt{3}}{2} = \omega
+     or \omega^2`
+
+     When :math:`x = \omega`, :math:`x^{3p} + x^{3q+1} + x^{3r+2}`
+
+     :math:`= \omega^{3p} + \omega^{3q+1} + \omega^{3r+2}`
+
+     :math:`= 1 + \omega + \omega^2 = 0`
+
+     When :math:`x = \omega^2`, :math:`x^{3p} + x^{3q+1} + x^{3r+2}`
+
+     :math:`= \omega^{6p} + \omega^{6q+2} + \omega^{6r+4}`
+
+     :math:`= 1 + \omega + \omega^2 = 0`
+
+     Since all the roots of the equation :math:`x^2 + x + 1` satisfies the
+     given expression it is divisible by :math:`x^2 + x + 1.`
+
+191. It is similar to 190 and has been left as an exercise to reader.
+
+192. It is an easy problem and requires simplification and thus has been left
+     as an exercise to the reader.
+
+193. Similar to 192 it requires simple calculation and has been left as an
+     exercise to the reader.
+
+194. It is another easy problem and has been left as an exercise to the reader.
+
+195. Hint: Use Euler'r formula and take i out from denominator to solve it.
+
+196. Hint: Using quadratic equation formula the roots are:
+
+     .. math::
+        z = \frac{2 cos \theta \pm \sqrt{4 cos^2 \theta - 4}}{2} = cos\theta
+        \pm isin\theta
+
+     Now the expression can be easily evaluated using De'Moivre's formula.
+
+197. Given, :math:`x_r = cos\frac{\pi}{2^rr} + isin\frac{\pi}{2^r} =
+     e^{\frac{i\pi}{2^r}}`
+
+     Thus, :math:`x_1x_2x_3 ... to \infty`
+
+     :math:`= e^{i\pi\(\frac{1}{2} + \frac{1}{2^2} + \frac{1}{2^3} + ...)}`
+
+     Using sum for infinite terms of a G.P.
+
+     :math:`= e^{i\pi}`
+
+     :math:`= -1`
+
+198. :math:`L. H. S. = \left[\sqrt{2}\left\{cos\left(\frac{\pi}{4}\right) +
+     isin\left(\frac{\pi}{4}\right)\right\}\right]^n +
+     \left[\sqrt{2}\left\{cos\left(\frac{\pi}{4}\right) -
+     isin\left(\frac{\pi}{4}\right)\right\}\right]^n`
+
+     Simplifying this using De'Moivre's formula we get our desired result.
+
+199. .. math::
+       \sum_{k = 1}^6\left(sin\frac{2\pi k}{7} -icos\frac{2\pi k}{7}\right)
 
 
+     .. math::
+        = -i \sum_{k = 1}^6\left(cos\frac{2\pi k}{7} + isin\frac{2\pi k}{7}\right)
+     
+     .. math::
+        = -i \sum_{k = 1}^6 e^{\frac{i2\pi k}{7}}
 
+     .. math::
+        = -i \left[e^{\frac{i2\pi}{7}} + e^{\frac{i4\pi}{7}} + .. +
+        e^{\frac{i12\pi}{7}}\right]
 
+     .. math::
+        = -i \left[\left(\frac{1 - e^{2\pi}}{1 - e^{\frac{i2\pi}{7}}}\right) -
+        1\right]
 
+     .. math::
+        = -i [0 - 1] = i
 
-Rest of the problems are left as exercises.
+200. Let :math:`cot^{-1}p = \theta`, then :math:`cot\theta =
+     p`. Now, L. H. S. is
+
+     .. math::
+        e^{2mi\theta}\left(\frac{icot\theta + 1}{icot\theta - 1}\right)^m  =
+        e^{2mi\theta}\left[\frac{i(cot\theta - i)}{i(cot\theta + i)}\right]^m
+
+     .. math::
+        = e^{2moi\theta}\left(\frac{cos\theta - isin\theta}{cos\theta +
+        isin\theta}\right)^m
+
+     .. math::
+        = e^{2mi\theta}\left(\frac{e^{-i\theta}}{e^i\theta}\right)^m =
+        e^2mi\theta . e^{-2mi\theta} = e^0 = 1
+

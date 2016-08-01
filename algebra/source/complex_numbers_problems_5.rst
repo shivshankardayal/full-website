@@ -1,4 +1,4 @@
-Complex Numbers Solutions Part 5
+Complex Numbers Problems Part 5
 ********************************
 201. Prove that
 
@@ -33,7 +33,7 @@ Complex Numbers Solutions Part 5
 
         p_1 - p_3 + p_5 + ... = 2^{\frac{n}{2}}sin\frac{n\pi}{4}
 
-206. If :math:`(1 - x + x^2)^n = a_0 + a_1 + a_2x^2 + ... a_2nx^2n`
+206. If :math:`(1 - x + x^2)^n = a_0 + a_1 + a_2x^2 + ... a_{2n}x^{2n}`
      show that
 
      .. math::
@@ -59,7 +59,7 @@ Complex Numbers Solutions Part 5
 209. Prove that the roots of the equation :math:`8x^3 - 4x^2 - 4x + 1
      = 0` are :math:`cos\frac{\pi}{7}, cos\frac{3\pi}{7}, cos\frac{5\pi}{7}.`
 
-210. Solve the equation :math:`z^10 - 1 = 0` and deduce that
+210. Solve the equation :math:`z^{10} - 1 = 0` and deduce that
 
      .. math::
         sin5\theta = 5sin\theta\left(1 -
