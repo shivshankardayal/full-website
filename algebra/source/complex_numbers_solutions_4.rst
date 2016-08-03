@@ -534,7 +534,7 @@ Complex Numbers Solutions Part 4
 
      Thus, :math:`x_1x_2x_3 ... to \infty`
 
-     :math:`= e^{i\pi\(\frac{1}{2} + \frac{1}{2^2} + \frac{1}{2^3} + ...)}`
+     :math:`= e^{i\pi\left(\frac{1}{2} + \frac{1}{2^2} + \frac{1}{2^3} + ...\right)}`
 
      Using sum for infinite terms of a G.P.
 

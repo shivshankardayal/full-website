@@ -1,4 +1,3 @@
-***************
 Complex Numbers
 ***************
 Certain portions of these chapter require facts from other parts like

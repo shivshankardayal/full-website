@@ -355,7 +355,7 @@ Complex Numbers Solutions Part 5
         = 16\sin \theta\left(\cos\theta
         -\cos\frac{\pi}{5}\right)\left(\cos\theta
         +\cos\frac{\pi}{5}\right)\left(\cos\theta
-        -\cos\frac{2\pi}{5}\right)\left(\cos\theta +\cos\frac{\2pi}{5}\right)
+        -\cos\frac{2\pi}{5}\right)\left(\cos\theta +\cos\frac{2\pi}{5}\right)
 
      .. math::
         = 16\sin \theta\left(\cos^2\theta -
@@ -397,6 +397,27 @@ Complex Numbers Solutions Part 5
      ..., 6`
 
      .. math::
+        = \cos \frac{\pi}{7} \pm i \sin\frac{\pi}{7}, \cos \frac{2\pi}{7} \pm i
+        \sin\frac{2\pi}{7}, \cos \frac{3\pi}{7} \pm i \sin\frac{3\pi}{7}, \cos
+        \pi + i \sin \pi(= -1)
+
+     .. math::
+        x^7 + 1 = (x + 1)\left(x^2 - 2\cos\frac{\pi}{7}x + 1\right)\left(x^2 -
+        2\cos\frac{2\pi}{7}x + 1\right)\left(x^2 - 2\cos\frac{3\pi}{7}x +
+        1\right)
+
+     Putting :math:`x = i`, we get
+
+     .. math::
+        i^7 + 1 = (1 +
+        i)\left(-2i\cos\frac{\pi}{7}\right)\left(-2i\cos\frac{2\pi}{7}\right)\left(-2i\cos\frac{3\pi}{7}\right)
+
+     .. math::
+        1 - i = 8(1 + i)\cos\frac{\pi}{7}\cos\frac{2\pi}{7}\cos\frac{3\pi}{7}
+
+        = -8(1 - i)\cos\frac{\pi}{7}\cos\frac{2\pi}{7}\cos\frac{3\pi}{7}
+
+     :math:`\therefore \cos\frac{\pi}{7}\cos\frac{2\pi}{7}\cos\frac{3\pi}{7} =
+     -\frac{1}{8}`
         
-     
 Rest of the problems are left as exercises for the reader.
