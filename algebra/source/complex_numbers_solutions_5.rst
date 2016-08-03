@@ -392,9 +392,10 @@ Complex Numbers Solutions Part 5
 
 211. Given, :math:`x^7 + 1 = 0` or :math:`x^7 = -1 = \cos\pi + i \sin\pi`
 
-     :math:`\therefore x = \left(\cos\pi + i \sin\pi\right)\frac{1}{7} =
-     \cos\frac{2r\pi + \pi}{7} + i \sin \frac{2r\pi + \pi}{7}, r = 0, 1, 2,
-     ..., 6`
+     .. math::
+        \therefore x = \left(\cos\pi + i \sin\pi\right)\frac{1}{7} =
+        \cos\frac{2r\pi + \pi}{7} + i \sin \frac{2r\pi + \pi}{7}, r = 0, 1, 2,
+        ..., 6
 
      .. math::
         = \cos \frac{\pi}{7} \pm i \sin\frac{\pi}{7}, \cos \frac{2\pi}{7} \pm i
@@ -417,7 +418,179 @@ Complex Numbers Solutions Part 5
 
         = -8(1 - i)\cos\frac{\pi}{7}\cos\frac{2\pi}{7}\cos\frac{3\pi}{7}
 
-     :math:`\therefore \cos\frac{\pi}{7}\cos\frac{2\pi}{7}\cos\frac{3\pi}{7} =
-     -\frac{1}{8}`
-        
+     .. math::
+        \therefore \cos\frac{\pi}{7}\cos\frac{2\pi}{7}\cos\frac{3\pi}{7} =
+        -\frac{1}{8}
+
+212. .. math::
+       (\cos\alpha + i \sin\alpha)^n = \cos^n\alpha + i{^nC_1}\cos^{n-1}\alpha
+       \sin\alpha + i^2{^nC_2}\cos^{n-2}\alpha \sin^2\alpha + ... +
+       i^n{^nCn}\sin^n\alpha
+
+     .. math::
+        \Rightarrow \cos n\alpha + i \sin n\alpha = (\cos^n\alpha -
+        {^nC_2}\cos^{n-2}\alpha \sin^2\alpha) + i({^nC_1}\cos^{n-1}\alpha
+        \sin\alpha)
+
+     Equating imaginary parts, we get
+
+     .. math::
+        \therefore \sin n\alpha = {^nC_1}\cos^{n-1}\alpha \sin\alpha -
+        {^nC_3}\cos^{n-3}\alpha \sin^3\alpha + ...
+
+     .. math::
+        \therefore \sin (2n+1)\alpha = {^{2n+1}C_1}\cos^{2n}\alpha \sin\alpha -
+        {^{2n+1}C_3}\cos^{2n-2}\alpha \sin^3\alpha + ...
+
+     .. math::
+        :label: Equation
+
+        \Rightarrow \sin (2n+1)\alpha = =
+        \sin^{2n+1}\alpha[{^{2n+1}\cot^{2n}}\alpha -
+        {^{2n+1}C_3}cot^{2n-2}\alpha + ...]
+
+     .. math::
+        \text{when} \alpha = \frac{\pi}{2n+1}, \frac{2\pi}{2n+1}, ..., \frac{n\pi}{2n+1},
+        \sin(2n+1)\alpha = 0
+
+     .. math::
+        \therefore \cot^2\frac{\pi}{2n+1}, \cot^2\frac{2\pi}{2n+1}, ...,
+        \cot^2\frac{n\pi}{2n+1}
+
+     are the roots of the equation. From the second term coefficient we get sum
+     of roots in a polynomial.
+
+     .. math::
+        \therefore \cot^2\frac{\pi}{2n+1}+ \cot^2\frac{2\pi}{2n+1}+ ...+
+        \cot^2\frac{n\pi}{2n+1} = \frac{{^{2n+1}C_3}}{^{2n+1}C_1}
+
+213. Let
+
+     .. math::
+        :label: Equation 2
+
+        C = \cos\theta \cos\theta + \cos^2\theta \cos 2\theta + ... +
+        cos^n\theta \cos n\theta
+
+     and
+
+     .. math::
+        :label: Equation 3
+
+        C = \cos\theta \sin\theta + \cos^2\theta \sin 2\theta + ... +
+        cos^n\theta \sin n\theta
+
+     Now,
+
+     .. math::
+        C + iS = \cos\theta(cos\theta + i \sin\theta) + \cos^2\theta(\cos
+        2\theta + i \sin 2\theta) + ... + \cos^n\theta(\cos n\theta + i \sin
+        n\theta)
+
+     .. math::
+        = \cos\theta.e^{i\theta} + \cos^2\theta.e^{2i\theta} + ... +
+        \cos^n\theta.e^{ni\theta}
+
+     :math:`= x + x^2 + ... + x^n`, where :math:`x = \cos\theta e^{i\theta}`
+
+     .. math::
+        = \frac{x(x^n - 1)}{x - 1} = \frac{\cos\theta e^{i\theta}(\cos^n\theta
+        e^{in\theta - 1})}{\cos\theta e^{i\theta} - 1}
+
+     .. math::
+        =\frac{\cos\theta[\cos^n\theta(\cos n\theta + i \sin n\theta) -
+        1]}{\cos\theta - e^{-i\theta}}
+
+     .. math::
+        \frac{\cos\theta[(\cos^n]theta\cos n\theta -1) + i cos^n\theta\sin
+        n\theta]}{\cos\theta - (\cos\theta - i \sin\theta)}
+
+     .. math::
+        = -i \cot\theta(\cos^n\theta \cos n\theta - 1) + i \cos^n\theta \sin]
+        n\theta
+
+     Equating imaginary parts, we get
+
+     .. math::
+        S = -\cot\theta(\cos^n\theta \cos n\theta - 1) = \cot\theta(1 -
+        \cos^n\theta\cos n]theta)
+
+214. :math:`L.H.S. = -3 -4i`
+
+     .. math::
+        = 5\left(-\frac{3}{5} - i\frac{4}{5}\right) = 5\left(\cos\left(\pi + tan^{-1}\frac{4}{5}\right) +
+        i \sin\left(\pi + tan^{-1}\frac{4}{5}\right)\right)
+
+     .. math::
+        = 5e^{i\left(\pi + tan^{-1}\frac{4}{5}\right)}
+
+215. Putting
+
+     .. math::
+        x^4 = \frac{\sqrt{3} - 1}{2\sqrt{2}} + \frac{\sqrt{3} + 1}{2\sqrt{2}}
+
+     in polar form we get
+
+     .. math::
+        x^4 = \cos\frac{5\pi}{12} + i \sin\frac{5\pi}{12}
+
+     .. math::
+        \therefore x = \cos\frac{(24r + 5)\pi}{48} + i \sin\frac{(24r +
+        5)\pi}{48}, r = 0, 1, 2, 4
+
+216. .. math::
+       L.H.S. = \left(\frac{1 + \cos \phi + i \sin\phi}{1 + \cos \phi - i
+       \sin\phi}\right)^n
+
+     .. math::
+        = \left(\frac{(1 + \cos\phi + i \sin\phi)(1 + \cos\phi + i
+        \sin\phi)}{(1 + \cos\phi)^2 + \sin^2\phi}\right)^n
+
+     .. math::
+        = \left(\frac{1+ 2\cos\phi + \cos^2\phi - \sin^2\phi + 2i \sin\phi(1 +
+        \cos\phi)}{1 + 2\cos\phi + \cos^2\phi + \sin^2\phi}\right)^n
+
+     .. math::
+        = \left(\frac{2\cos\phi(1 + \cos\phi) + 2i \sin\phi(1 +
+        \cos\phi)}{2\cos\phi(1 + \cos\phi)}\right)^n
+
+     .. math::
+        = (\cos\phi + i \sin\phi^n) = \cos n\phi + i \sin n\phi
+
+217. This problem has been left as an exercise for the reader.
+
+218. This problem has been left as an exercise for the reader.
+
+219. This problem has been left as an exercise for the reader.
+
+220. This problem has been left as an exercise for the reader.
+
+221. Given, :math:`Ae^{2i\theta} + Be^{-2i\theta} = 5cos2\theta - 7sin2\theta`
+
+     Let, :math:`A = a + ib` and :math:`B = c + id`. Substituting and equating
+     real and imaginary parts we have :math:`a + c = 5, d - b = 7` and :math:`b
+     + a + d - c = 0`. Since we have four unknowns and three equations it is
+     impossible to find their values by simple calculation. However, by trial
+     and error we can arrive at multiple solutions of these equation. For
+     example, for :math:`a, b, c` and :math:`d` values of :math:`1, -2, 4` and
+     :math:`5` satisfy the equations. Similarly, :math:`2, -3, 3` and :math:`4`
+     also satisfy these equations. Similarly, more values for these can be
+     found and there exists infinite solutions for these unknowns as is evident
+     from theory of equations.
+
+222. Given :math:`\sqrt{1 - c^2} = nc - 1,` squaring and solving we have
+     :math:`1 - c^2 = n^2c^2 - 2nc + 1` i.e. :math:`(1 + n^2)c^2 - 2nc = 0`
+     which has two solutions :math:`c = 0` and :math:`c = \frac{2n}{1 +
+     n^2}`. Clearly, the solution :math:`c = 0` does not satisfy our desired
+     equation as substituting :math:`c = 0` makes it :math:`1 = 0` which is
+     false. Thus, substituting the other value and taking R.H.S.
+
+     .. math::
+        R.H.S. = \frac{c}{2n}(1 + nx)\left(1 + \frac{n}{x}\right)
+
+     .. math::
+        \Rightarrow
+     
+     
+          
 Rest of the problems are left as exercises for the reader.

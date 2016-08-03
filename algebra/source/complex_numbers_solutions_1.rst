@@ -71,17 +71,9 @@ Complex Numbers Solutions Part 1
     .. math::
        2xy = 0 \Rightarrow~ x=0 \text{ or } y=0 \\
 
-       \text{If } x=0 \text{ then} \\
+    If  :math:`x=0` then :math:`-y^2 + \sqrt{y^2} = 0 \Rightarrow~y=\pm 1`
 
-       -y^2 + \sqrt{y^2} = 0 \\
-
-       \Rightarrow~y=\pm 1 \\
-
-       \text{If } x=0 \text{ then} \\
-
-       x^2 + \sqrt{x^2} = 0
-
-       \Rightarrow~x=\pm 1
+    If :math:`x=0` then :math:`x^2 + \sqrt{x^2} = 0 \Rightarrow~x=\pm 1`
 
     But when :math:`x=\pm 1, x^2 + \sqrt{x^2} = 2 \ne 0`
     So our complex number is  0 or :math:`\pm i`. 
@@ -120,8 +112,11 @@ Complex Numbers Solutions Part 1
 23. Given that :math:`|z| = 1 \Rightarrow x^2 + y^2 = 1`. Now we need to
     evaluate :math:`\frac{z - 1}{z + 1} \Rightarrow \frac{(x - 1) + iy}{(x + 1)
     + iy}`. Multiplying and dividing by conjugate of denominator we have
-    :math:`\frac{((x - 1) + iy)(x + 1) - iy)}{(x + 1) + iy)(x + 1) - iy)}
-    \Rightarrow \frac{(x^2 + y^2 - 1) + i(xy + y - xy + y)}{(x + 1)^2 + y^2}`.
+
+    .. math::
+       \frac{((x - 1) + iy)(x + 1) - iy)}{(x + 1) + iy)(x + 1) - iy)}
+       \Rightarrow \frac{(x^2 + y^2 - 1) + i(xy + y - xy + y)}{(x + 1)^2 + y^2}`.
+
     Now we know that from given equality real part of previous expression is
     zero therefore it is purely imaginary.
 
