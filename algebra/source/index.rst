@@ -10,6 +10,7 @@ Informal Algebra's Contents
    :maxdepth: 2
    :numbered:
 
+   preface
    ns
    ratio
    ratio_sol
