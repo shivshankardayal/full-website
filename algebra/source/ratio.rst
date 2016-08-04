@@ -265,7 +265,7 @@ So by our previous rule of cross-multiplication between eq. (4) and (5) we have
   \frac{x}{z}=\frac{b_1c_2-b_2c_1}{a_1b_2-a_2b_1},~~~\frac{y}{z}=\frac{c_1a_2-c_2a_1}{a_1b_2-a_2b_1}
 
 Now if we take these ratios to be equal to :math:`k` then multiplying and
-substituting in equation (6) we have
+substituting in equation :eq:`Equation 6` we have
 
 .. math::
   a_3(b_1c_2-b_1c_2)+b_3(c_1a_2-c_2a_1)+c_3(a_1b_2-a_2b_1) = 0

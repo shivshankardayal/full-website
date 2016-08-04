@@ -111,13 +111,10 @@ content keep changing and there will be just too many versions of the
 book. Also, because of several customizations done in the book the pdf version
 does not come out as nice as html one.
 
-.. |br| raw:: html
 
-   <br />
-   
-.. rst-class:: right-align
+Shiv Shankar Dayal
 
-               Shiv Shankar Dayal |br| Nalanda, India
+Nalanda, India
 
 .. _email: shivshankar.dayal@gmail.com
 .. _Language_Tool: https://languagetool.org/

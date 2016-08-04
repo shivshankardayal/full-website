@@ -589,8 +589,38 @@ Complex Numbers Solutions Part 5
         R.H.S. = \frac{c}{2n}(1 + nx)\left(1 + \frac{n}{x}\right)
 
      .. math::
-        \Rightarrow
-     
-     
-          
+        \Rightarrow \frac{1}{1 + n^2}(1 + n(\cos\theta + i
+        \sin\theta)) + \left(1 + n(\cos\theta + i \sin\theta)\right)
+
+     .. math::
+        \Rightarrow \frac{1}{1 + n^2}(1 + n^2 + 2n \cos\theta)
+
+     .. math::
+        \Rightarrow 1 + c \cos\theta
+
+223. From the given equality, we have
+
+     .. math::
+        \left(\frac{1+z}{1-z}\right)^n = 1
+
+     .. math::
+          1 + z = (1 - z)(\cos\frac{2r\pi}{n} +i \sin\frac{2r\pi}{n})
+
+     Let :math:`\frac{2r\pi}{n} = \theta`
+
+     .. math::
+        1 + z = (1 - z)(\cos\theta + i \sin\theta)
+
+     .. math::
+        z((1 + \cos\theta) + i \sin\theta) + (\cos\theta - 1) + i \sin\theta
+
+     .. math::
+        z = \frac{(\cos\theta - 1) + i \sin\cos\theta}{(1 + \cos\theta) + i \sin\theta}
+
+     .. math::
+        z = i \tan\frac{\theta}{2} = i \tan\frac{2\pi}{n}, ~ r = 0, 1, 2, ..., (n - 1)
+
+     Clearly, the above equation is invalid if :math:`n` is even and :math:`r =
+     \frac{n}{2}` as it will cause the value of :math:`tan` function to reach infinity.
+        
 Rest of the problems are left as exercises for the reader.
