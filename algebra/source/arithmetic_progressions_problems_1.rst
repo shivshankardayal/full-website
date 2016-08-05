@@ -1,5 +1,5 @@
-Arithmetic Progression Problems
-*******************************
+Arithmetic Progression Problems Part 1
+**************************************
 1. If nth term of a sequence is :math:`n^2 + 4,` find the sequence. Is this in
    A.P.?
 

@@ -1,5 +1,5 @@
-Arithmetic Progression Solutions
-********************************
+Arithmetic Progression Solutions Part1
+**************************************
 1. First term of the sequence is :math:`t_1 = 1^2 + 4 = 5.` Second term of the
    sequence is :math:`t_2 = 2^2 + 4 = 8.` Similarly third term is :math:`t_3 =
    3^2 + 4 = 13.` Difference between first two is 8 - 5 = 3 and thee difference
