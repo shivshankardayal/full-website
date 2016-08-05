@@ -273,45 +273,24 @@ formulas:
 241. Prove that the polynomial :math:`x(x^{n - 1} -na^{n - 1}) + a^n(n - 1)` is
      divisible by :math:`(x - a)^2.`
 
-242. Prove that the polynomial :math:`(1 - x^n)(1 + x) - 2nx^n(1 - x) -
-     n^2x^n(1 -x)^2` is divisible by :math:`(1 - x)^3.`
-
-243. Prove that :math:`(x + y)^n - x^n - y^n` is divisible by :math:`xy(x +
+242. Prove that :math:`(x + y)^n - x^n - y^n` is divisible by :math:`xy(x +
      y)(x^2 + xy + y^2)` if :math:`n` is an odd number and not divisible by 3.
 
-244. Prove that :math:`(x + y)^n - x^n - y^n` is divisible by :math:`xy(x +
-     y)(x^2 + xy + y^2)^2` if :math:`n,` when divided by 6, yields unity as a
-     remainder, i.e. :math:`n \equiv 1(mod 6).`
-
-245. Show that the expression :math:`(x + y + z)^m - x^m - y^m -z^m` is
-     divisible by :math:`(x + y + z)^3 - x^3 - y^3 - z^3` when :math:`m` is
-     odd.
-
-246. Find the condition necessary and sufficient for :math:`x^3 + y^3 + z^3 +
-     kxyz` to be divisible by :math:`x + y + z.`
-
-247. Deduce the condition at which :math:`x^n - y^n` is divisible by :math:`x^p
-     - y^p` where :math:`n` and :math:`p` are positive integers.
-
-248. Find out whether the polynomial :math:`x^{4a} + x^{4b + 1} + x^{4c + 2} +
+243. Find out whether the polynomial :math:`x^{4a} + x^{4b + 1} + x^{4c + 2} +
      x^{4d + 3}` is divisible by :math:`x^3 + x^2 + x + 1` where :math:`a, b,
      c, d` are positive integers.
 
-249. Find out at what :math:`n` the polynomial :math:`1 + x^2 + x^4 + ... +
-     x^{2n - 2}` is divisible by the polynomial :math:`1 + x + x^2 + ... + x^{n
-     - 1}.`
+244. Prove that the polynomial :math:`(cos\theta + x sin\theta)^n -
+     \cos n\theta - x sin n\theta` is divisible by :math:`x^2 + 1.`
 
-250. Prove that the polynomial :math:`(cos\theta + x sin\theta)^n -
-     cosn\theta - x sin\theta` is divisible by :math:`x^2 + 1.`
-
-251. Prove that the polynomial :math:`x^n sin\theta - k^{n - 1}x sin
+245. Prove that the polynomial :math:`x^n sin\theta - k^{n - 1}x sin
      n\theta + k^n sin(n - 1)\theta` is divisible by :math:`x^2 - 2kx
      cos\theta + k^2.`
 
-252. Find the sum of the :math:`p` the powers of the roots of the equation
+246. Find the sum of the :math:`p` the powers of the roots of the equation
      :math:`x^n - 1 = 0` where :math:`p` is a positive integer.
 
-253. Let :math:`\alpha = cos\frac{2\pi}{n} + isin\frac{2\pi}{n}` where
+247. Let :math:`\alpha = cos\frac{2\pi}{n} + isin\frac{2\pi}{n}` where
      :math:`n` is a positive integer and let
 
      .. math::
@@ -329,76 +308,15 @@ formulas:
 
 Prove the following identities:
 
-254. .. math::
-       x^{2n - 1} - 1= (x^2 - 1)\sum_{k = 1}^{k = n - 1}\left(x^2
+248. .. math::
+       x^{2n} - 1= (x^2 - 1)\sum_{k = 1}^{k = n - 1}\left(x^2
        - 2xcos\frac{k\pi}{n} + 1\right)
 
-255. .. math::
+249. .. math::
        x^{2n + 1} - 1 = (x - 1)\sum_{k = 1}^{k = n}\left(x^2
        - 2xcos\frac{2k\pi}{2n + 1} + 1\right)
 
-256. .. math::
+250. .. math::
        x^{2n + 1} - 1= (x + 1)\sum_{k = 1}^{k = n}\left(x^2
        + 2xcos\frac{2k\pi}{2n + 1} + 1\right)
 
-257. .. math::
-       x^{2n} + 1= (x + 1)\sum_{k = 0}^{k = n - 1}\left(x^2
-       - 2xcos\frac{(2k + 1)\pi}{2n} + 1\right)
-
-258. .. math::
-       sin \frac{\pi}{2n} sin \frac{2\pi}{2n} ... sin \frac{(n - 1)\pi}{2n} =
-       \frac{\sqrt{n}}{2^{n - 1}}
-
-     if :math:`n` is even.
-
-259. .. math::
-       cos \frac{2\pi}{2n + 1} cos \frac{4\pi}{2n + 1} .. cos \frac{2n\pi}{2n +
-       1} = \frac{(-1)^\frac{n}{2}}{2^n}
-
-     if :math:`n` is even.
-
-260. Let the equation :math:`x^n = 1` have the roots :math:`1, \alpha \beta,
-     \gamma, ..., \lambda.` Show that
-
-     .. math::
-        (1 - \alpha)(1 - \beta)(1 - \gamma) ... (1 - \lambda) = n
-
-261. Let :math:`x_1, x_2, ..., x_n` be the roots of the equation :math:`x^n +
-     x^{n - 1} + ... + x + 1 = 0` the compute the expression
-
-     .. math::
-        \frac{1}{x_1 - 1} + \frac{1}{x_2 - 1} + ... + \frac{1}{x_n - 1}.
-
-262. Without solving the equations
-
-     .. math::
-        \frac{x^2}{\mu^2} + \frac{y^2}{\mu^2 - b^2} + \frac{z^2}{\mu^2 - c^2} =
-        1
-
-        \frac{x^2}{\nu^2} + \frac{y^2}{\nu^2 - b^2} + \frac{z^2}{\nu^2 - c^2} =
-        1
-
-        \frac{x^2}{\rho^2} + \frac{y^2}{\rho^2 - b^2} + \frac{z^2}{\rho^2 -
-        c^2} = 1
-        
-     find :math:`x^2 + y^2 + z^2.`
-
-263. Prove that if :math:`cos\alpha + i sin\alpha` is the solution of the
-     equation :math:`x^n + p_1x^{n - 1} + ... + p_n = 0` then :math:`p_1
-     sin\alpha + p_2 sin2\alpha + ... + p_n sinn\alpha = 0` where :math:`p_1,
-     p_2, ..., p_n` are real.
-
-264. Show that if the equations :math:`x^3 + px + q = 0` and :math:`x^3 + p'x +
-     q' = 0` have a common root, then :math:`(pq' - qp')(p - p') = (q - q')^3.`
-
-265. Prove that
-
-     .. math::
-        \sqrt[3]{cos \frac{2\pi}{7}} + \sqrt[3]{cos \frac{4\pi}{7}} +
-        \sqrt[3]{cos \frac{8\pi}{7}} = \sqrt[3]{\frac{1}{2}(5 - 3\sqrt[3]{7})}
-
-266. Prove that
-
-     .. math::
-        \sqrt[3]{cos \frac{2\pi}{9}} + \sqrt[3]{cos \frac{4\pi}{9}} +
-        \sqrt[3]{cos \frac{8\pi}{9}} = \sqrt[3]{\frac{1}{2}(3\sqrt[3]{9} - 6)}

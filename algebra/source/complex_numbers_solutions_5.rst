@@ -968,31 +968,7 @@ Complex Numbers Solutions Part 5
      consequently, is dividiable by :math:`x - a`; therefore the given
      polynomial is divisible by :math:`(x - a)^2`.
 
-242. Let us denote the polynomial by :math:`P_n` and set up the difference
-     :math:`P_n - P_{n+1}`. Transforming the difference, we can easily that it
-     is divisible by :math:`(1 - x)^3`. Since it is true for any positive
-     :math:`n`, we obtain a number of equalities
-
-     .. math::
-        P_n - P_{n-1} = (1 - x)^3\phi_n(x),
-
-     .. math::
-        P_{n-1} - P_{n-1} = (1 - x)^3\phi_{n-1}x,
-
-     .. math::
-        ...
-
-     .. math::
-        P_3 - P-2 = (1 - x)^3\phi_2(x),
-
-     .. math::
-        P_2 - P_1 = (1 - x)^3\phi_1(x).
-
-     Hence, :math:`P_n - P_1 = (1 - x)^3\psi(x)`. But since :math:`P_1 = (1 -
-     x)^3` it follows that :math:`P_n` is divisible by :math:`(1 - x)^3` and
-     our proposition is proved.
-
-243. Considering the given expression as a polynomial in :math:`y`, let us put
+242. Considering the given expression as a polynomial in :math:`y`, let us put
      :math:`y = 0`. We see that at :math:`y = 0` the polynomial vanishes (for
      any :math:`x`). Therefore out polynomial is divisible by :math:`y`. Since
      it is symmetrical both with respect to :math:`x` and :math:`y` (remains
@@ -1026,67 +1002,113 @@ Complex Numbers Solutions Part 5
      Likewise we prove that at :math:`y = x\omega^2` the polynomial vanishes as
      well and consequently, its divisibility by :math:`xy(x+y)(x^2+xy+y^2)` is
      proved.
-     
-244. Let the quantities :math:`-x, -y` and :math:`x + y` be the roots of the
-     cubic equation :math:`\alpha^3 - r\alpha^2 - p\alpha - q = 0`.
 
-     Then by virtue of the known relations between the roots of an equation and
-     its coefficients(we will study this in next chapter), we have
+243. Put :math:`f(x) = x^{4a} + x^{4b+1} + x^{4c+2} + x^{4d+3}`. On the other
+     hand :math:`x^3 + x^2 + x + 1 = (x+1)(x^2+1) = (x+1)(x+i)(x-i)`
 
-     :math:`r = -x -y + (x + y) = 0`, :math:`-p = xy - x(x +y) - y(x + y)`, and
-     :math:`q = xy(x + y)`.
+     It only remains to show that :math:`f(-1) = f(i) = f(-i) = 0`.
 
-     Thus, :math:`-x , -y` and :math:`x + y` are the roots of the following
-     equation
+244. :math:`x^2 + 1 = 0 => x = \pm i` but :math:`f(i) = (\cos\theta + i
+     \sin]\theta)^n - \cos n\theta - i \sin n\theta = 0` (by de Moivre's
+     Formula). Similarly, it can be proven that :math:`f(-i) = 0` thus our
+     divisibility requirement is satisfied.
 
-     :math:`\alpha^3 - p\alpha -q = 0` where :math:`p = x^2 + xy + y^2, q =
-     xy(x + y)`.
+245. Resolving the polynomial :math:`x^2 -2kx\cos\theta + k^2` into linear
+     factor of :math:`x`. For this factor we find the roots of this quadratic
+     equation. We get,
 
-     Putting:math:`(-x)^n + (-y)^n + (x + y)^n = S_n`.
+     :math:`x = k(\cos\theta \pm i \sin\theta)`
 
-     Between successive values of :math:`S_n` there exists the following
-     relationships, :math:`S_{n+3} + pS_{n+1} + qS_n`,
+     Let us denote :math:`x^n \sin\theta - k^{n - 1}x \sin
+     n\theta + k^n \sin(n - 1)\theta = f(x)`, then it can be proven that
+     :math:`f(k(\cos\theta \pm i \sin\theta)) = 0`.
 
-     :math:`S_1` being equal to zero. Let us prove that :math:`S_n` is
-     divisible by :math:`p^2` if :math:`n\equiv 1 (mod 6)` using the method of
-     mathematical induction(we have not studies this as well). Supposed
-     :math:`S_n` is divisible by :math:`p^2` and prove that :math:`S_{n+6}` is
-     also divisible by :math:`p^2`. We have
-
-     :math:`S_{n+6} = pS_{n+4} + qS_{n+3}`, :math:`S_{n+4} = pS_{n+2} +
-     qS_{n+1}`.
-
-     :math:`\therefore S_{n+6} = p(pS_{n+2} + qS_{n+1}) + q(pS_{n+1} + qS_N) =
-     p^2S_{n+2} + 2pqS_{n+1} + q^2S_n`.
-
-     Since, by superposition, :math:`S_n` is divisible by :math:`p^2`, it
-     suffices to prove that :math:`S_{n+1}` is divisible by :math:`p`. Thus, we
-     only have to prove that
-
-     :math:`(x + y)^n + (-x)^n + (-y)^n` is divisible by :math:`x^2 + xy + y^2`
-     if :math:`n\equiv = 2(mod 6)`. Proceeding in the same way as previous
-     problem we can easily prove our assertion. And so, assuming :math:`S_n` is
-     divisible by :math:`p^2`, we have proved that :math:`S_{n+6}` is also
-     divisible by :math:`p^2`. But :math:`S_1 = 0` is divisible by
-     :math:`p^2`. Consequently, :math:`S_n = (x + y)^n - x^n - y^n` is
-     divisible by :math:`x^2 + xy + y^2` at any :math:`n \equiv 1(mod 6)`. It
-     only remains to prove its divisibility by :math:`x + y` and by :math:`xy`
-     which can be proved by proceeding in the same way as previous problem.
-
-245. It is known that
+246. We have
 
      .. math::
-        (x + y + z)^3 - x^3 - y^3 - z^3 = 3(x+y)(x+z)(y+z)
+        s = \sum_{k=0}^{n-1}x^p_k = \sum_{k=0}^{n-1}z^{kp}
 
-     Considering our polynomial rearranged in powers of x we put in it :math:`x
-     = -y`. We have
+     where :math:`z = \cos\frac{2\pi}{n} + i \sin\frac{2\pi}{n}`. Thus,
 
-     :math:`(-y + y + z)^m - (-y)^m = y^m -z^m = 0` since :math:`m` is odd.
+     .. math::
+        \sum_{k = 0}^{n - 1}x^p_k = 1 + z^p + z^{2p} + ... + z^{(n-1)p}.
 
-     Thus, our polynomial is divisible by :math:`(x+y)`. Likewise we make sure
-     it is divisible by :math:`(x + z)` and by :math:`(y + z)`.
+     But
 
-246.
-     
-     
-Rest of the problems are left as exercises for the reader.
+     .. math::
+        z^p = \cos \frac{2p\pi}{n} + i \sin \frac{2p\pi}{n}.
+
+     It is obvious that :math:`z^p = 1` if and only if :math:`p` is divisible
+     by :math:`n`. In this case :math:`s = n`.
+
+     And if :math:`z^p \neq 1`, then :math:`s = 1 + z^p + z^{2p} + ... +
+     z^{(n-1)p} = \frac{z^{np - 1}}{z^p - 1}`, since :math:`z^{np} = 1`.
+
+247. We have
+
+     .. math::
+        \sum_{k=0}^{n-1}\left|A_k\right|^2 = \sum_{k=0}^{n-1}A_k\overline{A_k}.
+
+     But
+
+     .. math::
+        A_k\overline{A_k} = \left(x + y\epsilon^k + z\epsilon^{2k} +
+        ... +w\epsilon^{(n - 1)}k) \times
+        (\overline{x} + \overline{y}\epsilon^{-k} + \overline{z}^{-2k} + ... +
+        \overline{w}\epsilon^{-(n-1)k}\right)
+
+     .. math::
+        = x\overline{x} + y\overline{y} + ... + w\overline{w} +
+        x\left(\overline{y}\epsilon^{-k} + \overline{z}\epsilon^{-2k} + ... +
+        \overline{w}\epsilon^{-(n-1)k}\right)
+
+        + y\epsilon^k\left(\overline{x} + \overline{z}\epsilon{-2k} + ... +
+        \overline{w}\epsilon^{-(n-1)k}\right)
+
+        + w\epsilon^{(n-1)k}\left(\overline{x} + \overline{y}^{-k} + ... +
+          \overline{u}\epsilon^{-(n-2)k}\right)
+
+     .. math::
+        A_k\overline{A_k} = n(\left|x\right|^2 + \left|y\right|^2 + ... +
+        \left|w\right|^2)
+
+        + x\sum_{k=0}^{n-1}\left(\overline{y}\epsilon^{-k} +
+        \overline{z}\epsilon^{-2k + ... + \overline{w}\epsilon^{-(n-1)k}}\right)
+
+        + y\sum_{k=0}^{n-1}\left(\overline{x}\epsilon^{k} +
+        \overline{z}\epsilon^{-k} + ... +
+        \overline{w}\epsilon^{-n(n-2)k}\right) + ... +
+
+        + w\sum_{k=0}^{n-1}\left(\overline{x}\epsilon^{(n-1)k +
+          \overline{y}\epsilon^{(n-2)k}} + ... + \overline{u}\epsilon^k\right)
+
+     But :math:`\sum_{k=0}^{n-1}\epsilon^lk = 0` if :math:`l` is not divisible
+     by :math:`n` (see previous problem).
+
+     Therefore all the sums in the right member vanish and we get
+
+     .. math::
+        \left|A_0\right|^2 + \left|A_1\right|^2 + ... + \left|A_{n-1}\right|^2
+        = n\left(\left|x\right|^2 + \left|y\right|^2 + ... +
+        \left|w\right|^2\right)
+
+248. Denoting the roots of index :math:`2n` from unity by :math:`x_8` so that
+
+     .. math::
+        x_s = \cos\frac{2s\pi}{n} + i \sin\frac{2s\pi}{n}~~~~~(s = 1, 2, ...,
+        2n)
+
+     .. math::
+        \therefore x^{2n} - 1 = \prod_{s=1}^{2n}(x - x_s) =
+        \prod_{s=1}^{n-1}(x-x_s)\prod_{s=n+1}^{2n - 1}(x - x_s).(x^2 - 1),
+
+     :math:`\because x_n = -1, x_{2n} = 1`. But :math:`x_{2n-s} =
+     \overline{x_s}`, thus,
+
+     .. math::
+        x^{2n} - 1 = (x^2 - 1)\prod_{s=1}^{n-1}(x - x_s)(x - \overline{x_s}) =
+        (x^2 - 1)\prod_{s=1}^{n-1}\left(x^2 - 2x\cos\frac{s\pi}{n} + 1\right)
+
+249. This is solved as 248.
+
+250. This is solved as 248 and 249.
