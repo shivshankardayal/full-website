@@ -48,7 +48,7 @@ Arithmetic Progression Problems Part 1
     ...` to n terms.
 
 17. The interior angles of a polygon are in A.P. The smallest angle is
-    :math:`120^{\circ}` and the common difference is :math:`r^{\circ}.` Find
+    :math:`120^{\circ}` and the common difference is :math:`5^{\circ}.` Find
     the number of sides of the polygon.
 
 18. Find the maximum sum of 40, 38, 36, ....

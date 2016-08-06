@@ -35,3 +35,7 @@ Informal Algebra's Contents
    arithmetic_progressions_problems_1
    arithmetic_progressions_solutions_1
 
+Indices and tables
+==================
+
+* :ref:`genindex`
