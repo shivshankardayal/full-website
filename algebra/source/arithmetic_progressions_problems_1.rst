@@ -6,10 +6,10 @@ Arithmetic Progression Problems Part 1
 2. Find the first five terms of the sequence for which :math:`t_1=3, t_2=5` and
    :math:`t_{n+2} = t_n + t_{n+1}.`
 
-3. How many terms are there in the A.P. 2, 9, 16, 23, ..., 93?
+3. How many terms are there in the A.P. :math:`2, 9, 16, 23, ..., 93`?
 
-4. How many terms are identical in the two A.P.  2, 4, 6, ... up to 100 terms
-   and 3, 6, 9, ... up to 80 terms?
+4. How many terms are identical in the two A.P. :math:`2, 4, 6, ...` up to
+   :math:`100` terms and :math:`3, 6, 9, ...` up to :math:`80` terms?
 
 5. Write the sequence whose nth term is
 
@@ -17,58 +17,64 @@ Arithmetic Progression Problems Part 1
    (ii) :math:`\frac{n}{n + 1}`
    (iii) :math:`\frac{n^2}{n + 1}`
 
-6. If nth term of a sequence is 2an + b, where a and b are constants. Is this
-   sequence is in A.P.?
+6. If :math:`nth` term of a sequence is :math:`2an + b`, where :math:`a` and
+   :math:`b` are constants. Is this sequence is in A.P.?
 
-7. Find the 7th term of the A.P. -4, -1, 2, ...
+7. Find the :math:`7th` term of the A.P.:math:` -4, -1, 2, ...`
 
-8. Find all positive integers of 3 digits divisible by 7.
+8. Find all positive integers of :math:`3` digits divisible by :math:`7`.
 
-9. Find the 10th term of the sequence whose 7th and 12th are 34 and 64
-   respectively.
+9. Find the :math:`10th` term of the sequence whose :math:`7th` and
+   :math:`12th` are :math:`34` and :math:`64` respectively.
 
-10. Each of the sequences 3, 5, 7, ... and 4, 9, 14, ... are continued for 40
-    terms. Find the identical terms.
+10. Each of the sequences :math:`3, 5, 7, ...` and :math:`4, 9, 14, ...` are
+    continued for :math:`40` terms. Find the identical terms.
 
-11. Divide 15 into three terms which are in A.P. and sum of their squares
-    is 83.
+11. Divide :math:`15` into three terms which are in A.P. and sum of their
+    squares is :math:`83`.
 
-12. The sum of three numbers is 12 and sum of their cubes is 408 then find the
-    numbers.
+12. The sum of three numbers is :math:`12` and sum of their cubes is
+    :math:`408` then find the numbers.
 
-13. Divide 20 into 4 numbers which are in A.P., such that the product of first
-    and fourth to the product of the second and third is 2:3.
+13. Divide :math:`20` into :math:`4` numbers which are in A.P., such that the
+    product of first and fourth to the product of the second and third is
+    :math:`2:3`.
 
-14. If the sum of n terms of a series is :math:`5n^2 + 3n,` find the nth term.
+14. If the sum of :math:`n` terms of a series is :math:`5n^2 + 3n,` find the
+    :math:`nth` term.
 
-15. If the sum of n terms of a series is :math:`an^2 + bn` where a and b are
-    constants then show that the terms of the series form an A.P.
+15. If the sum of :math:`n` terms of a series is :math:`an^2 + bn` where
+    :math:`a` and :math:`b` are constants then show that the terms of the
+    series form an A.P.
 
 16. Find the sum of the series :math:`(a + b)^2 + (a^2 + b^2) + (a - b)^2 +
-    ...` to n terms.
+    ...` to :math:`n` terms.
 
 17. The interior angles of a polygon are in A.P. The smallest angle is
     :math:`120^{\circ}` and the common difference is :math:`5^{\circ}.` Find
     the number of sides of the polygon.
 
-18. Find the maximum sum of 40, 38, 36, ....
+18. Find the maximum sum of :math:`40, 38, 36, ...`
 
-19. Find the least value of n such that 1 + 3 + 5 + ... to n terms
-    :math:`\ge` 500.
+19. Find the least value of n such that :math:`1 + 3 + 5 + ...` to :math:`n`
+    terms :math:`\ge` 500.
 
-20. If m times the mth term is equal to n times the nth term find the (m + n)th
-    term.
+20. If :math:`m` times the :math:`mth` term is equal to :math:`n` times the
+    :math:`nth` term find the :math:`(m + n)th` term.
 
-21. If a, b, c be the pth, qth and rth terms respectively of an A.P., prove
-    that a(q - r) + b(r - p) + c(p - q) = 0.
+21. If :math:`a, b, c` be the :math:`pth, qth` and :math:`rth` terms
+    respectively of an A.P., prove that :math:`a(q - r) + b(r - p) + c(p - q) =
+    0`.
 
-22. If a, b, c are in A.P. prove that b + c, c + a, a + b are also in A.P.
+22. If :math:`a, b, c` are in A.P. prove that :math:`b + c, c + a, a + b` are
+    also in A.P.
 
 23. If :math:`a^2, b^2, c^2` are in A.P. prove that :math:`\frac{1}{b + c},
     \frac{1}{c + a}, \frac{1}{a + b}` are in A.P.
 
-24. If pth term of an A.P. is q and qth term is p then find the first term and
-    common difference of that A.P. Also show that (p + q)th term is zero.
+24. If :math:`pth` term of an A.P. is :math:`q` and :math:`qth` term is
+    :math:`p` then find the first term and common difference of that A.P. Also
+    show that :math:`(p + q)th` term is zero.
 
 25. For an A.P. show that :math:`t_m + t_{2n + m} = 2t_{m + n}.`
 
@@ -93,14 +99,16 @@ Arithmetic Progression Problems Part 1
 30. If :math:`a^2(b + c), b^2(c + a), c^2(a + b)` are in A.P. then prove that
     :math:`a, b, c` are in A.P. or :math:`ab + bc + ca = 0.`
 
-31. If a be the first term of an A.P. and the sum of its first p terms is 0,
-    show that the sum of next q terms is :math:`-\frac{aq(p + q)}{p - 1}.`
+31. If :math:`a` be the first term of an A.P. and the sum of its first
+    :math:`p` terms is 0, show that the sum of next q terms is
+    :math:`-\frac{aq(p + q)}{p - 1}.`
 
-32. If sum of the first p terms of an A.P. is equal to sum of of its first q
-    terms, prove that the sum of its first (p + q) terms is 0.
+32. If sum of the first :math:`p` terms of an A.P. is equal to sum of of its
+    first :math:`q` terms, prove that the sum of its first :math:`(p + q)`
+    terms is :math:`0`.
 
-33. Prove that the sum of the latter half of 2n terms of an A.P. is equal to
-    one third of the sum of first 3n terms.
+33. Prove that the sum of the latter half of :math:`2n` terms of an A.P. is
+    equal to one third of the sum of first :math:`3n` terms.
 
 34. If :math:`S_1, S_2, S_3, ..., S_n` be the sums of :math:`n` arithmetic
     progressions whose first terms are :math:`1, 2, 3, ..., n` and common
@@ -115,56 +123,59 @@ Arithmetic Progression Problems Part 1
     .. math::
        \frac{a}{p}(q - r) + \frac{b}{q}(r - p) + \frac{c}{r}(p - q) = 0.
 
-36. If the sum of m terms of an A.P is equal to half the sum of (m + n) terms
-    and is also equal to half the sum of (m + p) terms, prove that
+36. If the sum of :math:`m` terms of an A.P is equal to half the sum of
+    :math:`(m + n)` terms and is also equal to half the sum of :math:`(m + p)`
+    terms, prove that 
 
     .. math::
        (m + n)\left(\frac{1}{m} - \frac{1}{p}\right) = (m + p)\left(\frac{1}{m}
        - \frac{1}{n}\right)
 
-37. If there are (2n + 1) terms in an A.P. then prove that the ratio of sum odd
-    terms and sum of even terms is (n + 1)/n.
+37. If there are :math:`(2n + 1)` terms in an A.P. then prove that the ratio of
+    sum odd terms and sum of even terms is :math:`(n + 1)/n`.
 
-38. The sum of n terms of two series in A.P. are in the ratio (3n -13):(5n +
-    21). Find the ratio of their 24th terms.
+38. The sum of :math:`n` terms of two series in A.P. are in the ratio
+    :math:`(3n -13):(5n + 21)`. Find the ratio of their :math:`24th` terms.
 
-39. If the mth term of an A.P. is :math:`\frac{1}{n}` and nth term is
-    :math:`\frac{1}{m}` the prove that the sum of mn terms is :math:`\frac{mn +
-    1}{2}.`
+39. If the :math:`mth` term of an A.P. is :math:`\frac{1}{n}` and :math:`nth`
+    term is :math:`\frac{1}{m}` the prove that the sum of :math:`mn` terms is
+    :math:`\frac{mn + 1}{2}.`
 
-40. If the sum of m terms of an A.P. is n and the sum of its n terms is m, show
-    that the sum of (m + n) terms is -(m + n).
+40. If the sum of :math:`m` terms of an A.P. is :math:`n` and the sum of its
+    :math:`n` terms is :math:`m`, show that the sum of :math:`(m + n)` terms is
+    :math:`-(m + n)`.
 
-41. If the sum of n, 2n and 3n terms of an A.P. be :math:`S_1, S_2` and
-    :math:`S_3` respectively, show that :math:`S_3 = 3(S_2 - S-1).`
+41. If the sum of :math:`n, 2n` and 3n terms of an A.P. be :math:`S_1, S_2` and
+    :math:`S_3` respectively, show that :math:`S_3 = 3(S_2 - S_1).`
 
-42. If S be the sum of (2n + 1) terms of an A.P. and :math:`S_1` that of
-    alternate terms beginning with their first, then show that
+42. If :math:`S` be the sum of :math:`(2n + 1)` terms of an A.P. and
+    :math:`S_1` that of alternate terms beginning with their first, then show
+    that 
 
     .. math::
        \frac{S}{S_1} = \frac{2n + 1}{n + 1}
 
-43. If a, b and c be the first, 3rd and nth terms respectively of an A.P.,
-    prove that the sum to n terms is
+43. If :math:`a, b` and :math:`c` be the :math:`1st, 3rd` and :math:`nth` terms
+    respectively of an A.P., prove that the sum to :math:`n` terms is
 
     .. math::
        \frac{c + a}{2} + \frac{c^2 - a^2}{b - a}.
 
-44. If the pth term of an A.P. is x and qth term is y. Show that the sum of
-    (p + q) terms is 
+44. If the :math:`pth` term of an A.P. is :math:`x` and :math:`qth` term is
+    :math:`y`. Show that the sum of :math:`(p + q)` terms is 
 
     .. math::
        \frac{p + q}{2}\left\{x + y + \frac{x - y}{p - q}\right\}.
 
-45. The sum of n terms of two series in A.P. are in the ratio (3n + 8):(7n +
-    15). Find the ratio of their 12th term.
+45. The sum of :math:`n` terms of two series in A.P. are in the ratio
+    :math:`(3n + 8):(7n + 15)`. Find the ratio of their :math:`12th` term.
 
-46. If the ratio of the sum of m terms and n terms of an A.P. is
-    :math:`m^2:n^2,` prove that ratio of its mth term and nth term is (2m
-    -1):(2n - 1).
+46. If the ratio of the sum of :math:`m` terms and :math:`n` terms of an
+    A.P. is :math:`m^2:n^2,` prove that ratio of its :math:`mth` term and
+    :math:`nth` term is :math:`(2m -1):(2n - 1)`.
 
-47. Show that any power :math:`n^k (k \ge 2),` and k is an integer, can be
-    represented in thr form of a sum of n successive odd numbers.
+47. Show that any power :math:`n^k (k \ge 2),` and :math:`k` is an integer, can
+    be represented in thr form of a sum of :math:`n` successive odd numbers.
 
 48. Let the sequence :math:`a_1, a_2, ..., a_n` form an arithmetic progression
     and :math:`a_1 = 0.` Simplify the expression
@@ -187,7 +198,7 @@ Arithmetic Progression Problems Part 1
        S = a_1^2 - a_2^2 + a_3^2 - a_4^2 + ... + a_{2k - 1}^2 - a_{2k}^2 =
        \frac{k}{2k - 1}(a_1^2 - a_{2k}^2).
 
-51. Let :math:`S_n` be the sum of the first n terms of an arithmetic
+51. Let :math:`S_n` be the sum of the first :math:`n` terms of an arithmetic
     progression. Then prove that :math:`S_{n + 3} - 3S_{n + 2} + 3S_{n + 1}-
     S_n = 0.`
 

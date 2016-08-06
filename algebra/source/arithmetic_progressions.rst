@@ -50,25 +50,46 @@ Arithmetic Mean
 ===============
 When three quantities are in arithmetic progression the quantity in the middle
 is known to be arithmetic mean of the other two. For example, if :math:`a, b,
-c` are in A.P. then :math:`b` is said to be arithmetic mean of :math:`a` and
+c` are in A. P. then :math:`b` is said to be arithmetic mean of :math:`a` and
 :math:`c.` In general it is written as :math:`b = \frac{a + c}{2}.` This can be
 examined further. Let :math:`b = a + d` then :math:`c = a + 2d.` Clearly,
 :math:`b = \frac{a + c}{2}.`
 
 It is also possible to insert :math:`n` numbers between any two numbers such
-that all of them are in A.P. Consider two number :math:`a` and :math:`b` in
+that all of them are in A. P. Consider two number :math:`a` and :math:`b` in
 between which we want to insert :math:`n` numbers such that they are in
-A.P. Clearly,:math:`b` will become n + 2th term of A.P. Let common difference
+A. P. Clearly,:math:`b` will become n + 2th term of A. P. Let common difference
 be :math:`d` then we can write :math:`b = a + (n + 1)d` or :math:`d = \frac{b -
 a}{n + 1}.` Now all the :math:`n` arithmetic means can be deduced. Let those
 are :math:`m_1, m_2, ..., m_n` then :math:`m_1 = a + \frac{b - a}{n + 1}, m_2 =
 a + \frac{2(b - a)}{n + 1}, ..., m_n = a + \frac{n(b - a)}{n + 1}.`
 
-Suppose there are :math:`n` terms of an A.P. then the arithmetic mean is given
+Suppose there are :math:`n` terms of an A. P. then the arithmetic mean is given
 by
 
 .. math::
    \frac{t_1 + t_2 + ... + t_n}{n}.
+
+:math:`n` arithmetic means between two quantities
+-------------------------------------------------
+Let the two quantities be :math:`a` and :math:`b`. Let :math:`x_1, x_2, ...,
+x_n` be those :math:`n` means. Then, :math:`b` becomes :math:`(n+2)nd`
+term. Thus,
+
+.. math::
+   b = t_{n + 2} = a + (n + 1)d
+
+.. math::
+   d = \frac{b - a}{n + 1}
+
+.. math::
+   \therefore x_1 = a + d, x_2 = a + 2d, ..., x_n = a + nd
+
+Substituting for :math:`d`
+
+.. math::
+   x_1 = \frac{na + b}{n + 1}, ..., x_n = \frac{nb + a}{n + 1}
+
 
 Deducing Number of Terms
 ========================
@@ -90,20 +111,38 @@ If we take 12 terms of the series, we have -8, -6, -4, -2, 0, 2, 4, 6, 8, 10,
 negative solution even though does not directly answer the question, we can
 give it a meaning.
 
-Some Observations on an A.P.
-============================
+Some Observations on an A. P.
+=============================
 1. If a fixed number is added to or subtracted from each term of a given
-   A.P., then the resulting sequence is also an A.P., and it has the same
-   common difference as that of the given A.P.
-2. If each term of an A.P. is multiplied or divided by a non-zero fixed
-   constant then the resulting sequence is also an A.P.
+   A. P., then the resulting sequence is also an A. P., and it has the same
+   common difference as that of the given A. P.
+2. If each term of an A. P. is multiplied or divided by a non-zero fixed
+   constant then the resulting sequence is also an A. P.
 3. If :math:`a_1, a_2, a_3, ...` and :math:`b_1, b_2, b_3, ...` are two
    arithmetic progressions then :math:`a_1 + b_1, a_2 + b_2, a_3 + b_3, ...`
-   are also in A.P.
-4. If we have to choose three unknown terms in an A.P. then it is best to
-   choose them as :math:`a -d, a, a + d.`
-5. If we have to choose four unknown terms in an A.P. then it is best to choose
-   them as :math:`a - 3d, a - d, a + d, a + 3d.`
+   are also in A. P.
+4. If we have to choose three unknown terms in an A. P. then it is best to
+   choose them as :math:`a -d, a, a + d`.
+5. If we have to choose four unknown terms in an A. P. then it is best to choose
+   them as :math:`a - 3d, a - d, a + d, a + 3d`.
+6. In an A. P. the sum of terms equidistant from the beginning and end is
+   constant and equal to the sum of first and last term.
+7. Any term of an A. P., except the first, is equal to half the sum of terms
+   which are equidistant from it:
+
+   .. math::
+      a_n = \frac{1}{2}(a_{n - k} + a_{n + k}),~~~~~k<n, \text{and for } k = 1,
+
+   .. math::
+      a_n = \frac{1}{2}(a_{n - 1} + a_{n + 1})
+8. :math:`t_n = S_n - S_{n - 1}, ~~(n \ge 2)`
+9. If :math:`t_n = pn + q` i.e. a linear expression in :math:`n` then it will
+   form an A. P. of common difference :math:`p = t_n - t_{n - 1}` and first
+   term :math:`p + q~(n =1)` i.e. if :math:`t_n = 3n + 4`, then it is
+   an A. P. of common difference 3 and first term as 7.
+10. If :math:`S_n = an^2 + bn + c` i.e. quadratic function in :math:`n` then
+    the series is A. P. where  :math:`d = 2a`, twice the coefficient of
+    :math:`n^2`. 
 
 Sum of Squares and Cubes and More
 =================================
