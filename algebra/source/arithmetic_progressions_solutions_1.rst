@@ -204,7 +204,7 @@ Arithmetic Progression Solutions Part 1
 
         Dividing by :math:`abc`
 
-        :math:`\frac{1}{bc}, :\frac{1}{ca}, \frac{1}{ab}` are in A. P.
+        :math:`\frac{1}{bc}, \frac{1}{ca}, \frac{1}{ab}` are in A. P.
 
     (ii) :math:`\because a, b, c` are in A. P.
 
@@ -416,7 +416,7 @@ Arithmetic Progression Solutions Part 1
     Sum of its odd terms
 
     .. math::
-       S_{odd}= a + a + 2d + a + 3d + ... to n + 1  terms
+       S_{odd}= a + a + 2d + a + 3d + ... \text{to n + 1  terms}
 
     .. math::
        S_{odd} = \frac{n + 1}{2}\left[2a + (n)2d\right]
@@ -427,7 +427,7 @@ Arithmetic Progression Solutions Part 1
     Sum of its even terms
 
     .. math::
-       S_{even} = a + d + a + 3d + ... to n terms
+       S_{even} = a + d + a + 3d + ... \text{to n terms}
 
     .. math::
        S_{even} = \frac{n}{2}\left[2(a + d) + (n - 1)2d\right]
@@ -492,4 +492,236 @@ Arithmetic Progression Solutions Part 1
     .. math::
        S_{mn} = \frac{mn + 1}{2}.
 
-40. 
+40. Given, :math:`S_m = n, Sn = m`. Therefore
+
+    .. math::
+       \frac{m}{2}\left[2a + (m - 1)d\right] = n
+
+       \frac{n}{2}\left[2a + (n - 1)d\right] = m
+
+    Simplifying, we get
+
+    .. math::
+       d = -\frac{2(m + n)}{mn}
+
+    and
+
+    .. math::
+       a = \frac{m^2 + n^2 + mn - m - n}{mn}
+
+    Now,
+
+    .. math::
+       S_{m + n} = \frac{m + n}{2}[2a + (m + n - 1)d]
+
+    Substituting the values of :math:`a` and :math:`d`, we get :math:`S_{m + n}
+    = -(m + n)`
+
+41. It is given that
+
+    .. math::
+       S_1 = \frac{n}{2}\left[2a + (n - 1)d\right]
+
+    .. math::
+       S_2 = \frac{2n}{2}\left[2a + (2n - 1)d\right]
+
+    Subtracting, we get
+
+    .. math::
+       S_2 - S_1 = \frac{n}{2}\left[4a - 2a + (4n - 2 - n + 1)d\right]
+
+    .. math::
+       S_2 - S_1 = \frac{n}{2}\left[2a + (3n - 1)d\right]
+
+    .. math::
+       S_2 - S_1 = \frac{3n}{2.3}\left[2a + (3n - 1)d\right]
+
+    .. math::
+       \Rightarrow S_3 = 3(S_2 - S_1).
+
+42. Let :math:`a` be the first term and :math:`d` be the common difference,
+    then
+
+    .. math::
+       S = a + (a + d) + (a + 2d) + ... + (a + 2nd)
+
+    and
+
+    .. math::
+       S_1 = a + (a + 2d) + (a + 4d) + ... + (a + 2nd)
+
+    Consequently,
+
+    .. math::
+       S = \frac{2n + 1}{2}[2a + 2nd]
+
+    and
+
+    .. math::
+       S_1 = \frac{n}{2}[2a + 2nd]
+
+    Dividing we get the required result.
+
+43. Let :math:`d` be the common difference for this A. P. Then from the given
+    information
+
+    .. math::
+       b = a + 2d \Rightarrow d = \frac{b - a}{2}
+
+    .. math::
+       c = a + (n - 1)d \Rightarrow n = \frac{2(c - a)}{b - a} + 1
+
+    Adding :math:`a` and :math:`c`, we get :math:`c + a = 2a + (n - 1)d`
+
+    Let sum of :math:`n` terms be :math:`S`, then
+
+    .. math::
+       S = \frac{n}{2}\left[2a + (n - 1)d\right]
+
+    .. math::
+       \Rightarrow \left[\frac{c - a}{b - a} + 1\right][c -a]
+
+    Consequently, we get the desired result.
+
+44. Let :math:`a` be the first term and :math:`d` be the common difference of
+    the given A. P. Then, from the given information
+
+    .. math::
+       t_p = a + (p - 1)d = x, ~~~ t_q = a + (q - 1)d
+
+    Adding and subtracting these two we have
+
+    .. math::
+       x + y = 2a + (p + q - 2)d, ~~~ x - y = (p - q)d
+
+    Now sum of :math:`p + q` terms is given by
+
+    .. math::
+       S = \frac{p + q}{2}\left[2a + (p + q - 1)d\right]
+
+    .. math::
+       S = \frac{p + q}{2}\left[2a + (p + q - 2 + 1)d\right]
+
+    .. math::
+       \therefore S = \frac{p + q}{2}\left[x + y + \frac{x - y}{p - q}\right]
+
+45. This problem is similar to 38 and has been left as an exercise.
+
+46. Let :math:`a` be the first term and :math:`d` be the common difference of
+    the given A. P. Then, from the given information
+
+    .. math::
+       \frac{S_m}{S_n} = \frac{m^2}{n^2}
+
+    .. math::
+       \frac{\frac{m}{2}[2a + (m - 1)d]}{\frac{n}{2}[2a + (n - 1)d]} =
+       \frac{m^2}{n^2}
+
+    .. math::
+       \frac{2a + (m - 1)d}{2a + (n - 1)d} = \frac{m}{n}
+
+    .. math::
+       2a(n - m) + \{(m - 1)n - (n - 1)m\}d = 0
+
+    .. math::
+       2a(n - m) + (m - n)d = 0 \Rightarrow a = \frac{d}{2}
+
+    .. math::
+       \therefore a_m = a + (m - 1)d = \frac{d}{2} + (m - 1)d
+
+    .. math::
+       a_m = \frac{2m - 1}{2}d, ~~~ a_n = \frac{2n - 1}{2}d
+
+    Finally,
+
+    .. math::
+       \frac{a_m}{a_n} = \frac{2m - 1}{2n - 1}
+
+47. We can find a whole :math:`s` such that following equality takes place
+
+    .. math::
+       (2s + 1) + (2s + 3) + ... + (2s + 2n - 1) = n^k
+
+    .. math::
+       (2s + n)n = n^k
+
+    .. math::
+       s = \frac{2(n^{k - 2 - 1})}{2}
+
+    But :math:`n` can be either even or odd. In both cases :math:`s` will be an
+    integer, and our proposition is proved.
+
+48. Let :math:`d` be the common difference for the A. P. Then, :math:`a_n =
+    a_1 + (n - d)`, but :math:`a_1 = 0 \therefore a_n = 0` :math:`\therefore
+    a_2 = d`
+
+    Consequently,
+
+    .. math::
+       S = \frac{2}{1} + \frac{3}{2} + ... + \frac{n - 1}{n - 2} - \left(1 +
+       \frac{1}{2} + ... + \frac{1}{n - 3}\right)
+
+    .. math::
+       = \sum_{k = 1}^{n - 2}\frac{k + 1}{k} - \sum_{k = 1}^{n -
+       2}\frac{1}{k} + \frac{1}{n - 2}
+
+    .. math::
+       = \sum_{k = 1}^{n - 2}\left(1 + \frac{1}{k}\right) - \sum_{k = 1}^{n -
+       2}\frac{1}{k} + \frac{1}{n - 2}
+
+    .. math::
+       = n - 2 + \frac{1}{n - 2} = \frac{(n - 2)d}{d} + \frac{d}{(n - 2)d}
+
+    .. math::
+       = \frac{a_{n -1}}{a_2} + \frac{a_2}{a_{n - 1}}
+
+49. Multiplying both the numerator and denominator of each fraction by
+    conjugate of the denominator, we get
+
+    .. math::
+       S = \frac{\sqrt{a_2} - \sqrt{a_1}}{a_2 - a_1} + \frac{\sqrt{a_3} -
+       \sqrt{a_2}}{a_3 - a_2} + ... + \frac{\sqrt{a_n} - \sqrt{a_{n -
+       1}}}{a_n - a_{n - 1}}
+
+    .. math::
+       = \frac{1}{d}\left(\sqrt{a_2} - \sqrt{a_1} + \sqrt{a_3} -
+       \sqrt{a_2} + ... + \sqrt{a_n} - \sqrt{a_{n - 1}}\right)
+
+    .. math::
+       = \frac{\sqrt{a_n} - \sqrt{a_{n - 1}}}{d}
+
+    .. math::
+       a_2 - a_1 = a_3 - a_2 = ... = a_n - a_{n - 1} = d
+
+    Hence,
+
+    .. math::
+       S = \frac{\sqrt{a_n} - \sqrt{a_{n - 1}}}{d} = \frac{a_n -
+       a_1}{d(\sqrt{a_n} + \sqrt{a_1})}
+
+50. We have
+
+    .. math::
+       a_1^2 - a_2^2 = (a_1 - a_2)(a_1 + a_2) = -d(a_1 + a_2)
+
+    .. math::
+       a_2^2 - a_3^2 = (a_2 - a_3)(a_2 + a_3) = -d(a_2 + a_3)
+
+    .. math::
+       ...
+
+    .. math::
+       a_{2k - 1}^2 - a_{2k}^2 = (a_{2k - 1} - a_{2k})(a_{2k - 1} + a_{2k}) =
+       -d(a_{2k - 1} + a_{2k})
+
+    .. math::
+       S = -d(a_1 + a_2 + a_3 + ... + a_{2k - 1} + a_{2k}) = -d\frac{a_1 +
+       a_{2k}}{2}2k
+
+    But :math:`a_{2k} = a_1 + d(2k - 1), ~~~ a_1 - a_{2k} = -d(2k - 1)`,
+
+    consequently
+
+    .. math::
+       S = -d(2k - 1)\frac{a_1 + a_{2k}}{2k - 1} = \frac{k}{2k - 1}(a_1^2 -
+       a_{2k}^2)

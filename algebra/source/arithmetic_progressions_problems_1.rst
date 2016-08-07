@@ -175,7 +175,7 @@ Arithmetic Progression Problems Part 1
     :math:`nth` term is :math:`(2m -1):(2n - 1)`.
 
 47. Show that any power :math:`n^k (k \ge 2),` and :math:`k` is an integer, can
-    be represented in thr form of a sum of :math:`n` successive odd numbers.
+    be represented in the form of a sum of :math:`n` successive odd numbers.
 
 48. Let the sequence :math:`a_1, a_2, ..., a_n` form an arithmetic progression
     and :math:`a_1 = 0.` Simplify the expression
@@ -197,28 +197,3 @@ Arithmetic Progression Problems Part 1
     .. math::
        S = a_1^2 - a_2^2 + a_3^2 - a_4^2 + ... + a_{2k - 1}^2 - a_{2k}^2 =
        \frac{k}{2k - 1}(a_1^2 - a_{2k}^2).
-
-51. Let :math:`S_n` be the sum of the first :math:`n` terms of an arithmetic
-    progression. Then prove that :math:`S_{n + 3} - 3S_{n + 2} + 3S_{n + 1}-
-    S_n = 0.`
-
-52. Let :math:`a_1, a_2, a_3, ..., a_n, a_{n + 1}, ...` be an arithmetic
-    progression. Prove that the sequence :math:`S_1, S_2, S_3, ...` where
-    :math:`S_1 = a_1 + a_2 + ... + a_n, S_2= a_{n + 1} + ... + a_{2n}, S_3 =
-    a_{2n + 1} + ... + a_{3n}, ...`  is an arithmetic progression as well as
-    whose common difference is :math:`n^2` times higher than the common
-    difference of given progression.
-
-53. Prove that in any arithmetic progression, whose common difference is not
-    equal to zero, the product of two terms equidistant from the extreme terms
-    is the greater the closer these terms are to the middle term.
-
-54. Let :math:`S_k` be the sum of the first k terms of an arithmetic
-    progression. What must this progression be for the ratio
-    :math:`\frac{S_{kx}}{S_x}` to be independent of :math:`x`?
-
-55. Given that :math:`a_1, a_2, ..., a_n` form an arithmetic progression. Find
-    the following sum
-
-    .. math::
-       S = \sum_{i = 1}^{i = n}\frac{a_ia_{i + 1}a_{i + 2}}{a_i + a_{i + 2}}.
