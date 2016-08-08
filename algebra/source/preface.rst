@@ -93,7 +93,7 @@ There have been many teachers in my life who have helped me with various
 lessons in life and otherwise. I will try to remember all of them here and seek
 forgiveness if I miss anyone. My math teachers Yogendra Yadav, Hriday Nayaran
 Singh and Satyanand Satyarthi have helped me a lot with basics of
-Mathematics. Anurag Johri, Sirnivasa Kotu, Shreyas Majthia and Mufti Mohammed
+Mathematics. Anurag Johri, Sirnivasa Kotu, Shreyas Majthia and Mufti Mohammad
 for their technical discussions and insight into programming. My
 professors S. Sen, S. Sengupta and T. K. Basu for showing faith in me during
 troubled times.
@@ -109,7 +109,10 @@ spellings then those mistakes are mine and not of the tool.
 Although I would like to give a pdf version of the book for download but the
 content keep changing and there will be just too many versions of the
 book. Also, because of several customizations done in the book the pdf version
-does not come out as nice as html one.
+does not come out as nice as html one. Also, for problems only 50 problems are
+given and same applies for solutions chapter. This is because MathJaX takes a
+lot of time to render mathematics if all the mathematical formulas are on
+the same page.
 
 
 Shiv Shankar Dayal
