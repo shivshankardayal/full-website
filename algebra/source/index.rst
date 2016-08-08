@@ -37,6 +37,7 @@ Informal Algebra's Contents
    arithmetic_progressions_problems_2
    arithmetic_progressions_solutions_2
    geometric_progressions
+   geometric_progressions_problems_1
 
 Indices and tables
 ==================
