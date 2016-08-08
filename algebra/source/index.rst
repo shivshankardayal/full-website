@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Informal Algebra's Contents
-============================================
+A Variable in Algebra
+=====================
 
 .. toctree::
    :maxdepth: 2
@@ -38,6 +38,7 @@ Informal Algebra's Contents
    arithmetic_progressions_solutions_2
    geometric_progressions
    geometric_progressions_problems_1
+   geometric_progressions_solutions_1
 
 Indices and tables
 ==================

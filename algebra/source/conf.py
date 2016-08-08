@@ -13,6 +13,7 @@
 
 import sys, os
 import sphinx_bootstrap_theme
+import sphinx_rtd_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -43,7 +44,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Informal Algebra'
+project = u'A Variable in Algebra'
 copyright = u'2013-2016, Shiv S. Dayal'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -94,8 +95,10 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'bootstrap'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+#html_theme = 'bootstrap'
+#html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 #sys.path.append(os.path.abspath('_themes'))
 #html_theme_path = ['_themes']
 #html_theme = 'bootstrap'
@@ -110,7 +113,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = u'Informal Algebra'
+html_title = u'A Variable in Algebra'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -226,7 +229,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'algebra.tex', u'A Book of Informal Algebra',
+  ('index', 'algebra.tex', u'A Variable in Algebra',
    u'Shiv S. Dayal', 'manual'),
 ]
 
@@ -256,7 +259,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'algebra.tex', u'A Book of Informal Albegra',
+    ('index', 'algebra.tex', u'A VAriable in Albegra',
      [u'Shiv S. Dayal'], 1)
 ]
 
