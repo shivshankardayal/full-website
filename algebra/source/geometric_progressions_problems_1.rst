@@ -18,7 +18,7 @@ Geometric Progressions Problems Part 1
    :math:`n` th term. Is this sequence a G. P.?
 
 7. The seventh term of a G. P. is :math:`8` times the fourth term. Find
-   the G. P. when its fifth term.
+   the G. P. when its fifth term is 48.
 
 8. If the product of three numbers in G. P. is :math:`216` and their sum is
    :math:`19`, find th numbers.
@@ -126,44 +126,47 @@ Geometric Progressions Problems Part 1
     :math:`\log_b a = \log_c b`.
 
 37. If :math:`a, b, c, d` are in G. P., show that
+    :math:`(a + b)^2, (b + c)^2, (c + d)^2` are in G. P.
 
-    (i) :math:`(a + b)^2, (b + c)^2, (c + d)^2` are in G. P.
+38. If :math:`a, b, c, d` are in G. P., show that:math:`(a - b)^2, (b - c)^2,
+    (c - d)^2` are in G. P.
 
-    (ii) :math:`(a - b)^2, (b - c)^2, (c - d)^2` are in G. P.
+39. If :math:`a, b, c, d` are in G. P., show that :math:`a^2 + b^ + c^2, ab +
+    bc + cd, b^2 + c^2 + d^2` are in G. P.
 
-    (iii) :math:`a^2 + b^ + c^2, ab + bc + cd, b^2 + c^2 + d^2` are in G. P.
+40. If :math:`a, b, c, d` are in G. P., show that :math:`\frac{1}{(a + b)^2},
+    \frac{1}{(b + c)^2}, \frac{1}{(c + d)^2}` are in G. P.
 
-    (iv) :math:`\frac{1}{(a + b)^2}, \frac{1}{(b + c)^2}, \frac{1}{(c + d)^2}`
-         are in G. P.
+41. If :math:`a, b, c, d` are in G. P., show that :math:`a(b - c)^3 = d(a -
+    b)^3`
 
-    (v) :math:`a(b - c)^3 = d(a - b)^3`
+42. If :math:`a, b, c, d` are in G. P., show that :math:`(a + b + c + d)^2 =
+    (a + b)^2 + (c + d)^2 + 2(b + c)^2`
 
-    (vi) :math:`(a + b + c + d)^2 = (a + b)^2 + (c + d)^2 + 2(b + c)^2`
+43. If :math:`a, b, c` are in G. P., show that
+    :math:`a^2b^2c^2\left(\frac{1}{a^3} + \frac{1}{b^3} +
+    \frac{1}{c^3}\right) = a^3 + b^3 + c^3`
 
-38. If :math:`a, b, c` are in G. P., show that
+44. If :math:`a, b, c, d` are in G. P., show that :math:`(a^2 - b^2)(b^2 + c^2)
+    = (b^2 - c^2)(a^2 + b^2)`
 
-    (i) :math:`a^2b^2c^2\left(\frac{1}{a^3} + \frac{1}{b^3} +
-        \frac{1}{c^3}\right) = a^3 + b^3 + c^3`
-
-    (ii) :math:`(a^2 - b^2)(b^2 + c^2) = (b^2 - c^2)(a^2 + b^2)`
-
-39. If :math:`S` be the sum, :math:`P` the product and :math:`R` the sum of
+45. If :math:`S` be the sum, :math:`P` the product and :math:`R` the sum of
     reciprocals of :math:`n` terms in G. P., prove that
 
     .. math::
        P^2 = \left(\frac{S}{R}\right)^n
 
-40. Find :math:`1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} ...` to
+46. Find :math:`1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} ...` to
     :math:`\infty`.
 
-41. Prove that in an infinite G. P. whose common ration r has the property,
+47. Prove that in an infinite G. P. whose common ration r has the property,
     :math:`|r| < 1`, the ratio of any terms to the sum of all succeeding terms
     is
 
     .. math::
        \frac{1 - r}{r}
 
-42. If :math:`S_1, S_2, S_3, ..., S_p` are the sums of infinite geometric
+48. If :math:`S_1, S_2, S_3, ..., S_p` are the sums of infinite geometric
     series whose first terms are :math:`1, 2, 3, ..., p` and whose common
     ratios are :math:`\frac{1}{2}, \frac{1}{3}, \frac{1}{4}, ..., \frac{1}{p +
     1}` respectively, prove that
@@ -171,31 +174,10 @@ Geometric Progressions Problems Part 1
     .. math::
        S_1 + S_2 + ... + S_p = \frac{p(p + 3)}{2}.
 
-43. If :math:`x = 1 + a + a + a^2 + a^3 + ...` to :math:`\infty` and :math:`y = 1 +
+49. If :math:`x = 1 + a + a + a^2 + a^3 + ...` to :math:`\infty` and :math:`y = 1 +
     b + b^2 + b^3 + ...` to :math:`\infty`. Show that :math:`1 + ab + a^2b^2 +
     a^3b^3 + ...` to :math:`\infty = \frac{xy}{x + y - 1}` where, :math:`0 < a<
     1` and :math:`0< b < 1`.
 
-44. Find the sum to infinity of the series :math:`1 + (1 + a)r + (1 + a +
+50. Find the sum to infinity of the series :math:`1 + (1 + a)r + (1 + a +
     a^2)r^2 + ...` where, :math:`0 < a < 1` and :math:`0 < r < 1`.
-
-45. If :math:`a` be the first term, :math:`b` be the :math:`n\text{th}` term
-    and :math:`p` the product of :math:`n` terms of a G. P., show that
-    :math:`p^2 = (ab)^n`.
-
-46. Show that the ratio of the sums of :math:`n` terrms of two G.P.'s gaving
-    the same common ratio is equal to the ratio of the their :math:`n\text{th}`
-    terms.
-
-47. If :math:`S_1, S_2, S_3` be the sum of :math:`n, 2n, 3n` terms respectively
-    of a G. P>, show that :math:`(S_2 - S_1)^2 = S_1(S_3 - S_2)`.
-
-48. If :math:`S_n` denotes the sum of :math:`n` terms of a G. P., whose first
-    term is :math:`a` and common ratio is :math:`r`, find :math:`S_1 + S_2 +
-    ... + S_{2n - 1}`.
-
-49. The sum of :math:`n` terms are is :math:`a.2^n - b`, find its
-    :math:`n\text{th}` term. Are the terms of this series in G. P.?
-
-50. If :math:`n\text{th}` term of a series is :math:`3.2^n - 4`, find the sum
-    of its 100 terms.
