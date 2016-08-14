@@ -128,10 +128,10 @@ Geometric Progressions Problems Part 1
 37. If :math:`a, b, c, d` are in G. P., show that
     :math:`(a + b)^2, (b + c)^2, (c + d)^2` are in G. P.
 
-38. If :math:`a, b, c, d` are in G. P., show that:math:`(a - b)^2, (b - c)^2,
+38. If :math:`a, b, c, d` are in G. P., show that :math:`(a - b)^2, (b - c)^2,
     (c - d)^2` are in G. P.
 
-39. If :math:`a, b, c, d` are in G. P., show that :math:`a^2 + b^ + c^2, ab +
+39. If :math:`a, b, c, d` are in G. P., show that :math:`a^2 + b^2 + c^2, ab +
     bc + cd, b^2 + c^2 + d^2` are in G. P.
 
 40. If :math:`a, b, c, d` are in G. P., show that :math:`\frac{1}{(a + b)^2},
