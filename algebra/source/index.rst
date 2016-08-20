@@ -39,6 +39,7 @@ A Variable in Algebra
    geometric_progressions
    geometric_progressions_problems_1
    geometric_progressions_solutions_1
+   geometric_progressions_problems_2
 
 Indices and tables
 ==================

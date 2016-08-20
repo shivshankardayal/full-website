@@ -191,7 +191,7 @@ Notes
    is an increasing G. P. but if :math:`r` is +ve but lies between :math:`0`
    and :math:`1` then it is a decreasing G. P.
 
-   Case II. Let the first term be :math:`a` -ve. Thn if :math:`r > 1`, then it
+   Case II. Let the first term be :math:`a` -ve. Then if :math:`r > 1`, then it
    is a decreasing  G. P. but if :math:`r` lies between :math:`0` and :math:`1`
    then it is an increasing G. P.
 
