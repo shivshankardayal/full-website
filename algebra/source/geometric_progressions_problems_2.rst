@@ -96,4 +96,111 @@ Geometric Progressions Problems Part 2
 76. The sum of :math:`n` terms of a G. P. is :math:`3 - \frac{3^{n +
     1}}{4^{2n}}` then find the common ratio.
 
-77. 
+77. Three numbers form an increasing G. P. if the middle number is doubled,
+    then the new numbers are in A. P. Find the common ratio of G. P.
+
+78. If :math:`f(x) = 2x + 1` and three unequal numbers :math:`f(x), f(2x)` and
+    :math:`f(4x)` are in G.P., then find the number of values for :math:`x`.
+
+79. Three distinct real numbers :math:`a, b, c` are in G. P. such that :math:`a
+    + b + c = xb`, then show that :math:`x<-1` or :math:`x>3`.
+
+80. Let :math:`A` be the A. M. and :math:`G` be the G. M. between two numbers
+    then find the numbers.
+
+81. If the A. M. and G. M. between two numbers are in the ratio :math:`m:n`
+    then find the ration between the numbers.
+
+82. If
+
+    .. math::
+       x = \sum_{n = 0}^{\infty}a^n,~~y = \sum_{n = 0}^{\infty}b^n,~~z =
+       \sum_{n = 0}^{\infty}c^n
+
+    where :math:`a, b, c` are in A. P., such that :math:`|a| < 1`, :math:`|b| <
+    1` and :math:`|c| < 1` then show that :math:`\frac{1}{x}, \frac{1}{y},
+    \frac{1}{z}` are in A. P.
+
+83. Given that :math:`0 < x < \frac{\pi}{4}` and :math:`\frac{\pi}{4} < y <
+    \frac{\pi}{2}` and
+
+    .. math::
+       \sum_{k = 0}^{\infty}(-1)^k tan^{2k}x = p,~~\sum_{k = 0}^{\infty}(-1)^k
+       cot^{2k}x = q
+
+    then prove that
+
+    .. math::
+       \sum_{k = 0}^{\infty} tan^{2k}x~~cot^{2k}y
+
+    is
+
+    .. math::
+       \frac{1}{\left\{\frac{1}{p} + \frac{1}{q} - \frac{1}{pq}\right\}}
+
+84. An equilateral triangle is drawn by joining the mid-points of a given
+    equilateral triangle. A third equilateral triangle is drawn inside the
+    second in the same manner and the process is continued indefinitely. If the
+    side of first equilateral triangle is :math:`3^{1/4}` inch, then find the
+    sum of areas of all these triangles.
+
+85. If :math:`S = exp {(1 + |\cos x| + \cos^2x + |\cos^3x| + \cos^4x
+    ... \text{to}~\infty)\log_e 4}` satisfies the roots of the equation :math:`t^2 -
+    2-t + 64 = 0` for :math:`0< x < \pi` then find the values of :math:`x`.
+
+86. If :math:`S \subset (-\pi, \pi)` denote the set of values of :math:`x`
+    satisfying the equation
+
+    .. math::
+       8^{1 + |\cos x| + \cos^2 x + |\cos^3 x| + ... \text{to}~\infty} = 4^3
+
+    then find the values of :math:`S`.
+
+87. If :math:`|a| < 1` and :math:`|b| < 1`, then find the sum of the series
+    :math:`1 + (1 + a)b + (1 + a + a^2)b^2+ ... \text{to}~\infty`.
+
+88. If :math:`0 < x < \pi/2` and :math:`exp {(\sin^2 x + \sin^4 x + \sin^4 x +
+    ... \text{to}~\infty)}` satisfies the roots of the equation :math:`x^2 -
+    9x + 8 = 0`, then find the value of :math:`\cos x/(\cos x + \sin x)`.
+
+89. If
+
+    .. math::
+       S_{\lambda} = \sum_{r = 0}^{\infty}\frac{1}{\lambda^r},
+
+    then find
+
+    .. math::
+       \sum_{\lambda = 1}^{n}(\lambda -1)S_{\lambda}.
+
+90. If :math:`a, b, c` are in A. P. then prove that :math:`2^{ax + 1}, 2^{bx +
+    2}, 2^{cx + 1}` are in G. P. :math:`\forall x \neq 0`.
+
+91. If
+
+    .. math::
+       \frac{a + be^x}{a - be^x} = \frac{b + ce^x}{b - ce^x} = \frac{c +
+       de^x}{c - de^x}
+       
+    then prove that :math:`a,b,c,d` are in G. P.
+
+92. If :math:`x, y, z` are in G. P. and :math:`\tan^{-1}x, \tan^{-1}y` and
+    :math:`\tan^{-1}z` are in A. P. then prove that :math:`x = y =z` but their
+    common value is not necessarily zero.
+
+93. If :math:`a, b, c` are three unequal numbers such that :math:`a, b, c` are
+    in A. P. and :math:`b - a, c - b, a` are in G. P. then prove that
+    :math:`a:b:c` equals :math:`1:2:3`.
+
+94. The sides :math:`a, b, c` of a triangle are in G. P. such that :math:`\log
+    a - \log 2b, \log 2b - \log 3c, \log 3c - \log a` are in A. P. then prove
+    that :math:`\triangle ABC` is an obtuse angled triangle.
+
+95. If :math:`(a, b), (c, d), (e, f)` are the vertices of a triangle such that
+    :math:`a, c, e` are in G. P. with common ratio :math:`r` and :math:`b, d,
+    f` are in G. P. with common ration :math:`s` then find the area of the
+    triangle.
+
+96. If :math:`\log_t a, a^{t/2}` and :math:`\log_b t` are in G. P. then find
+    the value of :math:`t`.
+
