@@ -9,7 +9,7 @@ Geometric Progressions Problems Part 2
     terms.
 
 53. If :math:`S_1, S_2, S_3` be the sum of :math:`n, 2n, 3n` terms respectively
-    of a G. P>, show that :math:`(S_2 - S_1)^2 = S_1(S_3 - S_2)`.
+    of a G. P., show that :math:`(S_2 - S_1)^2 = S_1(S_3 - S_2)`.
 
 54. If :math:`S_n` denotes the sum of :math:`n` terms of a G. P., whose first
     term is :math:`a` and common ratio is :math:`r`, find :math:`S_1 + S_2 +
