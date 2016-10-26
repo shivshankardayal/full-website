@@ -1,64 +1,55 @@
 Introduction
 ************
-This book is a natural successor of my first book on C99 programming. Before
-proceeding let me tell you that there are three books which you can read about
-data structures and algorithm. The first and very deservingly so is the series
-of books written by Donald Erwin Knuth. `The Art of Computer Programming`_.
-Please note that Knuth's books is not for weak-hearted. :P
-The next in the list is another excellent book `Introduction to Algorithms`_ by
-Cormen, Leiserson, Rivest and Stein. Another very nice book in my opinion is
-`Handbook of Data Structures and Applications`_ edited by Dinesh P. Mehta.
-Rest of the data structure books are more or less same and will fall in same
-category.
+First thing first. Definitely this is not the only book on data structures and
+algorithms. There are many great books on the subject. I will mention few of
+those. No links to any online shop will be given as it will show my bias towards
+that store. The first book is the most authoritative book on the subject which
+treats topics in great depth. It is the "The Art of Computer Programming" by
+Donald E. Knuth. The book is available in several volumes. Volume 1 describes
+Fundamental Algorithms, 2 describes numerical algorithms, 3 details sorting and
+searching and 4A deals with combinatorial algorithms. As of now only these
+volumes have been published. But these books are not for weak hearted people and
+I really mean that. This series is very heavy on mathematics and implementation
+is done using a computer designed by Knuth MMIX. However, it is a must read for
+advanced readers. The second book is also a classic. It is "Introduction to
+Algorithms" written by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest
+and Clifford Stein. This book is also known as "CLRS". While Knuth is very deep,
+this book covers topics in breadth. Once again an excellent book but examples
+are given in pseudo programming language. There are many other introductory
+books on this subject with little difference in quality and almost all of them
+are a good read.
 
-.. _The Art of Computer Programming: http://en.wikipedia.org/wiki/The_Art_of_Computer_Programming
-.. _Introduction to Algorithms: http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262033844
-.. _Handbook of Data Structures and Applications: http://www.amazon.com/Handbook-Structures-Applications-Computer-Information/dp/1584884355
+The subject of this book is data structure and algorithms. That involves three
+words. Data, structure and algorithms. A computer stores and manipulates data
+i.e. information. We use computer to store, manipulate and use data. We present
+same information in many ways which is about structure. The data and structure
+determines that what kind of operations i.e. algorithms can be performed over
+them. For example, we cannot perform addition on two character strings but then
+we can concatenate them using + operator in an object-oriented language which
+support operator overloading. Thus, these words summarize the soul of computer
+programming and software. All programs which we use and all operations we do
+involve these three basic elements.
 
-Since I have written only my first book on C99 the examples will include only
-knowledge from C99 book. As more languages are covered more examples will be
-added with those languages.
+Oh you would say that I missed the word mathematics. Well, then you have been
+observant! That was deliberate. :) Mathematics which will be treated in this
+book is although separate from the main subject but certain portions of the book
+like computer graphics and computational geometry will require a great deal of
+mathematics. Certainly the mathematics part can form a new book and can be read
+as such in isolation but I am a fan of thicker books so I intend to make it
+thick. Since I have no intention of getting it printed that, is all good. Such
+is miracle of digital technology.
 
-What is it that makes Data Structures and Algorithms worth our time. Well, when
-we write software we have to solve practical problems. And we solve certain
-types of problems. For these problems we have certain solutions and we repeat
-the solution for similar problems. This behavior leads to reuse of certain
-types of data structure and algorithms. This also leads to a certain topic
-known as Design Patterns. However, that is a subject of an entirely different
-book.
+There are specific structures which facilitate specific operations. For example,
+a stack allows access of data only from top. A queue is helpful to realize a
+life-like queue. A linked list allows traversal in forward or backward or both
+directions but not random. Binary trees are helpful for faster searches. Graphs
+can be used for path-finding and to solve network problems. Hash maps are very
+good for finding information quickly. These are just few cases which I have
+cited. The area of data structures and algorithms is immense and ever
+expanding.
 
-Note that there are three different words in Data Strcutures and Algorithms.
-Data itself is very important and we have to make sure it is what is most
-important. Structure is important because that will make sure certain
-algorithms can be applied in the way should be. Algorithms are important and
-should be chosen according to data and structure. We really are not much
-about what type data will have because we really cannot govern that. However,
-we can choose structure and algorithm for that data. Note that structure and
-algorithms should be appropriate for particular data in consideration.
-
-There are specific structures which facilitate specific operations if they
-are used to hold the data. For example, a stack allows to access data only
-from top. A queue is helpful to realize a life-like queue. Binary trees are
-helpful for faster searches. Graphs can be used for path-finding and and to
-solve network problems. These are just few cases which I have cited. The area
-of data structures and algorithms is immense and ever expanding.
-
-Before we proceed let me tell you that you should refresh your Mathematics
-because certain sections of this book will be involving, mathematically.
-Particularly sections which will contain analysis of algorithms. One more
-important point is that you should have pen and paper with you while trying
-to study this book. Believe me it will help you a lot as I have experienced
-it myself. Also, Knuth recommends that too. :-)
-
-I expect that you have learned GDB and Valgrind from as suggested in my last
-book. Be ready for some debugging in case programs give you trouble.
-
-The way the book will present the concepts is that we will take up data
-structures and algorithms. I will draw diagrams and apply algrithms on those
-algorithms on those diagrams because you know a picture is worth thousand
-words. :-) The language used to describe the data structures and algorithms
-will be C99. Perhaps later more examples in different languages will be given.
-Algorithms will be first described using pseudo code then real code.
+This book is a natural successor of my first book on C99 programming.
+Examples will include only knowledge from C99 book.
 
 Problem to Solution
 ===================
@@ -79,6 +70,190 @@ difficulty solving a problem for more than 30 minutes take a break. This will
 reset your thinking and allow you to think in new way and you can try to find
 the solution afresh.
 
+Abstract Data Types
+===================
+While code is definitely the final goal, to reach there we make models in our
+mind. For example, when we think of numbers as humans we can think of numbers
+without the restriction of range but in case of computers we are constrained by
+the amount of memory available. However, that does not stop us from making
+abstract models because typically computers have enough memory available for
+storing large enough numbers available for all practical purposes. An **abstract
+data type** specifies the logical properties of a data type. As you know a data
+type like ``int, char`` and ``float`` represent collection of values and these
+types determine what operations can be performed on those types. For example,
+you should not perform multiplication on characters although programmatically it
+is possible, it just does not make sense. Although, other meanings are possible
+to multiplication to a character or string i.e. repetition but certainly not
+multiplication. Thus, the collection of values and operations form an abstract
+mathematical entity that can be implemented using hardware and software. This is
+what is known as abstract data type. A formal way to put what an ADT is class
+of objects whose logical behavior is defined by a set of values and a set of
+operations. From experience I know that beginners do not really care for ADTs
+and they simply skip to the implementation part which is not good. Unless you
+understand the concept at an abstract level you will not be able to appreciate
+the semantics of the ADT and as a result your implementation may suffer.
+
+When we define an abstract data type we do not worry about efficiency whether
+time or space. Since it is abstract therefore those worries come when we
+implement that. While defining an ADT, we are not worried about implementation
+details. Certain times it may be possible to implement our ADT on a piece of
+hardware or software system. For example, infinitely big numbers or strings
+cannot be implemented in hardware or software as said earlier because of memory
+limitations. But then again for all practical purposes an ADT will be useful as
+help while implementing our problem provided you are willing to maintain the
+semantics.
+
+There are two main ways of defining an ADT, *imperative* and
+*functional*. Imperative way of defining an ADT is closer to programming
+languages like C, C++ etc which allow imperative programming techniques while
+functional style is better suited for functional languages like Erlang, Haskell,
+OCaml etc. However, I will deviate from the formal style a bit to make it easy
+for you to understand ADTs without knowledge of a programming language so that
+you can evaluate it as a mathematical model.
+
+Let us consider an example ADT then we will dissect that after:
+
+.. code-block:: text
+
+   ADT UnsignedInteger
+   Object: An ordered subrange of integers starting at zero and ending at a
+   maximum value of UINT_MAX on the computer.
+
+   /* operations */
+
+   for all x, y in N(set of natural numbers) and true, false in booleans
+
+   true  ::== 1 (UnsignedInteger)
+   false ::== 0 (UnsignedInteger)
+
+   Zero(): UnsignedInteger          => 0
+   IsZero(x): Boolean               => if(x == 0) IsZero = true else false
+   Add(x, y): UnsignedInteger       => if(x + y < UINT_MAX) Add = x + y
+   else Add = (x + y)%(UINT_MAX + 1)
+   Equal(x, y): Boolean             => if (x == y) Equal = true else false
+   Sub(x, y): UnsignedInteger       => if(x > y) Sub = x - y
+   else Sub = positive of 2's complement
+   with MSB is not sign bit
+   Mul(x, y): UnsignedInteger       => if((x * y) < UINT_MAX) Mul = x * y
+   else Mul = (x * y)%(UINT_MAX + 1)
+   Div(x, y): UnsignedInteger       => Div = Quotient of x/y
+   Mod(x, y): UnsignedInteger       => Mod = Remainder of x/y
+
+You, my observant reader, would have noticed that this is not an ADT in its
+purest sense because we have cared about hardware i.e. assumed that it
+implements 2's complement. Your observation is correct. It is not an ADT but I
+have tried to make sure that this ADT works on modern computers which work on
+2's complement. Certainly this will not work on systems like UNIVAC which
+implement 1's complement in hardware.
+
+However, that is not important part. The important part is to learn as how you
+specify an ADT so that it works. Let us try to learn what has been described in
+ADT. This ADT describes unsigned integers much like that found in a statically
+typed language like C or C++. This ADT starts at 0 and ends at a specific value
+specified by ``UINT_MAX``. What would be ``UINT_MAX`` is not specified as an
+optimum value of that depends in internal details of hardware. ``Zero()`` is an
+operation which always returns zero. ``IsZero()`` is an operation which returns
+true if argument is zero else false. ``true`` and ``false`` have been specified
+as their typical Boolean notations of 1 and 0 respectively. ``Add()`` adds two
+unsigned integers if their sum is less than ``UINT_MAX``, if it is more than
+that then it is rotated which is based on the behavior of hardware again. Now I
+leave it up to you to figure rest of ADT.
+
+An ADT for rational numbers
+---------------------------
+To foster the ideas as how to represent an ADT let us consider another example
+of rational numbers. A rational number is a fraction which either terminates or
+repeats upon division for example, :math:`\frac{1}{2}, \frac{3}{7},
+\frac{7}{9}`. Thus, we see that denominators and numerators are integers. We
+also have to consider the sign of these rational numbers, which, may be positive
+or negative which we will represent using character data type for example. For
+completeness let us define a minimalistic character abstract data type as well.
+
+.. code-block:: text
+
+   ADT Character
+   Object: A character on English PC-104 keyboard which can fit in 8 bits
+   
+   character ::== a-z,A-Z,0-9,`~!@#$%^&*()-_=+[{]}\|;:'",<.>/?(space)(TAB)(return)
+   c is one of the characters being one of the above.
+
+   value(c): UnsignedInteger                  => if(c == a-z)
+                                                return 0-25
+                                              else if(c == A-Z)
+                                                return 26-51
+                                              else if(c == 0-9)
+                                                return 52-61
+                                              else
+                                                sequential value in above list
+                                                from remaining characters
+
+I have kept the ADT character minimalistic to be enough to serve our typical
+usage. ``(space)`` specifies the space bar on your keyboard while ``(TAB)`` is
+the tab and ``(enter)`` is the return key. We have defined characters in terms
+of integral value so that we can store it in memory because memory can contain
+only sequence of bits. Characters really cannot be stored in memory as it
+is. This will allow us to apply equality for two characters as well as other
+operations which can be applied to integers though I have left them for you as
+an exercise. First three commas are just field separators.
+
+Let us define our rational number ADT now.
+
+.. code-block:: text
+
+   ADT Rational
+   Object: A rational number which has a finite denominator and numerator.
+
+   /* Operations */
+   for all n1, n2, d1 and d2 as UnsignedInteger with d1 != 0 and d2 != 0
+   and true and false are our usual Booleans.
+   s1 and s2 are signs represented as Character - and +.
+
+   rational ::== <numerator, denominator, sign> where numerator and denominator
+   are UnsignedInteger, denominator != 0 and sign is a character '+' or '-'
+
+   MakeRational(n, d, s): Rational             => return <n, d, s>
+   IsEqual(n1, d1, s1, n2, d2, s2): Boolean    => if((n1*d2 == n2*d1) &&
+                                                    ((s1 == s2 == '+')||(s1 == s2 == '-')))
+                                                    return true
+                                                  else return false
+   Greater(n1, d1, s1, n2, d2, s2): Rational   => if( s1 == s2)
+                                                    if((n1*d2) >(n2*d1))
+                                                      return <n1, d1, s1>
+                                                  else if(s1 == '+')
+                                                    return <n1, d1, s1>
+                                                  return <n2, d2, s2>
+   Add(n1, d1, s1, n2, d2, s2): Rational       => if(s1 == s2)
+                                                    return <(n1*d2 + n2*d1),
+                                                    d1*d2, s1>
+                                                  else if(Greater(n1, d1, s1, n2,
+                                                  d2, s2) == <n1, d1, s1>)
+                                                    return <(n1*d2 - n2*d1),
+                                                    d1*d2, s1>
+                                                  else
+                                                    return <(n2*d1 - n1*d2),
+                                                    d1*d2, s2>
+   Sub(n1, d1, s1, n2, d2, s2): Rational       => if(s1 == s2)
+                                                    return <(n1*d2 - n2*d1),
+                                                    d1*d2, s1>
+                                                  else if(Greater(n1, d1, s1, n2,
+                                                  d2, s2) == <n1, d1, s1>)
+                                                    return <(n1*d2 + n2*d1),
+                                                    d1*d2, s1>
+                                                  else
+                                                    return <(n2*d1 + n1*d2),
+                                                    d1*d2, s2>
+   Mul(n1, d1, s1, n2, d2, s2): Rational       => if(s1 == s2)
+                                                    return <n1*n2,
+                                                    d1*d2, '+'>
+                                                  else 
+                                                    return <n1*n2,
+                                                    d1*d2, '-'>
+   Div(n1, d1, s1, n2, d2, s2): Rational       => if(s1 == s2)
+                                                    return <n1*d2,
+                                                    d1*n2, '+'>
+                                                  else 
+                                                    return <n1*d2,
+                                                    d1*n2, '-'>
 Preliminaries
 =============
 First a bit of history. The word algorithm comes from the name of the 9th
