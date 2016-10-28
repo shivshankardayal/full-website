@@ -428,4 +428,279 @@ Geometric Progressions Solutions Part 2
     or :math:`(x + 1)(x - 3) > 0` :math:`\Rightarrow x < -1
     ~~\text{or}~~ x > 3`.
 
-80.
+80. Let the numbers be :math:`a` and :math:`b` then :math:`A = \frac{a
+    + b}{2}` or :math:`a + b = 2A`
+
+    Also, :math:`G = \sqrt{ab} \Rightarrow G^2 = ab`
+
+    Thus, :math:`a` and :math:`b` are roots of
+
+    :math:`t^2 - 2At + G^2 = 0`
+
+    .. math::
+
+       t = \frac{2A \pm \sqrt{4A^2 - 4G^2}}{2} = A \pm \sqrt{A^2 -
+       G^2}
+
+81. Let :math:`A` be the A. M. and :math:`G` be the G. M., then, we
+    have
+
+    .. math::
+
+       \frac{A}{G} = \frac{m}{n}
+
+    .. math::
+
+       \frac{A}{m} = \frac{G}{n} = k
+
+    :math:`\therefore a + b = 2mk, ab = n^2k^2`
+
+    Hence, :math:`a, b` are roots of
+
+    :math:`x^2 - 2mkx + k^2n^2 = 0`
+
+    :math:`\therefore x = 2mk \pm 2k\sqrt{m^2 - n^2}`
+
+    :math:`\therefore a:b = m + \sqrt{m^2 - n^2}: m - \sqrt{m^2 -
+    n^2}`.
+
+82. :math:`x = \frac{1}{1 - a}, y = \frac{1}{1 - b}, z = \frac{1}{1 -
+    c}`
+
+    :math:`\therefore \frac{1}{x} = 1 - a, \frac{1}{y} = 1 - b,
+    \frac{1}{z} = 1 - c`
+
+    Since :math:`a, b, c` are in A. P., therefore :math:`\frac{1}{x},
+    \frac{1}{y}, \frac{1}{z}` are in A. P.
+
+83. For :math:`p, a =1, r = -\tan^2x`
+
+    .. math::
+
+       \therefore p = \frac{a}{1 - r} = \frac{1}{1 + \tan^2x} = \cos^2x
+
+    For :math:`q, a =1, r = -\cot^2y`
+
+    .. math::
+
+       \therefore q = \frac{a}{1 - r} = \frac{1}{1 + \cot^2y} =
+       \sin^2y
+
+    .. math::
+
+       S = \frac{1}{1 - \tan^2x\cot^2y}
+
+    .. math::
+
+       = \frac{1}{1 - \frac{1 - \cos^2x}{\cos^2x}\frac{1 -
+       \sin^2y}{\sin^2y}}
+
+    .. math::
+
+       = \frac{pq}{p + q + q} = \frac{1}{\frac{1}{p} + \frac{1}{q} -
+       \frac{1}{pq}}
+
+84. Let side of outermost equilateral triangle is :math:`a`, then its
+    area is :math:`\frac{\sqrt{3}}{4}a^2`. The sides of subsequent
+    internal triangles will be :math:`\frac{a}{2}, \frac{a}{4},
+    \frac{a}{8}, ...`
+
+    Therefore, total area is :math:`\frac{\sqrt{3}}{4}a^2\left(\frac{1}{4}
+    + \frac{1}{16} + \frac{1}{64} + ... \right)`
+
+    .. math::
+
+       = \frac{\sqrt{3}}{4}a^2. \frac{1}{1 - \frac{1}{4}} =
+       \frac{\sqrt{3}}{\frac{a^2}{3}} = 1
+
+85. :math:`\cos^2x = |\cos^2x|`
+
+    Sum of infinite series is :math:`S = \frac{1}{1 - |\cos x|}` where
+    :math:`|\cos x| < 1`.
+
+    :math:`E = e^{S\log_e 4} = 4^S`
+
+    :math:`E` satisfied theq equation :math:`t^2 - 20t + 64 = 0
+    \therefore t = 16, 4`
+
+    :math:`4^S = 4^1` or :math:`4^2` or :math:`S = 1` or :math:`2`
+
+    or :math:`\frac{1}{1 - |\cos x|} = 1 ~~\text{or}~~ 2`
+
+    or :math:`1 - |\cos x| = 1 ~~\text{or}~~\frac{1}{2}`
+
+    :math:`\Rightarrow |\cos x| = 0 ~~\text{or}~~ \frac{1}{2}`
+
+    :math:`\therefore \cos x = 0 ~~\text{or}~~ \pm\frac{1}{2}`
+
+    :math:`x = \frac{\pi}{2}, \frac{\pi}{3}, \frac{2\pi}{3}`.
+
+86. The given equation may be written as
+
+    :math:`8^{1 + |\cos x| + |\cos^2x| + .. ~~\text{to}~~ \infty} =
+    8^2`
+
+    :math:`1 + |\cos x| + |\cos^2x| + .. ~~\text{to}~~ \infty = 2`
+
+    To sum the G. P., we must observe that for
+
+    :math:`-\pi < x < \pi, x \ne 0`, we have :math:`|\cos x| < 1`.
+
+    Hence :math:`\frac{1}{1 - |\cos x|} = 2` or :math:`1 - |\cos x| =
+    \frac{1}{2}` by :math:`S_{\infty}` for G. P.
+
+    or :math:`|\cos x| = 1/2` i.e. :math:`\cos x = \pm 1/2`.
+
+87. :math:`T_n = (1 + a + a^2 + ... + a^{n - 1})b^{n - 1}`
+
+    .. math::
+
+       = \frac{1 - a^n}{1 - a}.b^{n - 1}
+
+    .. math::
+
+       = \frac{1}{1 - a}[b^{n - 1} - a(ab)^{n - 1}]
+
+    Putting :math:`n = 1, 2, 3, ..., \infty` and adding
+
+    .. math::
+
+       S_{\infty} = \frac{1}{1 - a}[(1 + b + b^2 + ... \infty) +
+       a(1 + ab + a^2b^2 + ... \infty)]
+
+    .. math::
+
+       S_{\infty} = \frac{1}{1 - a}\left[\frac{1}{1 - b} -
+       a.\frac{1}{1 - ab}\right]
+
+    .. math::
+
+       S_{\infty} = \frac{1}{(1 - b)(1 - ba)}
+
+88. :math:`S_{\infty} = \frac{\sin^2x}{1 - \sin^2x} = \tan^2x`
+
+    .. math::
+
+       L. H. S. = e^{\tan^2x \log 2} = 2^{\tan^2x}
+
+    and the roots of the equation :math:`x^2 - 9x + 8 = 0` are
+    :math:`1` and :math:`8`.
+
+    :math:`2^{\tan^2x} = 1 = 2^0, 2^{\tan^2x} = 8 = 2^3`
+
+    :math:`\therefore \tan^2x = 0, \tan^2x = 3`
+
+    :math:`\therefore \tan x = 0, \tan x = \pm \sqrt{3}`
+
+    :math:`\therefore x = \frac{\pi}{3}` is the only value of :math:`x`
+    satisfying :math:`0 < x < \frac{\pi}{2}`
+
+    :math:`\therefore \frac{\cos x}{\cos x + \sin x} = \frac{1}{1 +
+    \tan x} = \frac{1}{1 + \sqrt{3}}`
+
+89. :math:`S_{\lambda = 1 + \frac{1}{\lambda} + \frac{1}{\lambda^2} +
+    ... \infty} = \frac{\lambda}{\lambda - 1}`
+
+
+    .. math::
+
+       \therefore \sum_{\lambda = 1}^n (\lambda - 1)S_{\lambda} =
+       \sum_{\lambda}^n \lambda = \frac{n(n + 1)}{2}
+
+90. :math:`\frac{T_2}{T_1} = \frac{T_3}{T_2} \Rightarrow 2^{(b - a).x}
+    = 2^{(c - b)x}`
+
+    :math:`\Rightarrow (b - a)x = (c - a)x \Rightarrow b - a = c - a
+    \forall x, x\ne 0`
+
+    Above is true as :math:`a, b, c` are in A. P.
+
+91. Writing, :math:`a + be^x = 2a - (a - be^x)`, we have
+
+    .. math::
+
+       \frac{2a}{a - be^x} - 1 = \frac{2b}{b - ce^x} - 1 = \frac{2c}{c
+       - de^x} - 1
+
+    .. math::
+
+       \Rightarrow \frac{a - be^x}{a} = \frac{b - ce^x}{b} = \frac{c -
+       de^x}{c}
+
+    .. math::
+
+       \Rightarrow 1 - \frac{b}{a}e^x = 1 - \frac{c}{b}e^x = 1 -
+       \frac{d}{c}e^x
+
+    .. math::
+
+       \frac{b}{a} = \frac{c}{b} = \frac{d}{c}
+
+    Thus, :math:`a, b, c` are in G. P.
+
+92. Since, :math:`x, y, z` are in G. P. :math:`y^2 = xz`
+
+    and :math:`2\tan^{-1}x = \tan^{-1}y + \tan^{-1}z`
+
+    .. math::
+
+       \frac{2y}{1 - y^2} = \frac{x + z}{1 - xz} \Rightarrow 2y = x +
+       z
+
+    .. math::
+
+       4y^2 = (x + z)^2 \Rightarrow 4zx = (x + z)^2 \Rightarrow (x -
+       z)^2 = 0 \Rightarrow x = z
+
+    .. math::
+
+       \therefore x = y = z
+
+93. Given, :math:`b - a = c - b` and :math:`(c - b)^2 = a(b - a)`
+
+    or :math:`(b - a)^2 = a(b - a)^2 \Rightarrow b = 2a`
+
+    but :math:`c = 2b - a = 3a`.
+
+    :math:`\therefore a : b : c = 1 : 2 : 3`
+
+94. :math:`\log \frac{a}{2b}, \log \frac{2b}{3c}, \log \frac{3c}{a}`
+    are in A. P.
+
+    :math:`\therefore 2\log \frac{2b}{3c} = \log \frac{a}{2b} + \log
+    \frac{3c}{a}`
+
+    :math:`\log\left(\frac{2b}{3c}\right)^2 =
+    \log\left(\frac{a}{2b}.\frac{3c}{a}\right)`
+
+    :math:`\Rightarrow \frac{4b^2}{9c^2} = \frac{3c}{2b}` or
+    :math:`8b^3 = 27c^3` :math:`\therefore 2b = 3c`
+
+    Also, :math:`a, b, c` are in G. P. :math:`\therefore b^2 = ac`
+
+    :math:`\frac{9c^2}{4} = ac` :math:`\therefore a = \frac{9}{4}c`
+
+    Thus, sides are :math:`\frac{9}{4}c, \frac{6}{4}c` and
+    :math:`c`. Clearly, :math:`a` is greatest side so that
+    :math:`\angle A` is greatest.
+
+    :math:`\cos A = \frac{b^2 + c^2 - a^2}{2bc} = -\frac{29}{48} < 0`
+
+    Therefore, :math:`\angle A` is obstuse so the triangle is obtuse
+    angled triangle.
+
+95. Given,
+
+    .. math::
+
+       Area = \begin{vmatrix}
+       a & c & e & a           \\
+       d & e & f & b
+       \end{vmatrix}
+
+    Substituting the values and evaluating the determinant will yield
+    the desired result.
+
+96. :math:`a^t = \log_t a . \log_b t = \log_b a`
+
+    :math:`t = \log_a(\log_b a)`
