@@ -159,7 +159,7 @@ Geometric Progressions Problems Part 1
 46. Find :math:`1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} ...` to
     :math:`\infty`.
 
-47. Prove that in an infinite G. P. whose common ration r has the property,
+47. Prove that in an infinite G. P. whose common ratio :math:`r` has the property,
     :math:`|r| < 1`, the ratio of any terms to the sum of all succeeding terms
     is
 

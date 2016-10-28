@@ -26,7 +26,7 @@ I. If the each term of a G. P. be multiplied by a non-zero number, then the
    each term of the given G. P. by :math:`k` is :math:`ak, ark, ar^2k, ar^3k,
    ...`
 
-   Obviously, the series is in G. P. with the same constant ration as
+   Obviously, the series is in G. P. with the same constant ratio as
    previous G. P. i.e. :math:`r`.
 
    Again, dividing each term of G. P. :math:`a, ar, ar^2, ar^3, ...` we obtain
@@ -126,7 +126,7 @@ If :math:`G_1, G2, ..., G-n` are :math:`n` geometric means between two numbers
 :math:`G1G_2...G_n = \sqrt{ab}^n = G^n`.
 
 **Proof:** :math:`b` is :math:`(n + 2)nd` term. Thus, :math:`b = ar^{n + 1}`
-where common ration is :math:`r`.
+where common ratio is :math:`r`.
 
 Thus, :math:`G_1 = ar, G_2 = ar^2, ..., Gn = ar^n`
 

@@ -626,7 +626,7 @@ Some Important Geometrical Results and Equations
 Section Formula
 ---------------
 Let :math:`z_1=x_1+iy_1, z_2=x_2+iy_2` then if :math:`z=z+iy` which divides the
-previous two points in the ration :math:`m;n` can be given by using the results
+previous two points in the ratio :math:`m;n` can be given by using the results
 from coordinate geometry as below:
 
 .. math::

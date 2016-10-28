@@ -66,11 +66,11 @@ Geometric Progressions Problems Part 2
 69. If :math:`y = 1 + x + x^2 + x^3 + ...` to :math:`\infty` where :math:`0 <
     x< 1`, show that :math:`x = \frac{y - 1}{y}`
 
-70. If :math:`a, b, c` be three successive terms of a G.P. with common ration
+70. If :math:`a, b, c` be three successive terms of a G.P. with common ratio
     :math:`r` and :math:`a>0` satisfying the relation :math:`c > 4b - 3a` then
     prove that :math:`r>3` or :math:`r<1`.
 
-71. If :math:`(1 - k)(1 + 2x + 4x^2 + 8x^3 + 16x^4 + 32x^5) = 1 = k^6` where
+71. If :math:`(1 - k)(1 + 2x + 4x^2 + 8x^3 + 16x^4 + 32x^5) = 1 - k^6` where
     :math:`k\neq 1` then find :math:`\frac{k}{x}`.
 
 72. If :math:`(a^2 + b^2 + c^2)(b^2 + c^2 + d^2) \le (ab + bc + cd)^2` where
@@ -109,7 +109,7 @@ Geometric Progressions Problems Part 2
     then find the numbers.
 
 81. If the A. M. and G. M. between two numbers are in the ratio :math:`m:n`
-    then find the ration between the numbers.
+    then find the ratio between the numbers.
 
 82. If
 
@@ -198,7 +198,7 @@ Geometric Progressions Problems Part 2
 
 95. If :math:`(a, b), (c, d), (e, f)` are the vertices of a triangle such that
     :math:`a, c, e` are in G. P. with common ratio :math:`r` and :math:`b, d,
-    f` are in G. P. with common ration :math:`s` then find the area of the
+    f` are in G. P. with common ratio :math:`s` then find the area of the
     triangle.
 
 96. If :math:`\log_t a, a^{t/2}` and :math:`\log_b t` are in G. P. then find
