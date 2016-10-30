@@ -324,13 +324,14 @@ Let us implement a linked list and its operations:
        return 0;
    }
 
+
 Now I will explain these function one by one using images. First we discuss
 ``add_at_begin``. Note that we can wrap all insertion functions by calling single
 insert function of the type ``insert(ll* head, int item, size_t position)``.
 Please note that I have used ``size_t`` for position
 because I want the list to be able to have as many members as malloc allows.
 If we use something like ``int`` which is nothing but ``signed int`` then we would
-be restricted to 2 * 1024 * 1024 *1024 or 2147483648 members. Note that
+be restricted to 2 \* 1024 \* 1024 \* 1024 or 2147483648 members. Note that
 ``size_t`` is nothing but ``unsigned long`` which is 4 bytes on 32-bit systems and 
 8 bytes
 on 64-bit systems.

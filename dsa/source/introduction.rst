@@ -696,11 +696,87 @@ I am presenting a table for runtime of various complexities, looking at which yo
 algorithms with better runtime. This table is for a computer which executes instructions at :math:`10^9`
 instructions per second.
 
-+-------------+----------------------+-----------------------+---------------------+-------------------+-------------------+
-| :math:`x`   | :math:`f(x)=x`       |:math:`f(x)=x\log_2 x` | :math:`f(x)=x^2`    | :math:`f(x)=x^3`  | :math:`f(x)=2^x`  |
-+=============+======================+=======================+=====================+===================+===================+
-| 10          |.01 :math:`\mu` s     | .03 :math:`\mu` s     | .1 :math:`\mu` s    |1 :math:`\mu` s    |1 :math:`\mu` s    |
-+-------------+----------------------+-----------------------+---------------------+-------------------+-------------------+
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+| :math:`x`   | :math:`f(x)=x`       |:math:`f(x)=x\log_2 x` | :math:`f(x)=x^2`    | :math:`f(x)=x^3`  | :math:`f(x)=2^x`       |
++=============+======================+=======================+=====================+===================+========================+
+| 10          |.01 μs                | .03 μs                | .1 μs               | 1 μs              |1 μs                    |
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+| 20          | .02 μs 	             | .09 μs 	             | .4 μs               | 8 μs              | 1 ms                   |
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+| 30          | .03 μs               | .15 μs                | .9 μs               | 27 μs             | 1 s                    |
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+| 40          | .04 μs               | .21 μs                | 1.6 μs              | 64 μs             | 18.3 min               |
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+| 50          | .05 μs               | .28 μs                | 2.5 μs              | 125 μs            | 13 d                   |
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+| 100         | .1 μs                | .66 μs                | 10 μs               | 1 ms              |4* :math:`10^{13}` yrs  |
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+|1000         | 1 μs                 | 9.96 μs               | 1 ms                | 1 s               |32* :math:`10^{283}` yrs|
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+| 10,000      | 10 μs                | 130 μs                | 100 ms              | 16.67 min         |                        |
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+| 100,000     | 100 μs               |1.66 ms                |10 s                 |11.57 days         |                        |
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+|1,000,000    | 1 ms                 | 19.92 ms              |16.67 min            |31.71 yrs          |                        |
++-------------+----------------------+-----------------------+---------------------+-------------------+------------------------+
+
+The complexity of function :math:`2^x` rises so fast that it is already beyond the number of years sun is going to survive. As you
+can clearly see :math:`O(log(log(x)))O(log(x))<O(x)<O(x*log(x))<O(x2)<O(x3)<O(2x)<O(x!)`. As O-notation gives upper bound similarly
+Ω-notation gives lower bound. g(x)=Ω(f(n)) means there exists two constants L and :math:`n_0` such that
+
+:math:`g(x)\ge L|f(x)| ~\forall~ x>x_0`
+
+Note that this is Knuth's definition for :math:`\Omega` not the Hardy-Littlewood definition. Knuth has commented on why he has
+changed this definition:
+
+	
+
+| Although I have changed Hardy and Littlewood's definition of :math:`\Omega`, I feel justified in doing
+| so because their definition is by no means in wide use, and because there are other ways to say what
+| they want to say in the comparatively rare cases when their definition applies.
+
+Hardy-Littlewood's version of :math:`\Omega` is given below:
+
+:math:`f(x)=\Omega(g(x))\;(x\rightarrow\infty)\;\Leftrightarrow\;\limsup_{x\rightarrow\infty}\left|\frac{f(x)}{g(x)}\right|>0`
+
+If we want to write exact order of growth without being accurate about constant factors :math:`L` and :math:`K` then we use
+:math:`Θ` - notation.
+
+:math:`g(x)=\Theta(f(x))\Leftrightarrow g(x)=O(f(x)) ~\text{and}~ g(x)=\Omega(f(x))`
+
+Note that for an algorithm performing at a complexity of :math:`O(x^2)` we can say that :math:`O(x3)` is its complexity as an
+approximation. It is allowed to represent a complexity at a worse notation but not a better notation. Just that the statement will
+be slightly inaccurate. The reason for this is that the function which has worse complexity is still and upper bound of the better
+function and thus our assumption of giving an upper bound holds true.
+
+If you know calculus and coordinate geometry then you would notice that a worse function has a higher rate of growth i.e. slope of
+the curve i.e. :math:`\frac{dy}{dx}` or :math:`\frac{df(x)}{dx}` where :math:`y=f(x)`. For any higher value of :math:`x` the slope
+or rate of growth will eventually be higher for worse performing function. For example, for :math:`O(x^2)` that value of :math:`x`
+is 1 when compared with :math:`O(x)`. This value can be obtained by solving :math:`\frac{dy}{dx}` for the two functions.
+
+In computer science for algorithm analysis we are almost always worried about big-:math:`O` complexity because it gives upper bound
+i.e. for large set of input how the algorithm will behave. The problem with big-:math:`O` notation is that even though it talks
+about two constants :math:`x_0` and :math:`K` it does not give any hints about there values or how to compute them. It also does
+not put any restriction on the values of these constants not gives any guidelines when there are many such values.
+
+There is also space efficiency or memory efficiency. There are times when the devices we use do not have a lot of memory then we
+need to find algorithms which are efficient memory-wise. For example, there are two very good algorithms for sorting an array of
+values (or string) quick sort and merge sort. However, consider the case when we have less memory than the array then neither of
+these algorithms can be used. One of the sorting algorithms among many is external sort. This technique is old because in earlier
+devices memory was less and usually data to be sorted was more. Algorithms which were very important a few decades ago are now
+important merely for academic importance.
+
+In case you prefer graphs to mathematical functions to understand, below I present all three big notations.
+
+.. image:: _static/big-o.png
+   :alt: Big-O graph
+
+.. image:: _static/big-omega.png
+   :alt: Big-Omega graph
+
+.. image:: _static/big-theta.png
+   :alt: Big-Theta graph
+
 
 Examples of Asymptotic Complexity Computation
 =============================================
@@ -736,6 +812,33 @@ splay-trees are very good for maintaining fast search time. But the
 implementation is complex compared to a Red-Black tree or AVL-tree therefore
 they are usually not preferred. However, this is not the only reason. I will
 let you know more detail when we discuss trees in their own chapter.
+
+More on Asymptotic Notations
+============================
+Little o Notation
+-----------------
+The notation is written as :math:`f(x)=o(g(x))`. And in set notation it is :math:`f(x)\in o(g(x))`. It means that :math:`g(x)`
+grows faster than :math:`f(x)`. As :math:`x\rightarrow\infty` for every positive constant :math:`\epsilon` there exists a constant
+:math:`x` such that
+
+:math:`\vert f(x)\vert\leq\epsilon\vert g(x)\vert\;\forall\;x\geq N`
+
+Note the difference between big-O and little-o. While for big-O we need at least one constant but for little-o it must hold true
+for all constants, however small. Thus, the constraints for little-o is stronger than big-O. This also implies a function which is
+big-O will be little-o but may not be other way around.
+
+If :math:`g(x)` is nonzero, or at least becomes nonzero beyond a certain value of its variable, the relation :math:`f(x)=o(g(x))`
+is equivalent to
+
+:math:`\lim_{x\rightarrow\infty}\frac{f(x)}{g(x)}=0`
+
+Little :math:`\omega` Notation
+------------------------------
+Little-:math:`\omega` notation is the inverse of the little-:math:`o` notation i.e.,
+
+:math:`f(x)\in o(g(x))\Leftrightarrow g(x)=\omega f(x)`
+
+:math:`\lim_{x\rightarrow\infty}\frac{g(x)}{f(x)}=0`
 
 Problems on Complexity
 ======================
@@ -981,31 +1084,3 @@ an geometric progression.
 I think I should stop here now and ask the reader to brush up his math skills.
 These derivations are just a glimpse of what you will need to analyze the
 algorithms.
-
-Algorithms and ADT Implementation
-=================================
-An ADT is a generalized form of data type not necesssarily integers or real
-numbers. For example, a set of boolean values used to represent arbitrary
-binary or ternary numbers are abstract data types. An abstract data types
-can be implemented by compound types of programming languages such as
-structures in C or classes in C++ or such object-oriented languages.
-A more succinct (and *mathematically close*) definition would be that we can
-think of ADTs as mathematical model with a collection of operations defined
-on that ADT. When we define ADT as a mathematical model, we are not concerned
-with time or space efficiency. Time or space complexity are problems of
-implementation not modelling. It is quite possible that a certain ADT cannot be
-implemented on certain hardware or software. But by specifying the mathematical
-and logical attributes of a data type or structure or class, the ADT serves as
-a good starting guideline to programmers at least.
-
-Different books choose different ways to formulate ADT but in this book I will
-focus on implementation using C programming language. Thus we will be dealing
-with more code than abstract concept.
-
-Usually algorithms take form of functions and abstract data types take form
-of classes and structs when written as a program. The reason for this is
-ADTs can usually be represented as nouns while algorithms can be represented
-by verbs. Remember algorithm operate on ADTs. Both this type of conversion
-helps us in generalization and encapsulation. I will not go into details as to
-how this conversion achieves this generalization and encapsulation because
-that is out of scope of this book.

@@ -14,11 +14,11 @@ Data structures and Algorithms Contents
    :numbered:
 
    introduction
-   ls
-   ls_solutions
+   linked-list
+   linked-list-solutions
    stack
    queues
-   cldll
+   circular-list
    
 Indices and tables
 ==================
