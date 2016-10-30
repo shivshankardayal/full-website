@@ -13,7 +13,7 @@ Data structures and Algorithms Contents
    :maxdepth: 5
    :numbered:
 
-   intro
+   introduction
    ls
    ls_solutions
    stack

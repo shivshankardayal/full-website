@@ -188,6 +188,7 @@ latex_elements = {
 \usepackage{fancyhdr}
 \usepackage{lmodern}
 \usepackage{tikz}
+\usepackage{pgfplot}
 \setcounter{tocdepth}{4}
 \usetikzlibrary{arrows}
 \usetikzlibrary{intersections}

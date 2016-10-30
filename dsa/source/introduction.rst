@@ -254,23 +254,109 @@ Let us define our rational number ADT now.
                                                   else 
                                                     return <n1*d2,
                                                     d1*n2, '-'>
-Preliminaries
-=============
-First a bit of history. The word algorithm comes from the name of the 9th
-century Persian Muslim mathematician Abu Abdullah Muhammad ibn Musa
-Al-Khwarizmi. The word algorism originally referred only to the rules of
-performing arithmetic using Hindu-Arabic numerals but evolved via European
-Latin translation of Al-Khwarizmi's name into algorithm by the 18th century.
-The use of the word evolved to include all definite procedures for solving
-problems or performing tasks. The question is a what is an algorithm.
-Knuth's first volume of The Art of Computer Programming gives a very detailed
-definition. What I will say is that an algorithm is a finite seuquence of
-well-defined operations on some input data which produces an ouput in finite
-amount of time. Let us consider the classic Euclid's algorthim for finding
-greatest common divisor for two numbers. This algorthm has been described
-by Euclid in his book *Elements* (book vii, propositions i and ii). Given
-two numbers say ``a`` and ``b`` following steps need to be executed
-for finding remainder. Please see how I am going to describe the algorithm.
+
+It is not at all hard to understand the rational number ADT and I think that it is
+self-explanatory. I have used this informal style of ADT description for now but when I
+will be describing data structures I will stick to a more formal style.
+
+One particular operation I would like to point out is ``IsEqual`` operation. Usually
+ADTs are equal when they have equal value but in case of rational numbers they can be
+equal even if absolute fractions are not equal. Rather, the different fractions will
+have equal value in their reduced form, for example, :math:`\frac{1}{2}, \frac{2}{4},
+\frac{3}{6}`.
+
+Now that we have learned small bits of how to define an ADT let us turn our attention
+to more important philosophical questions.
+
+Advantages of ADTs
+------------------
+
+Encapsulation
+^^^^^^^^^^^^^
+An ADT guarantees the properties and operations about itself. This allows programmer of
+ADT that only so much is needed to satisfy the requirements posed by ADT. The
+implementation may be complex but that is abstracted by a very simple interface
+definition. Thus, a great deal of abstraction is achieved by specifying the ADT for the
+user of ADT. As a programmer of ADT we are worried only about satisfying the interface
+and properties requirements of ADT and nothing more.
+
+Localization of Change and Isolation from Implementation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+As a user of ADT we are not worried if the implementation changes internally as long as
+ADTs' interface does not change. Since the implementation must adhere to interfaces
+defined by the ADT in question we as user of ADT get a guarantee that we are isolated
+from the implementation. Thus, a change in implementation of ADT does not warrant a
+change in our code as ADT user. For example, a car's accelerator, break and clutch are
+always in the same positional order irrespective of change of mechanics inside. As you
+can see that changes in implementation are localized to the implementation details and
+users of the ADT are not effected which allows decoupling of ADT implementation and its
+usage which results in parallel work on both sides.
+
+Flexibility
+^^^^^^^^^^^
+An ADT can be implemented in different ways as you will see soon when I will present
+implementation of queues and stacks both using an array and a linked list. However, the
+users of those queues and stacks are free to switch between the two implementations as
+they see fit because the interfaces of ADTs remain same. This allows us to use different
+implementations as per requirement of our problem giving us flexibility and efficiency.
+
+Complexity Considerations for an ADT
+------------------------------------
+As I have said that while defining an ADT, we are not worried about performance
+criterion of implementation. However, there are two schools of thoughts. One faction
+thinks that these should not be part of ADT while the other thinks that ADT should
+guarantee a minimum on performance criterion in terms of memory and time. For example, I
+will quote the author of STL, Alexander Stepanov who puts forth his argument as:
+
+Following is what Alexander Stepanov has to say:
+
+| The reason for introducing the notion of abstract data types was to allow
+| interchangeable software modules. You cannot have interchangeable modules unless these
+| modules share similar complexity behavior. If I replace one module with another module
+| with the same functional behavior but with different complexity tradeoffs, the user of
+| this code will be unpleasantly surprised. I could tell him anything I like about data
+| abstraction, and he still would not want to use the code. Complexity assertions have to
+| be part of the interface.
+
+As far as I think complexity considerations should be part of ADTs because based on
+these guarantees we can choose what we will use and what we will not. In that sense, you
+can say that I agree with the opinion of Stepanov. In our trivial ADTs which we have
+seen I have omitted the complexity considerations but before we can include complexity
+considerations we have to include those in our analysis. However, before we can really
+introduce complexity considerations in our ADTs we have to learn what is complexity and
+how do we evaluate that. But before we can learn how to compute complexity of an
+algorithm let us have a concrete definition for it.
+
+What is an Algorithm?
+=====================
+The word algorithm comes from the name of the 9th century Persian Muslim mathematician
+Muḥammad ibn Mūsā al-Khwārizmī. Algorism originally referred only to the rules of
+performing arithmetic using Hindu-Arabic numerals but evolved via European Latin
+translation of al-Khwārizmī's name into algorithm by the 18th century. al-Khwārizmī
+wrote a book titled "On the Calculation with Hindu Numerals" in about 825 AD, and was
+principally responsible for spreading the Indian system of numeration throughout the
+Middle East and Europe. It was translated into Latin as "Algoritmi de numero Indorum"
+(in English, "Al-Khwarizmi on the Hindu Art of Reckoning"). The term "Algoritmi" in the
+title of the book led to the term "algorithm". Usage of the word evolved to include all
+definite procedures for solving problems or performing tasks. The question is a what is
+an algorithm. An algorithm is a finite sequence of well-defined operations on some input
+data which produces an output in finite amount of time and requires finite amount of
+space to hold its data which can be presented in a well-defined formal language for
+evaluation of a function.
+
+The concept of algorithm has existed for millennia, however a partial formalization of
+what would become the modern algorithm began with attempts to solve the
+Entscheidungsproblem (the "decision problem") posed by David Hilbert in 1928, who was a
+great mathematician born in Prussia(modern Russia). Coincidently, John Von
+Neumann(father of modern computer architecture and inventor of merge sort) was his
+assistant for some time. The geniuses of Hilbert and Neumann is well known. Hilbert's
+problems which is a list of 23 problems have fueled much of mathematical research of
+20th century while Neumann contributed to development of computers, nuclear bombs both
+Uranium and Hydrogen bombs as well as towards development of ICBMs. Subsequent
+formalizations were framed as attempts to define "Effective calculability", those
+formalizations included the Gödel–Herbrand–Kleene recursive functions, Alonzo Church's
+lambda calculus, Emil Post's "Formulation 1", and Alan Turing's Turing machines. We will
+study Lambda Calculus and Turing Machines later in this book.
 
 **Algorithm A** (*Euclid's algorithm*). Given two positive integers ``a``
 and ``b`` find the greatest common divisor, i.e. the largest positive
@@ -338,36 +424,152 @@ zero. Typically we initialize variables with value 0 in C99 but in this case
 it must be non-zero. Now let us look at some desirable properties of an
 algorithm.
 
-Efficiency
-==========
+Complexity of an Algorithm
+==========================
 There can be several algorithms to achieve the same effect on a particular set
 of data. However, the two methods may have different requirements on time
 constraint. One may take more or less or equal time than the second one. We
 definitely always want an algorithm which consumes less time. Time may not be
 only contraint all the time. Sometimes we may be bound by amount of memory
-available to use. This may forbade us from using those algorithms which consume
+available to use. This may forbid us from using those algorithms which consume
 more memory even though they run faster. So there are two types of complexities
 which are in question time and space.
 
-There are two ways to measure time complexity. One is called big-O notation and
-another is called amortized complexity. These notations are typically wrtten
-as :math:`O(n), \Omega(n)` and :math:`\Theta(n)`. The symbol:math:`O` was first
-introduced by number theorist Paul Bachmann in 1894, in the second volume of
-his book Analytische Zahlentheorie ("analytic number theory"). The number
-theorist Edmund Landau adopted it, and was thus inspired to introduce in 1909
-the notation :math:`o`; hence both are now called Landau symbols. The big
-:math:`O` was popularized in computer science by Donald Knuth, who 
-re-introduced the related Omega and Theta notations.Knuth also noted that the
-Omega notation had been introduced by Hardy and Littlewood under a different
-meaning ":math:`\ne o`" (i.e. "is not an :math:`o` of").
+Before we proceed let us familiarize ourselves with some special functions of
+mathematics and mathematical constants:
 
-There are three types of complexities of an algorithm. Best
-case, average case and worst case. In :math:`O(n)` notation worst case
-performance of an algorithm is considered. However, an amortized complexity does
-not work like that. In an algorithm an operation may be costly but then its
-frequency may be less. Amortized complexity takes care of this fact and tries to
-balance the complexity value. Therefore big-O notation is useful when worst case
-performance is entirely unacceptable otherwise amortized complexity can be used.
++--------------------------+--------------------+------------------------------+-------------------------+
+| Function                 | Name               | Typical Value                | Approximation           |
++==========================+====================+==============================+=========================+
+| :math:`\lfloor x\rfloor` |floor function      | :math:`\lfloor 3.14\rfloor`  | :math:`x`               |
++--------------------------+--------------------+------------------------------+-------------------------+
+| :math:`\lceil x\rceil`   |ceiling function    | :math:`\lceil 3.14\rceil`    | :math:`x`               |
++--------------------------+--------------------+------------------------------+-------------------------+
+| :math:`\log_2 N`         | binary logrithm    | :math:`\log_2 1024 = 10`     | :math:`1.44\ln N`       |
++--------------------------+--------------------+------------------------------+-------------------------+
+| :math:`F_N`              |Fibonacci Numbers   | :math:`F_{10} = 55`          | :math:`\phi^N/\sqrt{5}` |
++--------------------------+--------------------+------------------------------+-------------------------+
+| :math:`H_N`              | Harmonic Numbers   | :math:`H_{10} = 2.9`         | :math:`\ln N = \gamma`  |
++--------------------------+--------------------+------------------------------+-------------------------+
+| :math:`N!`               | Factorial Function | :math:`10! = 3628800`        | :math:`(N/e)^N`         |
++--------------------------+--------------------+------------------------------+-------------------------+
+| :math:`\log N!`          | Logrithm Function  | :math:`\log 100! = 520`      | :math:`N\log N - 1.44N` |
++--------------------------+--------------------+------------------------------+-------------------------+
+
+Given below are some constants:
+
++--------------------------+-------------------------------+
+| Constant                 | Value                         |
++==========================+===============================+
+| :math:`e`                + :math:`2.71828...`            |
++--------------------------+-------------------------------+
+| :math:`\gamma`           | :math:`0.577211...`           |
++--------------------------+-------------------------------+
+| :math:`\phi`             | :math:`\frac{1+ \sqrt{5}}{2}` |
++--------------------------+-------------------------------+
+| :math:`\ln 2`            | :math:`0.693147...`           |
++--------------------------+-------------------------------+
+| :math:`\log e`           | :math:`1/\ln 2=1.44269...`    |
++--------------------------+-------------------------------+
+
+If we consider harmonic sequence defined by the equation
+
+:math:`H_N = 1 + \frac{1}{2} + \frac{1}{3} + ... + \frac{1}{N}`
+
+then it looks like following curve for definite integral :math:`\ln N = \int_x^N \frac{dx}{x}`
+
+.. tikz:: Harmonic Series Representation
+
+   \draw (0,0) -- (0, 2) -- (2/3, 2) -- (2/3, 0) -- cycle;
+   \draw (2/3,0) -- (2/3, 1) -- (4/3, 1) -- (4/3, 0) -- cycle;
+   \draw (4/3,0) -- (4/3, 2/3) -- (6/3, 2/3) -- (6/3, 0) -- cycle;
+   \draw (6/3,0) -- (6/3, 2/4) -- (8/3, 2/4) -- (8/3, 0) -- cycle;
+   \draw (8/3,0) -- (8/3, 2/5) -- (10/3, 2/5) -- (10/3, 0) -- cycle;
+   \draw (10/3,0) -- (10/3, 2/6) -- (12/3, 2/6) -- (12/3, 0) -- cycle;
+   \draw (12/3,0) -- (12/3, 2/7) -- (14/3, 2/7) -- (14/3, 0) -- cycle;
+   \draw (14/3,0) -- (14/3, 2/8) -- (16/3, 2/8) -- (16/3, 0) -- cycle;
+   \draw (16/3,0) -- (16/3, 2/9) -- (18/3, 2/9) -- (18/3, 0) -- cycle;
+   \draw (18/3,0) -- (18/3, 2/10) -- (20/3, 2/10) -- (20/3, 0) -- cycle;
+   \draw plot [smooth] coordinates {(0, 2) (2/3, 2/2) (4/3, 2/3) (6/3, 2/4) (8/3, 2/5) (10/3, 2/6) (12/3, 2/7) (14/3, 2/8) (16/3, 2/9) (18/3, 2/10)};
+   \draw (0, -.1) node[below] {1};
+   \draw (20/3, -.1) node[below] {N};
+
+As you can see the harmonic sequence is defined by the total area of the bars in the image while logarithm
+natural is the area under curve. The formula
+
+:math:`H_N \approx \ln N + \gamma + (1/12 N)`
+
+is a very good approximation for the harmonic sequence where :math:`\gamma`  is *Euler–Mascheroni* constant
+also known Euler's constant after Swiss mathematician Leonhard Euler. Lorenzo Mascheroni was an Italian
+mathematician.
+
+Similarly, for Fibonacci sequence 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377 ... the nth term is
+represented by the recurrence relation :math:`F_N = F_{N_1} + F_{N-2}` for :math:`N \ge 2` where :math:`F_0 =
+1` and :math:`F_1 = 1`. These Finonacci numbers have many interesting properties. Fibonacci series also occurs
+in nature. For example, have a look at the following image of yellow Chamomile(courtesy, `Wikipedia`_):
+
+.. image:: _static/FibonacciChamomile.png
+   :alt: Fibonacci numbers in Yellow Chamomile
+
+.. _Wikipedia: https://en.wikipedia.org/wiki/Fibonacci_number
+
+In this picture, the yellow Chamomile is showing the arrangements in 21(blue) and 13(aqua) spirals. Similarly,
+the sunflower image for its seeds also depict similar arrangements as shown below:
+
+.. image:: _static/Fibona48.png
+   :alt: Fibonacci numbers in sunflower
+
+A geometrical representation of Fibinacci numbers can be given by golden spiral.
+
+.. image:: _static/golden59.png
+   :alt: Golden ratio
+
+The sizes of squares are 1, 1, 2, 3, 5, 8, 13, 21 and 34. The spiral converges at the intersection of the two
+blue lines (P), and the ratio of the lengths of these two lines BP: PD is :math:`phi`, the Golden Ratio. In
+geometry, a golden spiral is a logarithmic spiral whose growth factor is the golden ratio. The polar equation
+for a golden spiral is the same as for other logarithmic spirals, but with a special value of the growth
+factor :math:`b: r = ae^{b\theta}`. An alternative image is given below(countesy `Wikipedia1
+<https://en.wikipedia.org/wiki/Fibonacci_number#/media/File:34*21-FibonacciBlocks.png>`_):
+
+.. image:: _static/34x21-FibonacciBlocks.png
+   :alt: Square representation of Fibonacci numbers
+
+Another occurrence of Fibinacci number is in rose petals as shown below:
+
+.. image:: _static/Fibona50.png
+   :alt: Fibonacci numbers in rose petals
+
+There are two ways by which you can categorize complexity. The first categorization is by resource
+consumption. We measure these using consumption of memory and CPU. Memory consumption is known as space
+complexity and CPU consumption is known as time complexity. The second categorization is by the methods by
+which we measure complexity of an algorithm. One of the popular methods is Big-O notation denoted by :math:`O`
+. Big-O notation focuses on upper bound of algorithms for huge sets of data(tending to be infinity) and thus
+is known as asymptotic complexity. Another method which is less popular is amortized complexity. Amortized
+complexity is not concerned about worst-case performance but rather average run time for all cases. In an
+algorithm an operation may be costly but then its frequency may be less. Amortized complexity takes care of
+this fact and tries to balance the complexity value. Thus, we can safely say that Big-O notation is a
+guarantee but amortized notation is a probabilistic way of deducing run-time or rather more practical
+notion. Since it is much easier to computer Big-O complexity we will focus on it but from time to time I will
+also introduce amortized complexity for analysis of algorithms where suitable. Unfortunately, it is much
+harder to compute average case complexity or amortized complexity. To computer average case complexity one
+must make assumption about distribution of input which may not match with realistic inputs and realistic
+inputs are not easily represented as mathematical model. On the other hand worst-case complexity is quite
+acceptable and is universally acceptable but a paper by `Paul
+Kemp <http://queue.acm.org/detail.cfm?id=1814327>`_ shows that what can go wrong with worst case
+complexity. Note that worst case complexity comes in picture for very large inputs thus an algorithm
+demonstrating better worst case complexity is not necessarily better algorithm for real-world programs.
+
+Big-O is a member of a larger family of notations that is called Landau notation, Bachmann–Landau notation
+(after Edmund Landau and Paul Bachmann). Mathematically it tells us that how closely a finite series
+approximates a given function, especially for a truncated Taylor series or asymptotic expansion.
+
+One more concept is there for classification of algorithms. This classification is based on the fact whether
+data is available in its entirety to the algorithm or not. If the algorithm requires that data must be
+available for algorithm to work then it is known as offline algorithm. Algorithms which do not require entire
+data to be available on work on part of data at a point of time are known as online algorithms. Clearly as you
+can fathom, online algorithms will have better performance that offline algorithms. If ratio of performance of
+an online algorithm and its counterpart offline algorithm is bounded, the online algorithm is called
+competitive. Also, a point worth noticing is that all online algorithms do not have an offline counterpart.
 
 Now let us try to understand what is big-O notation and how to compute it.
 Consider two functions :math:`f(x)` and :math:`g(x)`. Let us assume that these
@@ -427,6 +629,11 @@ very safely say
 
 Therefore we can say :math:`f(x) = O(x^n)`.
 
+An Alternative Definition
+-------------------------
+For two functions :math:`f(x)` and :math:`g(x)` and a constant :math:`K \in I\!R^+` :math:`f(x) = O(g(x))` if
+:math:`lim_{x\rightarrow \infty} \left(\frac{g(x)}{f(x)}\right) = K`
+
 Given below is a plot of some most common functions encountered in algorithms.
 
 .. image:: data/functions_plot.png
@@ -456,6 +663,19 @@ In computer science for algorithm analysis we are almost always worried about
 big-:math:`O` complexity because it gives upper bound i.e. for large set of
 input how the algorithm will behave.
 
+Complexity of algorithms form into various functions. I am presenting graphs of some common functions below
+for quick understanding. By looking at these graphs you can quickly deduce that which complexity fares well
+and which does not.
+
+.. image:: _static/function_plot_cropped.png
+   :alt: Graphs of some common functions
+
+.. image:: _static/function_plot1_cropped.png
+   :alt: Graphs of some common functions
+
+.. image:: _static/factorial_cropped.png
+   :alt: Graph of O(n!)
+
 Continuing this let us discuss a bit more about
 big-:math:`O` notation. The problem with big-:math:`O` notation is that even
 though it talks about two contants :math:`x_0` and :math:`K` it does not give
@@ -471,6 +691,16 @@ sort. However, consider the case when we have less memory than the array
 then neither of these algorithms can be used. One of the sorting algorithms
 among many is external sort. This technique is old because in earlier devices
 memory was less and usually data to be sorted was more.
+
+I am presenting a table for runtime of various complexities, looking at which you can appreciate the
+algorithms with better runtime. This table is for a computer which executes instructions at :math:`10^9`
+instructions per second.
+
++-------------+----------------------+-----------------------+---------------------+-------------------+-------------------+
+| :math:`x`   | :math:`f(x)=x`       |:math:`f(x)=x\log_2 x` | :math:`f(x)=x^2`    | :math:`f(x)=x^3`  | :math:`f(x)=2^x`  |
++=============+======================+=======================+=====================+===================+===================+
+| 10          |.01 :math:`\mu` s     | .03 :math:`\mu` s     | .1 :math:`\mu` s    |1 :math:`\mu` s    |1 :math:`\mu` s    |
++-------------+----------------------+-----------------------+---------------------+-------------------+-------------------+
 
 Examples of Asymptotic Complexity Computation
 =============================================
