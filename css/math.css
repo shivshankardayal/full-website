@@ -3,20 +3,17 @@
     margin-left: 20px;
 }
 
+.MJXc-Display {
+    text-align: left !important;
+    margin-left: 20px;
+}
+
 div.math img{
     display: inline;
     font-size: 12px;
 }
 
-/* non math css */
-
-code, .rst-content tt, .rst-content code {
-    border: none;
-    font-size: 100%;
-}
-
-/* it was for bootstrap theme
- .dropdown-menu{
+.dropdown-menu{
     max-height: 500px;
     overflow: auto;
 }
@@ -28,29 +25,13 @@ ul.globaltoc {
 
 ul.example-selector {
     padding-bottom: 40px;
-}*/
+}
 
 pre {
     background-color: #fff;
 }
 
 body {
-    font-size: 13px;
-    font-family: "Helvetica Neue", "sans-serif";
+    font-size: 15px;
 }
-
-div[class^="highlight"] pre {
-    font-family: "Courier New",Courier,monospace;
-    font-size: 13px;
-}
-
-p {
-    font-size: 13px;
-    line-height: 18px;
-}
-
-li {
-    line-height: 18px;
-}
-
 

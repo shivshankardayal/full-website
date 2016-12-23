@@ -42,6 +42,7 @@ A Variable in Algebra
    geometric_progressions_problems_2
    geometric_progressions_solutions_2
    summation_of_series_problems
+   summation_of_series_solutions
 
 Indices and tables
 ==================
