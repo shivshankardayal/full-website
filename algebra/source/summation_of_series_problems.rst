@@ -30,7 +30,7 @@ Summation of Series Problems
 16. Find :math:`1 + 2.2 + 3.2^2 + 4.2^3 + ... + 100.2^{99}`
 17. Find :math:`1 + 2^2x + 3^2x^2 + 4^2x^3 + ...` to :math:`\infty, |x| < 1`
 18. If the sum of :math:`n` terms of a sequence be :math:`2n^2 + 4`, find its n th term. Is this sequence in A. P.?
-19. Find the sim of :math:`n` terms of the series whose nth term is :math:`n(n - 1)(n + 1)`.
+19. Find the sum of :math:`n` terms of the series whose nth term is :math:`n(n - 1)(n + 1)`.
 20. Find the sum of 80 terms of the series whose nth term is :math:`n(n^2 - 1)`
 
 Find the sum of the following series:
@@ -69,7 +69,8 @@ Find the nth term and sum to :math:`n` terms of the following series:
     of April?
 45. The odd natural numbers have been divided in groups as: (1, 3); (5, 7, 9, 11); (13, 15, 17, 19, 21, 23); ...
     Show that the sum of numbers in the nth group is :math:`n^3`.
-46. Show that the sum of the numbers in each of the following groups is an sqaure of an oddpositive integer.
+46. Show that the sum of the numbers in each of the following groups is an sqaure of an odd
+    positive integer.
     (1); (2, 3, 4); (3, 4, 5, 6, 7,); ...
 
 Find the sum to :math:`n` terms of the following series:
