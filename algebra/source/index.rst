@@ -11,11 +11,11 @@ A Variable in Algebra
    :numbered:
 
    preface
-   ns
+   number-system
    ratio
    ratio_sol
    proportions
-   prop_sol
+   proportions-solutions
    variations
    variations_solutions
    complex_numbers
