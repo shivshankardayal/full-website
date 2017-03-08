@@ -1,59 +1,183 @@
 <!DOCTYPE html>
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="10 hash">
+    <meta name="author" content="10 hash">
+    <link rel="icon" href="favicon.ico">
 
-    <title>10hash.com</title>
-    
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/styled.min.css" type="text/css" />
-    
-<script>
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-17487464-6']);
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>
+    <title>10 Hash</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
+
   <body>
-    <div class="container">
+    <nav id="header" class="navbar navbar-fixed-top navbar-light bg-faded">
+      <div class="container">
+        <button class="navbar-toggler hidden-sm-up collapsed" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="navbar-toggleable-xs collapse" id="navbar-header" aria-expanded="false">
+          <a class="navbar-brand" href="/">10 Hash</a>
+          <ul class="nav navbar-nav float-lg-right">
+            <li class="nav-item"><a class="nav-link" href="http://10hash.com/kunjika/questions">Kunjika</a></li>
+          </ul>
+        </div>
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+    <div id="middle" class="container">
       <div class="row">
-	<div class="col-md-12">
-	  <h1>Books Available</h1>
-	  <p>This page will contain all the links for available material. Keep visiting it for more up-to date information. Available books are:<br/>
-	    <a href="c/">1. C Programming(Being modified to adapt to latest specification with more examples and problems)</a><br/>
-	    <a href="dsa/">2. Data Structures and Algorithms(just started)</a><br/>
-	    <a href="algebra/">3. Informal Algebra(just started)</a><br/>
-	    <a href="gnu-linux/">4. A Book of GNU/Linux(just started)</a><br/>
-	    <!--a href="c11/">5. C Programming with C11(just started)</a><br/-->
-	  </p>
-      <h1>Software</h1>
-      <p><a href="https://github.com/shivshankardayal/kunjika">Kunjika</a> - A questions answer and article platform.</p>
-      <h1>Videos</h1>
-	  <p>My youtube channel is: <a href="http://www.youtube.com/user/libreeducation">http://www.youtube.com/user/libreeducation</a></p>
-	</div>
+          <div class="col-xs-12 col-sm-12">
+              <h1 class="cat-header ">Books Available</h1>
+          </div>
+
+          <div class="col-xs-12 col-lg-5 offset-lg-1">
+              <div class="card ">
+                <h3 class="card-header text-lg-center">C Programming</h3>
+                  <div class="card-block">
+                      <p class="card-text">A C book adhering to ISO C11 standards.</p>
+                    <a href="/c" class="btn btn-primary">Start Reading</a>
+                  </div>
+              </div>
+          </div><!--/span-->
+
+          <div class="col-xs-12 col-lg-5 ">
+              <div class="card">
+                <h3 class="card-header text-lg-center">Informal Algebra</h3>
+                  <div class="card-block">
+                      <p class="card-text">A Grade-12 Algebra book with solutions for all the problems.</p>
+                    <a href="/algebra" class="btn btn-primary">Start Reading</a>
+                  </div>
+              </div>
+          </div><!--/span-->
+
+          <div class="col-xs-12 col-lg-5 offset-lg-1">
+              <div class="card">
+                <h3 class="card-header text-lg-center">A Book of GNU/Linux</h3>
+                  <div class="card-block">
+                      <p class="card-text">A guide to GNU/Linux</p>
+                    <a href="/gnu-linux" class="btn btn-primary">Start Reading</a>
+                  </div>
+              </div>
+          </div><!--/span-->
+
+           <div class="col-xs-12 col-lg-5">
+              <div class="card">
+                <h3 class="card-header text-lg-center">Data Structures and Algorithms</h3>
+                  <div class="card-block">
+                      <p class="card-text">An exaustive book on Data Structure and Algorithims.</p>
+                    <a href="/dsa" class="btn btn-primary">Start Reading</a>
+                  </div>
+              </div>
+          </div><!--/span-->
       </div>
-      <footer class="footer">
-	<div class="container">
-	  <div class="row">
-      	    <div class="col-md-offset-3 col-md-6">
-	      <p>Design by <a href="http://10hash.com">10hash.com</a>
-		Copyright &copy; Shiv S. Dayal.</p>
-	    </div>
-	  </div>
-	</div>
-      </footer>
-    </div>
+
+      <!--- For Students -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <h1 class="cat-header ">For Students</h1>
+        </div>
+
+
+          <div class="col-xs-12 col-lg-5 offset-lg-1">
+             <div class="card card-block">
+                <h4 class="card-title text-lg-center">QA Platform </h4>
+                <p class="card-text">Got a question or you are an expert? Come here and be part of our QA community.</p>
+                <a href="/kunjika" class="btn btn-primary">Kunjika</a>
+              </div>
+          </div><!--/span-->
+
+           <div class="col-xs-12 col-lg-5">
+             <div class="card card-block">
+                <h4 class="card-title text-lg-center">Videos </h4>
+                <p class="card-text">Videos on C programming and other topics.</p>
+                <a href="https://www.youtube.com/user/libreeducation/videos" class="btn btn-primary">Youtube Channel</a>
+              </div>
+          </div><!--/span-->
+      </div>
+      <!--- / For Students -->
+
+      <!--- Software -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <h1 class="cat-header ">Software</h1>
+        </div>
+
+          <div class="col-xs-12 col-lg-5 offset-lg-1">
+             <div class="card card-block">
+                <h4 class="card-title  text-lg-center">Kunjika </h4>
+                <p class="card-text">Source code of Kunjika. It uses Python, Flask and Couchbase.</p>
+                <a href="https://github.com/shivshankardayal/kunjika" class="btn btn-primary">Source Code</a>
+              </div>
+          </div><!--/span-->
+
+           <div class="col-xs-12 col-lg-5 offset-lg-1">
+             <div class="card card-block">
+                <h4 class="card-title text-lg-center">Memoir </h4>
+                <p class="card-text">Kunjika with a better DB design.</p>
+                <a href="https://github.com/shivshankardayal/memoir" class="btn btn-primary">Source Code</a>
+              </div>
+          </div><!--/span-->
+      </div>
+      <!--- /Software -->
+
+    </div><!--/row-->
+    </div><!--/.container-->
+
+
+    <footer class="bg-inverse">
+      <div id="footerTop" class="container">
+          <div class="row">
+            <div class="col-xs-12 col-lg-4">
+                <h4 class="card-title">About </h4>
+                <p>A humble plateform for knowledge sharing</p>
+            </div>
+            <div id="footLink" class="col-xs-12 col-lg-4">
+                  <h4 class="card-title">Links </h4>
+                  <p><a href="http://10hash.com/kunjika">Kunjika</a></p>
+                  <p><a href="http://10hash.com/kunjika/articles">Articles</a></p>
+                  <p><a href="http://10hash.com/about">About us</a></p>
+                  <p><a href="mailto:shivshankar.dayal@gmail.com">Contact us</a></p>
+
+            </div><!--/span-->
+            <div id="socialLink" class="col-xs-12 col-lg-4">
+                  <h4 class="card-title">Social </h4>
+                  <p><a href="https://github.com/shivshankardayal" class="" ><span class="fa fa-github-square"></span>  GitHub</a></p>
+                  <p><a href="https://www.youtube.com/user/libreeducation/videos" class="" ><span class="fa fa-youtube-square"></span> YouTube</a></p>
+                  <!--p><a href="#" class="" ><span class="fa fa-linkedin"></span> LinkedIn</a></p-->
+                  <p><a href="https://www.facebook.com/10hash/" class="" ><span class="fa fa-facebook-square"></span> Facebook</a></p>
+                  <!--p><a href="#" class="" ><span class="fa fa-twitter"></span> Twitter</a></p-->
+            </div><!--/span-->
+          </div>
+      </div>
+      <div id="footerBottom" class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-6 copyright">
+                <p>Copyright &copy; 10 Hash 2016</p>
+            </div>
+            <div class="col-xs-12 col-lg-6 credit">
+                <p>Theme by <a href="http://cactustechnology.com">Cactus Technology</a></p>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/offcanvas.js"></script>
   </body>
 </html>
-
-<!-- Design by 10hash.com. Released as open source. -->
-
-

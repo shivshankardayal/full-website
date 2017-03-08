@@ -4,7 +4,7 @@ Unequal numbers :math:`a_1, a_2, a_3 ...` are said to be in H. P. if :math:`\fra
 \frac{1}{a_3}, ...` are in A. P. Thus, you can easily observe that no term in an H. P. can be 0 because
 that would make reciprocal infinite.
 
-:math:`nth term of an H. P. = \frac{1}{Corresponsing~term~in~corresponding~A.~P.}`
+:math:`nth~term~of~an~H.~P. = \frac{1}{Corresponsing~term~in~corresponding~A.~P.}`
 
 If :math:`a` is first term and :math:`b` is nth term then c. d.
 :math:`d = \frac{\frac{1}{b} - \frac{1}{a}}{n - 1}`.

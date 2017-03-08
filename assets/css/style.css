@@ -1,0 +1,132 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  background: #f7f7f7;
+}
+body {
+  padding-top: 70px;
+}
+footer {
+  padding: 15px 15px 30px 15px;
+}
+
+.my-box {
+  border: 1px solid #eee;
+}
+.cat-header {
+  padding: 1rem 1rem;
+  text-align: center;
+  color: #0c5245;
+}
+.card-header{
+  background-color:#fefefe;
+}
+#header {
+  background: #fefefe;
+    border-top: 2px solid #16a085;
+    border-bottom: 1px solid #eee;
+}
+#header .navbar-nav .nav-item .nav-link{
+  color: #333;
+}
+
+#header .navbar-nav .nav-item .nav-link:hover{
+  color: #777;
+}
+#middle .card-block {
+  min-height: 136px;
+}
+#middle .card {
+  margin-bottom:2.75rem;
+}
+#middle .card-header {
+  border-bottom:0px;
+  padding-top: 25px;
+}
+#middle .card-header .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+  color: #373a3c;
+}
+
+.btn-primary {
+    color: #fcfcfc;
+    background-color: #0c5245;
+    border-color: #02231d;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+.btn-primary:hover {
+    color: #eee;
+    background-color: #009688;
+    border-color: #02231d;
+}
+.btn-primary:active {
+    color: #eee;
+    background-color: #009688;
+    border-color: #0f5245;
+}
+.btn-primary:focus {
+    color: #eee;
+    background-color: #009688;
+    border-color: #0f5245;
+}
+
+footer {
+    padding: 15px 15px 0px 15px;
+    border-top: 1px solid #ccc;
+    color: #eee;
+}
+footer .card-title{
+  color: #eee;
+}
+footer a {
+  color: #16a085;
+}
+footer a:hover {
+  color: #eee;
+}
+#footerTop #footLink p {
+  margin-bottom:0;
+}
+#footerTop #socialLink p {
+  margin-bottom:5px;
+}
+#footerTop #socialLink p span {
+  margin-bottom:0;
+  font-size: 28px;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 2px;
+}
+#footerTop #socialLink p a{
+  text-decoration: none;
+}
+#footerTop {
+  margin-bottom: 15px;
+}
+#footerBottom{
+  border-top: 1px solid #555;
+  padding: 15px 0px 0px 0px;
+}
+.credit {
+  text-align: right;
+}
+.fa-github-square {color: #333;background:#fff;}
+.fa-youtube-square {color: #fff;background: #b00;}
+.fa-linkedin -square{color: #fff;background:#007BB6;}
+.fa-facebook-square {color: #fff;background:#3b5998;}
+.fa-twitter-square {color: #fff;background:#00aced;}
+
+
+#teamMember .card-img-top {
+    border-radius: 125px;
+    margin-top: 20px;
+    max-height: 175px;
+    min-height: 175px;
+}

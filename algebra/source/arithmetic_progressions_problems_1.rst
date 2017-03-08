@@ -86,7 +86,7 @@ Arithmetic Progression Problems Part 1
 
     (i) :math:`\frac{1}{bc}, \frac{1}{ca}, \frac{1}{ab}` are in A.P.
     (ii) :math:`a^2(b + c), b^2(c + a), c^2(a + b)` are in A.P.
-    (iii) :math:`\frac{ab + ac}{bc}, \frac{bc + ba}{ca}, \frac{ca + bc}{a + b}`
+    (iii) :math:`\frac{ab + ac}{bc}, \frac{bc + ba}{ca}, \frac{ca + bc}{ab}`
           are in A. P.
 
 28. If :math:`\frac{b + c - a}{a}, \frac{c + a - b}{b}, \frac{a + b - c}{c}`

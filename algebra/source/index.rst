@@ -45,6 +45,7 @@ A Variable in Algebra
    summation_of_series_solutions
    harmonic-progression
    harmonic-progression-solutions
+   am-gm-hm-problems
 
 Indices and tables
 ==================
