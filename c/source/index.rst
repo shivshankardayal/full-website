@@ -14,17 +14,19 @@ C Programming Contents
   :maxdepth: 5
   :numbered:
 
+  preface
   introduction
   basics
-  io
-  oae
-  cf
-  ap
-  func
-  su
+  input-output
+  operators-expressions
+  control-flow
+  arrays-pointers
+  functions
+  structures-unions
   strings
-  fileio
+  file-io
   macros
+  bit-manipulation
   std
   assert
   complex

@@ -38,30 +38,34 @@ footer {
   color: #777;
 }
 #middle .card-block {
-  min-height: 136px;
+  min-height: 100px;
 }
 #middle .card {
   margin-bottom:2.75rem;
 }
 #middle .card-header {
   border-bottom:0px;
-  padding-top: 25px;
+  padding-top: 5px;
 }
 #middle .card-header .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   color: #373a3c;
 }
-
+.card-block {
+    padding: 5px;
+    margin-left: 10px;
+}
 .btn-primary {
-    color: #fcfcfc;
-    background-color: #0c5245;
+    color: #fff;
+    background-color: #08c;
     border-color: #02231d;
-    padding: 5px 10px;
-    border-radius: 2px;
+    padding: 10px 10px;
+    margin-left: 140px;
+    border-radius: 30px;
 }
 .btn-primary:hover {
-    color: #eee;
-    background-color: #009688;
+    color: #fff;
+    background-color: #08c;
     border-color: #02231d;
 }
 .btn-primary:active {

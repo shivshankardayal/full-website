@@ -1,0 +1,11 @@
+Preface
+*******
+Welcome to this book on C programming using a particular specification version
+C11. As of now C1 is the latest specification fully implemented by C
+compilers. However, not all elements of the specification is implemented by
+compilers, for example, `gcc` does not implement multithreading.
+
+These days I have noticed a tendency that people
+think Java, PHP or Python are more used and they have a tendency to overlook
+the merits of C as a programming language. The benefits of learning C is
+described further in Chapter 1 "Introduction".

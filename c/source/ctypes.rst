@@ -189,17 +189,17 @@ tested class, and a zero value if not.
 
 .. code-block:: c
 
-  #include <stdio.h>
-  #include <ctype.h>
+   #include <stdio.h>
+   #include <ctype.h>
 
-  int main()
-  {
-    char c=' ', c1='\n', c2='	', c3='9';
+   int main()
+   {
+     char c=' ', c1='\n', c2='	', c3='9';
     
-    printf("%d %d %d %d\n", isblank(c), isblank(c1), isblank(c2), isblank(c3));
+     printf("%d %d %d %d\n", isblank(c), isblank(c1), isblank(c2), isblank(c3));
 
-    return 0;
-  }
+     return 0;
+   }
 
 and the output is::
 
