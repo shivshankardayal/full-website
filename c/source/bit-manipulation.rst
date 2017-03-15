@@ -1,0 +1,56 @@
+Bit Manipulation
+****************
+By now you have seen all constructs of C programming language. In this chapter
+we will study bit-manipulation using operators provided by C. Bit manipulation
+is considered low-level programming can result in hard to read code but can
+improve performance significantly if done right. Most of the bit manipulation
+involve numbers and in few cases you can apply it to characters because
+characters are internally integers. The key to bit-manipulation is bitwise
+operators `&, ^, |, !, ~ <<` and `>>` operators which stand for AND, XOR, OR,
+NOT, bit-flipping, left-shift and right-shift operators. Given below is truth
+table for AND, XOR, and OR gate for quick reference.
+
+In C, 0 represents `false` and any non-negative value represents `true`. Note
+that both are keywords.
+
++----+----+------+
+| p  | q  |p & q |
++====+====+======+
+| 0  | 0  | 0    |
++----+----+------+
+| 0  | 1  | 0    |
++----+----+------+
+| 1  | 0  | 0    |
++----+----+------+
+| 1  | 1  | 1    |
++----+----+------+
+
+**AND Gate's Truth Table**
+
++----+----+------+
+| p  | q  |p | q |
++====+====+======+
+| 0  | 0  | 0    |
++----+----+------+
+| 0  | 1  | 1    |
++----+----+------+
+| 1  | 0  | 1    |
++----+----+------+
+| 1  | 1  | 1    |
++----+----+------+
+
+**OR Gate's Truth Table**
+
++----+----+------+
+| p  | q  |p ^ q |
++====+====+======+
+| 0  | 0  | 0    |
++----+----+------+
+| 0  | 1  | 1    |
++----+----+------+
+| 1  | 0  | 1    |
++----+----+------+
+| 1  | 1  | 0    |
++----+----+------+
+
+**EXOR(known as XOR as well) Gate's Truth Table**
