@@ -27,6 +27,8 @@ C Programming Contents
   file-io
   macros
   bit-manipulation
+  multi-threading
+  tools
   std
   assert
   complex
@@ -41,6 +43,8 @@ C Programming Contents
   math
   setjmp
   signal
+  stdalign
+  stdatomic
   stdarg
   stdbool
   stddef

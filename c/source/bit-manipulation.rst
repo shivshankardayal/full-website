@@ -147,7 +147,7 @@ we compile it to object code using the command ``$gcc -c test.c`` where
 source using the command ``objdump -d -M gas -S test.o`` and we have the
 following:
 
-.. code-block:: assembly
+.. code-block:: gas
 
    test.o:     file format elf64-x86-64
 
@@ -170,7 +170,422 @@ following:
        29:	b8 00 00 00 00       	mov    $0x0,%eax
        2e:	e8 00 00 00 00       	callq  33 <main+0x33>
        33:	b8 00 00 00 00       	mov    $0x0,%eax
-       38:	c9                   	leaveq 
+       38:	c9                   	leaveq
        39:	c3                   	retq
 
+As you can clearly see signed integer is getting an ``shr`` instruction while
+unsigned integer is getting an ``sar`` instruction which causes -1 to remain -1
+while unsigned number is divided by 2. These two are known as `logical and
+arithmetic shifts`. The difference can cause you to debug your program for
+several hours. In other words, division with signed types rounds toward zero,
+as one would expect, but right shift is a division (by a power of 2) that
+rounds to :math:`-\infty`. The arithmetical shift (``sar`` in the above
+fragment) fills in ones or zeros, according to the most significant bit of the
+original number.
 
+Note that the C standard leaves the behavior of a right shift of a signed
+integer as "implementation-defined". The behavior shown (that a negative value
+remains negative after right shift for signed integers) is the default behavior
+of ``gcc``. This is clearly stated in subclause 5 of iso.6.5.7.
+
+2's Complement
+==============
+Consider the following program:
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include <limits.h>
+
+   int main()
+   {
+     int i = INT_MIN; // 0xa0000000
+
+     printf("%d\n", i);
+     if(i < 0)
+       i = -i;
+
+     printf("%d\n", i);
+
+	   return 0;
+   }
+
+and the output is not trivial to guess. The output is:
+
+.. code-block:: text
+
+   -2147483648
+   -2147483648
+
+As I had told that 0 and -0 have same representation in 2's complement in our
+first chapter. But even ``INT_MIN`` or for that matter ``LONG_MIN`` or
+``LLONG_MIN`` will have same representation as their negative of ``INT_MIN`` or
+``LONG_MIN`` or ``LLONG_MIN``. This is the reason why the above code does not
+work as expected. For this reason alone following program prints negative
+number where family of absolute-value funcitons fail.
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include <stdlib.h>
+   #include <limits.h>
+
+   int main()
+   {
+     int n;
+
+     printf("In this program we will try to compute absolute value for integers entered.\n");
+     scanf("%d", &n);
+     printf("%d\n", abs(n));
+
+     printf("Now is the time for surprise.\n");
+     printf("%d %ld %Ld\n", abs(INT_MIN), labs(LONG_MIN), llabs(LLONG_MIN));
+
+     return 0;
+   }
+
+This entire chaos erupts because since the numbers are split into two ranges
+and 0 unbalances it thus ``INT_MIN`` has an absolute value larger than
+``INT_MAX``. The same applies for other integral data types as well.
+
+Another issue with shifts is that you cannot shift for entire width of the data
+type. For example, consider the following program on a 64-bit computer
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned int i = 0;
+     unsigned long l = 0;
+
+     printf("%u %lu\n", i>>32, l>>64);
+     return 0;
+   }
+
+and ``gcc`` will immediately give you following warnings with ``-Wall`` flag:
+
+.. code-block:: text
+
+   test.c: In function ‘main’:
+   test.c:5:3: warning: right shift count >= width of type [enabled by default]
+      printf("%d \n", ~0 >> 32);
+      ^
+   test.c:6:3: warning: right shift count >= width of type [enabled by default]
+      printf("%ld \n", ~0UL >> 64);
+      ^
+
+However, we are lucky that output is consistent in both the cases and is 0 at
+least on my Intel CPU. This may not be the case on other CPUs thus be careful
+when you want to shift a number which is equal or greater than the width of
+that type.
+
+Average of two numbers
+======================
+Let us consider calculation of average of two unsigned integers. A naive
+approach is given below:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned int i =100;
+     unsigned int j = 100;
+
+     printf("%u\n", (i+j)/2);
+     return 0;
+   }
+
+Now as you can easily guess output would be 100 but if the sum is greater than
+``UINT_MAX`` then it will cause integer overflow which is not a desirable
+case. Another better but still naive argument would be to cast these to higher
+data type such as unsigned long. The problem is that you cannot cast ``unsigned
+long long`` to a higher data type as it is already highest. The previous
+program can be modified to compute it without overflowas given below:
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include <stdlib.h>
+
+   int main()
+   {
+     unsigned int i =100;
+     unsigned int j = 100;
+
+     printf("%u\n", (i & j) + ((i ^ j)>>1));
+
+     return 0;
+   }
+
+Another way to compute this is given below:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned int i =100;
+     unsigned int j = 110;
+
+     printf("%u\n", i + abs((i - j))/2);
+
+     return 0;
+   }
+
+However, this solution is not in sync with the theme of this chapter i.e. by bits manipulation.
+
+If it is known that :math:`i\ge j` then another solution is possible which is
+given below:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned int i =100;
+     unsigned int j = 110;
+
+     printf("%u\n", (i | j) - ((i ^ j)>>1));
+
+     return 0;
+   }
+
+Swapping two numbers without using a temporary
+==============================================
+The solution of swapping two numbers without a temporary is well known using
+XOR operation. Given below is code:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned int i =100;
+     unsigned int j = 110;
+
+     i = i ^ j;
+     j = i ^ j;
+     i = i ^ j;
+
+     printf("%u %u\n", i , j);
+
+     return 0;
+   }
+
+and the output is not hard to guess, which, is
+
+.. code-block:: text
+
+   110 100
+
+One more usage of this XOR gate can be toggling a number between two values as
+given below:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned int i =100;
+     unsigned int j = 110;
+     unsigned int t = i ^ j;
+     unsigned int x = i;
+
+     x ^= t;
+
+     printf("%u %u\n", i , j);
+
+     return 0;
+   }
+
+Here, output is not important but ``x`` can toggle between ``i`` and ``j`` by
+XORing with ``t``, which is pre-calculated.
+
+Finding next even or odd number
+===============================
+It is trivial to compute next even or odd number using bitwise operations. A
+program to do that is given below:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned int i =100;
+
+     printf("%u\n", (i | 1) + 1 );
+     printf("%u\n", (i - 1) & ~1 );
+     printf("%u\n", (i + 1) | 1);
+     printf("%u\n", (i & ~1) - 1);
+
+     return 0;
+   }
+
+The output is self explanatory and you can deduce it yourself.
+
+Operations on bits
+==================
+Testing a bit
+-------------
+It is trivial to test a bit of a program. For example:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned long i =100;
+
+     // 4th bit is tested
+     printf("%d\n", (i & (1UL << 4)) != 0);
+     // 6th bit is tested
+     printf("%d\n", (i & (1UL << 6)) != 0);
+
+     return 0;
+   }
+
+
+Setting a bit
+-------------
+Once again it is trivial and you can draw analogy from previous program:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned long i =100;
+
+     // 4th bit is set
+     printf("%d\n", (i | (1UL << 4)) != 0);
+     // 6th bit is set
+     printf("%d\n", (i | (1UL << 6)) != 0);
+
+     return 0;
+   }
+
+
+Clearing a bit
+--------------
+Only code is enough again:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned long i =100;
+
+     // 4th bit is cleared
+     printf("%lu\n", (i & ~(1UL << 4)));
+     // 6th bit is cleared
+     printf("%lu\n", (i & ~(1UL << 6)));
+
+     return 0;
+   }
+
+
+Toggling a bit
+--------------
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned long i =100;
+
+     // 4th bit is toggled
+     printf("%lu\n", (i ^ (1UL << 4)));
+     // 6th bit is toggled
+     printf("%lu\n", (i ^ (1UL << 6)));
+
+     return 0;
+   }
+
+and the output is:
+
+.. code-block:: text
+
+   116
+   36
+
+
+Copying bits
+------------
+Say we have two positions in a number and we want to copy bits then following
+code will do that:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned long i =100;
+
+     unsigned long x = ((i >> 6) ^ (i >> 4)) & 1; // one if bits are different
+     i ^= (x << 4); // change if bits are different
+
+     printf("%lu\n", i);
+
+     return 0;
+   }
+
+6th bit of 100 is 1 while 4th is 0. Copying 6th bit to 4th position increases
+value by 16, which is nothing but :math:`2^4` and thus our answer is 116.
+
+Swapping even and odd bits of a number
+--------------------------------------
+Consider the following problem. In a given number(unsigned in nature) we want
+to move bits at position 0, 2, 4, 6, ... to position 1, 3, 5, 7, ... and bits
+at position 1, 3, 5, 7, ... to position 0, 2, 4, 6 ... then how would we
+achieve that.
+
+The solution lies in the observation that bits can be extracted using bitwise
+AND operation. Thus to extract bits at even position we need a number which is
+all 1s at even position while 0s at at odd positions. Same analogy can be
+applied for odd positions. Once we have extracted the numbers we can shift
+number with even bits to left and second one to right. Thus now bits are at
+proper position and ORing the two will give us desired result. Following code
+does it for an ``unsigned char``. This type has been chosen for simplicity.
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int main()
+   {
+     unsigned char uc =107; // bit sequence is 01101011 thus our
+     // desired sequence is 10010111 i.e. output as 151
+     unsigned char ue = 170; // bit sequence is 10101010
+     unsigned char uo = 85; // bit sequence is 01010101 note that sum
+     // of ue and uo is 255 which is UCHAR_MAX or maximum value for
+     // unsigned char
+
+     ue &= uc;
+     ue = ue >> 1;
+     uo &= uc;
+     uo = uo << 1;
+
+     uc = ue | uo;
+
+     printf("%u %u %u\n", uc, ue, uo);
+     return 0;
+   }
+
+More of such problems which are specific to bits will be provided in data
+structures and algorithm book. For now basics have been explain as how to use
+basic bitwise operations which I believe is sufficient.
