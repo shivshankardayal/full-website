@@ -205,3 +205,45 @@ Problems
 21. Insert :math:`17` A. M. between :math:`\frac{7}{2}` and :math:`-\frac{83}{2}`.
 22. Between :math:`1` and :math:`31, n` A. M. are inserted such that ratio of the :math:`7` th
     and :math:`(n - 1)` th means is :math:`5:9`, find :math:`n`.
+23. Find the relation between :math:`x` and :math:`y` in order that :math:`r` th mean between :math:`x` and
+    :math:`2y` may be the same as :math:`r` th mean between :math:`2x` and :math:`y`; if :math:`n`
+    arithmetic means are inserted in each case.
+24. Insert :math:`7` geometric means between :math:`2` and :math:`162`.
+25. Insert :math:`6` geometric means between :math:`\frac{8}{27}` and :math:`\frac{-81}{16}`.
+26. If odd numbers of geometric means are inserted between two given quantities :math:`a` and :math:`b`,
+    show that the middle geometric mean is :math:`\sqrt{ab}`.
+27. Insert four harmonic means between :math:`1` and :math:`\frac{1}{11}`.
+28. :math:`n` harmonic means have been inserted between :math:`1` and :math:`4` such that first mean:last
+    mean = :math:`1:3`, find :math:`n`.
+29. Find :math:`n` such :math:`\frac{a^{n+1}+b^{n+1}}{a^n + b^n}` may be a single harmonic mean between
+    :math:`a` and :math:`b`.
+30. If :math:`H_1, H_2, ..., H_n` be :math:`n` harmonic means between :math:`a` and :math:`b`, prove that
+    :math:`\frac{H_1 + a}{H_1 - a} + \frac{H_n + b}{H_n - b} = 2n`
+31. If :math:`A` be the A. M. and :math:`G` be the G. M. between two numbers, show that the numbers are
+    :math:`A + \sqrt{A^2 - G^2}` and :math:`A - \sqrt{A^2 - G^2}`
+32. If the ratio of A. M. and G. M. between two numbers :math:`a` and :math:`b` is :math:`m:n`, prove that
+    :math:`a:b = m + \sqrt{m^2 - n^2}:m - \sqrt{m^2 - n^2}`
+33. If one G. M. :math:`G` and two A. M. :math:`p` and :math:`q` be inserted between two given quantities,
+    prove that :math:`G^2 = (2p - q)(2q - p)`
+34. If one A. M. :math:`A` and two G. M. :math:`p` and :math:`q` be inserted between two numbers, show that
+    :math:`\frac{p^2}{q} + \frac{q^2}{p} = 2A`
+35. If A. M. between :math:`a` and :math:`b` is equal to :math:`m` times the H. M., prove that :math:`a:b =
+    \sqrt{m}+\sqrt{m - 1}:\sqrt{m}-\sqrt{m - 1}`
+36. If :math:`9` arithmetic means and :math:`9` harmonic means be inserted between :math:`2` and :math:`3`,
+    prove that :math:`A + \frac{6}{H} = 5`, where :math:`A` is any arithmetic mean and :math:`H`, the
+    corresponding harmonic mean.
+37. If :math:`a` is the A. M. between :math:`b` and :math:`c`, :math:`b` the G. M. between :math:`a` and
+    :math:`c`, then show that :math:`c` is the H. M. between :math:`a` and :math:`b`.
+38. If :math:`a_1, a_2` be the two A. M., :math:`g_1, g_2` be the two G. M. and :math:`h_1, h_2` be the
+    two H. M. between any two numbers :math:`x` and :math:`y`, show that :math:`a_1h_2 = a_2h_1 = g_1g_2 =
+    xy`
+39. If between any two quantities, there be inserted :math:`2n - 1` arithmetic, geometric and harmonic
+    means, show that :math:`n` th means inserted are in G. P.
+40. The A. M. between two numbers exceed their G. M. by :math:`2` and the G. M. exceeds the H. M. by
+    :math:`\frac{8}{5}`, find the numbers.
+41. The harmonic mean of two numbers is :math:`4`, their A. M. :math:`A` and G. M. :math:`G` satisfy the
+    relation :math:`2A + G^2 =27`. Find the numbers.
+42. If :math:`a, b, c` are in H. P., prove that
+    i. :math:`a^2 + c^2 > 2b^2`
+    ii. :math:`a^5 + c^5 > 2b^5`
+43. Prove that :math:`b^2 > = < ac` according as :math:`a, b, c` are in A. P., G. P. and H. P.

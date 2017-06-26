@@ -168,19 +168,38 @@ values:
   ``memory_order_seq_cst``.
 
 
-  **NOTE 1**
+    **NOTE 1**
 
-  Although it is not explicitly required that `S` include lock operations, it
-  can always be extended to an order that does include lock and unlock
-  operations, since the ordering between those is already included in the
-  "happens before" ordering.
+    Although it is not explicitly required that `S` include lock operations, it
+    can always be extended to an order that does include lock and unlock
+    operations, since the ordering between those is already included in the
+    "happens before" ordering.
 
-  **NOTE 2**
+    **NOTE 2**
 
-  Atomic operations specifying ``memory_order_relaxed`` are relaxed only with
-  respect to memory ordering. Implementations must still guarantee that any
-  given atomic access to a particular atomic object be indivisible with respect
-  to all other atomic accesses to that object.
+    Atomic operations specifying ``memory_order_relaxed`` are relaxed only with
+    respect to memory ordering. Implementations must still guarantee that any
+    given atomic access to a particular atomic object be indivisible with respect
+    to all other atomic accesses to that object.
 
+For an atomic operation `B` that reads the value of an atomic object `M`, if
+there is a ``memory_order_seq_cst`` fence `X` sequenced before `B`, then `B`
+observes either the last ``memory_order_seq_cst`` modification of `M` preceding
+`X` in the total order `S` or a later modification of `M` in its modification
+order.
 
+For atomic operations `A` and `B` on an atomic object `M`, where `A` modifies
+`M` and `B` takes its value, if there is a ``memory_order_seq_cst`` fence `X`
+such that `A` is sequenced before `X` and `B` follows `X` in `S`, then `B`
+observes either the effects of `A` or a later modification of `M` in its
+modification order.
+
+For atomic operations A and B on an atomic object M, where A modifies M and B takes its value, if there are memory_order_seq_cst fences X and Y such that A is sequenced before X, Y is sequenced before B, and X precedes Y in S, then B observes either the effects of A or a later modification of M in its modification order.
+
+Atomic read-modify-write operations shall always read the last value (in the modification order) stored before the write associated with the read-modify-write operation.
+
+An atomic store shall only store a value that has been computed from constants and program input values by a finite sequence of program evaluations, such that each evaluation observes the values of variables as computed by the last prior assignment in the sequence.[86] The ordering of evaluations in this sequence shall be such that
+
+    If an evaluation B observes a value computed by A in a different thread, then B does not happen before A.
+    If an evaluation A is included in the sequence, then all evaluations that assign to the same variable and happen before A are also included.
 .. [1] See "future library direction" (iso.7.31.8).
