@@ -190,3 +190,90 @@ AM, GM, HM Solutions
     Now, :math:`A + \sqrt{A^2 - G^2} = \frac{a + b}{2} + \sqrt{\frac{(a + b)^2}{4} - ab} = a`
 
     and :math:`A - \sqrt{A^2 - G^2} = \frac{a + b}{2} - \sqrt{\frac{(a + b)^2}{4} - ab} = b`
+32. Following from previous question :math:`\frac{a + b}{2} : \sqrt{ab} = m : n`.
+
+    Thus, :math:`a : b = m + \sqrt{m^2 - n^2} : m - \sqrt{m^2 - n^2}`
+33. Let :math:`a` and :math:`b` be two numbers. :math:`G = \sqrt{ab}`. Let :math:`d` be the common difference. Then,
+    :math:`d = \frac{b - a}{3}`.
+
+    Thus, we have :math:`p = a + d = \frac{b - 2a}{3}` and :math:`q = \frac{2b - a}{3}`
+
+    Now, :math:`(2p - q)(2q - p) = \frac{(2b - 4a - 2b - a)}{3}.\frac{(4b - 2a - b - 2a)}{3}`
+
+    :math:`= ab = G^2`
+34. We have, :math:`A = \frac{(a + b)}{2}`. Let :math:`r` be the common ratio, then :math:`r =
+    \sqrt[3]{\left(\frac{b}{a}\right)}`
+
+    :math:`p = a\sqrt[3]{\left(\frac{b}{a}\right)}` and :math:`q = a\left(\frac{b}{a}\right)^{\frac{2}{3}}`
+
+    Now, :math:`\frac{p^2}{q} + \frac{q^2}{p} = a + b = 2A`
+35. Let :math:`A` be the A. M. then :math:`A = \frac{a + b}{2}` and :math:`H` be the H. M. then :math:`H =
+    \frac{2ab}{a + b}`
+
+    Given, :math:`A = mH \Rightarrow \frac{a + b}{2} = \frac{2abm}{a + b}`
+
+    :math:`\frac{(a + b)^2}{4ab} = m`
+
+    :math:`\sqrt{m} = \frac{a + b}{2\sqrt{ab}}` and :math:`\sqrt{m - 1} = \frac{a - b}{2\sqrt{ab}}`
+
+    Clearly, :math:`\sqrt{m} + \sqrt{m - 1}: \sqrt{m} - \sqrt{m - 1} = a : b`
+36. Let :math:`d` and :math:`h` be common differences for the A. P. and H. P. respectively.
+
+    Let :math:`a_1, a_2, ..., a_9` be the arithmetic means and :math:`h_1, h_2, ..., h_9` be the harmonic means between
+    :math:`2` and :math:`3`.
+
+    :math:`d = \frac{1}{10}` and :math:`h = \frac{\frac{1}{3} - \frac{1}{2}}{10} = -\frac{1}{60}`
+
+    :math:`A = 2 + rd = 2 + \frac{r}{10}` and :math:`\frac{1}{H} = \frac{1}{2} - \frac{r}{60}` where :math:`A` and :math:`H` are
+    :math:`r` th mean for A. P. and H. P. respectively.
+
+    Now it is trivial to show that :math:`A + \frac{6}{H} = 5`
+37. :math:`a = \frac{b + c}{2}` and :math:`b = \sqrt{ac} \Rightarrow c = \frac{b^2}{a}`
+
+    Substituting for :math:`c` in A. M. we have
+
+    :math:`a = \frac{b(a + b)}{2a}`
+
+    Substituting this value of :math:`a` for H. M. between :math:`a` and :math:`b`
+
+    :math:`\frac{2ab}{a + b} = \frac{2b(a + b)b}{2a(a + b)} = \frac{b^2}{a} = c` from the G. M.
+38. Clearly, :math:`a_1 = \frac{2x - y}{3}` and :math:`a_2 = \frac{x - 2y}{3}`
+
+    :math:`g_1 = x\left(\frac{y}{x}\right)^{\frac{1}{3}}` and :math:`g_1 = x\left(\frac{y}{x}\right)^{\frac{2}{3}}`
+
+    :math:`h_1 = \frac{3xy}{x - 2y}` and :math:`h_2 = \frac{3xy}{2x - y}`
+
+    Substituting these we get, :math:`a_1h_2 = a_2h_1 = g_1g_2 = xy`
+39. Let the two quantities be :math:`a` and :math:`b`. If :math:`2n - 1` arithmetic means are inserted and if :math:`d`
+    is the common difference then :math:`d = \frac{b - a}{2n}`
+
+    For :math:`2n - 1` geometric means if :math:`r` be the common ratio then :math:`r =
+    \left(\frac{b}{a}\right)^{\frac{1}{2n}}`
+
+    For harmonic means the common difference would be :math:`= \frac{a - b}{2nab}`
+
+    :math:`n` th arithmetic mean :math:`= a + \frac{b - a}{2n}.n = \frac{a + b}{2}`
+
+    :math:`n` th geometric mean :math:`= \sqrt{ab}`
+
+    :math:`n` th harmonic mean :math:`= \frac{2ab}{b + a}`
+
+    Clearly, these three are in G. P.
+40. This problem is same as 14 and has been left as an exercise.
+41. Let :math:`a` and :math:`b` be the two numbers. Then, :math:`4 = \frac{2ab}{a + b}`
+
+    :math:`A = \frac{a + b}{2}` and :math:`G = \sqrt{ab}`
+
+    :math:`A.H = G^2 \therefore G^2 = 4A` Solving we get numbers as :math:`6` and :math:`3`
+42. Following 16 both can be proved easily.
+43. If :math:`a, b, c` are in A. P. then :math:`b = \frac{a + c}{2}`
+
+    :math:`b^2 = \frac{(a + c)^2}{4} > ac` because :math:`\frac{(a + c^2)}{4} - ac > 0 \Leftrightarrow (a -c)^2 > 0`
+
+    If :math:`a, b, c` are in G. P. then :math:`b = \sqrt{ac} \Leftrightarrow b^2 = ac`
+
+    If :math:`a, b, c` are in H. P. then :math:`b = \frac{2ac}{a + c}`
+
+    :math:`b^2 = \frac{4a^2c^2}{(a + c)^2} < ac`
+
+    because :math:`\frac{(a + c)^2} - 4ac > 0`
