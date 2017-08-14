@@ -276,4 +276,4 @@ AM, GM, HM Solutions
 
     :math:`b^2 = \frac{4a^2c^2}{(a + c)^2} < ac`
 
-    because :math:`\frac{(a + c)^2} - 4ac > 0`
+    because :math:`(a + c)^2 - 4ac > 0`

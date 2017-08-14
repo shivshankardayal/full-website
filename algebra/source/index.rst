@@ -48,6 +48,8 @@ A Variable in Algebra
    am-gm-hm-problems
    am-gm-hm-solutions
    quadratic-equations
+   quadratic-equations-problems-part1
+   quadratic-equations-solutions-part1
 
 Indices and tables
 ==================

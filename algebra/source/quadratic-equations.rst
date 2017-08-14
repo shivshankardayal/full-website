@@ -135,7 +135,8 @@ For equation :math:`ax^2 + bx + c = 0` when :math:`a, b, c` are real.
 (i) When :math:`D < 0`
 
     In this case both roots :math:`\alpha` and :math:`\beta` will be either complex numbers or imaginary depending on
-    whether :math:`b` is zero or not as discriminant is imaginary. These roots are conjugate of each other.
+    whether :math:`b` is zero or not as discriminant is imaginary. These roots are conjugate of each other which you can
+    verify easily.
 (ii) When :math:`D = 0`
 
      In this case both roots will be equal.
@@ -143,7 +144,150 @@ For equation :math:`ax^2 + bx + c = 0` when :math:`a, b, c` are real.
 (iii) When :math:`D > 0`
 
       In this case both the roots will be equal and unequal. If :math:`D` is not a perfect square(square of a rational
-      number) then roots are irrational and come as a pair of conjugate irrational numbers.
+      number) then roots are irrational and come as a pair of conjugate irrational numbers which you can
+      verify easily.
+
+(iv) When :math:`D` i.e. :math:`b^2 - 4ac` is a perfect square(square of a rational number) and :math:`a, b, c` are rationals.
+
+     In this case :math:`b^2 - 4ac` = square of a rational number
+
+     :math:`\therefore \sqrt{b^2 - 4ac}` = a rational number, let :math:`\sqrt{b^2 - 4ac} = k`
+
+     Thus, :math:`\alpha = \frac{-b - k}{2a}` and :math:`\beta = \frac{-b + k}{2a}` where :math:`a, b, k` are rationals.
+
+Conjugate Roots
+---------------
+Imaginary roots of a quadratic equation with real coefficients always occur in conjugate pair.
+
+Let :math:`\alpha + i\beta` be a root of the quadratic equation :math:`ax^2 + bx + c = 0` where :math:`a, b, c` are real numbers.
+Thus,
+
+:math:`a(\alpha + i\beta)^2 + b(\alpha + i\beta) + c = 0`
+
+:math:`\Rightarrow (a\alpha^2 - a\beta^2 + b\alpha + c) + (2a\alpha\beta + b\beta)i = 0`
+
+Equating real and imaginary parts
+
+:math:`a\alpha^2 - a\beta^2 + b\alpha + c = 0` and :math:`2a\alpha\beta + b\beta = 0`
+
+Using :math:`\alpha - i\beta` as the second root of the equation
+
+:math:`a(\alpha - i\beta)^2 + b(\alpha - i\beta) + c`
+
+:math:`= (a\alpha^2 - a\beta^2 + b\alpha + c) + (2a\alpha\beta + b\beta)i`
+
+:math:`= 0 + i.0`
+
+Thus, we can see that :math:`\alpha -i\beta` also satisfies the equation and is second root of the equation.
+
+Irrational Roots
+----------------
+Like imaginary roots, irrational roots also appear in pair as conjugate roots of a quadratic equation.
+Proof has been left as an exercise to the reader.
 
 Symmetric functions of roots
 ============================
+If a function of :math:`\alpha` and :math:`\beta` remain unchanged when they are interchanged then the function is
+called symmetric function of :math:`\alpha` and :math:`\beta`. For example, :math:`\alpha^2 + \beta^2 + \alpha\beta` is
+a symmetric function while :math:`\alpha^2 + \beta^2 + \alpha` is not a symmetric function.
+
+Representing the equation in terms of roots
+===========================================
+Let :math:`ax^2 + bx + c = 0` be a quadratic equation whose roots are :math:`\alpha` and :math:`\beta`.
+
+:math:`ax^2 + bx + c = x^2 + \left(\frac{b}{a}\right) + \left(\frac{c}{a}\right)`
+
+:math:`x^2 - \left(-\frac{b}{a}\right) + \frac{c}{a} = x^2 -(\alpha + \beta)x + \alpha\beta = 0`
+
+Condition for common roots
+==========================
+Let :math:`ax^2 + bx + c = 0` and :math:`a_1x^2 + b_1x + c_1 = 0` have a common root.
+
+Let :math:`c, c_1 \ne 0` and :math:`ab_1 - a_1b \ne = 0`. Let the common root be :math:`\alpha` then.
+
+:math:`a\alpha^2 + b\alpha + c = 0` and :math:`a_1\alpha^2 + b_1\alpha + c_1 = 0`
+
+By cross-multiplication
+
+:math:`\frac{\alpha^2}{bc_1 - b_1c} = \frac{\alpha}{ca_1 - c_1a} = \frac{1}{ab_1 - a_1b}`
+
+:math:`\Rightarrow (bc_1 - b_1c)(ab_1 - a_1b) = (ca_1 - c_1a)^2`
+
+This is the required condition.
+
+**Note.** If :math:`c = c_1 = 0,` then equations :math:`ax^2 + bx + c = 0` and :math:`a_1x^2 + b_1x + c_1 = 0` will
+reduce to :math:`ax^2 + bx = 0` and :math:`a_1x^2 + bx_1 = 0` and have :math:`0` as a common root. The other roots would
+be :math:`-\frac{b}{a}` and :math:`-\frac{b_1}{a_1}`. Thus, if :math:`a_1b = ab_1` then both the roots would be common.
+
+For having both the roots common the equations must be identical i.e.  :math:`\frac{a}{a_1} = \frac{b}{b_1} =
+\frac{c}{c_1}`
+
+Sign of quadratic expression :math:`ax^2 + bx + c`
+==================================================
+Let :math:`y = ax^2 + bx + c` and let :math:`\alpha` and :math:`\beta` be the root of the quadratic expression. Then,
+:math:`\alpha + \beta = -\frac{b}{a}, \alpha\beta = \frac{c}{a}` and :math:`ax^2 + bx + c = a(x - \alpha)(x - \beta)`
+
+:math:`\therefore y = ax^2 + bx + c`
+
+Case I: When :math:`\alpha` and :math:`\beta` are complex numbers.
+
+Let :math:`\alpha = p + iq`, then :math:`\beta = p - iq` where :math:`q \ ne 0`
+
+:math:`ax^ + bx + c = a{x - (p + iq)}{x - (p - iq)}`
+
+:math:`= a{(x - p)^2 + q^2} = a~\times` a positive quantity
+
+:math:`ax^2 + bx + c` will have same sign as that of :math:`a` for all real :math:`x`.
+
+Case II: When :math:`\alpha` and :math:`\beta` are real and equal.
+
+Given :math:`\alpha = \beta`
+
+:math:`ax^2 + bx + c = a{x - \alpha}{x - \beta} = a{x - \alpha}^2`
+
+Thus, the expression will have same sign as :math:`a` except when :math:`x = \alpha` in which case it will be 0.
+
+Case III: When :math:`\alpha` and :math:`\beta` are real and unequal.
+
+Sub case (i) When :math:`x < \alpha < \beta`
+
+:math:`\because x < \alpha \Rightarrow x - \alpha < 0` and :math:`x < \beta \Rightarrow x - \beta < 0`
+
+:math:`\therefore a(x - \alpha)(x - \beta) > 0` thus the expression :math:`ax^2 + bx + c` will have same sign as that of
+:math:`a`.
+
+Sub case (ii) When :math:`x > \alpha > \beta`
+
+:math:`\because x > \alpha \Rightarrow x - \alpha > 0` and :math:`x > \beta \Rightarrow x - \beta > 0`
+
+:math:`\therefore a(x - \alpha)(x - \beta) > 0` thus the expression :math:`ax^2 + bx + c` will have same sign as that of
+:math:`a`.
+
+Sub case (iii) When :math:`\alpha < x < \beta`
+
+:math:`\because x > \alpha \Rightarrow x - \alpha > 0` and :math:`x < \beta \Rightarrow x - \beta < 0`
+
+:math:`\therefore a(x - \alpha)(x - \beta) < 0` thus the expression :math:`ax^2 + bx + c` will have opposite sign as
+that of :math:`a`.
+
+Maximum and minimum values of :math:`ax^2 + bx + c`
+===================================================
+Let :math:`y = ax^2 + bx + c \Rightarrow ax^2 + bx + c - y = 0`
+
+Since :math:`x` is real, therefore, discriminant has to be greater than 0.
+
+:math:`\therefore b^2 - 4a(c - y) \geq 0 \Rightarrow b^2 - 4ac + 4ay \geq 0`
+
+:math:`\Rightarrow y \geq \frac{4ac - b^2}{4a}`
+
+**Case I:** When :math:`a > 0`
+
+Clearly, minimum value of :math:`y` is :math:`\frac{4ac - b^2}{4a}`.
+
+Substituting this for :math:`ax^2 + bx + c = y` and solving we see that it occurs for :math:`x = -\frac{b}{2a}`
+
+Thus, minimum value of :math:`y = \frac{4ac - b^2}{4a}` and it has no maximum value.
+
+**Case II:** When :math:`a < 0`
+
+Clearly, when :math:`a < 0, y` has  no minimum value and maximum value will again occur at :math:`x = -\frac{b}{2a}`.
