@@ -76,7 +76,7 @@ Quadratic Equations Problems Part 1
     show that their other roots are given by the equation :math:`x^2 + ax + bc = 0`
 32. If :math:`a, b, c \in R` and equations :math:`ax^2 + bx + c = 0` and :math:`x^2 + 2x + 9 = 0` have a common root, show that
     :math:`a : b : c = 1 : 2 : 9`
-33. Find the value of :math:`p` if the equation :math:`3x^ - 2x + p = 0` and :math:`6x^2 - 17x + 12 = 0` have a common root.
+33. Find the value of :math:`p` if the equation :math:`3x^2 - 2x + p = 0` and :math:`6x^2 - 17x + 12 = 0` have a common root.
 34. Show that :math:`|x|^2 - |x| - 2 = 0` is an equation.
 35. Show that :math:`\frac{(x + b)(x + c)}{(b - a)(c - a)} + \frac{(x + c)(x + a)}{(c - b)(a - b)} + \frac{(x + a)(x + b)}{(a - c)(b
     - c)} = 1` is an identity.
