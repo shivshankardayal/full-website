@@ -89,13 +89,13 @@ Quadratic Equations Problems Part 1
 41. Solve for :math:`x:` :math:`(5 + 2\sqrt{6})^{x^2 - 3} + (5 - 2\sqrt{6})^{x^2 - 3} = 10`
 42. A car travels :math:`25` km per hour faster than a bus for a journey of :math:`500` km. The bus takes 10 hours more than the
     car. Find the speed of the bus and the car.
-43. Show that the roots of the equation :math:`(a + b)x^2 - 2(a^2 - b^2)x + (a - b)^2 = 0` are equal.
+43. Show that the roots of the equation :math:`(a + b)^2x^2 - 2(a^2 - b^2)x + (a - b)^2 = 0` are equal.
 44. Show that the equation :math:`3x^2 + 7x + 8 = 0` cannot be satisfied by any real value of :math:`x`.
 45. For what value of :math:`a` will the roots of the equation :math:`3x^2 + (7 + a) + 8 - a = 0` be equal.
 46. If the roots of the equation :math:`(a^2 + b^2)x^2 + 2(ac + bd)x + (c^2 + d^2) = 0` are equal, then show that :math:`a : b = c :
     d`
 47. Prove that the roots of the equation :math:`(b - c)x^2 + 2(c - a)x + (a - b) = 0` are always real.
-48. Show that the roots of the equation :math:`\frac{1}{x - a} + \frac{1}{a} + \frac{1}{x - 1 = 0}` are real for all real values of
+48. Show that the roots of the equation :math:`\frac{1}{x - a} + \frac{1}{a} + \frac{1}{x - 1} = 0` are real for all real values of
     :math:`a`.
 49. Show that if :math:`a + b + c = 0,` the roots of the equation :math:`ax^2 + bx + c = 0` are rational.
 50. Prove that the roots of the equation :math:`(b + c -2a)x^2 + (c + a - 2b)x + (a + b - 2c) = 0` are rational.

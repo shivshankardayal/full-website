@@ -498,4 +498,94 @@ Quadratic Equations Solutions Part 1
     If :math:`a = -46 \Rightarrow x^2 + 15x + 46 = 0 \Rightarrow x = \frac{-15 \pm \sqrt{41}}{2}`
 
     If :math:`a = -54 \Rightarrow x^2 + 15x + 54 = 0 \Rightarrow x = - 6, -9`
-40.
+40. Given equation is :math:`3^{2x + 1} + 3^2 = 3^{x + 3} + 3^x`
+
+    Let :math:`3^x = a,` then we have
+
+    :math:`3a^2 + 9 = 28a \Rightarrow 3a^2 - 28a + 9 = 0`
+
+    :math:`a = \frac{1}{3}, 9`
+
+    If :math:`a = \frac{1}{3} \Rightarrow x = -1`
+
+    If :math:`a = 9 \Rightarrow x = 2`
+41. Clearly, :math:`(5 + 2\sqrt{6})^{x^2 - 3}(5 - 2\sqrt{6})^{x^2 - 3} = 1`
+
+    Let :math:`(5 + 2\sqrt{6})^{x^2 - 3} = 1` then :math:`(5 - 2\sqrt{6})^{x^2 - 3} = \frac{1}{y}`
+
+    The given equation becomes :math:`y + \frac{1}{y} = 10` where :math:`y = (5 + 2\sqrt{6})^{x^2 - 3}`
+
+    :math:`\Rightarrow y^2 -10y + 1 = 0`
+
+    Solving the equation we have roots as :math:`y = 5 \pm 2\sqrt{6}`
+
+    :math:`\therefore x^2 - 3 = \pm 1`
+
+    :math:`x = \pm2, \pm\sqrt{2}`
+42. Let the speed of the bus :math:`= x` km/hour :math:`\therefore` the speed of car :math:`= x + 25` km/hour.
+
+    Time taken by bus :math:`= \frac{500}{x}` hours and by car :math:`= \frac{500}{x + 25}` hours
+
+    Given, :math:`\frac{500}{x} = \frac{500}{x + 25} + 10`
+
+    :math:`\Rightarrow x^2 - 25x + 1250 = 0`
+
+    :math:`x = -50, 25` but :math:`x` cannot be negative as it is a scalar quantity. Thus, speed of car = :math:`50` km/hour.
+43. Given equation is :math:`(a + b)^2x^2 - 2(a^2 - b^2)x + (a - b)^2 = 0`
+
+    Discriminant :math:`= 4(a^2 - b^2)^2 - 4(a + b)^2(a - b)^2 = 0`
+
+    Since discriminant is zero, roots are equal.
+44. Given equation is :math:`3x^2 + 7x + 8 = 0`
+
+    Discriminant :math:`D = 49 - 96 < 0`
+
+    Since it is negative roots will be complex and conjugate pair.
+45. Given equation is :math:`3x^2 + (7 + a) + 8 - a = 0`
+
+    Discriminant :math:`D = (7 + a)^2 + 12a`
+
+    For roots to be equal it has to be zero.
+
+    :math:`\Rightarrow a^2 + 26a + 49 = 0`
+
+    :math:`\Rightarrow a = 13 \pm 6\sqrt{6}`
+46. It is given that roots are equal i.e. discriminant is zero.
+
+    :math:`\Rightarrow 4(ac + bd)^2 - 4(a^2 + b^2)(c^2 + d^2) = 0`
+
+    :math:`a^2c^2 + b^2d^2 - 2abcd - a^2c^2 - a^2d^2 - b^2c^2 - b^2d^2 = 0`
+
+    :math:`(ad - bc)^2 = 0`
+
+    :math:`ad = bc \Rightarrow \frac{a}{b} = \frac{c}{d}`
+47. Discriminant is :math:`4(c - a)^2 - 4(b - c)(a - b)`
+
+    :math:`= c^2 + a^2 -2ac - ab + b^2 + ac - bc`
+
+    :math:`= a^2 + b^2 + c^2 - ab - bc - ac`
+
+    :math:`= \frac{1}{2}[(a - b)^2(b - c)^2(c - a)^2]`
+
+    Clearly the above expression is either greater than zero or equal to zero. Hence, roots are real.
+48. Given equation is
+
+    :math:`x^2 - x + x^2 - (a + 1)x + a + x^2 - ax = 0`
+
+    :math:`3x^2 - 2(a + 1) + a = 0`
+
+    Discriminant :math:`D = 4(a + 1)^2 - 12a`
+
+    :math:`= a^2 + 2a + 1 - 3a = a^2 - a + 1 = (a - 1)^2 + a`
+
+    which is greater than zero for all :math:`a` and hence roots are real.
+49. Discriminant of the equation :math:`D = b^2 - 4ac`
+
+    Given, :math:`a + b + c = 0 \Rightarrow b = -(a + c)`
+
+    Substituting value of :math:`b`
+
+    :math:`D = (a + c)^2 - 4ac = (a - c)^2`
+
+    which is either zero or positive. Hence, roots are rational.
+50.
