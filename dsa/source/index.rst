@@ -14,6 +14,7 @@ Data structures and Algorithms Contents
    :numbered:
 
    introduction
+   recursion
    linked-list
    linked-list-solutions
    stack

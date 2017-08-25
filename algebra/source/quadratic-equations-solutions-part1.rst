@@ -588,4 +588,4 @@ Quadratic Equations Solutions Part 1
     :math:`D = (a + c)^2 - 4ac = (a - c)^2`
 
     which is either zero or positive. Hence, roots are rational.
-50.
+50. This has been left as an exercise to the reader.

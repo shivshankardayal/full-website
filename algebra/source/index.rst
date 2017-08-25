@@ -50,6 +50,8 @@ A Variable in Algebra
    quadratic-equations
    quadratic-equations-problems-part1
    quadratic-equations-solutions-part1
+   quadratic-equations-problems-part2
+   quadratic-equations-solutions-part2
 
 Indices and tables
 ==================
