@@ -54,7 +54,7 @@ Quadratic Equations Solutions Part 2
 
     :math:`= 4\left[\frac{pr(2pr - p^2 - r^2)}{(p + r)^2}\right]`
 
-    :math:`= 4\left[\frac{-pr(p + r)^2}{(p + r)^2}\right]`
+    :math:`= 4\left[\frac{-pr(p - r)^2}{(p + r)^2}\right]`
 
     Since :math:`p` and :math:`r` have the same sign discriminant is bound to be negative and roots will be complex numbers.
 56. 
