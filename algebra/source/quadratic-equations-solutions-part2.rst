@@ -120,6 +120,84 @@ Quadratic Equations Solutions Part 2
 
     :math:`25a^2 - 70a - 15 = 0 \Rightarrow 5a^2 - 14a - 3 = 0`
 
-    :math:`\Rightarrow a = 3, -\frac{1}{3}`
+    :math:`\Rightarrow a = 3, -\frac{1}{5}`
 
-    If :math:`a = 3`
+    If :math:`a = 3 \Rightarrow \alpha = \frac{3}{2}`
+
+    else if :math:`a = -\frac{1}{5} \Rightarrow \alpha = -\frac{1}{2}`
+
+    Now it is trivial to calculate the value of :math:`\beta.`
+60. Let one of the roots is :math:`\alpha` then second root is :math:`\frac{1}{\alpha}`.
+
+    Product of roots :math:`= \alpha * \frac{1}{\alpha} = \frac{k}{5} \Rightarrow k = 5`
+61. (a) The equation is :math:`(5 + 4m)x^2 - (4 + 2m)x + 2 - m = 0`
+
+    For roots to be equal discriminant has to be zero.
+
+    :math:`4(2 + m)^2 - 4(5 + 4m)(2 - m) = 0`
+
+    :math:`4 + 4m + m^2 - 10 - 3m + 4m^2 = 0`
+
+    :math:`5m^2 - m - 6 = 0 \Rightarrow m = 1, -\frac{6}{5}`
+
+    (b) Product of roots :math:`= \frac{2 - m}{5 + 4m} = 2 \Rightarrow 2 - m = 10 + 8m \Rightarrow -\frac{8}{9}`
+    (c) Sum of roots :math:`= \frac{4 + 2m}{5 + 4m} = 6 \Rightarrow m = -\frac{13}{11}`
+62. Let one root be :math:`\alpha` then the second root is :math:`n\alpha.`
+
+    Sum of roots :math:`(n + 1)\alpha = -\frac{b}{a} \Rightarrow \alpha = -\frac{b}{(n + 1)a}`
+
+    Product of roots :math:`n\alpha^2 = \frac{c}{a}`
+
+    Substituting value of :math:`\alpha` from the earlier equation
+
+    :math:`\frac{nb^2}{(n + 1)^2a^2} = \frac{c}{a} \Rightarrow (n + 1)^2 ca = nb^2`
+63. Following from previous problem :math:`n = \frac{3}{4}` and substituting in final solution
+
+    :math:`\left(\frac{3}{4} + 1\right)^2ca = \frac{3}{4}b^2 \Rightarrow 12b^2 = 49ac`
+64. Comparing this with problem 62's first equation, we have :math:`a = 4, b = a, c = 3` and :math:`n = \frac{1}{2}`
+
+    Substituting in the final relation we have, :math:`\frac{9}{4}*3*4 = \frac{1}{2}a^2`
+
+    :math:`a^2 = 54`
+
+    Discriminant of the second equation, :math:`D = 9 - 4(a^2 - 2a) < 0,` and thus roots are imaginary.
+65. Comparing this with problem 62's first equation, we have :math:`a = 1, b = -p, c = q` and :math:`n = 2`
+
+    Substituting in the final relation obtained in 62, :math:`9q = 2p^2`
+66. Let :math:`\alpha, \beta` be the roots of the given equation.
+
+    Sum of roots, :math:`\alpha + \beta = p` and product of the roots :math:`\alpha\beta = q`
+
+    Given, :math:`\alpha + \beta = m(\alpha - \beta)`
+
+    Squaring, :math:`(\alpha + \beta)^2 = m^2(\alpha - \beta)^2`
+
+    :math:`p^2 = m^2(\alpha + \beta)^2 - 4m^2\alpha\beta = m^2p^2 - 4m^2q \Rightarrow p^2(m^2 - 1) = 4m^2q`
+67. Let :math:`\alpha, \beta` be the roots of the given equation.
+
+    Sum of roots, :math:`\alpha + \beta = p` and product of the roots :math:`\alpha\beta = q`
+
+    Given, :math:`\alpha - \beta = 1`
+
+    Squaring we have,
+
+    :math:`(\alpha - \beta)^2 = 1 \Rightarrow (\alpha + \beta)^2 - 4\alpha\beta = 1`
+
+    :math:`\Rightarrow p^2 - 4q = 1`
+
+    Also, :math:`[(\alpha - \beta)^2 + 2\alpha\beta]^2 = (1 + 2q)^2`
+
+    :math:`(\alpha^2 + \beta^2)^2 = \alpha^4 + \beta^4 + 2\alpha^2\beta^2`
+
+    :math:`= \alpha^4 + \beta^4 - 2\alpha^2\beta^2 + 4\alpha^2\beta^2 = (\alpha^2 - \beta^2)^2 + 4q^2`
+
+    :math:`[(\alpha + \beta)^2(\alpha - \beta)^2] + 4q^2 = p^2 + 4q^2`
+68. The given equation is :math:`a(x - b) + b(x - a) = m(x - a)(x - b)`
+
+    :math:`\Rightarrow mx^2 - xm(a + b) - mab - ax + ab - bx + ab = 0`
+
+    :math:`\Rightarrow mx^2 - x(m + 1)(a + b) - ab(m - 2) = 0`
+
+    If roots are equal in magnitude but opposite in sign then sum would be zero.
+
+    :math:`\Rightarrow (m + 1)(a + b) = 0 \Rightarrow m = -1~\text{or}~a + b = 0`
