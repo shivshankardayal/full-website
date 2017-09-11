@@ -1,3 +1,9 @@
+.. meta::
+   :author: Shiv Shankar Dayal
+   :title: Quadratic Equations Problems Part 2
+   :description: Quadratic Equations Problems Part 2
+   :keywords: quadratic equations, algebra
+
 Quadratic Equations Problems Part 2
 ***********************************
 51. Show that the roots of the equation :math:`x^2 + rx + s = 0` will be rational if :math:`r = k + \frac{s}{k},` where
@@ -34,7 +40,7 @@ Quadratic Equations Problems Part 2
     but opposite in sign.
 68. Find the relation between coefficients of the equation :math:`ax^2 + bx + c = 0` if one roots exceeds other by
     :math:`k`.
-69. If one root of the equation :math:`ax^2 + bx + c = 0` be the square of the other, show that :math:`b^3 + a^c + ac^2
+69. If one root of the equation :math:`ax^2 + bx + c = 0` be the square of the other, show that :math:`b^3 + a^2c + ac^2
     = 3abc`
 70. Determine the value of :math:`p` for which one root of the equation :math:`x^2 + px + 1 = 0` is the square of the
     other.
@@ -48,7 +54,7 @@ Quadratic Equations Problems Part 2
     in terms of :math:`a, b, c`
 
     :math:`\frac{\alpha^2}{\beta} + \frac{\beta^2}{\alpha}`
-74. If :math:`\alpha, beta` be the roots of the equation :math:`ax^2 + bx + b = 0,` prove that
+74. If :math:`\alpha, \beta` be the roots of the equation :math:`ax^2 + bx + b = 0,` prove that
 
     :math:`\sqrt{\frac{\alpha}{\beta}} + \sqrt{\frac{\beta}{\alpha}} + \sqrt{\frac{b}{a}} = 0`
 75. Show that the two equations :math:`x^2 - 2ax + b^2 = 0` and :math:`x^2 - 2bx + b^2 = 0` are such that the G. M. of
@@ -58,7 +64,7 @@ Quadratic Equations Problems Part 2
 77. If :math:`\alpha, \beta` be the roots of the equation :math:`x^2 - px + q = 0,` prove that
 
     :math:`\frac{\alpha^2}{\beta^2} + \frac{\beta^2}{\alpha^2} = \frac{p^4}{q^2} - \frac{4p^2}{q} + 2`
-78. If :math:`\alpha, beta` be the roots of the equation :math:`ax^2 + bx + c = 0,` find the value of
+78. If :math:`\alpha, \beta` be the roots of the equation :math:`ax^2 + bx + c = 0,` find the value of
     :math:`\frac{1}{(a\alpha + b)^2} + \frac{1}{(a\beta + b)^2}`
 79. If :math:`\alpha, \beta` be the roots of the equation :math:`\lambda(x^2 - x) + x + 5 = 0` and if :math:`\lambda_1`
     and :math:`\lambda_2` are the two values for which the roots :math:`\alpha, \beta` are connected by the relation
@@ -66,7 +72,7 @@ Quadratic Equations Problems Part 2
 
     i. :math:`\frac{\lambda_1}{\lambda_2} + \frac{\lambda_2}{\lambda_1} = 254`
     ii. :math:`\frac{\lambda_1^2}{\lambda_2} + \frac{\lambda_2^2}{\lambda_1} = 4048`
-80. If :math:`\alpha, beta` be the roots of the equation :math:`x^2 + px + q = 0` and :math:`\gamma, \delta` be the
+80. If :math:`\alpha, \beta` be the roots of the equation :math:`x^2 + px + q = 0` and :math:`\gamma, \delta` be the
     roots of :math:`x^2 + rx + s = 0` find the values of
 
     i. :math:`(\alpha + \gamma)(\alpha + \delta)(\beta + \gamma)(\beta + \delta)`
@@ -78,7 +84,7 @@ Quadratic Equations Problems Part 2
     equation :math:`x^2 + px + r = 0,` prove that
 
     :math:`(\alpha - \gamma)(\alpha -\delta) = (\beta - \gamma)(\beta - \delta) = q + r`
-83. If :math:`\alpha, beta` be the roots of the equation :math:`x^2 - 2px + q = 0` and :math:`\gamma, \delta` those of
+83. If :math:`\alpha, \beta` be the roots of the equation :math:`x^2 - 2px + q = 0` and :math:`\gamma, \delta` those of
     the equation :math:`x^2 - 2rx + s = 0` and if
 
     i. :math:`\alpha\delta = \beta\gamma,` prove that :math:`p^2s = r^2q`
@@ -94,7 +100,7 @@ Quadratic Equations Problems Part 2
     :math:`\frac{b^2 - 4ac}{B^2 - 4AC} =\left(\frac{a}{A}\right)^2`
 86. If the roots of the equation :math:`x^2 + 2px + q = 0` and :math:`x^2 + 2qx + p = 0` differ by a constant then show
     that :math:`p + q + 1 = 0`
-87. If :math:`\alpha, beta` be the roots of the equation :math:`ax^2 + bx + c = 0` then find the equations whose roots
+87. If :math:`\alpha, \beta` be the roots of the equation :math:`ax^2 + bx + c = 0` then find the equations whose roots
     are
 
     i. :math:`\frac{\alpha}{\beta}` and :math:`\frac{\beta}{\alpha}`
@@ -104,7 +110,7 @@ Quadratic Equations Problems Part 2
     v. :math:`\frac{1}{(\alpha + \beta)^2}` and :math:`(\alpha - \beta)^2`
 88. Find those equations whose roots are (i) reciprocal of the roots of (ii) equal in magnitude but opposite in sign to
     the roots of the equation :math:`ax^2 + bx + c = 0`
-89. If :math:`\alpha, beta` be the roots of the equation :math:`x^2 + px + q = 0,` find the value of (i) :math:`\alpha^2
+89. If :math:`\alpha, \beta` be the roots of the equation :math:`x^2 + px + q = 0,` find the value of (i) :math:`\alpha^2
     + \beta^4` (ii) :math:`\alpha^{-4} + \beta^{-4}`
 90. If :math:`\alpha, \beta` be the roots of the equation :math:`x^2 - px + q = 0,` find the equation whose roots are
 

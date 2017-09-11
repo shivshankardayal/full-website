@@ -231,11 +231,11 @@ Let :math:`y = ax^2 + bx + c` and let :math:`\alpha` and :math:`\beta` be the ro
 
 Case I: When :math:`\alpha` and :math:`\beta` are complex numbers.
 
-Let :math:`\alpha = p + iq`, then :math:`\beta = p - iq` where :math:`q \ ne 0`
+Let :math:`\alpha = p + iq`, then :math:`\beta = p - iq` where :math:`q \ne 0`
 
-:math:`ax^ + bx + c = a{x - (p + iq)}{x - (p - iq)}`
+:math:`ax^2 + bx + c = a[x - (p + iq)][x - (p - iq)]`
 
-:math:`= a{(x - p)^2 + q^2} = a~\times` a positive quantity
+:math:`= a[(x - p)^2 + q^2] = a~\times` a positive quantity
 
 :math:`ax^2 + bx + c` will have same sign as that of :math:`a` for all real :math:`x`.
 
@@ -243,7 +243,7 @@ Case II: When :math:`\alpha` and :math:`\beta` are real and equal.
 
 Given :math:`\alpha = \beta`
 
-:math:`ax^2 + bx + c = a{x - \alpha}{x - \beta} = a{x - \alpha}^2`
+:math:`ax^2 + bx + c = a[x - \alpha][x - \beta] = a[x - \alpha]^2`
 
 Thus, the expression will have same sign as :math:`a` except when :math:`x = \alpha` in which case it will be 0.
 
