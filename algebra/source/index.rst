@@ -1,3 +1,10 @@
+.. meta::
+   :author: Shiv Shankar Dayal
+   :title: Preface
+   :description: Algebra
+   :keywords: Algebra, ratio, proportions, variations, complex numbers, arithmetic progressions,
+              geometric progressions, harmonic progressions, series, sequence, quadratic equations
+
 .. Informal Algebra documentation master file, created by
    sphinx-quickstart on Sat Mar  2 06:17:53 2013.
    You can adapt this file completely to your liking, but it should at least
@@ -53,6 +60,7 @@ A Variable in Algebra
    quadratic-equations-problems-part2
    quadratic-equations-solutions-part2
    quadratic-equations-problems-part3
+   quadratic-equations-solutions-part3
 
 Indices and tables
 ==================

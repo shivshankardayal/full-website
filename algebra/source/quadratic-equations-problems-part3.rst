@@ -57,7 +57,7 @@ Quadratic Equations Problems Part 3
      values if :math:`a > b > c` or :math:`a < b < c`.
 131. If :math:`x + y` is constant, prove that :math:`xy` is maximum when :math:`x = y.`
 132. If :math:`x` be real find the maximum value of :math:`3 - 6x - 8x^2` and the corresponding value of :math:`x.`
-133. Prove that :math:`\left|\frac{12x}{4x^2 + 0}\right| \le 1` for all real values of :math:`x` or the equality being
+133. Prove that :math:`\left|\frac{12x}{4x^2 + 9}\right| \le 1` for all real values of :math:`x` or the equality being
      satisfied only if :math:`|x| = \frac{3}{2}`
 134. Prove that if the  equation :math:`x^2 + 9y^2 - 4x + 3 = 0` is satisfied for real values of :math:`x` and :math:`y,
      x` must lie between :math:`1` and :math:`3` and :math:`y` must lie between :math:`-\frac{1}{3}` and

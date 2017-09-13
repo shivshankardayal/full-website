@@ -1,3 +1,9 @@
+.. meta::
+   :author: Shiv Shankar Dayal
+   :title: Preface
+   :description: Algebra
+   :keywords: Algebra
+
 Preface
 *******
 This is a book on algebra, which, covers basics of algebra till high school
