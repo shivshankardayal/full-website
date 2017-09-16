@@ -291,3 +291,20 @@ Thus, minimum value of :math:`y = \frac{4ac - b^2}{4a}` and it has no maximum va
 **Case II:** When :math:`a < 0`
 
 Clearly, when :math:`a < 0, y` has  no minimum value and maximum value will again occur at :math:`x = -\frac{b}{2a}`.
+
+To find the condition that the general quadratic equation :math:`ax^2 + 2hxy + by^2 + 2gx + 2fy + c` in :math:`x` and :math:`y` may be resolved into two linear rational factors.
+=========================================================================================================================================================================================
+Corresponding equation is :math:`ax^2 + 2hxy + by^2 + rgx + 2fy + c = 0`
+
+:math:`x = \frac{-2(hy + g)\pm\sqrt{4(hy + g)^2 - 4a(by^2 + 2fy + c)}}{2a}`
+
+:math:`ax + hy + g = \pm\sqrt{(h^2 - ab)y^2 + 2(gh - af)y + g^2 - ac}`
+
+It can be resolved into two linear factors if :math:`(h^2 - ab)y^2 + 2(gh - af)y + g^2 - ac` is a perfect square
+and :math:`h^2 - ab > 0`
+
+:math:`(h^2 - ab)y^2 + 2(gh - af)y + g^2 - ac` will be prefect square if discriminant of the corresponding equation is :math:`0`.
+
+:math:`\Rightarrow 4(gh - af)^2 - 4(h^2 - ab)(g^2 - ac) = 0`
+
+:math:`\Rightarrow abc + 2fgh - af^2 - bg^2 - ch^2 = 0`
