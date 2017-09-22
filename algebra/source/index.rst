@@ -64,6 +64,7 @@ A Variable in Algebra
    quadratic-equations-problems-part4
    quadratic-equations-solutions-part4
    quadratic-equations-problems-part5
+   quadratic-equations-solutions-part5
 
 Indices and tables
 ==================
