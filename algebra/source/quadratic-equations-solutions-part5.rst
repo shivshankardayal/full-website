@@ -286,3 +286,54 @@ Quadratic Equations Solutions Part 5
      Hence, product of roots :math:`-(4a^3 + 27b^2) = (\alpha - \beta)^2(\beta - \gamma)^2(\gamma - \alpha)^2 \ge 0`
 
      :math:`\therefore 4a^3 + 27b^2 \le 0`
+219. :math:`\alpha` is a root of the equation :math:`ax^2 + bx + c = 0`
+
+     :math:`\therefore a\alpha^2 + b\alpha + c = 0`
+
+     Similarly, :math:`-a\beta^2 + b\beta + c = 0`
+
+     Let :math:`f(x) = \frac{a}{2}x^2 + bx + c = 0`
+
+     :math:`f(\alpha) = -\frac{a}{2}\alpha^2`
+
+     :math:`f(\beta) = \frac{3}{2}\beta^2`
+
+     :math:`\therefore f(\alpha)f(\beta) = -\frac{3}{4}a^2\alpha^2\beta^2 < 0 [\because \alpha,\beta \ne 0]`
+
+     :math:`\therefore f(\alpha)` and :math:`f(\beta)` have opposite signs. Therefore, :math:`f(x)` will have exactly
+     one root between :math:`\alpha` and :math:`\beta`.
+220. Let :math:`f(x) = ax^2 + bx + c = 0`
+
+     Since equation :math:`ax^2 + bx + c = 0` i.e. equation :math:`f(x) = 0` has no real root, therefore, :math:`f(x)`
+     will have same sign for real values of :math:`x`.
+
+     :math:`\therefore f(1)f(0) > 0 \Rightarrow (a + b + c)a > 0`
+221. Let :math:`f(x) = (x - a)(x - c) + \lambda (x - b)(x - d)`
+
+     Given :math:`a > b > c > d`
+
+     Now :math:`f(b) = (b - a)(b - c) < 0`
+
+     and :math:`f(d) = (d - a)(d - c) > 0`
+
+     Since :math:`f(b)` and :math:`f(d)` have opposite signs, therefore equation :math:`f(x) = 0` will have one real
+     root between :math:`b` and :math:`d`.
+
+     Since one root is real and :math:`a, b, c, d, \lambda` are all real the other root will also be real.
+222. Let :math:`f(x) = \sum_{i = 1}^3 \frac{a_i}{x - \lambda_i} = \frac{a_1}{x - \lambda_1} + \frac{a_2}{x -
+     \lambda_2} + \frac{a_3}{x - \lambda_3}`
+
+     :math:`f(x) = a_1(x - \lambda_2)(x - \lambda_3) + a_2(x - \lambda_1)(x - \lambda_3) + a_3(x - \lambda_1)(x -
+     \lambda_2)`
+
+     :math:`f(\lambda_1) = a_1(\lambda_1 - \lambda_2)(\lambda_2 - \lambda_3) > 0`
+
+     :math:`f(\lambda_2) = a_2(\lambda_2 - \lambda_3)(\lambda_2 - \lambda_1) < 0`
+
+     :math:`f(\lambda_3) = a_3(\lambda_3 - \lambda_2)(\lambda_3 - \lambda_1) > 0`
+
+     Since :math:`f(\lambda_1)` and :math:`f(\lambda_2)` have opposite signs there must be a root between
+     :math:`\lambda_1` and :math:`\lambda_2` and similarly there must be another root between :math:`\lambda_2` and
+     :math:`\lambda_3`.
+223. 
+
