@@ -88,7 +88,7 @@ Quadratic Equations Problems Part 5
 238. Let :math:`\{x\}` and :math:`[x]` denote the fractional and integral part of a real number :math:`x`
      respectively. Solve :math:`4\{x\} = x + [x]`
 239. For the same notation as previous problem solve :math:`[x]^2 = x(x - [x])`
-240. Solve :math:`x^3 - y^3 - 127, x^2y - xy^2 = 42`
+240. Solve :math:`x^3 - y^3 = 127, x^2y - xy^2 = 42`
 241. Solve the system of equations: :math:`x - 2y + z = 0, 4x - y - 3z = 0, x^2 - 2xy + 3xz = 14`
 242. Solve :math:`x^4 + y^4 = 82, x+ y = 4`
 243. Solve :math:`\sqrt{a(2^x - 2) + 1} = 1 - 2^x, x \in R`
@@ -104,4 +104,4 @@ Quadratic Equations Problems Part 5
 249. If :math:`a` and :math:`b` are real, :math:`b\ne 0,` prove that the roots of the quadratic equation :math:`\frac{(x
      - a)(ax - 1)}{x^2 - 1} = b,` can never be equal.
 250. If :math:`n` and :math:`r` are positive integers such that :math:`0 < r < n,` then show that the roots of the
-     quadratic equation :math:`^nC_rx^2 + 2 ^nC_{r + 1}x + ^nC_{r + 2} = 0` are real.
+     quadratic equation :math:`^nC_rx^2 + 2~^nC_{r + 1}x + ^nC_{r + 2} = 0` are real.
