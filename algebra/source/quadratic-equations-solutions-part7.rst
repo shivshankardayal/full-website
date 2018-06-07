@@ -57,7 +57,7 @@ Quadratic Equations Solutions Part 7
 
      Now it is trivial to calculate the values. 308 through 317 have been left as exercises.
 
-318. :math:`\sum_{i = 1}^n(x - a_i)^2 -\= nx^2 - 2(a_1 + a_2 + ... + a_n)x + (a_1^2 + a_2^2 + ... + a_n^2)`
+318. :math:`\sum_{i = 1}^n(x - a_i)^2 = nx^2 - 2(a_1 + a_2 + ... + a_n)x + (a_1^2 + a_2^2 + ... + a_n^2)`
 
      This is a quadratic equation in :math:`x` and coefficient of :math:`x^2` is :math:`n > 0,` therefore this quadratic
      equation will have least value at :math:`x = \frac{a_1 + a_2 + ... + a_n}{n}`
@@ -89,4 +89,10 @@ Quadratic Equations Solutions Part 7
      :math:`4(a_1b_1 + a_2b_2 + ... + a_nb_n)^2 \le 4(a_1^2 + a_2^2 + ... + a_n^2)(b_1^2 + b_2^2 + ... + b_n^2)`
 
      Hence, proven.
-322.
+322. Given equation is :math:`[(x+1)(x+m)][x(x+m+1)] = m^2`
+
+     :math:`(x^2 + (m + 1)x + m)(x^2 + (m + 1)x) = m^2`
+
+     :math:`(y + m)y = m^2` where :math:`y = x^2 + (m + 1)x`
+
+     :math

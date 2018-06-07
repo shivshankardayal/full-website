@@ -1,15 +1,15 @@
 body {
 	margin:0;
 	padding:0;
-/*	width:800px;*/
 	margin:40px auto 80px auto;
-	/*padding:10px 20px 10px 20px;*/
-	/*border-radius: 10px;
-	box-shadow: 2px 2px 19px #444;*/
+	padding:10px 20px 10px 20px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 19px #444;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 20px;
 	color: rgb(51,51,51);
+    background-color: #f3f3f3;
 }
 
 span.inlinemediaobject {
@@ -40,6 +40,17 @@ span.italic {
     font-style:italic;
 }
 
+blockquote {
+    border: None;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: -5px;
+}
+
+.blockquote {
+    line-height: 10px;
+}
+
 div.warning{
     color: #f00;
 }
@@ -51,9 +62,14 @@ img {
     margin-right: auto;
 }
 
+.indent {
+    margin-left: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
 pre.CommonLispLexer, pre.CLexer, pre.MakefileLexer {
     border: 1px solid #aaa;
-    padding: 10px 0px 0px 10px;
+/*    padding: 10px 0px 0px 0px;*/
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
     font-size: 13px;
     border-radius: 5px;
@@ -61,7 +77,7 @@ pre.CommonLispLexer, pre.CLexer, pre.MakefileLexer {
 
 pre {
     border: none;
-    background-color: #fff;
+/*    background-color: #fff;*/
 }
 pre.screen {
     border: 1px solid #aaa;
@@ -69,6 +85,12 @@ pre.screen {
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
     font-size: 13px;
     border-radius: 5px;
+}
+
+.center {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
 }
 
 table.centered, table.centered th, table.centered td
@@ -90,7 +112,6 @@ table.leftcenter, table.leftcenter th, table.leftcenter td
     margin-left: auto;
     margin-right:auto;
     text-align: left;
-    width:600px;
 }
 
 table.dynamic, table.dynamic th, table.dynamic td {
@@ -109,7 +130,7 @@ table.dynamic, table.dynamic th, table.dynamic td {
 code.code {
     font-size: 11px;
     border: none;
-    background-color: #fff;
+    background-color: transparent;
     padding: 0px;
 }
 
@@ -193,6 +214,10 @@ div#container {
 text-align:left
 }
 
+p {
+    text-align: justify;
+}
+
 div#content p {
 font-family: sans-serif;
 font-size: 11.7px;
@@ -206,7 +231,7 @@ font-weight: normal;
 color: #444; 
 text-decoration: none; 
 padding: 3px 6px; 
-background-color: #F9F9F9; 
+/*background-color: #F9F9F9; */
 border-bottom: 1px solid #F1F1F1; 
 border-right: 1px solid #F1F1F1;
 }
@@ -235,7 +260,7 @@ border-radius: 10px;
 
 div#footer {
 margin-top: 10px;
-background-color: #333;
+/*background-color: #333;*/
 color: #FFF;
 font-size: 11px;
 font-family: Tahoma, Arial, Helvetica, sans-serif;
@@ -246,7 +271,7 @@ padding: 5px;
 
 div#footer a, div#footer a:hover {
 margin-top: 10px;
-background-color: #333;
+/*background-color: #333;*/
 color: #FFF;
 font-size: 11px;
 font-family: Tahoma, Arial, Helvetica, sans-serif;
@@ -286,7 +311,24 @@ div.footnote {
     color: #444;
 }
 
-.hll { background-color: #ffffcc }
+.note p {
+    font-size: 11px;
+    font-color: #aaa;
+}
+
+.note h3 {
+    font-size: 16px;
+}
+
+.example {
+    font-size: 11.5px;
+    color: #666;
+}
+
+dl {
+    margin-left: 10px;
+}
+.hll { /*background-color: #ffffcc*/ }
 .c { color: #408080; font-style: italic } /* Comment */
 .err { border: 1px solid #FF0000 } /* Error */
 .k { color: #008000; font-weight: bold } /* Keyword */
@@ -346,7 +388,7 @@ div.footnote {
 .vc { color: #19177C } /* Name.Variable.Class */
 .vg { color: #19177C } /* Name.Variable.Global */
 .vi { color: #19177C } /* Name.Variable.Instance */
-.il { color: #666666 } /* Literal.Number.Integer.Long */.hll { background-color: #ffffcc }
+.il { color: #666666 } /* Literal.Number.Integer.Long */.hll { /*background-color: #ffffcc*/ }
 .c { color: #60a0b0; font-style: italic } /* Comment */
 .err { border: 1px solid #FF0000 } /* Error */
 .k { color: #007020; font-weight: bold } /* Keyword */
@@ -354,7 +396,7 @@ div.footnote {
 .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
 .cp { color: #007020 } /* Comment.Preg1proc */
 .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
-.cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.cs { color: #60a0b0; /*background-color: #fff0f0*/ } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
 .ge { font-style: italic } /* Generic.Emph */
 .gr { color: #FF0000 } /* Generic.Error */

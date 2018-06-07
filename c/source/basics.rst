@@ -584,7 +584,7 @@ significand*) and scaled using an exponent; numbers are usually binary, octal,
 decimal or hexadecimal. A number that can be represented exactly is of the
 following form:
 
-\\[\text{significand} \times \text{base}^\text{exponent}\\]
+:math:`\text{significand} \times \text{base}^\text{exponent}`
 
 For example, \\(1.2345 = \\underbrace{12345}_\\text{significand} \\times
 \\,\\underbrace{10}_\\text{base}\\!\\!\\!\\!\\!\\!^{\\overbrace{-4}^\\text{exponent}}\\)

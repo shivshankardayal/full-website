@@ -20,18 +20,22 @@ footer {
 .cat-header {
   padding: 1rem 1rem;
   text-align: center;
-  color: #0c5245;
+  color: #000000;
 }
 .card-header{
   background-color:#fefefe;
+  border-bottom: 1px solid #ddd;
 }
 #header {
-  background: #fefefe;
-    border-top: 2px solid #16a085;
-    border-bottom: 1px solid #eee;
+  background: rgb(66, 133, 244);
+  border-bottom: 1px solid #eee;
 }
 #header .navbar-nav .nav-item .nav-link{
   color: #333;
+}
+
+.navbar-brand {
+  color: #ffffff!important;
 }
 
 #header .navbar-nav .nav-item .nav-link:hover{
@@ -42,9 +46,11 @@ footer {
 }
 #middle .card {
   margin-bottom:2.75rem;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+  min-height: 150px;
 }
 #middle .card-header {
-  border-bottom:0px;
+  /*border-bottom:0px;*/
   padding-top: 5px;
 }
 #middle .card-header .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -58,25 +64,16 @@ footer {
 .btn-primary {
     color: #fff;
     background-color: #08c;
-    border-color: #02231d;
+    /*border-color: #02231d;*/
     padding: 10px 10px;
     margin-left: 140px;
     border-radius: 30px;
+    /*border: 2px solid #eee;*/
 }
-.btn-primary:hover {
-    color: #fff;
-    background-color: #08c;
-    border-color: #02231d;
-}
-.btn-primary:active {
-    color: #eee;
-    background-color: #009688;
-    border-color: #0f5245;
-}
-.btn-primary:focus {
-    color: #eee;
-    background-color: #009688;
-    border-color: #0f5245;
+
+a:hover, a:active, a:focus {
+color: #0275d8;
+text-decoration: none;
 }
 
 footer {
@@ -134,3 +131,4 @@ footer a:hover {
     max-height: 175px;
     min-height: 175px;
 }
+

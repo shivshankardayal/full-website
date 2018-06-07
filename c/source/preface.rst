@@ -6,9 +6,9 @@ compilers. However, not all elements of the specification is implemented by
 compilers, for example, `gcc` does not implement multithreading.
 
 These days I have noticed a tendency that people
-think Java, PHP or Python are more used and they have a tendency to overlook
-the merits of C as a programming language. The benefits of learning C is
-described further in Chapter 1 "Introduction".
+think Java, PHP, Python or Javascript are more used and they have a tendency
+to overlook the merits of C as a programming language. The benefits of
+learning C is described further in Chapter 1 "Introduction".
 
 C is one of the language which is closest to system and very useful for system
 programming though not limited to it. It is also very fundamental to many
