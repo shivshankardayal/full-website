@@ -54,8 +54,11 @@ Quadratic Equations Problems Part 7
      .. math::
 
         ax_1^2 + bx_1 + c = x_2
+        
         ax_2^2 + bx_2 + c = x_3
+
         ...
+        
         ax_n^2 + bx_n + c = x_1
 
      when (i) :math:`(b - 1)^2 < 4ac` (ii) :math:`(b - 1)^2 = 4ac` (iii) :math:`(b - 1)^2 > 4ac`

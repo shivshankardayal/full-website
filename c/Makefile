@@ -50,8 +50,8 @@ dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
-	mkdir -p /tmp/www/c
-	cp -r build/dirhtml/* /tmp/www/c/
+	mkdir -p /tmp/www/c-programming
+	cp -r build/dirhtml/* /tmp/www/c-programming/
 
 singlehtml:
 	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
@@ -107,7 +107,7 @@ latex:
 pdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo "Running LaTeX files through pdflatex..."
-	perl -pi -e 's/pdflatex/xelatex/g' build/latex/Makefile
+	#perl -pi -e 's/pdflatex/xelatex/g' build/latex/Makefile
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
 

@@ -178,7 +178,7 @@ Arithmetic Progression Solutions Part 1
 
     :math:`t_{p + q} = a + (p + q - 1)d = 0`
 
-25. L. H. S. = :math:`t_m + t_{2n + m}`
+25. LHS = :math:`t_m + t_{2n + m}`
 
     :math:`\Rightarrow a + (m - 1)d + a + (2n + m - 1)d`
 

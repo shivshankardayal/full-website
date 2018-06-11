@@ -227,6 +227,11 @@ separates graet programmers from good programmers. One such example is TeX by
 Donald Erwin Knuth or C programming Language. It is not that these program have
 not changed but the changes are minimal.
 
+9. **Scalability:** This point is not applicable to programs which are written
+for running on one computer but rather which run on multiple i.e. distributed
+systems. Scalability means as your no. of computer grow does your program
+performance multiply as close to no. of computers in use.
+
 ================
 Tools of Trade
 ================
@@ -601,3 +606,29 @@ commands however you must know underlying commands. You can also use something
 like CMake or Scons but I think that should be part of a book covering build
 systems.
 
+There is reason why these topics will not be covered. Covering these topics will
+deviate us from the purpose of this book which is learning C programming.
+
+================================
+Wha GCC Flags Should You Choose?
+================================
+For such small programs which are written in this book the flags should be
+`-Wall -Werror -pedantic -std=c11`. This means compiler will ensure that all warnings
+are enabled, all warnings are treated as error, program is ISO conformant and we
+adhere to C11 standard.
+
+
+===============
+musl libc
+===============
+Even now GCC or Clang which are main compilers have not implemented as much ISO C11
+support as `musl` library has implemented. So, for multithreading I will use it
+along with other features which are not found in `glibc` which is default on
+GNU/Linux based systems. Home of this library is http://www.musl-libc.org/.
+Please read its documentation on how to install it or contact local system
+administrator.
+
+It is an excellent library and also implements POSIX library which governs many UNIX
+like operating systems including GNU/Linux. When I will write the POSIX Programming
+which is a planned book then I will use this library extensively. For now it will be
+used only to demonstrate what GCC does not provide.

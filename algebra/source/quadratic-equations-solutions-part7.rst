@@ -57,7 +57,7 @@ Quadratic Equations Solutions Part 7
 
      Now it is trivial to calculate the values. 308 through 317 have been left as exercises.
 
-318. :math:`\sum_{i = 1}^n(x - a_i)^2 -\= nx^2 - 2(a_1 + a_2 + ... + a_n)x + (a_1^2 + a_2^2 + ... + a_n^2)`
+318. :math:`\sum_{i = 1}^n(x - a_i)^2 = nx^2 - 2(a_1 + a_2 + ... + a_n)x + (a_1^2 + a_2^2 + ... + a_n^2)`
 
      This is a quadratic equation in :math:`x` and coefficient of :math:`x^2` is :math:`n > 0,` therefore this quadratic
      equation will have least value at :math:`x = \frac{a_1 + a_2 + ... + a_n}{n}`
@@ -89,4 +89,140 @@ Quadratic Equations Solutions Part 7
      :math:`4(a_1b_1 + a_2b_2 + ... + a_nb_n)^2 \le 4(a_1^2 + a_2^2 + ... + a_n^2)(b_1^2 + b_2^2 + ... + b_n^2)`
 
      Hence, proven.
-322.
+322. Given equation is :math:`[(x+1)(x+m)][x(x+m+1)] = m^2`
+
+     :math:`(x^2 + (m + 1)x + m)(x^2 + (m + 1)x) = m^2`
+
+     :math:`(y + m)y = m^2` where :math:`y = x^2 + (m + 1)x`
+
+     :math:`y^2 + my - m^2 = 0 \therefore y = \frac{-m \pm \sqrt{5}m}{2}`
+
+     :math:`\Rightarrow x^2 + (m + 1)x = \frac{-m \pm \sqrt{5}m}{2}`
+
+     These two equations must have real roots only then original will have four.
+     Now it is trivially obtained that
+
+     :math:`-\infty<m<-2-\sqrt{5}` or :math:`2 + \sqrt{5}<m<\infty` or :math:`2 - \sqrt{5}<m<-2+\sqrt{5}`
+323. Given equation is :math:`x^4 + (a - 1)x^3 + x^2 + (a - 1)x + 1 = 0`
+
+     Dividing both sides from :math:`x^2` we have
+
+     :math:`x^2 + (a - 1)x + 1 + (a - 1)\frac{1}{x} + \frac{1}{x^2} = 0`
+
+     :math:`\Rightarrow \left(x+\frac{1}{x}\right)^2 - 2x\frac{1}{x} + (a - 1)\left(x + \frac{1}{x}\right) + 1 = 0`
+
+     :math:`\Rightarrow y^2 + (a - 1)y - 1 = 0` where :math:`y = x + \frac{1}{x}`
+
+     :math:`\therefore y = \frac{-(a - 1)\pm \sqrt{(a - 1)^2 + 4}}{2}`
+
+     :math:`\Rightarrow x + \frac{1}{x} = \frac{-(a - 1)\pm \sqrt{(a - 1)^2 + 4}}{2}`
+
+     :math:`2x^2 + [(a - 1) - \sqrt{(a - 1)^2 + 4}]x + 2 = 0` and
+
+     :math:`2x^2 + [(a - 1) + \sqrt{(a - 1)^2 + 4}]x + 2 = 0` are two equations we have.
+
+     Let :math:`\alpha, \beta` are roots for first and :math:`\gamma, \delta` are roots
+     for second.
+
+     :math:`\therefore \alpha + \beta = -\frac{[(a - 1) - \sqrt{(a - 1)^2 +4}]}{2}` and :math:`\alpha\beta = 1`
+
+     :math:`\therefore \gamma + \delta = -\frac{[(a - 1) + \sqrt{(a - 1)^2 +4}]}{2}` and :math:`\gamma\delta = 1`
+
+     :math:`\because \sqrt{(a - 1)^2 + 4}> a - 1`
+
+     :math:`\alpha + \beta > 0` and :math:`\alpha\beta > 0` hence both roots cannot be negative.
+
+     Thus, :math:`\gamma` and :math:`\delta` have to be negative as per requirement from question.
+     They have to be real and distinct because :math:`\gamma + \delta < 0` and :math:`\gamma\delta >0`
+     do not imply that :math:`\gamma<0` and :math:`\delta < 0`.
+
+     For both these to be negative discriminant has to be positive.
+
+     Thus, :math:`[(a - 1) + \sqrt{(a - 1)^2 + 4}] - 16 > 0`
+
+     Solving this we get :math:`\frac{5}{2}<a<\infty`
+
+324. This problem is similar as last one and has been left as an exercise.
+
+325. Given system of equations can be written as:
+
+     :math:`ax_1^2 + (b - 1)x_1 + c = x_2 - x_1`
+
+     :math:`ax_2^2 + (b - 1)x_2 + c = x_3 - x_2`
+
+     :math:`\ldots`
+
+     :math:`ax_n^2 + (b - 1)x_n + c = x_1 - x_n`
+
+     Let :math:`f(x) = ax^2 + (b - 1)x + c` then we have
+
+     :math:`f(x_1) = x_2 - x_1`
+
+     :math:`f(x_2) = x_3 - x_2`
+
+     :math:`\ldots`
+
+     :math:`f(x_n) = x_1 - x_n`
+
+     Case I: When :math:`(b - 1)^2 - 4ac < 0`:
+
+     In this case all of :math:`f(x_1), f(x_2), \ldots, f(x_n)` will have same sign
+     as that of :math:`a`.
+
+     :math:`\therefore f(x_1) + f(x_2) + \ldots + f(x_n) \ne 0.`
+
+     Hence, the system of equation have no solution.
+
+     Case II: When :math:`(b - 1)^2 - 4ac = 0`
+
+     In this case all of :math:`f(x_1), f(x_2), \ldots, f(x_n) \ge 0` or
+     :math:`f(x_1), f(x_2), \ldots, f(x_n) \le 0`
+
+     But :math:`f(x_1) + f(x_2) + \ldots + f(x_n) = 0` implies
+
+     :math:`f(x_1) = f(x_2) = \ldots = f(x_n) = 0`
+
+     Then, we have :math:`f(x_k)=0\Rightarrow ax_k^2 + (b - 1)x_k + c = 0`
+
+     :math:`\Rightarrow x_k = \frac{1 - b}{2a}`
+
+     Case III: When :math:`(b - 1)^2 - 4ac > 0:`
+
+     Roots are :math:`\alpha,\beta = \frac{1 - b + \sqrt{(1 - b)^2 - 4ac}}{2a}`
+
+     Now it is trivial to find rest from sign scheme.
+
+326. This inequality is system of two inequalities. First we do one.
+
+     i. :math:`x^2 - \frac{3}{16} > 0 \Rightarrow x < -\frac{\sqrt{3}}{4}` or :math:`x > \frac{\sqrt{3}}{4}`
+
+     ii. :math:`x > 1`
+
+     iii. :math:`x^2 - \frac{3}{16}> x^4 \Rightarrow 16x^4 - 16x^2 + 3 < 0`
+
+          :math:`(4x^2 -3)(4x^2 - 1) < 0 \Rightarrow \frac{1}{4}<x^2\frac{3}{4}`
+
+          :math:`x^2 > \frac{1}{4} \Rightarrow x < -\frac{1}{2}` or :math:`x > \frac{1}{2}`
+
+          and :math:`x^2 < \frac{3}{4} \Rightarrow -\frac{\sqrt{3}}{2}< x < \frac{\sqrt{3}}{2}`
+
+     Second system of inequality is left as an exercise.
+
+327. Given :math:`\log_{\frac{1}{2}}x^2 \ge \log_{\frac{1}{2}}(x + 2)`
+
+     :math:`\Rightarrow x^2 \le x + 2` [ :math:`\because` base :math:`< 1` ]
+
+     :math:`\Rightarrow x^2 - x - 2 \le 0`
+
+     :math:`\Rightarrow -1 \le x \le 2, x \ne 0`
+
+     [For logarithms to be defined :math:`x\ne 0` and :math:`x>-2`]
+
+     Again, :math:`49x^2 - 4m^4 < 0`
+
+     :math:`-\frac{2}{7}m^2\le x \le \frac{2}{7}m^2`
+
+     According to question :math:`[-1, 2] \subset \left[-\frac{2}{7}m^2, \frac{2}{7}m^2\right]`
+
+     Now it is trivial to solve for various values of :math:`m` which reader can compute to be
+     :math:`-\infty<m \le -\sqrt{7}` or :math:`\sqrt{7}\le m < \infty` 

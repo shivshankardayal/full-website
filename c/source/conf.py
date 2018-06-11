@@ -12,6 +12,7 @@
 # serve to show the default.
 
 import sys, os
+import sphinx_rtd_theme
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -24,7 +25,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 'sphinxcontrib.tikz', 'sphinxcontrib.googleanalytics']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 'sphinxcontrib.tikz']
 
 tikz_tikzlibraries = 'arrows'
 pngmath_dvipng_args = ['-gamma', '1.5', '-D', '112', '-bg', 'Transparent']
@@ -45,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'C Programming'
-copyright = u'2012-2015, Shiv S. Dayal'
+copyright = u'2012-2018, Shiv S. Dayal'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -103,7 +104,50 @@ html_theme = 'sphinx_rtd_theme'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+#html_theme_options = {
+    # Specify a list of menu in Header.
+    # Tuples forms:
+    #  ('Name', 'external url or path of pages in the document', boolean, 'icon name')
+    #
+    # Third argument:
+    # True indicates an external link.
+    # False indicates path of pages in the document.
+    #
+    # Fourth argument:
+    # Specify the icon name.
+    # For details see link.
+    # https://material.io/icons/
+#    'header_links' : [
+#        ('Home', '/', True, 'home'),
+#    ],
+    # Customize css colors.
+    # For details see link.
+    # https://getmdl.io/customize/index.html
+    #
+    # Values: amber, blue, brown, cyan deep_orange, deep_purple, green, grey, indigo, light_blue,
+    #         light_green, lime, orange, pink, purple, red, teal, yellow(Default: indigo)
+#    'primary_color': 'indigo',
+    # Values: Same as primary_color. (Default: pink)
+#    'accent_color': 'light_blue',
+
+    # Customize layout.
+    # For details see link.
+    # https://getmdl.io/components/index.html#layout-section
+#    'fixed_drawer': False,
+#    'fixed_header': True,
+#    'header_waterfall': True,
+#    'header_scroll': False,
+
+    # Render title in header.
+    # Values: True, False (Default: False)
+#    'show_header_title': False,
+    # Render title in drawer.
+    # Values: True, False (Default: True)
+#    'show_drawer_title': True,
+    # Render footer.
+    # Values: True, False (Default: True)
+#    'show_footer': True
+#}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -187,31 +231,31 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 'preamble': r"""\setcounter{secnumdepth}{4}
-\usepackage{fancyhdr}
-\setcounter{tocdepth}{4}
-\usepackage{fontspec}
-\usepackage{xunicode}
-\usepackage{xltxtra}
+%\usepackage{fancyhdr}
+%\setcounter{tocdepth}{4}
+%\usepackage{fontspec}
+%\usepackage{xunicode}
+%\usepackage{xltxtra}
 %\setmainfont[Mapping=tex-text]{Birka}
 %\setsansfont{Myriad}
 %\setmonofont{Inconsolata}
-\makeatletter
-  \fancypagestyle{normal}{
-    \fancyhf{}
-    \fancyfoot[LE,RO]{{\py@HeaderFamily\thepage}}
-    \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
-    \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
-    \fancyhead[LE,RO]{{\py@HeaderFamily \@title}} % here's the change
-    \renewcommand{\headrulewidth}{0.4pt}
-    \renewcommand{\footrulewidth}{0.4pt}
-  }
-\makeatother
-\textwidth 15truecm
-\textheight 22.5truecm
-\baselineskip 14truept
-\oddsidemargin 1cm
-\evensidemargin 1cm
-\topmargin 0cm
+%\makeatletter
+%  \fancypagestyle{normal}{
+%    \fancyhf{}
+%    \fancyfoot[LE,RO]{{\py@HeaderFamily\thepage}}
+%    \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
+%    \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
+%    \fancyhead[LE,RO]{{\py@HeaderFamily \@title}} % here's the change
+%    \renewcommand{\headrulewidth}{0.4pt}
+%    \renewcommand{\footrulewidth}{0.4pt}
+%  }
+%\makeatother
+%\textwidth 15truecm
+%\textheight 22.5truecm
+%\baselineskip 14truept
+%\oddsidemargin 1cm
+%\evensidemargin 1cm
+%\topmargin 0cm
 %\definecolor{VerbatimBorderColor}{rgb}{0.36,0.54,0.66}
 """
 }
@@ -284,7 +328,7 @@ texinfo_documents = [
 epub_title = u'C'
 epub_author = u'Shiv S. Dayal'
 epub_publisher = u'Shiv S. Dayal'
-epub_copyright = u'2012, Shiv S. Dayal'
+epub_copyright = u'2012-2018, Shiv S. Dayal'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
@@ -423,4 +467,4 @@ pdf_use_numbered_links = False
 # Background images fitting mode
 pdf_fit_background_mode = 'scale'
 
-googleanalytics_id = 'UA-17487464-6'
+#googleanalytics_id = 'UA-17487464-6'
