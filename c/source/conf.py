@@ -12,7 +12,7 @@
 # serve to show the default.
 
 import sys, os
-import sphinx_materialdesign_theme
+import sphinx_rtd_theme
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -99,12 +99,12 @@ pygments_style = 'sphinx'
 #html_theme = 'default'
 #sys.path.append(os.path.abspath('_themes'))
 #html_theme_path = ['_themes']
-html_theme = 'sphinx_materialdesign_theme'
+html_theme = 'sphinx_rtd_theme'
 #html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_theme_options = {
+#html_theme_options = {
     # Specify a list of menu in Header.
     # Tuples forms:
     #  ('Name', 'external url or path of pages in the document', boolean, 'icon name')
@@ -117,37 +117,37 @@ html_theme_options = {
     # Specify the icon name.
     # For details see link.
     # https://material.io/icons/
-    'header_links' : [
-        ('Home', '/', True, 'home'),
-    ],
+#    'header_links' : [
+#        ('Home', '/', True, 'home'),
+#    ],
     # Customize css colors.
     # For details see link.
     # https://getmdl.io/customize/index.html
     #
     # Values: amber, blue, brown, cyan deep_orange, deep_purple, green, grey, indigo, light_blue,
     #         light_green, lime, orange, pink, purple, red, teal, yellow(Default: indigo)
-    'primary_color': 'indigo',
+#    'primary_color': 'indigo',
     # Values: Same as primary_color. (Default: pink)
-    'accent_color': 'light_blue',
+#    'accent_color': 'light_blue',
 
     # Customize layout.
     # For details see link.
     # https://getmdl.io/components/index.html#layout-section
-    'fixed_drawer': False,
-    'fixed_header': True,
-    'header_waterfall': True,
-    'header_scroll': False,
+#    'fixed_drawer': False,
+#    'fixed_header': True,
+#    'header_waterfall': True,
+#    'header_scroll': False,
 
     # Render title in header.
     # Values: True, False (Default: False)
-    'show_header_title': False,
+#    'show_header_title': False,
     # Render title in drawer.
     # Values: True, False (Default: True)
-    'show_drawer_title': True,
+#    'show_drawer_title': True,
     # Render footer.
     # Values: True, False (Default: True)
-    'show_footer': True
-}
+#    'show_footer': True
+#}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
