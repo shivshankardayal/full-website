@@ -69,6 +69,8 @@ A Variable in Algebra
    quadratic-equations-solutions-part6
    quadratic-equations-problems-part7
    quadratic-equations-solutions-part7
+   permutations-combinations
+   determinants
 
 Indices and tables
 ==================

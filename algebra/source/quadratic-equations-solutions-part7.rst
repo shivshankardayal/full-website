@@ -226,3 +226,57 @@ Quadratic Equations Solutions Part 7
 
      Now it is trivial to solve for various values of :math:`m` which reader can compute to be
      :math:`-\infty<m \le -\sqrt{7}` or :math:`\sqrt{7}\le m < \infty` 
+
+328. Given, :math:`1 + \log_5(x^2 + 1)\geq \log_5(ax^2 + 4x + a)`
+
+     :math:`\Leftrightarrow \log_55 + \log_5(x^2 + 1)\geq \log_5(ax^2 + 4x + a)`
+
+     :math:`\Leftrightarrow \log_55(x^2 + 1)\geq \log_5(ax^2 + 4x + a)`
+
+     :math:`\Leftrightarrow 5(x^2 + 1)\geq ax^2 + 4x + a`
+
+     :math:`\Leftrightarrow (5 - a)x^2 - 4x + 5 -a \geq 0~~\forall` real :math:`x`
+
+     i. :math:`D\leq 0 \Leftrightarrow 16 - 4(5 - a)^2 \leq 0 \Leftrightarrow (7 - a)(a - 3)\leq 0`
+
+        :math:`\Leftrightarrow a\leq 3` or :math:`a\geq 7`
+
+     ii. :math:`5 - a > 0 \Leftrightarrow a < 5`
+
+         Combining from (i) we have :math:`a\leq 3`
+
+     iii. But for :math:`\log_5(ax^2 + 4x + a)` to be defined
+
+          :math:`ax^2 + 4x + a > 0~\forall` real :math:`x`
+
+          :math:`D < 0 \Leftrightarrow 16 - 4a^2 < 0 \Leftrightarrow a < -2` or :math:`a > 2`
+
+          and :math:`a > 0`
+
+          Combining from (ii) we have :math:`2 < a \leq 3`
+
+329. Let :math:`a - c = \alpha, b - c = \beta` and :math:`c + x = u` then for :math:`\sqrt{a - c}` and
+     and :math:`\sqrt{b - c}` to be real :math:`\alpha \geq 0` and :math:`\beta \geq 0`. Also as,
+     :math:`x > -c \therefore u > 0`
+
+     Let :math:`y = \frac{(a + x)(b + x)}{c + x} = \frac{(u + \alpha)(u + \beta)}{u}`
+
+     :math:`y = u + \frac{\alpha\beta}{u} + \alpha + \beta`
+
+     :math:`u^2 + (\alpha + \beta - y)u + \alpha\beta = 0`
+
+     Since :math:`u` is real :math:`\therefore (\alpha + \beta - y)^2 - 4\alpha\beta \geq 0`
+
+     :math:`y^2 -2(\alpha + \beta)y + (\alpha - \beta)^2 \geq 0`
+
+     Roots are :math:`y = (\sqrt{\alpha} - \sqrt{\beta})^2, (\sqrt{\alpha} + \sqrt{\beta})^2`
+
+     :math:`y \leq (\sqrt{\alpha} - \sqrt{\beta})^2` and :math:`y \geq (\sqrt{\alpha} + \sqrt{\beta})^2`
+
+     But :math:`y \leq (\sqrt{\alpha} - \sqrt{\beta})^2 \Leftrightarrow y - (\alpha + \beta) +
+     2\sqrt{\alpha\beta}\leq 0` which is not possible as :math:`y - \alpha - \beta = u +
+     \frac{\alpha\beta}{u}>0`
+
+     Hence, least value of y = :math:`(\sqrt{a - c} + \sqrt{b - c})^2`
+
+Rest of the problems have been left as exercise.

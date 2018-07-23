@@ -50,8 +50,8 @@ dirhtml: source/*.rst
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
-	mkdir -p /tmp/www/algebra
-	cp -r build/dirhtml/* /tmp/www/algebra
+	mkdir -p /var/www/algebra
+	cp -r build/dirhtml/* /var/www/algebra
 
 singlehtml:
 	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
