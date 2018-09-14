@@ -71,6 +71,7 @@ A Variable in Algebra
    quadratic-equations-solutions-part7
    permutations-combinations
    permutations-combinations-problems-part1
+   permutations-combinations-solutions-part1
    determinants
 
 Indices and tables
