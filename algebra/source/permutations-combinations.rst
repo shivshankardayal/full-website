@@ -1,6 +1,6 @@
 Permutations and Combinations
 *****************************
-In this chpater we will study basics of permutations and combinations. Together they are called combinatorics.
+In this chapter we will study basics of permutations and combinations. Together they are called combinatorics.
 
 Let us say that there are three persons John, Mary and Kate. If there is one chair then in how many ways the chair
 can be occupied? The chair can be occupied by anyone of them. Thus, there are three ways of occupying the chair.
@@ -45,7 +45,6 @@ Factorial of :math:`n`
 Factorial of :math:`n` is denoted by :math:`n!` or as the old symbol is given below:
 
 .. image:: _static/images/factorial.png
-   :scale: 50 %
    :alt: factorial
 
 :math:`n!` is given by product of first :math:`n` natural numbers.
@@ -83,6 +82,220 @@ Total no. of ways = :math:`n.(n - 1).(n - 2)\ldots(n - r + 1)`
 
 = :math:`\frac{n!}{(n - r)!}`
 
-**Second Proof**
+**Second Proof:**
 
+As given in above proof, first place can be filled in :math:`n` different ways. Rest of the :math:`r - 1` places can be filled from
+:math:`n - 1` objects in :math:`^{n - 1}P_{r - 1}` ways.
 
+Hence, total no. of ways, :math:`^nP_r = n.^{n - 1}P_{r - 1}`
+
+Similarly, :math:`^{n - 1}P_{r - 1} = (n - 1)^{n - 2}P_{r - 2}`
+
+:math:`^{n - 2}P_{r - 2} = (n - 2).^{n - 3}P_{r - 3}`
+
+:math:`\ldots`
+
+:math:`^{n - r + 1}P_{1} = n - r + 1`
+
+Multiplying and cancelling common factors, we get
+
+:math:`^nP_r = n.(n - 1).(n - 2)\ldots(n - r + 1) = \frac{n!}{(n - r)!}`
+
+:math:`^nP_n = n!` and :math:`0!`
+=================================
+:math:`^nP_n = n!` means permutation of :math:`n` different objects out of :math:`n`. Following the formula of :math:`^nP_r` we have
+:math:`^nP_n = \frac{n!}{0!}`.
+
+However, following first proof we can say that total no. of ways = :math:`n!`.
+
+Thus, :math:`\frac{n!}{0!} = n! \Leftrightarrow 0!= 1`
+
+Note that mathematically :math:`0!` has no meaning.
+
+Meaning of :math:`\frac{1}{(-k)!},` where :math:`k` is a positive integer
+=========================================================================
+:math:`^nP_r = \frac{n!}{(n - r)!}`
+
+Putting :math:`r = n + k`, we have
+
+:math:`^nP_{n+k} = \frac{n!}{(-k)!}`
+
+But number of ways of arranging :math:`(n + k)` different things out of :math:`n` different things :math:`= 0`
+
+:math:`\therefore \frac{n!}{(-k)!} = 0 \Rightarrow \frac{1}{(-k)!} = 0`
+
+**Note:** Although :math:`(-k)!` has no meaning by definition of factorial but if :math:`\frac{1}{(-k)!}` is
+taken as :math:`0(zero)`, then the formula :math:`^nP_r = \frac{n!}{(n - r)!}` will become valid even for :math:`r>n.`
+
+Permutation of Similar Objects
+==============================
+To find permutation of :math:`n` things taken all together when :math:`p` of them are similar and are of
+one type, :math:`q` of them are similar and are of second type, :math:`r` of them are similar and are of third type
+and rest all are different.
+
+Let the required no. of permutations be :math:`x`. Since :math:`p` different things can be arranged among themselves
+in :math:`p!` ways, therefore, if we replace :math:`p` identical things by :math:`p` different things then total
+no. of permutations will become :math:`p!x`. Similarly, if we replace :math:`q` and :math:`r` identical things by
+:math:`q` and :math:`r` different things then total no. of permutations become :math:`p!~q!~r!~x`.
+
+Now all :math:`n` things are different and thus no. of permutations should be :math:`n!`.
+
+Thus, :math:`p!~q!~r!~x = n! \therefore x = \frac{n!}{p!~q!~r!}`
+
+Repititive Permutation
+======================
+To find number of permutations of :math:`n` different things taken :math:`r` at a time when each thing can be repeated
+:math:`r` times.
+
+Number of permutations of :math:`n` different things taken :math:`r` at a time when repitition is allowed = Number of ways
+in which :math:`r` blank places can be filled by same no. of things when repitition is allowed
+
+Now, first place can be filled by :math:`n` different ways.
+
+Second place can be filled by :math:`n` different ways.
+
+:math:`\ldots`
+
+:math:`r` th  place can be filled by :math:`n` different ways.
+
+Now ny multiplication rule of fundamental principle of counting number of ways in which :math:`r` different places can
+be filled = :math:`n~\times~n\times\ldots r~\text{factors}`
+
+:math:`= n^r`
+
+Prove that :math:`^nP_r = r^{n - 1}P_{r - 1} + ^{n - 1}P_r`
+===========================================================
+:math:`r^{n - 1}P_{r - 1} + ^{n - 1}P_r = \frac{r(n - 1)!}{(n - r)!} + \frac{(n - 1)!}{n - r - 1}!`
+
+:math:`= \frac{r(n - 1)! + (n - r)(n - 1)!}{(n - r)!}`
+
+:math:`= \frac{(n - 1)![r + n - r]}{(n - r)!} = \frac{n(n - 1)!}{(n - r)!} = \frac{n!}{(n - r)!} = ^nP_r`
+
+Circular Permutation
+====================
+Let us consider about arrnging things along a circle. Let us consider that persons :math:`A, B, C, D` are sitting around a
+round table. We can have following arrangements:
+
+.. tikz::
+
+   \draw (0,0) circle (1cm);
+   \draw (3cm,0) circle (1cm);
+   \draw (6cm,0) circle (1cm);
+   \draw (9,0) circle (1cm);
+   \draw (1cm, 0) node[anchor=east] {$A$};
+   \draw (0, 1cm) node[anchor=north] {$B$};
+   \draw (-1cm, 0) node[anchor=west] {$C$};
+   \draw (0, -1cm) node[anchor=south] {$D$};
+   \draw (4cm, 0) node[anchor=east] {$D$};
+   \draw (3cm, 1cm) node[anchor=north] {$A$};
+   \draw (2cm, 0) node[anchor=west] {$B$};
+   \draw (3cm, -1cm) node[anchor=south] {$C$};
+   \draw (7cm, 0) node[anchor=east] {$C$};
+   \draw (6cm, 1cm) node[anchor=north] {$D$};
+   \draw (5cm, 0) node[anchor=west] {$A$};
+   \draw (6cm, -1cm) node[anchor=south] {$B$};
+   \draw (10cm, 0) node[anchor=east] {$B$};
+   \draw (9cm, 1cm) node[anchor=north] {$C$};
+   \draw (8cm, 0) node[anchor=west] {$D$};
+   \draw (9cm, -1cm) node[anchor=south] {$A$};
+
+As shown four persons are sitting around a round table and four anticlockwise rotations have lead to four arrangements.
+
+But if :math:`A, B, C, D` are sitting in a row and then are shiftedd such that last occupies the place of first, then
+the four arrangements will be different.
+
+Thus, if there are :math:`n` things then for each circular arrangement there are :math:`n` linear arrangements.
+
+But for :math:`n` different things total no. of linear arrengements are :math:`n!` so the total no. of circular arrangements
+are :math:`\frac{n!}{n} = (n-1)!`
+
+Clockwise and Anticlockwise Arrangements
+========================================
+When clockwise and anticlockwise arranegemnts are same then total no. of permutations will become half of what we computed
+in previous case i.e. :math:`\frac{(n - 1)!}{2}`
+
+Find the number of combinations of :math:`n` different things taken :math:`r` at a time(:math:`r\le n`)
+=======================================================================================================
+Number of combination of :math:`n` different things taken :math:`r` at a time is :math:`^nC_r`
+
+Each combination consists of :math:`r` different things and these :math:`r` things can be arranged among themselves in :math:`r!` ways.
+
+Thus for one combination of :math:`r` things number of arrangements = :math:`r!`
+
+Therefore, number of arrangements for :math:`^nC_r` = :math:`r!.^nC_r`
+
+But number of arrangements of :math:`n` different things taken :math:`r` at a time :math:`= ^nP_r`
+
+Thus, :math:`r!^nC_r = ^nP_r \therefore ^nC_r = \frac{n!}{r!(n - r)!}`
+
+**Second Proof:**
+
+Let number of combinations of :math:`n` different things taken :math:`r` at a time be denoted by :math:`^nC_r`
+
+Then no. of combinations of :math:`n-1` different things taken :math:`r - 1` at a time be denoted by :math:`^{n - 1}C_{r - 1}`
+
+Number of combinations of :math:`r` things in which a particular thing(letter) is included :math:`= 1.^{n - 1}C_{r - 1}`
+
+:math:`\therefore` Total number of particular things(letters) in :math:`r` combinations :math:`= n.^{n - 1}C_{r - 1}`
+
+Also, in each combination of :math:`r` things number of letters :math:`= r`
+
+:math:`\therefore` Total no. of letters in :math:`^nC_r` combinations :math:`= r.^nC_r`
+
+Thus, we have
+
+:math:`r.^nC_r = n.^{n - 1}C_{r -1} \therefore ^nC_r = \frac{n}{r}^{n - 1}C_{r - 1}`
+
+:math:`= \frac{n}{r}\frac{n - 1}{r - 1}^{n - 2}C_{r - 2}`
+
+:math:`= \frac{n}{r}.\frac{n - 1}{r - 1}. \ldots \frac{n - r + 1}{1}^{n - r}C_0`
+
+:math:`= \frac{n!}{r!~(n - r)!}`
+
+Properties of :math:`^nC_r`
+===========================
+Prove that :math:`^nC_r = ^nC_{n - r}`
+--------------------------------------
+:math:`^nC_r = \frac{n!}{r!~(n - r)!}`
+
+:math:`^nC_{n - r} = \frac{n!}{(n - r)!~(n - n + r)!} = \frac{n!}{(n - r)!~r!}`
+
+Hence proved.
+
+Prove that if :math:`^nC_x = ^nC_y,` then either :math:`x = y` or :math:`x + y = n`
+-----------------------------------------------------------------------------------
+Let :math:`^nC_x = ^nC_y = ^nC_{n - y}`
+
+From first two we have :math:`x = y`
+
+From first and third :math:`x = n - y` i.e. :math:`x + y = n`
+
+Prove that :math:`^nC_r + ^nC_{r - 1} = ^{n + 1}C_r`
+----------------------------------------------------
+L. H. S. :math:`= \frac{n!}{r!~(n - r)!} + \frac{n!}{(r - 1)!~(n - r + 1)!}`
+
+:math:`= \frac{n!}{r(r - 1)!~(n - r)!} + \frac{n!}{(r - 1)!~(n - r + 1)(n - r)!}`
+
+:math:`= \frac{n!}{(r - 1)!~(n - r)!}\left[\frac{1}{r} + \frac{1}{n - r + 1}\right]`
+
+:math:`= \frac{(n + 1)!}{r!~(n + 1 - r)!} = ^{n + 1}C_r`
+
+Prove that :math:`r.^nC_r = n.^{n - 1}C_{r - 1}`
+------------------------------------------------
+L. H. S. :math:`= r.^nC_r = \frac{r.n.(n - 1)!}{r.(r - 1)!~(n - r)!} = n.^{n - 1}C_{r - 1}`
+
+Prove that :math:`\frac{^nC_r}{r + 1} = \frac{^{n + 1}C_{r + 1}}{n + 1}`
+------------------------------------------------------------------------
+L. H. S. :math:`= \frac{^nC_r}{r + 1} = \frac{n!}{(r + 1)r!~(n-r)!}`
+
+:math:`= \frac{(n + 1)n!}{(n + 1)(r + 1)(n - r)!}`
+
+:math:`= \frac{1}{n + 1}.\frac{(n + 1)!}{(r + 1)!~(n - r)!} = \frac{^{n + 1}C_{r + 1}}{n + 1}`
+
+Restricted Combinations
+=======================
+Number of combinations of :math:`n` different things taken :math:`r` at a time when :math:`p` particular
+things are always selected :math:`= ^{n - p}C_{r - p}`
+
+Number of combinations of :math:`n` different things taken :math:`r` at a time when :math:`p` particular
+things are excluded :math:`= ^{n - p}C_r`

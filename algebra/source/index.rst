@@ -70,6 +70,7 @@ A Variable in Algebra
    quadratic-equations-problems-part7
    quadratic-equations-solutions-part7
    permutations-combinations
+   permutations-combinations-problems-part1
    determinants
 
 Indices and tables
