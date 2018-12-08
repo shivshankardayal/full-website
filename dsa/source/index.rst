@@ -20,6 +20,8 @@ Data structures and Algorithms Contents
    stack
    queues
    circular-list
+   real-world-data-structure
+   GDSL-linked-list
    binary-tree
    
 Indices and tables
