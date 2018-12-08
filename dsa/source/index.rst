@@ -20,6 +20,7 @@ Data structures and Algorithms Contents
    stack
    queues
    circular-list
+   binary-tree
    
 Indices and tables
 ==================

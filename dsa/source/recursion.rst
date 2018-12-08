@@ -578,3 +578,933 @@ solving for nth Fibonacci number we get,
    F_n=\frac{\phi^n-(-\phi)^{-n}}{\sqrt5}
 
 
+Tail Recursive Version
+^^^^^^^^^^^^^^^^^^^^^^
+Thus, we see that complexity of computation of Fibonacci numbers is as given above. I would love to talk more about mathematical
+poperties of Fibonacci numbers in more details but I will leave that for mathematical part. Let us continue with recursion and
+efficiency of the above algorithm. We have seen that the tree form complexity will have very bad effect on runtime of the
+program. The simplification of multiple recursion form of Fibonacci sequence to single recursion form will allow us to do tail
+recursion. The code is given below:
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   void fib(unsigned int *input, unsigned long long *fib1, unsigned long long *fib2, unsigned long long *fibn)
+   {
+     if(*input == 0) {
+       return;
+     } else if(*input == 1) {
+       *fibn = 1;
+       return;
+     } else if(*input == 2) {
+       *fibn = 1;
+       return;
+     } else if (*input == 3){
+       *fibn = *fib1 + *fib2;
+       *fib1 = *fib2;
+       *fib2 = *fibn;
+       return;
+     } else {
+       *fibn = *fib1 + *fib2;
+       *fib1 = *fib2;
+       *fib2 = *fibn;
+     }
+       (*input)--;
+  
+     fib(input, fib1, fib2, fibn);
+   }
+
+   int main()
+   {
+     unsigned int input = 0;
+     unsigned long long fib1 = 1;
+     unsigned long long fib2 = 1;
+     unsigned long long fibn = 0;
+  
+     printf("Enter the fibonacci number you want(positive integer please):\n");
+     scanf("%u", &input);
+
+     fib(&input, &fib1, &fib2, &fibn);
+
+     printf("%llu is the Fibonacci number\n", fibn);
+   }
+
+
+The implementation is slighly convoluted because of usage of pointers but it is still simple enough.
+
+If you want to see if the code is really performing well then given below is output timed for 45th Fibonacci number. The version
+which took more time is the naive version.
+
+.. code-block:: text
+
+   computer:~ shivdayal$ time ./a.out 
+   Which Fibonacci number you want?
+   45
+   1134903170
+
+   real  0m7.535s
+   user  0m6.796s
+   sys 0m0.008s
+   computer:~ shivdayal$ time ./a.out 
+   Enter the fibonacci number you want(positive integer please):
+   45
+   1134903170 is the Fibonacci number
+
+   real  0m0.864s
+   user  0m0.001s
+   sys 0m0.002s
+
+If I try to compute 50th number then it breaks my patience. But the tail recursive version blows away even the 80th number
+easily. As you will learn or would have noticed early such is power of tail recursion or better algorithms. Implementation does
+matter which you will see in next algorithm.
+
+One more point I would here like to make is compilers are pretty good at optimization. For example, if we apply -O2 switch to the
+naive version of Fibnacci program then we see some improvement:
+
+.. code-block:: text
+
+   Which Fibonacci number you want?
+   45
+   1134903170
+
+   real  0m3.841s
+   user  0m2.640s
+   sys 0m0.003s
+
+but it still is no match for our optimized tail recursive version. Thus, we can conslude that even through compilers are very smart
+we have to give them smart code as well. Compiler optimizes code and it can optimize better implementations even better.
+
+Ackermann's Function
+--------------------
+By the way, Ackermann was also David Hilbert's(who is famous for Hilbert's ten prolems) student for those who care. More of this
+will follow in mathematics part. Ackermann's
+function is a very nasty function because even for small value of input it grows very fast. C does not have that kind of data type
+which can represent the values even for small inputs. It is a very good benchmark for the systems which can optimize recursion. To
+see how it grows so fast let us see how it expands:
+
+.. math::
+
+   A(1,2)=A(0,A(1,1))
+
+   =A(0,A(0,A(1,0)))
+
+   =A(0,A(0,A(0,1)))
+
+   =A(0,A(0,2))
+
+   =A(0,A(0,3))
+
+   =4
+
+   A(4,3)=A(3,A(4,2))
+
+   A(4,3)=A(3,A(3,A(4,1)))
+
+   A(4,3)=A(3,A(3,A(3,A(4,0))))
+
+   A(4,3)=A(3,A(3,A(3,A(3,1))))
+
+   \ldots
+
+   =2^{265536}1 - 3
+
+
+Naive Implementation
+^^^^^^^^^^^^^^^^^^^^
+.. code-block:: c
+
+   #include <stdio.h>
+ 
+   int ackermann(int m, int n)
+   {
+     if (!m) return n + 1;
+     if (!n) return ackermann(m - 1, 1);
+  
+     return ackermann(m - 1, ackermann(m, n - 1));
+   }
+ 
+   int main()
+   {
+     int m, n;
+
+     for (m = 0; m <= 4; m++)
+       for (n = 0; n < 6 - m; n++)
+         printf("A(%d, %d) = %d\n", m, n, ackermann(m, n));
+ 
+     return 0;
+   }
+
+
+and the output is:
+
+.. code-block:: text
+
+   A(0, 0) = 1
+   A(0, 1) = 2
+   A(0, 2) = 3
+   A(0, 3) = 4
+   A(0, 4) = 5
+   A(0, 5) = 6
+   A(1, 0) = 2
+   A(1, 1) = 3
+   A(1, 2) = 4
+   A(1, 3) = 5
+   A(1, 4) = 6
+   A(2, 0) = 3
+   A(2, 1) = 5
+   A(2, 2) = 7
+   A(2, 3) = 9
+   A(3, 0) = 5
+   A(3, 1) = 13
+   A(3, 2) = 29
+   A(4, 0) = 13
+   A(4, 1) = 65533
+
+
+`gcc` does quite good optimization. For example, if I time the above code without optimization then I get following:
+
+.. code-block:: text
+
+   $ time ./a.out
+   A(0, 0) = 1
+   A(0, 1) = 2
+   A(0, 2) = 3
+   A(0, 3) = 4
+   A(0, 4) = 5
+   A(0, 5) = 6
+   A(1, 0) = 2
+   A(1, 1) = 3
+   A(1, 2) = 4
+   A(1, 3) = 5
+   A(1, 4) = 6
+   A(2, 0) = 3
+   A(2, 1) = 5
+   A(2, 2) = 7
+   A(2, 3) = 9
+   A(3, 0) = 5
+   A(3, 1) = 13
+   A(3, 2) = 29
+   A(4, 0) = 13
+   A(4, 1) = 65533
+
+   real  0m18.102s
+   user  0m18.080s
+   sys 0m0.018s
+
+
+But if I compile it using -O3 flag then for the same code I have following:
+
+.. code-block:: text
+
+   $ time ./a.out
+   A(0, 0) = 1
+   A(0, 1) = 2
+   A(0, 2) = 3
+   A(0, 3) = 4
+   A(0, 4) = 5
+   A(0, 5) = 6
+   A(1, 0) = 2
+   A(1, 1) = 3
+   A(1, 2) = 4
+   A(1, 3) = 5
+   A(1, 4) = 6
+   A(2, 0) = 3
+   A(2, 1) = 5
+   A(2, 2) = 7
+   A(2, 3) = 9
+   A(3, 0) = 5
+   A(3, 1) = 13
+   A(3, 2) = 29
+   A(4, 0) = 13
+   A(4, 1) = 65533
+
+   real  0m1.748s
+   user  0m1.742s
+   sys 0m0.005s
+
+The problem with converting Ackermann function to tail recursive version is storing the values of intermediate values of `m` for
+which we need data structure like a linked list. Although, an array can be used as well. However, to really show the complexity of
+Ackermann function you need data types much bigger than `unsigned long long`.
+
+Another version of Ackermann function which is a tail-recursive version.
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   int ackermann(unsigned int *m, unsigned int *n, unsigned int* a, int* len)
+   {
+     if(!*m && *len == -1) {
+       return ++*n;
+     }
+     else if(!*m && *len >= 0) {
+       ++*n;
+       *m = a[(*len)--];
+     }
+     else if(*n == 0) {
+       --*m;
+       *n = 1;
+     } else {
+       ++*len;
+       a[*len] = *m - 1;
+       --*n;
+     }
+     return ackermann(m, n, a, len);
+   }
+
+   int main()
+   {
+     unsigned int m=4, n=1;
+     unsigned int a[66000];
+     int len = -1;
+
+     for (m = 0; m <= 4; m++)
+       for (n = 0; n < 6 - m; n++) {
+         unsigned int i = m;
+         unsigned int j = n;
+         printf("A(%d, %d) = %d\n", m, n, ackermann(&i, &j, a, &len));
+       }
+
+     return 0;
+   }
+
+
+But we have not improved the complexity of the algorithm. i.e. our computation effort has not decreased thus even with optimization
+it performs worse than our naive version. The timings are given below:
+
+
+.. code-block:: text
+
+   $ time ./a.out
+   A(0, 0) = 1
+   A(0, 1) = 2
+   A(0, 2) = 3
+   A(0, 3) = 4
+   A(0, 4) = 5
+   A(0, 5) = 6
+   A(1, 0) = 2
+   A(1, 1) = 3
+   A(1, 2) = 4
+   A(1, 3) = 5
+   A(1, 4) = 6
+   A(2, 0) = 3
+   A(2, 1) = 5
+   A(2, 2) = 7
+   A(2, 3) = 9
+   A(3, 0) = 5
+   A(3, 1) = 13
+   A(3, 2) = 29
+   A(4, 0) = 13
+   A(4, 1) = 65533
+
+   real  0m2.934s
+   user  0m2.926s
+   sys 0m0.006s
+
+However, we can improve this by doing caching previous results which is shown in the following piece of code:
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include <stdlib.h>
+   #include <string.h>
+
+   int m_bits, n_bits;
+   int *cache;
+
+   int ackermann(int m, int n)
+   {
+     int idx, res;
+     if (!m) return n + 1;
+
+     if (n >= 1<<n_bits) {
+       printf("%d, %d\n", m, n);
+       idx = 0;
+     } else {
+       idx = (m << n_bits) + n;
+       if (cache[idx]) return cache[idx];
+     }
+
+     if (!n) res = ackermann(m - 1, 1);
+     else    res = ackermann(m - 1, ackermann(m, n - 1));
+
+     if (idx) cache[idx] = res;
+     return res;
+   }
+
+   int main()
+   {
+     int m, n;
+
+     m_bits = 3;
+     n_bits = 20;  /* can save n values up to 2**20 - 1, that's 1 meg */
+     cache = malloc(sizeof(int) * (1 << (m_bits + n_bits)));
+     memset(cache, 0, sizeof(int) * (1 << (m_bits + n_bits)));
+
+     for (m = 0; m <= 4; m++)
+       for (n = 0; n < 6 - m; n++)
+         printf("A(%d, %d) = %d\n", m, n, ackermann(m, n));
+
+     return 0;
+   }
+
+and the timing is given below:
+
+.. code-block:: text
+
+   $ time ./a.out
+   A(0, 0) = 1
+   A(0, 1) = 2
+   A(0, 2) = 3
+   A(0, 3) = 4
+   A(0, 4) = 5
+   A(0, 5) = 6
+   A(1, 0) = 2
+   A(1, 1) = 3
+   A(1, 2) = 4
+   A(1, 3) = 5
+   A(1, 4) = 6
+   A(2, 0) = 3
+   A(2, 1) = 5
+   A(2, 2) = 7
+   A(2, 3) = 9
+   A(3, 0) = 5
+   A(3, 1) = 13
+   A(3, 2) = 29
+   A(4, 0) = 13
+   A(4, 1) = 65533
+
+   real  0m0.005s
+   user  0m0.002s
+   sys 0m0.002s
+
+Binary Search
+=============
+Searching a set of data is one of the most common and important operations in computer science. The importance of the search can be
+recognized from the success Google. The problem with search is that it is easy to search small amount of data but harder for large
+set. Most of the time we search for strings and rarely for numbers. The simplest approach would be the naive, brute force method to
+compare each item of the collection with the key to be searched which would result in :math:`O(n)`  time complexity, which simply is
+not good enough. Another problem is that since we compare strings that would result in increased time complexity other than that is
+for search. The first improvement which we can do on linear search is by using binary search algorithm. Binary search is a classic
+divide and conquer algorithm which tells if a value is present in a set of values in \log_2(n). The prerequisite of applying binary
+search is that input set is sorted.
+
+In binary search we find the mid element of our set. Let us say that our set or array is sorted in increasing order. If key is equal
+to the value of mid element we want to search then we return the value. If key is less than value of mid element then we consider
+the left half of array repeat the process. If key is greater than value of mid element then we consider the right half of array and
+repeat the process. Once we exhaust the resulting array to last one value by repeatedly dividing in half and still we have not found
+the value then the key is not found.
+
+First let us see an iterative version of the algorithm:
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include <stddef.h>
+    
+   int main()
+   {
+     size_t first, last, middle, search;
+     size_t array[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8 ,9};
+
+     printf("Enter value to find\n");
+     scanf("%zu", &search);
+
+     first = 0;
+     last = 9;
+     middle = (first+last)/2;
+
+     while (first <= last) {
+       if (array[middle] < search)
+         first = middle + 1;
+       else if (array[middle] == search) {
+         printf("%zu found at location %zu.\n", search, middle);
+         break;
+       }
+       else
+         last = middle - 1;
+
+       middle = (first + last)/2;
+     }
+     if (first > last)
+       printf("Not found! %zu is not present in the list.\n", search);
+
+     return 0;
+   }
+
+
+Now let us see recursive version:
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include <stddef.h>
+
+   void binary_search(size_t *a, size_t first, size_t last, size_t search)
+   {
+     size_t middle = (first+last)/2;
+
+     if (first > last) {
+       printf("Not found! %zu is not present in the list.\n", search);
+       return;
+     } else {
+       if (a[middle] < search)
+         first = middle + 1;
+       else if (a[middle] == search) {
+         printf("%zu found at location %zu.\n", search, middle);
+         return;
+       }
+       else
+         last = middle - 1;
+     }
+
+     binary_search(a, first, last, search);
+   }
+
+   int main()
+   {
+     size_t first, last, search;
+     size_t a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8 ,9};
+
+     printf("Enter value to find\n");
+     scanf("%zu", &search);
+
+     first = 0;
+     last = 9;
+
+     binary_search(a, first, last, search);
+     return 0;
+   }
+
+
+While you may think that this solution is correct the truth cannot be farther from it. There is a gaping issue with the code
+presented above. Read the code again and see if you can find that. For the time being I will entertain you with a quote from
+Donald E. Knuth.
+
+| Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky.
+
+On the funnier side of life it is not that only novice programmers make mistakes. Even expert programmers make mistakes. John
+Bentley, author of very good books(Programming Pearls, More Programming Pearls and Writing Efficient Programs) assigned it as a
+problem in a course for professional programmers. Surprisingly, ninety percent could not write correct code even after several
+hours. Even his own implementation in 1986 print of Programming Pearls, contained an error which remained there for 20 years.
+
+Coming back to the error, it is on the line which contains the code `middle = (first + last)/2;`. Experienced programmer would have
+already noticed it. The problem is common when you add any two numbers there is always a chance that sum will overflow. Thus, you
+need to cast it to larger data type. Since, we are using `size_t` for data type which is good enough for holding average of two such
+numbers we do not need to cast it. If it would have been just plain sum then we would have needed long long or its unsigned
+counterpart to be accurate. Here, we can use a nifty calculation to find out the average. We can write the same calculation as
+`middle = last + (first - last)/2;`, which would work for all values of first and last.
+
+A Simple Problem of Average Calculation
+=======================================
+Although it is not related to recursion, following the above discussion on overflow a simple problem can be formulated. Given an
+array of numbers find out its average. Now this is very simple and beginners always cause overflow in this. Floating-point division
+is allowed for the sake of accuracy. The above logic can be easily extended. For example, average of n numbers is given by
+
+:math:`average = \frac{a_0 + a_1 + \ldots + a_n}{n}`
+
+which can be rewritten as:
+
+:math:`average = a_0 + \frac{a_1 - a_0 + a_2 - a_0 + \ldots + a_n - a_0}{n}`
+
+Implementing the above formula will cause no overflow. An example implementation is given below:
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include <stddef.h>
+
+   int main()
+   {
+     size_t n = 0;
+
+     printf("Enter the size of array:\n");
+     scanf("%zu", &n);
+
+     int a[n];
+  
+     printf("Enter the elements of the array:\n");
+     for(size_t i = 0; i < n; ++i)
+       scanf("%d", &a[i]);
+
+     double average = a[0];
+
+     for(size_t i = 1; i < n; ++i)
+     {
+       average += (a[i]-a[0])/(float)n;
+     }
+
+     printf("Average is %lf\n", average);
+  
+     return 0;
+   }
+
+Again, coming back to the binary search implementation you would notice that if there are duplicates in the array then the position
+of key can be anything. The above implementation do not guarantee that lowest index of duplicate search elements will be
+returned. For example, consider following case:
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include <stddef.h>
+
+   void binary_search(size_t *a, size_t first, size_t last, size_t search)
+   {
+     size_t middle = (first+last)/2;
+
+     if (first > last) {
+       printf("Not found! %zu is not present in the list.\n", search);
+       return;
+     } else {
+       if (a[middle] < search)
+         first = middle + 1;
+       else if (a[middle] == search) {
+         printf("%zu found at location %zu.\n", search, middle);
+         return;
+       }
+       else
+         last = middle - 1;
+     }
+
+     binary_search(a, first, last, search);
+   }
+
+   int main()
+   {
+     size_t first, last, search;
+     size_t a[10] = {0, 1, 2, 3, 4, 8, 8, 8, 8 ,9};
+
+     printf("Enter value to find\n");
+     scanf("%zu", &search);
+
+     first = 0;
+     last = 9;
+
+     binary_search(a, first, last, search);
+     return 0;
+   }
+
+The value :math:`8` will always be found at :math:`6th` index. The loss is that this algorithm makes early termination
+impossible. For large arrays that are a power of :math:`2`, the savings is about two iterations. Half the time, a match is found
+with one iteration left to go; one quarter the time with two iterations left, one eighth with three iterations, and so forth. The
+infinite series sum is :math:`2`.
+
+The calculation of infinite series is given below:
+
+:math:`S = \frac{1}{2} + \frac{2}{4} + \frac{3}{8} + \frac{4}{16} + \frac{5}{32} + \ldots`
+
+:math:`\frac{S}{2} = \frac{1}{4} + \frac{2}{8} + \frac{3}{16} + \frac{4}{32} + \ldots`
+
+Subtracting and solving geometric series we get sum as :math:`2`.
+
+Complexity Analysis of Binary Search
+------------------------------------
+The worst case and average case complexity of binary search is :math:`O(\log_2(n))` while the best case is :math:`O(1)`. Space
+complexity of binary search is :math:`O(1)` because no extra space is needed. Computation of time complexity is really easy. Say, we
+begin with array of size n then clearly we will divide the array in half and in worst case our smallest array would be of size
+:math:`1`. Let us say that take :math:`k` steps then clearly :math:`n=2^k`, i.e. :math:`k=\log_2(n)`. Thus, in those many :math:`k`
+i.e. :math:`k=\lfloor\log_2n\rfloor` to round :math:`k` to next integral value.
+   
+Towers of Hanoi(Brahma)
+=======================
+The next example is the famous Towers of Hanoi which is also known as Towers of Brahma or Lucas' Tower. This puzzle was invented by
+the French Mathematician Edouard Lucas in :math:`1883`. There is a story about an Indian temple in Kashi Vishwanath which contains a large
+room with three time-worn posts in it surrounded by :math:`64` golden disks. According to directive issued by Hindu God Brahma the Brahmin
+priests are moving the disks. According to the directive of Brahma once priest would have moved all the disks then the world will
+end.
+
+If the legend were true, and priests moved the disks in such way that it would require minimum no. of moves and they take one second
+per disk movement, it would take them :math:`2^{64}-1` seconds or roughly :math:`585` billion years, or
+:math:`18,446,744,073,709,551,615` turns to finish, or about :math:`127` times the current age of the sun. Thus, there is no need to
+worry because earth will not have a source of energy, which supports all the life. The other variation of the legend replaces
+priests with monks, temple with monastery and location with Hanoi, Vietnam. For us, the programmers, the location does not
+matter neither does the legend. What matters is a program which can solve this puzzle. First let us have a pictorial
+representation of the problem then we will observe the constraints imposed on us by Gods about the puzzle.
+
+.. tikz::
+
+   \draw [rounded corners=.1cm, fill=black] (0,0)--(3cm,0)--(3cm,.2cm)--(0,.2cm)--cycle;
+   \draw [rounded corners=.1cm, fill=black] (1.4cm, 0)--(1.4cm,3cm)--(1.6cm,3cm)--(1.6cm,0)--cycle;
+
+   \draw [rounded corners=.2cm,fill=gray!90] (.2cm,.2cm)--(2.8cm,.2cm)--(2.8cm,.7cm)--(.2cm ,.7cm)--cycle;
+   \draw [rounded corners=.2cm,fill=gray!60] (.4cm,.7cm)--(2.6cm,.7cm)--(2.6cm,1.2cm)--(.4cm ,1.2cm)--cycle;
+   \draw [rounded corners=.2cm,fill=gray!30] (.6cm,1.2cm)--(2.4cm,1.2cm)--(2.4cm,1.7cm)--(.6cm ,1.7cm)--cycle;
+
+   \draw [rounded corners=.1cm, fill=black] (3.5cm,0)--(6.5cm,0)--(6.5cm,.2cm)--(3.5cm,.2cm)--cycle;
+   \draw [rounded corners=.1cm, fill=black] (4.9cm, 0)--(4.9cm,3cm)--(5.1cm,3cm)--(5.1cm,0)--cycle;
+
+   \draw [rounded corners=.1cm, fill=black] (7cm,0)--(10cm,0)--(10cm,.2cm)--(7cm,.2cm)--cycle;
+   \draw [rounded corners=.1cm, fill=black] (8.4cm, 0)--(8.4cm,3cm)--(8.6cm,3cm)--(8.6cm,0)--cycle;
+
+   \node at(1.5cm,.45cm) {3};
+   \node at(1.5cm,.95cm) {2};
+   \node at(1.5cm,1.45cm) {1};
+
+
+The objective of the puzzle is to move all disks from leftmost stand to rightmost under following rules:
+
+1. Only one disk must be moved at a time.
+2. A move can only take the uppermost disk from one of the towers and place it on top of another tower.
+3. No disk may be placed on top of a smaller disk.
+
+
+First we do a recursive solution and then we will see the iterative solution as iterative one is trickier. Consider a stack of
+:math:`n` disks. Then, we consider it as two disks. One consists of :math:`n-1` disks and the nth disk. Then, we move them to
+appropriate pegs and then we split :math:`n-1` disks in two i.e. one of :math:`n-2` and then another of :math:`n-1`. Thus,
+recursive solution is implemented. Given below is the recursive version of the code:
+
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+   void move(int n, char left, char right, char mid)
+   {
+     if(n > 0) {
+       // move n-1 disks from left to mid
+       move(n-1, left, mid, right);
+    
+       // move nth disk from left to right
+       printf("Moved disk %d from left to right\n", n);
+
+       // move n-1 disks from mid to right
+       move(n-1, mid, left, right);
+     }
+   }
+
+   int main()
+   {
+     unsigned int n = 0;
+
+     printf("How many disks you want to move?\n");
+     scanf("%d", &n);
+
+     move(n, 'L', 'R', 'C'); // L is left, R is right and C is center disk
+  
+     return 0;
+   }
+
+and the output is:
+
+.. code-block:: text
+
+   How many disks you want to move?
+   3
+   Moved disk 1 from left to right
+   Moved disk 2 from left to right
+   Moved disk 1 from left to right
+   Moved disk 3 from left to right
+   Moved disk 1 from left to right
+   Moved disk 2 from left to right
+   Moved disk 1 from left to right
+    
+
+From the description of the program it appears hard to understand but the program is really simple if you look at the output for
+:math:`2, 3, 4` and :math:`5` disks one by one. Once you see how stack is winded and unwinded then you will understand the
+solution. The description says move :math:`n-1` disks but in reality there is no such movement of :math:`n-1` disks but that
+is propagated further to next function. In reality, you move :math:`1` disk. The description is abstract and conceptual just
+to describe the solution.
+      
+The iterative solution is not very intuitive to figure easily thus I will present it straight away. Optimal solution is divided in
+two cases; one for odd and another for even no. of disks.
+
+If even no. of disks are in question:
+
+* move disk between left to center
+* move disk between left to right
+* move disk between center and right 
+
+If odd no. of disks are in question:
+
+* move disks between left and right
+* move disks between left and center
+* move disks between center and right
+* rinse and repeat till complete 
+
+An iterative implementation is given below:
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include <stdlib.h> // for malloc
+   #include <limits.h> // for UINT_MIN
+   #include <math.h> // for calculating total no. of moves
+
+   // we create a stack of disks
+   typedef struct stack {
+     // used for creating stack
+     int capacity;
+     // top of stack
+     int top;
+     // contiguous array to hold disks
+     int* array;
+   }stackT;
+
+   stackT* create_stack( int capacity)
+   {
+     stackT* s = (stackT*)malloc(sizeof(stackT));
+  
+     s->capacity = capacity;
+     s->top = -1;
+     s->array = ( int*)malloc(sizeof(int)*s->capacity);
+
+     return s;
+   }
+
+   // obviously stack is full when top is the last element
+   int is_full(stackT* s)
+   {
+     return (s->top == s->capacity - 1);
+   }
+
+   // same as full stack is empty if top is -1
+   int is_empty(stackT* s)
+   {
+     return (s->top == -1);
+   }
+
+   // push an element to stack increasing top
+   void push(stackT* s, int element)
+   {
+     if (is_full(s))
+       return;
+     s->array[++s->top] = element;
+   }
+
+   // pop an element from stack
+   int pop(stackT* s)
+   {
+     if (is_empty(s))
+       return INT_MIN;
+     return s->array[s->top--];
+   }
+
+   void move_disks(stackT* left, stackT* right, char l, char r)
+   {
+     int l_disk = pop(left);
+     int r_disk = pop(right);
+
+     // When l is empty
+     if (l_disk == INT_MIN)
+     {
+       push(left, r_disk);
+       printf("Move the disk %d from \'%c\' to \'%c\'\n", r_disk, r, l);
+     }
+
+     // When r is empty
+     else if (r_disk == INT_MIN)
+     {
+       push(right, l_disk);
+       printf("Move the disk %d from \'%c\' to \'%c\'\n", l_disk, l, r);
+     }
+
+     // When top disk of l > top disk of r
+     else if (l_disk > r_disk)
+     {
+       push(left, l_disk);
+       push(left, r_disk);
+       printf("Move the disk %d from \'%c\' to \'%c\'\n", r_disk, r, l);
+     }  
+
+     // When top disk of l < top disk of r
+     else
+     {
+       push(right, r_disk);
+       push(right, l_disk);
+       printf("Move the disk %d from \'%c\' to \'%c\'\n", l_disk, l, r);
+     }
+   }
+
+   // implement core logic
+   void hanoi_iter( int n, stackT* left, stackT* mid, stackT* right)
+   {
+     long i, total_moves;
+     char l = 'L', r = 'R', m = 'M';
+
+     // if no. of disks is even then we need to swap M and R
+     if(n % 2 == 0) {
+       char temp = r;
+       r = m;
+       m = temp;
+     }
+
+     total_moves = pow(2, n) - 1;
+     // obviously larger no. represent larger disks to they will
+     // be pushed first
+     for(i = n; i >= 1; i--) {
+       push(left, i);
+     }
+
+     for(i = 1; i <= total_moves; ++i) {
+       if(i % 3 == 1) {
+         move_disks(left, right, l, r);
+       } else if (i % 3 == 2) {
+         move_disks(left, mid, l, m);
+       } else if (i % 3 == 0) {
+         move_disks(mid, right, m, r);
+       }
+     }
+   }
+
+   int main()
+   {
+     int n = 0;
+  
+     printf("How many disks you want?\n");
+     scanf("%d", &n);
+ 
+     stackT *left, *mid, *right;
+ 
+     // Create three stacks of size 'n'
+     // to hold the disks
+     left = create_stack(n);
+     mid = create_stack(n);
+     right = create_stack(n);
+ 
+     hanoi_iter(n, left, mid, right);
+
+     return 0;
+   }
+
+and the output is:
+
+
+.. code-block:: text
+
+   How many disks you want?
+   3
+   Move the disk 1 from 'L' to 'R'
+   Move the disk 2 from 'L' to 'M'
+   Move the disk 1 from 'R' to 'M'
+   Move the disk 3 from 'L' to 'R'
+   Move the disk 1 from 'M' to 'L'
+   Move the disk 2 from 'M' to 'R'
+   Move the disk 1 from 'L' to 'R'
+    
+Time and Space Complexity
+-------------------------
+Let the time required for :math:`n` disks is :math:`T(n)`. As you can see, there are :math:`2` recursive calls for :math:`n-1` disks and one constant time operation to move a disk from 'left' peg to 'right' peg. Let the cost of this constant time operation be :math:`k1`.
+
+Therefore,
+
+:math:`T(n)=2T(n-1)+k_1`
+
+:math:`T(0)=k_2`, a constant.
+
+:math:`T(1)=2k_2+k1`
+
+:math:`T(2)=4k_2+2k_1+k1`
+
+:math:`T(2)=8k_2+4k_1+2k_1+k1`
+
+Coefficient of :math:`k_1=2^n`. Coefficient of :math:`k_2=2^{n-1}`. Therefore, time complexity is :math:`O(2^n)`.
+
+Thus, you see in closed for of time complexity is exponential and it double for every extra disk. Exponentially complex algorithms
+are very expensive in nature and if you believe in mythology then universe is going to stay for a long long time so do not fret.
+
+For both the versions storage is required only for disks i.e. a unit constant space. So for :math:`n` disks space complexity is
+:math:`O(n)`, which is linear and quite good because space complexity is rarely less than linear because you never want to lose
+original data. Only in extreme cases algorithms allow destruction of original data in that case space complexity is less than
+what we have observed for this problem.
+

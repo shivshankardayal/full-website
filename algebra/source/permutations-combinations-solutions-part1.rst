@@ -26,4 +26,12 @@ Permutations and Combinations Solutions Part 1
 
    :math:`\therefore n = 4`
 
-5. 
+5. :math:`t_n = n.^nP_n = n.n! = [n + 1 - 1]n! = (n + 1)n! - n! = (n + 1)! - n!`
+
+   :math:`t_1 = 2! - 1!`
+
+   :math:`t_2 = 3! - 2!`
+
+   ...
+
+   Adding, we get :math:`= (n + 1)! - 1! =` R.H.S
