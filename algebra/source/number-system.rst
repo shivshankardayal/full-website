@@ -145,11 +145,21 @@ Definitions and Notations
        Thus, :math:`a . a = a^2`, read "a square", "a 2d power" or "a 2d"
        :math:`\\a . a . a = a^3`, read "a cube", "a 3d power" or "a3d"
        :math:`\\a . a . a . a= a^3=4`, read "a 4th power", "a 4th"
-       :math:`\\a . a . a ... n~times~a= a^n`, read "a nth power", "a nth
+       :math:`\\a . a . a ... n~times~a= a^n`, read "a nth power", "a nth"
 
-       b. When an exponent is a positive fraction,* the numerator indicates a  power and the
-       denominator a root of the quantity affected lsby it.
+       b. When an exponent is a positive fraction, [#]_ the numerator indicates a  power and the
+       denominator a root of the quantity affected by it.
 
+       Thus, :math:`32^{\frac{4}{5}}` is the :math:`4` th power of :math:`32` and :math:`5` the power of :math:`5`.
+       There is glitch in that statement and you supposed to find it.
+
+       c. When an exponent is negative, it indicates the reciprocal of what could have been as a positive exponent.
+       Thus, :math:`b^{x+y} = \frac{1}{x * y}`
+
+
+.. [#] It will be shown in later that if we assume  the index law as proved for positive integral exponents
+   to be general, the meaning of positive fractional exponents and negative exponents must be as defined above.
+   Until that article  is reached, their meaning will be treated as a matter of definition.
 
 
 1. **Natural numbers** Numbers 1, 2, 3 4, ... used in ordinary counting are
