@@ -40,8 +40,118 @@ of 10 distinct symbols 0 through 9. Similarly we can have any other number
 system. Popular number systems in computers are binary, octal and hexadecimal
 not to mention decimal of course.
 
-Definitions
-===========
+Definitions and Notations
+=========================
+1. **Quantity** is amount or and extent, is expressed in terms of a unit of the same kind.
+
+   Thus, 10, 5 bushels, 6 tons, 50 miles, 7 years, 100 dollars, m square feet,
+   n cubic yards, are quantities, the units in order being the abstract number 1,
+   1 bushel, 1 ton, 1 mile, 1 year, 1 dollar, 1 square foot, 1 cubic yard.
+
+2. Two or more of the same kind are **Commensurable**
+   or **Incommensurable** with reference to one another
+   **according** as they can or can not be measured with the same unit.
+
+   Thus, if  the sides of a rectangle are 3 feet and 4 feet respectively, the
+   diagonal is 5 feet, and  is, therefore, commensurable with the sides; but the
+   diagonal of a square is incommensurable with its sides,  being :math:`\sqrt{2}`
+   times one of the sides.
+
+3. **An Incommensurable Quantity,** without comparison with another is  one that cannot be in the quantity,
+   exactly expresseddecimal notation.
+
+   Thus, :math:`\sqrt{5}` is an incommensurable quantity, being 2 plus a decimal fraction which never terminates.
+
+4. Algebra is that branch of pure mathematics which treats of numbers  as and of expressed  by symbols having general
+   values,the nature, transformations, and use of equations
+
+5. Algebra differs from arithmetic in the following important particulars:
+
+   i. In arithmetic values are counted in one direction only
+      from 0; while  in algebra, by means of positive and negative values quantities,
+      are counted in two opposite directions from 0.
+   ii. Arithmetical quantities, denoted figures, have each a by single, definite value; while algebraical quantities,
+       represented by
+       letters have any value we choose to assign to them. These quantities can recognized anywhere operation, results formulae
+       instead of answers. and the results, therefore, general formulae instead of specialized answers.
+   iii. In arithmetic a problem is solved by analyzing it, step by while in the conditions are instep;  algebra
+        expressed equations
+        one or more unknown involving quantities, usually representing the answer or answers.
+6. Algebra employs five kinds of symbols, viz. of quantity, of abbreviation, of operation, of relation, and of
+   aggregation,
+
+7. The Symbols of Quantity commonly employed are the following:
+
+   i. The Arabic figures.
+   ii. The letters of the Roman alphabet, known quantities being the letters, and unknown the represented by leading quantities
+       by final letters.
+       
+
+   1d. Similar quantities employed in the demonstration of a theorem the solution of a problem are often represented the
+   same by the same letter with different as read accents, a', a", a'", etc., prime, "a"", a"" a second prime and a""" a
+   third prime. or by the same
+   letter but different subscripts as :math:`a_1, a_2, a_3` being read as "a sub-one", "a sub-two" and "a sub-three."
+   Initial letters are sometimes used, as :math:`r` for radius, :math:`s` for sum and :math:`d` for difference.
+
+   2d. The Greek :math:`\pi` is used for the ratio of the circumference of a circle to its diameter.
+
+   3d. Zero, 0, used to denote not only the absence of value, but also a  value that is less than quantity any
+   assignable,
+
+   4th. Infinity, :math:`\infty`, used to represent that is a quantity greater than any value assignable.
+
+8. **The Symbols of Operation** in algebra are those common to all branches of mathematics, the principal ones being the
+   following:
+
+   1st. The sign of addition, + , read "plus."
+   2d. The of subtraction, - , read "minus."
+   3d. The sign of multiplication, x, read "into," or "times," or "multiplied by.".
+
+   Multiplication is indicated also a dot between the  by quantities. The quantities  between which multiplication is
+   indicated are quantities called *Factors,* and the result of the is called the *Product*.
+
+   4th. The sign of division, :math:`\frac{}{}c`, read "divided by."
+   Division is indicated also by writing the dividend above, and
+   the divisor below, a line, in the fractional form.
+   
+   5th. The sign of evolution, :math:`\sqrt{}`, called the radical sign, and read "the root of," the root, or second
+   root, one of square being the two factors into which a number is conceived to be resolved.  The 3d, 4th, or nth root,
+   which is meant one of the by 3, 4, or n factors into which a number is conceived to be resolved, is indicated by
+   writing 3, 4, or n in the vertex of the angle if the, the this number being called the Index, 
+
+9. Besides the above signs, or symbols of operation, there are certain of with
+   reference positions to quantities that indicate operations, the principal
+   ones being the followings:
+
+   i. **A Coefficient**, which is a quantity written beside another
+      quantity to show  how many times the latter is taken.
+
+      When algebraic quantities are written in succession with no sign between them, their product is signified, and factor, or
+      any the of of factors, is the coefficient of the product anyproduct of the remaining factors.
+
+      Thus, in 5 mnx, 5  is  the coefficient of mnx, 5m is the coefficient of nx,and 5
+      mn is the coefficient of x. The name usually applies to the numerical factor, and
+      when applied as 1 is it is not written.
+
+   ii. **An Exponent,** which is a quantity written at the right  of
+       and above another quantity, its meaning being as follows:
+
+       a. quantity,  meaning being (a) When an exponent is a positive integer, it
+       indicates that the quantity  affected by it is to be taken as a factor as many
+       times as there are units in the The result of muliplication is called a Power
+       hence a is said; positive integral exponent
+       indicate power.
+
+       Thus, :math:`a . a = a^2`, read "a square", "a 2d power" or "a 2d"
+       :math:`\\a . a . a = a^3`, read "a cube", "a 3d power" or "a3d"
+       :math:`\\a . a . a . a= a^3=4`, read "a 4th power", "a 4th"
+       :math:`\\a . a . a ... n~times~a= a^n`, read "a nth power", "a nth
+
+       b. When an exponent is a positive fraction,* the numerator indicates a  power and the
+       denominator a root of the quantity affected lsby it.
+
+
+
 1. **Natural numbers** Numbers 1, 2, 3 4, ... used in ordinary counting are
 called natural numbers or positive integers. The set of natural numbers is
 denoted by **N**.
