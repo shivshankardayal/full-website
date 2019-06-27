@@ -35,3 +35,48 @@ Permutations and Combinations Solutions Part 1
    ...
 
    Adding, we get :math:`= (n + 1)! - 1! =` R.H.S
+6. Unit's position can be filled in :math:`5` ways, ten's position can be
+   filled in :math:`4` ways and so on.
+
+   :math:`\therefore` Total no. of numbers :math:`= 5\times 4\times 3\times 2`
+
+   :math:`= 120`
+7. Hundred's place can be filled by :math:`4, 5` or :math:`6` i.e. :math:`3`
+   ways. Remaining two places can be filled by :math:`^5P_2` ways.
+
+   :math:`\therefore` Total no. of numbers :math:`= 3\times ^5P_2`
+
+   :math:`= 60`
+8. **Case I:** When the number is of three digits.
+
+   Hundred's place can be filled by :math:`3, 4` or :math:`5` i.e. :math:`3`
+   ways. Remaining two places can be filled by :math:`^5P_2` ways.
+
+   :math:`\therefore` Total no. of three digit numbers :math:`= 60`
+
+   **Case II:** When the number is of four digits.
+
+   Thousand's place can be filled by :math:`1` or :math:`2` i.e. :math:`2` ways.
+   Remaining :math:`3` positions can be filled by :math:`^5P_3` ways i.e.
+   :math:`120` ways.
+
+   Total no. of numbers that can be formed :math:`= 60 + 120 = 180`
+9. **Case I:** When :math:`0` occurs at unit's  place.
+
+   Total no. of numbers :math:`= 1\times ^6P_3 = 120`
+
+   **Case II:** When :math:`0` does not occur at unit's place.
+
+   Unit's place can be filled by :math:`3` ways using :math:`2, 4` or :math:`6`
+
+   Thousand's place can be filled by any of remaining numbers except :math:`0`
+   i.e. :math:`5` ways.
+
+   Remaining :math:`2` places can be filled in :math:`^5P_2` ways.
+
+   :math:`\therefore` Total no. of numbers :math:`= 5\times 3\times ^5P_2`
+
+   :math:`= 300`
+
+   :math:`\therefore` Total no. of such four digit numbers
+   :math:`= 120 + 300 =420`
