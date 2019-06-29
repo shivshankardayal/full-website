@@ -72,6 +72,7 @@ A Variable in Algebra
    permutations-combinations
    permutations-combinations-problems-part1
    permutations-combinations-solutions-part1
+   permutations-combinations-problems-part2
    determinants
 
 Indices and tables
