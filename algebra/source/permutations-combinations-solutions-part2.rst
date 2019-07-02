@@ -1,5 +1,5 @@
-Permutations and Combinations Problems Solutions 2
-**************************************************
+Permutations and Combinations Solutions 2
+*****************************************
 51. Ten thousands place can be filled in :math:`4` ways using :math:`1, 2, 3, 4`
     because if we put :math:`0` at that place then it will become a :math:`4`
     digit number.
@@ -76,3 +76,114 @@ Permutations and Combinations Problems Solutions 2
 60. For the number to be even unit's place must be occupied by :math:`2` and
     :math:`4`. Rest of the :math:`4` remaining places can be filled in
     :math:`4!` ways. Thus, total no. of such numbers :math:`= 4.4! = 96`
+61. **Case I:** When the number is of one digit.
+
+    Only :math:`5` is one positive integer divisible by :math:`5`.
+
+    **Case II:** When the number is of two digits.
+
+    Unit's place must be occupied by :math:`0` or :math:`5` making it possible
+    to fill unit's place in :math:`1` way each.
+
+    Ten's place can be filled in :math:`8` ways or :math:`9` ways with
+    remaining depending on what is at unit's place.
+
+    Thus, total no. of numbers :math:`= 8 + 9 = 17`
+
+    **Case III:** When the number is of three digits.
+
+    When :math:`0` occupies unit's place, hundred's and ten's places can be
+    filled in :math:`9` and :math:`8` ways respectively.
+
+    When :math:`5` occupies unit's place, hundred's and ten's places can be
+    filled in :math:`8` and :math:`8` ways respectively.
+
+    Thus, total no. of numbers :math:`= 9\times 8 + 8\times 8 = 136`
+
+    Desired no. :math:`= 1 + 17 + 136 = 154`
+62. Hundred's place can be filled in :math:`5` ways as :math:`0` cannot occupy
+    that place. Then, ten's place can be filled in :math:`5` ways and unit's
+    place can be filled in :math:`4` ways.
+
+    Total no. of numbers :math:`= 5\times 5\times 4 = 100`
+
+    For the numbers to be odd unit's place has to be filled using :math:`5` or
+    :math:`7` making it :math:`2` ways.
+
+    Then, hundred's position can be filled in :math:`4` ways and ten's place
+    in :math:`4` ways.
+
+    Thus total no. of odd numbers :math:`= 4\times 4\times 2 = 32`
+63. **Case I:** When the no. is of one digit.
+
+    Even numbers would be :math:`0, 2, 4`.
+
+    **Case II:** When the no. is of two digits.
+
+    When unit's place occupies :math:`0` ten's place can be filled in :math:`4`
+    ways. If unit's place occupied :math:`2` or :math:`4` ten's place can be
+    filled in :math:`3` ways.
+
+    Thus total no. of numbers :math:`= 4 + 3 + 3`
+
+    Similarly, rest of the problem can be solved and has been left as exercise.
+64. If :math:`5` always occupies ten's place then rest of the :math:`5`
+    positions can be filled using remaining :math:`5` digits in :math:`5!` i.e.
+    :math:`120` ways.
+65. Let us solved both of sub-questions.
+
+    i. Number of four digit numbers :math:`= ^7P_4 = 840`
+
+    ii. **Case I:** When the thousand's place is :math:`3`.
+
+        Hundred's place can be filled in :math:`4` ways using :math:`4, 5, 6, 7`
+
+        Ten's place can be filled in :math:`5` ways with :math:`5` remaining
+        digits.
+
+        Unit's place can be filled in :math:`4` ways.
+
+        Thus, total no. of numbers :math:`= 4\times 5\times 4 = 80`
+
+        **Case II:** When the thousand's place contains :math:`4, 5, 6, 7`
+
+        Remaining places can be filled in :math:`6, 5, 4` ways with remaining
+        digits.
+
+        Thus, total no. of numbers :math:`= 4\times 6\times 5\times 4`
+
+        :math:`= 480`
+
+        Thus, total no. of numbers greater than :math:`3400 = 80 + 480 = 560`
+66. Since thousand's and unit's place digits are fixed rest two positions can be
+    filled in :math:`3` and :math:`2` ways with remaining digits.
+
+    Thus, total no. of such numbers :math:`= 3\times 2 = 6`
+
+Problem no. 67, 68, 69 and 70 are left as exercises.
+
+71. Ten thousand's place cannot be occupied by :math:`0`.
+
+    When :math:`2` occurs at ten thousand's place, no. of numbers :math:`^4P_4 =
+    24`
+
+    When :math:`2` occurs at hundred's, ten's or unit's place, no. of numbers
+    :math:`= 3\times 3\times 2 = 18`
+
+    :math:`\therefore` Sum of numbers :math:`= 24(2 + 4 + 6 + 8)\times 10000 +
+    18(2 + 4 + 6 + 8)\times 1000 + 18(2 + 4 + 6 + 8)\times 100` :math:`+
+    18(2 + 4 + 6 + 8)\times 10 + 18(2 + 4 + 6 + 8)\times 1`
+
+    :math:`= 5199960`
+
+Problem no. 72 and 73 have been left as exercises.
+
+74. Each letter can be posted in :math:`4` ways. Thus, :math:`5` letters can be
+    posted in :math:`4^5 = 1024` ways.
+75. Each prize can be given in :math:`5` ways. Thus, :math:`3` prizes can be
+    given in :math:`5^3 = 125` ways.
+76. Each thing can be given in :math:`p` ways. Thus, :math:`n` things can be
+    given in :math:`p^n` ways.
+77. Each monkey can have :math:`m` masters. Thus, :math:`n` monkeys can have
+    :math:`n^m` masters.
+78. 
