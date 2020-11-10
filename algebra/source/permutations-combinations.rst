@@ -299,3 +299,60 @@ things are always selected :math:`= ^{n - p}C_{r - p}`
 
 Number of combinations of :math:`n` different things taken :math:`r` at a time when :math:`p` particular
 things are excluded :math:`= ^{n - p}C_r`
+
+Selection of things
+===================
+When minimum and maximum number of things to be selected are known:
+
+i. Number of selections of zero or more things out of :math:`n` different things
+
+   :math:`= ^nC_0 + ^nC_1 + ^nC_2 + \ldots + ^nC_n = 2^n`
+ii. Number of selections of one or more things out of :math:`n` different things
+
+    :math:`= ^nC_1 + ^nC_2 + \ldots + ^nC_n = 2^n - 1`
+iii. Number of selections of zero or more things out of :math:`n` identical things
+     :math:`= n + 1` (since selection of :math:`r` things out of :math:`n` identical things can
+     be made in :math:`1` way)
+iv. Number of selections of one or more things out of :math:`n` identical things
+    :math:`= n`
+v. Number of selection of one or more things from :math:`(p + q + r)` things, out of which
+   :math:`p` things are identical and of one type, :math:`q` things are identical and of second
+   type, :math:`r` things are identical and of third type :math:`= (p + 1)(q + 1)(r + 1) - 1`
+vi. Number of selection of one of more things from :math:`(p + q + r + n)` things, out of which
+    :math:`p` things are identical and of one type, :math:`q` things are identical and of second
+    type, :math:`r` things are identical and of third type and rest :math:`n` are different
+
+    :math:`= (p + 1)(q + 1)(r + 1)(^nC_0 + ^nC_1 + ^nC_2 + \ldots + ^nC_n) - 1`
+
+    :math:`= (p + 1)(q + 1)(r + 1)2^n - 1`
+
+Distribution of things among sets(groups) and persons
+=====================================================
+i. Number of ways of dividing :math:`n` different things in :math:`3` sets containing :math:`x,
+   y, z` things, where :math:`x, y, z` are distinct(here :math:`x + y + z = n`)
+
+   :math:`= ^nC_x.^{n - x}C_y.^{n - x - y}C_z = \frac{n!}{x!y!z!}`
+ii. Number of ways of distributing :math:`n` different things among :math:`3` persons such that
+    they get :math:`x, y, z` things
+
+    :math:`= \frac{n!}{x!y!z!}3!`
+iii. Number of ways of dividing :math:`n` different things in :math:`5` sets having :math:`a, b,
+     c, d, e` things(here :math:`a + b + c + d + e = n`)
+
+     :math:`= \frac{n!}{a!b!c!d!e!}`, when :math:`a, b, c, d, e` are distinct
+
+     :math:`= \frac{n!}{a!b!c!d!e!2!3!}`, when two sets have equal no. of things and :math:`3`
+     sets have equal no. of things
+
+     :math:`= \frac{n!}{a!b!c!d!e!5!}`, when all the :math:`5` sets have equal number of things
+
+     Number of ways of distributing above :math:`n` things among :math:`5` persons
+
+     :math:`= \frac{n!}{a!b!c!d!e!}5!`, when :math:`a, b, c, d, e` are distinct
+
+     :math:`= \frac{n!}{a!b!c!d!e!2!3!}5!`, when :math:`2` persons get equal number of things
+     and :math:`3` persons get equal number of things
+
+     :math:`= \frac{n!}{a!b!c!d!e!5!}5!`, when all the :math:`5` persons get equal number of
+     things.
+

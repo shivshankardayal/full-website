@@ -84,7 +84,7 @@ Complex Numbers Solutions Part 4
      :math:`C(z3)`. Let :math:`P(x)` be any point on the circle.
      Consider the following diagram:
 
-     .. image:: _static/images/concyclic_complex.png
+     .. image:: _static/images/concyclic_complex.pdf
         :alt: Concylcic complex numbers
 
      Then either
@@ -134,7 +134,7 @@ Complex Numbers Solutions Part 4
 
      Consider following two triangles:
 
-     .. image:: _static/images/two_triangles.png
+     .. image:: _static/images/two_triangles.pdf
         
      :math:`\triangle ABC` and :math:`\triangle PQR` will be similar if all
      their angles are equal and ratios of sides as well.
@@ -216,7 +216,7 @@ Complex Numbers Solutions Part 4
      :math:`(2, -2i)` and origin will make an angle of :math:`45^\circ.` This
      is shown in the following diagram:
 
-     .. image:: _static/images/169.png
+     .. image:: _static/images/169.pdf
         :alt: Problem no. 169
 
      Therefore, :math:`P` is :math:`2 - \frac{1}{\sqrt{2}} +
@@ -275,7 +275,7 @@ Complex Numbers Solutions Part 4
      
 181. Consider the following picture:
 
-     .. image:: _static/images/181.png
+     .. image:: _static/images/181.pdf
         :alt: Problem no. 181
 
      Given, :math:`b_1z_1 + b_3z_3 = -(b_2z_2 + b_4z_4)` and :math:`b_1 + b3 =

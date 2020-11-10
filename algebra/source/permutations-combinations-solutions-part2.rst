@@ -186,4 +186,72 @@ Problem no. 72 and 73 have been left as exercises.
     given in :math:`p^n` ways.
 77. Each monkey can have :math:`m` masters. Thus, :math:`n` monkeys can have
     :math:`n^m` masters.
-78. 
+78. :math:`2` prized in Mathematics and Physics can be given in :math:`2^{10}`
+    ways each. :math:`1` prize in Chemistry can be given in :math:`10` ways.
+
+    Thus, total no. of ways :math:`= 2^{10} + 2^{10} + 10 = 2058`
+79. :math:`12` cows can be loaded in :math:`12^{12}` ways.
+
+    :math:`12` calves can be loaded in :math:`12^{12}` ways.
+
+    :math:`12` horses can be loaded in :math:`12^{12}` ways.
+
+    Thus, total no. of ways :math:`= 3\times 12^{12}`
+80. Each delegate can be put in :math:`6` different ways.
+
+    Thus, :math:`5` delegates can be put in :math:`6^5` ways.
+81. Ten thousand's place can be filled in :math:`4` ways. Rest of the places
+    can be filled in :math:`5` ways.
+
+    Thus, total no. of numbers :math:`= 4\times 5^4`
+82. Each ring can be had in :math:`4` fingers.
+
+    :math:`6` rings can be had in :math:`4^6` ways.
+83. Thousand's place can be filled using :math:`3, 4, 5` i.e. :math:`3` ways.
+
+    Rest of the places can be filled in :math:`6` ways each using any of the
+    digits.
+
+    Thus, total no. of numbers :math:`= 3\times 6^3 = 648`
+84. Maximum no. of cars that can be numbered :math:`= 9^3 + 9^4`
+85. All question can be answered in :math:`4` ways. Thus, total no. of possible
+    answers :math:`= 4^10` ways.
+
+    If no consecutive questions to be answered in same way then first question
+    can be answered in :math:`4` ways while rest can be answered in :math:`3`
+    ways. Thus, total no. of answers :math:`= 4\times 3^9`
+86. Treating all volumes as one book we have four books, which can be arranged
+    in :math:`4!` ways. But books with three volumes can be arranged in
+    :math:`3!` ways among themselves and books with two volumes can be arranged
+    in :math:`2!` ways.
+
+    Thus, total no. of arrangements :math:`= 4!3!3!2!2!`
+87. Treating all copies as one book we have :math:`14` books which can be
+    arranged in :math:`14!` ways. Since copies are identical they can be
+    arranged in :math:`1` way among themselves.
+
+    Thus, total no. of arrangements :math:`= 14!`
+88. Treating persons of same nationality as one person we have three persons,
+    which can be seated in :math:`3!` ways. But :math:`10` Indians can be
+    seated in :math:`10!` ways, :math:`5` Americans and :math:`5` British
+    can be seated in :math:`5!` ways.
+
+    Desired answer :math:`= 3!10!5!5!`
+89. Let us fix the positions of buys first.
+
+    xBxBxBxBxBxBx
+
+    B represents boys position while x are the positions that can be occupied
+    by girls. :math:`6` boys can be seated in :math:`6!` ways. :math:`4` girls
+    can be seated in :math:`^7P_4` ways.
+
+    Thus, desired answer :math:`=6\times ^7P_4`
+90. :math:`n` books can be arranged in :math:`n!` ways. Treating two particular
+    books as one; when they occur together; total no.of arrangements
+    :math:`=(n - 1)!` but :math:`2` books can be arranged in :math:`2` ways
+    among themselves making it :math:`2(n - 1)!`
+
+    Thus, desired answer :math:`= n! - 2(n - 1)! = (n - 2)(n- 1)!`
+91. Following previous example; setting :math:`n =\ 6`; :math:`4.5! = 480`
+
+Rest of the problems are left as exercises.
