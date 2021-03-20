@@ -45,7 +45,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'A Variable in Algebra'
-copyright = u'2013-2020, Shiv S. Dayal'
+copyright = u'2013-2021, Shiv S. Dayal'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

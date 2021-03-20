@@ -48,6 +48,10 @@ ability. However, if you have a local expert seek his/her advice first. Just
 that email is bad for mathematics. Someday I will develop an email system with
 support for scientific symbols and equations.
 
+Note that mathematics is not only about solving problems. If you understand the
+theory well, then you will be able to solve problems easily. However, problems
+do help enforce with the enforcement of theory in your mind.
+
 Who Should Read This Book?
 ==========================
 Since this book is written for self study anyone with interest in algebra can

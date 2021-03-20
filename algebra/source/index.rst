@@ -25,6 +25,11 @@ A Variable in Algebra
    proportions-solutions
    variations
    variations_solutions
+   logarithm
+   logarithm_problems_part1
+   logarithm_solutions_part1
+   logarithm_problems_part2
+   logarithm_problems_part3
    complex_numbers
    complex_numbers_problems_1
    complex_numbers_solutions_1
@@ -91,6 +96,15 @@ A Variable in Algebra
    determinants-solutions-part2
    determinants-problems-part3
    determinants-solutions-part3
+   determinants-problems-part4
+   determinants-solutions-part4
+   matrices
+   matrices-problems-part1
+   matrices-solutions-part1
+   matrices-problems-part2
+   mathematical-induction
+   mathematical-induction-problems-part1
+   mathematical-induction-solutions-part1
 
 Indices and tables
 ==================
