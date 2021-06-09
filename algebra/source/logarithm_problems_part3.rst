@@ -1,6 +1,6 @@
 Logarithm Problems Part 3
 *************************
-101. Solve :math:`4\log_2(x62 - 24) > \log_2 5x`
+101. Solve :math:`\log_2(x^2 - 24) > \log_2 5x`
 
 102. Show that :math:`\frac{1}{\log_3\pi} + \frac{1}{\log_4\pi} > 2`
 
@@ -12,11 +12,11 @@ Logarithm Problems Part 3
 
 105. Solve for :math:`x, \log_3(x^2 + 10) > \log_3 7x`
 
-106. Solve :math:`x^{\log x} > 10`
+106. Solve :math:`x^{\log_{10} x} > 10`
 
 107. Solve :math:`\log_2 x\log_{2x} 2\log_2 4x > 1`
 
-108. Solve :math:`\log_2 x\log_3 2x + \log_3 x\log_2 3x > 0`
+108. Solve :math:`\log_2 x\log_3 2x + \log_3 x\log_2 4x > 0`
 
 109. Find the value of :math:`\log_{12}60` if :math:`\log_6 30= a` and
      :math:`\log_{15}24 = b`
@@ -25,7 +25,7 @@ Logarithm Problems Part 3
      :math:`x\neq 1,` prove that :math:`c^2 = (ac)^{\log_a b}`
 
 111. If :math:`a = \log_{\frac{1}{2}}(\sqrt{0.125})` and :math:`b =
-     \log_3\left(\frac{1}{\sqrt{14} - \sqrt{17}}\right)` then find whether
+     \log_3\left(\frac{1}{\sqrt{24} - \sqrt{17}}\right)` then find whether
      :math:`a > 0, b > 0` or not.
 
 112. Which one if greater among :math:`\cos(\log_e\theta)` or
@@ -66,7 +66,7 @@ Logarithm Problems Part 3
 123. If :math:`\log_{12}18 = a` and :math:`\log_{24}54 = b,` prove that
      :math:`ab + 5(a - b) = 1`
 
-124. If :math:`a, b, c` are in G.P. show that :math:`\log_a x, \log_b y, \log_c
+124. If :math:`a, b, c` are in G.P. show that :math:`\log_a x, \log_b x, \log_c
      x` are in H.P.
 
 125. If :math:`a, a_1, a_2, \ldots, a_n` are in G.P. and :math:`b, b_1, b_2,
@@ -82,6 +82,3 @@ Logarithm Problems Part 3
 
 128. If :math:`\log_{0.5}(x - 2) < \log_{0.25}(x - 2),` then find the interval
      in which :math:`x` lies.
-
-129. If :math:`\log_x\left(6 + \frac{2}{x}\right) + \log_{\frac{1}{5}}\left(1 +
-     \frac{x}{10}\right)\leq 1` then find the interval in which :math:`x` lies.

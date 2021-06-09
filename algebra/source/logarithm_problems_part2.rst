@@ -31,7 +31,7 @@ Solve following equations:
 
 62. :math:`x + \log_{10}(1 + 2^x) = x\log_{10}5 + \log_{10}6`
 
-63. :math:`x^{\frac{3}{4}(\log_2 x)^2 \log_2x - \frac{5}{4}}
+63. :math:`x^{\frac{3}{4}(\log_2 x)^2 + \log_2x - \frac{5}{4}}
     = \sqrt{2}`
 
 64. :math:`(x^2 + 6)^{\log_3 x} = (5x)^{\log_3 x}`
@@ -39,13 +39,15 @@ Solve following equations:
 65. :math:`(3 + 2\sqrt{2})^{x^2 - 6x + 9} + (3 - 2\sqrt{2})^{x^2 - 6x +
     9} = 6`
 
-66. :math:`\log_8\left(\frac{8}{x^2}\right) + (\log_8 x)^2 = 3`
+66. :math:`\log_8\left(\frac{8}{x^2}\right) \div (\log_8 x)^2 = 3`
 
-67. :math:`\sqrt{\log_2 (x)^4} + 5\log_4\sqrt{\frac{2}{x}} = 2` 
+67. :math:`\sqrt{\log_2 (x)^4} + 4\log_4\sqrt{\frac{2}{x}} = 2`
 
-69. :math:`2\log_{10}x - \log_x0.01 = 5`
+68. :math:`2\log_{10}x - \log_x0.01 = 5`
 
-70. :math:`\log_{\sin x}2\log_{\cos x}2 + \log_{\sin x} 2 + \log_{\cos x}2 = 0`
+69. :math:`\log_{\sin x}2\log_{\cos x}2 + \log_{\sin x} 2 + \log_{\cos x}2 = 0`
+
+70. Solve :math:`2^{x + 3} + 2^{x + 2} + 2^{x + 1} = 7^x + 7^{x - 1}`
 
 71. :math:`\log_{\sqrt{2}\sin x}(1 + \cos x) = 2`
 
@@ -58,16 +60,18 @@ Solve following equations:
 
 75. Solve for :math:`x` the following equation:
 
-    :math:`\log_(2x + 3)(6x^2 + 23x + 21) = 4 - \log_(3x + 7)(4x^2 + 12x + 9)`
+    :math:`\log_{(2x + 3)}(6x^2 + 23x + 21) = 4 - \log_{(3x + 7)}(4x^2 + 12x +
+    9)`      
 
 76. Solve the equation :math:`\log_2(x^2 - 1) = \log_{\frac{1}{2}}(x - 1)`
 
-77. Solve :math:`\log_5(5^{\frac{1}{x} + 125}) = \log_3 6 + 1 + \frac{1}{2x}`
+77. Solve :math:`\log_5\left(5^{\frac{1}{x} + 125}\right) = \log_5 6 + 1 +
+    \frac{1}{2x}`
 
 78. Solve the following equation for:math:`x` and :math:`y`
 
     :math:`\log_{100}|x + y| = \frac{1}{2}` and :math:`\log_{10} y -
-    \log_{10}|x| = \log_{100} 5`
+    \log_{10}|x| = \log_{100} 4`
 
 79. Solve :math:`2\log_2\log_2 x + \log_{\frac{1}{2}}\log_2(2\sqrt{2}x) = 1`
 
@@ -86,9 +90,9 @@ Solve following equations:
 
 83. Solve :math:`4^{\log_9 3} + 9^{\log_2 4} = 10^{\log_x 83}`
 
-84. Solve :math:`3^{4\log_9 x + 1} = 2^{2\log_2 x } + 3`
+84. Solve :math:`3^{4\log_9 (x + 1)} = 2^{2\log_2 (x  + 3)}`
 
-85. Solve :math:`\frac{6}{5}a^{\log_a x\log_10 a \log_a 5} -
+85. Solve :math:`\frac{6}{5}a^{\log_a x\log_{10} a \log_a 5} -
     3^{\log_{10}\left(\frac{x}{10}\right)} = 9^{\log_{100}x + \log_4 2}`
 
 86. Solve :math:`2^{3x + \frac{1}{2}} + 2^{x + \frac{1}{2}} = 2^{\log_2 6}`
@@ -97,7 +101,7 @@ Solve following equations:
 
 88. For :math:`x > 1,` show that :math:`2\log_{10}x - \log_x .01 \geq 4`
 
-89. Show that :math:`|\log_b a + \log_a b| \geq 2`
+89. Show that :math:`|\log_b a + \log_a b| > 2`
 
 90. Solve :math:`\log_{0.3}(x ^2 + 8) > \log_{0.3}9x`
 
@@ -114,7 +118,7 @@ Solve following equations:
 
 96. Solve :math:`\log_2^2(x - 1)^2 - \log_{0.5}(x - 1) > 5`
 
-97. Prove that :math:`\log_2 17\log{\frac{1}{5}} 2\log_3\frac{1}{5} < 2`
+97. Prove that :math:`\log_2 17\log{\frac{1}{5}} 2\log_3\frac{1}{5} > 2`
 
 98. Show that :math:`\log_{20} 3` lies between :math:`\frac{1}{2}` and
     :math:`\frac{1}{3}`

@@ -41,15 +41,15 @@ Matrices Problems Part 1
     :math:`A^{-1}`
 14. Solve the following equations by matrix method:
 
-    :math:`\begin{array}5x + 3y +z = 16\\2x + y + 3z = 19\\x + 2y + 4z =
-    25\end{array}`
+    :math:`5x + 3y +z = 16\\2x + y + 3z = 19\\x + 2y + 4z =
+    25`
 15. Find the product of two matrices :math:`A` and :math:`B` where
     :math:`A=\begin{bmatrix}-5 & 1 & 3\\7 & 1 & -5\\1 & -1 & 1 \end{bmatrix}, B
     = \begin{bmatrix}1 & 1 & 2\\ 3 & 2 & 1\\ 2 & 1 & 3\end{bmatrix}` and use it
     for solving the equations
 
-    :math:`\begin{array}x + y + 2z = 1\\3x + 2y + z = 7\\2x + y + 3z =
-    2\end{array}`
+    :math:`x + y + 2z = 1\\3x + 2y + z = 7\\2x + y + 3z =
+    2`
 16. If :math:`\begin{bmatrix}x + y & 2 \\ 1 & x - y\end{bmatrix} =
     \begin{bmatrix} 3 & 2 \\ 1 & 7\end{bmatrix},` then find :math:`x` and
     :math:`y.`

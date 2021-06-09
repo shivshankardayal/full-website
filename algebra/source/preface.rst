@@ -124,6 +124,10 @@ given and same applies for solutions chapter. This is because MathJaX takes a
 lot of time to render mathematics if all the mathematical formulas are on
 the same page.
 
+Update: Now I am using KaTeX to prerender the content so new chapters will have
+problems and solutions in the same page. As I find time I will change all topics
+to the same format.
+
 
 Shiv Shankar Dayal
 

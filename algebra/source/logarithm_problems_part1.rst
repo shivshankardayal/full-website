@@ -23,7 +23,7 @@ Logarithm Problems Part 1
 
 10. Evaluate :math:`\log_{2\sqrt{3}}144`
 
-11. Prove that :math:`\log_3 \log_2 \log_\sqrt{3} 81 = 1`
+11. Prove that :math:`\log_3 \log_2 \log_{\sqrt{3}} 81 = 1`
 
 12. Prove that :math:`\log_a x \log_b y = \log_b x \log_a y`
 

@@ -1,3 +1,13 @@
+.. meta::
+   :author: Shiv Shankar Dayal
+   :title: Preface
+   :description: Algebra
+   :keywords: Algebra, ratio, proportions, variations, complex numbers,
+              arithmetic progressions, geometric progressions, harmonic
+              progressions, series, sequence, quadratic equations,
+              permutations, combinations, lograithms, binomial theorem,
+              determinant, matricesNumber System
+
 Solutions for Ratios
 ********************
 1. We have 4:7 and 11:5. Therefore, ratio of these two ratios

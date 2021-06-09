@@ -134,7 +134,7 @@ Mathematical Induction Solutions Part 1
    1}C_{m + 1} = (m + 1)2^m`
 
    :math:`= ({}^mC_0 + {}^mC_1) + 2({}^mC_1 + {}^mC_2) + \ldots + m({}^mC_{m -
-   1} + {}^mC_m) + (m + 1)(}{^mC_m + 0)`
+   1} + {}^mC_m) + (m + 1)({}^mC_m + 0)`
 
    :math:`= ({}^mC_0 + 2.{}^mC_1 + \ldots + m^{}mC_{m - 1} + (m + 1)/{}^mC_m) +
    ({}^mC_1 + 2.{}^mC_2 + \ldots + m.{}^mC_m)`

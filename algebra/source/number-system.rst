@@ -1,3 +1,13 @@
+.. meta::
+   :author: Shiv Shankar Dayal
+   :title: Preface
+   :description: Algebra
+   :keywords: Algebra, ratio, proportions, variations, complex numbers,
+              arithmetic progressions, geometric progressions, harmonic
+              progressions, series, sequence, quadratic equations,
+              permutations, combinations, lograithms, binomial theorem,
+              determinant, matricesNumber System
+
 Number System
 *************
 In this chapter we will study about number systems. We normally deal in

@@ -176,8 +176,8 @@ Determinants Problems Part 4
 
 183. Solve
 
-     :math:`\begin{array} (b + c)(y + z) - ax = b - c \\ (c + a)(z + x) -
-     by = c - a \\ (a + b)(x + y) - cz = a - b\end{array}`
+     :math:`(b + c)(y + z) - ax = b - c \\ (c + a)(z + x) -
+     by = c - a \\ (a + b)(x + y) - cz = a - b`
 
      where :math:`a + b + c \neq 0`
 
@@ -237,8 +237,8 @@ Determinants Problems Part 4
 
 194. Consider the system of linear equations, in :math:`x,y,z`:
 
-     :math:`\begin{array}((\sin 3\theta)x - y + z = 0\\ (\cos 2\theta)x + 4y +
-     3z = 0 \\ 2x + 7y + 7z = 0\end{array}`
+     :math:`((\sin 3\theta)x - y + z = 0\\ (\cos 2\theta)x + 4y +
+     3z = 0 \\ 2x + 7y + 7z = 0`
 
      Find the value of :math:`\theta` for which this system has non-trivial
      solution.

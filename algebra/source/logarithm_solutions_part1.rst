@@ -63,7 +63,7 @@ Logarithm Solutions Part 1
 10. :math:`\log_{2\sqrt{3}}144 = \log_{2\sqrt{3}}12^2 =
     \log_{2\sqrt{3}}(2\sqrt{3})^4 = 4`
 
-11. L.H.S. :math:`=\log_3 \log_2 \log_\sqrt{3} 81 = \log_3 \log_2
+11. L.H.S. :math:`=\log_3 \log_2 \log_{\sqrt{3}} 81 = \log_3 \log_2
     \log_{\sqrt{3}}(\sqrt{3})^8`
 
     :math:`= \log_3 \log_2 8 = \log_3 \log_2 2^3 = \log_3 3 = 1`
@@ -450,7 +450,7 @@ Logarithm Solutions Part 1
 
     :math:`f(y) = e^{\frac{1}{1 - \frac{1}{1 -\log_e x}}}`
 
-    Following like excercise above
+    Following like exercise above
 
     :math:`x = e^{f(y)}`
 
@@ -501,16 +501,16 @@ Logarithm Solutions Part 1
 
     :math:`\log_xa, \log_xb, \log_xc` are in A.P.
 
-    :math:`\log_a x, \log_b x, \loc_c x` are in H.P.
+    :math:`\log_a x, \log_b x, \log_c x` are in H.P.
 
 50. Let :math:`y = (0.0504)^{10}`
 
     :math:`\log_{10}y = 10\log_{10}(.0504) = 10\log_{10}(504*10^{-4})`
 
-    :math:`-10\log_{10}[-4 + \log(2^3.3^2.7)]`
+    :math:`= -10\log_{10}[-4 + \log(2^3.3^2.7)]`
 
     :math:`= -12.98`
 
     Thus, chraracteristics is :math:`-13`
 
-    Therefore, number of zeroes after decimal and first significant digit = 12
+    Therefore, number of zeroes after decimal and first significant digit :math:`= 12`

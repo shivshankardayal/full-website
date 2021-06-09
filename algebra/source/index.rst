@@ -2,8 +2,11 @@
    :author: Shiv Shankar Dayal
    :title: Preface
    :description: Algebra
-   :keywords: Algebra, ratio, proportions, variations, complex numbers, arithmetic progressions,
-              geometric progressions, harmonic progressions, series, sequence, quadratic equations
+   :keywords: Algebra, ratio, proportions, variations, complex numbers,
+              arithmetic progressions, geometric progressions, harmonic
+              progressions, series, sequence, quadratic equations,
+              permutations, combinations, lograithms, binomial theorem,
+              determinant, matrices
 
 .. Informal Algebra documentation master file, created by
    sphinx-quickstart on Sat Mar  2 06:17:53 2013.
@@ -29,7 +32,9 @@ A Variable in Algebra
    logarithm_problems_part1
    logarithm_solutions_part1
    logarithm_problems_part2
+   logarithm_solutions_part2
    logarithm_problems_part3
+   logarithm_solutions_part3
    complex_numbers
    complex_numbers_problems_1
    complex_numbers_solutions_1
@@ -105,6 +110,7 @@ A Variable in Algebra
    mathematical-induction
    mathematical-induction-problems-part1
    mathematical-induction-solutions-part1
+   binomials-multinomials-expansions
 
 Indices and tables
 ==================
