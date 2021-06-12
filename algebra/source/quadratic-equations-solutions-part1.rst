@@ -87,9 +87,9 @@ Quadratic Equations Solutions Part 1
 
    :math:`\Rightarrow 4a^2d^2 - 4(b^2c + a^d)(d - b^2) = 0`
 
-   :math:`b^(b^2c + a^2d - cd) = 0`
+   :math:`b^2(b^2c + a^2d - cd) = 0`
 
-   :math:`\because b^ \ne 0 \therefore b^2c + a^2d - cd = 0 \Rightarrow b^2c + a^d = cd`
+   :math:`\because b^2 \ne 0 \therefore b^2c + a^2d - cd = 0 \Rightarrow b^2c + a^d = cd`
 
    Dividing both sides by :math:`cd` we have
 

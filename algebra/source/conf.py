@@ -10,7 +10,9 @@
 #
 # All configuration values have a default; values that are commented out
 # serve to show the default.
-
+import sphinx.application
+import sphinx.errors
+sphinx.application.ExtensionError = sphinx.errors.ExtensionError
 import sys, os
 #import sphinx_bootstrap_theme
 #import sphinx_rtd_theme
@@ -27,9 +29,9 @@ import sphinx_rtd_theme
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinxcontrib.katex', 'sphinx.ext.ifconfig', 'sphinxcontrib.tikz']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinxcontrib.katex', 'sphinx.ext.ifconfig', 'sphinxcontrib.tikz', 'sphinxcontrib.googleanalytics']
 
-katex_prerender = True
+#katex_prerender = True
 tikz_tikzlibraries = 'arrows'
 pngmath_dvipng_args = ['-gamma', '1.5', '-D', '112', '-bg', 'Transparent']
 # Add any paths that contain templates here, relative to this directory.
@@ -379,16 +381,14 @@ epub_copyright = u'2013, Shiv S. Dayal'
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'http://docs.python.org/': None}
-
+googleanalytics_id = 'UA-17487464-7'
 html_theme_options = {
-    'analytics_id': 'UA-17487464-7',  #  Provided by Google in your dashboard
     'analytics_anonymize_ip': False,
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'both',
     'style_external_links': False,
     'vcs_pageview_mode': '',
-    'style_nav_header_background': 'white',
     # Toc options
     'collapse_navigation': True,
     'sticky_navigation': True,
@@ -396,4 +396,3 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False
 }
-

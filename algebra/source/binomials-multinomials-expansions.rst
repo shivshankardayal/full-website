@@ -10,7 +10,7 @@
 
 Binomials, Multinomials and Expansions
 **************************************
-An algebraic expression containing one term is called a monomila, two terms is
+An algebraic expression containing one term is called a monomial, two terms is
 called binomial and more than two is called multinomial. Examples of a monimial
 expressions are :math:`2x, 4y,` examples of binomial expressions are
 :math:`a + b, x^2 + y^2, x^3 + y^3, x + \frac{1}{y}` and examples of
@@ -770,14 +770,14 @@ show that
 
 131. Find the remainder when :math:`32^{32^{32}}` is divided by :math:`7.`
 
-132. If :math:`\sum_{r=0}^{2n}a_r(x - 2)^r = \sum_{r=0}^{2n}b_r(x - r)^r` and
+132. If :math:`\sum_{r=0}^{2n}a_r(x - 2)^r = \sum_{r=0}^{2n}b_r(x - 3)^r` and
      :math:`a_r = 1 \forall r \geq n,` then show that :math:`b_n = {}^{2n +
      1}C_{n + 1}`
 
 133. Find the coefficient of :math:`x^{50}` in :math:`(1 + x)^{1000} + 2x(1 +
      x)^{999} + 3x^2(1 + x)^{998} + 1001x^{1000}`
 
-134. Show that :math:`{}^nC_n + {}^{n + 1}C_n + {}^{n + 2}C_2 + \ldots + {}^{n
+134. Show that :math:`{}^nC_n + {}^{n + 1}C_n + {}^{n + 2}C_n + \ldots + {}^{n
      + k}C_n = {}^{n + k + 1}C_{n + 1}`
 
 135. Find the coefficient of :math:`x^n` in :math:`(1 + x + 2x^2 + 3x^3 +
@@ -790,7 +790,7 @@ show that
      1}(x + 2) + (x + 1)^{n - 2}(x + 2)^2 + \ldots + (x + 2)^n`
 
 138. Simplify :math:`\left(\frac{a + 1}{a^{\frac{2}{3}} - a^{\frac{1}{3}} +
-     1} - \frac{a - 1}{a - a^{\frac{1}{2}}}\right)^10` into a binomial and
+     1} - \frac{a - 1}{a - a^{\frac{1}{2}}}\right)^{10}` into a binomial and
      determine the term independent of :math:`a.`
 
 139. Find the coefficient of :math:`x^2` in :math:`\left(x +
@@ -900,7 +900,7 @@ show that
 166. Show that no three consecutive binomial coefficients can be in G.P. or
      H.P.
 
-167. If :math:`(1 + x)^n = C_0 + C-1x + C-2x^2 + \ldots + C_nx^n,` show that
+167. If :math:`(1 + x)^n = C_0 + C_1x + C_2x^2 + \ldots + C_nx^n,` show that
      :math:`C_n - 2.C_1 + 3.C_2 - \ldots +(-1)^n(n + 1)C_n = 0`
 
 168. If :math:`(1 + x)^n = C_0 + C_1x + C_2x^2 + \ldots + C_nx^n,` show that
@@ -910,11 +910,11 @@ show that
      :math:`a - (a - 1)C_1 + (a - 2)C_2 - (a - 3)C_3 + \ldots + (-1)^n(a -
      n)C_n = 0`
 
-170. Prove that :math:`\sum_{r = 0}^n r^2.{}^nC_r p6rq^{n - r} = npq + n^2p^2`
+170. Prove that :math:`\sum_{r = 0}^n r^2.{}^nC_r p^rq^{n - r} = npq + n^2p^2`
      if :math:`p + q = 1`
 
 171. If :math:`C_r` stands for :math:`{}^nC_r,` show that :math:`2.C_0 +
-     \frac{2^2}{2}C_1 + \frac{2^3}{3}C_2 + \ldots + \frac{2^{11}}{11}C_11 =
+     \frac{2^2}{2}C_1 + \frac{2^3}{3}C_2 + \ldots + \frac{2^{11}}{11}C_{11} =
      \frac{3^{11} - 1}{11}`
 
 172. Prove that :math:`C_1 - \frac{1}{2}C_2 + \frac{1}{3}C_3 - \ldots +
@@ -1148,7 +1148,7 @@ show that
 
 243. Find the greatest coefficient in :math:`(w + x + y + z)^{15}`
 
-244. Find the number of terms in :math:`(a + b + c + d + e)6{100}`
+244. Find the number of terms in :math:`(a + b + c + d + e)^{100}`
 
 245. If :math:`|x| < 1,` show that :math:`(1 + x)^{-2} = 1 + 2x + 3x^2 + 4x^3 +
      \ldots ~\text{to}~\infty`
@@ -2576,7 +2576,7 @@ exercise.
      1}{}^{6m}C_{6m - 1}.3^{3m - 1}`
 
      :math:`= \frac{1}{\sqrt{3}}[{}^{6m}C_1.\sqrt{3} -
-     {}^{6m}C_3.(\sqrt{3})^3 + {}^{6m}C_5(\sqrt{5})^5 - \ldots + (-1)^{3m 
+     {}^{6m}C_3.(\sqrt{3})^3 + {}^{6m}C_5(\sqrt{5})^5 - \ldots + (-1)^{3m
      - 1}.{}^{6m}C_{6m - 1}(\sqrt{3})^{6m - 1}]`
 
      Also, :math:`(-1)^{3m - 1} = -i(i)^{6m - 1}`
@@ -2715,10 +2715,793 @@ exercise.
 
 123. :math:`17^{256} = 289^{128} = (290)^{128}`
 
-     :math:`= 1000m + 128C_{126}290^2 - 128C_{127}290 + 1 [m \in I]`
+     :math:`= 1000m + {}^{128}C_{126}290^2 - {}^{128}C_{127}290 + 1 [m \in I]`
 
      :math:`= 1000(m + 683527) + 681`
 
      Thus the digits are :math:`6, 8` and :math:`1.`
 
-124. 
+124. :math:`(n + 1)^n = n^n\left(1 + \frac{1}{n}\right)^n`
+
+     Upon expansion(as shown in following problem) you will find that
+     :math:`\left(1 + \frac{1}{n}\right)^n < n`
+
+     Thus, :math:`n^{n + 1} > (n + 1)^n`
+
+125. :math:`\left(1 + \frac{1}{n}\right)^n = 1 + 1 + \frac{1}{2!}\left(1 -
+     \frac{1}{n}\right) + \frac{1}{3!}\left(1 - \frac{1}{n}\right)\left(1 -
+     \frac{2}{n}\right) + \ldots`
+
+     :math:`< 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!}`
+
+     :math:`< 1 + 1 + \frac{1}{2} + \frac{1}{2^2} + \ldots + \frac{1}{2^{n -
+     1}}`
+
+     :math:`= 3 - \frac{1}{2^{n - 1}}`
+
+     Thus, we have proven the desired inequality.
+
+126. We will make
+     use of the fact that :math:`x^n - y^n` is divisible by :math:`x - y`
+
+     :math:`(1992^{1998} - 1955^{1998}) - (1938^{1998} - 1901^{1998})` is
+     divisible by :math:`37`
+
+     :math:`(1992^{1998} - 1938^{1998}) - (1955^{1998} - 1901^{1998})` is
+     divisible by :math:`54`
+
+     :math:`\therefore 1992^{1998} - 1955^{1998} - 1938^{1998} + 1901^{1998}`
+     is divisible by :math:`37*54` i.e. :math:`1998`
+
+127. Given expression is :math:`(50 + 3)^{53} - {30+ 3}^{33}`
+
+     :math:`= 50p + {}^{53}C_{53}3^{53} - 30q - {}^{33}C_{33}3^{33}, p, q \in
+     I`
+
+     Thus, now we have to prove that :math:`3^{53} - 3^{33}` is divisible by
+     :math:`10`
+
+     :math:`3^{33}(3^{20} - 1)` now if you see carefully :math:`3^{20} =
+     81^{5}` which will awlays have last digit as 1. Thus, :math:`3^{20} - 1`
+     will be always divisible by :math:`10` making out original expression also
+     divisible by 10.
+
+128. :math:`(1 + x)^{m + 1} = {}^{m + 1}C_0 + {}^{m + 1}C_1x + {}^{m + 1}C_2x^2
+     + \ldots + {}^{m + 1}C_mx^m + {}{m + 1}C_{m + 1}x^{m + 1}`
+
+     :math:`(1 + x)^{m + 1} - 1 - x^{m + 1} = {}^{m + 1}C_1x + {}^{m + 1}C_2x^2
+     + \ldots + {}^{m + 1}C_mx^m`
+
+     Substituting :math:`x = 1, 2, 3, 4, \ldots, n` in the above expression and
+     adding, we get
+
+     :math:`= (n + 1)^{m + 1} - (n + 1)`
+
+129. :math:`\sum_{i = 1}^k\sum_{k = 1}^n{}^nC_k{}^kC_i`
+
+     :math:`= \sum_{k = 1}^n({}^nC_k).({}^kC_1) + \sum_{k =
+     1}^n({}^nC_k).({}^kC_2) + \ldots + {}^nC_n.{}^nC_n`
+
+     :math:`= {}^nC_1.{}^1C_1 + {}^nC_2({}^2C_1 + {}^2C_2) + \ldots +
+     {}^nC_n({}^nC_1 + {}^nC_2 + \ldots + {}^nc_n)`
+
+     :math:`= {}^nC_1(2 - 1) + {}^nC_2.(2^2 - 1) + \ldots + {}^nC_n(2^n - 1)`
+
+     :math:`= {2 + 1}^n - 1 + {1 + 1}^n - 1 = 3^n - 2^n`
+
+130. Though it may appear that this problem is dependent on logarithmic
+     manipulation but sych is not the case. We will prove it for general value
+     :math:`z` rather than :math:`10`
+
+     :math:`\sum_{r=0}^n{(-1)^r\binom{n}{r}\frac{1+r\log
+     z}{(1+\log z^n)^r}}`
+
+     :math:`=\sum_{r=0}^n(-1)^r\binom{n}{r}\frac{1}{\left(1+\log z^n\right)^r}
+     +\sum_{r=1}^n(-1)^r\binom{n-1}{r-1}\frac{n\log z}{\left(1+\log
+     z^n\right)^r}`
+
+     :math:`=1+\sum_{r=1}^{n-1}(-1)^r\left(\binom{n-1}{r}+\binom{n-1}{r-1}\right)\frac{1}{\left(1+\log
+     z^n\right)^r} +(-1)^n\frac{1}{(1+\log
+     z^n)^r}-\sum_{r=0}^{n-1}(-1)^r\binom{n-1}{r}\frac{\log z^n}{\left(1+\log
+     z^n\right)^{r+1}}`
+
+     :math:`=1+\sum_{r=1}^{n-1}(-1)^r\binom{n-1}{r}\frac{1}{\left(1+\log
+     z^n\right)^r} -\sum_{r=0}^{n-2}(-1)^r\binom{n-1}{r}\frac{1}{\left(1+\log
+     z^n\right)^{r+1}} +(-1)^n\frac{1}{(1+\log
+     z^n)^r}-\sum_{r=0}^{n-1}(-1)^r\binom{n-1}{r}\frac{\log z^n}{\left(1+\log
+     z^n\right)^{r+1}}`
+
+     :math:`=1+\sum_{r=1}^{n-1}(-1)^r\binom{n-1}{r}\frac{1}{\left(1+\log
+     z^n\right)^r}+(-1)^n\frac{1}{(1+\log z^n)^r}
+     -\sum_{r=0}^{n-2}(-1)^r\binom{n-1}{r}\frac{1}{\left(1+\log
+     z^n\right)^{r}}+(-1)^n\frac{\log z^n}{(1+\log z^n)^n}`
+
+     :math:`=1+(-1)^{n-1}\frac{1}{(1+\log z^n)^{n-1}}+(-1)^n\frac{1}{(1+\log
+     z^n)^{n-1}}-1+(-1)^n\frac{\log z}{(1+\log z^n)^n}`
+
+     :math:`{=0}`
+
+131. :math:`32^{32} = (2^5)^{32} = 2^{160} = {3 - 1}^{160} = 3m + 1, m \in N`
+
+     :math:`{32}^{32^{32}} = 32^{3m + 1} = 2^{15m + 5} = 2^{3{5m + 1}}.2^2`
+
+     :math:`=8^{5m + 1}.4 = 32.8^{5m} = 32(1 + 7)^{5m}`
+
+     :math:`=32(1 + 7k), k \in N = 4 + 28 + 7(32k) = 4 + 7r, r \in N`
+
+     Thus, remainder is :math:`4` when divided by :math:`7`
+
+132. Let :math:`t = x - 3,` then :math:`x - 2 = 1 + t`
+
+     :math:`\sum_{r=0}^{2n}a_r(x - 2)^r = \sum_{r=0}^{2n}b_r(x - r)^r`
+
+     :math:`\Rightarrow \sum_{r=0}^{2n}a_r(1 + t)^r = \sum_{r=0}^{2n}b_rt^r`
+
+     Equating coefficients of :math:`t^n` we obtain desired result.
+
+133. Given expression is :math:`= (1 + x)^{1000}\left[1 + 2\frac{x}{1 + x} +
+     3\left(\frac{x}{1 + x}\right)^2 + \ldots + 1001\left(\frac{x}{1 +
+     x}\right)^{1000}\right]`
+
+     The series is arithmetico-geometric series. Solving it yields
+
+     :math:`= (1 + x)^1002 - x^{1001}(1 + x) - 1001.x^{1001}`
+
+     Required coefficient of :math:`x^{50} = {}^{1000}C_50`
+
+134. L.H.S. = coeff. of :math:`x^n` in :math:`(1 + x)^n + (1 + x)^{n + 1} +
+     \ldots + (1 + x)^{n + k}`
+
+     :math:`(1 + x)^n + (1 + x)^{n + 1} + \ldots + (1 + x)^{n + k}`
+
+     :math:`= (1 + x)^n\left[\frac{1 + x}^{k + 1 - 1}{x}\right]`
+
+     :math:`= \frac{1}{x}(1 + x)^{n + k + 1} - \frac{1}{x}(1 + x)^n`
+
+     Coeff. of :math:`x^n = {}^{n + k + 1}C_{n + 1}`
+
+     Hence, we have proved the desired equation.
+
+135. Let :math:`S = (x + 2x^2 + 3x^3 + \ldots + nx^n)`
+
+     :math:`xS = x^2 + 2x^3 + \ldots + (n - 1)x^n + nx^{n + 1}`
+
+     :math:`S = x\frac{1 - x^n}{(1 - x)^2} - n\frac{x^{n + 1}}{1 - x}`
+
+     :math:`(1 + x + 2x^2 + 3x^3 + \ldots + nx^n)^2 = \left[1 + \frac{x(1 -
+     x^n)}{1 - x}^2 - \frac{nx^{n + 1}}{1 - x}\right]^2`
+
+     Required coeff. of :math:`x^n` = coeff. of :math:`x^n` in :math:`\left(1 +
+     \frac{x}{(1 - x)^2}\right)^2` [leaving terms containing powers of
+     :math:`x` greater than :math:`n`]
+
+     :math:`=` coeff. of :math:`x^n` in :math:`\left[1 + \frac{2x}{(1 - x)^2} +
+     \frac{x^2}{(1 - x)^4}\right]`
+
+     Solving this yields answer as :math:`\frac{n(n ^2 + 11)}{6}`
+
+136. Let :math:`S = 1 + (1 + x) + (1 + x)^2 + \ldots + (1 + x)^n`
+
+     :math:`(1 + x)S = (1 + x) + (1 + x)^2 + \ldots + (1 + x)^n + (1 + x)^{n +
+     1}`
+
+     Subtracting, we get
+
+     :math:`xS = (1 + x)^{n + 1} - 1`
+
+     :math:`\therefore ` coff. of :math:`x^k` in :math:`S = {}^{n + 1}C_{k + 1}`
+
+137. Let the expression be :math:`E = (x + 1)^n + (x + 1)^{n - 1}(x + 2) + (x +
+     1)^{n - 2}(x + 2)^2 + \ldots + (x + 2)^n`
+
+     We know that :math:`(x - y)(x^{n - 1} + x^{n - 2}y + \ldots + y) = x^n -
+     y^n`
+
+     Thus, :math:`E(x + 2 - x - 1) = (x + 2)^{n + 1} - (x + 1)^{n + 1}`
+
+     Coeff. of :math:`x^3` in :math:`(x + 2)^{n + 1} - (x + 1)^{n + 1}` is
+
+     :math:`= {}^{n + 1}C_3.2^{n - 2} - {}^{n + 1}C_3`
+
+138. :math:`\left(\frac{a + 1}{a^{\frac{2}{3}} - a^{\frac{1}{3}} + 1} - \frac{a -
+     1}{a - a^{\frac{1}{2}}}\right)^{10}`
+
+     :math:`= (\sqrt[3]{a} - \frac{1}{\sqrt{a}})^{10}`
+
+     :math:`t_{r + 1} = {}^{10}C_r a^{\frac{10 - r}{3}}a^{-\frac{r}{2}}`
+
+     Since the term has to be independent of :math:`a, \Rightarrow \frac{10 -
+     r}{3} - \frac{r}{2} \Rightarrow r = 4`
+
+     Thus :math:`t_5 = {}^{10}C_4 = 210`
+
+139. Coeff. of :math:`x^2` in :math:`\left(x + \frac{1}{x}\right)^{10}(1 - x +
+     2x^2) =` coeff. of :math:`x^2` in :math:`\left(x +
+     \frac{1}{x}\right)^{10}` - coeff. of :math:`x` in :math:`\left(x +
+     \frac{1}{x}\right)^{10}` - 2 * coeff. of term independent of :math:`x` in
+     :math:`\left(x + \frac{1}{x}\right)^{10}`
+
+     :math:`(r + 1)^{th}` term in :math:`\left(x + \frac{1}{x}\right)^{10} =
+     {}^{10}C_rx^{10 - r}x^{-r} = {}^{10}C_rx^{10 - 2r}`
+
+     Coeff. of :math:`x^2` means :math:`10 - 2r = 2 \Rightarrow r = 4.` Thus,
+     coeff. :math:`= {}^10C_4 = 210`
+
+     Coeff. of :math:`x` means :math:`10 - 2r = 1` which makes :math:`r` a
+     fraction. Thus, coeff. :math:`= 0`
+
+     Coeff. of term indepdent of :math:`x` means :math:`10 -2r = 0 \Rightarrow
+     r = 5.` Thus, coeff. :math:`= 2.{}^10C_5 = 504`
+
+     Thus, final coeff. :math:`= 210 + 504 = 714`
+
+140. Coeff. of :math:`x^4` in :math:`(1 + x - 2x^2)^6 =` coeff. of :math:`x^r`
+     in :math:`(1 + x(1 - 2x))^6`
+
+     Thus coefficient of :math:`x^4` will occur in :math:`3^{rd}` terms onward.
+
+     Adding coefficients we get :math:`-45` as our answer.
+
+141. We have :math:`(1 + x + 2x^3)\left(\frac{3}{2}x^2 - \frac{1}{3x}\right)^9`
+
+     :math:`= (1 + x + 2x^3)\left[\left(\frac{3}{2}x^2\right)^9 -
+     {}^9C_1\left(\frac{2}{2}x^2\right)^8\frac{1}{3x} + \ldots +
+     (-1)^9\left(\frac{1}{3x}\right)^9\right]`
+
+     Thus, the term independent of :math:`x` in the expansion is :math:`1a_0 +
+     1a_1 + 2a_3` where :math:`a_m` is the coefficient of :math:`x^m` in the
+     second bracket :math:`[]` of previous equation. Now, :math:`(r + 1)^{th}`
+     term in :math:`[]` of previous equation is
+
+     :math:`{}^9C_r\left(\frac{3}{2}x^2\right)^{9 -
+     r}\left(-\frac{1}{3x}\right)^r =
+     (-1)^r{}^9C_r\left(\frac{3}{2}\right)^{9 -
+     r}\left(\frac{1}{3^r}\right)x^{18 -r}`
+
+     :math:`\therefore a_{18 - 3r} =` coeff. of :math:`x^{18 - 3r}`
+
+     For :math:`a_0, 18 - 3r = 0 \Rightarrow r = 6 \Rightarrow a_0 = {}^9C_6
+     \frac{3^3}{2^3}\frac{1}{3^6} = \frac{7}{18}`
+
+     For :math:`a_1, 18 - 3s = 1, \Rightarrow r = \frac{19}{3}` which is
+     fractional. :math:`\therefore a_1 = 0`
+
+     For :math:`a_3, 18 - 3r = 3 \Rightarrow r - 7 \Rightarrow a_3 =
+     -{}^9C_7\left(\frac{3}{2}\right)^2\frac{1}{3^7} = -\frac{1}{27}`
+
+     Thus, required term :math:`= 1.\frac{7}{18} + .0 + 2.\frac{-1}{27} =
+     \frac{17}{52}`
+
+142. Given :math:`\left(x^2 + \frac{1}{x^3}\right)^7(2 - x)^{10}` and we have
+     to find term independent of :math:`x` in this.
+
+     Coeff of term independent of :math:`x` to be found in
+     :math:`\frac{1}{x^{21}}(x^5 + 1)^7(2 - x)^{10}` i.e. coeff. of
+     :math:`x^{21}` in :math:`(x^5 + 1)^7(2 - x)^{10}`
+
+     :math:`(x^5 + 1)^7` will have coeff. of powers of :math:`x` where powers
+     will be :math:`35, 30, 25, 20, \ldots, 0` while :math:`(2 - x)^{10}` will
+     have powers of :math:`1, 2, 3, \ldots, 10`
+
+     Clearly, combinations of :math:`20` and :math:`1` and :math:`15` and
+     :math:`6` satisfy our needs.
+
+     Thus, computing these terms leads to answer of :math:`-61600`
+
+143. We have to find term independent of :math:`x` in :math:`(1 + x + x^{-2} +
+     x^{-3})^{10}`
+
+     Coeff. of term independent of :math:`x` in :math:`\frac{1}{x^30}(1 +
+     x)^{10}(1 + x^3)^{10}`
+
+     :math:`(1 + x)^{10}` will have powers of :math:`x` in :math:`0, 1, 2, 3,
+     \ldots, 10` while :math:`(1 + x^3)^{10}` will have powers of :math:`x` in
+     :math:`0, 3, 6, 9, \ldots, 30`
+
+     Thus, combinaions of :math:`(0, 30), (3, 27), (6, 24), (9, 21)` are the
+     combinations which will satisfy our needs, where first number is power of
+     :math:`x` in :math:`(1 + x)^{10}` and second number is power of :math:`x`
+     in :math:`(1 + x^3)^{10}`
+
+     Thus coeff. is :math:`= {}^{10}C_1.{}^{30}C_{30} +
+     {}^{10}C_3.{}^{30}C_{27} + {}^{10}C_6.{}^{30}C_{24} +
+     {}^{10}C_9.{}^{30}C_{21}`
+
+144. Given :math:`(1 + x^2)^2(1 + x)^n = \sum_{k = 0}^{n + 4}a_kx^k`
+
+     :math:`a_1, a_2, a_3` are coefficients of :math:`x, x^2, x^3`
+     respectively.
+
+     Thus, we can find :math:`a_1, a_2, a_3` like we did in 143 and then apply
+     arithmetic progression confition :math:`2a_2 = a_1 + a_3` to find
+     :math:`n`
+
+145. We have to prove that :math:`{}^mC_1 + {}^{m + 1}C_2 + {}^{m + 2}C_3 +
+     \ldots + {}^{m + n - 1}C_n = {}^nC_1 + {}^{n + 1}C_2 + {}^{n + 2}C_3 +
+     \ldots + {}^{n + m - 1}C_n`
+
+     Keep in mind that :math:`{}^mC_0 = {}^nC_0`
+
+     Adding :math:`{}^mC_0` to L.H.S., we get :math:`{}^mC_0 + {}^mC_1 +
+     {}^{m + 1}C_2 + {}^{m + 2}C_3 + \ldots + {}^{m + n - 1}C_n`
+
+     Now we know that :math:`{}^nC_r + {}^nC_{r - 1} = {}^{n + 1}C_r` applying
+     the repeatedly we obtain L.H.S. as :math:`{}^{m + n}C_n`
+
+     Similarly adding :math:`{}^nC_0` to R.H.S. and applying above formula
+     repeatedly we obtain R.H.S. as :math:`{}^{m + n}C_m`
+
+     Clearly, :math:`{}^{m + n}C_m = {}^{m + n}C_n`
+
+146. Let us solve these one by one.
+
+     1. We observe that :math:`1 + x + x^2 = (x + \omega)(x + \overline{\omega})`
+        where :math:`\omega` and :math:`\overline{\omega}` are cube root of unity
+        not equal to :math:`-1`
+
+        :math:`\sum_{r=0}^{2n}c_rx^r=(x^2+x+1)^n=(x+w)^n(x+\overline{w})^n=\sum_{k=0}^n\binom{n}{k}x^kw^{n-k}\cdot
+        \sum_{l=0}^n\binom{n}{\ell}x^l \overline{w}^{n-l}`
+
+        Thus,
+        :math:`a_r=\sum_{j=0}^r\binom{n}{j}\binom{n}{r-j}w^{n-j}\overline{w}^{\,n-(r-j)}=\sum_{j=0}^r\binom{n}{j}\binom{n}{r-j}w^{r-2j}`
+
+        Thus, :math:`a_r = a_{2n - r}`
+
+    2. :math:`a_r = a_{2n - r}` from previous part.
+
+       Substituting :math:`x = 1`
+
+       :math:`a_0 + a_1 + \ldots + a_2n = 2(a_0) + 2(a _1)  + \ldots +
+       2a_{n - 1} + a_n = 3^n`
+
+       :math:`\Rightarrow a_0 + a_1 + a_2 + \ldots + a_{n - 1} = \frac{1}{2}(3^n - a_n)`
+
+    3. Differentiating and using result obtained in part 1 we can prove this.
+
+147. Given :math:`\frac{(1 - x^3)^n}{(1 - x)^{3n}} = \sum_{r =
+     0}^na_r\frac{x^r}{(1 - x)^{2r}}`
+
+     :math:`\Rightarrow \left(\frac{1 + x + x^2}{(1 - x)^2}\right)^n = \sum_{r
+     = 0}^na_r\alpha^r,` where :math:`\alpha = \frac{x}{(1 - x)^2}`
+
+     :math:`(1 + 3\alpha)^n = \sum_{r = 0}^na_r\alpha^r`
+
+     Coeff of :math:`\alpha^r = a_r = {}^nC_r3^r`
+
+148. Coeff. of middle term of :math:`(1+ x)^{2n} = {}^{2n}C_n`
+
+     Coeff. of :math:`x^n` in :math:`(1 + x)^{2n - 1} = {}^{2n - 1}C_n`
+
+     Clearly, :math:`2.{}^{2n - 1}C_n = {}^{2n}C_n`
+
+149. Coeff. of terms in the expansion of :math:`(x + y)^{200}` are
+     :math:`{}^{200}C_1, {}^{200}C_2, {}^{200}C_3, \ldots, {}^{200}C_{200}`
+
+     Since middle term has greatest coefficient, therefore :math:`r = 100`
+
+150. Let committees of :math:`r` persons be made out of :math:`20`
+     persons. Then number of committees :math:`= {}^20C_r`
+
+     Since middle term has greatest coefficient therefore :math:`{}^{20}C_r`
+     will be maximum when :math:`r = 10`
+
+     Therefore, :math:`10` persons should be chosen for maximum no. of
+     committees.
+
+151. This problem is similar to 149 and 150 and has been left as an exercise.
+
+152. :math:`(3 + 2x)^7` will have :math:`8` terms with :math:`4^{th}` and
+     :math:`5^{th}` terms as middle terms. We know that when there are two
+     middle terms coefficients are equal. Therefore, these two middle terms are
+     consecutive terms which have equal coefficient.
+
+153. Let :math:`(1 + 5x^2 - 7x^3)^{2000} = a_0 + a_1x + a_2x + \ldots +
+     a_{6000}x^{6000}`
+
+     Substituting :math:`x = 1,` we get
+
+     :math:`(1 + 5 - 7)^{2000} =` sum of coefficients :math:`= 1`
+
+154. Substitutin :math:`x^{-\frac{x}{4}} = 1` and :math:`x^{\frac{5x}{4}} = 1`
+
+     :math:`(1 + 1)^n = 64 \Rightarrow n = 6`
+
+     Hence greatest term = middle term = :math:`4^{th}` term
+
+     According to question :math:`t_4 = (n - 1)+ t_3`
+
+     Solving this gives us, :math:`[\alpha] = 0`
+
+155. Let :math:`S` be the sum of coeff. in :math:`(5p - 4q)^n`. Substituting
+     :math:`p =1, q = 1,` we get
+
+     :math:`S = (5 - 4)^n = 1`
+
+156. Let :math:`S` be the sum of coeff. in :math:`(5p - 4q)^n`. Substituting
+     :math:`x = 1,` we get
+
+     :math:`S = (1 - 3 + 1)^{201}(1 + 5 - 5)^{503} = -1`
+
+157. Substituing :math:`x =1` reduces the two expansions as  :math:`(t - 1)^n`
+     and :math:`(1 - t)^n`
+
+     Clearly, if :math:`n` is odd then sign will differe except when :math:`t =
+     1.` However, if :math:`n` is even both expansions will be positive and
+     :math:`t` can assume any real value.
+
+158. Substituting :math:`x = 1, i, -i` and then multiplying when :math:`x = i,
+     -i` we obtain the desired result.
+
+159. Let :math:`r^{th}` term be the greatest term.
+
+     :math:`t_r = \sqrt{3}\left[{}^{20}C_{r -
+     1}\left(\frac{1}{\sqrt{3}}\right)^{r - 1}\right]`
+
+     :math:`t_{r + 1} =
+     \sqrt{3}\left[{}^{20}C_r\left(\frac{1}{\sqrt{3}}\right)^r\right]`
+
+     :math:`\frac{t_r}{t_{r + 1}} = \frac{{}^{20}C_{r -
+     1}}{{}^{20}C_r}\sqrt{r}`
+
+     :math:`= \frac{r}{21 - r}\sqrt{3} \geq 1 \Rightarrow r = 7.69`
+
+     Also, :math:`\frac{t_{r -1}}{t_r} \leq 1` gives us :math:`r = 8.5`
+
+     Hence, :math:`8^{th}` term will be greatest term and :math:`t_8 =
+     \frac{25840}{9}`
+
+160. Since :math:`t_{11}` is G.M. of :math:`t_8` and :math:`t_{12}`
+
+     :math:`t_{11} = \sqrt{t_8.t_{12}}`
+
+     :math:`\left(\frac{15!}{10!5!}x^5a^{10}\right)^2 =
+     \frac{15!15!}{7!8!11!4!}x^{12}a^{18}`
+
+     :math:`\Rightarrow \frac{x}{a} = \sqrt{\frac{77}{75}}`
+
+     Let :math:`r^{th}` term be the greatest term. Now,
+
+     :math:`t_r = {}^{15}C_{r - 1}x^{16 - r}a^{r - 1}`
+
+     :math:`t_{r + 1} = {}^{15C_r}x^{15 - r}a^r`
+
+     :math:`\frac{t_r}{t_{r + 1}} = \frac{r}{16 - r}\frac{x}{a} \geq 1`
+
+     :math:`r \geq 7.947`
+
+     Hence, :math:`8^{th}` term is the greatest term.
+
+161. :math:`t_{n + 1} = {}^{2n}C_nx^n, t_{n + 2} = {}^{2n}C_{n + 1}x^{n + 1},
+     t_n = {}^{2n}C_{n - 1}x^{n - 1}`
+
+     :math:`\frac{t_{n + 1}}}{t_{n + 2}} = \frac{n + 1}{n}.\frac{1}{x} > 1
+     \Rightarrow x < \frac{n + 1}{n}`
+
+     Also, :math:`t_{n + 1} = \frac{n + 1}{n}x > 1 \Rightarrow x > \frac{n}{n +
+     1}`
+
+     Thus, greatest term will have greatest coefficient if and only if :math:`x
+     \in \left(\frac{n}{n + 1}, \frac{n + 1}{n}\right)`
+
+     Given :math:`x \in \left(\frac{10}{11}, \frac{11}{10}\right)`
+
+     Thus, :math:`n = 10`
+
+     :math:`t_4 = \frac{n}{4} = \frac{5}{2}`
+
+     :math:`\Rightarrow {}^{m}C_3(kx)^{m - 3}\frac{1}{x^3} = \frac{5}{2}`
+
+     R.H.S. is independent of :math:`x, \Rightarrow m - 6 = 0, m = 6`
+
+     :math:`{}^{6}C_3k^3 = \frac{5}{2}\Rightarrow k = \frac{1}{2}`
+
+     :math:`\Rightarrow mk = 3`
+
+162. This problem is similar to last problem and has been left as an
+     exercise. The range is :math:`2 < x < \frac{64}{21}`
+
+163. :math:`9^n + 7 = (8 + 1)^n + 7 = {}^nC_0.8^n + {}^nC_18{n - 1} + \ldots +
+     {}^nC_{n - 1}8 + {}^nC_n + 7`
+
+     :math:`= 8k + 1 + 7, k \in N = 8(k + 1)`
+
+     Thus, the number is divisible by :math:`8`
+
+164. Given expression is :math:`3^{2n + 1} + 2^{n + 2}` which can be rewritten
+     as :math:`3.(7 + 2)^n + 4.2^n,` which upon expansion yields
+
+     :math:`3({}^nC_07^n + {}^nC_17^{n - 1}2 + \ldots + {}^nC_n2^n) + 4.2^n`
+
+     :math:`= 7k + 2^n(3 + 4), k \in N`
+
+     The above expression is divisible by :math:`7.`
+
+165. Let the binomial expansion be :math:`(x + y)^n` and :math:`a, b, c` be the
+     coefficients of :math:`r^{th}, (r + 1)^{th}, (r + 2)^{th}` terms
+     respectively.
+
+     Then, :math:`a = {}^nC_{r - 1}, b = {}^nC_r, c = {}^nC_{r + 1}`
+
+     The descriminant of given quadratic equation is :math:`D = b^2 - 4ac`
+
+     Substituting values of :math:`a, b, c` and simplifying we obtain
+
+     :math:`D = 4({}^nC_r)^2 \frac{n + 1}{(n - r + 1)(r + 1)}` where :math:`r`
+     is non-negative integer.
+
+     Clearly :math:`D > 0,` hence roots of given equation are real and unequal.
+
+166. This problem is similar to previous one and has been left as an exercise.
+
+167. **Calculus Method:**
+
+     :math:`(1 + x)^n = C_0 + C_1x + C_2x^2 + \ldots + C_nx^n`
+
+     Multiplying with :math:`x` and differentiating w.r.t. :math:`x,` we get
+
+     :math:`(1 + x)^n + nx(1 + x)^{n - 1} = C_0 + 2xC_1 + 3x^2C_2 + (n +
+     1)x^nC_n`
+
+     Substituting :math:`x = -1,` we obtain
+
+     :math:`C_n - 2.C_1 + 3.C_2 - \ldots +(-1)^n(n + 1)C_n = 0`
+
+     **Second Method:**
+
+     :math:`t_r = (-1)^{r - 1}r.{}^nC_{r - 1} = (-1)^{r - 1}(r- 1 +
+     ).{}^nC_{r - 1} = (-1)^{r - 1}n.{}^{n - 1}C_{r - 2} + (-1)^{r -
+     1}.{}^nC_{r - 1}`
+
+     :math:`\sum_{r = 1}^{n + 1} = -n({}^{n - 1}C_0 - {}^{n - 1}C_1 + {}^{n -
+     1}C_2 - \ldots + {-1}^{n - 1}.{}^{n - 1}C_{n - 1}) + ({}^nC_0 - {}^nC_1 +
+     \ldots + (-1)^n.{}^nC_n)`
+
+     :math:`= -n(1 - 1)^{n - 1} + (1 - 1)^n = 0`
+
+168. **Calculus Method:**
+
+     We know that :math:`(1 + x)^n = C_0 + C_1x + C_2x^2 + \ldots + C_nx^n`
+
+     Substituting :math:`x = x^2` and multiplying with :math:`x,` we get
+
+     :math:`x(1 + x^2)^n = C_0x + C_1.x^3 + C_2.x^5 + \ldots + (2n +
+     1)x^{2n}.C_n`
+
+     Differentiating both sides w.r.t :math:`x,` and substituting :math:`x =
+     i,` we get
+
+     :math:`C_0 -3.C_1 + 5.C_2 - \ldots + (-1)^n(2n + 1)C_n = (1 - 1)^n +
+     i.n.(1 - 1)^{n - 1}.2i = 0`
+
+     **Second Method:**
+
+     :math:`t_r = = (-1)^{r - 1}(2r - 1).C_{r - 1} = (-1)^r[2(r - 1) +
+     1]{}^nC_{r - 1}`
+
+     :math:`= 2(-1)^{r - 1}.n{}^{n - 1}C_{r - 1} + (-1)^{r - 1}{}^nC_{r - 1}`
+
+     :math:`\sum_{r = 1}^{n + 1}t_r = -2n[{}^{n - 1}C_0 - {}^{n - 1}C_1 +
+     \ldots + (-1)^{n - 1}{}^{n - 1}C_{n - 1}] + [{}^{n}C_0 - {}^nC_1 +
+     \ldots + (-1)^n{}^nC_n]`
+
+     :math:`= -2n(1 - 1)^{n - 1} + (1 - 1)^n = 0`
+
+169. **Calculus Method:**
+
+     L.H.S. = :math:`a[C_0 - C_1 + C_2 - \ldots + (-1)^n.C_n] + [1.C_1 - 2C_2 +
+     3.C_3 - \ldots + (-1)^n(-n)C_n]`
+
+     :math:`= a(1 - 1)^n + 1.C_1 - 2C_2 + 3.C_3 - \ldots + (-1)^n(-n)C_n`
+
+     Given, :math:`(1 + x)^n = C_0 + C_1x + C_2x^2 + \ldots + C_nx^n`
+
+     Differentiating w.r.t. :math:`x` and  substuting :math:`x = -1,` we get
+
+     :math:`1.C_1 - 2C_2 + 3.C_3 - \ldots + (-1)^n(-n)C_n = (1 - 1)^n = 0`
+
+     Hence, desired equality is proved.
+
+     **Second Method:**
+
+     :math:`t_r = (-1)^{r - 1}[a - (r - 1)]{}^nC_{r -1}`
+
+     :math:`= a(-1)^{r - 1}.{}^nC_{r - 1} - (-1)^{r - 1}n.{}^{n - 1}C_{r -1}`
+
+     This can be proven to be :math:`0` like previous problems.
+
+170. :math:`t_{r + 1} = r^r.{}^nC_rp^rq^{n - r}`
+
+     :math:`= r.n.{}^{n - 1}C_{r - 1}p^rq^{n - r}`
+
+     :math:`= n(r - 1 + 1){}^{n - 1}C_{r - 1}p^rq^{n - r}`
+
+     :math:`= n[(n - 1).{}^{n - 2}C_{r - 2} + {}^{n  - 1}C_{r - 1}]p^rq^{n -
+     r}`
+
+     L.H.S. :math:`= \sum_{r = 0}^n t_{r + 1}`
+
+     :math:`= n(n - 1)p^2\sum_{r = 0}^n {}^{n - 2}C_{r - 2}q^{n -2 - (r - 2)} +
+     np\sum_{r = 0}^{n}{}^{n - 1}C_{r - 1}p^{r - 1}q^{n - 1 - (r - 1)}`
+
+     :math:`= n(n - 1)p^2(p + q)^{n - 2} + np(p + q)^{n - 1}`
+
+     :math:`= n(n - 1)p^2 + np [\because p + q = 1]`
+
+     :math:`= n^2p^2 + npq`
+
+171. :math:`(1 + x)^{10} = C_0 + C_1x + C_2x^2 + \ldots + C_10x^{10}`
+
+     Integrating between limits :math:`0` and :math:`2` gives the desired result.
+
+172. **Calculus Method:**
+
+     :math:`(1 - x)^n = 1 - {}^nC_1x + {}^nC_2x^2 - \ldots + (-1)^{n - 1}{}^nC_nx^n`
+
+     :math:`\frac{1 - (1 - x)^n}{x} = {}^nC_1 - {}^nC_2x + \ldots + (-1)^{n -
+     1}C_{n}x^{n - 1} = \frac{x - (1 - x)^n}{x}`
+
+     Integrating between limits :math:`0` and :math:`1,` we get
+
+     :math:`\left[{}^nC_1x - {}^nC_2\frac{x^2}{2} + \ldots + (-1)^{n -
+     1}\frac{x^n}{n}\right]_0^1 = \int_{0}^1\frac{1 - (1 - x)^n}{x}dx`
+
+     Let :math:`z = 1 - x` then R.H.S. becomes :math:`\int_1^0 -\frac{1 - z^n}{1
+     - z}dz`
+
+     :math:`= \int_0^1(1 + z + z^2 + \ldots + z^{n - 1})dz`
+
+     :math:`= \left[z + \frac{z^2}{2} + \ldots + \frac{z^n}{n}\right]_0^1`
+
+     :math:`= 1 + \frac{1}{2} +\frac{1}{3} + \ldots + \frac{1}{n}`
+
+     **Seccond Method:**
+
+     Let :math:`S_n = C_1 - \frac{1}{2}C_2 + \frac{1}{3}C_3 - \ldots +
+     \frac{(1)^nC_n}{n}`
+
+     :math:`S_n = n - \frac{1}{2}\frac{n(n - 1)}{2!} + \frac{1}{3}\frac{n(n -
+     1)(n - 2)}{3!} + \ldots`
+
+     :math:`= (n - 1 + 1) - \frac{1}{2}\frac{(n - 1)(n - 2 + 2)}{2!} + \frac{(n
+     - 1)(n - 2)(n - 3 + 3)}{3!} + \ldots`
+
+     :math:`= S_{n - 1} + \frac{1}{n}\left[n - \frac{n(n - 1)}{2!} +
+     \frac{n(n - 1)(n - 2)}{3!} + \ldots\right]`
+
+     :math:`= S_{n - 1} - \frac{1}{n}[C_0 - C1 + C_2 + \ldots -1] = S_{n - 1} -
+     \frac{1}{n}[(1 - 1)^n - 1]`
+
+     :math:`S_{n - 1} + \frac{1}{n} \therefore S_n - S_{n - 1} = 1`
+
+     Similarly :math:`S_{n - 1} - S_{n - 2} = \frac{1}{n - 2}`
+
+     :math:`S_{n - 2} - S_{n - 3} = \frac{1}{n - 3}`
+
+     :math:`\ldots`
+
+     :math:`S_2 - S_1 = \frac{1}{3}`
+
+     :math:`S_1 = 1`
+
+     Adding we get :math:`S_n = 1 + \frac{1}{2} + \frac{1}{4} + \ldots +
+     \frac{1}{n}`
+
+173. :math:`(1 - x)^n = 1 - {}^nC_1x + {}^nC_2x^2 - \ldots + (-1)^{n -
+     1}{}^nC_nx^n`
+
+     Putting :math:`x = x^4,` and integrating between limits :math:`0` and
+     :math:`1,` we get
+
+     :math:`C_0 - \frac{C_1}{5} + \frac{C_2}{9} - \ldots +
+     (-1)^n\frac{C_n}{4n + 1} = \int_{0}^1(1 - x^4)^ndx`
+
+     It can be proven that :math:`\int_0^1(1 - x^4)^ndx =
+     \frac{4n.n!}{1.5.9\ldots (4n + 1)}` [Refer to any book on calculus]
+
+174. :math:`(1 - x)^n = 1 - {}^nC_1x + {}^nC_2x^2 - \ldots + (-1)^{n -
+     1}{}^nC_nx^n`
+
+     Multiplying both sides with :math:`x^{n - 1},` and integrating with limit
+     :math:`0` and :math:`1,` we get
+
+     :math:`\frac{C_0}{n} - \frac{C_1}{n + 1} + \frac{C_2}{n + 2} -
+     \ldots + (-1)^n\frac{C_n}{2n} = \int_0^1 x^{n - 1}(1 - x)^ndx`
+
+     Integrating R.H.S. by parts we obtain the desired result.
+
+175. L.H.S. :math:`= \left(\frac{C_0}{n} - \frac{C_0}{n + 1}\right) -
+     \left(\frac{C_1}{n + 1} - \frac{C_1}{n + 2}\right) + \ldots + (-1)^{n -
+     1}\left(\frac{C_n}{2n} - \frac{C_n}{2n + 1}\right)`
+
+     :math:`= \left(\frac{C_0}{n} - \frac{C_1}{n + 1} + \frac{C_2}{n + 2} -
+     \ldots + (-1)^n\frac{C_n}{2n}\right) - \left(\frac{C_0}{n + 1} -
+     \frac{C_1}{n + 2} + \ldots + (-1)^n\frac{C_n}{2n + 1}\right)`
+
+     Now this can be solved like 174.
+
+176. This problem is similar to 174 and has been left as an exercise.
+
+177. :math:`(1 + x)^n = C_0 + C_1x + C_2x^2 + \ldots + C_nx^n`
+
+     :math:`(1 - x)^n = 1 - {}^nC_1x + {}^nC_2x^2 - \ldots + (-1)^{n -
+     1}{}^nC_nx^n`
+
+     Multiplying these two we get
+
+     :math:`(C_0 + C_1x + C_2x^2 + \ldots + C_nx^n)(1 - {}^nC_1x + {}^nC_2x^2 -
+     \ldots + (-1)^{n - 1}{}^nC_nx^n) = (1 - x^2)^n`
+
+     Coeff. of :math:`x^n` on L.H.S. :math:`= C_0^2 - C_1^2 + C_2^2 - \ldots +
+     (-1)^nC_n^2`
+
+     R.H.S. :math:`= C_0 + (-1)^1C_1x^2 + C_2x^2 + \ldots`
+
+     :math:`=` an expression having even powers of :math:`x`
+
+     Thus, if :math:`n` is odd, coeff. of :math:`x^n` on R.H.S :math:`= 0`
+
+     If :math:`n` is even, coeff. of :math:`x^n` on R.H.S. :math:`=
+     (-1)^{\frac{n}{2}}{}^nC_{\frac{n}{2}}`
+
+     :math:`= \frac{n!}{\left(\frac{n!}{2}\right)^2}`
+
+178. :math:`(1 + x)^n = C_0 + C_1x + C_2x^2 + \ldots + C_nx^n`
+
+     :math:`(1 + x)^m = C_0 + C_1x + C_2x^2 + \ldots + C_mx^m`
+
+     Multiplying these two, we get
+
+     :math:`(C_0 + C_1x + C_2x^2 + \ldots + C_nx^n)(C_0 + C_1x + C_2x^2 +
+     \ldots + C_mx^m) = (1 + x)^{m + n} = {}^{m + n}C_0 + {}^{m + n}C_1x +
+     \ldots + {}^{m + n}C_rx^r + \ldots + {}^{m + n}C_{m + n}x^{m + n}`
+
+     Equating the coefficient of :math:`x^r` we get the desired result.
+
+179. :math:`(1 + x)^{2n} = C_0 + C_1x + C_2x^2 + \ldots + C_{2n}x^{2n}`
+
+     :math:`(x + 1)^{2n} = C_0x^{2n} + C_1x^{2n - 1} + C_2x^{2n - 2} + \ldots +
+     C_2n`
+
+     Multiplying we get
+
+     :math:`(C_0 + C_1x + C_2x^2 + \ldots + C_{2n}x^{2n})(C_0x^{2n} + C_1x^{2n - 1} +
+     C_2x^{2n - 2} + \ldots + C_{2n}) = (1 - x^2)^{n}`
+
+     Equating the coefficients of :math:`x^{2n}` we get the desired result.
+
+180. :math:`(1 + x)^n = C_0 + C_1x + C_2x^2 + \ldots + C_nx^n`
+
+     Differentaiating w.r.t :math:`x,` we obtain
+
+     :math:`n(1 + x)^{n - 1} = C_1 + 2C_2x + \ldots + nC_nx^{n -1}`
+
+     Also, :math:`(x + 1)^n = C_0x^n + C_1x^{n - 1} + C_2x^{n - 2} + \ldots +
+     C_n`
+
+     Multiplying two previous equations, we obtain
+
+     :math:`n(1 + x)^{2n - 1} = (C_1 + 2C_2x + \ldots + nC_nx^{n -1})(C_0x^n +
+     C_1x^{n - 1} + C_2x^{n - 2} + \ldots + C_n)`
+
+     Equating coefficients of :math:`x^{n - 1},` we obtain
+
+     :math:`C_1^2 + 2.C_2^2 + 2.C_3^3 + \ldots + n.C_n^2 = n.{}^{2n - 1}C_{n -
+     1} = \frac{(2n - 1)!}{[(n - 1)!]^2}`
+
+181. :math:`(1 + x)^n = C_0 + C_1x + C_2x^2 + \ldots + C_nx^n`
+
+     Integrating with limits :math:`0` and :math:`x,` we obtain
+
+     :math:`\left[\frac{(1 + x)^{n + 1}}{n + 1}\right]_0^x = \left[C_0x +
+     C_1\frac{x^2}{2} + C_2\frac{x^3}{3} + \ldots + C_n\frac{x^{n + 1}}{n +
+     1}\right]_0^x`
+
+     Also, :math:`(x + 1)^n = C_0x^n + C_1x^{n - 1} + C_2x^{n - 2} + \ldots +
+     C_n`
+
+     Multiplying and equating coefficients of :math:`x^{n + 1},` we obtain
+
+     :math:`C_0^2 + \frac{C_1^2}{2} + \frac{C_2^2}{3} + \ldots + \frac{C_n^2}{n
+     + 1} = \frac{{}^{2n + 1}C_{n + 1} - 0}{n + 1} = \frac{(2n + 1)!}{[(n + 1)!]^2}`
+
+182.
