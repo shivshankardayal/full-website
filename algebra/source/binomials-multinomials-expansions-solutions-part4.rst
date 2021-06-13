@@ -582,4 +582,108 @@ Binomials, Multinomials and Expansions Solutions Part 4
 
      Now we can easily prove the required equality.
 
-192.
+192. :math:`{}^nC_0 = {}^{n - 1}C_0`
+
+     :math:`-{}^nC_1 = {}^{n - 1}C_0 - {}^{n - 1}C_1`
+
+     :math:`{}^nC_2 = {}^{n - 1}C_1 + {}^{n - 1}C_2`
+
+     :math:`\ldots`
+
+     :math:`(-1)^m{}^{n}C_{m - 1} = (-1)^{m - 1}.{}^{n - 1}C_{m - 2} + (-1)^{m - 1}.{}^{n - 1}C_{m - 1}`
+
+     Adding, we obtain :math:`C_0 -C_1 + C_2 - \ldots + (-1)^{m - 1}C_{m - 1} = (-1)^{m - 1}.{}^{n - 1}C_{m - 1}`
+
+     :math:`= (-1)^{m - 1}\frac{(n - 1)(n - 2)\ldots (n - m + 1)}{(m - 1)!}`
+
+     **Second Method:**
+
+     :math:`C_0 - C_1 + C_2 - \ldots + (-1)^{m - 1}.C_{m - 1}`
+
+     :math:`=` coeff. of :math:`x^0` in :math:`\left[(1 - x)^n + \frac{1}{x}(1 - x)^n + \frac{1}{x^2}(1 - x)^n + \ldots +
+     \frac{1}{x^{m - 1}}(1 - x)^n\right]`
+
+     :math:`=` coeff. of :math:`x^0` in :math:`\left[(1 - x)^n\left(1 + \frac{1}{x} + \frac{1}{x^2} + \ldots + \frac{1}{x^{m -
+     1}}\right)\right]`
+
+     :math:`=` coeff. of :math:`x^0` in :math:`(1 - x)^n\left(\frac{1 - \frac{1}{x^m}}{1 - \frac{1}{x}}\right)`
+
+     :math:`=` coeff. of :math:`x^0` in :math:`\left[(1 - x)^n\left(\frac{1 - x^m}{1 - x}.\frac{1}{x^{m - 1}}\right)\right]`
+
+     :math:`=` coeff. of :math:`x^{m - 1}` in :math:`(1- x)^{n - 1}` - coeff. of :math:`x^{-1}` in :math:`(1 - x)^{n - 1}`
+
+     :math:`= (-1)^{m - 1}{}^{n - 1}C_{m - 1} - 0 = (-1)^{m - 1}\frac{(n - 1)(n - 2)\ldots (n - m + 1)}{(m - 1)!}`
+
+193. Let :math:`d` be the common divisor of :math:`{}^{2n}C_1, {}^{2n}C_3, {}^{2n}C_5, \ldots, {}^{2n}C_{2n - 1}`
+
+     We know that :math:`{}^{2n}C_1 + {}^{2n}C_3 + {}^{2n}C_5 + \ldots + {}^{2n}C_{2n - 1} = 2^{2n -1}`
+
+     It is clear from above that common divisor of :math:`{}^{2n}C_1, {}^{2n}C_3, {}^{2n}C_5, \ldots, {}^{2n}C_{2n - 1}` will be a
+     divisor of :math:`2^{2n - 1}` and hence it will be of the form :math:`2^k`
+
+     Thus, :math:`d = 2^k, 0<k \leq 2n - 1`
+
+     Let :math:`n = 2^m.r` where :math:`r` is any odd postive integer.
+
+     :math:`2n = 2^{m + 1}.r`
+
+     Since common divisor is of the form :math:`2^k` and :math:`{2n}C_1 = 2^{m + 1}.r,` where :math:`r` is odd.
+
+     Therefore, common divisor is :math:`\leq 2^{m + 1} [k \leq m + 1]`
+
+     We claim that :math:`2^{m + 1}` divides all of :math:`{}^{2n}C_1, {}^{2n}C_3, {}^{2n}C_5, \ldots, {}^{2n}C_{2n - 1}`
+
+     For odd positive integer :math:`p,` :math:`{}^{2n}C_p = \frac{2n}{p}.{}^{2n - 1}C_{p -1} = \frac{2^{m + 1}r}{p}{}^{2n -
+     1}C_{p - 1}`
+
+     Since L.H.S. of above is an integer and :math:`p` is odd, therefore it cannot divide :math:`2^{m + 1}` and hence
+     :math:`\frac{r.{}^{2n - 1}C_{p - 1}}{p}` must be an an integer.
+
+     :math:`{}^{2n}C_p = 2^{m + 1}.` (integer)
+
+     :math:`\Rightarrow {}^2nC_p` is divisible by :math:`2^{m + 1}` for odd positive integer :math:`p.`
+
+     Thus, GCD is :math:`2^{m + 1}` where :math:`n = 2^m.r, r` being an odd positive integer.
+
+194. :math:`2\sum_{r = 0}^n{}^nC_r \sin rx\cos (n  - r)x`
+
+     :math:`=({}^nC_0\sin 0x + {}^nC_n\sin nx\cos 0x) + ({}^nC_1\sin x\cos (n - 1)x + {}^nC_{n -1}\sin (n -1)x\cos x) + \ldots +
+     ({}^nC_n\sin nx \cos 0x + {}^nC_0\sin 0x\cos nx)`
+
+     :math:`= {}^nC_0\sin nx + {}^nC_1\sin nx + \ldots + {}^nC_n\sin nx`
+
+     :math:`= 2^n\sin nx`
+
+     :math:`\sum_{r = 0}^n{}^nC_r \sin rx\cos (n  - r)x = 2^{n - 1}\sin nx`
+
+195. :math:`(1 - x)^n = C_0 - C_1x + C_2x^2 - \ldots + (-1)^nC_nx^n`
+
+     Differentiating w.r.t :math:`x`
+
+     :math:`n(1 - x)^n = C_1 - 2C_2x + 3C_3x^2 - \ldots + (-1)^n.n.C_nx^{n - 1}`
+
+     Substituting :math:`x = -1`
+
+     :math:`C_1 - 2C_2 + 3C_3 - \ldots + (-1)^n.n.C_n = 0`
+
+196. L.H.S. :math:`= a.C_0 + (a - b).C_1 + (a - 2b)C_2 + \ldots + (a - nb).C_n`
+
+     :math:`= a(C_0 + a.C_1 + a.C_2 + \ldots + .C_n) - b(C_1 + 2C_2 + \ldots n.C_n)`
+
+     We know that :math:`(1 + x)^n = C_0 + C_1x + C_2x^2 + C_nx^n`
+
+     Multiplying with :math:`a` and substituting :math:`x = 1`
+
+     :math:`a.2^n = a(C_0 + a.C_1 + a.C_2 + \ldots + .C_n)`
+
+     Differentiating :math:`(1 + x)^n` w.r.t :math:`x` and multiplying with :math:`-b`
+
+     :math:`-bn2^{n - 1} = - b(C_1 + 2C_2 + \ldots n.C_n)`
+
+     Thus, :math:`= a.C_0 + (a - b).C_1 + (a - 2b)C_2 + \ldots + (a - nb).C_n = 2^{n - 1}(2a - nb)`
+
+197. This problem is easy and can be solved by what we have solved till now and has been left as en exercise.
+
+198. This problem is similar to 196 and has been left as an exercise.
+
+199 and 200 are similar to 197 and can be solved easily as well and have been left as exercises.

@@ -121,6 +121,7 @@ A Variable in Algebra
    binomials-multinomials-expansions-problems-part4
    binomials-multinomials-expansions-solutions-part4
    binomials-multinomials-expansions-problems-part5
+   binomials-multinomials-expansions-solutions-part5
    binomials-multinomials-expansions-problems-part6
 
 

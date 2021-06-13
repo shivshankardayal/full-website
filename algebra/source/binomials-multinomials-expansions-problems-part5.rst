@@ -32,17 +32,17 @@ Binomials, Multinomials and Expansions Problems Part 5
 207. Show that :math:`\frac{C_0}{1.2} - \frac{C_1}{2.3} + \frac{C_2}{3.4} +
      \ldots + (-1)^n\frac{C_n}{(n + 1)(n + 2)} = \frac{1}{n + 2}`
 
-208. Show that :math:`\frac{C_0}{2} - \frac{C_1}{3} + \frac{C-2}{4} - \ldots +
+208. Show that :math:`\frac{C_0}{2} - \frac{C_1}{3} + \frac{C_2}{4} - \ldots +
      (-1)^n\frac{C_n}{n + 2} = \frac{1}{(n + 1)(n + 2)}`
 
-209. Show that :math:`\frac{C_0}{3} - \frac{C_1}{4} + \frac{C-2}{5} - \ldots +
+209. Show that :math:`\frac{C_0}{3} - \frac{C_1}{4} + \frac{C_2}{5} - \ldots +
      (-1)^n\frac{C_n}{n + 3} = \frac{2}{(n + 1)(n + 2)(n + 3)}`
 
 210. Show that :math:`3.C_0 + 3^2\frac{C_1}{2} + 3^3\frac{C_2}{3} + \ldots +
      3^{n + 1}\frac{C_n}{n + 1} = \frac{4^{n + 1} - 1}{n + 1}`
 
 211. Show that :math:`\sum_{k = 0}^{15}\frac{{}^{15}C_k}{(k + 1)(k + 2)} =
-     \frac{26{17} - 18}{16.17}`
+     \frac{2^{17} - 18}{16.17}`
 
 212. Show that :math:`\frac{C_0}{1} - \frac{C_1}{4} + \frac{C_2}{7} - \ldots +
      (-1)^n\frac{C_n}{3n + 1} = \frac{3^nn!}{1.4.7.\ldots + (3n + 1)}`
@@ -50,8 +50,8 @@ Binomials, Multinomials and Expansions Problems Part 5
 213. Show that :math:`\sum_{r = 0}^n \frac{(-1)^rC_r}{(r + 1)(r + 2)} =
      \frac{1}{n + 2}`
 
-214. Prove that :math:`\sum_{r = 0}^n \frac{C_re^{r + 3}}{(r + 1)(r + 2)(r +
-     3)} = \frac{4^{n + 3} - 1 - \frac{3}{2}(n + 3)(en + 8)}{(n + 1)(n + 2)(n +
+214. Prove that :math:`\sum_{r = 0}^n \frac{C_r3^{r + 3}}{(r + 1)(r + 2)(r +
+     3)} = \frac{4^{n + 3} - 1 - \frac{3}{2}(n + 3)(3n + 8)}{(n + 1)(n + 2)(n +
      3)}`
 
 215. Prove that :math:`\sum_{r = 0}^n \frac{r + 2}{r + 1}C_r = \frac{2^n(n + 3)
@@ -59,7 +59,7 @@ Binomials, Multinomials and Expansions Problems Part 5
 
 216. Show that :math:`\sum_{r = 0}^n \frac{3^{r + 4}C_r}{(r + 1)(r + 2)(r +
      3)(r + 4)} = \frac{1}{(n + 1)(n + 2)(n + 3)(n + 4)}\left[4^{n + 4} -
-     sum_{k = 0}^3 {}^{n + 4}C_k3^k\right]`
+     \sum_{k = 0}^3 {}^{n + 4}C_k3^k\right]`
 
 217. Show that :math:`\sum_{r=0}^{n - 3}C_rC_{r + 3} = \frac{(2n)!}{(n +
      3)!(n - 3)!}`
