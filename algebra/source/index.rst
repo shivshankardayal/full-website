@@ -1,3 +1,4 @@
+
 .. meta::
    :author: Shiv Shankar Dayal
    :title: Preface
@@ -111,6 +112,18 @@ A Variable in Algebra
    mathematical-induction-problems-part1
    mathematical-induction-solutions-part1
    binomials-multinomials-expansions
+   binomials-multinomials-expansions-problems-part1
+   binomials-multinomials-expansions-solutions-part1
+   binomials-multinomials-expansions-problems-part2
+   binomials-multinomials-expansions-solutions-part2
+   binomials-multinomials-expansions-problems-part3
+   binomials-multinomials-expansions-solutions-part3
+   binomials-multinomials-expansions-problems-part4
+   binomials-multinomials-expansions-solutions-part4
+   binomials-multinomials-expansions-problems-part5
+   binomials-multinomials-expansions-problems-part6
+
+
 
 Indices and tables
 ==================
