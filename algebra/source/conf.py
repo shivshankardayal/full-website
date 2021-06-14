@@ -12,7 +12,7 @@
 # serve to show the default.
 import sphinx.application
 import sphinx.errors
-sphinx.application.ExtensionError = sphinx.errors.ExtensionError
+sphinx.application.extensionerror = sphinx.errors.extensionerror
 import sys, os
 #import sphinx_bootstrap_theme
 #import sphinx_rtd_theme
